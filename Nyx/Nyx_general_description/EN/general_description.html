@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg:#ffffff;
+      --fg:#24292f;
+      --muted:#57606a;
+      --border:#d0d7de;
+      --border-muted:#d8dee4;
+      --canvas:#f6f8fa;
+      --accent:#0969da;
+      --soft:#f6f8fa;
+    }
+
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+
+    body {
+      margin:0;
+      background:var(--bg);
+      color:var(--fg);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+      font-size:16px;
+      line-height:1.55;
+    }
+
+    .container {
+      width:min(1000px, calc(100% - 32px));
+      margin:0 auto;
+      padding:28px 16px 64px;
+    }
+
+    header.hero {
+      padding:8px 0 22px;
+      margin-bottom:24px;
+      border-bottom:1px solid var(--border);
+    }
+
+    .doc-title {
+      margin:0;
+      font-size:2.35rem;
+      line-height:1.15;
+      font-weight:500;
+      letter-spacing:-0.02em;
+    }
+
+    .main-toc {
+      margin:0 0 32px;
+      padding:16px 20px;
+      background:var(--canvas);
+      border:1px solid var(--border);
+      border-radius:6px;
+      font-size:.9rem;
+    }
+
+    .main-toc a {
+      color:var(--accent);
+      text-decoration:none; /* ← Unterstreichen entfernt */
+    }
+
+    .main-toc a:hover {
+      text-decoration:none;
+    }
+
+    .main-toc ul { list-style:none; margin:0; padding:0; }
+    .main-toc li { margin:.22rem 0; }
+
+    h1 {
+      margin:30px 0 16px;
+      padding-bottom:.3em;
+      border-bottom:1px solid var(--border-muted);
+      font-size:2em;
+      font-weight:600;
+    }
+
+    .lead-box.warning {
+      border:1px solid var(--border);
+      border-left:4px solid #d29922;
+      border-radius:6px;
+      padding:14px 16px;
+      margin:18px 0;
+      background:#fff8c5;
+    }
+
+    .footer-note {
+      margin-top:40px;
+      padding-top:16px;
+      border-top:1px solid var(--border);
+      color:var(--muted);
+      font-size:.875rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header class="hero">
+      <h1 class="doc-title">NYX General Description EN</h1>
+    </header>
+
+    <!-- PDF Viewer -->
+    <div style="
+      width:100%;
+      max-width:900px;
+      height:600px;
+      margin:0 auto 20px;
+      border:1px solid #ccc;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+      border-radius:6px;
+      overflow:hidden;
+    ">
+      <iframe
+        src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/c2083877a27b4e6023410489d53e67bd146d8e3c/Nyx/Nyx_general_description/EN/Nyx_general_description_1.0.1_EN.pdf"
+
+        style="width:100%; height:100%; border:none;"
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <!-- Download Link -->
+    <div style="
+      max-width:900px;
+      margin:0 auto 32px;
+      padding:15px 20px;
+      background-color:#f0f8ff;
+      border:1px solid #a0c4ff;
+      border-radius:6px;
+      font-size:15px;
+      color:#1a3e8c;
+      text-align:center;
+    ">
+      📄 You can view the PDF above or
+      <a
+        href="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/c2083877a27b4e6023410489d53e67bd146d8e3c/Nyx/Nyx_general_description/EN/Nyx_general_description_EN.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        style="color:#1a3e8c; font-weight:600; text-decoration:underline;">
+        download it here
+      </a>.
+    </div>
+
+    <nav class="main-toc">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="#sec-1">1. Overview</a></li>
+        <li><a href="#sec-2">2. Main Features</a></li>
+        <li><a href="#sec-3">3. Scope of Delivery</a></li>
+        <li><a href="#sec-4">4. Application Examples</a></li>
+        <li><a href="#sec-5">5. Disclaimer</a></li>
+        <li><a href="#sec-6">6. Copyright</a></li>
+      </ul>
+    </nav>
+
+    <h1 id="sec-1">1. Overview</h1>
+
+    <!-- FIRST IMAGE CENTERED -->
+    <div style="text-align:center;">
+      <img
+        src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/af59586730db89a617933989769092d00ee8eb26/Nyx/Nyx_general_description/picture/Nyx_allg._Beschreibung_1.webp"
+        style="width:300px; border:none; border-radius:6px;" />
+    </div>
+
+    <p>
+      The solar-powered, wireless IoT sensor NYX is an innovative solution for monitoring indoor environmental parameters.
+      Solar-powered and only 8 mm thin, it offers a maintenance-free and attractive design for indoor spaces.
+      The sensor detects temperature, relative humidity and ambient light. The sensor is available with LoRaWAN® and mioty®
+      with different sensor configurations.
+    </p>
+
+    <h1 id="sec-2">2. Main Features</h1>
+
+    <p>
+      The sensor enables precise CO₂ measurement using reliable NDIR technology, accurately determining the CO₂ concentration in ppm.
+      In addition, it records temperature and relative humidity, providing a comprehensive overview of indoor air quality.
+      The integrated solar panel ensures self-sufficient operation, minimizing maintenance efforts.
+      Installation is quick and easy, with flexible mounting options using screws or adhesive strips.
+      NFC parameterization allows for convenient sensor configuration, while LoRaWAN® connectivity ensures energy-efficient
+      data transmission and seamless integration into IoT systems.
+    </p>
+
+    <!-- IMAGE WITHOUT BORDER -->
+    <img
+      src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/af59586730db89a617933989769092d00ee8eb26/Nyx/Nyx_general_description/picture/Nyx_allg._Beschreibung_2logo.webp"
+      style="display:block; margin:24px auto; width:min(100%, 740px); border:none; border-radius:6px;" />
+
+    <h1 id="sec-3">3. Scope of Delivery</h1>
+
+    <ul>
+      <li>1× Nyx sensor</li>
+      <li>2× adhesive strips for the wall mount</li>
+      <li>1× wall bracket</li>
+    </ul>
+
+    <h1 id="sec-4">4. Application Examples</h1>
+
+    <p>
+      The Nyx sensor is ideal for monitoring air quality in various indoor environments, including:
+    </p>
+
+    <ul>
+      <li><strong>Educational institutions:</strong> Ensuring a healthy indoor environment in classrooms and lecture halls.</li>
+      <li><strong>Office buildings:</strong> Optimizing air quality to increase employee well-being and productivity.</li>
+      <li><strong>Living spaces:</strong> Monitoring indoor air to promote the health and comfort of occupants.</li>
+      <li><strong>Public facilities:</strong> Ensuring compliance with air quality standards in libraries, museums and other public spaces.</li>
+    </ul>
+
+    <p>
+      By continuously monitoring the CO₂ concentration and other environmental parameters, the Nyx sensor helps to maintain
+      a healthy and comfortable indoor climate and to react to changes in good time.
+    </p>
+
+    <!-- IMAGE WITHOUT BORDER -->
+    <img
+      src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/af59586730db89a617933989769092d00ee8eb26/Nyx/Nyx_general_description/picture/Nyx_allg._Beschreibung_2logo2.webp"
+      style="display:block; margin:24px auto; width:min(100%, 740px); border:none; border-radius:6px;" />
+
+    <!-- LAST IMAGE LEFT & SMALL, NO BORDER -->
+    <img
+      src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/af59586730db89a617933989769092d00ee8eb26/Nyx/Nyx_general_description/picture/Nyx_allg._Beschreibung_3.png"
+      style="margin-top:12px; width:200px; border:none; border-radius:6px;" />
+
+    <h1 id="sec-5">5. Disclaimer</h1>
+
+    <div class="lead-box warning">
+      <p>
+        The information contained in this document has been prepared with the greatest care.
+        However, Sentinum GmbH assumes no liability for the accuracy, completeness or timeliness of the content.
+      </p>
+      <p>
+        Any liability for damages arising directly or indirectly from the use of this documentation is excluded,
+        as far as legally permissible.
+      </p>
+      <p>
+        Subject to change without notice.
+      </p>
+    </div>
+
+    <h1 id="sec-6">6. Copyright</h1>
+
+    <div class="footer-note">
+      <p>© Sentinum GmbH – All rights reserved.</p>
+      <p>Sentinum GmbH · Heinrich-Stranka-Str. 3–5 · 90765 Fürth · DE</p>
+      <p>info@sentinum.de · www.sentinum.de</p>
+    </div>
+
+  </div>
+</body>
+</html>
