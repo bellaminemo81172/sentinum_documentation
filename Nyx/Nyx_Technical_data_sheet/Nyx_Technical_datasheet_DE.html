@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>NYX – Technisches Datenblatt</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --black:#000000;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+  --blue-bg:#f0f8ff;
+  --blue-border:#a0c4ff;
+  --blue-text:#1a3e8c;
+  --toc-bg:#f7fbff;
+  --toc-border:#d6e4fa;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+  background:#ffffff;
+}
+
+.container{ width:100%; }
+
+* ---------- Headings ---------- */
+
+/* H1 – article title (blog title) */
+h1{
+  margin:48px 0 16px;
+  padding-bottom:12px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:42px;           /* ⬅️ bigger */
+  font-weight:700;
+  line-height:1.25;
+  color:#000;
+  border-bottom:2px solid var(--border);
+}
+
+/* H2 – subtitle under article title */
+h2{
+  margin:14px 0 36px;
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:24px;           /* ⬅️ bigger */
+  font-weight:500;
+  line-height:1.5;
+  color:var(--text-muted);
+}
+
+/* H3 – ALL article section headings */
+h3{
+  margin:24px 0 8px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  color:#000;
+
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:100px;
+}
+
+/* PDF */
+.pdf-viewer{
+  max-width:900px;
+  height:600px;
+  margin:0 auto 20px;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
+.pdf-viewer iframe{ width:100%; height:100%; border:none; }
+
+.pdf-download{
+  max-width:900px;
+  margin:0 auto 36px;
+  padding:14px 18px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+  text-align:center;
+}
+
+.pdf-download a{
+  color:var(--blue-text);
+  font-weight:600;
+}
+
+/* TOC */
+.main-toc{
+  max-width:900px;
+  margin:0 auto 40px;
+  padding:16px 20px;
+  background:var(--toc-bg);
+  border:1px solid var(--toc-border);
+  border-radius:6px;
+}
+
+.main-toc ul{ list-style:none; padding:0; margin:0; }
+.main-toc li{ margin:.3rem 0; }
+.main-toc a{
+  color:var(--blue-text);
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* Tables */
+.table-wrap{ margin:8px 0 24px; }
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+}
+
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid var(--black);
+}
+
+/* Figures */
+.figure{ margin:32px auto; text-align:center; }
+.figure img{ max-width:100%; }
+.figure figcaption{
+  margin-top:8px;
+  font-size:.85rem;
+  color:var(--text-muted);
+  font-style:italic;
+}
+
+/* Footer */
+.footer-note{
+  margin-top:40px;
+  padding-top:16px;
+  border-top:1px solid var(--border);
+  font-size:.82rem;
+  color:var(--text-muted);
+}
+
+.footer-note p{ margin:0; }
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>NYX TECHNISCHES DATENBLATT</h1>
+
+<!-- PDF -->
+<div class="pdf-viewer">
+  <iframe src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/346200508fd1774cc2af55a407c219c1d9bfca9c/Nyx/Nyx_Technical_data_sheet/Nyx_technisches_Datenblatt_DE.pdf"></iframe>
+</div>
+
+<div class="pdf-download">
+  📄 Das PDF kann oben angesehen werden oder
+  <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/346200508fd1774cc2af55a407c219c1d9bfca9c/Nyx/Nyx_Technical_data_sheet/Nyx_technisches_Datenblatt_DE.pdf" target="_blank">
+    hier heruntergeladen werden
+  </a>.
+</div>
+
+<!-- TOC -->
+<nav class="main-toc">
+<h4>Inhaltsverzeichnis</h4>
+<ul>
+<li><a href="#versions">1. Versionen</a></li>
+<li><a href="#general">2. Allgemeine Eigenschaften</a></li>
+<li><a href="#rf">3. Konnektivität und RF Spezifikation</a></li>
+<li><a href="#temp">4. Sensorspezifikation Temperatur</a></li>
+<li><a href="#hum">5. Sensorspezifikation rel. Luftfeuchtigkeit</a></li>
+<li><a href="#light">6. Sensorspezifikation Umgebungslicht</a></li>
+<li><a href="#runtime">7. Laufzeiten</a></li>
+<li><a href="#drawings">8. Technische Zeichnungen</a></li>
+</ul>
+</nav>
+
+<!-- VERSIONEN -->
+<h3 id="versions">1. Versionen</h3>
+<div class="table-wrap">
+<table>
+<tr><th>Artikel Code</th><th>Features</th></tr>
+<tr>
+<td>S-NYXX-LOEU-THL</td>
+<td>NYX, LoRaWAN EU, Temperatur, rel. Luftfeuchtigkeit und Umgebungslichtindikator</td>
+</tr>
+<tr>
+<td>S-NYXX-MIOTY-THL</td>
+<td>NYX, mioty EU, Temperatur, rel. Luftfeuchtigkeit und Umgebungslichtindikator</td>
+</tr>
+</table>
+</div>
+
+<!-- ALLGEMEIN -->
+<h3 id="general">2. Allgemeine Eigenschaften</h3>
+<div class="table-wrap">
+<table>
+<tr><th>Merkmal</th><th>Wert</th><th>Einheit</th></tr>
+<tr><td>Abmaße</td><td>86,5 × 67 × 8,5 (ohne Wandhalterung)</td><td>mm</td></tr>
+<tr><td>Gewicht</td><td>120</td><td>g</td></tr>
+<tr><td>Betriebstemperatur</td><td>5 – 60</td><td>°C</td></tr>
+<tr><td>Lagertemperatur</td><td>15 – 25</td><td>°C</td></tr>
+<tr><td>Rel. Luftfeuchtigkeit im Betrieb</td><td>5 – 90</td><td>%RH</td></tr>
+<tr><td>IP Rating</td><td>21</td><td></td></tr>
+<tr><td>Sensorik</td><td>Temperatur, rel. Luftfeuchtigkeit, Umgebungslicht</td><td></td></tr>
+<tr><td>Ampelfunktion</td><td>Ja, LEDs</td><td></td></tr>
+<tr><td>Alarmfunktion akustisch</td><td>Buzzer, Piepton</td><td></td></tr>
+<tr><td>Provisionierung</td><td>NFC</td><td></td></tr>
+<tr><td>Material</td><td>ABS</td><td></td></tr>
+<tr><td>NFC Antenne</td><td>Integriert</td><td></td></tr>
+<tr><td>BLE Antenne</td><td>–</td><td></td></tr>
+<tr><td>RF Antenne</td><td>Integriert</td><td></td></tr>
+<tr><td>Accelerometer</td><td>–</td><td></td></tr>
+<tr><td>Batterien</td><td>Supercap, Pouch Zellen, nicht wechselbar</td><td></td></tr>
+<tr><td>Primärzelle Typ</td><td>–</td><td></td></tr>
+<tr><td>Sekundärzelle</td><td>Supercap, Pouch Zellen</td><td></td></tr>
+</table>
+</div>
+
+<!-- RF -->
+<h3 id="rf">3. Konnektivität und RF Spezifikation</h3>
+<div class="table-wrap">
+<table>
+<tr><th>Merkmal</th><th>Wert</th><th>Einheit</th></tr>
+<tr><td>Sub 1 GHz RF Standards</td><td>LoRaWAN®, mioty®</td><td></td></tr>
+<tr><td>Frequenz LoRaWAN, mioty EU</td><td>868</td><td>MHz</td></tr>
+<tr><td>Frequenz Mobilfunk</td><td>Band 8, 20</td><td></td></tr>
+<tr><td>Sendeleistung LoRaWAN/mioty EU</td><td>14</td><td>dBm</td></tr>
+<tr><td>Sendeleistung Mobilfunk</td><td>Nicht vorhanden</td><td>dBm</td></tr>
+<tr><td>LoRa MAC Layer Version</td><td>1.0.4</td><td></td></tr>
+<tr><td>Regional Parameters Version</td><td>RP002 Regional Parameters 1.0.3</td><td></td></tr>
+</table>
+</div>
+
+<!-- SENSOR TEMP -->
+<h3 id="temp">4. Sensorspezifikation Temperatur</h3>
+<div class="table-wrap">
+<table>
+<tr><th>Merkmal</th><th>Wert</th><th>Einheit</th></tr>
+<tr><td>Messbereich</td><td>-40 bis +125</td><td>°C</td></tr>
+<tr><td>Drift (langfristig)</td><td>&lt; 0,02</td><td>°C</td></tr>
+<tr><td>Auflösung</td><td>0,1</td><td>°C</td></tr>
+<tr><td>Genauigkeit</td><td>±0,2</td><td>°C</td></tr>
+<tr><td>Wiederholgenauigkeit</td><td>0,2</td><td>°C</td></tr>
+</table>
+</div>
+
+<!-- SENSOR HUM -->
+<h3 id="hum">5. Sensorspezifikation rel. Luftfeuchtigkeit</h3>
+<div class="table-wrap">
+<table>
+<tr><th>Merkmal</th><th>Wert</th><th>Einheit</th></tr>
+<tr><td>Messbereich</td><td>0 bis 100</td><td>%RH</td></tr>
+<tr><td>Drift (langfristig)</td><td>&lt; 0,25</td><td>%RH/Jahr</td></tr>
+<tr><td>Auflösung</td><td>1</td><td>%RH</td></tr>
+<tr><td>Genauigkeit</td><td>±2,0</td><td>%RH</td></tr>
+<tr><td>Wiederholgenauigkeit</td><td>0,1</td><td>%RH</td></tr>
+</table>
+</div>
+
+<!-- SENSOR LIGHT -->
+<h3 id="light">6. Sensorspezifikation Umgebungslichtsensor</h3>
+<div class="table-wrap">
+<table>
+<tr><th>Merkmal</th><th>Wert</th><th>Einheit</th></tr>
+<tr><td>Messbereich</td><td>0,01 bis 83.000</td><td>lux</td></tr>
+<tr><td>Auflösung</td><td>1</td><td>lux</td></tr>
+</table>
+</div>
+
+<!-- RUNTIME -->
+<h3 id="runtime">7. Laufzeiten</h3>
+<p>
+Positive Energiebilanz bei 400 lux über 7 Stunden am Tag
+bei einer Messrate von 5 Minuten und einer Sendefrequenz von 2 Stunden.
+</p>
+
+<!-- DRAWINGS -->
+<h3 id="drawings">8. Technische Zeichnungen</h3>
+
+<figure class="figure">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d9d63050c6b4fb49254dfd2b450a942cc6b05bf7/Nyx/Nyx_Technical_data_sheet/Nyx_technical_drawing.png" alt="NYX technische Zeichnung">
+  <figcaption>Abbildung 1: NYX Sensor – Technische Zeichnung</figcaption>
+</figure>
+
+<figure class="figure">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d9d63050c6b4fb49254dfd2b450a942cc6b05bf7/Nyx/Nyx_Technical_data_sheet/Nyx_technical_drawing_wall_mounting.png" alt="NYX Wandhalterung">
+  <figcaption>Abbildung 2: NYX Sensor – Wandhalterung</figcaption>
+</figure>
+
+<img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/afc9699389c59e7016ade928f86deb9a6c514640/Nyx/Nyx_Pic/logo%20lora%20mioty.png"
+     alt="LoRaWAN und mioty Logos"
+     style="max-width:260px; opacity:0.9; display:block; margin:32px auto;">
+
+<!-- DISCLAIMER -->
+<div class="footer-note">
+  <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+  <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
+  </p>
+</div>>
+
+</div>
+</body>
+</html>
