@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Nyx User Manual</title>
+  <title>Nyx operating instructions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- FONTS -->
@@ -197,39 +197,38 @@
     height:auto;
   }
 
-  .figure figcaption{
-    margin-top:8px;
-    font-size:.85rem;
-    color:var(--text-muted);
-    font-style:italic;
+  /* ---------- Note Strips (Option A – Word-Style) ---------- */
+  .note-strip{
+    padding:14px 16px;
+    margin:18px 0;
+    border-radius:6px;
+    border-left-width:6px;
+    border-left-style:solid;
+    background:#ffffff;
   }
 
-  /* ---------- Note Strips ---------- */
-  .note-strip{
-    display:flex;
-    align-items:flex-start;
-    margin-top:16px;
-    font-size:14px;
-    line-height:1.6;
+  .note-strip--red{
+    background:#fdecea;
+    border-left-color:#d32f2f;
+  }
+
+  .note-strip--yellow{
+    background:#fff8e1;
+    border-left-color:#f9a825;
+  }
+
+  .note-strip--green{
+    background:#e8f5e9;
+    border-left-color:#2e7d32;
+  }
+
+  .note-strip p,
+  .note-strip ul{
+    margin:0;
   }
 
   .note-strip__bar{
-    width:4px;
-    margin-right:12px;
-    border-radius:2px;
-  }
-
-  .note-strip--red .note-strip__bar{
-    background-color:#d32f2f;
-  }
-
-  .note-strip--blue .note-strip__bar{
-    background-color:#0073e6;
-  }
-
-  .note-strip__content ul{
-    margin:6px 0 0 16px;
-    padding:0;
+    display:none;
   }
 
   /* ---------- Generic images ---------- */
@@ -261,19 +260,19 @@
   <div class="container">
 
     <!-- TITLE -->
-    <h1>Nyx operating Instructions</h1>
+    <h1>Nyx operating instructions</h1>
 
     <!-- PDF VIEWER -->
     <div class="pdf-viewer">
       <iframe src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/blob/5ac1a2a946f06029f31624cb861396d168e65e97/Nyx/Nyx_general_description/EN/Nyx_general_description_EN.pdf"></iframe>
     </div>
 
-    <!-- PDF DOWNLOAD -->
+ <!-- PDF DOWNLOAD -->
     <div class="pdf-download">
       📥
       <a href="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/blob/5ac1a2a946f06029f31624cb861396d168e65e97/Nyx/Nyx_general_description/EN/Nyx_general_description_EN.pdf"
          target="_blank" rel="noopener">
-        Download Nyx User Manual (PDF)
+        Download Nyx operating instructions (PDF)
       </a>
     </div>
 
@@ -281,33 +280,33 @@
     <div class="figure">
       <img
         src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/a1943e55819a7b98a26f8470daa6c16862a0c3b3/Nyx/nyx_betriebsanleitung/pic/Betriebanleitung_1.webp"
-        alt="Nyx sensor front view"
-      >
+        alt="Nyx sensor front view">
     </div>
+
     <!-- TABLE OF CONTENTS -->
     <div class="main-toc">
-      <strong>Table of Contents</strong>
+      <strong>Table of contents</strong>
       <ul>
-        <li><a href="#warn-safety">1. Warnings and Safety Instructions</a></li>
-        <li><a href="#further-docs">2. Further Documentation</a></li>
+        <li><a href="#warn-safety">1. Warnings and safety instructions</a></li>
+        <li><a href="#further-docs">2. Further documentation</a></li>
         <li><a href="#technical-drawing">3. Technical Drawing</a></li>
-        <li><a href="#components-scope">4. Description of Key Components and Scope of Delivery</a></li>
-        <li><a href="#installation">5. Installation and Mounting</a></li>
-        <li><a href="#commissioning">6. Commissioning and Use</a></li>
-        <li><a href="#lorawan">7. LoRaWAN Interface Behavior and Joining</a></li>
-        <li><a href="#cleaning">8. Cleaning and Maintenance</a></li>
-        <li><a href="#certification">9. Marking and Certification</a></li>
+        <li><a href="#components-scope">4. Description of important components and scope of delivery</a></li>
+        <li><a href="#assembly-installation">5. Assembly and installation</a></li>
+        <li><a href="#commissioning">6. Commissioning and use</a></li>
+        <li><a href="#lorawan">7. Behavior of the LoRaWAN interface and joining</a></li>
+        <li><a href="#care-cleaning">8. Care and cleaning</a></li>
+        <li><a href="#labeling-certification">9. Labeling and certification</a></li>
       </ul>
     </div>
+        <!-- 1. WARNINGS -->
+    <h3 id="warn-safety">1. Warnings and safety instructions</h3>
 
-    <!-- 1. WARNINGS AND SAFETY -->
-    <h3 id="warn-safety">1. Warnings and Safety Instructions</h3>
-    <p>Warnings and important information regarding potential hazards or damage.</p>
-    <p>Important notes required for the smooth operation of the device.</p>
+    
+    <div>
+      <p>Warnings and important information about potential hazards or damage</p>
+      <p>Important information required for smooth operation of the devices</p>
+    </div>
 
-    <div class="note-strip note-strip--red">
-      <div class="note-strip__bar"></div>
-      <div class="note-strip__content">
         <p><strong>Please note:</strong></p>
         <ul>
           <li>Follow the safety instructions and installation guidelines in this manual and the mounting list.</li>
@@ -316,305 +315,250 @@
           <li>The device may only be used for its intended purpose.</li>
           <li>Safety and functionality can no longer be guaranteed if the device is modified or altered.</li>
           <li>The purpose of the sensor is to monitor indoor air quality.</li>
-          <li>Do not use the sensor in safety‑critical applications.</li>
-          <li>The sensor is not suitable for monitoring carbon monoxide (CO).</li>
-          <li>The sensor is not a smoke detector.</li>
+    <!-- RED BOX 1 (fett) -->
+    <div class="note-strip note-strip--red">
+      <ul>
+        <li><strong>Do not use the sensor in safety-critical applications!</strong></li>
+        <li><strong>The sensor is expressly not suitable for monitoring carbon monoxide CO!</strong></li>
+        <li><strong>The sensor is not a smoke detector!</strong></li>
+      </ul>
+    </div>
           <li>Do not mount the sensor on ceilings or floors.</li>
           <li>The device is approved for operation up to a maximum of 2000 meters above sea level.</li>
           <li>A minimum distance of 20 cm between the device and persons must be maintained.</li>
         </ul>
       </div>
     </div>
+    
 
-    <div class="note-strip note-strip--red">
-      <div class="note-strip__bar"></div>
-      <div class="note-strip__content">
-        <p><strong>If the device is installed incorrectly:</strong></p>
-        <ul>
-          <li>It may not function properly.</li>
-          <li>It may become permanently damaged.</li>
-          <li>It may pose a risk of injury.</li>
-        </ul>
-      </div>
+
+    <!-- RED BOX 2 (Titel + Bulletpoints fett) -->
+    <div class="note-strip note-strip--yellow">
+      <p><strong>If the device is installed incorrectly:</strong></p>
+      <ul>
+        <li><strong>It may not function properly.</strong></li>
+        <li><strong>It could be permanently damaged.</strong></li>
+        <li><strong>It could pose a risk of injury.</strong></li>
+      </ul>
     </div>
 
-    <div class="note-strip note-strip--red">
-      <div class="note-strip__bar"></div>
-      <div class="note-strip__content">
-        <p><strong>Handling and disposal notes:</strong></p>
-        <ul>
-          <li>Do not open the sensor.</li>
-          <li>Improper handling, such as mechanical stress or dropping the device, may cause damage.</li>
-          <li>Dispose of the device according to local regulations for electronic waste.</li>
-          <li>Contains a lithium battery (UN38.3 compliant) — do not burn, disassemble, or short‑circuit.</li>
-          <li>The secondary cell is a supercapacitor — do not damage or dispose of improperly.</li>
-          <li>Dispose of batteries separately according to local recycling regulations.</li>
-          <li>Environmentally friendly disposal via authorized collection points is recommended.</li>
-          <li>Do not dispose of in household waste.</li>
-        </ul>
-      </div>
+    <!-- YELLOW BOX 2 (letzter Punkt fett) -->
+    <div class="note-strip note-strip--yellow">
+      <p><strong>Please note during handling and disposal:</strong></p>
+      <ul>
+        <li>The sensor must not be opened!</li>
+        <li>Improper handling such as improper mechanical stress, e.g. dropping the device, may result in damage.</li>
+        <li>Dispose of in accordance with local regulations for waste electrical and electronic equipment.</li>
+        <li>Contains a lithium battery (UN38.3 compliant) - do not dispose of in fire, do not disassemble or short-circuit.</li>
+        <li>The secondary cell is a supercapacitor - do not damage or dispose of improperly.</li>
+        <li>Dispose of batteries and rechargeable batteries separately in accordance with the relevant recycling regulations.</li>
+        <li>Environmentally friendly disposal by returning to authorized collection points is recommended.</li>
+        <li><strong>Do not dispose of in household waste</strong></li>
+      </ul>
     </div>
 
+    <!-- RED BOX 3 (CO2) -->
     <div class="note-strip note-strip--red">
-      <div class="note-strip__bar"></div>
-      <div class="note-strip__content">
-        <p><strong>Please note regarding the CO₂ sensor:</strong></p>
-        <ul>
-          <li>The CO₂ module is highly sensitive to mechanical stress. Even small drops, shocks, or impacts may cause damage and lead to incorrect measurements.</li>
-        </ul>
-      </div>
+      <p><strong>Please note CO₂ sensor:</strong></p>
+      <ul>
+        <li>The CO₂ measuring module is particularly sensitive to mechanical stress. A fall, even from a low height, as well as shocks and impacts can damage the device. This can lead to incorrect measurements.</li>
+      </ul>
     </div>
 
     <!-- 2. FURTHER DOCUMENTATION -->
-    <h3 id="further-docs">2. Further Documentation</h3>
-    <p>Please refer to the technical data sheet for information and limit values.</p>
-    <p>The sensor‑specific factory settings (Sentiface), keys, and permissible values can be found in the NFC and downlink documentation.</p>
-    <p>Configuration options for sensor communication can be found in the generic LoRaWAN® or Mioty® documentation.</p>
-    <p>All generic documentation is available at:  
-      <a href="https://docs.sentinum.de/wichtig-produkt%C3%BCbergreifende-dokumentation-f%C3%BCr-sensoren" target="_blank" rel="noopener">
-        https://docs.sentinum.de/wichtig-produktübergreifende-dokumentation-für-sensoren
-      </a>
+    <h3 id="further-docs">2. Further documentation</h3>
+    <p>Please note the information and limit values in the technical data sheet.</p>
+    <p>The Sentiface sensor-specific documents can be found in the NFC and downlink description document.</p>
+    <p>Further generic documentation can be found at:
+      <a href="https://docs.sentinum.de/en/important-cross-product-documentation-for-sensors" target="_blank">https://docs.sentinum.de/en/important-cross-product-documentation-for-sensors</a>
     </p>
 
     <!-- 3. TECHNICAL DRAWING -->
     <h3 id="technical-drawing">3. Technical Drawing</h3>
-    <p>Nyx Sensor</p>
 
+    <h4>Nyx sensor</h4>
     <div class="figure">
-      <img
-        src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/a1943e55819a7b98a26f8470daa6c16862a0c3b3/Nyx/nyx_betriebsanleitung/pic/Betriebanleitung_2Technische_Zeichnung.webp"
-        alt="Technical drawing of the Nyx sensor – front view"
-      >
+      <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/a1943e55819a7b98a26f8470daa6c16862a0c3b3/Nyx/nyx_betriebsanleitung/pic/Betriebanleitung_2Technische_Zeichnung.webp"
+           alt="Technical drawing of the Nyx sensor – front view">
     </div>
 
     <div class="figure">
-      <img
-        src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/a1943e55819a7b98a26f8470daa6c16862a0c3b3/Nyx/nyx_betriebsanleitung/pic/Betriebanleitung_3.webp"
-        alt="Technical drawing of the Nyx sensor – side view"
-      >
+      <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/a1943e55819a7b98a26f8470daa6c16862a0c3b3/Nyx/nyx_betriebsanleitung/pic/Betriebanleitung_3.webp"
+           alt="Technical drawing of the Nyx sensor – side view">
     </div>
 
-    <p>Wall mount</p>
-
+    <h4>Wall bracket</h4>
     <div class="figure">
-      <img
-        src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/a1943e55819a7b98a26f8470daa6c16862a0c3b3/Nyx/nyx_betriebsanleitung/pic/Betriebanleitung_4Wandhalterung.webp"
-        alt="Technical drawing of the Nyx wall mount"
-      >
+      <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/a1943e55819a7b98a26f8470daa6c16862a0c3b3/Nyx/nyx_betriebsanleitung/pic/Betriebanleitung_4Wandhalterung.webp"
+           alt="Technical drawing of the Nyx wall bracket">
     </div>
 
     <div class="figure">
-      <img
-        src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/a1943e55819a7b98a26f8470daa6c16862a0c3b3/Nyx/nyx_betriebsanleitung/pic/Betriebanleitung_5.webp"
-        alt="Nyx sensor components and scope of delivery"
-      >
+      <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/a1943e55819a7b98a26f8470daa6c16862a0c3b3/Nyx/nyx_betriebsanleitung/pic/Betriebanleitung_5.webp"
+           alt="Nyx sensor components and scope of delivery">
     </div>
 
-    <!-- 4. COMPONENTS AND SCOPE -->
-    <h3 id="components-scope">4. Description of Key Components and Scope of Delivery</h3>
-    <p>The scope of delivery includes:</p>
+    <!-- 4. COMPONENTS -->
+    <h3 id="components-scope">4. Description of important components and scope of delivery</h3>
     <ul>
       <li>1× Nyx sensor</li>
-      <li>2× adhesive strips for wall mounting</li>
-      <li>1× wall mount</li>
+      <li>2× adhesive strip for wall mount</li>
+      <li>1× wall bracket</li>
     </ul>
 
-    <!-- 5. INSTALLATION -->
-    <h3 id="installation">5. Installation and Mounting</h3>
-    <p>If the sensor remains easily accessible after installation, mount the sensor first and activate it afterwards.</p>
-    <p>If the sensor is no longer accessible after installation, activate it first and mount it afterwards.</p>
+    <!-- 5. ASSEMBLY -->
+    <h3 id="assembly-installation">5. Assembly and installation</h3>
 
-    <!-- MOUNTING TABLE -->
+    <!-- GREEN BOX 1 -->
+    <div class="note-strip note-strip--green">
+      <p>If the sensor is still easily accessible after installation, install the sensor first and activate it after installation!</p>
+    </div>
+
+    <!-- GREEN BOX 2 -->
+    <div class="note-strip note-strip--green">
+      <p>If the sensor is no longer accessible after installation, first activate the sensor and then install it after activation!</p>
+    </div>
+
+    <!-- TABLE -->
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
-            <th>Mounting Method</th>
-            <th>Recommended Accessories</th>
+            <th>Mounting method</th>
+            <th>Recommended accessories</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Wall mount (screws)</td>
+            <td>Wall bracket (screws)</td>
             <td>2× M3 countersunk screws</td>
           </tr>
           <tr>
-            <td>Wall mount (adhesive strips)</td>
+            <td>Wall bracket (adhesive strips)</td>
             <td>2× adhesive strips</td>
           </tr>
         </tbody>
       </table>
     </div>
 
-    <div class="note-strip note-strip--red">
-      <div class="note-strip__bar"></div>
-      <div class="note-strip__content">
-        <p><strong>Please note:</strong></p>
-        <ul>
-          <li>Do not insert objects or body parts into the ventilation slots.</li>
-          <li>Do not mount the sensor on the ceiling or floor.</li>
-          <li>Do not mount the sensor above two meters.</li>
-          <li>Mount the sensor indoors on a wall at a height of 1.50–1.80 m.</li>
-          <li>Ensure the sensor receives at least 7 hours of direct sunlight at 400 lux per day.</li>
-          <li>Ensure the LEDs are positioned at the lower left during installation.</li>
-        </ul>
-      </div>
-    </div>
+    <!-- 5.1 -->
+    <h4>5.1 Attaching the wall bracket with screws</h4>
 
-    <!-- 5.1 SCREW MOUNTING -->
-    <h4>5.1 Mounting the Wall Bracket with Screws</h4>
-
-    <div class="note-strip note-strip--blue">
-      <div class="note-strip__bar"></div>
-      <div class="note-strip__content">
-        <p><strong>Please note:</strong> Ensure the mounting surface is flat and suitable for screws to avoid damaging the housing.</p>
-      </div>
+    <div class="note-strip note-strip--yellow">
+      <p><strong>Please note:</strong> Before using this type of installation, make sure the surface is flat and suitable for screws.</p>
     </div>
 
     <div class="figure">
-      <img
-        src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/a1943e55819a7b98a26f8470daa6c16862a0c3b3/Nyx/nyx_betriebsanleitung/pic/Betriebanleitung_6Anbringung...webp"
-        alt="Mounting the wall bracket with screws"
-      >
+      <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/a1943e55819a7b98a26f8470daa6c16862a0c3b3/Nyx/nyx_betriebsanleitung/pic/Betriebanleitung_6Anbringung...webp"
+           alt="Attaching the wall bracket with screws">
     </div>
 
-    <p>Mount the wall bracket using two M3 countersunk screws as shown. The snap‑in mechanism is at the bottom and faces away from the wall.</p>
-    <p>After mounting, check the stability by gently pulling on the bracket. Tighten the screws if necessary.</p>
-    <p>Once the bracket is securely mounted, proceed to step 5.3.</p>
+    <p>Screw the wall bracket into the wall with two M3 countersunk screws as shown.</p>
 
-    <!-- 5.2 ADHESIVE STRIPS -->
-    <h4>5.2 Mounting the Wall Bracket with Adhesive Strips</h4>
+    <!-- 5.2 -->
+    <h4>5.2 Attaching the wall bracket with adhesive strips</h4>
 
-    <div class="note-strip note-strip--red">
-      <div class="note-strip__bar"></div>
-      <div class="note-strip__content">
-        <p><strong>Please note:</strong></p>
-        <ul>
-          <li>Ensure the surface is clean, dry, smooth, and adhesive‑friendly.</li>
-          <li>Avoid rough, porous, or damp surfaces.</li>
-          <li>Press the bracket firmly for several seconds after attaching it.</li>
-        </ul>
-      </div>
+    <div class="note-strip note-strip--yellow">
+      <p><strong>Please note:</strong></p>
+      <ul>
+        <li>Ensure the surface is clean, dry, smooth and adhesive.</li>
+        <li>Avoid rough or damp surfaces.</li>
+        <li>Press firmly for several seconds.</li>
+      </ul>
     </div>
 
     <div class="figure">
-      <img
-        src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/a1943e55819a7b98a26f8470daa6c16862a0c3b3/Nyx/nyx_betriebsanleitung/pic/Betriebanleitung_7Kleben....webp"
-        alt="Mounting the wall bracket with adhesive strips"
-      >
+      <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/a1943e55819a7b98a26f8470daa6c16862a0c3b3/Nyx/nyx_betriebsanleitung/pic/Betriebanleitung_7Kleben....webp"
+           alt="Attaching the wall bracket with adhesive strips">
     </div>
 
-    <p>Attach the wall bracket using the two adhesive strips in the marked area. The snap‑in mechanism is at the bottom and faces away from the wall.</p>
-    <p>Check the stability by gently pulling on the bracket. Ensure the adhesive strips are fully attached.</p>
-    <p>Once the bracket is secure, proceed to step 5.3.</p>
-
-    <!-- 5.3 SENSOR MOUNTING -->
-    <h4>5.3 Mounting the Sensor onto the Wall Bracket</h4>
+    <!-- 5.3 -->
+    <h4>5.3 Mounting the sensor on the wall bracket</h4>
 
     <div class="figure">
-      <img
-        src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/a1943e55819a7b98a26f8470daa6c16862a0c3b3/Nyx/nyx_betriebsanleitung/pic/Betriebanleitung_8Anbringung...webp"
-        alt="Mounting the Nyx sensor onto the wall bracket"
-      >
+      <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/a1943e55819a7b98a26f8470daa6c16862a0c3b3/Nyx/nyx_betriebsanleitung/pic/Betriebanleitung_8Anbringung...webp"
+           alt="Mounting the sensor on the wall bracket">
     </div>
 
     <ol>
-      <li>Insert the sensor from above into the wall bracket until it clicks into the upper holder.</li>
-      <li>Tilt the sensor backward so it snaps securely into the bracket and locking mechanism.</li>
-      <li>Ensure the sensor is fully seated and firmly attached.</li>
+      <li>Insert the sensor from above until it snaps in.</li>
+      <li>Tilt backwards until it locks.</li>
+      <li>Ensure the sensor is firmly attached.</li>
     </ol>
-
     <!-- 6. COMMISSIONING -->
-    <h3 id="commissioning">6. Commissioning and Use</h3>
+    <h3 id="commissioning">6. Commissioning and use</h3>
 
-    <div class="note-strip note-strip--red">
-      <div class="note-strip__bar"></div>
-      <div class="note-strip__content">
-        <p><strong>Please note:</strong> Using knives or sharp objects may damage the housing or electronics.</p>
-      </div>
+    <!-- YELLOW BOX 3 (Knife warning) -->
+    <div class="note-strip note-strip--yellow">
+      <p>Please note that the housing or electronics may be damaged if knives or other sharp objects are used.</p>
     </div>
 
-    <h4>6.1 Commissioning the Sensor</h4>
-    <p>The sensor is delivered ready for operation and switched on.</p>
+    <h4>6.1 Commissioning the sensor</h4>
+    <p>The sensor is supplied ready for operation and switched on.</p>
 
-    <h4>6.2 NFC Configuration and Location of the NFC Tag</h4>
-    <p>The activation is performed using an NFC app. A smartphone is required. Search for “Sentinum LinQs” in the app stores and download the LinQs app.</p>
+    <h4>6.2 NFC parameterization and position of the NFC tag</h4>
+    <p>Activation takes place via an NFC app. A smartphone is required for this. The app can be downloaded from the respective app stores. Simply search for “Sentinum LinQs” and download the LinQs app.</p>
 
     <div class="figure">
       <img
         src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/a1943e55819a7b98a26f8470daa6c16862a0c3b3/Nyx/nyx_betriebsanleitung/pic/Betriebanleitung_9NFC.webp"
-        alt="Sentinum LinQs app and NFC activation"
-      >
+        alt="Sentinum LinQs app and NFC activation">
     </div>
 
-    <p>Locate the NFC tag on the sensor and then the NFC reader on your device. The position of the NFC tag is shown below:</p>
+    <p>First locate the tag on the sensor and then the reader on your end device. You will find the location of the NFC tag at the following position:</p>
 
     <div class="figure">
       <img
         src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/a1943e55819a7b98a26f8470daa6c16862a0c3b3/Nyx/nyx_betriebsanleitung/pic/Betriebanleitung_10.webp"
-        alt="Location of the NFC tag on the Nyx sensor"
-      >
+        alt="Location of the NFC tag on the Nyx sensor">
     </div>
 
-    <h4>6.3 Intended Use of the Sensor</h4>
-    <p>The solar‑powered IoT sensor with CO₂ and humidity detection is ideal for monitoring indoor air quality and environmental conditions. It provides precise data and operates autonomously using its integrated solar panel.</p>
+    <h4>6.3 Intended use of the sensor</h4>
+    <p>The solar-powered IoT sensor with CO₂ and humidity detection is ideal for monitoring indoor air quality and environmental conditions. By combining a CO₂ sensor and a humidity sensor, the device provides precise data and operates energy self-sufficiently thanks to its integrated solar panel.</p>
 
     <ul>
-      <li><strong>Optimization of indoor air quality:</strong> Continuous CO₂ measurement ensures a healthy indoor climate and timely ventilation.</li>
-      <li><strong>Humidity monitoring:</strong> Prevents mold formation and maintains optimal humidity levels.</li>
-      <li><strong>Energy‑efficient operation:</strong> Solar‑powered and ideal for areas without power outlets.</li>
-      <li><strong>Customizable settings:</strong> Adjustable CO₂ and humidity thresholds for alerts and notifications.</li>
+      <li><strong>Optimizing indoor air quality:</strong> Continuous CO₂ measurement ensures a healthy and comfortable indoor climate.</li>
+      <li><strong>Humidity monitoring:</strong> Helps prevent mold and maintain optimal humidity levels.</li>
+      <li><strong>Energy-efficient operation:</strong> Solar-powered and ideal for locations without power outlets.</li>
+      <li><strong>Customizable settings:</strong> Individual CO₂ and humidity thresholds can be configured.</li>
       <li><strong>Integration into smart building systems:</strong> Compatible with HVAC systems.</li>
       <li><strong>Compliance with environmental standards:</strong> Supports air quality monitoring in public buildings.</li>
-      <li><strong>Remote monitoring:</strong> Uses LoRaWAN for low‑power data transmission and notifications.</li>
+      <li><strong>Notifications and remote monitoring:</strong> Uses LoRaWAN for low-power data transmission and alerts.</li>
     </ul>
 
     <!-- 7. LORAWAN -->
-    <h3 id="lorawan">7. LoRaWAN Interface Behavior and Joining</h3>
-    <p>Information on configuring LoRaWAN can be found in the generic LoRaWAN® documentation.</p>
-
+    <h3 id="lorawan">7. Behavior of the LoRaWAN interface and joining</h3>
+    <p>Information on setting up LoRaWAN can be found in the generic document here: <em>Generic LoRaWAN® documentation</em>.</p>
 
     <!-- 8. CLEANING -->
-    <h3 id="cleaning">8. Cleaning and Maintenance</h3>
-    <p>To ensure reliable operation and long service life, the sensor should be cleaned regularly:</p>
+    <h3 id="care-cleaning">8. Care and cleaning</h3>
+    <p>To ensure that the sensor functions reliably and has a long service life, it should be maintained regularly. Please observe the following instructions:</p>
 
     <ul>
-       <li>Remove dust and dirt from the solar panel regularly to ensure optimal energy absorption. Use a soft, clean microfiber cloth. For stubborn dirt, a slightly damp cloth may be used — avoid cleaning agents or abrasive materials.</li>
-      <li>Clean the housing and especially the ventilation slots with a dry or slightly damp microfiber cloth. Ensure that no moisture enters the device.</li>
-      <li>Perform cleaning regularly, especially in dusty or pollen‑rich environments, to maintain long‑term sensor functionality.</li>
-      <li>Regularly check the secure fit of both the sensor and the wall mount.</li>
-      <li>Avoid alcohol‑based or solvent‑based cleaning agents, as they may damage the sensor surface.</li>
+      <li>Regularly remove dust and dirt from the solar panel using a soft microfiber cloth.</li>
+      <li>Clean the housing and ventilation slots with a dry or slightly damp microfiber cloth.</li>
+      <li>Perform cleaning regularly, especially in dusty or pollen-rich environments.</li>
+      <li>Check regularly that the sensor and bracket are firmly seated.</li>
+      <li>Avoid alcohol-based or solvent-based cleaning agents.</li>
     </ul>
 
-    <!-- 9. MARKING AND CERTIFICATION -->
-    <h3 id="certification">9. Marking and Certification</h3>
+    <!-- 9. LABELING -->
+    <h3 id="labeling-certification">9. Labeling and certification</h3>
 
-    <!-- LOGO STRIP (formatted like your reference image) -->
-    <div style="
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 28px;
-      flex-wrap: wrap;
-      margin: 32px 0;
-    ">
+    <div style="margin: 32px 0; text-align:center;">
       <img
         src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/7330568df5ebd68dcb438009d94284ecf2c0c6cb/Nyx/Nyx_Pic/logo%20lora%20mioty.png"
         alt="LoRaWAN and mioty certification logos"
         class="kb-image"
-        style="height: 48px; width: auto; border: none; box-shadow: none;"
-      >
+        style="display:block; height: 48px; width:auto; margin:0 auto 20px auto;">
 
       <img
         src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/7330568df5ebd68dcb438009d94284ecf2c0c6cb/Nyx/Nyx_general_description/picture/Nyx_allg._Beschreibung_3.png"
         alt="CE, WEEE, RoHS and REACH compliance symbols"
         class="kb-image"
-        style="height: 48px; width: auto; border: none; box-shadow: none;"
-      >
+        style="display:block; height: 48px; width:auto; margin:0 auto;">
     </div>
-
-
-    <!-- FOOTER (ENGLISH VERSION) -->
+    <!-- FOOTER -->
     <div class="footer-note">
       <p>© Sentinum GmbH – All rights reserved.</p>
       <p>All contents of this document, including text, tables, and images, are protected by copyright and are the property of Sentinum GmbH.</p>
@@ -625,6 +569,7 @@
       </p>
     </div>
 
-  </div>
+  </div> <!-- END CONTAINER -->
 </body>
 </html>
+
