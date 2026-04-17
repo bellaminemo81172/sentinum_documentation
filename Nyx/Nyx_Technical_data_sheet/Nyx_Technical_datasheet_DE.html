@@ -1,8 +1,5 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
 <meta charset="UTF-8">
-<title>NYX – Technisches Datenblatt</title>
+
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
@@ -133,6 +130,27 @@ th{
   font-weight:700;
   border-bottom:2px solid var(--black);
 }
+/* ---------- Unified table column widths ---------- */
+
+table{
+  table-layout: fixed; /* Forces consistent column sizing */
+  width:100%;
+}
+
+table th:nth-child(1),
+table td:nth-child(1){
+  width:30%;
+}
+
+table th:nth-child(2),
+table td:nth-child(2){
+  width:50%;
+}
+
+table th:nth-child(3),
+table td:nth-child(3){
+  width:20%;
+}
 
 /* Figures */
 .figure{ margin:32px auto; text-align:center; }
@@ -155,12 +173,12 @@ th{
 
 .footer-note p{ margin:0; }
 </style>
-</head>
 
-<body>
+
+
 <div class="container">
 
-<h1>NYX TECHNISCHES DATENBLATT</h1>
+
 
 <!-- PDF -->
 <div class="pdf-viewer">
@@ -193,7 +211,7 @@ th{
 <h3 id="versions">1. Versionen</h3>
 <div class="table-wrap">
 <table>
-<tr><th>Artikel Code</th><th>Features</th></tr>
+<tbody><tr><th>Artikel Code</th><th>Features</th></tr>
 <tr>
 <td>S-NYXX-LOEU-THL</td>
 <td>NYX, LoRaWAN EU, Temperatur, rel. Luftfeuchtigkeit und Umgebungslichtindikator</td>
@@ -202,14 +220,14 @@ th{
 <td>S-NYXX-MIOTY-THL</td>
 <td>NYX, mioty EU, Temperatur, rel. Luftfeuchtigkeit und Umgebungslichtindikator</td>
 </tr>
-</table>
+</tbody></table>
 </div>
 
 <!-- ALLGEMEIN -->
 <h3 id="general">2. Allgemeine Eigenschaften</h3>
 <div class="table-wrap">
 <table>
-<tr><th>Merkmal</th><th>Wert</th><th>Einheit</th></tr>
+<tbody><tr><th>Merkmal</th><th>Wert</th><th>Einheit</th></tr>
 <tr><td>Abmaße</td><td>86,5 × 67 × 8,5 (ohne Wandhalterung)</td><td>mm</td></tr>
 <tr><td>Gewicht</td><td>120</td><td>g</td></tr>
 <tr><td>Betriebstemperatur</td><td>5 – 60</td><td>°C</td></tr>
@@ -228,14 +246,14 @@ th{
 <tr><td>Batterien</td><td>Supercap, Pouch Zellen, nicht wechselbar</td><td></td></tr>
 <tr><td>Primärzelle Typ</td><td>–</td><td></td></tr>
 <tr><td>Sekundärzelle</td><td>Supercap, Pouch Zellen</td><td></td></tr>
-</table>
+</tbody></table>
 </div>
 
 <!-- RF -->
 <h3 id="rf">3. Konnektivität und RF Spezifikation</h3>
 <div class="table-wrap">
 <table>
-<tr><th>Merkmal</th><th>Wert</th><th>Einheit</th></tr>
+<tbody><tr><th>Merkmal</th><th>Wert</th><th>Einheit</th></tr>
 <tr><td>Sub 1 GHz RF Standards</td><td>LoRaWAN®, mioty®</td><td></td></tr>
 <tr><td>Frequenz LoRaWAN, mioty EU</td><td>868</td><td>MHz</td></tr>
 <tr><td>Frequenz Mobilfunk</td><td>Band 8, 20</td><td></td></tr>
@@ -243,43 +261,43 @@ th{
 <tr><td>Sendeleistung Mobilfunk</td><td>Nicht vorhanden</td><td>dBm</td></tr>
 <tr><td>LoRa MAC Layer Version</td><td>1.0.4</td><td></td></tr>
 <tr><td>Regional Parameters Version</td><td>RP002 Regional Parameters 1.0.3</td><td></td></tr>
-</table>
+</tbody></table>
 </div>
 
 <!-- SENSOR TEMP -->
 <h3 id="temp">4. Sensorspezifikation Temperatur</h3>
 <div class="table-wrap">
 <table>
-<tr><th>Merkmal</th><th>Wert</th><th>Einheit</th></tr>
+<tbody><tr><th>Merkmal</th><th>Wert</th><th>Einheit</th></tr>
 <tr><td>Messbereich</td><td>-40 bis +125</td><td>°C</td></tr>
 <tr><td>Drift (langfristig)</td><td>&lt; 0,02</td><td>°C</td></tr>
 <tr><td>Auflösung</td><td>0,1</td><td>°C</td></tr>
 <tr><td>Genauigkeit</td><td>±0,2</td><td>°C</td></tr>
 <tr><td>Wiederholgenauigkeit</td><td>0,2</td><td>°C</td></tr>
-</table>
+</tbody></table>
 </div>
 
 <!-- SENSOR HUM -->
 <h3 id="hum">5. Sensorspezifikation rel. Luftfeuchtigkeit</h3>
 <div class="table-wrap">
 <table>
-<tr><th>Merkmal</th><th>Wert</th><th>Einheit</th></tr>
+<tbody><tr><th>Merkmal</th><th>Wert</th><th>Einheit</th></tr>
 <tr><td>Messbereich</td><td>0 bis 100</td><td>%RH</td></tr>
 <tr><td>Drift (langfristig)</td><td>&lt; 0,25</td><td>%RH/Jahr</td></tr>
 <tr><td>Auflösung</td><td>1</td><td>%RH</td></tr>
 <tr><td>Genauigkeit</td><td>±2,0</td><td>%RH</td></tr>
 <tr><td>Wiederholgenauigkeit</td><td>0,1</td><td>%RH</td></tr>
-</table>
+</tbody></table>
 </div>
 
 <!-- SENSOR LIGHT -->
 <h3 id="light">6. Sensorspezifikation Umgebungslichtsensor</h3>
 <div class="table-wrap">
 <table>
-<tr><th>Merkmal</th><th>Wert</th><th>Einheit</th></tr>
+<tbody><tr><th>Merkmal</th><th>Wert</th><th>Einheit</th></tr>
 <tr><td>Messbereich</td><td>0,01 bis 83.000</td><td>lux</td></tr>
 <tr><td>Auflösung</td><td>1</td><td>lux</td></tr>
-</table>
+</tbody></table>
 </div>
 
 <!-- RUNTIME -->
@@ -293,18 +311,16 @@ bei einer Messrate von 5 Minuten und einer Sendefrequenz von 2 Stunden.
 <h3 id="drawings">8. Technische Zeichnungen</h3>
 
 <figure class="figure">
-  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d9d63050c6b4fb49254dfd2b450a942cc6b05bf7/Nyx/Nyx_Technical_data_sheet/Nyx_technical_drawing.png" alt="NYX technische Zeichnung">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d9d63050c6b4fb49254dfd2b450a942cc6b05bf7/Nyx/Nyx_Technical_data_sheet/Nyx_technical_drawing.png" alt="NYX technische Zeichnung" style="height: auto;">
   <figcaption>Abbildung 1: NYX Sensor – Technische Zeichnung</figcaption>
 </figure>
 
 <figure class="figure">
-  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d9d63050c6b4fb49254dfd2b450a942cc6b05bf7/Nyx/Nyx_Technical_data_sheet/Nyx_technical_drawing_wall_mounting.png" alt="NYX Wandhalterung">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d9d63050c6b4fb49254dfd2b450a942cc6b05bf7/Nyx/Nyx_Technical_data_sheet/Nyx_technical_drawing_wall_mounting.png" alt="NYX Wandhalterung" style="height: auto;">
   <figcaption>Abbildung 2: NYX Sensor – Wandhalterung</figcaption>
 </figure>
 
-<img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/afc9699389c59e7016ade928f86deb9a6c514640/Nyx/Nyx_Pic/logo%20lora%20mioty.png"
-     alt="LoRaWAN und mioty Logos"
-     style="max-width:260px; opacity:0.9; display:block; margin:32px auto;">
+<img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/afc9699389c59e7016ade928f86deb9a6c514640/Nyx/Nyx_Pic/logo%20lora%20mioty.png" alt="LoRaWAN und mioty Logos" style="max-width: 260px; opacity: 0.9; display: block; margin: 32px auto; height: auto;">
 
 <!-- DISCLAIMER -->
 <div class="footer-note">
@@ -315,8 +331,6 @@ bei einer Messrate von 5 Minuten und einer Sendefrequenz von 2 Stunden.
   <p style="padding-left:14px; font-style:italic;">
     Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
   </p>
-</div>>
+</div>
 
 </div>
-</body>
-</html>
