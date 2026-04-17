@@ -1,3 +1,6 @@
+
+
+
 <meta charset="UTF-8">
 <title>NYX – Technical Data Sheet</title>
 
@@ -24,7 +27,6 @@
   --toc-border:#d6e4fa;
 }
 
-/* ---------- Base ---------- */
 *{ box-sizing:border-box; }
 
 body{
@@ -35,37 +37,28 @@ body{
   background:#ffffff;
 }
 
-.container{
-  width:100%;
-  margin:0;
-  padding:0;
-}
+.container{ width:100%; }
 
 /* ---------- Headings ---------- */
 
-/* H1 – article title (blog title) */
 h1{
   margin:48px 0 16px;
   padding-bottom:12px;
   font-family:"Montserrat",Arial,sans-serif;
-  font-size:42px;           /* ⬅️ bigger */
+  font-size:42px;
   font-weight:700;
   line-height:1.25;
   color:#000;
   border-bottom:2px solid var(--border);
 }
 
-/* H2 – subtitle under article title */
 h2{
   margin:14px 0 36px;
-  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
-  font-size:24px;           /* ⬅️ bigger */
+  font-size:24px;
   font-weight:500;
-  line-height:1.5;
   color:var(--text-muted);
 }
 
-/* H3 – ALL article section headings */
 h3{
   margin:24px 0 8px;
   padding-bottom:6px;
@@ -73,28 +66,21 @@ h3{
   font-size:18px;
   font-weight:600;
   color:#000;
-
   border-bottom:1.5px solid var(--border);
   scroll-margin-top:100px;
 }
 
-
-
 /* ---------- PDF ---------- */
+
 .pdf-viewer{
   max-width:900px;
   height:600px;
   margin:0 auto 20px;
   border:1px solid #ccc;
   border-radius:6px;
-  overflow:hidden;
 }
 
-.pdf-viewer iframe{
-  width:100%;
-  height:100%;
-  border:none;
-}
+.pdf-viewer iframe{ width:100%; height:100%; border:none; }
 
 .pdf-download{
   max-width:900px;
@@ -111,9 +97,8 @@ h3{
   font-weight:600;
 }
 
-
-
 /* ---------- TOC ---------- */
+
 .main-toc{
   max-width:900px;
   margin:0 auto 40px;
@@ -123,35 +108,27 @@ h3{
   border-radius:6px;
 }
 
-.main-toc ul{
-  list-style:none;
-  margin:0;
-  padding:0;
-}
-
+.main-toc ul{ list-style:none; padding:0; margin:0; }
 .main-toc li{ margin:.3rem 0; }
-
 .main-toc a{
   color:var(--blue-text);
   font-weight:600;
   text-decoration:none;
 }
+
 /* ---------- Tables ---------- */
-.table-wrap{
-  margin:8px 0 20px;
-}
+
+.table-wrap{ margin:8px 0 24px; }
 
 table{
   width:100%;
   border-collapse:collapse;
-  background:#ffffff;
   font-size:14px;
 }
 
 th,td{
   border:1px solid var(--border);
   padding:8px 12px;
-  text-align:left;
   vertical-align:top;
 }
 
@@ -160,12 +137,31 @@ th{
   font-weight:700;
   border-bottom:2px solid var(--black);
 }
+/* ---------- Unified table column widths ---------- */
+
+table{
+  table-layout: fixed; /* Forces consistent column sizing */
+  width:100%;
+}
+
+table th:nth-child(1),
+table td:nth-child(1){
+  width:30%;
+}
+
+table th:nth-child(2),
+table td:nth-child(2){
+  width:50%;
+}
+
+table th:nth-child(3),
+table td:nth-child(3){
+  width:20%;
+}
 
 /* ---------- Figures ---------- */
-.figure{
-  margin:32px auto;
-  text-align:center;
-}
+
+.figure{ margin:32px auto; text-align:center; }
 .figure img{ max-width:100%; }
 .figure figcaption{
   margin-top:8px;
@@ -175,6 +171,7 @@ th{
 }
 
 /* ---------- Footer ---------- */
+
 .footer-note{
   margin-top:40px;
   padding-top:16px;
@@ -183,14 +180,16 @@ th{
   color:var(--text-muted);
 }
 
-/* Keep disclaimer as one tight block */
-.footer-note p{
-  margin:0;
-}
+.footer-note p{ margin:0; }
 </style>
+
+
 
 <div class="container">
 
+
+
+<!-- PDF -->
 <div class="pdf-viewer">
   <iframe src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d9d63050c6b4fb49254dfd2b450a942cc6b05bf7/Nyx/Nyx_Technical_data_sheet/Nyx_technical_data_sheet_EN.pdf"></iframe>
 </div>
@@ -200,51 +199,119 @@ th{
   <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d9d63050c6b4fb49254dfd2b450a942cc6b05bf7/Nyx/Nyx_Technical_data_sheet/Nyx_technical_data_sheet_EN.pdf" target="_blank">download it here</a>.
 </div>
 
+<!-- TOC -->
 <nav class="main-toc">
 <h4>Table of Contents</h4>
 <ul>
 <li><a href="#versions">1. Versions</a></li>
 <li><a href="#general">2. General Data</a></li>
 <li><a href="#rf">3. Connectivity and RF Specification</a></li>
+<li><a href="#temp">4. Temperature Sensor Specification</a></li>
+<li><a href="#hum">5. Relative Humidity Sensor Specification</a></li>
+<li><a href="#light">6. Ambient Light Sensor Specification</a></li>
 <li><a href="#runtime">7. Running Times</a></li>
 <li><a href="#drawings">8. Technical Drawings</a></li>
 </ul>
 </nav>
 
+<!-- VERSIONS -->
 <h3 id="versions">1. Versions</h3>
 <div class="table-wrap">
 <table>
 <tbody><tr><th>Item Code</th><th>Features</th></tr>
-<tr><td>S‑NYXX‑LOEU‑THL</td><td>NYX, LoRaWAN EU, Temperature, relative humidity, ambient light</td></tr>
-<tr><td>S‑NYXX‑MIOTY‑THL</td><td>NYX, mioty EU, Temperature, relative humidity, ambient light</td></tr>
+<tr>
+<td>S‑NYXX‑LOEU‑THL</td>
+<td>NYX, LoRaWAN EU, temperature, relative humidity, ambient light indicator</td>
+</tr>
+<tr>
+<td>S‑NYXX‑MIOTY‑THL</td>
+<td>NYX, mioty EU, temperature, relative humidity, ambient light indicator</td>
+</tr>
 </tbody></table>
 </div>
 
+<!-- GENERAL -->
 <h3 id="general">2. General Data</h3>
 <div class="table-wrap">
 <table>
 <tbody><tr><th>Feature</th><th>Value</th><th>Unit</th></tr>
-<tr><td>Dimensions</td><td>86.5 × 67 × 8.5</td><td>mm</td></tr>
+<tr><td>Dimensions</td><td>86.5 × 67 × 8.5 (without wall mount)</td><td>mm</td></tr>
 <tr><td>Weight</td><td>120</td><td>g</td></tr>
-<tr><td>Operating temperature</td><td>-5 to +60</td><td>°C</td></tr>
+<tr><td>Operating temperature</td><td>5 – 60</td><td>°C</td></tr>
+<tr><td>Storage temperature</td><td>15 – 25</td><td>°C</td></tr>
+<tr><td>Relative humidity (operation)</td><td>5 – 90</td><td>%RH</td></tr>
+<tr><td>IP rating</td><td>21</td><td></td></tr>
+<tr><td>Sensors</td><td>Temperature, relative humidity, ambient light</td><td></td></tr>
+<tr><td>Traffic light function</td><td>Yes, LEDs</td><td></td></tr>
+<tr><td>Acoustic alarm</td><td>Buzzer, beep tone</td><td></td></tr>
+<tr><td>Provisioning</td><td>NFC</td><td></td></tr>
 <tr><td>Material</td><td>ABS</td><td></td></tr>
+<tr><td>NFC antenna</td><td>Integrated</td><td></td></tr>
+<tr><td>BLE antenna</td><td>–</td><td></td></tr>
+<tr><td>RF antenna</td><td>Integrated</td><td></td></tr>
+<tr><td>Accelerometer</td><td>–</td><td></td></tr>
+<tr><td>Batteries</td><td>Supercap, pouch cells, non‑replaceable</td><td></td></tr>
+<tr><td>Primary cell type</td><td>–</td><td></td></tr>
+<tr><td>Secondary cell</td><td>Supercap, pouch cells</td><td></td></tr>
 </tbody></table>
 </div>
 
+<!-- RF -->
 <h3 id="rf">3. Connectivity and RF Specification</h3>
 <div class="table-wrap">
 <table>
 <tbody><tr><th>Feature</th><th>Value</th><th>Unit</th></tr>
-<tr><td>RF standards</td><td>LoRaWAN®, mioty®</td><td></td></tr>
-<tr><td>Frequency</td><td>868</td><td>MHz</td></tr>
+<tr><td>Sub‑1 GHz RF standards</td><td>LoRaWAN®, mioty®</td><td></td></tr>
+<tr><td>Frequency LoRaWAN, mioty EU</td><td>868</td><td>MHz</td></tr>
+<tr><td>Cellular frequency</td><td>Band 8, 20</td><td></td></tr>
+<tr><td>Transmit power LoRaWAN / mioty EU</td><td>14</td><td>dBm</td></tr>
+<tr><td>Cellular transmit power</td><td>Not available</td><td>dBm</td></tr>
+<tr><td>LoRa MAC layer version</td><td>1.0.4</td><td></td></tr>
+<tr><td>Regional parameters version</td><td>RP002 Regional Parameters 1.0.3</td><td></td></tr>
+</tbody></table>
+</div>
+
+<!-- TEMP -->
+<h3 id="temp">4. Temperature Sensor Specification</h3>
+<div class="table-wrap">
+<table>
+<tbody><tr><th>Feature</th><th>Value</th><th>Unit</th></tr>
+<tr><td>Measuring range</td><td>-40 to +125</td><td>°C</td></tr>
+<tr><td>Drift (long‑term)</td><td>&lt; 0.02</td><td>°C</td></tr>
+<tr><td>Resolution</td><td>0.1</td><td>°C</td></tr>
+<tr><td>Accuracy</td><td>±0.2</td><td>°C</td></tr>
+<tr><td>Repeatability</td><td>0.2</td><td>°C</td></tr>
+</tbody></table>
+</div>
+
+<!-- HUM -->
+<h3 id="hum">5. Relative Humidity Sensor Specification</h3>
+<div class="table-wrap">
+<table>
+<tbody><tr><th>Feature</th><th>Value</th><th>Unit</th></tr>
+<tr><td>Measuring range</td><td>0 to 100</td><td>%RH</td></tr>
+<tr><td>Drift (long‑term)</td><td>&lt; 0.25</td><td>%RH/year</td></tr>
+<tr><td>Resolution</td><td>1</td><td>%RH</td></tr>
+<tr><td>Accuracy</td><td>±2.0</td><td>%RH</td></tr>
+<tr><td>Repeatability</td><td>0.1</td><td>%RH</td></tr>
+</tbody></table>
+</div>
+
+<!-- LIGHT -->
+<h3 id="light">6. Ambient Light Sensor Specification</h3>
+<div class="table-wrap">
+<table>
+<tbody><tr><th>Feature</th><th>Value</th><th>Unit</th></tr>
+<tr><td>Measuring range</td><td>0.01 to 83,000</td><td>lux</td></tr>
+<tr><td>Resolution</td><td>1</td><td>lux</td></tr>
 </tbody></table>
 </div>
 
 <!-- RUNTIME -->
 <h3 id="runtime">7. Running Times</h3>
 <p>
-Positive energy balance at 400 lux over 7 hours a day with a measuring rate of
-5 minutes and a transmission frequency of 2 hours.
+Positive energy balance at 400 lux over 7 hours per day with a measuring rate of
+5 minutes and a transmission interval of 2 hours.
 </p>
 
 <!-- DRAWINGS -->
@@ -256,37 +323,22 @@ Positive energy balance at 400 lux over 7 hours a day with a measuring rate of
 </figure>
 
 <figure class="figure">
-  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d9d63050c6b4fb49254dfd2b450a942cc6b05bf7/Nyx/Nyx_Technical_data_sheet/Nyx_technical_drawing_wall_mounting.png" alt="NYX sensor wall mounting drawing" style="height: auto;">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d9d63050c6b4fb49254dfd2b450a942cc6b05bf7/Nyx/Nyx_Technical_data_sheet/Nyx_technical_drawing_wall_mounting.png" alt="NYX sensor wall mounting" style="height: auto;">
   <figcaption>Figure 2: NYX sensor – wall mounting</figcaption>
 </figure>
 
-  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/afc9699389c59e7016ade928f86deb9a6c514640/Nyx/Nyx_Pic/logo%20lora%20mioty.png" alt="LoRaWAN and mioty logos" style="max-width: 260px; opacity: 0.9; height: auto;">
+<img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/afc9699389c59e7016ade928f86deb9a6c514640/Nyx/Nyx_Pic/logo%20lora%20mioty.png" alt="LoRaWAN and mioty logos" style="max-width: 260px; opacity: 0.9; display: block; margin: 32px auto; height: auto;">
 
-
-
-<!-- ================= logos  ================= -->
-<img
-  src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/afc9699389c59e7016ade928f86deb9a6c514640/Nyx/Nyx_Pic/logo%20lora%20mioty.png"
-  alt="LoRaWAN und mioty Logos"
-  style="max-width:260px; opacity:0.9; display:block; margin:32px 0;"
->
-<img
-  src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/a1583d03cea7cd8d0f30b8bf261e80e0f2e812ca/Nyx/Nyx_general_description/picture/Nyx_allg._Beschreibung_3.png"
-  alt="Nyx device illustration"
-  style="
-    max-width:300px;
-    display:block;
-    margin:32px 0;
-    opacity:0.95;
-  "
->
-  <!-- DISCLAIMER -->
+<!-- DISCLAIMER -->
 <div class="footer-note">
   <p>© Sentinum GmbH – All rights reserved.</p>
-  <p>All contents of this document, including text, tables, and images, are protected by copyright and are the property of Sentinum GmbH.</p>
+  <p>All contents of this document, including text, tables and images, are protected by copyright and are the property of Sentinum GmbH.</p>
   <p>All images are subject to the copyright of Sentinum GmbH unless otherwise stated.</p>
-  <p>Reproduction, distribution, or use — even in excerpts — is not permitted without explicit written permission.</p>
-  <p style="padding-left:14px; font-style:italic;">Specifications are subject to change without notice. All information is provided without warranty.</p>
+  <p>Reproduction, distribution or use — even in part — is not permitted without explicit written permission.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Specifications subject to change. All information provided without warranty.
+  </p>
 </div>
 
 </div>
+
