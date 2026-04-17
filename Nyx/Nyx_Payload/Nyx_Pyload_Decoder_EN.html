@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NYX – NFC & Downlink Description</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+        
+        :root{
+          --black:#000000;
+          --text-main:#111827;
+          --text-muted:#6b7280;
+          --border:#d0d7de;
+          --table-header:#f5f7fa;
+          --blue-bg:#f0f8ff;
+          --blue-border:#a0c4ff;
+          --blue-text:#1a3e8c;
+          --toc-bg:#f7fbff;
+          --toc-border:#d6e4fa;
+        }
+        
+        *{ box-sizing:border-box; }
+        
+        body{
+          margin:0;
+          font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+          color:var(--text-main);
+          line-height:1.65;
+          background:#ffffff;
+        }
+        
+        .container{ width:100%; }
+        
+        /* Headings */
+        
+        h1{
+          margin:48px 0 16px;
+          padding-bottom:12px;
+          font-family:"Montserrat",Arial,sans-serif;
+          font-size:42px;
+          font-weight:700;
+          border-bottom:2px solid var(--border);
+        }
+        
+        h3{
+          margin:32px 0 8px;
+          padding-bottom:6px;
+          font-family:"Montserrat",Arial,sans-serif;
+          font-size:18px;
+          font-weight:600;
+          border-bottom:1.5px solid var(--border);
+          scroll-margin-top:100px;
+        }
+        
+        /* TOC */
+        
+        .main-toc{
+          max-width:900px;
+          margin:0 auto 40px;
+          padding:16px 20px;
+          background:var(--toc-bg);
+          border:1px solid var(--toc-border);
+          border-radius:6px;
+        }
+        
+        .main-toc ul{ list-style:none; padding:0; margin:0; }
+        .main-toc li{ margin:.3rem 0; }
+        .main-toc a{
+          color:var(--blue-text);
+          font-weight:600;
+          text-decoration:none;
+        }
+        /* ---------- PDF ---------- */
+        .pdf-viewer{
+          max-width:900px;
+          height:600px;
+          margin:0 auto 20px;
+          border:1px solid #ccc;
+          border-radius:6px;
+          overflow:hidden;
+        }
+        
+        .pdf-viewer iframe{
+          width:100%;
+          height:100%;
+          border:none;
+        }
+        
+        .pdf-download{
+          max-width:900px;
+          margin:0 auto 36px;
+          padding:14px 18px;
+          background:var(--blue-bg);
+          border:1px solid var(--blue-border);
+          border-radius:6px;
+          text-align:center;
+        }
+        
+        .pdf-download a{
+          color:var(--blue-text);
+          font-weight:600;
+        }
+        
+        /* Tables */
+        
+        .table-wrap{ margin:12px 0 32px; }
+        
+        table{
+          width:100%;
+          border-collapse:collapse;
+          font-size:14px;
+        }
+        
+        th,td{
+          border:1px solid var(--border);
+          padding:8px 12px;
+          vertical-align:top;
+        }
+        
+        th{
+          background:var(--table-header);
+          font-weight:700;
+          border-bottom:2px solid var(--black);
+        }
+        
+        /* Footer */
+        
+
+/* ---------- Footer ---------- */
+.footer-note{
+  margin-top:40px;
+  padding-top:16px;
+  border-top:1px solid var(--border);
+  font-size:.82rem;
+  color:var(--text-muted);
+}
+
+.footer-note p{
+  margin:0 0 6px 0;
+  line-height:1.4;
+}
+
+/* ---------- Inline code ---------- */
+code{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size:0.95em;
+  padding:0.1em 0.35em;
+  border-radius:4px;
+  background:#f5f7fa;
+  border:1px solid var(--border);
+}
+</style>
+<!-- ================= PDF VIEWER ================= -->
+<div class="pdf-viewer">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/62bb14e58cd85712b089c0d75afc4876912d9767/Nyx/Nyx_Payload/Nyx_Payload%20_description_EN.pdf">
+  </iframe>
+</div>
+
+<div class="pdf-download">
+  📄 You can view the PDF above or
+  <a
+    href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/62bb14e58cd85712b089c0d75afc4876912d9767/Nyx/Nyx_Payload/Nyx_Payload%20_description_EN.pdf"
+    target="_blank" rel="noopener noreferrer">
+    download it here
+  </a>.
+</div>
+
+<!-- ================= TABLE OF CONTENTS ================= -->
+<nav class="main-toc">
+  <h4>Table of Contents</h4>
+  <ul>
+    <li><a href="#overview">1. Payload Overview</a></li>
+    <li><a href="#module-key">2. Structure of the Module Key</a></li>
+    <li><a href="#nyx-payload">3. NYX Payload Description</a></li>
+    <li><a href="#iaq-index">4. IAQ Index</a></li>
+    <li><a href="#decoding-examples">5. Examples Decoding</a></li>
+  </ul>
+</nav>
