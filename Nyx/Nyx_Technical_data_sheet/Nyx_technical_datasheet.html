@@ -1,178 +1,132 @@
-<meta charset="UTF-8">
-<title>NYX – Technical Data Sheet</title>
+<!DOCTYPE html>
+<html lang="en">
 
-<style>
-/* ============================================================
-   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
-   ============================================================ */
+<head>
+    <meta charset="UTF-8">
+    <title>NYX – NFC & Downlink Description</title>
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
-
-:root{
-  --black:#000000;
-  --text-main:#111827;
-  --text-muted:#6b7280;
-
-  --border:#d0d7de;
-  --table-header:#f5f7fa;
-
-  --blue-bg:#f0f8ff;
-  --blue-border:#a0c4ff;
-  --blue-text:#1a3e8c;
-
-  --toc-bg:#f7fbff;
-  --toc-border:#d6e4fa;
-}
-
-/* ---------- Base ---------- */
-*{ box-sizing:border-box; }
-
-body{
-  margin:0;
-  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
-  color:var(--text-main);
-  line-height:1.65;
-  background:#ffffff;
-}
-
-.container{
-  width:100%;
-  margin:0;
-  padding:0;
-}
-
-/* ---------- Headings ---------- */
-
-/* H1 – article title (blog title) */
-h1{
-  margin:48px 0 16px;
-  padding-bottom:12px;
-  font-family:"Montserrat",Arial,sans-serif;
-  font-size:42px;           /* ⬅️ bigger */
-  font-weight:700;
-  line-height:1.25;
-  color:#000;
-  border-bottom:2px solid var(--border);
-}
-
-/* H2 – subtitle under article title */
-h2{
-  margin:14px 0 36px;
-  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
-  font-size:24px;           /* ⬅️ bigger */
-  font-weight:500;
-  line-height:1.5;
-  color:var(--text-muted);
-}
-
-/* H3 – ALL article section headings */
-h3{
-  margin:24px 0 8px;
-  padding-bottom:6px;
-  font-family:"Montserrat",Arial,sans-serif;
-  font-size:18px;
-  font-weight:600;
-  color:#000;
-
-  border-bottom:1.5px solid var(--border);
-  scroll-margin-top:100px;
-}
-
-
-
-/* ---------- PDF ---------- */
-.pdf-viewer{
-  max-width:900px;
-  height:600px;
-  margin:0 auto 20px;
-  border:1px solid #ccc;
-  border-radius:6px;
-  overflow:hidden;
-}
-
-.pdf-viewer iframe{
-  width:100%;
-  height:100%;
-  border:none;
-}
-
-.pdf-download{
-  max-width:900px;
-  margin:0 auto 36px;
-  padding:14px 18px;
-  background:var(--blue-bg);
-  border:1px solid var(--blue-border);
-  border-radius:6px;
-  text-align:center;
-}
-
-.pdf-download a{
-  color:var(--blue-text);
-  font-weight:600;
-}
-
-
-
-/* ---------- TOC ---------- */
-.main-toc{
-  max-width:900px;
-  margin:0 auto 40px;
-  padding:16px 20px;
-  background:var(--toc-bg);
-  border:1px solid var(--toc-border);
-  border-radius:6px;
-}
-
-.main-toc ul{
-  list-style:none;
-  margin:0;
-  padding:0;
-}
-
-.main-toc li{ margin:.3rem 0; }
-
-.main-toc a{
-  color:var(--blue-text);
-  font-weight:600;
-  text-decoration:none;
-}
-/* ---------- Tables ---------- */
-.table-wrap{
-  margin:8px 0 20px;
-}
-
-table{
-  width:100%;
-  border-collapse:collapse;
-  background:#ffffff;
-  font-size:14px;
-}
-
-th,td{
-  border:1px solid var(--border);
-  padding:8px 12px;
-  text-align:left;
-  vertical-align:top;
-}
-
-th{
-  background:var(--table-header);
-  font-weight:700;
-  border-bottom:2px solid var(--black);
-}
-
-/* ---------- Figures ---------- */
-.figure{
-  margin:32px auto;
-  text-align:center;
-}
-.figure img{ max-width:100%; }
-.figure figcaption{
-  margin-top:8px;
-  font-size:.85rem;
-  color:var(--text-muted);
-  font-style:italic;
-}
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+        
+        :root{
+          --black:#000000;
+          --text-main:#111827;
+          --text-muted:#6b7280;
+          --border:#d0d7de;
+          --table-header:#f5f7fa;
+          --blue-bg:#f0f8ff;
+          --blue-border:#a0c4ff;
+          --blue-text:#1a3e8c;
+          --toc-bg:#f7fbff;
+          --toc-border:#d6e4fa;
+        }
+        
+        *{ box-sizing:border-box; }
+        
+        body{
+          margin:0;
+          font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+          color:var(--text-main);
+          line-height:1.65;
+          background:#ffffff;
+        }
+        
+        .container{ width:100%; }
+        
+        /* Headings */
+        
+        h1{
+          margin:48px 0 16px;
+          padding-bottom:12px;
+          font-family:"Montserrat",Arial,sans-serif;
+          font-size:42px;
+          font-weight:700;
+          border-bottom:2px solid var(--border);
+        }
+        
+        h3{
+          margin:32px 0 8px;
+          padding-bottom:6px;
+          font-family:"Montserrat",Arial,sans-serif;
+          font-size:18px;
+          font-weight:600;
+          border-bottom:1.5px solid var(--border);
+          scroll-margin-top:100px;
+        }
+        
+        /* TOC */
+        
+        .main-toc{
+          max-width:900px;
+          margin:0 auto 40px;
+          padding:16px 20px;
+          background:var(--toc-bg);
+          border:1px solid var(--toc-border);
+          border-radius:6px;
+        }
+        
+        .main-toc ul{ list-style:none; padding:0; margin:0; }
+        .main-toc li{ margin:.3rem 0; }
+        .main-toc a{
+          color:var(--blue-text);
+          font-weight:600;
+          text-decoration:none;
+        }
+        /* ---------- PDF ---------- */
+        .pdf-viewer{
+          max-width:900px;
+          height:600px;
+          margin:0 auto 20px;
+          border:1px solid #ccc;
+          border-radius:6px;
+          overflow:hidden;
+        }
+        
+        .pdf-viewer iframe{
+          width:100%;
+          height:100%;
+          border:none;
+        }
+        
+        .pdf-download{
+          max-width:900px;
+          margin:0 auto 36px;
+          padding:14px 18px;
+          background:var(--blue-bg);
+          border:1px solid var(--blue-border);
+          border-radius:6px;
+          text-align:center;
+        }
+        
+        .pdf-download a{
+          color:var(--blue-text);
+          font-weight:600;
+        }
+        
+        /* Tables */
+        
+        .table-wrap{ margin:12px 0 32px; }
+        
+        table{
+          width:100%;
+          border-collapse:collapse;
+          font-size:14px;
+        }
+        
+        th,td{
+          border:1px solid var(--border);
+          padding:8px 12px;
+          vertical-align:top;
+        }
+        
+        th{
+          background:var(--table-header);
+          font-weight:700;
+          border-bottom:2px solid var(--black);
+        }
+        
+        /* Footer */
+        
 
 /* ---------- Footer ---------- */
 .footer-note{
@@ -183,93 +137,527 @@ th{
   color:var(--text-muted);
 }
 
-/* Keep disclaimer as one tight block */
 .footer-note p{
-  margin:0;
+  margin:0 0 6px 0;
+  line-height:1.4;
+}
+
+/* ---------- Inline code ---------- */
+code{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size:0.95em;
+  padding:0.1em 0.35em;
+  border-radius:4px;
+  background:#f5f7fa;
+  border:1px solid var(--border);
 }
 </style>
+</head>
 
-<div class="container">
 
-<div class="pdf-viewer">
-  <iframe src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d9d63050c6b4fb49254dfd2b450a942cc6b05bf7/Nyx/Nyx_Technical_data_sheet/Nyx_technical_data_sheet_EN.pdf"></iframe>
-</div>
+<body>
+    <div class="container">
 
-<div class="pdf-download">
-  📄 You can view the PDF above or
-  <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d9d63050c6b4fb49254dfd2b450a942cc6b05bf7/Nyx/Nyx_Technical_data_sheet/Nyx_technical_data_sheet_EN.pdf" target="_blank">download it here</a>.
-</div>
+        <div class="container">
+            <!-- PDF -->
+            <div class="pdf-viewer">
+                <iframe src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/5db17ff9a2f0ec3b6d6e0c4077a8d770c2a32690/Nyx/Nyx_NFC_and_Downlink_description/Nyx_NFC_and_downlink_description_EN.pdf">
+                </iframe>
+            </div>
 
-<nav class="main-toc">
-<h4>Table of Contents</h4>
-<ul>
-<li><a href="#versions">1. Versions</a></li>
-<li><a href="#general">2. General Data</a></li>
-<li><a href="#rf">3. Connectivity and RF Specification</a></li>
-<li><a href="#runtime">7. Running Times</a></li>
-<li><a href="#drawings">8. Technical Drawings</a></li>
-</ul>
-</nav>
+            <div class="pdf-download">
+                📄 You can view the PDF above or
+                <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/5db17ff9a2f0ec3b6d6e0c4077a8d770c2a32690/Nyx/Nyx_NFC_and_Downlink_description/Nyx_NFC_and_downlink_description_EN.pdf" target="_blank">
+    download it here
+  </a>.
+            </div>
 
-<h3 id="versions">1. Versions</h3>
-<div class="table-wrap">
-<table>
-<tbody><tr><th>Item Code</th><th>Features</th></tr>
-<tr><td>S‑NYXX‑LOEU‑THL</td><td>NYX, LoRaWAN EU, Temperature, relative humidity, ambient light</td></tr>
-<tr><td>S‑NYXX‑MIOTY‑THL</td><td>NYX, mioty EU, Temperature, relative humidity, ambient light</td></tr>
-</tbody></table>
-</div>
+            <!-- TOC -->
+            <nav class="main-toc">
+                <h4>Table of Contents</h4>
+                <ul>
+                    <li><a href="#overview">1. Module Overview</a></li>
+                    <li><a href="#timings">2. Timings Group (0x00)</a></li>
+                    <li><a href="#alarm">3. Alarm Group (0x01)</a></li>
+                    <li><a href="#buzzer">4. Buzzer Group (0x02)</a></li>
+                    <li><a href="#led">5. LED Group (0x04)</a></li>
+                    <li><a href="#humidity">6. Humidity Alarm Group (0x05)</a></li>
+                </ul>
+            </nav>
 
-<h3 id="general">2. General Data</h3>
-<div class="table-wrap">
-<table>
-<tbody><tr><th>Feature</th><th>Value</th><th>Unit</th></tr>
-<tr><td>Dimensions</td><td>86.5 × 67 × 8.5</td><td>mm</td></tr>
-<tr><td>Weight</td><td>120</td><td>g</td></tr>
-<tr><td>Operating temperature</td><td>-5 to +60</td><td>°C</td></tr>
-<tr><td>Material</td><td>ABS</td><td></td></tr>
-</tbody></table>
-</div>
+            <!-- OVERVIEW -->
+            <h3 id="overview">1. Module Overview</h3>
 
-<h3 id="rf">3. Connectivity and RF Specification</h3>
-<div class="table-wrap">
-<table>
-<tbody><tr><th>Feature</th><th>Value</th><th>Unit</th></tr>
-<tr><td>RF standards</td><td>LoRaWAN®, mioty®</td><td></td></tr>
-<tr><td>Frequency</td><td>868</td><td>MHz</td></tr>
-</tbody></table>
-</div>
-
-<!-- RUNTIME -->
-<h3 id="runtime">7. Running Times</h3>
-<p>
-Positive energy balance at 400 lux over 7 hours a day with a measuring rate of
-5 minutes and a transmission frequency of 2 hours.
+            <div class="table-wrap" style="overflow-x:auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Module</th>
+                            <th>Module Key</th>
+                            <th>Group</th>
+                            <th>Group ID</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sentiface</td>
+                            <td>0x1XXX</td>
+                            <td>Timings</td>
+                            <td>0x00</td>
+                            <td>Measurement and transmission behavior</td>
+                        </tr>
+                        <tr>
+                            <td>Sentiface</td>
+                            <td>0x1XXX</td>
+                            <td>Alarm</td>
+                            <td>0x01</td>
+                            <td>CO₂ alarm thresholds</td>
+                        </tr>
+                        <tr>
+                            <td>Sentiface</td>
+                            <td>0x1XXX</td>
+                            <td>Buzzer</td>
+                            <td>0x02</td>
+                            <td>Buzzer behavior</td>
+                        </tr>
+                        <tr>
+                            <td>Sentiface</td>
+                            <td>0x1XXX</td>
+                            <td>LED</td>
+                            <td>0x04</td>
+                            <td>LED control</td>
+                        </tr>
+                        <tr>
+                            <td>Sentiface</td>
+                            <td>0x1XXX</td>
+                            <td>Humidity Alarm</td>
+                            <td>0x05</td>
+                            <td>Humidity alarm configuration</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>
+  Tables for cross-product modules (Senticom / Sentivisor) can be found in the
+  <a href="https://docs.sentinum.de/en/generische-nfc-und-downlink-dokumentation"
+     target="_blank" rel="noopener noreferrer">
+    generic NFC and downlink documentation
+  </a>.
 </p>
 
-<!-- DRAWINGS -->
-<h3 id="drawings">8. Technical Drawings</h3>
+<p>
+  Further information on configuring sensor communication can be found in the respective
+  generic
+  <a href="https://docs.sentinum.de/en/generische-lorawan-dokumentation"
+     target="_blank" rel="noopener noreferrer">
+    LoRaWAN® documentation
+  </a>
+  or
+  <a href="https://docs.sentinum.de/en/generic-mioty-documentation"
+     target="_blank" rel="noopener noreferrer">
+    Mioty® documentation
+  </a>,
+  depending on the version.
+</p>
 
-<figure class="figure">
-  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d9d63050c6b4fb49254dfd2b450a942cc6b05bf7/Nyx/Nyx_Technical_data_sheet/Nyx_technical_drawing.png" alt="NYX sensor technical drawing" style="height: auto;">
-  <figcaption>Figure 1: NYX sensor – technical drawing</figcaption>
-</figure>
+            <!-- ================= TIMINGS ================= -->
+            <h3>SENTIFACE: TIMINGS GROUP <code>0x00</code></h3>
 
-<figure class="figure">
-  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d9d63050c6b4fb49254dfd2b450a942cc6b05bf7/Nyx/Nyx_Technical_data_sheet/Nyx_technical_drawing_wall_mounting.png" alt="NYX sensor wall mounting drawing" style="height: auto;">
-  <figcaption>Figure 2: NYX sensor – wall mounting</figcaption>
-</figure>
+            <div class="table-wrap" style="overflow-x:auto;">
+                <table class="resource-table" style="width:120%;">
+                    <colgroup>
+                        <col style="width:12%;">
+                            <col style="width:8%;">
+                                <col style="width:42%;">
+                                    <col style="width:10%;">
+                                        <col style="width:6%;">
+                                            <col style="width:6%;">
+                                                <col style="width:8%;">
+                                                    <col style="width:8%;">
+                                                        <col style="width:10%;">
+                    </colgroup>
 
-  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/afc9699389c59e7016ade928f86deb9a6c514640/Nyx/Nyx_Pic/logo%20lora%20mioty.png" alt="LoRaWAN and mioty logos" style="max-width: 260px; opacity: 0.9; height: auto;">
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Property ID</th>
+                            <th>Description</th>
+                            <th>Key (NFC/BLE)</th>
+                            <th>Min</th>
+                            <th>Max</th>
+                            <th>Default</th>
+                            <th>Unit</th>
+                            <th>Module Key</th>
+                        </tr>
+                    </thead>
 
+                    <tbody>
+                        <tr>
+                            <td>MEASUREMENT PERIOD</td>
+                            <td><code>0x00</code></td>
+                            <td>
+                                Specifies the period in which the measured values are recorded. 5 minutes means that a measurement is always taken by the sensor after 5 minutes.
+                            </td>
+                            <td><code>period</code></td>
+                            <td>5</td>
+                            <td>360</td>
+                            <td>30</td>
+                            <td>min</td>
+                            <td><code>1111</code></td>
+                        </tr>
 
-<!-- DISCLAIMER -->
-<div class="footer-note">
-  <p>© Sentinum GmbH – All rights reserved.</p>
-  <p>All contents of this document, including text, tables, and images, are protected by copyright and are the property of Sentinum GmbH.</p>
-  <p>All images are subject to the copyright of Sentinum GmbH unless otherwise stated.</p>
-  <p>Reproduction, distribution, or use — even in excerpts — is not permitted without explicit written permission.</p>
-  <p style="padding-left:14px; font-style:italic;">Specifications are subject to change without notice. All information is provided without warranty.</p>
-</div>
+                        <tr>
+                            <td>MEASUREMENT REPORT EVERY</td>
+                            <td><code>0x01</code></td>
+                            <td>
+                                Number of measurements taken until transmission.
+                            </td>
+                            <td><code>every</code></td>
+                            <td>1</td>
+                            <td>64</td>
+                            <td>8</td>
+                            <td>-</td>
+                            <td><code>1111</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-</div>
+            <!-- ================= ALARM ================= -->
+            <h3>SENTIFACE: ALARM GROUP <code>0x01</code></h3>
+
+            <div class="table-wrap" style="overflow-x:auto;">
+                <table class="resource-table" style="width:120%;">
+                    <colgroup>
+                        <col style="width:12%;">
+                            <col style="width:8%;">
+                                <col style="width:42%;">
+                                    <col style="width:10%;">
+                                        <col style="width:6%;">
+                                            <col style="width:6%;">
+                                                <col style="width:8%;">
+                                                    <col style="width:8%;">
+                                                        <col style="width:10%;">
+                    </colgroup>
+
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Property ID</th>
+                            <th>Description</th>
+                            <th>Key (NFC/BLE)</th>
+                            <th>Min</th>
+                            <th>Max</th>
+                            <th>Default</th>
+                            <th>Unit</th>
+                            <th>Module Key</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>DELTA THRESHOLD</td>
+                            <td><code>0x00</code></td>
+                            <td>
+                                Indicates by how much the CO2 value must change in absolute terms compared to the last transmission for an ALARM transmission to be triggered. This transmission is carried out independently of the normal transmission interval.
+                            </td>
+                            <td><code>delta</code></td>
+                            <td>300</td>
+                            <td>2000</td>
+                            <td>300</td>
+                            <td>ppm</td>
+                            <td><code>1111</code></td>
+                        </tr>
+
+                        <tr>
+                            <td>YELLOW THRESHOLD</td>
+                            <td><code>0x01</code></td>
+                            <td>
+                                Indicates the CO2 threshold that must be exceeded for the sensor to change to the yellow state (yellow LED lights up).
+                            </td>
+                            <td><code>yellow</code></td>
+                            <td>500</td>
+                            <td>3000</td>
+                            <td>1000</td>
+                            <td>ppm</td>
+                            <td><code>1111</code></td>
+                        </tr>
+
+                        <tr>
+                            <td>RED THRESHOLD</td>
+                            <td><code>0x02</code></td>
+                            <td>
+                                Indicates the CO2 threshold that must be exceeded for the sensor to change to the red state (red LED lights up).
+                            </td>
+                            <td><code>red</code></td>
+                            <td>500</td>
+                            <td>3000</td>
+                            <td>2000</td>
+                            <td>ppm</td>
+                            <td><code>1111</code></td>
+                        </tr>
+
+                        <tr>
+                            <td>LEVEL HYSTERISIS</td>
+                            <td><code>0x03</code></td>
+                            <td>
+                                Determines the absolute hysteresis for state changes. If the CO2 concentration falls below a threshold value minus hysteresis, the system switches from a higher to a lower alarm status.
+                            </td>
+                            <td><code>hyst</code></td>
+                            <td>0</td>
+                            <td>300</td>
+                            <td>100</td>
+                            <td>ppm</td>
+                            <td><code>1111</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ================= BUZZER ================= -->
+            <h3>SENTIFACE: BUZZER GROUP <code>0x02</code></h3>
+
+            <div class="table-wrap" style="overflow-x:auto;">
+                <table class="resource-table" style="width:120%;">
+                    <colgroup>
+                        <col style="width:12%;">
+                            <col style="width:8%;">
+                                <col style="width:42%;">
+                                    <col style="width:10%;">
+                                        <col style="width:6%;">
+                                            <col style="width:6%;">
+                                                <col style="width:8%;">
+                                                    <col style="width:8%;">
+                                                        <col style="width:10%;">
+                    </colgroup>
+
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Property ID</th>
+                            <th>Description</th>
+                            <th>Key (NFC/BLE)</th>
+                            <th>Min</th>
+                            <th>Max</th>
+                            <th>Default</th>
+                            <th>Unit</th>
+                            <th>Module Key</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>BUZZER SETTING</td>
+                            <td><code>0x00</code></td>
+                            <td>
+                                Specifies the behavior of the buzzer.
+                                <br>
+                                <code>0</code>: Buzzer off
+                                <br>
+                                <code>1</code>: Buzzer on alarm level change above the defined thresholds (red, yellow, green)
+                                <br>
+                                <code>2</code>: Always on in the event of an alarm (if the sensor remains in the yellow or red state, the buzzer always reports the state for each measurement)
+                                <br>
+                                <code>3</code>: Buzzer only signals when changing to the red state
+                                <br>
+                                <code>4</code>: Buzzer reports permanently if the red state remains.
+                                <br>
+                                <code>5</code>: Buzzer reports permanently if it is not in the green range and there is a level change above the defined thresholds
+                            </td>
+                            <td><code>buzz</code></td>
+                            <td>0</td>
+                            <td>5</td>
+                            <td>1</td>
+                            <td>-</td>
+                            <td><code>1111</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ================= LED ================= -->
+            <h3>SENTIFACE: LED GROUP <code>0x04</code></h3>
+
+            <div class="table-wrap" style="overflow-x:auto;">
+                <table class="resource-table" style="width:120%;">
+                    <colgroup>
+                        <col style="width:12%;">
+                            <col style="width:8%;">
+                                <col style="width:42%;">
+                                    <col style="width:10%;">
+                                        <col style="width:6%;">
+                                            <col style="width:6%;">
+                                                <col style="width:8%;">
+                                                    <col style="width:8%;">
+                                                        <col style="width:10%;">
+                    </colgroup>
+
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Property ID</th>
+                            <th>Description</th>
+                            <th>Key (NFC/BLE)</th>
+                            <th>Min</th>
+                            <th>Max</th>
+                            <th>Default</th>
+                            <th>Unit</th>
+                            <th>Module Key</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>LED SETTING</td>
+                            <td><code>0x00</code></td>
+                            <td>
+                                Specifies the behavior of the LEDs:
+                                <br>
+                                <code>0</code>: All LEDs off
+                                <br>
+                                <code>1</code>: All LEDs on
+                            </td>
+                            <td><code>leds</code></td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td><code>1111</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ================= HUMIDITY ================= -->
+            <h3>SENTIFACE: HUMIDITY ALARM GROUP <code>0x05</code></h3>
+
+            <div class="table-wrap" style="overflow-x:auto;">
+                <table class="resource-table" style="width:120%;">
+                    <colgroup>
+                        <col style="width:12%;">
+                            <col style="width:8%;">
+                                <col style="width:42%;">
+                                    <col style="width:10%;">
+                                        <col style="width:6%;">
+                                            <col style="width:6%;">
+                                                <col style="width:8%;">
+                                                    <col style="width:8%;">
+                                                        <col style="width:10%;">
+                    </colgroup>
+
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Property ID</th>
+                            <th>Description</th>
+                            <th>Key (NFC/BLE)</th>
+                            <th>Min</th>
+                            <th>Max</th>
+                            <th>Default</th>
+                            <th>Unit</th>
+                            <th>Module Key</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>ALARM HUMIDITY</td>
+                            <td><code>0x00</code></td>
+                            <td>
+                                Switches the alarm for humidity on for status <code>1</code>, off for <code>0</code>.
+                            </td>
+                            <td><code>ads</code></td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td><code>1111</code></td>
+                        </tr>
+
+                        <tr>
+                            <td>DELTA THRESHOLD</td>
+                            <td><code>0x01</code></td>
+                            <td>
+                                Specifies the absolute amount by which the humidity must change compared to the last transmission for an ALARM transmission to be triggered. This transmission is carried out independently of the normal transmission interval.
+                            </td>
+                            <td><code>hdt</code></td>
+                            <td>5</td>
+                            <td>100</td>
+                            <td>20</td>
+                            <td>%RH</td>
+                            <td><code>1111</code></td>
+                        </tr>
+
+                        <tr>
+                            <td>YELLOW THRESHOLD</td>
+                            <td><code>0x02</code></td>
+                            <td>
+                                Indicates the humidity threshold that must be exceeded for the sensor to change to the yellow state (yellow LED lights up).
+                            </td>
+                            <td><code>hyt</code></td>
+                            <td>10</td>
+                            <td>100</td>
+                            <td>60</td>
+                            <td>%RH</td>
+                            <td><code>1111</code></td>
+                        </tr>
+
+                        <tr>
+                            <td>RED THRESHOLD</td>
+                            <td><code>0x03</code></td>
+                            <td>
+                                Indicates the humidity threshold that must be exceeded for the sensor to change to the red state (red LED lights up).
+                            </td>
+                            <td><code>hrt</code></td>
+                            <td>10</td>
+                            <td>100</td>
+                            <td>80</td>
+                            <td>%RH</td>
+                            <td><code>1111</code></td>
+                        </tr>
+
+                        <tr>
+                            <td>LEVEL HYSTERISIS</td>
+                            <td><code>0x04</code></td>
+                            <td>
+                                Determines the absolute hysteresis for state changes. If the humidity falls below a threshold value minus hysteresis, the system switches from a higher to a lower alarm status.
+                            </td>
+                            <td><code>hlh</code></td>
+                            <td>0</td>
+                            <td>300</td>
+                            <td>5</td>
+                            <td>%RH</td>
+                            <td><code>1111</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <img
+  src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/7330568df5ebd68dcb438009d94284ecf2c0c6cb/Nyx/Nyx_Pic/logo%20lora%20mioty.png"
+  alt="LoRaWAN and mioty logos"
+  style="
+    max-width:300px;
+    display:block;
+    margin:32px auto;
+    opacity:0.9;
+  "
+>
+
+            <!-- DISCLAIMER -->
+            <!-- DISCLAIMER -->
+            <div class="footer-note">
+                <p>© Sentinum GmbH – All rights reserved.</p>
+                <p>All contents of this document, including text, tables, and images, are protected by copyright and are the property of Sentinum GmbH.</p>
+                <p>All images are subject to the copyright of Sentinum GmbH unless otherwise stated.</p>
+                <p>Reproduction, distribution, or use — even in excerpts — is not permitted without explicit written permission.</p>
+                <p style="padding-left:14px; font-style:italic;">Specifications are subject to change without notice. All information is provided without warranty.</p>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
