@@ -1,4 +1,4 @@
-<!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -306,7 +306,7 @@
       <p>Warnings and important information about potential hazards or damage</p>
       <p>Important information required for smooth operation of the devices</p>
     </div>
-
+ <div class="note-strip note-strip--yellow">
         <p><strong>Please note:</strong></p>
         <ul>
           <li>Follow the safety instructions and installation guidelines in this manual and the mounting list.</li>
@@ -314,7 +314,7 @@
           <li>The device may only be used within the technical specifications.</li>
           <li>The device may only be used for its intended purpose.</li>
           <li>Safety and functionality can no longer be guaranteed if the device is modified or altered.</li>
-          <li>The purpose of the sensor is to monitor indoor air quality.</li>
+          <li>The purpose of the sensor is to monitor indoor air quality.</li> </div>
     <!-- RED BOX 1 (fett) -->
     <div class="note-strip note-strip--red">
       <ul>
@@ -323,39 +323,39 @@
         <li><strong>The sensor is not a smoke detector!</strong></li>
       </ul>
     </div>
-          <li>Do not mount the sensor on ceilings or floors.</li>
-          <li>The device is approved for operation up to a maximum of 2000 meters above sea level.</li>
-          <li>A minimum distance of 20 cm between the device and persons must be maintained.</li>
-        </ul>
-      </div>
-    </div>
-    
+    <!-- YELLOW BOX 1 -->
+<div class="note-strip note-strip--yellow">
+  <ul>
+    <li>Do not mount the sensor on ceilings or floors.</li>
+    <li>The device is approved for operation up to a maximum of 2000 meters above sea level.</li>
+    <li>A minimum distance of 20 cm between the device and persons must be maintained.</li>
+  </ul>
+</div>
 
+<!-- YELLOW BOX 2 -->
+<div class="note-strip note-strip--yellow">
+  <p><strong>If the device is installed incorrectly:</strong></p>
+  <ul>
+    <li><strong>It may not function properly.</strong></li>
+    <li><strong>It could be permanently damaged.</strong></li>
+    <li><strong>It could pose a risk of injury.</strong></li>
+  </ul>
+</div>
 
-    <!-- RED BOX 2 (Titel + Bulletpoints fett) -->
-    <div class="note-strip note-strip--yellow">
-      <p><strong>If the device is installed incorrectly:</strong></p>
-      <ul>
-        <li><strong>It may not function properly.</strong></li>
-        <li><strong>It could be permanently damaged.</strong></li>
-        <li><strong>It could pose a risk of injury.</strong></li>
-      </ul>
-    </div>
-
-    <!-- YELLOW BOX 2 (letzter Punkt fett) -->
-    <div class="note-strip note-strip--yellow">
-      <p><strong>Please note during handling and disposal:</strong></p>
-      <ul>
-        <li>The sensor must not be opened!</li>
-        <li>Improper handling such as improper mechanical stress, e.g. dropping the device, may result in damage.</li>
-        <li>Dispose of in accordance with local regulations for waste electrical and electronic equipment.</li>
-        <li>Contains a lithium battery (UN38.3 compliant) - do not dispose of in fire, do not disassemble or short-circuit.</li>
-        <li>The secondary cell is a supercapacitor - do not damage or dispose of improperly.</li>
-        <li>Dispose of batteries and rechargeable batteries separately in accordance with the relevant recycling regulations.</li>
-        <li>Environmentally friendly disposal by returning to authorized collection points is recommended.</li>
-        <li><strong>Do not dispose of in household waste</strong></li>
-      </ul>
-    </div>
+<!-- YELLOW BOX 3 -->
+<div class="note-strip note-strip--yellow">
+  <p><strong>Please note during handling and disposal:</strong></p>
+  <ul>
+    <li>The sensor must not be opened!</li>
+    <li>Improper handling such as improper mechanical stress, e.g. dropping the device, may result in damage.</li>
+    <li>Dispose of in accordance with local regulations for waste electrical and electronic equipment.</li>
+    <li>Contains a lithium battery (UN38.3 compliant) - do not dispose of in fire, do not disassemble or short-circuit.</li>
+    <li>The secondary cell is a supercapacitor - do not damage or dispose of improperly.</li>
+    <li>Dispose of batteries and rechargeable batteries separately in accordance with the relevant recycling regulations.</li>
+    <li>Environmentally friendly disposal by returning to authorized collection points is recommended.</li>
+    <li><strong>Do not dispose of in household waste</strong></li>
+  </ul>
+</div>
 
     <!-- RED BOX 3 (CO2) -->
     <div class="note-strip note-strip--red">
@@ -368,7 +368,9 @@
     <!-- 2. FURTHER DOCUMENTATION -->
     <h3 id="further-docs">2. Further documentation</h3>
     <p>Please note the information and limit values in the technical data sheet.</p>
-    <p>The Sentiface sensor-specific documents can be found in the NFC and downlink description document.</p>
+    <p>The Sentiface sensor-specific documents can be found in the NFC and downlink description document, the Senticom and Sentivisor tables can be found in the generic NFC and downlink documentation.
+The option for configuring sensor communication can be found in the respective generic LoRaWAN® or Mioty® documentation, depending on the version.
+</p>
     <p>Further generic documentation can be found at:
       <a href="https://docs.sentinum.de/en/important-cross-product-documentation-for-sensors" target="_blank">https://docs.sentinum.de/en/important-cross-product-documentation-for-sensors</a>
     </p>
@@ -440,12 +442,23 @@
         </tbody>
       </table>
     </div>
+    
+   <div> <p><strong>Please note:</strong> </p>
+   <ul>
+<li>	Do not insert any objects or body parts into the ventilation slots of the sensor.</li>
+<li>	Do not mount the sensor on the ceiling or floor.</li>
+<li>	Do not install the sensor at heights above two meters.</li>
+<li>	Only install the sensor indoors on a wall in a standard room at a height of 1.50m to 1.80m.</li>
+<li>	Install the sensor in a location that receives at least 7 hours of direct sunlight at 400lux per day to ensure optimum energy supply.  </li>
+<li>	Make sure that the LEDs are on the lower left-hand side when mounting.</li>
+</ul> </div>
+
 
     <!-- 5.1 -->
     <h4>5.1 Attaching the wall bracket with screws</h4>
 
     <div class="note-strip note-strip--yellow">
-      <p><strong>Please note:</strong> Before using this type of installation, make sure the surface is flat and suitable for screws.</p>
+      <p><strong>Please note:</strong> Before using this type of installation, make sure that the surface to which the wall bracket is to be screwed is flat and has a base suitable for the material in order to prevent damage to the housing.</p>
     </div>
 
     <div class="figure">
@@ -453,7 +466,10 @@
            alt="Attaching the wall bracket with screws">
     </div>
 
-    <p>Screw the wall bracket into the wall with two M3 countersunk screws as shown.</p>
+    <p>Screw the wall bracket into the wall with two M3 countersunk screws as shown in the picture. The snap lock is at the bottom and points away from the wall.
+Once the bracket is attached, check that it is secure by gently shaking it. If the bracket is not stable, check the screws and tighten them if necessary.
+Once the bracket is securely attached to the wall, you can continue with step 5.3.
+</p>
 
     <!-- 5.2 -->
     <h4>5.2 Attaching the wall bracket with adhesive strips</h4>
@@ -461,11 +477,16 @@
     <div class="note-strip note-strip--yellow">
       <p><strong>Please note:</strong></p>
       <ul>
-        <li>Ensure the surface is clean, dry, smooth and adhesive.</li>
-        <li>Avoid rough or damp surfaces.</li>
-        <li>Press firmly for several seconds.</li>
+        <li>	Before using this installation method, make sure that the surface is clean, dry, smooth and adhesive, as an uneven or dusty surface can impair the adhesion of the adhesive strips.</li>
+        <li>	Avoid mounting on rough, porous or damp surfaces, as this can reduce the adhesive strength and cause the mount to peel off.</li>
+        <li>	Press the mount firmly for a few seconds after application to ensure an optimum bond between the adhesive strips and the surface.</li>
       </ul>
     </div>
+    
+    <p>Stick the wall bracket to the wall in the marked area using the two double-sided adhesive strips, as shown in the picture. The snap lock is at the bottom and points away from the wall.
+Once the bracket is attached, check that it is secure by pulling gently on it. Make sure that the adhesive strips adhere completely and that no corners come loose.
+Once the bracket is securely attached to the wall, you can continue with step 5.3.
+</p>
 
     <div class="figure">
       <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/a1943e55819a7b98a26f8470daa6c16862a0c3b3/Nyx/nyx_betriebsanleitung/pic/Betriebanleitung_7Kleben....webp"
@@ -481,9 +502,9 @@
     </div>
 
     <ol>
-      <li>Insert the sensor from above until it snaps in.</li>
-      <li>Tilt backwards until it locks.</li>
-      <li>Ensure the sensor is firmly attached.</li>
+      <li>Insert the sensor into the wall bracket from above until it snaps into the upper bracket</li>
+      <li>Tilt the sensor backwards so that it snaps securely into the bracket and the snap lock</li>
+      <li>Ensure that the sensor is fully seated in the bracket and is firmly attached.</li>
     </ol>
     <!-- 6. COMMISSIONING -->
     <h3 id="commissioning">6. Commissioning and use</h3>
@@ -514,18 +535,18 @@
     </div>
 
     <h4>6.3 Intended use of the sensor</h4>
-    <p>The solar-powered IoT sensor with CO₂ and humidity detection is ideal for monitoring indoor air quality and environmental conditions. By combining a CO₂ sensor and a humidity sensor, the device provides precise data and operates energy self-sufficiently thanks to its integrated solar panel.</p>
+    <p>The solar-powered IoT sensor with CO₂ and humidity detection is ideal for monitoring indoor air quality and environmental conditions. By combining a CO₂ sensor and a humidity sensor, the sensor provides precise data on important environmental influences and is energy self-sufficient thanks to an integrated solar panel. This sensor is particularly suitable for the following applications:</p>
 
     <ul>
-      <li><strong>Optimizing indoor air quality:</strong> Continuous CO₂ measurement ensures a healthy and comfortable indoor climate.</li>
-      <li><strong>Humidity monitoring:</strong> Helps prevent mold and maintain optimal humidity levels.</li>
-      <li><strong>Energy-efficient operation:</strong> Solar-powered and ideal for locations without power outlets.</li>
-      <li><strong>Customizable settings:</strong> Individual CO₂ and humidity thresholds can be configured.</li>
-      <li><strong>Integration into smart building systems:</strong> Compatible with HVAC systems.</li>
-      <li><strong>Compliance with environmental standards:</strong> Supports air quality monitoring in public buildings.</li>
-      <li><strong>Notifications and remote monitoring:</strong> Uses LoRaWAN for low-power data transmission and alerts.</li>
+      <li><strong>Optimizing indoor air quality:</strong> the CO₂ sensor continuously measures the CO₂ concentration and ensures a healthy and comfortable indoor climate. In public and commercial buildings as well as in indoor spaces with high human traffic, the sensor helps to detect high CO₂ values and enable timely ventilation.</li>
+      <li><strong>Humidity monitoring:</strong>The humidity sensor records the moisture content of the air and ensures that climatic conditions remain optimal. Humidity levels that are too high can encourage mold growth, while levels that are too low can affect the health or well-being of plants.</li>
+      <li><strong>Energy-efficient operation:</strong>Thanks to the solar panel, the sensor is self-sufficient and does not require an external power source. This makes it particularly suitable for use in areas without power sockets, while at the same time minimizing energy consumptions.</li>
+      <li><strong>Customizable settings:</strong>  The sensor offers the user the option of specifying individual settings for CO₂ and humidity values. This means that specific threshold values for alarm functions and notifications can be adapted to the user's own needs and requirements. This enables even more precise control and ensures that the sensor is optimally adapted to the respective operating conditions.</li>
+      <li><strong>Use in smart building systems:</strong> The sensor can be easily integrated into existing ventilation, heating and air conditioning systems. The data collected on CO₂ and humidity enables needs-based and energy-efficient control, which increases user comfort and reduces operating costs.</li>
+      <li><strong>Compliance with environmental standards:</strong> The sensor helps to meet air quality specifications in public buildings, schools or care facilities by enabling continuous monitoring of indoor air.</li>
+      <li><strong>Notifications and remote monitoring:</strong> The sensor uses Long Range Wide Area Network communication to transmit data in an energy-saving way and to send notifications if critical values are exceeded. This means that environmental conditions can be monitored remotely and action can be taken quickly if necessary, without the need for permanent real-time monitoring.</li>
     </ul>
-
+<p>With this sensor, environmental influences can be monitored efficiently and measures can be taken to improve air quality and the indoor climate - with minimum energy consumption and maximum efficiency.</p>
     <!-- 7. LORAWAN -->
     <h3 id="lorawan">7. Behavior of the LoRaWAN interface and joining</h3>
     <p>Information on setting up LoRaWAN can be found in the generic document here: <em>Generic LoRaWAN® documentation</em>.</p>
@@ -535,29 +556,36 @@
     <p>To ensure that the sensor functions reliably and has a long service life, it should be maintained regularly. Please observe the following instructions:</p>
 
     <ul>
-      <li>Regularly remove dust and dirt from the solar panel using a soft microfiber cloth.</li>
-      <li>Clean the housing and ventilation slots with a dry or slightly damp microfiber cloth.</li>
-      <li>Perform cleaning regularly, especially in dusty or pollen-rich environments.</li>
-      <li>Check regularly that the sensor and bracket are firmly seated.</li>
-      <li>Avoid alcohol-based or solvent-based cleaning agents.</li>
+      <li>Regularly remove dust and dirt from the solar panel to ensure optimum energy absorption. Use a soft, clean microfiber cloth for this purpose. A slightly moistened cloth can be used for stubborn dirt - however, avoid using cleaning agents or abrasive cleaners.</li>
+      <li>Clean the housing, especially the ventilation slots of the sensor, with a dry or slightly damp microfiber cloth. Make sure that no moisture penetrates the device.</li>
+      <li>Carry out cleaning regularly, especially in dusty or pollen-rich environments, to ensure the long-term functionality of the sensor.</li>
+      <li>Regularly check that the sensor and the bracket are firmly seated.</li>
+      <li>Do not use cleaning agents containing alcohol or solvents, as these can damage the surface of the sensor.</li>
     </ul>
 
-    <!-- 9. LABELING -->
-    <h3 id="labeling-certification">9. Labeling and certification</h3>
+<!-- 9. LABELING -->
+<h3 id="labeling-certification">9. Labeling and certification</h3>
 
-    <div style="margin: 32px 0; text-align:center;">
-      <img
-        src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/7330568df5ebd68dcb438009d94284ecf2c0c6cb/Nyx/Nyx_Pic/logo%20lora%20mioty.png"
-        alt="LoRaWAN and mioty certification logos"
-        class="kb-image"
-        style="display:block; height: 48px; width:auto; margin:0 auto 20px auto;">
+<div style="margin: 32px 0; text-align:center;">
 
-      <img
-        src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/7330568df5ebd68dcb438009d94284ecf2c0c6cb/Nyx/Nyx_general_description/picture/Nyx_allg._Beschreibung_3.png"
-        alt="CE, WEEE, RoHS and REACH compliance symbols"
-        class="kb-image"
-        style="display:block; height: 48px; width:auto; margin:0 auto;">
-    </div>
+  <!-- LoRaWAN / mioty Logo (kleiner) -->
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/7330568df5ebd68dcb438009d94284ecf2c0c6cb/Nyx/Nyx_Pic/logo%20lora%20mioty.png"
+    alt="LoRaWAN and mioty certification logos"
+    class="kb-image"
+    style="display:block; height: 38px; width:auto; margin:0 auto 20px auto; border:none; box-shadow:none;"
+  >
+
+  <!-- CE / WEEE / RoHS / REACH (größer) -->
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/7330568df5ebd68dcb438009d94284ecf2c0c6cb/Nyx/Nyx_general_description/picture/Nyx_allg._Beschreibung_3.png"
+    alt="CE, WEEE, RoHS and REACH compliance symbols"
+    class="kb-image"
+    style="display:block; height: 68px; width:auto; margin:0 auto; border:none; box-shadow:none;"
+  >
+
+</div>
+
     <!-- FOOTER -->
     <div class="footer-note">
       <p>© Sentinum GmbH – All rights reserved.</p>

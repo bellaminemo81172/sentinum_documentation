@@ -252,7 +252,7 @@
       <p>Warnungen und wichtige Informationen über potenzielle Gefahren oder Beschädigungen.</p>
       <p>Wichtige Hinweise, die zum reibungsfreien Betrieb der Geräte nötig sind.</p>
     </div>
-    
+    <div class="note-strip note-strip--yellow">
  <p><strong>Bitte beachten:</strong></p>
         <ul>
           <li>Beachten Sie die Sicherheitshinweise und Installationsanweisungen in der Anleitung und der Montageliste.</li>
@@ -260,7 +260,7 @@
           <li>Das Gerät darf nur in den in den technischen Spezifikationen vorgegebenen Bereichen eingesetzt werden.</li>
           <li>Das Gerät darf nur für den beschriebenen Einsatzzweck verwendet werden.</li>
           <li>Die Sicherheit und Funktionsfähigkeit kann nicht mehr garantiert werden, wenn das Gerät modifiziert oder erweitert wird.</li>
-          <li>Der Zweck des Sensors ist das Monitoring der Luftqualität in Innenräumen.</li>
+          <li>Der Zweck des Sensors ist das Monitoring der Luftqualität in Innenräumen.</li></div>
     <!-- ROTE BOX 1 (fett) -->
     <div class="note-strip note-strip--red">
       <ul>
@@ -269,10 +269,12 @@
         <li><strong>Der Sensor ist kein Rauchmelder!</strong></li>
       </ul>
     </div>
+     <div class="note-strip note-strip--yellow">
+         <ul>
           <li>Der Sensor darf nicht an Decken oder Böden montiert werden.</li>
           <li>Der Betrieb des Sensors ist nur bis maximal 2000 Meter über Normal Null zugelassen.</li>
           <li>Aufgrund der Human-Exposure-Vorschrift ist ein Mindestabstand zwischen Gerät und Personen von 20&nbsp;cm einzuhalten.</li>
-        </ul>
+        </ul></div>
 
 
     <!-- ROTE BOX 2 (Titel + Bulletpoints fett) -->
@@ -311,7 +313,9 @@
     <!-- 2. WEITERFÜHRENDE DOKUMENTATION -->
     <h3 id="weiterfuehrende-doku">2. Weiterführende Dokumentation</h3>
     <p>Bitte beachten Sie die Informationen und Grenzwerte im technischen Datenblatt.</p>
-    <p>Die sensorspezifischen Werkseinstellungen (Sentiface) sowie NFC‑ und Downlink‑Parameter finden Sie in der entsprechenden Dokumentation.</p>
+    <p>Die sensorspezifischen Werkseinstellungen (Sentiface), sowie die Schlüssel und zulässigen Werte des Sensors finden Sie in der NFC und Downlinkbeschreibung. Die Senticom und Sentivisor Tabellen sind in der Generischen NFC und Downlink Dokumentation zu finden.
+Die Möglichkeit zur Konfiguration der Sensor-Kommunikation finden Sie je nach Version in der jeweiligen generischen LoRaWAN® oder Mioty® Dokumentation.
+</p>
     <p>Weitere generische Dokumente finden Sie unter:
       <a href="https://docs.sentinum.de/wichtig-produkt%C3%BCbergreifende-dokumentation-f%C3%BCr-sensoren" target="_blank">
         https://docs.sentinum.de/wichtig-produktübergreifende-dokumentation-für-sensoren
@@ -321,7 +325,7 @@
     <!-- 3. TECHNISCHE ZEICHNUNG -->
     <h3 id="technische-zeichnung">3. Technische Zeichnung</h3>
 
-    <p>Nyx Sensor</p>
+    <p><strong>Nyx Sensor</strong></p>
     <div class="figure">
       <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/a1943e55819a7b98a26f8470daa6c16862a0c3b3/Nyx/nyx_betriebsanleitung/pic/Betriebanleitung_2Technische_Zeichnung.webp"
            alt="Technische Zeichnung Nyx Sensor – Vorderansicht">
@@ -332,7 +336,7 @@
            alt="Technische Zeichnung Nyx Sensor – Seitenansicht">
     </div>
 
-    <p>Wandhalterung</p>
+    <p><strong>Wandhalterung</strong></p>
     <div class="figure">
       <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/a1943e55819a7b98a26f8470daa6c16862a0c3b3/Nyx/nyx_betriebsanleitung/pic/Betriebanleitung_4Wandhalterung.webp"
            alt="Technische Zeichnung Wandhalterung">
@@ -357,41 +361,53 @@
 
     <!-- GRÜNE BOX 1 -->
     <div class="note-strip note-strip--green">
-      <p>Falls der Sensor nach der Montage gut zugänglich ist, montieren Sie zuerst den Sensor und aktivieren ihn anschließend.</p>
+      <p>Falls der Sensor auch nach der Montage gut zugänglich ist, montieren Sie erst den Sensor und Aktivieren diesen nach der Montage!</p>
     </div>
 
     <!-- GRÜNE BOX 2 -->
     <div class="note-strip note-strip--green">
-      <p>Falls der Sensor nach der Montage nicht mehr zugänglich ist, aktivieren Sie zuerst den Sensor und montieren ihn danach.</p>
+      <p>Falls der Sensor nach der Montage nicht mehr zugänglich ist, aktivieren Sie erst den Sensor und montieren diesen nach der Aktivierung!</p>
     </div>
 
-    <!-- TABELLE MONTAGEMETHODEN -->
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Montagemethode</th>
-            <th>Empfohlenes Zubehör</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Wandhalterung (Schrauben)</td>
-            <td>2× M3 Senkkopfschrauben</td>
-          </tr>
-          <tr>
-            <td>Wandhalterung (Klebebänder)</td>
-            <td>2× Klebestreifen</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+<!-- TABELLE MONTAGEMETHODEN -->
+<div class="table-wrap" style="margin: 20px 0;">
+  <table style="width:100%; border-collapse:collapse;">
+    <thead>
+      <tr>
+        <th style="border:1px solid #d0d7de; padding:8px 12px; background:#f5f7fa;">Montagemethode</th>
+        <th style="border:1px solid #d0d7de; padding:8px 12px; background:#f5f7fa;">Empfohlenes Zubehör</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border:1px solid #d0d7de; padding:8px 12px;">Wandhalterung (Schrauben)</td>
+        <td style="border:1px solid #d0d7de; padding:8px 12px;">2× M3 Senkkopfschrauben</td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #d0d7de; padding:8px 12px;">Wandhalterung (Klebebänder)</td>
+        <td style="border:1px solid #d0d7de; padding:8px 12px;">2× Klebestreifen</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+  <p><strong>Bitte beachten:</strong></p>
+  <ul>
+    <li>Führen Sie keine Gegenstände oder Körperteile in die Lüftungsschlitze des Sensors ein.</li>
+    <li>Montieren Sie den Sensor nicht an der Decke oder am Boden.</li>
+    <li>Montieren Sie den Sensor nicht in Höhen über zwei Meter.</li>
+    <li>Montieren Sie den Sensor nur in Innenräumen an einer Wand in einem gewöhnlichen Raum bei einer Höhe von 1,50 m bis 1,80 m.</li>
+    <li>Bringen Sie den Sensor an einem Standort an, der mindestens 7 Stunden direktes Sonnenlicht bei 400 lux pro Tag erhält, um eine optimale Energieversorgung sicherzustellen.</li>
+    <li>Achten Sie darauf, dass bei der Montage die LEDs auf der linken, unteren Seite liegen.</li>
+  </ul>
+</div>
+
 
     <!-- 5.1 SCHRAUBEN -->
     <h4>5.1 Anbringung der Wandhalterung mit Schrauben</h4>
 
     <div class="note-strip note-strip--yellow">
-      <p><strong>Bitte beachten:</strong> Die Oberfläche muss plan und geeignet für Schrauben sein.</p>
+      <p><strong>Bitte beachten:</strong> Stellen Sie vor dieser Montageart sicher, dass sich die Oberfläche, an der die Wandhalterung angeschraubt werden soll, plan und einem materialtauglichen Untergrund besteht, um Beschädigungen des Gehäuses zu vermeiden.</p>
     </div>
 
     <div class="figure">
@@ -399,7 +415,10 @@
            alt="Anbringung der Wandhalterung mit Schrauben">
     </div>
 
-    <p>Schrauben Sie die Wandhalterung mit zwei M3 Senkkopfschrauben wie gezeigt in die Wand.</p>
+    <p>Schrauben Sie die Wandhalterung mit zwei M3 Senkkopfschrauben wie auf dem Bild zu sehen in die Wand. Der Schnappverschluss ist unten und zeigt von der Wand weg.
+Nachdem die Halterung befestigt ist, prüfen Sie den festen Sitz, indem Sie leicht daran rütteln. Falls die Halterung nicht stabil ist, überprüfen Sie die Schrauben und ziehen Sie diese gegebenenfalls nach.
+Sobald die Halterung sicher an der Wand sitzt, können Sie mit dem Schritt 5.3 fortfahren.
+</p>
 
     <!-- 5.2 KLEBESTREIFEN -->
     <h4>5.2 Anbringung der Wandhalterung mit Klebestreifen</h4>
@@ -407,11 +426,14 @@
     <div class="note-strip note-strip--yellow">
       <p><strong>Bitte beachten:</strong></p>
       <ul>
-        <li>Oberfläche muss sauber, trocken, glatt und klebfähig sein.</li>
-        <li>Keine rauen oder feuchten Oberflächen verwenden.</li>
-        <li>Nach dem Aufkleben einige Sekunden fest andrücken.</li>
+        <li>Stellen Sie vor dieser Montageart sicher, dass die Oberfläche sauber, trocken, glatt und klebfähig ist, da eine unebene oder staubige Fläche die Haftung der Klebestreifen beeinträchtigen kann.</li>
+        <li>Vermeiden Sie die Anbringung auf rauen, porösen oder feuchten Oberflächen, da dies die Klebekraft verringern und zu einem Ablösen der Halterung führen kann.</li>
+        <li>Drücken Sie die Halterung nach dem Aufkleben für einige Sekunden fest an, um eine optimale Verbindung zwischen den Klebestreifen und der Oberfläche zu gewährleisten.</li>
       </ul>
     </div>
+<p>Kleben Sie die Wandhalterung mit den zwei doppelseitigen Klebestreifen im markierten Bereich auf die Wand, wie im Bild gezeigt. Der Schnappverschluss ist unten und zeigt von der Wand weg.
+Nachdem die Halterung befestigt ist, prüfen Sie den festen Sitz, indem Sie leicht daran ziehen. Achten Sie darauf, dass die Klebestreifen vollständig haften und sich keine Ecken lösen.
+Sobald die Halterung sicher an der Wand sitzt, können Sie mit dem Schritt 5.3 fortfahren.</p>
 
     <div class="figure">
       <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/a1943e55819a7b98a26f8470daa6c16862a0c3b3/Nyx/nyx_betriebsanleitung/pic/Betriebanleitung_7Kleben....webp"
@@ -427,9 +449,9 @@
     </div>
 
     <ol>
-      <li>Sensor von oben einführen, bis er einrastet.</li>
-      <li>Nach hinten kippen, bis der Schnappverschluss einrastet.</li>
-      <li>Sitz prüfen.</li>
+      <li>Führen Sie den Sensor von oben in die Wandhalterung ein, bis er in der oberen Halterung einrastet.</li>
+      <li>Kippen Sie den Sensor nach hinten, sodass er sicher in der Halterung und dem Schnappverschluss einrastet.</li>
+      <li>Stellen Sie sicher, dass der Sensor vollständig in der Halterung sitzt und fest anliegt.</li>
     </ol>
     <!-- 6. INBETRIEBNAHME UND VERWENDUNG -->
     <h3 id="inbetriebnahme">6. Inbetriebnahme und Verwendung</h3>
@@ -464,18 +486,19 @@
     <!-- 6.3 -->
     <h4>6.3 Verwendungszweck des Sensors</h4>
     <p>
-      Der solarbetriebene IoT‑Sensor mit CO₂‑ und Feuchtigkeitserkennung ist ideal für die Überwachung der Luftqualität in Innenräumen.
-      Durch das integrierte Solarpanel arbeitet der Sensor energieautark.
+     Der Solarbetriebene IoT-Sensor mit CO₂- und Feuchtigkeitserkennung ist ideal für die Überwachung der Luftqualität und Umgebungsbedingungen in Innenräumen. Durch die Kombination eines CO₂-Sensors und eines Feuchtigkeitssensors liefert der Sensor präzise Daten zu wichtigen Umwelteinflüssen und wird durch ein integriertes Solarpanel energieautark betrieben. Dieser Sensor eignet sich besonders für folgende Einsatzmöglichkeiten:
     </p>
 
     <ul>
-      <li><strong>Optimierung der Raumluftqualität:</strong> Kontinuierliche CO₂‑Messung für ein gesundes Raumklima.</li>
-      <li><strong>Überwachung der Luftfeuchtigkeit:</strong> Hilft, Schimmelbildung zu vermeiden und optimale Bedingungen zu erhalten.</li>
-      <li><strong>Energieeffizient:</strong> Autarker Betrieb durch Solarpanel.</li>
-      <li><strong>Individuelle Einstellungen:</strong> Schwellenwerte für CO₂ und Feuchtigkeit können angepasst werden.</li>
-      <li><strong>Integration in Smart‑Building‑Systeme:</strong> Kompatibel mit Lüftungs‑ und Klimasteuerungen.</li>
-      <li><strong>Einhaltung von Umweltstandards:</strong> Unterstützt Luftqualitätsvorgaben in öffentlichen Gebäuden.</li>
-      <li><strong>Benachrichtigungen & Fernüberwachung:</strong> LoRaWAN‑Kommunikation für energieeffiziente Datenübertragung.</li>
+      <li><strong>Optimierung der Raumluftqualität:</strong>Der CO₂-Sensor misst kontinuierlich die CO₂-Konzentration und sorgt für ein gesundes und komfortables Raumklima. In öffentlichen und kommerziellen Gebäuden sowie in Innenräumen mit hoher Menschenfrequenz hilft der Sensor, hohe CO₂-Werte zu erkennen und eine rechtzeitige Belüftung zu ermöglichen.</li>
+      <li><strong>Überwachung der Luftfeuchtigkeit:</strong> Der Feuchtigkeitssensor erfasst den Feuchtigkeitsgehalt der Luft und sorgt dafür, dass klimatische Bedingungen optimal bleiben. Zu hohe Luftfeuchtigkeit kann Schimmelbildung begünstigen, während zu niedrige Werte die Gesundheit oder das Wohl von Pflanzen beeinträchtigen können.</li>
+      <li><strong>Energieeffiziente Funktionsweise:</strong> Dank des Solarpanels ist der Sensor autark und benötigt keine externe Stromquelle. Dies macht ihn besonders geeignet für den Einsatz in Bereichen ohne Steckdosen, während gleichzeitig der Energieverbrauch minimiert wird.</li>
+      <li><strong>Individualisierbare Einstellungen:</strong> Der Sensor bietet dem Nutzer die Möglichkeit, individuelle Einstellungen für CO₂- und Feuchtigkeitswerte festzulegen. So können spezifische Schwellenwerte für Alarmfunktionen und Benachrichtigungen an die eigenen Bedürfnisse und Anforderungen angepasst werden. Dies ermöglicht eine noch präzisere Kontrolle und sorgt dafür, dass der Sensor optimal an die jeweiligen Einsatzbedingungen angepasst ist.</li>
+      <li><strong>Verwendung in Smart‑Building‑Systemen:</strong> Der Sensor lässt sich problemlos in bestehende Systeme für Lüftung, Heizung und Klimaanlage integrieren. Die erfassten Daten zu CO₂ und Luftfeuchtigkeit ermöglichen eine bedarfsgerechte und energieeffiziente Steuerung, was den Komfort der Nutzer erhöht und Betriebskosten senkt.</li>
+      <li><strong>Einhaltung von Umweltstandards:</strong> Der Sensor hilft, Luftqualitätsvorgaben in öffentlichen Gebäuden, Schulen oder Pflegeeinrichtungen zu erfüllen, indem er eine kontinuierliche Überwachung der Raumluft ermöglicht.</li>
+      <li><strong>Benachrichtigungen und Fernüberwachung:</strong> Der Sensor nutzt Long Range Wide Area Network Kommunikation, um energiesparend Daten zu übertragen und bei Überschreiten kritischer Werte Benachrichtigungen zu senden. Dadurch können Umgebungsbedingungen aus der Ferne überwacht und bei Bedarf schnell gehandelt werden, ohne dass eine permanente Echtzeitüberwachung erforderlich ist.
+Mit diesem Sensor können Umwelteinflüsse effizient überwacht und Maßnahmen zur Verbesserung der Luftqualität und des Raumklimas ergriffen werden – bei minimalem Energieverbrauch und höchster Effizienz.
+</li>
     </ul>
 
     <!-- 7. LORAWAN -->
@@ -484,41 +507,39 @@
 
     <!-- 8. PFLEGE -->
     <h3 id="pflege-reinigung">8. Pflege und Reinigung</h3>
-    <p>Damit der Sensor zuverlässig funktioniert, sollte er regelmäßig gepflegt werden:</p>
+    <p>Damit der Sensor zuverlässig funktioniert und eine lange Lebensdauer gewährleistet ist, sollte er regelmäßig gepflegt werden. Beachten Sie dabei die folgenden Hinweise:</p>
 
     <ul>
-      <li>Staub und Schmutz regelmäßig vom Solarpanel entfernen (weiches Mikrofasertuch).</li>
-      <li>Gehäuse und Lüftungsschlitze trocken oder leicht feucht reinigen.</li>
-      <li>Reinigung besonders in staubigen oder pollenreichen Umgebungen häufiger durchführen.</li>
-      <li>Regelmäßig festen Sitz des Sensors und der Halterung prüfen.</li>
-      <li>Keine alkohol‑ oder lösungsmittelhaltigen Reiniger verwenden.</li>
+      <li>Entfernen Sie regelmäßig Staub und Schmutz vom Solarpanel, um eine optimale Energieaufnahme zu gewährleisten. Verwenden Sie dazu ein weiches, sauberes Mikrofaser Tuch. Bei hartnäckigen Verschmutzungen kann ein leicht angefeuchtetes Tuch verwendet werden – vermeiden Sie jedoch den Einsatz von Reinigungsmitteln oder Scheuermitteln.</li>
+      <li>Reinigen Sie das Gehäuse, insbesondere die Lüftungsschlitze des Sensors mit einem trockenen oder leicht angefeuchteten Mikrofasertuch. Achten Sie darauf, dass keine Feuchtigkeit in das Gerät eindringt.</li>
+      <li>Führen Sie die Reinigung regelmäßig durch, insbesondere in staubigen oder pollenreichen Umgebungen, um die Funktionalität des Sensors langfristig sicherzustellen.</li>
+      <li>Kontrollieren Sie regelmäßig den festen Sitz des Sensors sowie der Halterung.</li>
+      <li>Verzichten Sie auf alkohol- oder lösungsmittelhaltige Reinigungsmittel, da diese die Oberfläche des Sensors beschädigen können.</li>
     </ul>
 
     <!-- 9. ZERTIFIZIERUNG -->
-    <h3 id="kennzeichnung-zertifizierung">9. Kennzeichnung und Zertifizierung</h3>
+<!-- 9. LABELING -->
+<h3 id="labeling-certification">9. Kennzeichnung und Zertifizierung</h3>
 
-    <div style="
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      gap:28px;
-      flex-wrap:wrap;
-      margin:32px 0;
-    ">
-      <img
-        src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/7330568df5ebd68dcb438009d94284ecf2c0c6cb/Nyx/Nyx_Pic/logo%20lora%20mioty.png"
-        alt="LoRaWAN und mioty Logo"
-        class="kb-image"
-        style="height:48px; width:auto;"
-      >
+<div style="margin: 32px 0; text-align:center;">
 
-      <img
-        src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/7330568df5ebd68dcb438009d94284ecf2c0c6cb/Nyx/Nyx_general_description/picture/Nyx_allg._Beschreibung_3.png"
-        alt="CE, RoHS, REACH Zertifizierungen"
-        class="kb-image"
-        style="height:48px; width:auto;"
-      >
-    </div>
+  <!-- LoRaWAN / mioty Logo (kleiner) -->
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/7330568df5ebd68dcb438009d94284ecf2c0c6cb/Nyx/Nyx_Pic/logo%20lora%20mioty.png"
+    alt="LoRaWAN and mioty certification logos"
+    class="kb-image"
+    style="display:block; height: 38px; width:auto; margin:0 auto 20px auto; border:none; box-shadow:none;"
+  >
+
+  <!-- CE / WEEE / RoHS / REACH (größer) -->
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/7330568df5ebd68dcb438009d94284ecf2c0c6cb/Nyx/Nyx_general_description/picture/Nyx_allg._Beschreibung_3.png"
+    alt="CE, WEEE, RoHS and REACH compliance symbols"
+    class="kb-image"
+    style="display:block; height: 68px; width:auto; margin:0 auto; border:none; box-shadow:none;"
+  >
+
+</div>
     <!-- FOOTER (DEUTSCH) -->
     <div class="footer-note">
       <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
