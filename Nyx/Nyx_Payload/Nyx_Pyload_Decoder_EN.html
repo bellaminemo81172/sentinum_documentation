@@ -151,6 +151,18 @@ code{
   background:#f5f7fa;
   border:1px solid var(--border);
 }
+/* ---------- Figures ---------- */
+.figure{
+  margin:32px auto;
+  text-align:center;
+}
+.figure img{ max-width:100%; }
+.figure figcaption{
+  margin-top:8px;
+  font-size:.85rem;
+  color:var(--text-muted);
+  font-style:italic;
+}
 </style>
 <!-- ================= PDF VIEWER ================= -->
 <div class="pdf-viewer">
@@ -174,8 +186,675 @@ code{
   <ul>
     <li><a href="#overview">1. Payload Overview</a></li>
     <li><a href="#module-key">2. Structure of the Module Key</a></li>
-    <li><a href="#nyx-payload">3. NYX Payload Description</a></li>
+    <li><a href="#nyx-payload">3. Nyx Payload Description</a></li>
     <li><a href="#iaq-index">4. IAQ Index</a></li>
     <li><a href="#decoding-examples">5. Examples Decoding</a></li>
   </ul>
 </nav>
+<!-- ================= NYX PAYLOAD DESCRIPTION ================= -->
+<h3 id="nyx-payload">1. Payload Overview</h3>
+
+<p>
+  This chapter describes the structure of the telemetry data. The number of bytes in the
+  payload depends on the configuration of the sensor. The structure of the data depends on
+  which sensors are present in your product.
+</p>
+
+<p>
+  In principle, each version has a header. This has information about the version and status
+  of the sensor and also contains a master measured value. This measured value can simply be
+  assumed to be the current measured value.
+</p>
+
+<p>
+  The header is followed by an additional payload part that contains further information,
+  such as special parameters for the measuring principle or settings for position and
+  opening detection. Not every sensor has an additional payload part.
+</p>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Terms</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Byte No.</td>
+        <td>Byte number starting at 1</td>
+      </tr>
+      <tr>
+        <td>Alias</td>
+        <td>Comprehensible name of the variable</td>
+      </tr>
+      <tr>
+        <td>Description</td>
+        <td>Description of the variables</td>
+      </tr>
+      <tr>
+        <td>Designation</td>
+        <td>Designation in the Dataconverter</td>
+      </tr>
+      <tr>
+        <td>Unit</td>
+        <td>Unit of the variables</td>
+      </tr>
+      <tr>
+        <td>Datahub <code>.json</code> key</td>
+        <td>Key in the <code>.json</code> when using the data hub</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- ================= STRUCTURE OF THE MODULE KEY ================= -->
+<h3 id="module-key">Structure of the module key</h3>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2">Byte 1</th>
+        <th colspan="2">Byte 2</th>
+      </tr>
+      <tr>
+        <th>Bit 7 – 4</th>
+        <th>Bit 3 – 0</th>
+        <th>Bit 7 – 4</th>
+        <th>Bit 3 – 0</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Base ID Module
+          <br>
+          <span style="color:var(--text-muted)">
+            e.g. Sentiface, Senticom, Sentivisor
+          </span>
+        </td>
+        <td>
+          Major Version
+          <br>
+          <span style="color:var(--text-muted)">
+            (SW/HW version)
+          </span>
+        </td>
+        <td>
+          Minor Version
+          <br>
+          <span style="color:var(--text-muted)">
+            (SW/HW version)
+          </span>
+        </td>
+        <td>
+          Product version
+          <br>
+          <span style="color:var(--text-muted)">
+            (sensors, e.g. TH, THL, ACC, ...)
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+  The module key of the SENTIFACE module can be taken from the first
+  two bytes of each uplink. The module key is required for the downlink.
+</p>
+<h4><strong>Uplink example (not applicable for Nyx)</strong></h4>
+
+<img
+  src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/5ceafdfcdc00deecaa83a32598787361304f0715/Nyx/Nyx_Payload/uplink%20example%20pic%20%20payload%20decoder.png"
+  alt="Uplink payload example"
+  style="
+    max-width:900px;
+    display:block;
+    margin:20px auto 28px;
+  "
+>
+<figure class="figure">
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/5ceafdfcdc00deecaa83a32598787361304f0715/Nyx/Nyx_Payload/uplink%20example%20pic%20%20payload%20decoder.png"
+    alt="Uplink payload decoding example"
+  >
+  <figcaption>
+    Uplink payload decoding — byte‑wise interpretation of a telemetry payload.
+  </figcaption>
+</figure>
+
+<p>
+  Given is the following payload example for the Helios pressure sensor:
+</p>
+
+<p>
+  <code>11 11 FE 1A D5 95 06 03 00 23 BE</code>
+</p>
+
+<div class="table-wrap" style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>Bytes</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+        <th>9</th>
+        <th>10</th>
+        <th>11</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>HEX</td>
+        <td>11</td>
+        <td>11</td>
+        <td>FE</td>
+        <td>1A</td>
+        <td>D5</td>
+        <td>95</td>
+        <td>06</td>
+        <td>03</td>
+        <td>00</td>
+        <td>23</td>
+        <td>BE</td>
+      </tr>
+      <tr>
+        <td>Description</td>
+        <td>Module key</td>
+        <td>Module key</td>
+        <td>Uplink Counter</td>
+        <td>Battery Voltage</td>
+        <td>Battery Voltage</td>
+        <td>Temperature</td>
+        <td>Alarm Flag</td>
+        <td>Alarm Flag</td>
+        <td>Measurement status</td>
+        <td>Pressure mbar</td>
+        <td>Pressure mbar</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h3>Nyx payload description</h3>
+
+<div class="table-wrap" style="overflow-x:auto;">
+  <table style="width:120%;">
+    <colgroup>
+      <col style="width:14%;">
+      <col style="width:18%;">
+      <col style="width:8%;">
+      <col style="width:20%;">
+      <col style="width:10%;">
+      <col style="width:20%;">
+    </colgroup>
+
+    <thead>
+      <tr>
+        <th>Byte number</th>
+        <th>Alias name</th>
+        <th>Unit</th>
+        <th>Designation in the payload decoder</th>
+        <th>Module key</th>
+        <th>Datahub <code>.json</code> key</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <!-- 1–2 -->
+      <tr>
+        <td><strong>1 – 2</strong></td>
+        <td><strong>Module key</strong></td>
+        <td>-</td>
+        <td><code>module_key</code></td>
+        <td><code>XXX1</code></td>
+        <td><code>module_key</code></td>
+      </tr>
+      <tr>
+        <td colspan="6">
+          <strong>Description:</strong><br>
+          Byte 1:<br>
+          • 4-bit MSB: Module code. For Mioty exclusively “Sentiface” telemetry module, i.e. always <code>0x1</code>.<br>
+          • 4-bit LSB: Major version. FW of the same major version but larger minor versions remain compatible with older decoders. However, the number of bytes may change.<br><br>
+          Byte 2:<br>
+          • 4-bit MSB: Minor version. New SW versions may incrementally add new telemetry to the data packet.<br>
+          • 4-bit LSB: Sub / Product Version. With Helios, these bits encode the specific configuration of connected sensors.
+        </td>
+      </tr>
+
+      <!-- 3 -->
+      <tr>
+        <td><strong>3</strong></td>
+        <td><strong>Uplink counter</strong></td>
+        <td>-</td>
+        <td><code>uplink_counter</code></td>
+        <td><code>XXX1</code></td>
+        <td><code>uplink_counter</code></td>
+      </tr>
+      <tr>
+        <td colspan="6">
+          <strong>Description:</strong><br>
+          Protocol-independent uplink counter that reaches a maximum of 255. After that, the counter starts again at 0.
+        </td>
+      </tr>
+
+      <!-- 4–5 -->
+      <tr>
+        <td><strong>4 – 5</strong></td>
+        <td><strong>Battery voltage</strong></td>
+        <td>mV</td>
+        <td><code>battery_voltage</code></td>
+        <td><code>XXX1</code></td>
+        <td><code>battery_voltage</code></td>
+      </tr>
+      <tr>
+        <td colspan="6">
+          <strong>Description:</strong><br>
+          Current voltage of the battery in millivolts.<br>
+          <code>(dataBytes[3] &lt;&lt; 8 | dataBytes[4]) / 1000.0</code>
+        </td>
+      </tr>
+
+      <!-- 6–7 -->
+      <tr>
+        <td><strong>6 – 7</strong></td>
+        <td><strong>Internal temperature</strong></td>
+        <td>°C</td>
+        <td><code>internal_temperature</code></td>
+        <td><code>XXX1</code></td>
+        <td><code>internal_temperature</code></td>
+      </tr>
+      <tr>
+        <td colspan="6">
+          <strong>Description:</strong><br>
+          <code>((bytes[5] &lt;&lt; 8) | bytes[6]) / 10 - 100</code><br>
+          Temperature of the sensor according to the technical data sheet.
+        </td>
+      </tr>
+
+      <!-- 8 -->
+      <tr>
+        <td><strong>8</strong></td>
+        <td><strong>Relative humidity</strong></td>
+        <td>%RH</td>
+        <td><code>humidity</code></td>
+        <td><code>XXX1</code></td>
+        <td><code>humidity</code></td>
+      </tr>
+      <tr>
+        <td colspan="6">
+          <strong>Description:</strong><br>
+          Relative humidity in percent.
+        </td>
+      </tr>
+
+      <!-- 9–10 -->
+      <tr>
+        <td><strong>9 – 10</strong></td>
+        <td><strong>Dew point</strong></td>
+        <td>°C</td>
+        <td><code>dew_point</code></td>
+        <td><code>XXX1</code></td>
+        <td><code>dew_poin</code></td>
+      </tr>
+      <tr>
+        <td colspan="6">
+          <strong>Description:</strong><br>
+          Dew point in degrees Celsius.
+        </td>
+      </tr>
+
+      <!-- 11 -->
+      <tr>
+        <td><strong>11</strong></td>
+        <td><strong>Alarm variable</strong></td>
+        <td>-</td>
+        <td><code>alarm-level</code></td>
+        <td><code>XXX1</code></td>
+        <td><code>alarm-leve</code></td>
+      </tr>
+      <tr>
+        <td colspan="6">
+          <strong>Description:</strong><br>
+          Alarm level corresponding to green, yellow, and red LED states.
+        </td>
+      </tr>
+
+      <!-- 12–13 -->
+      <tr>
+        <td><strong>12 – 13</strong></td>
+        <td><strong>Light intensity indicator</strong></td>
+        <td>lux</td>
+        <td><code>raw_lux</code></td>
+        <td><code>XXX1</code></td>
+        <td><code>raw_lux</code></td>
+      </tr>
+      <tr>
+        <td colspan="6">
+          <strong>Description:</strong><br>
+          Light intensity in lux as an indicator (no direct ambient light measurement).<br>
+          <code>decoded.lux = (1 &lt;&lt; (raw_lux &gt;&gt; 12)) * (raw_lux &amp; 0x0FFF) * 0.01</code>
+        </td>
+      </tr>
+
+      <!-- 14 -->
+      <tr>
+        <td><strong>14</strong></td>
+        <td><strong>Gas sensor status</strong></td>
+        <td>°C</td>
+        <td><code>internal_temperature</code></td>
+        <td><code>XXX4</code></td>
+        <td><code>internal_temperature</code></td>
+      </tr>
+      <tr>
+        <td colspan="6">
+          <strong>Description:</strong><br>
+          Jamming status of the gas sensor.
+        </td>
+      </tr>
+
+      <!-- 15–16 -->
+      <tr>
+        <td><strong>15 – 16</strong></td>
+        <td><strong>Air pressure</strong></td>
+        <td>%RH</td>
+        <td><code>pressure</code></td>
+        <td><code>XXX4</code></td>
+        <td><code>pressure</code></td>
+      </tr>
+      <tr>
+        <td colspan="6">
+          <strong>Description:</strong><br>
+          Air pressure value.
+        </td>
+      </tr>
+
+      <!-- 17 -->
+      <tr>
+        <td><strong>17</strong></td>
+        <td><strong>Indoor Air Quality Status</strong></td>
+        <td>-</td>
+        <td><code>iaq_status</code></td>
+        <td><code>XXX4</code></td>
+        <td><code>iaq_status</code></td>
+      </tr>
+      <tr>
+        <td colspan="6">
+          <strong>Description:</strong><br>
+          Indoor Air Quality status indicator.
+        </td>
+      </tr>
+
+      <!-- 18–19 -->
+      <tr>
+        <td><strong>18 – 19</strong></td>
+        <td><strong>Indoor Air Quality Index</strong></td>
+        <td>-</td>
+        <td><code>Iaq_index</code></td>
+        <td><code>XXX4</code></td>
+        <td><code>Iaq_index</code></td>
+      </tr>
+      <tr>
+        <td colspan="6">
+          <strong>Description:</strong><br>
+          Indoor Air Quality index value.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- ================= IAQ INDEX ================= -->
+<h3 id="iaq-index">IAQ Index</h3>
+
+<p>
+  The IAQ index (Indoor Air Quality Index) is an indicator that assesses the quality of indoor
+  air and is often used to describe the health status of indoor air. It is typically calculated
+  on the basis of measurements of various air pollutants.
+</p>
+
+<p><strong>Objective of the IAQ index</strong></p>
+
+<ul>
+  <li>
+    <strong>Health protection:</strong>
+    The IAQ index indicates how safe or healthy the air is for the people in the room.
+  </li>
+  <li>
+    <strong>Orientation aid:</strong>
+    It enables a simple and comprehensible interpretation of the air quality, often in the
+    form of a scale value or a color classification.
+  </li>
+</ul>
+
+<p><strong>Important parameters for the IAQ index</strong></p>
+
+<p>
+  The IAQ index is based on various factors and measurements, including:
+</p>
+
+<ol>
+  <li>
+    <strong>Carbon dioxide (CO₂):</strong>
+    <ul>
+      <li>
+        High concentrations can cause fatigue, concentration problems, and discomfort.
+      </li>
+      <li>
+        Typical limit: 400–1000&nbsp;ppm (parts per million) is considered acceptable.
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Volatile organic compounds (VOC):</strong>
+    <ul>
+      <li>
+        Chemical substances released from paints, cleaning products, furniture, or electronic
+        equipment.
+      </li>
+      <li>
+        At high concentrations, VOCs can cause headaches, irritation, or long-term health problems.
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Particulate matter (PM2.5 / PM10):</strong>
+    <ul>
+      <li>
+        Fine particles created by smoke, cooking fumes, or dust.
+      </li>
+      <li>
+        Particulate matter can cause respiratory illnesses and other health problems.
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Carbon monoxide (CO):</strong>
+    <ul>
+      <li>
+        A toxic gas produced by incomplete combustion.
+      </li>
+      <li>
+        Even low concentrations can be dangerous.
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Relative humidity and temperature:</strong>
+    <ul>
+      <li>
+        These values affect well-being and the growth of mold or bacteria.
+      </li>
+    </ul>
+  </li>
+</ol>
+<!-- ================= IAQ INDEX CLASSIFICATION ================= -->
+<h3>Classification of the IAQ index</h3>
+
+<p>
+  Many IAQ systems use a numerical or color scale to represent air quality.
+  An example classification is shown below.
+</p>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>IAQ value</th>
+        <th>Air quality</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>0 – 50</td>
+        <td>Excellent</td>
+        <td>No health risks.</td>
+      </tr>
+      <tr>
+        <td>51 – 100</td>
+        <td>Good</td>
+        <td>Low risks for sensitive persons.</td>
+      </tr>
+      <tr>
+        <td>101 – 150</td>
+        <td>Moderate</td>
+        <td>May be problematic for sensitive individuals.</td>
+      </tr>
+      <tr>
+        <td>151 – 200</td>
+        <td>Unhealthy</td>
+        <td>Possible adverse effects for the general population.</td>
+      </tr>
+      <tr>
+        <td>201 – 300</td>
+        <td>Very unhealthy</td>
+        <td>Health problems with prolonged exposure.</td>
+      </tr>
+      <tr>
+        <td>301+</td>
+        <td>Dangerous</td>
+        <td>Serious health risks.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- ================= EXAMPLES DECODING ================= -->
+<h3 id="decoding-examples">Examples decoding</h3>
+
+<p>
+  <strong>Payload:</strong>
+  <code>11 11 A2 0D 29 09 38 2B 04 06 00 03 A0</code>
+</p>
+
+<div class="table-wrap" style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>Bytes</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+        <th>9</th>
+        <th>10</th>
+        <th>11</th>
+        <th>12</th>
+        <th>13</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>HEX</td>
+        <td>11</td>
+        <td>11</td>
+        <td>A2</td>
+        <td>0D</td>
+        <td>29</td>
+        <td>09</td>
+        <td>38</td>
+        <td>2B</td>
+        <td>04</td>
+        <td>06</td>
+        <td>00</td>
+        <td>03</td>
+        <td>A0</td>
+      </tr>
+      <tr>
+        <td>Description</td>
+        <td>Module key</td>
+        <td>Module key</td>
+        <td>Uplink counter</td>
+        <td>Battery voltage</td>
+        <td>Battery voltage</td>
+        <td>Temperature</td>
+        <td>Temperature</td>
+        <td>Rel. humidity</td>
+        <td>Dew point</td>
+        <td>Dew point</td>
+        <td>Alarm flag</td>
+         <td>Light intensity</td>
+        <td>Light intensity</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<figure class="figure">
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/a1583d03cea7cd8d0f30b8bf261e80e0f2e812ca/Nyx/Nyx_Payload/exmpl%20decoder.png"
+    alt="Example payload decoder output"
+  >
+  <figcaption>
+    Decoded NYX payload output.
+  </figcaption>
+</figure>
+
+<!-- ================= logos  ================= -->
+<img
+  src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/afc9699389c59e7016ade928f86deb9a6c514640/Nyx/Nyx_Pic/logo%20lora%20mioty.png"
+  alt="LoRaWAN und mioty Logos"
+  style="max-width:260px; opacity:0.9; display:block; margin:32px 0;"
+>
+<img
+  src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/a1583d03cea7cd8d0f30b8bf261e80e0f2e812ca/Nyx/Nyx_general_description/picture/Nyx_allg._Beschreibung_3.png"
+  alt="Nyx device illustration"
+  style="
+    max-width:300px;
+    display:block;
+    margin:32px 0;
+    opacity:0.95;
+  "
+>
+     
+
+ <!-- DISCLAIMER -->
+            <!-- DISCLAIMER -->
+            <div class="footer-note">
+                <p>© Sentinum GmbH – All rights reserved.</p>
+                <p>All contents of this document, including text, tables, and images, are protected by copyright and are the property of Sentinum GmbH.</p>
+                <p>All images are subject to the copyright of Sentinum GmbH unless otherwise stated.</p>
+                <p>Reproduction, distribution, or use — even in excerpts — is not permitted without explicit written permission.</p>
+                <p style="padding-left:14px; font-style:italic;">Specifications are subject to change without notice. All information is provided without warranty.</p>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
