@@ -1,189 +1,181 @@
-<meta charset="UTF-8">
-<title>NYX – Quick Start Guide</title>
-
 <style>
-/* ============================================================
-   SENTINUM – TECHNICAL DATA SHEET (STABLE VERSION)
-   ============================================================ */
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Montserrat:wght@500;600;700&amp;family=Nunito:wght@400;600;700&amp;display=swap');
-
-:root{
-  --black:#000000;
-  --text-main:#111827;
-  --text-muted:#57606a;
-
-  --border:#d0d7de;
-  --table-header:#f5f7fa;
-
-  --blue-bg:#f0f8ff;
-  --blue-border:#a0c4ff;
-  --blue-text:#1a3e8c;
-
-  --toc-bg:#f7fbff;
-  --toc-border:#d6e4fa;
-}
-
-/* ---------- Base ---------- */
-*{box-sizing:border-box;}
-
-body{
-  margin:0;
-  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
-  color:var(--text-main);
-  line-height:1.65;
-  background:#ffffff;
-}
-
-.container {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* ---------- Headings ---------- */
-h1{
-  margin:32px 0 16px;
-  padding-bottom:10px;
-  font-family:"Avenir Next","Avenir",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  font-size:20px;
-  font-weight:600;
-  letter-spacing:0.02em;
-  text-transform:uppercase;
-  color:#000;
-  border-bottom:1.5px solid #000;
-}
-
-h2{
-  font-family:"Montserrat",Arial,sans-serif;
-  font-size:18px;
-  margin:26px 0 10px;
-  color:var(--black);
-}
-
-/* ---------- PDF Viewer ---------- */
-.pdf-viewer{
-  width:100%;
-  max-width:900px;
-  height:600px;
-  margin:0 auto 20px;
-  border:1px solid #ccc;
-  box-shadow:0 2px 8px rgba(0,0,0,0.1);
-  border-radius:6px;
-  overflow:hidden;
-}
-
-.pdf-viewer iframe{
-  width:100%;
-  height:100%;
-  border:none;
-}
-
-/* ---------- PDF Download ---------- */
-.pdf-download{
-  max-width:900px;
-  margin:0 auto 36px;
-  padding:15px 20px;
-  background:var(--blue-bg);
-  border:1px solid var(--blue-border);
-  border-radius:6px;
-  font-size:15px;
-  color:var(--blue-text);
-  text-align:center;
-}
-
-.pdf-download a{
-  color:var(--blue-text);
-  font-weight:600;
-  text-decoration:underline;
-}
-
-/* ---------- TOC ---------- */
-.main-toc{
-  max-width:900px;
-  margin:0 auto 40px;
-  padding:16px 20px;
-  background:var(--toc-bg);
-  border:1px solid var(--toc-border);
-  border-radius:6px;
-  font-size:14.5px;
-}
-
-.main-toc ul{
-  list-style:none;
-  margin:0;
-  padding:0;
-}
-
-.main-toc li{
-  margin:.3rem 0;
-}
-
-.main-toc a{
-  color:var(--blue-text);
-  font-weight:600;
-  text-decoration:none;
-}
-
-.main-toc a:hover{
-  text-decoration:underline;
-}
-
-/* ---------- Figures ---------- */
-.figure{
-  margin:28px auto 36px;
-  text-align:center;
-}
-/* ---------- Code Blocks ---------- */
-pre{
-  max-width:900px;
-  margin:14px auto 30px;
-  padding:16px 18px;
-
-  background:#f6f8fa;
-  border:1px solid var(--border);
-  border-radius:6px;
-
-  overflow-x:auto;
-  font-family:
-    SFMono-Regular,
-    Menlo,
-    Consolas,
-    "Liberation Mono",
-    monospace;
-  font-size:13.5px;
-  line-height:1.6;
-  color:#111827;
-}
-
-pre code{
-  display:block;
-  white-space:pre;
-}
-
-.figure img{
-  max-width:100%;
-  height:auto;
-  border:none;
-  background:none;
-}
-
-.figure figcaption{
-  margin-top:8px;
-  font-size:0.85rem;
-  color:#6b7280;
-  font-style:italic;
-}
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+        
+        :root{
+          --black:#000000;
+          --text-main:#111827;
+          --text-muted:#6b7280;
+          --border:#d0d7de;
+          --table-header:#f5f7fa;
+          --blue-bg:#f0f8ff;
+          --blue-border:#a0c4ff;
+          --blue-text:#1a3e8c;
+          --toc-bg:#f7fbff;
+          --toc-border:#d6e4fa;
+        }
+        
+        *{ box-sizing:border-box; }
+        
+        body{
+          margin:0;
+          font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+          color:var(--text-main);
+          line-height:1.65;
+          background:#ffffff;
+        }
+        
+        .container{ width:100%; }
+        
+        /* Headings */
+        
+        h1{
+          margin:48px 0 16px;
+          padding-bottom:12px;
+          font-family:"Montserrat",Arial,sans-serif;
+          font-size:42px;
+          font-weight:700;
+          border-bottom:2px solid var(--border);
+        }
+        
+        h3{
+          margin:32px 0 8px;
+          padding-bottom:6px;
+          font-family:"Montserrat",Arial,sans-serif;
+          font-size:18px;
+          font-weight:600;
+          border-bottom:1.5px solid var(--border);
+          scroll-margin-top:100px;
+        }
+        
+        /* TOC */
+        
+        .main-toc{
+          max-width:900px;
+          margin:0 auto 40px;
+          padding:16px 20px;
+          background:var(--toc-bg);
+          border:1px solid var(--toc-border);
+          border-radius:6px;
+        }
+        
+        .main-toc ul{ list-style:none; padding:0; margin:0; }
+        .main-toc li{ margin:.3rem 0; }
+        .main-toc a{
+          color:var(--blue-text);
+          font-weight:600;
+          text-decoration:none;
+        }
+        /* ---------- PDF ---------- */
+        .pdf-viewer{
+          max-width:900px;
+          height:600px;
+          margin:0 auto 20px;
+          border:1px solid #ccc;
+          border-radius:6px;
+          overflow:hidden;
+        }
+        
+        .pdf-viewer iframe{
+          width:100%;
+          height:100%;
+          border:none;
+        }
+        
+        .pdf-download{
+          max-width:900px;
+          margin:0 auto 36px;
+          padding:14px 18px;
+          background:var(--blue-bg);
+          border:1px solid var(--blue-border);
+          border-radius:6px;
+          text-align:center;
+        }
+        
+        .pdf-download a{
+          color:var(--blue-text);
+          font-weight:600;
+        }
+        
+        /* Tables */
+        
+        .table-wrap{ margin:12px 0 32px; }
+        
+        table{
+          width:100%;
+          border-collapse:collapse;
+          font-size:14px;
+        }
+        
+        th,td{
+          border:1px solid var(--border);
+          padding:8px 12px;
+          vertical-align:top;
+        }
+        
+        th{
+          background:var(--table-header);
+          font-weight:700;
+          border-bottom:2px solid var(--black);
+        }
+        
+        /* Footer */
+        
 
 /* ---------- Footer ---------- */
 .footer-note{
   margin-top:40px;
   padding-top:16px;
   border-top:1px solid var(--border);
-  font-size:0.82rem;
-  line-height:1.45;
+  font-size:.82rem;
   color:var(--text-muted);
+}
+
+.footer-note p{
+  margin:0 0 6px 0;
+  line-height:1.4;
+}
+
+/* ---------- Inline code ---------- */
+code{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size:0.95em;
+  padding:0.1em 0.35em;
+  border-radius:4px;
+  background:#f5f7fa;
+  border:1px solid var(--border);
+ 
+}
+/* ---------- Code blocks ---------- */
+pre{
+  background:#f8fafc;
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:16px 20px;
+  margin:16px 0 32px;
+  overflow-x:auto;
+  line-height:1.6;
+}
+
+pre code{
+  background:none;     /* 🚨 removes inline badge look */
+  border:none;         /* 🚨 crucial */
+  padding:0;
+  font-size:0.9rem;
+  color:#111827;
+  display:block;
+  white-space:pre;
+}
+/* ---------- Figures ---------- */
+.figure{
+  margin:32px auto;
+  text-align:center;
+}
+.figure img{ max-width:100%; }
+.figure figcaption{
+  margin-top:8px;
+  font-size:.85rem;
+  color:var(--text-muted);
+  font-style:italic;
 }
 </style>
 
@@ -216,15 +208,15 @@ pre code{
   </ul>
 </nav>
 
-<h1 id="overview">1. Product Overview</h1>
+<h3 id="overview">1. Product Overview</h3>
 <p>The solar-powered, wireless IoT sensor NYX is an innovative solution for monitoring indoor environmental parameters. Solar-powered and only 8 mm thin, it offers a maintenance-free and attractive design for indoor spaces.</p>
 <p>The sensor detects temperature, relative humidity and ambient light. The sensor is available with LoRaWAN® and mioty® with different sensor configurations.</p>
 <p>Please observe the warnings and instructions in the operating instructions to ensure the safety of you, your surroundings and the sensor.</p>
 
-<h1 id="assembly">2. Assembly and Installation</h1>
+<h3 id="assembly">2. Assembly and Installation</h3>
 <p>Install the wall mount on an interior wall at a height of 1.50 m to 1.80 m in a location with at least 400 lux per day. Ensure a minimum distance of 20 cm from people and operation below 2000 m above sea level.</p>
 
-<h1 id="commissioning">3. Commissioning and NFC Parameterization</h1>
+<h3 id="commissioning">3. Commissioning and NFC Parameterization</h3>
 <p>
 Der Sensor wird im bereits eingeschalteten Zustand geliefert. Die Aktivierung erfolgt über
 eine NFC App. Dazu wird ein Smartphone benötigt. Die App kann in den jeweiligen App Stores
@@ -254,7 +246,7 @@ Abbildung dargestellt.
 </figure>
 
 
-<h1 id="payload">4. Payload Decoder – NYX Series</h1>
+<h3 id="payload">4. Payload Decoder – NYX Series</h3>
 
 <pre><code>
 function decodeUplink(input) {
@@ -263,14 +255,14 @@ function decodeUplink(input) {
 
     if (input.fPort == 1) {
 
-        decoded.base_id = bytes[0] &gt;&gt; 4;
-        decoded.major_version = bytes[0] &amp; 0x0F;
-        decoded.minor_version = bytes[1] &gt;&gt; 4;
-        decoded.product_version = bytes[1] &amp; 0x0F;
+        decoded.base_id = bytes[0] >> 4;
+        decoded.major_version = bytes[0] & 0x0F;
+        decoded.minor_version = bytes[1] >> 4;
+        decoded.product_version = bytes[1] & 0x0F;
         decoded.up_cnt = bytes[2];
-        decoded.battery_voltage = ((bytes[3] &lt;&lt; 8) | bytes[4]) / 1000.0;
+        decoded.battery_voltage = ((bytes[3] << 8) | bytes[4]) / 1000.0;
         decoded.internal_temperature =
-            ((bytes[5] &lt;&lt; 8) | bytes[6]) / 10 - 100;
+            ((bytes[5] << 8) | bytes[6]) / 10 - 100;
     }
 
     return {

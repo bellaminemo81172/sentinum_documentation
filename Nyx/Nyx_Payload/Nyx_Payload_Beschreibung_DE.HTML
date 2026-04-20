@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>NYX – NFC & Downlink Description</title>
@@ -161,92 +164,95 @@ code{
   font-style:italic;
 }
 </style>
-<!-- ================= PDF VIEWER ================= -->
+
+<!-- ================= PDF VIEWER (DE) ================= -->
 <div class="pdf-viewer">
   <iframe
-    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/62bb14e58cd85712b089c0d75afc4876912d9767/Nyx/Nyx_Payload/Nyx_Payload%20_description_EN.pdf">
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/7ba262a6d6d57b39e44da70a86c2b0993c403e19/Nyx/Nyx_Payload/Nyx_Payload%20_Beschreibung_DE.pdf"
+    title="NYX Payload Beschreibung (DE)">
   </iframe>
 </div>
 
 <div class="pdf-download">
-  📄 You can view the PDF above or
+  📄 PDF anzeigen oder
   <a
-    href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/62bb14e58cd85712b089c0d75afc4876912d9767/Nyx/Nyx_Payload/Nyx_Payload%20_description_EN.pdf"
+    href="https://github.com/bellaminemo81172/sentinum_documentation/blob/7ba262a6d6d57b39e44da70a86c2b0993c403e19/Nyx/Nyx_Payload/Nyx_Payload%20_Beschreibung_DE.pdf"
     target="_blank" rel="noopener noreferrer">
-    download it here
-  </a>.
+    hier herunterladen
+  </a>
 </div>
-
-<!-- ================= TABLE OF CONTENTS ================= -->
+<!-- ================= INHALTSVERZEICHNIS ================= -->
 <nav class="main-toc">
-  <h4>Table of Contents</h4>
+  <h4>Inhaltsverzeichnis</h4>
   <ul>
-    <li><a href="#overview">1. Payload Overview</a></li>
-    <li><a href="#module-key">2. Structure of the Module Key</a></li>
-    <li><a href="#nyx-payload">3. Nyx Payload Description</a></li>
-    <li><a href="#iaq-index">4. IAQ Index</a></li>
-    <li><a href="#decoding-examples">5. Examples Decoding</a></li>
+    <li><a href="#nyx-payload">1. Nyx Payload Beschreibung</a></li>
+    <li><a href="#module-key">2. Struktur des Modulschlüssels</a></li>
+    <li><a href="#iaq-index">3. IAQ Index</a></li>
+    <li><a href="#examples">4. Beispiele Dekodierung</a></li>
   </ul>
 </nav>
-<!-- ================= NYX PAYLOAD DESCRIPTION ================= -->
-<h3 id="nyx-payload">1. Payload Overview</h3>
+<!-- ================= NYX PAYLOAD BESCHREIBUNG ================= -->
+<h3 id="nyx-payload">NYX Payload Beschreibung</h3>
 
 <p>
-  This chapter describes the structure of the telemetry data. The number of bytes in the
-  payload depends on the configuration of the sensor. The structure of the data depends on
-  which sensors are present in your product.
+In diesem Kapitel wird die Struktur der Telemetriedaten beschrieben.
+Die Anzahl der Bytes in der Payload hängt von der Konfiguration des Sensors ab.
+Der Aufbau der Daten hängt davon ab, welche Sensoren in Ihrem Produkt vorhanden sind.
 </p>
 
 <p>
-  In principle, each version has a header. This has information about the version and status
-  of the sensor and also contains a master measured value. This measured value can simply be
-  assumed to be the current measured value.
+Im Prinzip hat jede Version einen Header. Dieser hat Informationen über die Version
+und den Status des Sensors und enthält außerdem einen Master‑Messwert.
+Dieser Messwert kann einfach als der aktuelle Messwert angenommen werden.
 </p>
 
 <p>
-  The header is followed by an additional payload part that contains further information,
-  such as special parameters for the measuring principle or settings for position and
-  opening detection. Not every sensor has an additional payload part.
+Nach dem Header folgt ein zusätzlicher Payload‑Teil, der weitere Informationen
+enthält, wie z.&nbsp;B. spezielle Parameter für das Messprinzip oder Einstellungen
+zur Positions‑ und Öffnungserkennung. Nicht jeder Sensor hat einen zusätzlichen
+Payload‑Teil.
 </p>
 
+<!-- ================= BEGRIFFE ================= -->
 <div class="table-wrap">
   <table>
     <thead>
       <tr>
-        <th>Terms</th>
-        <th>Description</th>
+        <th>Begriffe</th>
+        <th>Beschreibung</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>Byte No.</td>
-        <td>Byte number starting at 1</td>
+        <td>Byte Nummer beginnend bei 1</td>
       </tr>
       <tr>
         <td>Alias</td>
-        <td>Comprehensible name of the variable</td>
+        <td>Verständlicher Name der Variablen</td>
       </tr>
       <tr>
-        <td>Description</td>
-        <td>Description of the variables</td>
+        <td>Beschreibung</td>
+        <td>Beschreibung der Variablen</td>
       </tr>
       <tr>
-        <td>Designation</td>
-        <td>Designation in the Dataconverter</td>
+        <td>Bezeichnung</td>
+        <td>Bezeichnung im Dataconverter</td>
       </tr>
       <tr>
-        <td>Unit</td>
-        <td>Unit of the variables</td>
+        <td>Einheit</td>
+        <td>Einheit der Variablen</td>
       </tr>
       <tr>
-        <td>Datahub <code>.json</code> key</td>
-        <td>Key in the <code>.json</code> when using the data hub</td>
+        <td>Datahub <code>.json</code> Schlüssel</td>
+        <td>Schlüssel im <code>.json</code> bei Nutzung des Datahubs</td>
       </tr>
     </tbody>
   </table>
 </div>
-<!-- ================= STRUCTURE OF THE MODULE KEY ================= -->
-<h3 id="module-key">Structure of the module key</h3>
+
+<!-- ================= STRUKTUR DES MODULSCHLÜSSELS ================= -->
+<h3 id="module-key">Struktur des Modulschlüssels</h3>
 
 <div class="table-wrap">
   <table>
@@ -265,31 +271,27 @@ code{
     <tbody>
       <tr>
         <td>
-          Base ID Module
-          <br>
+          Basis‑ID‑Modul<br>
           <span style="color:var(--text-muted)">
-            e.g. Sentiface, Senticom, Sentivisor
+            z.&nbsp;B. Sentiface, Senticom, Sentivisor
           </span>
         </td>
         <td>
-          Major Version
-          <br>
+          Major Version<br>
           <span style="color:var(--text-muted)">
-            (SW/HW version)
+            (SW/HW Version)
           </span>
         </td>
         <td>
-          Minor Version
-          <br>
+          Minor Version<br>
           <span style="color:var(--text-muted)">
-            (SW/HW version)
+            (SW/HW Version)
           </span>
         </td>
         <td>
-          Product version
-          <br>
+          Produkt Version<br>
           <span style="color:var(--text-muted)">
-            (sensors, e.g. TH, THL, ACC, ...)
+            (Sensoren, z.&nbsp;B. TH, THL, ACC, …)
           </span>
         </td>
       </tr>
@@ -298,14 +300,16 @@ code{
 </div>
 
 <p>
-  The module key of the SENTIFACE module can be taken from the first
-  two bytes of each uplink. The module key is required for the downlink.
+Der Modulschlüssel des SENTIFACE‑Moduls kann aus den ersten 2&nbsp;Bytes jedes Uplinks
+entnommen werden. Der Modulschlüssel wird für den Downlink benötigt.
 </p>
-<h4><strong>Uplink example (not applicable for Nyx)</strong></h4>
+
+<!-- ================= UPLINK BEISPIEL ================= -->
+<h4><strong>Uplink Beispiel (nicht für Nyx anwendbar)</strong></h4>
 
 <img
   src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/5ceafdfcdc00deecaa83a32598787361304f0715/Nyx/Nyx_Payload/uplink%20example%20pic%20%20payload%20decoder.png"
-  alt="Uplink payload example"
+  alt="Uplink Payload Beispiel"
   style="
     max-width:900px;
     display:block;
@@ -313,15 +317,13 @@ code{
   "
 >
 <figure class="figure">
-  
+
   <figcaption>
-    Uplink payload decoding — byte‑wise interpretation of a telemetry payload.
+    Gegeben ist das folgende Payload Beispiel für den Helios Drucksensor.
+    
   </figcaption>
 </figure>
 
-<p>
-  Given is the following payload example for the Helios pressure sensor:
-</p>
 
 <p>
   <code>11 11 FE 1A D5 95 06 03 00 23 BE</code>
@@ -347,7 +349,7 @@ code{
     </thead>
     <tbody>
       <tr>
-        <td>HEX</td>
+        <td><strong>HEX</strong></td>
         <td>11</td>
         <td>11</td>
         <td>FE</td>
@@ -361,23 +363,23 @@ code{
         <td>BE</td>
       </tr>
       <tr>
-        <td>Description</td>
-        <td>Module key</td>
-        <td>Module key</td>
+        <td><strong>Beschreibung</strong></td>
+        <td>Modul‑schlüssel</td>
+        <td>Modul‑schlüssel</td>
         <td>Uplink Counter</td>
         <td>Battery Voltage</td>
         <td>Battery Voltage</td>
-        <td>Temperature</td>
+        <td>Temperatur</td>
         <td>Alarm Flag</td>
         <td>Alarm Flag</td>
-        <td>Measurement status</td>
-        <td>Pressure mbar</td>
-        <td>Pressure mbar</td>
+        <td>Mess Status</td>
+        <td>Druck mbar</td>
+        <td>Druck mbar</td>
       </tr>
     </tbody>
   </table>
 </div>
-<h3>Nyx payload description</h3>
+<h3>Nyx Payload Beschreibung</h3>
 
 <div class="table-wrap" style="overflow-x:auto;">
   <table style="width:120%;">
@@ -392,12 +394,12 @@ code{
 
     <thead>
       <tr>
-        <th>Byte number</th>
-        <th>Alias name</th>
-        <th>Unit</th>
-        <th>Designation in the payload decoder</th>
-        <th>Module key</th>
-        <th>Datahub <code>.json</code> key</th>
+        <th>Byte Nummer</th>
+        <th>Alias Name</th>
+        <th>Einheit</th>
+        <th>Bezeichnung im Payload Decoder</th>
+        <th>Modul‑schlüssel</th>
+        <th>Datahub <code>.json</code> Schlüssel</th>
       </tr>
     </thead>
 
@@ -405,7 +407,7 @@ code{
       <!-- 1–2 -->
       <tr>
         <td><strong>1 – 2</strong></td>
-        <td><strong>Module key</strong></td>
+        <td><strong>Modulschlüssel</strong></td>
         <td>-</td>
         <td><code>module_key</code></td>
         <td><code>XXX1</code></td>
@@ -413,20 +415,21 @@ code{
       </tr>
       <tr>
         <td colspan="6">
-          <strong>Description:</strong><br>
+          <strong>Beschreibung:</strong><br>
           Byte 1:<br>
-          • 4-bit MSB: Module code. For Mioty exclusively “Sentiface” telemetry module, i.e. always <code>0x1</code>.<br>
-          • 4-bit LSB: Major version. FW of the same major version but larger minor versions remain compatible with older decoders. However, the number of bytes may change.<br><br>
+          • 4 Bit MSB: Modulcode. Bei Mioty ausschließlich „Sentiface“ Telemetrie‑Modul, d.h. stets <code>0x1</code>.<br>
+          • 4 Bit LSB: Major Version. FW der gleichen Major‑Version aber größerer Minor‑Version bleiben mit älteren Dekodern kompatibel.
+          Die Anzahl der Bytes kann sich aber ändern!<br><br>
           Byte 2:<br>
-          • 4-bit MSB: Minor version. New SW versions may incrementally add new telemetry to the data packet.<br>
-          • 4-bit LSB: Sub / Product Version. With Helios, these bits encode the specific configuration of connected sensors.
+          • 4 Bit MSB: Minor Version. Neue SW‑Versionen fügen ggf. inkrementell neue Telemetrie an das Datenpaket an.<br>
+          • 4 Bit LSB: Sub / Product Version. Bei Helios kodieren diese Bits die konkrete Konfiguration angeschlossener Sensorik.
         </td>
       </tr>
 
       <!-- 3 -->
       <tr>
         <td><strong>3</strong></td>
-        <td><strong>Uplink counter</strong></td>
+        <td><strong>Uplink Zähler</strong></td>
         <td>-</td>
         <td><code>uplink_counter</code></td>
         <td><code>XXX1</code></td>
@@ -434,15 +437,16 @@ code{
       </tr>
       <tr>
         <td colspan="6">
-          <strong>Description:</strong><br>
-          Protocol-independent uplink counter that reaches a maximum of 255. After that, the counter starts again at 0.
+          <strong>Beschreibung:</strong><br>
+          Protokoll unabhängiger Uplinkcounter, der maximal bis 255 reicht.
+          Danach beginnt der Counter wieder bei 0.
         </td>
       </tr>
 
       <!-- 4–5 -->
       <tr>
         <td><strong>4 – 5</strong></td>
-        <td><strong>Battery voltage</strong></td>
+        <td><strong>Batterie Spannung</strong></td>
         <td>mV</td>
         <td><code>battery_voltage</code></td>
         <td><code>XXX1</code></td>
@@ -450,8 +454,8 @@ code{
       </tr>
       <tr>
         <td colspan="6">
-          <strong>Description:</strong><br>
-          Current voltage of the battery in millivolts.<br>
+          <strong>Beschreibung:</strong><br>
+          Aktuelle Spannung der Batterie in Millivolt.<br>
           <code>(dataBytes[3] &lt;&lt; 8 | dataBytes[4]) / 1000.0</code>
         </td>
       </tr>
@@ -459,7 +463,7 @@ code{
       <!-- 6–7 -->
       <tr>
         <td><strong>6 – 7</strong></td>
-        <td><strong>Internal temperature</strong></td>
+        <td><strong>Interne Temperatur</strong></td>
         <td>°C</td>
         <td><code>internal_temperature</code></td>
         <td><code>XXX1</code></td>
@@ -467,16 +471,17 @@ code{
       </tr>
       <tr>
         <td colspan="6">
-          <strong>Description:</strong><br>
+          <strong>Beschreibung:</strong><br>
           <code>((bytes[5] &lt;&lt; 8) | bytes[6]) / 10 - 100</code><br>
-          Temperature of the sensor according to the technical data sheet.
+          Dieser Wert ist bei diesem Sensor der Temperaturwert, nach Spezifikation
+          im technischen Datenblatt.
         </td>
       </tr>
 
       <!-- 8 -->
       <tr>
         <td><strong>8</strong></td>
-        <td><strong>Relative humidity</strong></td>
+        <td><strong>Relative Luftfeuchte</strong></td>
         <td>%RH</td>
         <td><code>humidity</code></td>
         <td><code>XXX1</code></td>
@@ -484,15 +489,15 @@ code{
       </tr>
       <tr>
         <td colspan="6">
-          <strong>Description:</strong><br>
-          Relative humidity in percent.
+          <strong>Beschreibung:</strong><br>
+          Relative Luftfeuchtigkeit in %RH.
         </td>
       </tr>
 
       <!-- 9–10 -->
       <tr>
         <td><strong>9 – 10</strong></td>
-        <td><strong>Dew point</strong></td>
+        <td><strong>Taupunkt</strong></td>
         <td>°C</td>
         <td><code>dew_point</code></td>
         <td><code>XXX1</code></td>
@@ -500,15 +505,15 @@ code{
       </tr>
       <tr>
         <td colspan="6">
-          <strong>Description:</strong><br>
-          Dew point in degrees Celsius.
+          <strong>Beschreibung:</strong><br>
+          Taupunkt in °C.
         </td>
       </tr>
 
       <!-- 11 -->
       <tr>
         <td><strong>11</strong></td>
-        <td><strong>Alarm variable</strong></td>
+        <td><strong>Alarm Variable</strong></td>
         <td>-</td>
         <td><code>alarm-level</code></td>
         <td><code>XXX1</code></td>
@@ -516,15 +521,15 @@ code{
       </tr>
       <tr>
         <td colspan="6">
-          <strong>Description:</strong><br>
-          Alarm level corresponding to green, yellow, and red LED states.
+          <strong>Beschreibung:</strong><br>
+          Alarm Level, entspricht grün, gelb und roter Anzeige an den LEDs.
         </td>
       </tr>
 
       <!-- 12–13 -->
       <tr>
         <td><strong>12 – 13</strong></td>
-        <td><strong>Light intensity indicator</strong></td>
+        <td><strong>Lichtintensität Indikator</strong></td>
         <td>lux</td>
         <td><code>raw_lux</code></td>
         <td><code>XXX1</code></td>
@@ -532,8 +537,8 @@ code{
       </tr>
       <tr>
         <td colspan="6">
-          <strong>Description:</strong><br>
-          Light intensity in lux as an indicator (no direct ambient light measurement).<br>
+          <strong>Beschreibung:</strong><br>
+          Lichtintensität in Lux als Indikator, keine direkte Messung des Umgebungslichts.<br>
           <code>decoded.lux = (1 &lt;&lt; (raw_lux &gt;&gt; 12)) * (raw_lux &amp; 0x0FFF) * 0.01</code>
         </td>
       </tr>
@@ -541,7 +546,7 @@ code{
       <!-- 14 -->
       <tr>
         <td><strong>14</strong></td>
-        <td><strong>Gas sensor status</strong></td>
+        <td><strong>Gas Sensor Status</strong></td>
         <td>°C</td>
         <td><code>internal_temperature</code></td>
         <td><code>XXX4</code></td>
@@ -549,15 +554,15 @@ code{
       </tr>
       <tr>
         <td colspan="6">
-          <strong>Description:</strong><br>
-          Jamming status of the gas sensor.
+          <strong>Beschreibung:</strong><br>
+          Status des Gassensors.
         </td>
       </tr>
 
       <!-- 15–16 -->
       <tr>
         <td><strong>15 – 16</strong></td>
-        <td><strong>Air pressure</strong></td>
+        <td><strong>Luftdruck</strong></td>
         <td>%RH</td>
         <td><code>pressure</code></td>
         <td><code>XXX4</code></td>
@@ -565,8 +570,8 @@ code{
       </tr>
       <tr>
         <td colspan="6">
-          <strong>Description:</strong><br>
-          Air pressure value.
+          <strong>Beschreibung:</strong><br>
+          Luftdruckwert.
         </td>
       </tr>
 
@@ -581,8 +586,8 @@ code{
       </tr>
       <tr>
         <td colspan="6">
-          <strong>Description:</strong><br>
-          Indoor Air Quality status indicator.
+          <strong>Beschreibung:</strong><br>
+          Indoor Air Quality Status.
         </td>
       </tr>
 
@@ -597,8 +602,8 @@ code{
       </tr>
       <tr>
         <td colspan="6">
-          <strong>Description:</strong><br>
-          Indoor Air Quality index value.
+          <strong>Beschreibung:</strong><br>
+          Indoor Air Quality Index.
         </td>
       </tr>
     </tbody>
@@ -608,149 +613,158 @@ code{
 <h3 id="iaq-index">IAQ Index</h3>
 
 <p>
-  The IAQ index (Indoor Air Quality Index) is an indicator that assesses the quality of indoor
-  air and is often used to describe the health status of indoor air. It is typically calculated
-  on the basis of measurements of various air pollutants.
+Der IAQ‑Index (Indoor Air Quality Index) ist eine Kennzahl, die die Qualität der
+Raumluft bewertet und häufig verwendet wird, um den Gesundheitszustand der Luft
+in Innenräumen zu beschreiben. Er wird typischerweise auf der Grundlage von
+Messungen verschiedener Luftschadstoffe berechnet.
 </p>
 
-<p><strong>Objective of the IAQ index</strong></p>
+<h4>Ziel des IAQ‑Index</h4>
 
 <ul>
   <li>
-    <strong>Health protection:</strong>
-    The IAQ index indicates how safe or healthy the air is for the people in the room.
+    <strong>Gesundheitsschutz:</strong>
+    Der IAQ‑Index gibt Hinweise darauf, wie sicher oder gesund die Luft für die
+    Menschen im Raum ist.
   </li>
   <li>
-    <strong>Orientation aid:</strong>
-    It enables a simple and comprehensible interpretation of the air quality, often in the
-    form of a scale value or a color classification.
+    <strong>Orientierungshilfe:</strong>
+    Er ermöglicht eine einfache und verständliche Interpretation der Luftqualität,
+    oft in Form eines Skalenwerts oder einer farblichen Einstufung.
   </li>
 </ul>
 
-<p><strong>Important parameters for the IAQ index</strong></p>
+<h4>Wichtige Parameter für den IAQ‑Index</h4>
 
 <p>
-  The IAQ index is based on various factors and measurements, including:
+Der IAQ‑Index basiert auf verschiedenen Faktoren und Messungen, darunter:
 </p>
 
 <ol>
   <li>
-    <strong>Carbon dioxide (CO₂):</strong>
+    <strong>Kohlendioxid (CO₂):</strong>
     <ul>
       <li>
-        High concentrations can cause fatigue, concentration problems, and discomfort.
+        Hohe Konzentrationen können zu Müdigkeit, Konzentrationsproblemen und
+        Unwohlsein führen.
       </li>
       <li>
-        Typical limit: 400–1000&nbsp;ppm (parts per million) is considered acceptable.
+        Typischer Grenzwert: 400–1000&nbsp;ppm (parts per million) gelten als
+        akzeptabel.
       </li>
     </ul>
   </li>
 
   <li>
-    <strong>Volatile organic compounds (VOC):</strong>
+    <strong>Flüchtige organische Verbindungen (VOC):</strong>
     <ul>
       <li>
-        Chemical substances released from paints, cleaning products, furniture, or electronic
-        equipment.
+        Chemische Stoffe, die aus Farben, Reinigungsmitteln, Möbeln oder
+        Elektronikgeräten freigesetzt werden.
       </li>
       <li>
-        At high concentrations, VOCs can cause headaches, irritation, or long-term health problems.
+        VOCs können bei hohen Konzentrationen Kopfschmerzen, Reizungen oder
+        langfristige Gesundheitsprobleme verursachen.
       </li>
     </ul>
   </li>
 
   <li>
-    <strong>Particulate matter (PM2.5 / PM10):</strong>
+    <strong>Feinstaub (PM2.5 / PM10):</strong>
     <ul>
       <li>
-        Fine particles created by smoke, cooking fumes, or dust.
+        Feine Partikel, die durch Rauch, Kochdämpfe oder Staub entstehen.
       </li>
       <li>
-        Particulate matter can cause respiratory illnesses and other health problems.
+        Feinstaub kann Atemwegserkrankungen und andere gesundheitliche Probleme
+        verursachen.
       </li>
     </ul>
   </li>
 
   <li>
-    <strong>Carbon monoxide (CO):</strong>
+    <strong>Kohlenmonoxid (CO):</strong>
     <ul>
       <li>
-        A toxic gas produced by incomplete combustion.
+        Ein giftiges Gas, das durch unvollständige Verbrennung entsteht.
       </li>
       <li>
-        Even low concentrations can be dangerous.
+        Selbst geringe Konzentrationen können gefährlich sein.
       </li>
     </ul>
   </li>
 
   <li>
-    <strong>Relative humidity and temperature:</strong>
+    <strong>Relative Luftfeuchtigkeit und Temperatur:</strong>
     <ul>
       <li>
-        These values affect well-being and the growth of mold or bacteria.
+        Diese Werte beeinflussen das Wohlbefinden und das Wachstum von
+        Schimmelpilzen oder Bakterien.
       </li>
     </ul>
   </li>
 </ol>
-<!-- ================= IAQ INDEX CLASSIFICATION ================= -->
-<h3>Classification of the IAQ index</h3>
+<!-- ================= IAQ INDEX KLASSIFIKATION ================= -->
+<h3>Klassifikation des IAQ‑Index</h3>
 
 <p>
-  Many IAQ systems use a numerical or color scale to represent air quality.
-  An example classification is shown below.
+Viele IAQ‑Systeme verwenden eine numerische oder farbliche Skala, um die
+Luftqualität darzustellen. Ein Beispiel:
 </p>
 
 <div class="table-wrap">
   <table>
     <thead>
       <tr>
-        <th>IAQ value</th>
-        <th>Air quality</th>
-        <th>Description</th>
+        <th>IAQ‑Wert</th>
+        <th>Luftqualität</th>
+        <th>Beschreibung</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>0 – 50</td>
-        <td>Excellent</td>
-        <td>No health risks.</td>
+        <td>0–50</td>
+        <td>Exzellent</td>
+        <td>Keine Gesundheitsrisiken.</td>
       </tr>
       <tr>
-        <td>51 – 100</td>
-        <td>Good</td>
-        <td>Low risks for sensitive persons.</td>
+        <td>51–100</td>
+        <td>Gut</td>
+        <td>Geringe Risiken für empfindliche Personen.</td>
       </tr>
       <tr>
-        <td>101 – 150</td>
-        <td>Moderate</td>
-        <td>May be problematic for sensitive individuals.</td>
+        <td>101–150</td>
+        <td>Mäßig</td>
+        <td>Kann für empfindliche Personen problematisch sein.</td>
       </tr>
       <tr>
-        <td>151 – 200</td>
-        <td>Unhealthy</td>
-        <td>Possible adverse effects for the general population.</td>
+        <td>151–200</td>
+        <td>Ungesund</td>
+        <td>Beeinträchtigungen für die allgemeine Bevölkerung möglich.</td>
       </tr>
       <tr>
-        <td>201 – 300</td>
-        <td>Very unhealthy</td>
-        <td>Health problems with prolonged exposure.</td>
+        <td>201–300</td>
+        <td>Sehr ungesund</td>
+        <td>Gesundheitliche Probleme bei längerer Exposition.</td>
       </tr>
       <tr>
         <td>301+</td>
-        <td>Dangerous</td>
-        <td>Serious health risks.</td>
+        <td>Gefährlich</td>
+        <td>Schwerwiegende Gesundheitsrisiken.</td>
       </tr>
     </tbody>
   </table>
 </div>
+
 <!-- ================= EXAMPLES DECODING ================= -->
-<h3 id="decoding-examples">Examples decoding</h3>
+<h3 id="decoding-examples">Beispiele Dekodierung </h3>
 
 <p>
   <strong>Payload:</strong>
   <code>11 11 A2 0D 29 09 38 2B 04 06 00 03 A0</code>
 </p>
 
+<!-- ================= BEISPIELE DEKODIERUNG ================= -->
 <div class="table-wrap" style="overflow-x:auto;">
   <table>
     <thead>
@@ -773,7 +787,7 @@ code{
     </thead>
     <tbody>
       <tr>
-        <td>HEX</td>
+        <td><strong>HEX</strong></td>
         <td>11</td>
         <td>11</td>
         <td>A2</td>
@@ -789,20 +803,20 @@ code{
         <td>A0</td>
       </tr>
       <tr>
-        <td>Description</td>
-        <td>Module key</td>
-        <td>Module key</td>
-        <td>Uplink counter</td>
-        <td>Battery voltage</td>
-        <td>Battery voltage</td>
-        <td>Temperature</td>
-        <td>Temperature</td>
-        <td>Rel. humidity</td>
-        <td>Dew point</td>
-        <td>Dew point</td>
-        <td>Alarm flag</td>
-         <td>Light intensity</td>
-        <td>Light intensity</td>
+        <td><strong>Beschreibung</strong></td>
+        <td>Modul‑schlüssel</td>
+        <td>Modul‑schlüssel</td>
+        <td>Uplink Counter</td>
+        <td>Battery Voltage</td>
+        <td>Battery Voltage</td>
+        <td>Temperatur</td>
+        <td>Tempera‑tur</td>
+        <td>Rel. Luftfeuchte</td>
+        <td>Taupunkt</td>
+        <td>Taupunkt</td>
+        <td>Alarm Flag</td>
+        <td>Lichtinten‑sität</td>
+        <td>Lichtinten‑sität</td>
       </tr>
     </tbody>
   </table>
@@ -814,7 +828,7 @@ code{
     alt="Example payload decoder output"
   >
   <figcaption>
-    Decoded NYX payload output.
+   Beispiele Dekodierung
   </figcaption>
 </figure>
 
@@ -834,19 +848,20 @@ code{
     opacity:0.95;
   "
 >
-     
 
- <!-- DISCLAIMER -->
-            <!-- DISCLAIMER -->
-            <div class="footer-note">
-                <p>© Sentinum GmbH – All rights reserved.</p>
-                <p>All contents of this document, including text, tables, and images, are protected by copyright and are the property of Sentinum GmbH.</p>
-                <p>All images are subject to the copyright of Sentinum GmbH unless otherwise stated.</p>
-                <p>Reproduction, distribution, or use — even in excerpts — is not permitted without explicit written permission.</p>
-                <p style="padding-left:14px; font-style:italic;">Specifications are subject to change without notice. All information is provided without warranty.</p>
-            </div>
 
-        </div>
 
-    </div>
+<!-- DISCLAIMER -->
+<div class="footer-note">
+  <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+  <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
+  </p>
+</div>>
+
+</div>
 </body>
+</html>
