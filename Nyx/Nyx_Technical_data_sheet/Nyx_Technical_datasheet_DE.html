@@ -1,18 +1,25 @@
 <meta charset="UTF-8">
-
+<title>NYX – Technisches Datenblatt</title>
 
 <style>
+/* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
 
 :root{
   --black:#000000;
   --text-main:#111827;
   --text-muted:#6b7280;
+
   --border:#d0d7de;
   --table-header:#f5f7fa;
+
   --blue-bg:#f0f8ff;
   --blue-border:#a0c4ff;
   --blue-text:#1a3e8c;
+
   --toc-bg:#f7fbff;
   --toc-border:#d6e4fa;
 }
@@ -29,31 +36,26 @@ body{
 
 .container{ width:100%; }
 
-* ---------- Headings ---------- */
+/* ---------- Headings ---------- */
 
-/* H1 – article title (blog title) */
 h1{
   margin:48px 0 16px;
   padding-bottom:12px;
   font-family:"Montserrat",Arial,sans-serif;
-  font-size:42px;           /* ⬅️ bigger */
+  font-size:42px;
   font-weight:700;
   line-height:1.25;
   color:#000;
   border-bottom:2px solid var(--border);
 }
 
-/* H2 – subtitle under article title */
 h2{
   margin:14px 0 36px;
-  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
-  font-size:24px;           /* ⬅️ bigger */
+  font-size:24px;
   font-weight:500;
-  line-height:1.5;
   color:var(--text-muted);
 }
 
-/* H3 – ALL article section headings */
 h3{
   margin:24px 0 8px;
   padding-bottom:6px;
@@ -61,12 +63,12 @@ h3{
   font-size:18px;
   font-weight:600;
   color:#000;
-
   border-bottom:1.5px solid var(--border);
   scroll-margin-top:100px;
 }
 
-/* PDF */
+/* ---------- PDF ---------- */
+
 .pdf-viewer{
   max-width:900px;
   height:600px;
@@ -92,7 +94,8 @@ h3{
   font-weight:600;
 }
 
-/* TOC */
+/* ---------- TOC ---------- */
+
 .main-toc{
   max-width:900px;
   margin:0 auto 40px;
@@ -110,7 +113,8 @@ h3{
   text-decoration:none;
 }
 
-/* Tables */
+/* ---------- Tables ---------- */
+
 .table-wrap{ margin:8px 0 24px; }
 
 table{
@@ -152,7 +156,8 @@ table td:nth-child(3){
   width:20%;
 }
 
-/* Figures */
+/* ---------- Figures ---------- */
+
 .figure{ margin:32px auto; text-align:center; }
 .figure img{ max-width:100%; }
 .figure figcaption{
@@ -162,7 +167,8 @@ table td:nth-child(3){
   font-style:italic;
 }
 
-/* Footer */
+/* ---------- Footer ---------- */
+
 .footer-note{
   margin-top:40px;
   padding-top:16px;
