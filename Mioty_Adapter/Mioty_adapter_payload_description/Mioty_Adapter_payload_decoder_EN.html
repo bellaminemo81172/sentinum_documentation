@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mioty Adapter – Payload Decoder</title>
+
+<style>
+/* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --black:#000000;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+
+  --blue-bg:#f0f8ff;
+  --blue-border:#a0c4ff;
+  --blue-text:#1a3e8c;
+
+  --toc-bg:#f7fbff;
+  --toc-border:#d6e4fa;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+  background:#ffffff;
+}
+
+.container{ width:100%; }
+
+/* ---------- Headings ---------- */
+
+h1{
+  margin:48px 0 16px;
+  padding-bottom:12px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:42px;
+  font-weight:700;
+  line-height:1.25;
+  color:#000;
+  border-bottom:2px solid var(--border);
+}
+
+h2{
+  margin:14px 0 36px;
+  font-size:24px;
+  font-weight:500;
+  color:var(--text-muted);
+}
+
+h3{
+  margin:24px 0 8px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  color:#000;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:100px;
+}
+
+/* ---------- PDF ---------- */
+
+.pdf-viewer{
+  max-width:900px;
+  height:600px;
+  margin:0 auto 20px;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
+.pdf-viewer iframe{ width:100%; height:100%; border:none; }
+
+.pdf-download{
+  max-width:900px;
+  margin:0 auto 36px;
+  padding:14px 18px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+  text-align:center;
+}
+
+.pdf-download a{
+  color:var(--blue-text);
+  font-weight:600;
+}
+
+/* ---------- TOC ---------- */
+
+.main-toc{
+  max-width:900px;
+  margin:0 auto 40px;
+  padding:16px 20px;
+  background:var(--toc-bg);
+  border:1px solid var(--toc-border);
+  border-radius:6px;
+}
+
+.main-toc ul{ list-style:none; padding:0; margin:0; }
+.main-toc li{ margin:.3rem 0; }
+.main-toc a{
+  color:var(--blue-text);
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* ---------- Tables ---------- */
+
+.table-wrap{ margin:8px 0 24px; }
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+}
+
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid var(--black);
+}
+
+/* ---------- Unified table column widths ---------- */
+
+table{
+  table-layout: auto;
+}
+
+/* ---------- Figures ---------- */
+
+.figure{ margin:32px auto; text-align:center; }
+.figure img{ max-width:100%; }
+.figure figcaption{
+  margin-top:8px;
+  font-size:.85rem;
+  color:var(--text-muted);
+  font-style:italic;
+}
+
+/* ---------- Footer ---------- */
+
+.footer-note{
+  margin-top:40px;
+  padding-top:16px;
+  border-top:1px solid var(--border);
+  font-size:.82rem;
+  color:var(--text-muted);
+}
+
+.footer-note p{ margin:0; }
+</style>
+
+
+
+<div class="container">
+
+
+
+<!-- PDF -->
+<div class="pdf-viewer">
+  <iframe src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d06a7747710028eb1bea9091d062516be1926488/Mioty_Adapter/Mioty_adapter_payload_description/Aion_IO-Link_mioty_Adapter_Payload_Beschreibung_DE%20en-US.pdf"></iframe>
+</div>
+
+<div class="pdf-download">
+  📄 The PDF can be viewed above or
+  <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d06a7747710028eb1bea9091d062516be1926488/Mioty_Adapter/Mioty_adapter_payload_description/Aion_IO-Link_mioty_Adapter_Payload_Beschreibung_DE%20en-US.pdf" target="_blank">
+    downloaded here
+  </a>.
+</div>
+
+<!-- TOC -->
+<nav class="main-toc">
+<h4>Table of Contents</h4>
+<ul>
+<li><a href="#duty">1. Duty Cycle Enforcement</a></li>
+<li><a href="#payload">2. Payload Description</a></li>
+<li><a href="#layout">2.1. Payload Layout</a></li>
+<li><a href="#example">2.2. Example Payload for LDH292</a></li>
+<li><a href="#ldh292">3. Example LDH292</a></li>
+</ul>
+</nav>
+
+<!-- 1. DUTY CYCLE ENFORCEMENT -->
+<h3 id="duty">1. Duty Cycle Enforcement</h3>
+<p>The sensor dynamically enforces the duty cycle itself based on the length of the data packets.</p>
+
+<!-- 2. PAYLOAD DESCRIPTION -->
+<h3 id="payload">2. Payload Description</h3>
+
+<!-- 2.1. PAYLOAD LAYOUT -->
+<h3 id="layout">2.1. Payload Layout</h3>
+<p>Byte indices in parentheses:</p>
+<ul>
+<li>(2–3) VendorID: UInt16 BE</li>
+<li>(5–6) DeviceID: UInt16 BE</li>
+<li>(8–9) Measurement Value A: device-specific (usually UInt16/Int16 × 0.1)</li>
+<li>(10–11) Flags/status depending on device</li>
+<li>(12–13) Measurement value B: device-specific</li>
+<li>(15) Status nibble (lower 4 bits) — only on some devices</li>
+<li>All other bytes (0–1, 4, 7, 14) Reserved.</li>
+</ul>
+<p>Endianness: all 16-bit words are big-endian (readUInt16BE)</p>
+
+<!-- 2.2. EXAMPLE PAYLOAD FOR LDH292 -->
+<h3 id="example">2.2. Example Payload for LDH292</h3>
+<div class="table-wrap">
+<table>
+<tbody><tr><th>Byte index(es)</th><th>Length</th><th>Field</th><th>Data type</th><th>Scale</th><th>Unit</th><th>Notes</th></tr>
+<tr><td>2–3</td><td>2</td><td>VendorID</td><td>UInt16 BE</td><td>×1</td><td>–</td><td>Expected: 0x0136 (dec. 310)</td></tr>
+<tr><td>5–6</td><td>2</td><td>DeviceID</td><td>UInt16 BE</td><td>×1</td><td>–</td><td>Expected: 0x0539 (dec. 1337)</td></tr>
+<tr><td>8–9</td><td>2</td><td>Humidity</td><td>UInt16 BE</td><td>×0.1</td><td>%RH</td><td>e.g., raw value 553 → 55.3 %RH</td></tr>
+<tr><td>12–13</td><td>2</td><td>Temperature</td><td>UInt16 BE</td><td>×0.1</td><td>°C</td><td>e.g., raw value 234 → 23.4 °C</td></tr>
+<tr><td>15 (low nibble)</td><td>4 bits</td><td>DeviceStatus</td><td>Enum</td><td>–</td><td>–</td><td>bytes[15] & 0x0F</td></tr>
+<tr><td>–</td><td>–</td><td>(not used in the code)</td><td>–</td><td>–</td><td>–</td><td>Bytes 0–1, 4, 7, 10–11, 14 appear to be reserved/unclear</td></tr>
+</tbody></table>
+</div>
+
+<p>Status codes (lower 4 bits of byte 15)</p>
+<div class="table-wrap">
+<table>
+<tbody><tr><th>Code</th><th>Meaning</th></tr>
+<tr><td>0</td><td>OK</td></tr>
+<tr><td>1</td><td>Maintenance required</td></tr>
+<tr><td>2</td><td>Out of specification</td></tr>
+<tr><td>3</td><td>Functional check</td></tr>
+<tr><td>4</td><td>Failure</td></tr>
+<tr><td>Other</td><td>Unknown (Code)</td></tr>
+</tbody></table>
+</div>
+
+<!-- 3. EXAMPLE LDH292 -->
+<h3 id="ldh292">3. Example LDH292</h3>
+<div class="table-wrap">
+<table>
+<tbody><tr><th>IDX</th><th>00</th><th>01</th><th>02</th><th>03</th><th>04</th><th>05</th><th>06</th><th>07</th><th>08</th><th>09</th><th>0A</th><th>0B</th><th>0C</th><th>0D</th><th>0E</th><th>0F</th></tr>
+<tr><td>HEX</td><td>00</td><td>00</td><td>01</td><td>36</td><td>00</td><td>05</td><td>39</td><td>00</td><td>02</td><td>29</td><td>00</td><td>00</td><td>00</td><td>EA</td><td>00</td><td>00</td></tr>
+</tbody></table>
+</div>
+
+<ul>
+<li>Idx 2–3 → VendorID: 0x01 0x36 → 0x0136 → decimal 310</li>
+<li>Idx 5–6 → DeviceID: 0x05 0x39 → 0x0539 → decimal 1337</li>
+<li>Idx 8–9 → Humidity: 0x02 0x29 → 0x0229 → 553 × 0.1 → 55.3 %RH</li>
+<li>Idx 12–13 → Temperature: 0x00 0xEA → 234 × 0.1 → 23.4 °C</li>
+<li>Idx 15 → Status byte: 0x00; low nibble = 0x00 & 0x0F → 0 (OK)</li>
+</ul>
+
+<img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/1f38539e00ab947e1dbf47f57e833065b3ab7bbe/Mioty_Adapter/Mioty_Betriebsanleitung/pic/Logo.png" alt="Logo" style="max-width: 260px; opacity: 0.9; display: block; margin: 32px 0; height: auto;">
+
+<!-- DISCLAIMER -->
+<div class="footer-note">
+  <p>© Sentinum GmbH – All rights reserved.</p>
+  <p>All contents of this document, including text, tables, and images, are copyrighted and the property of Sentinum GmbH.</p>
+  <p>All images are subject to the copyright of Sentinum GmbH, unless otherwise specified.</p>
+  <p>Reproduction, distribution, or use—even in excerpts—is not permitted without express written permission.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Changes to specifications reserved. All information provided without guarantee.
+  </p>
+</div>
+
+</div>
