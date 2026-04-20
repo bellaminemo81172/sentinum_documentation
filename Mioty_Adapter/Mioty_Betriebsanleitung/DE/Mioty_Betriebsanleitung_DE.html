@@ -1,0 +1,684 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+  --blue-bg:#f7fbff;
+  --blue-border:#d6e4fa;
+  --blue-text:#1a3e8c;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+}
+
+/* Base */
+body{
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+}
+
+/* Headings */
+h1{
+  margin:48px 0 16px;
+  padding-bottom:12px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:42px;
+  font-weight:700;
+  border-bottom:2px solid var(--border);
+}
+
+h3{
+  margin:32px 0 12px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:120px;
+}
+
+   /*NOTE STRIPS — OPTION A (WORD STYLE)*/
+
+  .note-strip{
+    padding:14px 16px;
+    margin:18px 0;
+    border-radius:6px;
+    border-left-width:6px;
+    border-left-style:solid;
+  }
+
+  .note-strip--red{
+    background:#fdecea;
+    border-left-color:#d32f2f;
+  }
+
+  .note-strip--yellow{
+    background:#fff8e1;
+    border-left-color:#f9a825;
+  }
+
+  .note-strip--green{
+    background:#e8f5e9;
+    border-left-color:#2e7d32;
+  }
+
+  .note-strip p,
+  .note-strip ul{
+    margin:0;
+  }
+
+/* Text */
+p{margin:8px 0 12px}
+
+/* Tables */
+/* Sentinum – Technische Datentabellen */
+.sentinum-table{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.sentinum-table thead th{
+  background-color: #f5f7fa;   /* heller Kopf wie im Screenshot */
+  font-weight: 600;
+  border: 1px solid #d0d7de;
+  border-bottom: 2px solid #000; /* schwarze Trennlinie */
+  padding: 10px 12px;
+}
+
+.sentinum-table tbody td{
+  border: 1px solid #d0d7de;
+  padding: 10px 12px;
+  vertical-align: top;
+}
+
+.sentinum-table tbody tr:nth-child(even){
+  background-color: #ffffff;
+}
+.table-wrap{ margin:8px 0 24px; }
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+}
+
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid var(--black);
+}
+/* ---------- Unified table column widths ---------- */
+
+table{
+  table-layout: fixed; /* Forces consistent column sizing */
+  width:100%;
+}
+
+table th:nth-child(1),
+table td:nth-child(1){
+  width:30%;
+}
+
+table th:nth-child(2),
+table td:nth-child(2){
+  width:50%;
+}
+
+table th:nth-child(3),
+table td:nth-child(3){
+  width:20%;
+}
+
+/* TOC */
+.main-toc{
+  max-width:900px;
+  margin:24px auto 40px;
+  padding:16px 20px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+}
+.main-toc strong{
+  display:block;
+  margin-bottom:8px;
+}
+.main-toc ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.main-toc li{
+  margin:.35rem 0;
+}
+.main-toc a{
+  color:var(--blue-text);
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* Images */
+.figure{
+  margin:32px auto;
+  text-align:center;
+}
+
+.figure img{
+  display: block;              /* wichtig – verhindert Inline-Gaps */
+  max-width: 100%;
+  height: auto;
+  border: none;   /* sichtbarer Rand (Sentinum-Grau) */
+  border-radius: 6px;          /* abgerundete Ecken */
+}
+
+
+/* PDF */
+.pdf-viewer{
+  max-width:900px;
+  height:600px;
+  margin:24px auto 40px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  overflow:hidden;
+}
+.pdf-viewer iframe{
+  width:100%;
+  height:100%;
+  border:none;
+}
+/* PDF Inline-Hinweis wie im Screenshot */
+.pdf-inline-note{
+  max-width: 900px;
+  margin: 8px auto 24px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: #f8fbff;
+  border: 1px solid #b6d4fe;
+  border-radius: 6px;
+
+  font-size: 0.95rem;
+}
+
+.pdf-inline-note svg{
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  fill: #2563eb;
+}
+
+.pdf-inline-note a{
+  color: #2563eb;
+  font-weight: 500;
+  text-decoration: underline;
+}
+/* PDF Inline Info Hinweis – exakt wie HubSpot / Screenshot */
+.pdf-inline-hint{
+  max-width: 900px;
+  margin: 8px auto 24px;      /* zentriert */
+  padding: 10px 14px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  font-family: "Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #334155;
+
+  background-color: #f8fbff;
+  border: 1px solid #bcd2ff;
+  border-radius: 6px;
+}
+
+/* Icon exakt passend */
+.pdf-inline-hint .icon{
+  font-size: 16px;
+  line-height: 1;
+  color: #2563eb;
+  flex-shrink: 0;
+}
+
+.pdf-inline-hint a{
+  color: #2563eb;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+</style>
+
+<!-- ================= PDF ================= -->
+
+<div class="pdf-viewer">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/41e6a5bc6f32419ce4eacb8623bebce658961714/Mioty_Adapter/Mioty_Betriebsanleitung/DE/Aion_IO-Link_mioty_Adapter_Betriebsanleitung_DE.pdf">
+  </iframe>
+</div>
+
+<div class="pdf-inline-hint">
+  <span class="icon">📄</span>
+  <span>
+    Das PDF kann oben angesehen werden oder
+    <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/41e6a5bc6f32419ce4eacb8623bebce658961714/Mioty_Adapter/Mioty_Betriebsanleitung/DE/Aion_IO-Link_mioty_Adapter_Betriebsanleitung_DE.pdf"
+       target="_blank" rel="noopener">
+      hier heruntergeladen werden
+    </a>.
+  </span>
+</div>
+
+
+<!-- ================= TOC ================= -->
+<div class="main-toc">
+  <strong>Inhaltsverzeichnis</strong>
+  <ul>
+    <li><a href="#warnhinweise">1. Allgemeine Warn- und Sicherheitshinweise</a></li>
+    <li><a href="#weiterfuehrend">2. Weiterführende Dokumentation</a></li>
+    <li><a href="#verwendung">3. Vorgesehene Verwendung</a></li>
+    <li><a href="#zeichnung">4. Technische Zeichnung</a></li>
+    <li><a href="#lieferumfang">5. Lieferumfang und Zubehör</a></li>
+    <li><a href="#montage">6. Montage</a></li>
+    <li><a href="#anschluss">7. Elektrischer Anschluss</a></li>
+    <li><a href="#led">8. LED Anzeigeelement</a></li>
+    <li><a href="#kommunikation">9. Kommunikation mit der Schnittstelle</a></li>
+    <li><a href="#pflege">10. Pflege und Reinigung</a></li>
+    <li><a href="#entsorgung">11. Instandsetzung und Entsorgung</a></li>
+    <li><a href="#zertifizierung">12. Kennzeichnung und Zertifizierung</a></li>
+  </ul>
+</div>
+
+<!-- ================= CONTENT ================= -->
+
+<h3 id="warnhinweise">1. Allgemeine Warn- und Sicherheitshinweise</h3>
+
+<div class="note-strip note-strip--red">
+  <p><strong>Warnungen und wichtige Informationen über potenzielle Gefahren oder Beschädigungen</strong></p>
+</div>
+<p>Wichtige Hinweise die zum reibungsfreien Betrieb der Geräte nötig sind</p>
+
+<div class="note-strip note-strip--red">
+  <p><strong>Bitte beachten:</strong></p>
+  <ul>
+    <li>Beachten Sie die Sicherheitshinweise und Installationsanweisungen in der Anleitung und der Montageliste.</li>
+    <li>Beachten Sie, dass die Installationsumgebung den vorgeschriebenen Einsatzbereichsrichtlinien entspricht. Halten Sie Temperatur und andere Grenzwerte jederzeit ein.</li>
+    <li>Das Gerät darf nur in den in den technischen Spezifikationen vorgegebenen Bereichen eingesetzt werden.</li>
+    <li>Das Gerät darf nur für die beschriebenen Einsatzzwecke und Einsatzbereiche verwendet werden.</li>
+    <li>Die Sicherheit und Funktionsfähigkeit kann nicht mehr garantiert werden, wenn das Gerät modifiziert oder erweitert wird.</li>
+    <li>Sensor nicht an Decken oder Böden montieren.</li>
+    <li>Der Betrieb des Sensors ist nur bis maximal 2000 m über Normalnull zugelassen.</li>
+    <li>Der Betrieb ist nur in maximal 2 m Raumhöhe zugelassen.</li>
+    <li>Aufgrund der Human‑Exposure‑Vorschrift ist ein Mindestabstand von 20 cm zu Personen einzuhalten.</li>
+    <li>Stellen Sie sicher, dass die Installationsumgebung den vorgeschriebenen Richtlinien entspricht und Grenzwerte eingehalten werden.</li>
+  </ul>
+</div>
+
+<div class="note-strip note-strip--yellow">
+  <p><strong>Falls das Gerät inkorrekt installiert wird:</strong></p>
+  <ul>
+    <li>Könnte es nicht ordnungsgemäß funktionieren.</li>
+    <li>Könnte es permanent beschädigt werden.</li>
+    <li>Könnte es eine Verletzungsgefahr darstellen.</li>
+  </ul>
+</div>
+<div class="note-strip note-strip--yellow">
+<p><strong>Bitte beachten:</strong></p>
+<ul>
+  <li>
+    Eine unsachgemäße Handhabung, wie z. B. unsachgemäße mechanische Belastung
+    (z. B. durch Fallenlassen des Gerätes), kann zu Beschädigungen führen.
+  </li>
+  <li>
+    Werden andere als die empfohlenen Batteriezellen verwendet, kann die
+    Performance sowie die Produktsicherheit negativ beeinflusst werden.
+  </li>
+  <li>
+    Das Gerät darf nur dann installiert und in Betrieb genommen werden,
+    wenn es unbeschädigt aus der Originalverpackung entnommen wurde.
+    Direkt nach der Entnahme ist eine Sichtprüfung auf Beschädigungen durchzuführen.
+    Sollte das Produkt beschädigt sein, ist eine Inbetriebnahme untersagt.
+  </li>
+</ul> </div>
+<div class="note-strip note-strip--green">
+<p><strong>Cyber Sicherheit</strong></p>
+<p>Betrieb des Gerätes in einer ungeschützten Netzwerkumgebung:</p>
+<ul>
+  <li>
+    Unzulässiger Lese- oder Schreibzugriff auf Daten möglich.
+  </li>
+  <li>
+    Unzulässige Beeinflussung der Gerätefunktion möglich.
+  </li>
+  <li>
+    Zugriff auf autorisierte Nutzer beschränken
+    (z.&nbsp;B. passwortgeschützter Zugang).
+  </li>
+</ul> </div>
+
+<h3 id="weiterfuehrend">2. Weiterführende Dokumentation</h3>
+
+
+<p>
+Bitte beachten Sie die Informationen und Grenzwerte im
+<a href="https://docs.sentinum.de/sensoren-und-produktreihen" target="_blank" rel="noopener">
+technischen Datenblatt
+</a>.
+</p>
+
+<p>
+Die sensorspezifischen Werkseinstellungen (Sentiface), sowie die Schlüssel und
+zulässigen Werte des Sensors finden Sie in der
+<a href="https://docs.sentinum.de/sensoren-und-produktreihen" target="_blank" rel="noopener">
+NFC‑ und Downlinkbeschreibung
+</a>.
+Die Senticom‑ und Sentivisor‑Tabellen sind in der
+<a href="https://docs.sentinum.de/generische-nfc-und-downlink-dokumentation" target="_blank" rel="noopener">
+Generischen NFC‑ und Downlink‑Dokumentation
+</a>
+zu finden.
+Die Sonderfunktionen zur
+<a href="https://docs.sentinum.de/generische-sensorsonderfunktionen" target="_blank" rel="noopener">
+Vandalismusdetektion und Öffungsdetektion
+</a>
+sind ebenfalls generisch beschrieben.
+</p>
+
+<p>
+Die Möglichkeit zur Konfiguration der Sensor‑Kommunikation finden Sie je nach Version
+in der jeweiligen generischen
+<a href="https://docs.sentinum.de/generische-lorawan" target="_blank" rel="noopener">
+LoRaWAN®
+</a>,
+<a href="https://docs.sentinum.de/generische-mioty" target="_blank" rel="noopener">
+Mioty®
+</a>
+oder
+<a href="https://docs.sentinum.de/generische-cellular-dokumentation" target="_blank" rel="noopener">
+Cellular (NB‑IoT und LTE‑M1)
+</a>.
+
+<p>
+Alle Dokumente zur generischen Dokumentation finden Sie unter:<br>
+<a href="https://docs.sentinum.de/wichtig-produkt%C3%BCbergreifende-dokumentation-f%C3%BCr-sensoren"
+   target="_blank" rel="noopener">
+https://docs.sentinum.de/wichtig-produktübergreifende-dokumentation-für-sensoren
+</a>
+</p>
+
+
+
+
+<h3 id="verwendung">3. Vorgesehhene Verwendung</h3>
+<h3 id="produktcodes">3.1 Produktcodes und Funktionen</h3>
+<table class="sentinum-table">
+  <thead>
+    <tr>
+      <th>Artikelnummer</th>
+      <th>Funkstandard</th>
+      <th>Funktionen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>S-AION-MIOTY</td>
+      <td>mioty®</td>
+      <td>IO-Link zu mioty Brücke</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h3 id="verwendung-detail">3.2 Vorgesehene Verwendung</h3>
+<p>
+Der AION IO-Link mioty® Adapter ist ein IoT-Gerät zur drahtlosen Übertragung von Sensordaten aus IO-Link-fähigen Sensoren in mioty®-Netzwerke. Er dient als Schnittstelle zwischen industriellen IO-Link-Sensoren und energieeffizienter LPWAN-Kommunikation und ist speziell für den Einsatz in industriellen und gewerblichen Anwendungen konzipiert. Typische Einsatzbereiche sind Zustandsüberwachung, Prozessdatenerfassung und Maschinenanbindung in schwer zugänglichen oder weitläufigen Umgebungen. Das Gerät ist für den Einsatz im Innenbereich zugelassen.
+</p>
+<p>Der Adapter ist ausschließlich für die in dieser Anleitung beschriebenen Anwendungen bestimmt und darf nur im Rahmen der darin genannten technischen Spezifikationen betrieben werden.
+Eine anderweitige oder darüber hinausgehende Nutzung gilt als nicht bestimmungsgemäß. Für daraus resultierende Schäden übernimmt die Sentinum GmbH keine Haftung.
+</p>
+<div class="note-strip note-strip--green">
+<ul>
+  <li>
+    Das Gerät ist nur für die Nutzung im Innenbereich bestimmt.
+  </li>
+  <li>
+    Die empfangenen und gesendeten Prozessdaten dienen zur Anlagenüberwachung
+    („Monitoring“) und nur bedingt zur Anlagensteuerung, da diese nicht in Echtzeit
+    übertragen werden.
+  </li>
+  <li>
+    Bitte beachten Sie die Einsatzbedingungen gemäß technischem Datenblatt.
+  </li>
+</ul> </div>
+
+<h3 id="betriebsmodus">3.3 Betriebsmodus</h3>
+<p>
+Der Aion greift die IO-Link Kommunikation von einem Sensor (Device) ab und überträgt die Informationen mittels an ein Gateway. Die ursprünglichen Verbindungsleitungen und deren Signale werden unterbrochen. Der Sensor benötigt von der nicht Sensorseite eine Stromversorgung.
+</p>
+
+<figure class="figure">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/41e6a5bc6f32419ce4eacb8623bebce658961714/Mioty_Adapter/Mioty_Betriebsanleitung/pic/Mioty_Adapter_pic1_Betriebsmodus.png"
+    alt="Betriebsmodus"
+  >
+  <figcaption>Abbildung 1: Mioty verbunden über Gateway</figcaption>
+</figure>
+
+<h3 id="zeichnung">4. Technische Zeichnung</h3>
+
+<figure class="figure">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/41e6a5bc6f32419ce4eacb8623bebce658961714/Mioty_Adapter/Mioty_Betriebsanleitung/pic/Mioty_Adapter_pic5_Technische%20Zeichnung.png"
+    alt="Technische Zeichnung"
+  >
+  <figcaption>Abbildung 2: Technische Zeichnung des AION IO‑Link mioty Adapters</figcaption>
+</figure>
+
+<figure class="figure">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/41e6a5bc6f32419ce4eacb8623bebce658961714/Mioty_Adapter/Mioty_Betriebsanleitung/pic/Mioty_Adapter_pic3_ElektrischerAnschluss.png"
+    alt="Elektrischer Anschluss"
+  >
+  <figcaption>Abbildung 3: Elektrischer Anschluss des AION IO‑Link mioty Adapters</figcaption>
+</figure>
+
+
+<h3 id="lieferumfang">5. Lieferumfang und Zubehör</h3>
+<table class="sentinum-table">
+  <thead>
+    <tr>
+      <th>Produktversion</th>
+      <th>Lieferumfang</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Standard Version</td>
+      <td>Adapter</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Zubehör</strong></p>
+
+
+<table class="sentinum-table">
+  <thead>
+    <tr>
+      <th>Artikelnummer</th>
+      <th>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Z-AION-STENETZ-24V</td>
+      <td>Steckernetzteil 24 V EU, Kabel 2 Meter</td>
+    </tr>
+    <tr>
+      <td>Z-AION-KABEL-M12-SENS</td>
+      <td>Kabel M12 male to female, Sensoranschluss</td>
+    </tr>
+    <tr>
+      <td>Z-AION-CLIP</td>
+      <td>Montageclip für Adapter siehe ifm Artikel&nbsp;E89208</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h3 id="montage">6. Montage</h3>
+<p>Das Gerät kann mit einem Montageclip Z-AION-CLIP befestigt werden.</p>
+<figure class="figure">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/41e6a5bc6f32419ce4eacb8623bebce658961714/Mioty_Adapter/Mioty_Betriebsanleitung/pic/Mioty_Adapter_pic2_Montage.png" alt="Montage">
+  <figcaption>Abbildung 4: Montage des AION IO‑Link mioty Adapters mit Montageclip</figcaption>
+</figure>
+
+<h3 id="anschluss">7. Elektrischer Anschluss</h3>
+<div class="note-strip note-strip--yellow">
+  <p>
+    Das Gerät darf nur von einer Elektrofachkraft installiert werden.<br>
+    Nationale und internationale Vorschriften zur Errichtung elektrotechnischer Anlagen sind zu beachten.<br>
+    Spannungsversorgung nach SELV / PELV.
+  </p>
+</div>
+
+<div class="note-strip note-strip--red">
+<p><strong>Vorsicht: Eingangsstrom ist nicht begrenzt.</strong></p>
+<ul>
+  <li>Kein Brandschutz</li>
+  <li>Stromkreis absichern</li>
+  <li>Anlage spannungsfrei schalten</li>
+</ul> </div>
+
+<figure class="figure">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/41e6a5bc6f32419ce4eacb8623bebce658961714/Mioty_Adapter/Mioty_Betriebsanleitung/pic/Mioty_Adapter_pic3_ElektrischerAnschluss.png" alt="Elektrischer Anschluss">
+  
+ <figcaption>Abbildung 5: Elektrischer Anschluss des AION IO‑Link mioty Adapters</figcaption>
+</figure>
+
+
+
+<h3 id="led">8. LED Anzeigeelement</h3>
+
+
+<figure class="figure">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/41e6a5bc6f32419ce4eacb8623bebce658961714/Mioty_Adapter/Mioty_Betriebsanleitung/pic/Mioty_Adapter_pic4_LEDAnzeigeelement.png"
+    alt="LED Anzeigeelement"
+  >
+  <figcaption>Abbildung 6: LED‑Anzeigeelement des AION IO‑Link mioty Adapters</figcaption>
+</figure>
+<table class="sentinum-table">
+  <thead>
+    <tr>
+      <th>Nummer</th>
+      <th>Farbe</th>
+      <th>Bezeichnung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Nicht bestückt</td>
+      <td>Nicht bestückt</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Rot</td>
+      <td>Status</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Grün</td>
+      <td>Betrieb</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h3 id="kommunikation">9. Kommunikation mit der Schnittstelle</h3>
+<p>
+Die Möglichkeit zur Konfiguration der Sensor‑Kommunikation sowie des
+Join‑Verhaltens finden Sie je nach Version in der jeweiligen generischen
+<a href="https://docs.sentinum.de/generische-lorawan" target="_blank" rel="noopener">
+LoRaWAN®
+</a>,
+<a href="https://docs.sentinum.de/generische-mioty" target="_blank" rel="noopener">
+Mioty®
+</a>
+oder
+<a href="https://docs.sentinum.de/generische-cellular-dokumentation" target="_blank" rel="noopener">
+Cellular (NB‑IoT und LTE‑M1)
+</a> Dokumentation.
+</p>
+
+<p>
+Des Weiteren finden Sie alle Dokumente zur generischen Dokumentation unter:<br>
+<a href="https://docs.sentinum.de/wichtig-produkt%C3%BCbergreifende-dokumentation-f%C3%BCr-sensoren"
+   target="_blank" rel="noopener">
+https://docs.sentinum.de/wichtig-produktübergreifende-dokumentation-für-sensoren
+</a>
+</p>
+
+
+<h3 id="pflege">10. Pflege und Reinigung</h3>
+
+<p>Damit der Sensor zuverlässig funktioniert und eine lange Lebensdauer gewährleistet ist, sollte er regelmäßig gepflegt werden. Beachten Sie dabei die folgenden Hinweise:</p>
+<ul>
+  <li>Reinigen Sie das Gehäuse, insbesondere die Lüftungsschlitze des Sensors mit einem trockenen oder leicht angefeuchteten Mikrofasertuch. Achten Sie darauf, dass keine Feuchtigkeit in das Gerät eindringt.</li>
+  <li>Führen Sie die Reinigung regelmäßig durch, insbesondere in staubigen oder pollenreichen Umgebungen, um die Funktionalität des Sensors langfristig sicherzustellen.</li>
+  <li>Verzichten Sie auf alkohol- oder lösungsmittelhaltige Reinigungsmittel, da diese die Oberfläche des Sensors beschädigen können.</li>
+<li>Verwenden Sie keine Druckluft oder andere intensive Reinigungsmethoden, da diese empfindliche Sensorbauteile beschädigen können.</li>
+ <li>Harte Ablagerungen (z. B. Kalk, Öl oder Fett) können die Messgenauigkeit beeinträchtigen. Falls notwendig, mit einem weichen, feuchten Tuch und mildem Reinigungsmittel frühzeitig reinigen.</li>
+ <li>Achten Sie darauf, dass keine Blätter, Wasser oder Schnee auf dem Sensor liegen oder haften. Das kann die Performance des Sensors negativ beeinfluss.</li>
+</ul>
+
+<h3 id="entsorgung">11. Instandsetzung und Entsorgung</h3>
+<p>
+Das Gerät ist wartungsfrei.
+</p>
+<ul>
+  <li>
+    Bei Fehlfunktionen Kontakt mit Sentinum aufnehmen.
+  </li>
+  <li>
+    Da innerhalb des Gerätes keine vom Anwender zu wartenden Bauteile enthalten sind,
+    das Gehäuse nicht öffnen. Die Instandsetzung des Gerätes darf nur durch den
+    Hersteller erfolgen.
+  </li>
+  <li>
+    Reinigung des Geräts mit einem trockenen Tuch.
+  </li>
+  <li>
+    Das Gerät gemäß den nationalen Umweltvorschriften entsorgen.
+  </li>
+</ul>
+
+<h3 id="zertifizierung">12. Kennzeichnung und Zertifizierung</h3>
+<div class="figure">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/297bea5dc4d6a563af46f24f5c5644767125865a/Mioty_Adapter/Mioty_Betriebsanleitung/pic/Logo.png" alt="Sentinum Logo">
+</div>
+
+<div style="border-top:1px solid #d0d7de;margin-top:40px;padding-top:16px;font-size:.85rem;color:#6b7280;">
+</div>
+    <!-- FOOTER (DEUTSCH) -->
+    <div class="footer-note">
+      <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+      <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+      <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+      <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+      <p style="padding-left:14px; font-style:italic;">
+        Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
+      </p>
+    </div>
+
+  </div> <!-- END CONTAINER -->
+</div>
