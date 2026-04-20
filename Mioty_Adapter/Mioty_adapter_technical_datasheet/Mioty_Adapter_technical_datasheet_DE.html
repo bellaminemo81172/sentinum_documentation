@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Mioty Adapter – Technisches Datenblatt</title>
+
+<style>
+/* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --black:#000000;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+
+  --blue-bg:#f0f8ff;
+  --blue-border:#a0c4ff;
+  --blue-text:#1a3e8c;
+
+  --toc-bg:#f7fbff;
+  --toc-border:#d6e4fa;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+  background:#ffffff;
+}
+
+.container{ width:100%; }
+
+/* ---------- Headings ---------- */
+
+h1{
+  margin:48px 0 16px;
+  padding-bottom:12px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:42px;
+  font-weight:700;
+  line-height:1.25;
+  color:#000;
+  border-bottom:2px solid var(--border);
+}
+
+h2{
+  margin:14px 0 36px;
+  font-size:24px;
+  font-weight:500;
+  color:var(--text-muted);
+}
+
+h3{
+  margin:24px 0 8px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  color:#000;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:100px;
+}
+
+/* ---------- PDF ---------- */
+
+.pdf-viewer{
+  max-width:900px;
+  height:600px;
+  margin:0 auto 20px;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
+.pdf-viewer iframe{ width:100%; height:100%; border:none; }
+
+.pdf-download{
+  max-width:900px;
+  margin:0 auto 36px;
+  padding:14px 18px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+  text-align:center;
+}
+
+.pdf-download a{
+  color:var(--blue-text);
+  font-weight:600;
+}
+
+/* ---------- TOC ---------- */
+
+.main-toc{
+  max-width:900px;
+  margin:0 auto 40px;
+  padding:16px 20px;
+  background:var(--toc-bg);
+  border:1px solid var(--toc-border);
+  border-radius:6px;
+}
+
+.main-toc ul{ list-style:none; padding:0; margin:0; }
+.main-toc li{ margin:.3rem 0; }
+.main-toc a{
+  color:var(--blue-text);
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* ---------- Tables ---------- */
+
+.table-wrap{ margin:8px 0 24px; }
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+}
+
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid var(--black);
+}
+
+/* ---------- Unified table column widths ---------- */
+
+table{
+  table-layout: fixed;
+  width:100%;
+}
+
+table th:nth-child(1),
+table td:nth-child(1){
+  width:30%;
+}
+
+table th:nth-child(2),
+table td:nth-child(2){
+  width:50%;
+}
+
+table th:nth-child(3),
+table td:nth-child(3){
+  width:20%;
+}
+
+/* ---------- Figures ---------- */
+
+.figure{ margin:32px auto; text-align:center; }
+.figure img{ max-width:100%; }
+.figure figcaption{
+  margin-top:8px;
+  font-size:.85rem;
+  color:var(--text-muted);
+  font-style:italic;
+}
+
+/* ---------- Footer ---------- */
+
+.footer-note{
+  margin-top:40px;
+  padding-top:16px;
+  border-top:1px solid var(--border);
+  font-size:.82rem;
+  color:var(--text-muted);
+}
+
+.footer-note p{ margin:0; }
+</style>
+
+
+
+<div class="container">
+
+
+
+<!-- PDF -->
+<div class="pdf-viewer">
+  <iframe src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/1f38539e00ab947e1dbf47f57e833065b3ab7bbe/Mioty_Adapter/Mioty_adapter_technical_datasheet/Aion_IO-Link_mioty_Adapter_TD_DE.pdf"></iframe>
+</div>
+
+<div class="pdf-download">
+  📄 Das PDF kann oben angesehen werden oder
+  <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/1f38539e00ab947e1dbf47f57e833065b3ab7bbe/Mioty_Adapter/Mioty_adapter_technical_datasheet/Aion_IO-Link_mioty_Adapter_TD_DE.pdf" target="_blank">
+    hier heruntergeladen werden
+  </a>.
+</div>
+
+<!-- TOC -->
+<nav class="main-toc">
+<h4>Inhaltsverzeichnis</h4>
+<ul>
+<li><a href="#versionen">1. Versionen</a></li>
+<li><a href="#allgemeine">2. Allgemeine Eigenschaften</a></li>
+<li><a href="#elektrische">3. Elektrische Daten</a></li>
+<li><a href="#konnektivitat">4. Konnektivität und RF Spezifikation</a></li>
+<li><a href="#betriebsmodus">5. Betriebsmodus</a></li>
+<li><a href="#zeichnung">6. Technische Zeichnung</a></li>
+<li><a href="#anschlusse">7. Elektrische Anschlüsse</a></li>
+</ul>
+</nav>
+
+<!-- VERSIONEN -->
+<h3 id="versionen">1. Versionen</h3>
+<div class="table-wrap">
+<table>
+<tbody><tr><th>Artikel Code</th><th>Features</th></tr>
+<tr>
+<td>S-AION-MIOTY</td>
+<td>Aion IO-Link mioty Adapter</td>
+</tr>
+</tbody></table>
+</div>
+
+<!-- ALLGEMEINE EIGENSCHAFTEN -->
+<h3 id="allgemeine">2. Allgemeine Eigenschaften</h3>
+<div class="table-wrap">
+<table>
+<tbody><tr><th>Merkmal</th><th>Wert</th><th>Einheit</th></tr>
+<tr><td>Dimensionen (l×b×h)</td><td>63 × 24 × 32</td><td>mm</td></tr>
+<tr><td>Gewicht</td><td>90</td><td>g</td></tr>
+<tr><td>Betriebstemperatur</td><td>−25 bis +60</td><td>°C</td></tr>
+<tr><td>Betriebstemperatur maximal Gerät</td><td>60</td><td>°C</td></tr>
+<tr><td>Lagertemperatur (empfohlen)</td><td>−25 bis +60</td><td>°C</td></tr>
+<tr><td>Rel. Luftfeuchtigkeit im Betrieb</td><td>5 bis 99</td><td>%RH</td></tr>
+<tr><td>IP Rating</td><td>IP69k</td><td></td></tr>
+<tr><td>Outdoor geeignet</td><td>Nein</td><td></td></tr>
+<tr><td>IK Rating</td><td>–</td><td></td></tr>
+<tr><td>Sensorik</td><td>–</td><td></td></tr>
+<tr><td>Optische Anzeige</td><td>Ja (LEDs: Status LED rot, Betrieb LED grün)</td><td></td></tr>
+<tr><td>Akustische Ausgabe</td><td>Nein</td><td></td></tr>
+<tr><td>Provisioning</td><td>–</td><td></td></tr>
+<tr><td>Materialien</td><td>PA, 1.4404 (Edelstahl/316L), Messing (2.0401), PBT, FKM; Dichtung: FKM</td><td></td></tr>
+<tr><td>NFC Antenne</td><td>–</td><td></td></tr>
+<tr><td>RF Antenne</td><td>Integriert</td><td></td></tr>
+<tr><td>Accelerometer</td><td>–</td><td></td></tr>
+<tr><td>Batterien</td><td>–</td><td></td></tr>
+<tr><td>Primärzelle Typ</td><td>–</td><td></td></tr>
+<tr><td>Energieversorgung</td><td>Externe Versorgung</td><td></td></tr>
+<tr><td>Gehäuse Farbe</td><td>Schwarz</td><td></td></tr>
+<tr><td>RF Schnittstellen</td><td>mioty®</td><td></td></tr>
+<tr><td>Kommunikationsschnittstellen</td><td>IO-LINK</td><td></td></tr>
+</tbody></table>
+</div>
+
+<!-- ELEKTRISCHE DATEN -->
+<h3 id="elektrische">3. Elektrische Daten</h3>
+<div class="table-wrap">
+<table>
+<tbody><tr><th>Merkmal</th><th>Wert</th><th>Einheit</th></tr>
+<tr><td>Betriebsspannung</td><td>18 bis 30</td><td>V DC</td></tr>
+<tr><td>Nennspannung</td><td>24</td><td>V DC</td></tr>
+<tr><td>Stromaufnahme</td><td>100</td><td>mA</td></tr>
+<tr><td>Schutzklasse</td><td>III</td><td></td></tr>
+<tr><td>Verpolungsschutz</td><td>Ja</td><td></td></tr>
+</tbody></table>
+</div>
+
+<!-- KONNEKTIVITÄT UND RF SPEZIFIKATION -->
+<h3 id="konnektivitat">4. Konnektivität und RF Spezifikation</h3>
+<div class="table-wrap">
+<table>
+<tbody><tr><th>Merkmal</th><th>Wert</th><th>Einheit</th></tr>
+<tr><td>RF Standards</td><td>mioty®</td><td></td></tr>
+<tr><td>Frequenz mioty® EU</td><td>868</td><td>MHz</td></tr>
+<tr><td>Sendeleistung mioty® EU</td><td>14</td><td>dBm</td></tr>
+<tr><td>Weitere Kommunikationsschnittstellen</td><td>IO-LINK</td><td></td></tr>
+</tbody></table>
+</div>
+
+<!-- BETRIEBSMODUS -->
+<h3 id="betriebsmodus">5. Betriebsmodus</h3>
+
+<figure class="figure">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/bd12645dd27acf7c72c7eb7fa72032e2d6c3373d/Mioty_Adapter/Mioty_Betriebsanleitung/pic/Mioty_Adapter_pic1_Betriebsmodus.png" alt="Mioty Adapter Betriebsmodus">
+  <figcaption>Abbildung 1: Mioty Adapter – Betriebsmodus</figcaption>
+</figure>
+
+<!-- TECHNISCHE ZEICHNUNG -->
+<h3 id="zeichnung">6. Technische Zeichnung</h3>
+
+<figure class="figure">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/bd12645dd27acf7c72c7eb7fa72032e2d6c3373d/Mioty_Adapter/Mioty_Betriebsanleitung/pic/Mioty_Adapter_pic5_Technische%20Zeichnung.png" alt="Mioty Adapter technische Zeichnung">
+  <figcaption>Abbildung 2: Mioty Adapter – Technische Zeichnung</figcaption>
+</figure>
+
+<!-- ELEKTRISCHE ANSCHLÜSSE -->
+<h3 id="anschlusse">7. Elektrische Anschlüsse</h3>
+
+<figure class="figure">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/bd12645dd27acf7c72c7eb7fa72032e2d6c3373d/Mioty_Adapter/Mioty_Betriebsanleitung/pic/Mioty_Adapter_pic3_ElektrischerAnschluss.png" alt="Mioty Adapter elektrische Anschlüsse">
+  <figcaption>Abbildung 3: Mioty Adapter – Elektrische Anschlüsse</figcaption>
+</figure>
+
+<img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/1f38539e00ab947e1dbf47f57e833065b3ab7bbe/Mioty_Adapter/Mioty_Betriebsanleitung/pic/Logo.png" alt="Logo" style="max-width: 260px; opacity: 0.9; display: block; margin: 32px 0; height: auto;">
+
+<!-- DISCLAIMER -->
+<div class="footer-note">
+  <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+  <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
+  </p>
+</div>
+
+</div>
