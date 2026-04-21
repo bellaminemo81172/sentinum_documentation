@@ -160,6 +160,17 @@ table.payload-layout code{
   display:inline-block;
   margin-top:4px;
 }
+/* Inline-Code für Berechnungen & Beispiele */
+.inline-code{
+  background-color:#f3f4f6;
+  border:1px solid #d0d7de;
+  border-radius:4px;
+  padding:3px 6px;
+  font-family:SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;
+  font-size:0.9em;
+  color:#111827;
+  display:inline-block;
+}
 
 </style>
 </head>
@@ -301,16 +312,80 @@ The module key is required for the downlink.
 
 
 
-<div class="figure" style="max-width:900px; margin:32px auto;">
-  <img
-    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/0ed4dcb7e3bfeefe80b1a6adbeb2b46ccebe53ce/Juno_BSX/Juno_BSX_Payload/Pic/Juno_BSX_pic1_UplinkBeispiel.png"
-    alt="Figure 1: Example of an uplink payload (Helios pressure sensor)"
-    style="width:100%; height:auto; display:block;"
-    loading="lazy"
-  >
-  <p><em>Figure&nbsp;1: Example of an uplink payload (Helios pressure sensor)</em></p>
-</div>
+<img
+  src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/5ceafdfcdc00deecaa83a32598787361304f0715/Nyx/Nyx_Payload/uplink%20example%20pic%20%20payload%20decoder.png"
+  alt="Uplink payload example"
+  style="
+    max-width:900px;
+    display:block;
+    margin:20px auto 28px;
+  "
+>
+<figure class="figure">
+  
+  <figcaption>
+    Figure 1: Uplink payload decoding.
+  </figcaption>
+</figure>
 
+<p>
+  Given is the following payload example for the Helios pressure sensor:
+</p>
+
+<p>
+  <code class="inline-code">11 11 FE 1A D5 95 06 03 00 23 BE</code>
+</p>
+
+<div class="table-wrap" style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>Bytes</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+        <th>9</th>
+        <th>10</th>
+        <th>11</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>HEX</td>
+        <td>11</td>
+        <td>11</td>
+        <td>FE</td>
+        <td>1A</td>
+        <td>D5</td>
+        <td>95</td>
+        <td>06</td>
+        <td>03</td>
+        <td>00</td>
+        <td>23</td>
+        <td>BE</td>
+      </tr>
+      <tr>
+        <td>Description</td>
+        <td>Module key</td>
+        <td>Module key</td>
+        <td>Uplink Counter</td>
+        <td>Battery Voltage</td>
+        <td>Battery Voltage</td>
+        <td>Temperature</td>
+        <td>Alarm Flag</td>
+        <td>Alarm Flag</td>
+        <td>Measurement status</td>
+        <td>Pressure mbar</td>
+        <td>Pressure mbar</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 <!-- 5. PORT ASSIGNMENT -->
 <h3 id="port-assignment">
 5. Port assignment for WIFI SSID SCAN payload, GNSS SCAN payload and regular payload
