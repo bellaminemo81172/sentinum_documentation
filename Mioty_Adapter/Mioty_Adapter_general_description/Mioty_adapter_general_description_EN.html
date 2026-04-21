@@ -1,0 +1,304 @@
+<style>
+/* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --black:#000000;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+
+  --blue-bg:#f0f8ff;
+  --blue-border:#a0c4ff;
+  --blue-text:#1a3e8c;
+
+  --toc-bg:#f7fbff;
+  --toc-border:#d6e4fa;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+  background:#ffffff;
+}
+
+.container{ width:100%; }
+
+p{ margin:8px 0 12px; }
+
+/* ---------- Headings ---------- */
+
+h1{
+  margin:48px 0 16px;
+  padding-bottom:12px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:42px;
+  font-weight:700;
+  line-height:1.25;
+  color:#000;
+  border-bottom:2px solid var(--border);
+}
+
+h2{
+  margin:14px 0 36px;
+  font-size:24px;
+  font-weight:500;
+  color:var(--text-muted);
+}
+
+h3{
+  margin:24px 0 8px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  color:#000;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:100px;
+}
+
+/* ---------- PDF ---------- */
+
+.pdf-viewer{
+  max-width:900px;
+  height:600px;
+  margin:0 auto 20px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  overflow:hidden;
+}
+
+.pdf-viewer iframe{ width:100%; height:100%; border:none; }
+
+.pdf-download{
+  max-width:900px;
+  margin:0 auto 36px;
+  padding:14px 18px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+  text-align:center;
+}
+
+.pdf-download a{
+  color:var(--blue-text);
+  font-weight:600;
+}
+
+/* ---------- TOC ---------- */
+
+.main-toc{
+  max-width:900px;
+  margin:0 auto 40px;
+  padding:16px 20px;
+  background:var(--toc-bg);
+  border:1px solid var(--toc-border);
+  border-radius:6px;
+}
+
+.main-toc ul{ list-style:none; padding:0; margin:0; }
+.main-toc li{ margin:.3rem 0; }
+.main-toc a{
+  color:var(--blue-text);
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* ---------- Tables ---------- */
+
+.table-wrap{ margin:8px 0 24px; }
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+}
+
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid var(--black);
+}
+/* ---------- Unified table column widths ---------- */
+
+table{
+  table-layout: fixed; /* Forces consistent column sizing */
+  width:100%;
+}
+
+table th:nth-child(1),
+table td:nth-child(1){
+  width:30%;
+}
+
+table th:nth-child(2),
+table td:nth-child(2){
+  width:50%;
+}
+
+table th:nth-child(3),
+table td:nth-child(3){
+  width:20%;
+}
+
+/* ---------- Figures ---------- */
+
+.figure{ margin:32px auto; text-align:center; }
+.figure img{ max-width:100%; }
+.figure figcaption{
+  margin-top:8px;
+  font-size:.85rem;
+  color:var(--text-muted);
+  font-style:italic;
+}
+
+/* ---------- Footer ---------- */
+
+.footer-note{
+  margin-top:40px;
+  padding-top:16px;
+  border-top:1px solid var(--border);
+  font-size:.82rem;
+  color:var(--text-muted);
+}
+
+.footer-note p{ margin:0; }
+</style>
+</head>
+
+<body>
+  <div class="container">
+
+
+    <!-- PDF Viewer -->
+    <div class="pdf-viewer">
+      <iframe
+        src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/83557a66bf0ee0beaafda9b348333a88815b4efb/Mioty_Adapter/Mioty_Adapter_general_description/Aion_IO-Link_mioty_Adapter_allgemeine_Beschreibung_DE%20en-US.pdf"
+        loading="lazy">
+      </iframe>
+    </div>
+
+
+
+    <!-- Download Box -->
+    <div class="pdf-download">
+      📄 You can view the PDF above or
+      <a href="https://github.com/bellaminemo81172/sentinum_documentation/blob/83557a66bf0ee0beaafda9b348333a88815b4efb/Mioty_Adapter/Mioty_Adapter_general_description/Aion_IO-Link_mioty_Adapter_allgemeine_Beschreibung_DE%20en-US.pdf?raw=1" target="_blank">
+        download it here
+      </a>.
+    </div>
+
+    <!-- TOC -->
+    <nav class="main-toc">
+      <h3>Table of Contents</h3>
+      <ul>
+        <li><a href="#sec-1">Overview</a></li>
+        <li><a href="#sec-2">Key Features</a></li>
+        <li><a href="#sec-3">Application Examples</a></li>
+        <li><a href="#sec-4">Versions</a></li>
+      </ul>
+    </nav>
+
+    <div class="figure">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/ff2f1b515de971f75716aa021a439360cc6f5e5a/Mioty_Adapter/Mioty_Adapter_general_description/mioty%20adappter%20pic.png" alt="AION IO-Link mioty Adapter">
+    <div class="figure">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/ff2f1b515de971f75716aa021a439360cc6f5e5a/Mioty_Adapter/Mioty_Adapter_general_description/mioty%20adappter%20pic.png" alt="AION IO-Link mioty Adapter" style="height: auto;">
+
+  <p style="margin-top:6px; font-size:0.85rem; color:#6b7280;">
+    AION IO-Link mioty Adapter – Industrial wireless bridge for IO-Link sensors
+  </p>
+</div>
+
+
+    <!-- SECTION 1 -->
+    <h3 id="sec-1">Overview</h3>
+
+    <p>
+      The AION IO-Link mioty adapter enables the wireless integration of existing IO-Link sensors into modern IoT and IIoT applications.
+      It acts as a bridge between industrial IO-Link sensors and the mioty® wireless network, without requiring any modifications to
+      the existing sensors or additional cabling.
+    </p>
+
+    <p>
+      By connecting any IO-Link-enabled sensors—such as pressure, temperature, level, or flow sensors—machine and process data can be
+      centrally collected, monitored, and analyzed. This allows seamless digitalization of machines and processes in both new and
+      existing installations.
+    </p>
+
+    <!-- SECTION 2 -->
+    <h3 id="sec-2">Key Features</h3>
+
+    <ul>
+      <li>mioty®, LoRaWAN® on request</li>
+      <li>Adapter for connecting IO-Link sensors with wireless data transmission</li>
+      <li>Seamless integration into existing IO-Link structures</li>
+      <li>IP69k, -25°C to 85°C, optionally with temperature and relative humidity sensor IP67</li>
+      <li>IO-Link decoding in the cloud (not directly on the sensor)</li>
+      <li>Compact design</li>
+      <li>2 × M12 connectors, Vin = 24 V</li>
+    </ul>
+
+    <!-- SECTION 3 -->
+    <h3 id="sec-3">Application Examples</h3>
+
+    <ul>
+      <li><strong>Smart Factory Automation:</strong> Monitoring of machines, systems, and production goods</li>
+      <li><strong>Predictive Maintenance:</strong> Monitoring of vibration, temperature, and condition data</li>
+      <li><strong>Remote Monitoring:</strong> Transmission of sensor data from hard-to-reach areas</li>
+      <li><strong>Retrofitting:</strong> Existing plants, brownfield and greenfield applications</li>
+      <li><strong>Process Industry:</strong> Process data acquisition in harsh and remote environments</li>
+      <li><strong>Smart City:</strong> Integration of industrial IO-Link sensors into Smart City projects</li>
+    </ul>
+
+    <!-- SECTION 4 -->
+    <h3 id="sec-4">Versions</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Item Code</th>
+            <th>Features</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>S-AION-MIOTY-IOL</td>
+            <td>Industrial AION IP69k IO-Link to mioty adapter / bridge</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+<img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/1f38539e00ab947e1dbf47f57e833065b3ab7bbe/Mioty_Adapter/Mioty_Betriebsanleitung/pic/Logo.png" alt="Logo" style="max-width: 260px; opacity: 0.9; display: block; margin: 32px 0; height: auto;">
+
+
+    <!-- FOOTER -->
+    <div class="footer-note">
+      <p>© Sentinum GmbH – All rights reserved.</p>
+      <p>All contents of this document, including text, tables, and images, are protected by copyright and are the property of Sentinum GmbH.</p>
+      <p>All images are subject to the copyright of Sentinum GmbH unless otherwise stated.</p>
+      <p>Reproduction, distribution, or use — even in part — is not permitted without explicit written permission.</p>
+      <p style="padding-left:14px; font-style:italic;">
+        Specifications are subject to change. All information is provided without guarantee.
+      </p>
+    </div>
+
+  </div>
+</body>
+</html>
