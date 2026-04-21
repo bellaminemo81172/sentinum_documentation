@@ -1,0 +1,693 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+  --blue-bg:#f7fbff;
+  --blue-border:#d6e4fa;
+  --blue-text:#1a3e8c;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+}
+
+body{
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+}
+
+h1{
+  margin:48px 0 16px;
+  padding-bottom:12px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:42px;
+  font-weight:700;
+  border-bottom:2px solid var(--border);
+}
+
+h3{
+  margin:32px 0 12px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:120px;
+}
+
+/* FARBOXEN */
+.note-strip{
+  padding:14px 16px;
+  margin:18px 0;
+  border-radius:6px;
+  border-left:6px solid transparent;
+}
+.note-strip--red{background:#fdecea;border-left-color:#d32f2f;}
+.note-strip--yellow{background:#fff8e1;border-left-color:#f9a825;}
+.note-strip--green{background:#e8f5e9;border-left-color:#2e7d32;}
+
+.note-strip ul{margin:0;padding-left:20px;}
+.note-strip li{margin:4px 0;}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+  table-layout:fixed;
+}
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid #000;
+}
+
+.main-toc{
+  max-width:900px;
+  margin:24px auto 40px;
+  padding:16px 20px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+}
+.main-toc strong{display:block;margin-bottom:8px;}
+.main-toc ul{list-style:none;padding:0;margin:0;}
+.main-toc li{margin:.35rem 0;}
+.main-toc a{color:var(--blue-text);font-weight:600;text-decoration:none;}
+
+.pdf-container{
+  width:100%;
+  max-width:900px;
+  height:600px;
+  margin:24px auto 12px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  overflow:hidden;
+}
+.pdf-info{
+  max-width:900px;
+  margin:8px auto 32px;
+  padding:10px 14px;
+  background:#f8fbff;
+  border:1px solid #b6d4fe;
+  border-radius:6px;
+  text-align:center;
+}
+.pdf-info a{
+  color:#2563eb;
+  font-weight:600;
+  text-decoration:underline;
+}
+</style>
+
+<body>
+
+<!-- PDF EN -->
+<div class="pdf-container">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d372ae57f065fbe65c937d4543c6db6ea492348e/Juno_BSX/Juno_BSX_Betriebsanleitung/EN/Juno_BSX_Betriebsanleitung_Zus%C3%A4tzliche_Informationen_V1%20en-US.pdf"
+    style="width:100%;height:100%;border:none;"
+    title="JUNO BSX – Additional Information (EN)">
+  </iframe>
+</div>
+
+<div class="pdf-info">
+  📄 View the PDF above or
+  <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d372ae57f065fbe65c937d4543c6db6ea492348e/Juno_BSX/Juno_BSX_Betriebsanleitung/EN/Juno_BSX_Betriebsanleitung_Zus%C3%A4tzliche_Informationen_V1%20en-US.pdf" target="_blank">
+    download it here
+  </a>.
+</div>
+
+<div class="main-toc">
+  <strong>Table of contents</strong>
+  <ul>
+    <li>
+      <a href="#product-versions">1. Product versions</a>
+    </li>
+
+    <li>
+      <a href="#bm-versions">
+        2. BM versions – electric magnetic field sensor
+      </a>
+      <ul>
+        <li>
+          <a href="#additional-safety">
+            2.1. Additional safety instructions
+          </a>
+        </li>
+        <li>
+          <a href="#technical-functionality">
+            2.2. Technical functionality
+          </a>
+        </li>
+        <li>
+          <a href="#possible-uses">
+            2.3. Possible uses and application examples
+          </a>
+        </li>
+        <li>
+          <a href="#notes-installation">
+            2.4. Installation instructions
+          </a>
+        </li>
+        <li>
+          <a href="#interference">
+            2.5. Interference
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="#labeling-and-certification">
+        3. Labeling and certification
+      </a>
+    </li>
+  </ul>
+</div>
+
+<h3 id="product-versions">1. Product versions</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>ITEM CODE</th>
+      <th>FEATURES</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>S-JUNO-IX-LOEU-BSX-BM</strong></td><td>INDUSTRIAL JUNO IP69k Operating hours counter with magnetic field sensor LoRaWAN®</td></tr>
+    <tr><td><strong>S-JUNO-IX-MIOTY-BSX-BM</strong></td><td>INDUSTRIAL JUNO IP69k Operating hours counter with magnetic field sensor mioty®</td></tr>
+    <tr><td><strong>S-JUNO-IX-NBM1-BSX-BM</strong></td><td>INDUSTRIAL JUNO IP69k Operating hours counter with magnetic field sensor Cellular</td></tr>
+    <tr><td><strong>S-JUNO-IX-LOEU-BSX-BM-TH</strong></td><td>INDUSTRIAL JUNO IP67 Operating hours counter and TH sensor, temperature and relative humidity with magnetic field sensor LoRaWAN® – <strong>only available on request and MOQ</strong> -</td></tr>
+    <tr><td><strong>S-JUNO-IX-MIOTY-BSX-BM-TH</strong></td><td>INDUSTRIAL JUNO IP67 operating hours counter and TH sensor, temperature and relative humidity with magnetic field sensor mioty® – <strong>only available on request and MOQ</strong> -</td></tr>
+    <tr><td><strong>S-JUNO-IX-NBM1-BSX-BM-TH</strong></td><td>INDUSTRIAL JUNO IP67 operating hours counter and TH sensor, temperature and relative humidity with magnetic field sensor Cellular – <strong>only available on request and MOQ</strong> -</td></tr>
+    <tr><td><strong>S-JUNO-IX-LOEU-BSX</strong></td><td>INDUSTRIAL JUNO IP69k Operating hours counter and TH sensor, temperature and relative humidity with magnetic field sensor LoRaWAN®</td></tr>
+    <tr><td><strong>S-JUNO-IX-MIOTY-BSX</strong></td><td>INDUSTRIAL JUNO IP69k operating hours counter with vibration and magnetic field sensor mioty®</td></tr>
+    <tr><td><strong>S-JUNO-IX-NBM1-BSX</strong></td><td>INDUSTRIAL JUNO IP69k Operating hours counter with vibration and magnetic field sensor Cellular</td></tr>
+    <tr><td><strong>S-JUNO-IX-LOEU-BSX-TH</strong></td><td>INDUSTRIAL JUNO IP67 operating hours counter with vibration and magnetic field sensor LoRaWAN® – <strong>only available on request and MOQ</strong> -</td></tr>
+    <tr><td><strong>S-JUNO-IX-MIOTY-BSX-TH</strong></td><td>INDUSTRIAL JUNO IP67 operating hours counter with vibration and magnetic field sensor mioty® – <strong>only available on request and MOQ</strong> -</td></tr>
+    <tr><td><strong>S-JUNO-IX-NBM1-BSX-TH</strong></td><td>INDUSTRIAL JUNO IP67 operating hours counter with vibration and magnetic field sensor Cellular – <strong>only available on request and MOQ</strong> -</td></tr>
+  </tbody>
+</table>
+
+<h3 id="bm-versions">2. BM Versions – Electric Magnetic Field Sensor</h3>
+
+<p>The following information refers to the product versions (-BM) with electric magnetic field sensor.</p>
+<h3 id="additional-safety">2.1. ADDITIONAL SAFETY INSTRUCTIONS</h3>
+
+<p>
+  Please refer to the operating instructions for the Juno for general safety instructions for the product.
+</p>
+
+<p>
+  The following safety instructions refer to the product versions (-BM) with electric magnetic field sensor.
+</p>
+
+<div class="note-strip note-strip--red">
+  <ul>
+    <li>Do not mount on live or hot components.</li>
+    <li>Do not install in areas with strong magnetic fields (permanent magnets, electromagnets).</li>
+    <li>Before commissioning, ensure that the system is de-energized.</li>
+    <li>The sensor must not be opened or modified (loss of calibration).</li>
+  </ul>
+</div>
+
+<p><strong>Installation instructions:</strong></p>
+
+<div class="note-strip note-strip--green">
+  <p><strong>Recommended installation location:</strong></p>
+  <ul>
+    <li>As close as possible to the motor to be detected (&lt;5&nbsp;cm).</li>
+    <li>Non-magnetic, low-vibration surface</li>
+    <li>
+      Sensor alignment can be arbitrary (3D detection),
+      but one axis should be as radial as possible to the motor axis
+    </li>
+  </ul>
+</div>
+
+<div class="note-strip note-strip--red">
+  <p><strong>Do not mount:</strong></p>
+  <ul>
+    <li>Directly on ferromagnetic surfaces or thick steel housings (shielding)</li>
+    <li>Next to power lines or large transformers</li>
+  </ul>
+</div>
+
+<p><strong>Fastening:</strong></p>
+<ul>
+  <li>
+    Screws, clips, or adhesive pads – vibration-proof and thermally decoupled.
+  </li>
+</ul>
+
+<h3 id="technical-functionality">2.2. Technical Functionality</h3>
+The operating hours counter uses changes in the magnetic field that occur during the operation of a machine or device to automatically detect periods of activity.
+A <strong>3-axis magnetic field sensor</strong> is used, which measures the local magnetic field
+  either permanently or periodically.
+</p>
+
+<p>
+  As soon as a characteristic magnetic field change is detected – e.g., by switching
+  on a motor, by rotating parts, or by current flow in the environment – the electronics
+  interpret this as "active operating status."
+</p>
+
+<p>
+  These active times are integrated over time to give the cumulative <strong>operating hours</strong>.
+</p>
+
+<ul>
+  <li>
+    The sensor continuously measures the magnetic field components
+    <strong>Bx, By, Bz</strong> in µT.
+  </li>
+  <li>
+    The sampling rate can be dynamically adjusted (e.g., 10&nbsp;Hz to 100&nbsp;Hz),
+    depending on the desired response time and energy consumption.
+  </li>
+  <li>
+    The microcontroller or a downstream signal processor analyzes the raw data.
+  </li>
+  <li>
+    Monitoring of typical activity indicators:
+    <ul>
+      <li><strong>Magnetic field amplitude change</strong> above a defined threshold value</li>
+      <li><strong>Frequency analysis</strong> (e.g., periodic fluctuations in rotating parts)</li>
+      <li><strong>Noise or vibration patterns</strong> in the magnetic field signal</li>
+      <li>
+        If the system detects a consistent activity pattern over a defined
+        period of time, the status is set to <em>"active."</em>
+      </li>
+    </ul>
+  </li>
+  <li>
+    During the active state, a timer or time base
+    (RTC or MCU internal) runs.
+  </li>
+  <li>
+    The runtime is continuously added up and saved in
+    <strong>non-volatile memory</strong> (EEPROM or Flash)
+    so that no data is lost even after a power failure.
+  </li>
+  <li>
+    <strong>Calibration / interference field compensation:</strong>
+    <ul>
+      <li>An initial calibration compensates for the local geomagnetic field offset.</li>
+      <li>
+        Long-term drift or external magnetic fields can be corrected using
+        <strong>adaptive filters</strong>.
+      </li>
+      <li>
+        Optionally, the meter can also be readjusted using a calibration signal
+        (e.g., "known off state").
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Application</th>
+      <th>Detection principle</th>
+      <th>Advantage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Electric motors</strong></td>
+      <td>Magnetic field change due to rotating field</td>
+      <td>No additional current sensor required</td>
+    </tr>
+    <tr>
+      <td><strong>Valves, actuators</strong></td>
+      <td>Magnetic field when coil is activated</td>
+      <td>Direct activity detection possible</td>
+    </tr>
+    <tr>
+      <td><strong>Machine units</strong></td>
+      <td>Magnetic vibration / field fluctuation</td>
+      <td>Robust against vibration and noise</td>
+    </tr>
+    <tr>
+      <td><strong>Retrofit solutions</strong></td>
+      <td>External magnetic field change</td>
+      <td>Contactless, easy retrofitting</td>
+    </tr>
+  </tbody>
+</table>
+<h3>2.3. Possible Uses and Application Examples</h3>
+
+<p><strong>Electromechanical drives</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Device / component</th>
+      <th>Detection principle</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Electric motors (DC/AC/BLDC)</strong></td>
+      <td>Magnetic field change due to rotating field or commutation</td>
+      <td>Standard application, high signal stability</td>
+    </tr>
+    <tr>
+      <td><strong>Alternators / generators</strong></td>
+      <td>Alternating magnetic field during power generation</td>
+      <td>Detection of charging or operating status</td>
+    </tr>
+    <tr>
+      <td><strong>Fans</strong></td>
+      <td>Rotating field or magnetic pulses</td>
+      <td>Runtime monitoring, maintenance interval control</td>
+    </tr>
+    <tr>
+      <td><strong>Pumps (electrically driven)</strong></td>
+      <td>Field change due to motor rotation</td>
+      <td>Contactless operation monitoring</td>
+    </tr>
+    <tr>
+      <td><strong>Compressors</strong></td>
+      <td>Magnetic field change in the drive</td>
+      <td>Can be used in refrigeration and compressed air technology</td>
+    </tr>
+    <tr>
+      <td><strong>Electromagnetic clutches</strong></td>
+      <td>Magnetic field during activation</td>
+      <td>Precise detection of switch-on cycles</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>Electromagnetic actuators</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Device / component</th>
+      <th>Detection principle</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Valves (e.g. solenoid valves)</strong></td>
+      <td>Magnetic field of the coil when activated</td>
+      <td>Precise switching time detection possible</td>
+    </tr>
+    <tr>
+      <td><strong>Relays / contactors</strong></td>
+      <td>Field pulse when the coil is energized</td>
+      <td>Counting of switching cycles</td>
+    </tr>
+    <tr>
+      <td><strong>Lifting magnets / linear drives</strong></td>
+      <td>Field change during movement</td>
+      <td>Use in industrial automation or automotive engineering</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>Energy generation &amp; distribution</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Device / component</th>
+      <th>Detection principle</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Alternator (automotive)</strong></td>
+      <td>Induced field during power generation</td>
+      <td>Runtime detection without interference with the vehicle electrical system</td>
+    </tr>
+    <tr>
+      <td><strong>Transformers</strong></td>
+      <td>Magnetic stray fields during load</td>
+      <td>Contactless operation monitoring possible</td>
+    </tr>
+    <tr>
+      <td><strong>Inverters / converters</strong></td>
+      <td>Field change due to induction coils</td>
+      <td>Diagnostics and runtime monitoring</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>Household and industrial appliances</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Device / component</th>
+      <th>Detection principle</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Power tools (drills, saws, etc.)</strong></td>
+      <td>Magnetic field change due to motor activity</td>
+      <td>Usage time tracking for rental equipment or maintenance</td>
+    </tr>
+    <tr>
+      <td><strong>Vacuum cleaners / blowers / fan heaters</strong></td>
+      <td>Rotating field of the motor</td>
+      <td>Runtime or maintenance monitoring</td>
+    </tr>
+    <tr>
+      <td><strong>Induction heaters</strong></td>
+      <td>Alternating magnetic field during activation</td>
+      <td>Runtime measurement, energy logging</td>
+    </tr>
+    <tr>
+      <td><strong>Cooling units / air conditioning systems</strong></td>
+      <td>Compressor field + fan field</td>
+      <td>Combined monitoring possible</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Vehicle and mechanical engineering</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Device / component</th>
+      <th>Detection principle</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Starter generators / electric machines</strong></td>
+      <td>Rotating field or current flow</td>
+      <td>Operating time and maintenance counters</td>
+    </tr>
+    <tr>
+      <td><strong>Hydraulic pumps with electric drive</strong></td>
+      <td>Magnetic field change due to motor</td>
+      <td>Runtime monitoring in mobile machines</td>
+    </tr>
+    <tr>
+      <td><strong>Conveyor belts / drive rollers</strong></td>
+      <td>Magnetic field change in the drive</td>
+      <td>Runtime or cycle monitoring</td>
+    </tr>
+    <tr>
+      <td><strong>Agricultural and construction machinery units</strong></td>
+      <td>Magnetic field or vibration signature</td>
+      <td>Resistant to environmental influences</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>Other applications</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Device / component</th>
+      <th>Detection principle</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Solar tracking systems (tracking drives)</strong></td>
+      <td>Magnetic field change due to motor movement</td>
+      <td>Operational monitoring in PV systems</td>
+    </tr>
+    <tr>
+      <td><strong>Wind power auxiliary drives (yaw/pitch systems)</strong></td>
+      <td>Field change due to motor movement</td>
+      <td>Operating hours logging for maintenance</td>
+    </tr>
+    <tr>
+      <td><strong>Magnetic bearings / magnetic brakes</strong></td>
+      <td>Field change during activation</td>
+      <td>Runtime measurement of function cycles</td>
+    </tr>
+  </tbody>
+</table>
+<h3>2.4. Notes on Installation</h3>
+
+<div class="note-strip note-strip--yellow">
+  <p><strong>The strength and range of this field depend on several factors:</strong></p>
+  <ul>
+    <li>Motor type (DC, BLDC, asynchronous)</li>
+    <li>Housing material (magnetic or non-magnetic)</li>
+    <li>Power and current flow</li>
+    <li>Shielding / installation environment</li>
+    <li>Position of the windings and magnets</li>
+  </ul>
+</div>
+
+<div class="note-strip note-strip--green">
+  <p>
+    <strong>
+      As a rough guide (we always recommend mounting directly on the device to be monitored,
+      as this minimizes interference from other machines):
+    </strong>
+  </p>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Motor type</th>
+      <th>Typical field strength (active)</th>
+      <th>Recommended sensor distance</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Small motor (e.g., fan, ventilator, &lt;100 W)</strong></td>
+      <td>50–200 µT</td>
+      <td><strong>5–20 mm</strong></td>
+      <td>Direct proximity required, mount on motor housing if necessary</td>
+    </tr>
+    <tr>
+      <td><strong>Medium motors (pumps, compressors, 100 W–2 kW)</strong></td>
+      <td>100–500 µT</td>
+      <td><strong>20–50 mm</strong></td>
+      <td>Good visibility, even when mounted on housing flange</td>
+    </tr>
+    <tr>
+      <td><strong>Large industrial motors (&gt;2 kW)</strong></td>
+      <td>500 µT – several mT</td>
+      <td><strong>50–150 mm</strong></td>
+      <td>Can also be mounted on adjacent chassis</td>
+    </tr>
+    <tr>
+      <td><strong>Solenoid valves / relays</strong></td>
+      <td>200–1000 µT</td>
+      <td><strong>0–10 mm</strong></td>
+      <td>Place sensor directly on the coil</td>
+    </tr>
+    <tr>
+      <td><strong>Generator / alternator</strong></td>
+      <td>500 µT – 5 mT</td>
+      <td><strong>20–100 mm</strong></td>
+      <td>Ideal: Position with minimal shielding (e.g., end cover)</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="note-strip note-strip--green">
+  <p><strong>Recommended mounting location</strong></p>
+  <ul>
+    <li>
+      <strong>Directly on the motor housing or near the windings</strong>,
+      preferably in an unshielded location (not directly behind sheet steel).
+    </li>
+    <li>
+      <strong>Not on or next to live wires</strong>,
+      to avoid interference fields from other sources.
+    </li>
+    <li>
+      <strong>Mechanically stable</strong>, low vibration, and protected from direct heat radiation.
+    </li>
+    <li>
+      <strong>Alignment:</strong> The sensor measures in 3D – the orientation is not critical,
+      but <strong>one axis should point radially to the motor field</strong> as far as possible,
+      in order to capture the greatest effect.
+    </li>
+    <li>
+      <strong>Mounting:</strong> e.g., using a screw, clip, or double-sided adhesive pad
+      with thermal insulation.
+    </li>
+  </ul>
+</div>
+<h3>2.5. Interference</h3>
+
+<p>
+  The magnetic field of a motor decreases
+  <strong>exponentially or according to 1/r³</strong> (dipole field)
+  with increasing distance.
+</p>
+
+<p>The message</p>
+
+<div class="note-strip note-strip--red">
+  <p>
+    <strong>
+      Even a few centimeters of distance significantly reduce the signal from a motor,
+    </strong>
+    while sources further away are hardly measurable.
+  </p>
+</div>
+
+<p>Consequently:</p>
+
+<ul>
+  <li>
+    If the sensor is mounted <strong>close to the target motor</strong>
+    (e.g., &lt;5 cm),
+    <strong>the influence of other machines is practically negligible</strong>.
+  </li>
+  <li>
+    If the sensor is moved further away (&gt;10 cm),
+    the useful signal can quickly become weaker and
+    <strong>stronger external fields</strong>
+    (e.g., from larger motors or transformers)
+    can interfere.
+  </li>
+</ul>
+<h3 id="labeling-and-certification">3. Marking and Certification</h3>
+
+<div style="margin:16px 0 12px;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d372ae57f065fbe65c937d4543c6db6ea492348e/Juno_BSX/Juno_BSX_Betriebsanleitung/pic/Juno_BSX_logo1.webp"
+    alt="JUNO BSX certification logos"
+    style="max-width:100%; height:auto;"
+    loading="lazy">
+</div>
+
+<div style="margin:12px 0;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d372ae57f065fbe65c937d4543c6db6ea492348e/Juno_BSX/Juno_BSX_Betriebsanleitung/pic/Juno_BSX_logo2.png"
+    alt="Additional JUNO BSX markings"
+    style="max-width:180px; height:auto;"
+    loading="lazy">
+</div>
+<div class="footer-divider"></div>
+<div style="border-top:1px solid #d0d7de;margin-top:40px;padding-top:16px;font-size:.85rem;color:#6b7280;">
+</div>
+<div class="footer-note">
+  <p>© Sentinum GmbH – All rights reserved.</p>
+  <p>All contents of this document, including text, tables, and images, are protected by copyright and are the property of Sentinum GmbH.</p>
+  <p>All images are subject to the copyright of Sentinum GmbH unless otherwise stated.</p>
+  <p>Reproduction, distribution, or use — even in excerpts — is not permitted without explicit written permission.</p>
+  <p style="padding-left:14px; font-style:italic;">Specifications are subject to change without notice. All information is provided without warranty.</p>
+</div>
