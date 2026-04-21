@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NYX – NFC & Downlink Description</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+        
+        :root{
+          --black:#000000;
+          --text-main:#111827;
+          --text-muted:#6b7280;
+          --border:#d0d7de;
+          --table-header:#f5f7fa;
+          --blue-bg:#f0f8ff;
+          --blue-border:#a0c4ff;
+          --blue-text:#1a3e8c;
+          --toc-bg:#f7fbff;
+          --toc-border:#d6e4fa;
+        }
+        
+        *{ box-sizing:border-box; }
+        
+        body{
+          margin:0;
+          font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+          color:var(--text-main);
+          line-height:1.65;
+          background:#ffffff;
+        }
+        
+        .container{ width:100%; }
+        
+        /* Headings */
+        
+        h1{
+          margin:48px 0 16px;
+          padding-bottom:12px;
+          font-family:"Montserrat",Arial,sans-serif;
+          font-size:42px;
+          font-weight:700;
+          line-height:1.25;
+          color:#000;
+          border-bottom:2px solid var(--border);
+        }
+        
+        h2{
+          margin:14px 0 36px;
+          font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+          font-size:24px;
+          font-weight:500;
+          line-height:1.5;
+          color:var(--text-muted);
+        }
+        
+        h3{
+          margin:24px 0 8px;
+          padding-bottom:6px;
+          font-family:"Montserrat",Arial,sans-serif;
+          font-size:18px;
+          font-weight:600;
+          color:#000;
+          border-bottom:1.5px solid var(--border);
+          scroll-margin-top:100px;
+        }
+        
+        /* TOC */
+        
+        .main-toc{
+          max-width:900px;
+          margin:0 auto 40px;
+          padding:16px 20px;
+          background:var(--toc-bg);
+          border:1px solid var(--toc-border);
+          border-radius:6px;
+        }
+        
+        .main-toc ul{ list-style:none; padding:0; margin:0; }
+        .main-toc li{ margin:.3rem 0; }
+        .main-toc a{
+          color:var(--blue-text);
+          font-weight:600;
+          text-decoration:none;
+        }
+        /* ---------- PDF ---------- */
+        .pdf-viewer{
+          max-width:900px;
+          height:600px;
+          margin:0 auto 20px;
+          border:1px solid #ccc;
+          border-radius:6px;
+          overflow:hidden;
+        }
+        
+        .pdf-viewer iframe{
+          width:100%;
+          height:100%;
+          border:none;
+        }
+        
+        .pdf-download{
+          max-width:900px;
+          margin:0 auto 36px;
+          padding:14px 18px;
+          background:var(--blue-bg);
+          border:1px solid var(--blue-border);
+          border-radius:6px;
+          text-align:center;
+        }
+        
+        .pdf-download a{
+          color:var(--blue-text);
+          font-weight:600;
+        }
+        
+        /* Tables */
+        
+        .table-wrap{ margin:12px 0 32px; }
+        
+        table{
+          width:100%;
+          border-collapse:collapse;
+          font-size:14px;
+        }
+        
+        th,td{
+          border:1px solid var(--border);
+          padding:8px 12px;
+          vertical-align:top;
+        }
+        
+        th{
+          background:var(--table-header);
+          font-weight:700;
+          border-bottom:2px solid var(--black);
+        }
+        table,
+th,
+td{
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+}
+        
+        /* Footer */
+        
+
+/* ---------- Footer ---------- */
+.footer-note{
+  margin-top:40px;
+  padding-top:16px;
+  border-top:1px solid var(--border);
+  font-size:.82rem;
+  color:var(--text-muted);
+}
+
+.footer-note p{
+  margin:0 0 6px 0;
+  line-height:1.4;
+}
+
+/* ---------- Inline code ---------- */
+code{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size:0.95em;
+  padding:0.1em 0.35em;
+  border-radius:4px;
+  background:#f5f7fa;
+  border:1px solid var(--border);
+}
+</style>
+
+<!-- PDF -->
+<div class="pdf-viewer">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d95f8feeefe5b1f2fe90001b2d2b0eca5ff71737/Juno_BSX/Juno_BSX_NFC_and_downlink_description/Juno_LOEU_BSX_NFC_and_Downlinkdescritpion_en-US.pdf"
+    loading="lazy">
+  </iframe>
+</div>
+
+<div class="pdf-download">
+  📄 You can view the PDF above or
+  <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d95f8feeefe5b1f2fe90001b2d2b0eca5ff71737/Juno_BSX/Juno_BSX_NFC_and_downlink_description/Juno_LOEU_BSX_NFC_and_Downlinkdescritpion_en-US.pdf"
+     target="_blank">
+    download it here
+  </a>.
+</div>
+<!-- TOC -->
+<nav class="main-toc">
+  <h4>Table of Contents</h4>
+  <ul>
+    <li><a href="#overview">1. Module Overview</a></li>
+    <li><a href="#versions">2. Versions</a></li>
+    <li><a href="#timings">3. Group Timings (0x00)</a></li>
+    <li><a href="#examples">4. Example Downlinks</a></li>
+  </ul>
+</nav>
+<!-- OVERVIEW -->
+<h3 id="overview">1. Module Overview</h3>
+
+<div class="table-wrap" style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>Module</th>
+        <th>Module Key</th>
+        <th>Group</th>
+        <th>Group ID</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Juno</td>
+        <td>0x1XXX</td>
+        <td>Timings</td>
+        <td>0x00</td>
+        <td>Defines parameters for measurements and transmission behavior</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+  Tables for cross-product modules (Senticom / Sentivisor) can be found in the
+  <a href="https://docs.sentinum.de/en/generische-nfc-und-downlink-dokumentation"
+     target="_blank" rel="noopener noreferrer">
+    generic NFC and downlink documentation
+  </a>.
+</p>
+
+<p>
+  Further information on configuring sensor communication and tracking settings can be found in the respective
+  generic
+  <a href="https://docs.sentinum.de/en/generische-lorawan-dokumentation"
+     target="_blank" rel="noopener noreferrer">
+    LoRaWAN® documentation
+  </a>
+  or
+  <a href="https://docs.sentinum.de/en/generic-mioty-documentation"
+     target="_blank" rel="noopener noreferrer">
+    mioty® documentation
+  </a>,
+  depending on the version.
+</p>
+
+<p>
+  <strong>Instructions valid for versions:</strong>
+</p>
+<!--  VERSIONS -->
+<h3 id="versions">2. Versions</h3>
+
+<div class="table-wrap" style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>Article Code</th>
+        <th>Features</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>S-JUNO-IX-LOEU-BSX</td>
+        <td>
+          INDUSTRIAL JUNO IP69k operating hours counter and TH sensor,
+          temperature and relative humidity with magnetic field sensor LoRaWAN®
+        </td>
+      </tr>
+      <tr>
+        <td>S-JUNO-IX-MIOTY-BSX</td>
+        <td>
+          INDUSTRIAL JUNO IP69k operating hours counter with vibration and
+          magnetic field sensor mioty®
+        </td>
+      </tr>
+      <tr>
+        <td>S-JUNO-IX-NBM1-BSX</td>
+        <td>
+          INDUSTRIAL JUNO IP69k operating hours counter with vibration and
+          magnetic field sensor Cellular
+        </td>
+      </tr>
+      <tr>
+        <td>S-JUNO-IX-LOEU-BSX-TH</td>
+        <td>
+          INDUSTRIAL JUNO IP67 operating hours counter with vibration and
+          magnetic field sensor LoRaWAN® – only available on request and MOQ
+        </td>
+      </tr>
+      <tr>
+        <td>S-JUNO-IX-MIOTY-BSX-TH</td>
+        <td>
+          INDUSTRIAL JUNO IP67 operating hours counter with vibration and
+          magnetic field sensor mioty® – only available on request and MOQ
+        </td>
+      </tr>
+      <tr>
+        <td>S-JUNO-IX-NBM1-BSX-TH</td>
+        <td>
+          INDUSTRIAL JUNO IP67 operating hours counter with vibration and
+          magnetic field sensor Cellular – only available on request and MOQ
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- ================= TIMINGS ================= -->
+<h3 id="timings">3. SENTIFACE: Timings Group <code>0x00</code></h3>
+
+<div class="table-wrap" style="overflow-x:auto;">
+  <table class="resource-table" style="width:120%;">
+    <colgroup>
+      <col style="width:12%;">
+      <col style="width:8%;">
+      <col style="width:42%;">
+      <col style="width:10%;">
+      <col style="width:6%;">
+      <col style="width:6%;">
+      <col style="width:8%;">
+      <col style="width:8%;">
+      <col style="width:10%;">
+    </colgroup>
+
+    <thead>
+      <tr>
+        <th>Property</th>
+        <th>Property ID</th>
+        <th>Description</th>
+        <th>Key (NFC/BLE)</th>
+        <th>Min</th>
+        <th>Max</th>
+        <th>Default</th>
+        <th>Unit</th>
+        <th>Module Key</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>TRANSMISSION FREQUENCY</td>
+        <td><code>0x00</code></td>
+        <td>
+          Specifies the regular transmission period. If there is no change in
+          status or no alarm is triggered, the data is sent regularly at
+          intervals specified by <em>period</em>.
+        </td>
+        <td><code>period</code></td>
+        <td>1</td>
+        <td>1440</td>
+        <td>60</td>
+        <td>min</td>
+        <td><code>1111</code></td>
+      </tr>
+
+      <tr>
+        <td>MEASUREMENT FREQUENCY</td>
+        <td><code>0x01</code></td>
+        <td>Sampling period of the magnetic field sensor.</td>
+        <td><code>sape</code></td>
+        <td>1</td>
+        <td>1000</td>
+        <td>100</td>
+        <td>ms</td>
+        <td><code>1111</code></td>
+      </tr>
+
+      <tr>
+        <td>MEASUREMENT DURATION</td>
+        <td><code>0x02</code></td>
+        <td>Duration of a measurement.</td>
+        <td><code>sadu</code></td>
+        <td>1</td>
+        <td>1000</td>
+        <td>10</td>
+        <td>ms</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>ACTIVITY LIMIT VALUE</td>
+        <td><code>0x03</code></td>
+        <td>Limit value at which a change of state is detected.</td>
+        <td><code>acth</code></td>
+        <td>0.1</td>
+        <td>10</td>
+        <td>2.5</td>
+        <td>µT RMS</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>LIMIT VALUE HYSTERESIS</td>
+        <td><code>0x04</code></td>
+        <td>Limit value hysteresis.</td>
+        <td><code>achy</code></td>
+        <td>0.1</td>
+        <td>10</td>
+        <td>0.3</td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>CUTOFF FREQ. HIGHPASS</td>
+        <td><code>0x05</code></td>
+        <td>Cutoff frequency highpass filter.</td>
+        <td><code>lpfct</code></td>
+        <td>5</td>
+        <td>200</td>
+        <td>10</td>
+        <td>Hz</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>CUTOFF FREQ. LOWPASS</td>
+        <td><code>0x06</code></td>
+        <td>Cutoff frequency lowpass filter.</td>
+        <td><code>hpfct</code></td>
+        <td>5</td>
+        <td>10</td>
+        <td>20</td>
+        <td>Hz</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>COMMAND RESET STATISTICS</td>
+        <td><code>0x07</code></td>
+        <td>
+          Command to reset counter values (when the battery is replaced,
+          the values are automatically reset).
+        </td>
+        <td><code>rststat</code></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+<!-- ================= EXAMPLE DOWNLINKS ================= -->
+<h3 id="examples">4. Example Downlinks</h3>
+
+<div class="table-wrap" style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>Setting</th>
+        <th>Downlink</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>period = 10</code></td>
+        <td><code>00 11 11 00 00 00 00 00 0A</code></td>
+      </tr>
+      <tr>
+        <td><code>acth = 5</code></td>
+        <td><code>00 11 11 00 01 00 00 00 05</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="figure">
+    <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/0ed4dcb7e3bfeefe80b1a6adbeb2b46ccebe53ce/Juno_BSX/Juno_BSX_Betriebsanleitung/pic/Juno_BSX_logo1.webp" alt="JUNO BSX Logo 1">
+
+</div>
+<img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/0ed4dcb7e3bfeefe80b1a6adbeb2b46ccebe53ce/Juno_BSX/Juno_BSX_Betriebsanleitung/pic/Juno_BSX_logo2.png" alt="JUNO BSX Logo 2" />
+
+
+
+
+
+<!-- DISCLAIMER -->
+<div class="footer-note">
+    <p>© Sentinum GmbH – All rights reserved.</p>
+    <p>All contents of this document, including text, tables and images, are protected by copyright and are the property of Sentinum GmbH.</p>
+    <p>All images are subject to the copyright of Sentinum GmbH unless otherwise stated.</p>
+    <p>Reproduction, distribution or use — even in part — is not permitted without explicit written permission.</p>
+    <p style="padding-left:14px; font-style:italic;">
+        Specifications subject to change. All information provided without warranty.
+    </p>
+</div>
+
+</div>
