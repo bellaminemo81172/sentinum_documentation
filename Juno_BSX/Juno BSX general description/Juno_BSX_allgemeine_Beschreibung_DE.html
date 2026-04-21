@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>JUNO BSX – Allgemeine Beschreibung</title>
+
+  <style>
+/* ============================================================
+   SENTINUM – HUBSPOT TECHNICAL CONTENT
+   Global Base Stylesheet (Stable)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --black:#000000;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+  --blue-bg:#f0f8ff;
+  --blue-border:#a0c4ff;
+  --blue-text:#1a3e8c;
+  --toc-bg:#f7fbff;
+  --toc-border:#d6e4fa;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+  background:#ffffff;
+}
+
+.container{ width:100%; }
+
+h1{
+  margin:48px 0 16px;
+  padding-bottom:12px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:42px;
+  font-weight:700;
+  line-height:1.25;
+  color:#000;
+  border-bottom:2px solid var(--border);
+}
+
+h2{
+  margin:14px 0 36px;
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:24px;
+  font-weight:500;
+  line-height:1.5;
+  color:var(--text-muted);
+}
+
+h3{
+  margin:24px 0 8px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  color:#000;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:100px;
+}
+
+p{ margin:8px 0 12px; }
+
+.pdf-viewer{
+  max-width:900px;
+  height:600px;
+  margin:0 auto 20px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  overflow:hidden;
+}
+
+.pdf-viewer iframe{
+  width:100%;
+  height:100%;
+  border:none;
+}
+
+.pdf-download{
+  max-width:900px;
+  margin:0 auto 36px;
+  padding:14px 18px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+  text-align:center;
+}
+
+.pdf-download a{
+  color:var(--blue-text);
+  font-weight:600;
+}
+
+.main-toc{
+  max-width:900px;
+  margin:0 auto 40px;
+  padding:16px 20px;
+  background:var(--toc-bg);
+  border:1px solid var(--toc-border);
+  border-radius:6px;
+}
+
+.main-toc ul{ list-style:none; margin:0; padding:0; }
+.main-toc li{ margin:.3rem 0; }
+.main-toc a{ color:var(--blue-text); font-weight:600; text-decoration:none; }
+
+.figure{ margin:32px auto; text-align:center; }
+.figure img{ max-width:100%; height:auto; }
+
+.table-wrap{ margin:12px 0 32px; }
+
+table{ width:100%; border-collapse:collapse; font-size:14px; }
+
+th,td{ border:1px solid var(--border); padding:8px 12px; vertical-align:top; }
+
+th{ background:var(--table-header); font-weight:700; border-bottom:2px solid var(--black); }
+
+table, th, td{ font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif; }
+
+/* ---------- Footer / Disclaimer ---------- */
+.footer-note{
+  margin-top:60px;
+  padding-top:20px;
+  border-top:2px solid var(--border);
+  font-size:.82rem;
+  color:var(--text-muted);
+}
+
+.footer-note p{ margin:0 0 6px 0; line-height:1.4; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+<!-- PDF Viewer -->
+<div class="pdf-viewer">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/e32c1b65a187b2bd848efc4e3494af517024fd76/Juno_BSX/Juno%20BSX%20general%20description/Juno_BSX_allgemeine_Beschreibung_DE.pdf"
+    loading="lazy">
+  </iframe>
+</div>
+
+<!-- Download Box -->
+<div class="pdf-download">
+  📄 Sie können das PDF oben ansehen oder
+  <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/e32c1b65a187b2bd848efc4e3494af517024fd76/Juno_BSX/Juno%20BSX%20general%20description/Juno_BSX_allgemeine_Beschreibung_DE.pdf"
+     target="_blank">
+    hier herunterladen
+  </a>.
+</div>
+
+<!-- TOC -->
+<nav class="main-toc">
+  <h3>Inhaltsverzeichnis</h3>
+  <ul>
+    <li><a href="#uebersicht">1. Übersicht</a></li>
+    <li><a href="#features">2. Features</a></li>
+    <li><a href="#anwendungen">3. Beispielanwendungen</a></li>
+    <li><a href="#versionen">4. Versionen</a></li>
+  </ul>
+</nav>
+
+<!-- SECTION 1: ÜBERSICHT -->
+<h3 id="uebersicht">1. Übersicht</h3>
+
+<p>
+  Der Juno iX BSX ist ein industrieller Betriebsstundenzähler und On/Off-Monitor
+  mit Konnektivitätsoptionen über mioty®, LoRaWAN® oder Cellular (z. B. NB-IoT).
+  Er erfasst zuverlässig Betriebsstunden und unterstützt die Optimierung von
+  Wartungszyklen durch Analyse von Vibrationen oder des Magnetfeldes in Echtzeit.
+  Dank seiner robusten Konstruktion und dem Schutzgrad IP69k ist der Juno iX BSX
+  ideal für anspruchsvolle Umgebungen geeignet und widersteht Staub, Wasser und
+  hohem Druck.
+</p>
+
+<div class="figure">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/e32c1b65a187b2bd848efc4e3494af517024fd76/Juno_BSX/Juno%20BSX%20sensor%20pic.png"
+    alt="Juno iX BSX Sensor"
+  >
+</div>
+
+<!-- SECTION 2: FEATURES -->
+<h3 id="features">2. Features</h3>
+
+<ul>
+  <li>LoRaWAN®, mioty® oder NB-IoT/LTE-CAT-M1 Kommunikation</li>
+  <li>IP69k, -25 °C bis 85 °C, wahlweise mit Temperatur und rel. Luftfeuchtesensor IP67</li>
+  <li>Verlässliche Betriebsstundenzählung auf Basis von Vibration und/oder des Magnetfeldes von elektrischen Maschinen</li>
+  <li>On/Off Zählung</li>
+  <li>3-Achs Magnetfeld- und Vibrationssensoren</li>
+  <li>Onboard Analyse der Daten (FFT)</li>
+  <li>Aktivierbar mit Magnet (kein Smartphone nötig) oder über NFC</li>
+  <li>Konfigurierbar über Downlinks, NFC/BLE</li>
+  <li>Einstellbare Grenzwerte</li>
+  <li>Wechselbare AA Zellen (LiSOCl₂ vgl. Saft LS14500)</li>
+  <li>Akustisches Signal bei Konfiguration</li>
+</ul>
+
+<!-- SECTION 3: BEISPIELANWENDUNGEN -->
+<h3 id="anwendungen">3. Beispielanwendungen</h3>
+
+<ul>
+  <li>Überwachung des On/Off Zustandes von Maschinen</li>
+  <li>Optimierung von Wartungszyklen von Maschinen</li>
+  <li>Optimierungszyklen von Kränen und Hubeinrichtungen</li>
+  <li>Zustandsüberwachung von Pumpen</li>
+</ul>
+
+<!-- SECTION 4: VERSIONEN -->
+<h3 id="versionen">4. Versionen</h3>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Artikel Code</th>
+        <th>Features</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>S-JUNO-IX-LOEU-BSX-BM</td>
+        <td>INDUSTRIAL JUNO IP69k Betriebsstundenzähler mit Magnetfeldsensor LoRaWAN®</td>
+      </tr>
+      <tr>
+        <td>S-JUNO-IX-MIOTY-BSX-BM</td>
+        <td>INDUSTRIAL JUNO IP69k Betriebsstundenzähler mit Magnetfeldsensor mioty®</td>
+      </tr>
+      <tr>
+        <td>S-JUNO-IX-NBM1-BSX-BM</td>
+        <td>INDUSTRIAL JUNO IP69k Betriebsstundenzähler mit Magnetfeldsensor Cellular</td>
+      </tr>
+      <tr>
+        <td>S-JUNO-IX-LOEU-BSX-BM-TH</td>
+        <td>INDUSTRIAL JUNO IP67 Betriebsstundenzähler und TH Sensor, Temperatur und rel. Luftfeuchtigkeit mit Magnetfeldsensor LoRaWAN® – nur auf Anfrage und MOQ erhältlich</td>
+      </tr>
+      <tr>
+        <td>S-JUNO-IX-MIOTY-BSX-BM-TH</td>
+        <td>INDUSTRIAL JUNO IP67 Betriebsstundenzähler und TH Sensor, Temperatur und rel. Luftfeuchtigkeit mit Magnetfeldsensor mioty® – nur auf Anfrage und MOQ erhältlich</td>
+      </tr>
+      <tr>
+        <td>S-JUNO-IX-NBM1-BSX-BM-TH</td>
+        <td>INDUSTRIAL JUNO IP67 Betriebsstundenzähler und TH Sensor, Temperatur und rel. Luftfeuchtigkeit mit Magnetfeldsensor Cellular – nur auf Anfrage und MOQ erhältlich</td>
+      </tr>
+      <tr>
+        <td>S-JUNO-IX-LOEU-BSX</td>
+        <td>INDUSTRIAL JUNO IP69k Betriebsstundenzähler und TH Sensor, Temperatur und rel. Luftfeuchtigkeit mit Magnetfeldsensor LoRaWAN®</td>
+      </tr>
+      <tr>
+        <td>S-JUNO-IX-MIOTY-BSX</td>
+        <td>INDUSTRIAL JUNO IP69k Betriebsstundenzähler mit Vibrations- und Magnetfeldsensor mioty®</td>
+      </tr>
+      <tr>
+        <td>S-JUNO-IX-NBM1-BSX</td>
+        <td>INDUSTRIAL JUNO IP69k Betriebsstundenzähler mit Vibrations- und Magnetfeldsensor Cellular</td>
+      </tr>
+      <tr>
+        <td>S-JUNO-IX-LOEU-BSX-TH</td>
+        <td>INDUSTRIAL JUNO IP67 Betriebsstundenzähler mit Vibrations- und Magnetfeldsensor LoRaWAN® – nur auf Anfrage und MOQ erhältlich</td>
+      </tr>
+      <tr>
+        <td>S-JUNO-IX-MIOTY-BSX-TH</td>
+        <td>INDUSTRIAL JUNO IP67 Betriebsstundenzähler mit Vibrations- und Magnetfeldsensor mioty® – nur auf Anfrage und MOQ erhältlich</td>
+      </tr>
+      <tr>
+        <td>S-JUNO-IX-NBM1-BSX-TH</td>
+        <td>INDUSTRIAL JUNO IP67 Betriebsstundenzähler mit Vibrations- und Magnetfeldsensor Cellular – nur auf Anfrage und MOQ erhältlich</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- LOGO -->
+<div class="figure" style="margin-top:32px; text-align:center;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/9273604021912e0c2963d418d14c45dce9cf2e15/Juno_BSX/Juno_BSX_Payload/Pic/logo_JUNO_BSX.png"
+    alt="JUNO BSX Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
+</div>
+
+<!-- FOOTER -->
+<div class="footer-note">
+  <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+  <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
+  </p>
+</div>
+
+</div>
+</body>
+</html>
