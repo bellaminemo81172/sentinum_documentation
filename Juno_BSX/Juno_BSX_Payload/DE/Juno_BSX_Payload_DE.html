@@ -1,0 +1,650 @@
+
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+
+<!-- ✅ DEIN CSS – 1:1 ÜBERNOMMEN -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+  --blue-bg:#f7fbff;
+  --blue-border:#d6e4fa;
+  --blue-text:#1a3e8c;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+}
+
+/* Base */
+body{
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+}
+
+/* Headings */
+h1{
+  margin:48px 0 16px;
+  padding-bottom:12px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:42px;
+  font-weight:700;
+  border-bottom:2px solid var(--border);
+}
+
+h3{
+  margin:32px 0 12px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:120px;
+}
+
+/* NOTE STRIPS */
+.note-strip{
+  padding:14px 16px;
+  margin:18px 0;
+  border-radius:6px;
+  border-left-width:6px;
+  border-left-style:solid;
+}
+.note-strip--red{background:#fdecea;border-left-color:#d32f2f;}
+.note-strip--yellow{background:#fff8e1;border-left-color:#f9a825;}
+.note-strip--green{background:#e8f5e9;border-left-color:#2e7d32;}
+.note-strip ul{margin:0;padding-left:20px;}
+.note-strip li{margin:4px 0;}
+
+p{margin:8px 0 12px}
+
+/* Tables */
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+  table-layout:fixed;
+}
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid #000;
+}
+
+/* TOC */
+.main-toc{
+  max-width:900px;
+  margin:24px auto 40px;
+  padding:16px 20px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+}
+.main-toc strong{display:block;margin-bottom:8px;}
+.main-toc ul{list-style:none;padding:0;margin:0;}
+.main-toc li{margin:.35rem 0;}
+.main-toc a{color:var(--blue-text);font-weight:600;text-decoration:none;}
+
+/* PDF */
+.pdf-container{
+  width:100%;
+  max-width:900px;
+  height:600px;
+  margin:24px auto 12px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  overflow:hidden;
+}
+.pdf-info{
+  max-width:900px;
+  margin:8px auto 32px;
+  padding:10px 14px;
+  background:#f8fbff;
+  border:1px solid #b6d4fe;
+  border-radius:6px;
+  text-align:center;
+}
+.pdf-info a{color:#2563eb;font-weight:600;text-decoration:underline;}
+.figure{
+  max-width:900px;
+  margin:24px auto;
+}
+.figure img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+/* ✅ NUR Payload-Tabelle: schöne Spalten + saubere Wörter */
+table.payload-layout{
+  table-layout: auto;
+}
+
+table.payload-layout th,
+table.payload-layout td{
+  white-space: normal;
+  word-break: normal;        /* 🔑 verhindert Buchstaben-Zerhacken */
+  overflow-wrap: break-word; /* ✅ bricht nur bei langen technischen Tokens */
+  hyphens: none;
+}
+/* Payload-Tabelle: saubere Spalten */
+table.payload-layout{
+  table-layout: auto;
+}
+
+table.payload-layout th,
+table.payload-layout td{
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: none;
+  vertical-align: top;
+}
+
+/* Inline-Code: graue Boxen wie im Screenshot */
+table.payload-layout code{
+  background-color:#f3f4f6;
+  border:1px solid #d0d7de;
+  border-radius:4px;
+  padding:3px 6px;
+  font-family:SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;
+  font-size:0.9em;
+  color:#111827;
+  display:inline-block;
+  margin-top:4px;
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- ✅ PDF VIEWER -->
+<div class="pdf-container">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/9273604021912e0c2963d418d14c45dce9cf2e15/Juno_BSX/Juno_BSX_Payload/DE/Juno_LOEU_BSX_Payload_Beschreibung_DE.pdf"
+    style="width:100%;height:100%;border:none;"
+    title="Juno BSX Payload Beschreibung DE">
+  </iframe>
+</div>
+
+<div class="pdf-info">
+  📄 Sie können das PDF oben ansehen oder
+  <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/9273604021912e0c2963d418d14c45dce9cf2e15/Juno_BSX/Juno_BSX_Payload/DE/Juno_LOEU_BSX_Payload_Beschreibung_DE.pdf" target="_blank">
+    hier herunterladen
+  </a>.
+</div>
+
+<!-- ✅ INHALTSVERZEICHNIS -->
+<div class="main-toc">
+  <strong>Inhaltsverzeichnis</strong>
+  <ul>
+    <li><a href="#intro">1. Allgemeine Beschreibung</a></li>
+    <li><a href="#begriffe">2. Begriffserklärung</a></li>
+    <li><a href="#modulschluessel">3. Struktur des Modulschlüssels</a></li>
+    <li><a href="#uplink">4. Uplink Beispiel</a></li>
+    <li><a href="#ports">5. Portbelegung</a></li>
+    <li><a href="#decoder">6. Dekodierung</a></li>
+    <li><a href="#payload">7. Juno BSX Payload Feldbeschreibung</a></li>
+  </ul>
+</div>
+<h3 id="intro">1. Allgemeine Beschreibung</h3>
+<p>In diesem Kapitel wird die Struktur der Telemetriedaten beschrieben. Die Anzahl der Bytes in der Payload hängt von der Konfiguration des Sensors ab. Der Aufbau der Daten hängt davon ab, welche Sensoren in Ihrem Produkt vorhanden sind. Im Prinzip hat jede Version einen Header. Dieser hat Informationen über die Version und den Status des Sensors und enthält außerdem einen Master-Messwert. Dieser Messwert kann einfach als der aktuelle Messwert angenommen werden. Nach dem Header folgt ein zusätzlicher Payload-Teil, der weitere Informationen enthält, wie z. B. spezielle Parameter für das Messprinzip oder Einstellungen zur Positions- und Öffnungserkennung. Nicht jeder Sensor hat einen zusätzlichen Payload-Teil.</p>
+<h3>2. Begriffserklärung</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Begriffe</th>
+      <th>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Byte No.</strong></td>
+      <td>Byte Nummer beginnend bei 1</td>
+    </tr>
+    <tr>
+      <td><strong>Alias</strong></td>
+      <td>Verständlicher Name der Variablen</td>
+    </tr>
+    <tr>
+      <td><strong>Beschreibung</strong></td>
+      <td>Beschreibung der Variablen</td>
+    </tr>
+    <tr>
+      <td><strong>Bezeichnung</strong></td>
+      <td>Bezeichnung im Dataconverter</td>
+    </tr>
+    <tr>
+      <td><strong>Einheit</strong></td>
+      <td>Einheit der Variablen</td>
+    </tr>
+    <tr>
+      <td><strong>Datahub .json Schlüssel</strong></td>
+      <td>Schlüssel im .json bei Nutzung des Datahubs</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h3 id="modulschluessel">3. Struktur des Modulschlüssels</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="2">Byte 1</th>
+      <th colspan="2">Byte 2</th>
+    </tr>
+    <tr>
+      <th>Bit 7 – 4</th>
+      <th>Bit 3 – 0</th>
+      <th>Bit 7 – 4</th>
+      <th>Bit 3 – 0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <strong>Basis‑ID‑Modul</strong><br>
+        z.&nbsp;B. Sentiface, Senticom, Sentivisor
+      </td>
+      <td>
+        <strong>Major Version</strong><br>
+        (SW/HW Version)
+      </td>
+      <td>
+        <strong>Minor Version</strong><br>
+        (SW/HW Version)
+      </td>
+      <td>
+        <strong>Produkt Version</strong><br>
+        (Sensoren, z.&nbsp;B. TH, THL, ACC, …)
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+<p>Der Modulschlüssel des SENTIFACE-Moduls kann aus den ersten 2 Bytes jedes Uplinks entnommen werden. Der Modulschlüssel wird für den Downlink benötigt.</p>
+
+<h3 id="uplink">4. Uplink Beispiel (nicht für JUNO anwendbar)</h3>
+
+<div class="figure" style="max-width:900px; margin:32px auto;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/0ed4dcb7e3bfeefe80b1a6adbeb2b46ccebe53ce/Juno_BSX/Juno_BSX_Payload/Pic/Juno_BSX_pic1_UplinkBeispiel.png"
+    alt="Abbildung 1: Beispiel eines Uplink‑Payloads (Helios Drucksensor)"
+    style="width:100%; height:auto; display:block;"
+    loading="lazy"
+  >
+  <p><em>Abbildung&nbsp;1: Beispiel eines Uplink‑Payloads (Helios Drucksensor)</em></p>
+</div>
+
+
+
+
+
+<h3 id="ports">5. Portbelegung für WIFI SSID SCAN Payload, GNSS SCAN Payload und reguläre Payload</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>LoRaWAN Port</th>
+      <th>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GNSS Scan Payload</td>
+      <td>192</td>
+      <td>
+        Rohdaten (Satelliten‑ID, Zeit, etc.) werden zum Geolocation‑Backend gesendet.
+      </td>
+    </tr>
+    <tr>
+      <td>WIFI SSID Scan Payload</td>
+      <td>197</td>
+      <td>
+        Gescannte MAC‑Adressen + RSSI‑Daten werden zur Ortung übertragen.
+      </td>
+    </tr>
+    <tr>
+      <td>Reguläre Telemetrie Daten</td>
+      <td>1</td>
+      <td>
+        Reguläre Payload‑Daten des Sensors, z. B. Temperatur, rel. Luftfeuchtigkeit,
+        Winkel, Batteriespannung etc.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Beispiel für der WIFI SSID Scan Payload:</strong></p>
+
+<div class="figure" style="max-width:400px; margin:20px 0;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/main/Juno_BSX/Juno_BSX_Payload/Pic/Juno_BSX_pic2_WIFISSIDBeispiel.webp"
+    alt="Abbildung 2: Beispiel eines WIFI‑SSID‑Scan‑Payloads"
+    style="width:100%; height:auto; display:block;"
+    loading="lazy"
+  >
+  <p style="text-align:left;">
+    <em>Abbildung&nbsp;2: Beispiel eines WIFI‑SSID‑Scan‑Payloads</em>
+  </p>
+</div>
+
+ <h3 id="decoder">6. Dekodierung der WIFI SSID SCAN und GNSS SCAN Daten</h3>
+
+<p>
+  Für die Dekodierung der WIFI SSID SCAN und GNSS SCAN Daten können folgende Provider empfohlen werden:
+</p>
+
+<ul>
+  <li>Semtech LoRa Cloud (abgekündigt Ende Juli&nbsp;2025)</li>
+  <li>AWS</li>
+  <li>Tencent</li>
+  <li>Traxmate</li>
+  <li>Sentinum</li>
+</ul>
+
+<p>
+  Für On‑Prem‑Applikationen können lokale Datenbanken verwendet werden.
+</p>
+
+ <h3 id="payload">Juno BSX Betriebsstundenzähler LoRaWAN Payload Beschreibung</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Artikel Code</th>
+      <th>Features</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>S-JUNO-iX-LOEU-BSX-BM</td>
+      <td>INDUSTRIAL JUNO IP69k Betriebsstundenzähler mit Magnetfeldsensor LoRaWAN®</td>
+    </tr>
+    <tr>
+      <td>S-JUNO-iX-MIOTY-BSX-BM</td>
+      <td>INDUSTRIAL JUNO IP69k Betriebsstundenzähler mit Magnetfeldsensor mioty®</td>
+    </tr>
+    <tr>
+      <td>S-JUNO-iX-NBM1-BSX-BM</td>
+      <td>INDUSTRIAL JUNO IP69k Betriebsstundenzähler mit Magnetfeldsensor Cellular</td>
+    </tr>
+    <tr>
+      <td>S-JUNO-iX-LOEU-BSX-BM-TH</td>
+      <td>
+        INDUSTRIAL JUNO IP67 Betriebsstundenzähler und TH Sensor, Temperatur und
+        rel. Luftfeuchtigkeit mit Magnetfeldsensor LoRaWAN®
+        <strong>– nur auf Anfrage und MOQ erhältlich</strong>
+      </td>
+    </tr>
+    <tr>
+      <td>S-JUNO-iX-MIOTY-BSX-BM-TH</td>
+      <td>
+        INDUSTRIAL JUNO IP67 Betriebsstundenzähler und TH Sensor, Temperatur und
+        rel. Luftfeuchtigkeit mit Magnetfeldsensor mioty®
+        <strong>– nur auf Anfrage und MOQ erhältlich</strong>
+      </td>
+    </tr>
+    <tr>
+      <td>S-JUNO-iX-NBM1-BSX-BM-TH</td>
+      <td>
+        INDUSTRIAL JUNO IP67 Betriebsstundenzähler und TH Sensor, Temperatur und
+        rel. Luftfeuchtigkeit mit Magnetfeldsensor Cellular
+        <strong>– nur auf Anfrage und MOQ erhältlich</strong>
+      </td>
+    </tr>
+    <tr>
+      <td>S-JUNO-iX-LOEU-BSX</td>
+      <td>
+        INDUSTRIAL JUNO IP69k Betriebsstundenzähler und TH Sensor,
+        Temperatur und rel. Luftfeuchtigkeit mit Magnetfeldsensor LoRaWAN®
+      </td>
+    </tr>
+    <tr>
+      <td>S-JUNO-iX-MIOTY-BSX</td>
+      <td>
+        INDUSTRIAL JUNO IP69k Betriebsstundenzähler mit Vibrations-
+        und Magnetfeldsensor mioty®
+      </td>
+    </tr>
+    <tr>
+      <td>S-JUNO-iX-NBM1-BSX</td>
+      <td>
+        INDUSTRIAL JUNO IP69k Betriebsstundenzähler mit Vibrations-
+        und Magnetfeldsensor Cellular
+      </td>
+    </tr>
+    <tr>
+      <td>S-JUNO-iX-LOEU-BSX-TH</td>
+      <td>
+        INDUSTRIAL JUNO IP67 Betriebsstundenzähler mit Vibrations-
+        und Magnetfeldsensor LoRaWAN®
+        <strong>– nur auf Anfrage und MOQ erhältlich</strong>
+      </td>
+    </tr>
+    <tr>
+      <td>S-JUNO-iX-MIOTY-BSX-TH</td>
+      <td>
+        INDUSTRIAL JUNO IP67 Betriebsstundenzähler mit Vibrations-
+        und Magnetfeldsensor mioty®
+        <strong>– nur auf Anfrage und MOQ erhältlich</strong>
+      </td>
+    </tr>
+    <tr>
+      <td>S-JUNO-iX-NBM1-BSX-TH</td>
+      <td>
+        INDUSTRIAL JUNO IP67 Betriebsstundenzähler mit Vibrations-
+        und Magnetfeldsensor Cellular
+        <strong>– nur auf Anfrage und MOQ erhältlich</strong>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h3>7. Juno BSX Payload‑Feldbeschreibung</h3>
+
+<table class="payload-layout">
+  <thead>
+    <tr>
+      <th>Byte Nummer</th>
+      <th>Alias Name</th>
+      <th>Beschreibung</th>
+      <th>Einheit</th>
+      <th>Bezeichnung im Payload Decoder</th>
+      <th>Modul‑schlüssel</th>
+      <th>Datahub .json Schlüssel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1 – 2</td>
+      <td>Modulschlüssel</td>
+      <td>
+        <strong>Byte 1:</strong><br>
+        • 4&nbsp;Bit MSB: Modulcode. Bei Mioty ausschließlich „Sentiface“
+        Telemetrie‑Modul, d.&nbsp;h. stets 0x1.<br>
+        • 4&nbsp;Bit LSB: Major Version. FW der gleichen Major‑Version aber
+        größerer Minor‑Version bleiben mit älteren Dekodern kompatibel.
+        Die Anzahl der Bytes kann sich aber ändern!<br><br>
+
+        <strong>Byte 2:</strong><br>
+        • 4&nbsp;Bit MSB: Minor Version. Neue SW‑Versionen fügen ggf.
+        inkrementell neue Telemetrie an das Datenpaket an.<br>
+        • 4&nbsp;Bit LSB: Sub‑ / Product Version. Bei Helios kodieren diese Bits
+        die konkrete Konfiguration angeschlossener Sensorik.
+      </td>
+      <td></td>
+      <td>module_key</td>
+      <td>XXX1</td>
+      <td>module_key</td>
+    </tr>
+
+    <tr>
+      <td>3</td>
+      <td>Uplink Zähler</td>
+      <td>
+        Protokoll‑unabhängiger Uplink‑Counter, der maximal bis 255 reicht.
+        Danach beginnt der Counter wieder bei 0.
+      </td>
+      <td></td>
+      <td>uplink_counter</td>
+      <td>XXX1</td>
+      <td>uplink_counter</td>
+    </tr>
+
+    <tr>
+      <td>4 – 5</td>
+      <td>Batterie Spannung</td>
+      <td>
+        Aktuelle Spannung der Batterie in Millivolt.<br>
+        Spannung in Volt:<br>
+        <code>battery_voltage = (dataBytes[3] &lt;&lt; 8 | dataBytes[4]) / 1000.0</code>
+      </td>
+      <td>mV</td>
+      <td>battery_voltage</td>
+      <td>XXX1</td>
+      <td>battery_voltage</td>
+    </tr>
+
+    <tr>
+      <td>6</td>
+      <td>Interne Temperatur</td>
+      <td>
+        Temperatur des Sensors:<br>
+        <code>internal_temperature = bytes[6] - 128</code><br>
+        Temperaturwert des Controllers,
+        ungenau ±2&nbsp;°C
+      </td>
+      <td>°C</td>
+      <td>internal_temperature</td>
+      <td>XXX1</td>
+      <td>internal_temperature</td>
+    </tr>
+
+    <tr>
+      <td>7 – 10</td>
+      
+ <td>Betriebszeit</td>
+  <td>
+    Betriebszeit in Sekunden bis Reset über Kommando oder Batteriewechsel
+  </td>
+  <td></td>
+  <td>operating_seconds</td>
+  <td>XXX1</td>
+  <td>operating_seconds</td>
+</tr>
+
+<tr>
+  <td>11 – 14</td>
+  <td>Zyklen</td>
+  <td>
+    Zyklen, wie oft die Maschine angelaufen ist bzw. gestartet wurde
+  </td>
+  <td></td>
+  <td>cycles</td>
+  <td>XXX1</td>
+  <td>Cycles</td>
+</tr>
+
+<tr>
+  <td>15 – 16</td>
+  <td>ON/OFF Rate</td>
+  <td>
+    Rate zwischen ON‑Zeit und OFF‑Zeit seit dem letzten Uplink,
+    z.&nbsp;B. 10&nbsp;(/100) &rarr; 0,1&nbsp;%
+  </td>
+  <td></td>
+  <td>utilization_rate</td>
+  <td>XXX1</td>
+  <td>utilization_rate</td>
+</tr>
+
+<tr>
+  <td>17</td>
+  <td>Aktivität</td>
+  <td>
+    Zeigt an, ob eine Aktivität festgestellt ist
+  </td>
+  <td></td>
+  <td>is_active</td>
+  <td>XXX1</td>
+  <td>is_active</td>
+</tr>
+
+<tr>
+  <td>18 – 19</td>
+  <td>Temperatur</td>
+  <td>
+    Genauer Temperaturwert:<br>
+    <code>
+      decoded.temperature =
+      ((bytes[idx++] &lt;&lt; 8) | bytes[idx++]) / 10 – 100
+    </code><br>
+    <strong>NUR BEI&nbsp;TH&nbsp;VERSION</strong>
+  </td>
+  <td>°C</td>
+  <td>temperature</td>
+  <td>XXX1</td>
+  <td>temperature</td>
+</tr>
+
+<tr>
+  <td>20</td>
+  <td>Rel. Luftfeuchtigkeit</td>
+  <td>
+    Relative Luftfeuchtigkeit<br>
+    <strong>NUR BEI&nbsp;TH&nbsp;VERSION</strong>
+  </td>
+  <td>%RH</td>
+  <td>humidity</td>
+  <td>XXX1</td>
+  <td>humidity</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- ✅ LOGO (AM ENDE, WIE GEFORDERT) -->
+<div class="figure" style="margin-top:32px; text-align:center;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/9273604021912e0c2963d418d14c45dce9cf2e15/Juno_BSX/Juno_BSX_Payload/Pic/logo_JUNO_BSX.png"
+    alt="JUNO BSX Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
+</div>
+
+<!-- ✅ FOOTER -->
+<div style="border-top:1px solid #d0d7de;margin-top:40px;padding-top:16px;font-size:.85rem;color:#6b7280;">
+</div>
+ <!-- FOOTER (DEUTSCH) -->
+    <div class="footer-note">
+      <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+      <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+      <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+      <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+      <p style="padding-left:14px; font-style:italic;">
+        Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
+      </p>
+    </div>
+
+
+
+</body>
+</html>
