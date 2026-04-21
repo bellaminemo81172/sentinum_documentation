@@ -1,0 +1,805 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+  --blue-bg:#f7fbff;
+  --blue-border:#d6e4fa;
+  --blue-text:#1a3e8c;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+}
+
+/* Base */
+body{
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+}
+
+/* Headings */
+h1{
+  margin:48px 0 16px;
+  padding-bottom:12px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:42px;
+  font-weight:700;
+  border-bottom:2px solid var(--border);
+}
+
+h3{
+  margin:32px 0 12px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:120px;
+}
+/* ===== FARBOXEN / STYLEBOXEN ===== */
+
+.note-strip{
+  padding: 14px 16px;
+  margin: 18px 0;
+  border-radius: 6px;
+  border-left-width: 6px;
+  border-left-style: solid;
+
+  font-family: "Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ROT – Warnung / Nicht montieren / Störeinflüsse */
+.note-strip--red{
+  background-color: #fdecea;
+  border-left-color: #d32f2f;
+}
+
+/* GELB – Hinweise / Sicherheit / Einflussfaktoren */
+.note-strip--yellow{
+  background-color: #fff8e1;
+  border-left-color: #f9a825;
+}
+
+/* GRÜN – Empfehlung / Best Practice */
+.note-strip--green{
+  background-color: #e8f5e9;
+  border-left-color: #2e7d32;
+}
+
+/* Inhalt in Boxen sauber ausrichten */
+.note-strip p{
+  margin: 0 0 8px;
+}
+
+.note-strip ul{
+  margin: 0;
+  padding-left: 20px;
+}
+
+.note-strip li{
+  margin: 4px 0;
+}
+
+/* Text */
+p{margin:8px 0 12px}
+
+/* Tables */
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+  table-layout: fixed;
+}
+
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid #000;
+}
+
+/* TOC (BLAUER KASTEN – FUNKTIONIERT) */
+.main-toc{
+  max-width:900px;
+  margin:24px auto 40px;
+  padding:16px 20px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+}
+
+.main-toc strong{
+  display:block;
+  margin-bottom:8px;
+}
+
+.main-toc ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.main-toc li{
+  margin:.35rem 0;
+}
+
+.main-toc a{
+  color:var(--blue-text);
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* ===== PDF VIEWER – FUNKTIONIERENDER ORIGINAL-STAND ===== */
+.pdf-container{
+  width:100%;
+  max-width:900px;
+  height:600px;
+  margin:24px auto 12px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  overflow:hidden;
+}
+
+/* Download-Hinweis unter dem PDF */
+.pdf-info{
+  max-width:900px;
+  margin:8px auto 32px;
+  padding:10px 14px;
+  background:#f8fbff;
+  border:1px solid #b6d4fe;
+  border-radius:6px;
+  text-align:center;
+  font-size:0.95rem;
+}
+
+.pdf-info a{
+  color:#2563eb;
+  font-weight:600;
+  text-decoration:underline;
+}
+</style>
+
+
+<body>
+
+
+<!-- PDF -->
+<div class="pdf-container">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/3c44cdc5d4b9918c8d52de5611e4ee3829cb4eeb/Juno_BSX/Juno_BSX_Betriebsanleitung/DE/Juno_BSX_Betriebsanleitung_Zus%C3%A4tzliche_Informationen_DE_V1.pdf"
+    style="width:100%; height:100%; border:none;"
+    title="JUNO BSX – Zusätzliche Informationen (DE)">
+  </iframe>
+</div>
+
+<div class="pdf-info">
+  📄 Sie können das PDF oben ansehen oder
+  <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/3c44cdc5d4b9918c8d52de5611e4ee3829cb4eeb/Juno_BSX/Juno_BSX_Betriebsanleitung/DE/Juno_BSX_Betriebsanleitung_Zus%C3%A4tzliche_Informationen_DE_V1.pdf" target="_blank">
+    hier herunterladen
+  </a>.
+</div>
+<div class="main-toc">
+  <strong>Inhaltsverzeichnis</strong>
+  <ul>
+    <li>
+      <a href="#produktversionen">1. Produktversionen</a>
+    </li>
+    <li>
+      <a href="#bm-versionen">
+       2. BM Versionen – elektrischer Magnetfeldsensor
+      </a>
+    </li>
+    <li>
+      <a href="#kennzeichnung-und-zertifizierung">
+       3. Kennzeichnung und Zertifizierung
+      </a>
+    </li>
+  </ul>
+</div>
+
+<h3>1. Produktversionen</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Artikel Code</th>
+      <th>Features</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>S-JUNO-iX-LOEU-BSX-BM</strong></td>
+      <td>INDUSTRIAL JUNO IP69k Betriebsstundenzähler mit Magnetfeldsensor LoRaWAN®</td>
+    </tr>
+    <tr>
+      <td><strong>S-JUNO-iX-MIOTY-BSX-BM</strong></td>
+      <td>INDUSTRIAL JUNO IP69k Betriebsstundenzähler mit Magnetfeldsensor mioty®</td>
+    </tr>
+    <tr>
+      <td><strong>S-JUNO-iX-NBM1-BSX-BM</strong></td>
+      <td>INDUSTRIAL JUNO IP69k Betriebsstundenzähler mit Magnetfeldsensor Cellular</td>
+    </tr>
+
+    <tr>
+      <td><strong>S-JUNO-iX-LOEU-BSX-BM-TH</strong></td>
+      <td>
+        INDUSTRIAL JUNO IP67 Betriebsstundenzähler und TH Sensor, Temperatur und rel. Luftfeuchtigkeit
+        mit Magnetfeldsensor LoRaWAN® – <strong>nur auf Anfrage und MOQ erhältlich</strong>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>S-JUNO-iX-MIOTY-BSX-BM-TH</strong></td>
+      <td>
+        INDUSTRIAL JUNO IP67 Betriebsstundenzähler und TH Sensor, Temperatur und rel. Luftfeuchtigkeit
+        mit Magnetfeldsensor mioty® – <strong>nur auf Anfrage und MOQ erhältlich</strong>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>S-JUNO-iX-NBM1-BSX-BM-TH</strong></td>
+      <td>
+        INDUSTRIAL JUNO IP67 Betriebsstundenzähler und TH Sensor, Temperatur und rel. Luftfeuchtigkeit
+        mit Magnetfeldsensor Cellular – <strong>nur auf Anfrage und MOQ erhältlich</strong>
+      </td>
+    </tr>
+
+    <tr>
+      <td><strong>S-JUNO-iX-LOEU-BSX</strong></td>
+      <td>
+        INDUSTRIAL JUNO IP69k Betriebsstundenzähler und TH Sensor, Temperatur und rel. Luftfeuchtigkeit
+        mit Magnetfeldsensor LoRaWAN®
+      </td>
+    </tr>
+    <tr>
+      <td><strong>S-JUNO-iX-MIOTY-BSX</strong></td>
+      <td>
+        INDUSTRIAL JUNO IP69k Betriebsstundenzähler mit Vibrations‑ und Magnetfeldsensor mioty®
+      </td>
+    </tr>
+    <tr>
+      <td><strong>S-JUNO-iX-NBM1-BSX</strong></td>
+      <td>
+        INDUSTRIAL JUNO IP69k Betriebsstundenzähler mit Vibrations‑ und Magnetfeldsensor Cellular
+      </td>
+    </tr>
+
+    <tr>
+      <td><strong>S-JUNO-iX-LOEU-BSX-TH</strong></td>
+      <td>
+        INDUSTRIAL JUNO IP67 Betriebsstundenzähler mit Vibrations‑ und Magnetfeldsensor LoRaWAN®
+        – <strong>nur auf Anfrage und MOQ erhältlich</strong>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>S-JUNO-iX-MIOTY-BSX-TH</strong></td>
+      <td>
+        INDUSTRIAL JUNO IP67 Betriebsstundenzähler mit Vibrations‑ und Magnetfeldsensor mioty®
+        – <strong>nur auf Anfrage und MOQ erhältlich</strong>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>S-JUNO-iX-NBM1-BSX-TH</strong></td>
+      <td>
+        INDUSTRIAL JUNO IP67 Betriebsstundenzähler mit Vibrations‑ und Magnetfeldsensor Cellular
+        – <strong>nur auf Anfrage und MOQ erhältlich</strong>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h3>2. BM Versionen – elektrischer Magnetfeldsensor</h3>
+
+<p>Die folgenden Informationen beziehen sich auf die Produktversionen (-BM) mit elektrischem Magnetfeldsensor.</p>
+
+<h3>2.1 Zusätzliche Sicherheitshinweise</h3>
+<p>Die allgemeinen Sicherheitshinweise für das Produkt entnehmen Sie bitte der Betriebsanleitung für den Juno</p>
+<p>Die folgenden Sicherheitshinweise beziehen sich auf die Produktversionen (-BM) mit elektrischem Magnetfeldsensor.</p>
+<div class="note-strip note-strip--red">
+  <ul>
+    <li>Keine Montage an spannungsführenden oder heißen Bauteilen.</li>
+    <li>Keine Installation in stark magnetisierten Bereichen (Permanentmagnete, Elektromagnete).</li>
+    <li>Vor der Inbetriebnahme sicherstellen, dass das System spannungsfrei ist.</li>
+    <li>Sensor darf nicht geöffnet oder modifiziert werden (Verlust der Kalibrierung).</li>
+  </ul>
+</div>
+<p><strong>Montagehinweise:</strong></p>
+
+<div class="note-strip note-strip--green">
+  <p><strong>Empfohlener Montageort:</strong></p>
+  <ul>
+    <li>Möglichst nahe am zu erfassenden Motor (&lt;5&nbsp;cm)</li>
+    <li>Unmagnetische, vibrationsarme Oberfläche</li>
+    <li>
+      Sensor‑Ausrichtung beliebig (3D‑Erfassung),
+      aber eine Achse möglichst radial zur Motorachse
+    </li>
+  </ul>
+</div>
+
+
+<div class="note-strip note-strip--red">
+  <p><strong>Nicht montieren:</strong></p>
+  <ul>
+    <li>Direkt auf ferromagnetischen Flächen oder dicken Stahlgehäusen (Abschirmung)</li>
+    <li>Neben Netzleitungen oder großen Transformatoren</li>
+  </ul>
+</div>
+
+
+<p><strong>Befestigung:</strong></p>
+<ul>
+  <li>
+    Schrauben, Clips oder Klebepad –
+    vibrationsfest und thermisch entkoppelt.
+  </li>
+</ul>
+
+<h3>2.2 Technische Funktionsweise</h3>
+
+<p>
+Der Betriebsstundenzähler nutzt Änderungen des Magnetfelds, die während des Betriebs einer Maschine oder eines Geräts entstehen, um Aktivitätsphasen automatisch zu erkennen.
+Dabei wird ein <strong>3-Achsen-Magnetfeldsensor</strong>, der permanent oder periodisch das lokale Magnetfeld misst, eingesetzt.
+
+</p>
+<p>Sobald eine charakteristische Magnetfeldänderung detektiert wird – z. B. durch das Einschalten eines Motors, durch rotierende Teile oder durch Stromfluss im Umfeld – interpretiert die Elektronik dies als „Betriebszustand aktiv“.
+Diese Aktivzeiten werden zeitlich integriert und ergeben die kumulierten <strong>Betriebsstunden</strong>.
+</p>
+
+<ul>
+  <li>
+    Der Sensor misst kontinuierlich die Magnetfeldkomponenten
+    <strong>Bx, By, Bz</strong> in µT.
+  </li>
+
+  <li>
+    Die Abtastrate kann dynamisch angepasst werden
+    (z. B. 10 Hz bis 100 Hz), je nach gewünschter Reaktionszeit
+    und Energieverbrauch.
+  </li>
+
+  <li>
+    Der Mikrocontroller oder ein nachgeschalteter Signalprozessor
+    analysiert die Rohdaten.
+  </li>
+
+  <li>
+    Überwachung typischer Aktivitätsindikatoren:
+    <ul>
+      <li>
+        <strong>Magnetfeldamplitudenänderung</strong> über einem definierten Schwellwert
+      </li>
+      <li>
+        <strong>Frequenzanalyse</strong> (z. B. periodische Schwankungen bei rotierenden Teilen)
+      </li>
+      <li>
+        <strong>Rausch‑ oder Vibrationsmuster</strong> im Magnetfeldsignal
+      </li>
+      <li>
+        Erkennt das System über einen definierten Zeitraum ein konsistentes
+        Aktivmuster, wird der Status auf <em>„aktiv“</em> gesetzt.
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    Während des aktiven Zustands läuft ein Timer oder eine Zeitbasis
+    (RTC oder MCU‑intern).
+  </li>
+
+  <li>
+    Die Laufzeit wird fortlaufend summiert und im
+    <strong>nichtflüchtigen Speicher</strong>
+    (EEPROM oder Flash) gesichert, sodass auch nach Stromverlust
+    keine Daten verloren gehen.
+  </li>
+
+  <li>
+    <strong>Kalibrierung / Störfeldkompensation:</strong>
+    <ul>
+      <li>
+        Eine initiale Kalibrierung kompensiert den lokalen
+        Erdmagnetfeld‑Offset.
+      </li>
+      <li>
+        Langfristige Drift oder externe Magnetfelder können über
+        <strong>adaptive Filter</strong> korrigiert werden.
+      </li>
+      <li>
+        Optional kann der Zähler auch über ein Kalibriersignal
+        (z. B. „known off state“) neu justiert werden.
+      </li>
+    </ul>
+  </li>
+</ul>
+<table>
+  <thead>
+    <tr>
+      <th>Anwendung</th>
+      <th>Erkennungsprinzip</th>
+      <th>Vorteil</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Elektromotoren</strong></td>
+      <td>Magnetfeldänderung durch Drehfeld</td>
+      <td>Kein zusätzlicher Stromsensor nötig</td>
+    </tr>
+    <tr>
+      <td><strong>Ventile, Aktoren</strong></td>
+      <td>Magnetfeld bei Spulenaktivierung</td>
+      <td>Direkte Aktivitätserkennung möglich</td>
+    </tr>
+    <tr>
+      <td><strong>Maschinenaggregate</strong></td>
+      <td>Magnetische Vibration / Feldfluktuation</td>
+      <td>Robust gegenüber Vibration und Lärm</td>
+    </tr>
+    <tr>
+      <td><strong>Retrofit‑Lösungen</strong></td>
+      <td>Externe Magnetfeldänderung</td>
+      <td>Kontaktlos, einfache Nachrüstung</td>
+    </tr>
+  </tbody>
+</table>
+<h3>2.3 Einsatzmöglichkeiten und Anwendungsbeispiele</h3>
+<p><strong>Elektromechanische Antriebe</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Gerät / Komponente</th>
+      <th>Erfassungsprinzip</th>
+      <th>Bemerkung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Elektromotoren (DC/AC/BLDC)</strong></td>
+      <td>Magnetfeldänderung durch Drehfeld oder Kommutierung</td>
+      <td>Standardanwendung, hohe Signalstabilität</td>
+    </tr>
+    <tr>
+      <td><strong>Lichtmaschinen / Generatoren</strong></td>
+      <td>Magnetisches Wechselfeld bei Stromerzeugung</td>
+      <td>Erkennung des Lade‑ oder Betriebszustands</td>
+    </tr>
+    <tr>
+      <td><strong>Ventilatoren / Lüfter</strong></td>
+      <td>Drehfeld oder magnetische Impulse</td>
+      <td>Laufzeitüberwachung, Wartungsintervallsteuerung</td>
+    </tr>
+    <tr>
+      <td><strong>Pumpen (elektrisch angetrieben)</strong></td>
+      <td>Feldänderung durch Motorrotation</td>
+      <td>Kontaktlose Betriebsüberwachung</td>
+    </tr>
+    <tr>
+      <td><strong>Kompressoren</strong></td>
+      <td>Magnetfeldänderung im Antrieb</td>
+      <td>Einsatz in Kälte‑ und Drucklufttechnik möglich</td>
+    </tr>
+    <tr>
+      <td><strong>Elektromagnet‑Kupplungen</strong></td>
+      <td>Magnetfeld bei Aktivierung</td>
+      <td>Präzise Erfassung der Einschaltzyklen</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>Elektromagnetische Aktoren</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Gerät / Komponente</th>
+      <th>Erfassungsprinzip</th>
+      <th>Bemerkung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Ventile (z.&nbsp;B. Magnetventile)</strong></td>
+      <td>Magnetfeld der Spule bei Aktivierung</td>
+      <td>Exakte Schaltzeiterfassung möglich</td>
+    </tr>
+    <tr>
+      <td><strong>Relais / Schütze</strong></td>
+      <td>Feldimpuls beim Anziehen der Spule</td>
+      <td>Zählung von Schaltzyklen</td>
+    </tr>
+    <tr>
+      <td><strong>Hubmagnete / Linearantriebe</strong></td>
+      <td>Feldänderung bei Bewegung</td>
+      <td>Nutzung in Industrieautomation oder Fahrzeugtechnik</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>Energieerzeugnung & -verteilung</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Gerät / Komponente</th>
+      <th>Erfassungsprinzip</th>
+      <th>Bemerkung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Lichtmaschine (Automotive)</strong></td>
+      <td>Induziertes Feld bei Stromerzeugung</td>
+      <td>Laufzeitdetektion ohne Eingriff in Bordnetz</td>
+    </tr>
+    <tr>
+      <td><strong>Transformatoren</strong></td>
+      <td>Magnetische Streufelder bei Last</td>
+      <td>Kontaktlose Betriebsüberwachung möglich</td>
+    </tr>
+    <tr>
+      <td><strong>Wechselrichter / Umrichter</strong></td>
+      <td>Feldänderung durch Induktionsspulen</td>
+      <td>Diagnose und Laufzeitüberwachung</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>Haushalts‑ und Industriegeräte</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Gerät / Komponente</th>
+      <th>Erfassungsprinzip</th>
+      <th>Bemerkung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Elektrowerkzeuge (Bohrmaschinen, Sägen etc.)</strong></td>
+      <td>Magnetfeldänderung durch Motoraktivität</td>
+      <td>Nutzungszeittracking für Leihgeräte oder Wartung</td>
+    </tr>
+    <tr>
+      <td><strong>Staubsauger / Gebläse / Heizlüfter</strong></td>
+      <td>Drehfeld des Motors</td>
+      <td>Laufzeit‑ oder Wartungsüberwachung</td>
+    </tr>
+    <tr>
+      <td><strong>Induktionsheizungen</strong></td>
+      <td>Magnetisches Wechselfeld bei Aktivierung</td>
+      <td>Laufzeitmessung, Energieprotokollierung</td>
+    </tr>
+    <tr>
+      <td><strong>Kühlaggregate / Klimaanlagen</strong></td>
+      <td>Kompressorfeld + Lüfterfeld</td>
+      <td>Kombinierte Überwachung möglich</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>Fahrzeug‑ und Maschinenbau</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Gerät / Komponente</th>
+      <th>Erfassungsprinzip</th>
+      <th>Bemerkung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Startergeneratoren / E‑Maschinen</strong></td>
+      <td>Drehfeld oder Stromfluss</td>
+      <td>Betriebsdauer‑ und Wartungszähler</td>
+    </tr>
+    <tr>
+      <td><strong>Hydraulikpumpen mit E‑Antrieb</strong></td>
+      <td>Magnetfeldänderung durch Motor</td>
+      <td>Laufzeitüberwachung in mobilen Maschinen</td>
+    </tr>
+    <tr>
+      <td><strong>Förderbänder / Antriebsrollen</strong></td>
+      <td>Magnetfeldänderung im Antrieb</td>
+      <td>Laufzeit‑ oder Zyklenüberwachung</td>
+    </tr>
+    <tr>
+      <td><strong>Land‑ und Baumaschinenaggregate</strong></td>
+      <td>Magnetfeld oder Vibrationssignatur</td>
+      <td>Robust gegen Umgebungseinflüsse</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>Sonstige Anwendungen</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Gerät / Komponente</th>
+      <th>Erfassungsprinzip</th>
+      <th>Bemerkung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Solarnachführsysteme (Tracking Drives)</strong></td>
+      <td>Magnetfeldänderung durch Motorbewegung</td>
+      <td>Betriebsüberwachung bei PV‑Systemen</td>
+    </tr>
+    <tr>
+      <td><strong>Windkraft‑Nebenantriebe (Yaw‑/Pitch‑Systeme)</strong></td>
+      <td>Feldänderung bei Motorbewegung</td>
+      <td>Betriebsstunden‑Logging für Wartung</td>
+    </tr>
+    <tr>
+      <td><strong>Magnetlager / Magnetbremsen</strong></td>
+      <td>Feldänderung bei Aktivierung</td>
+      <td>Laufzeitmessung von Funktionszyklen</td>
+    </tr>
+  </tbody>
+</table>
+<h3>2.4 Hinweise zur Anbringung</h3>
+<div class="note-strip note-strip--yellow">
+  <p><strong>Die Stärke und Reichweite dieses Feldes hängen von mehreren Faktoren ab:</strong></p>
+  <ul>
+    <li>Motortyp (DC, BLDC, Asynchron)</li>
+    <li>Gehäusematerial (magnetisch oder nichtmagnetisch)</li>
+    <li>Leistung und Stromfluss</li>
+    <li>Schirmung / Einbauumgebung</li>
+    <li>Position der Wicklungen und Magneten</li>
+  </ul>
+</div>
+<div class="note-strip note-strip--green">
+  <p>
+    <strong>
+      Als kleine Orientierung (wir empfehlen immer die Montage direkt am Apparat,
+      der überwacht werden soll, da das Störfeld von anderen Maschinen so minimiert wird):
+    </strong>
+  </p>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Motortyp</th>
+      <th>Typische Feldstärke (aktiv)</th>
+      <th>Empfohlener Sensorabstand</th>
+      <th>Bemerkung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Kleinmotor (z.&nbsp;B. Lüfter, Ventilator, &lt;100&nbsp;W)</strong></td>
+      <td>50–200&nbsp;µT</td>
+      <td><strong>5–20&nbsp;mm</strong></td>
+      <td>Direkte Nähe erforderlich, ggf. auf Motorgehäuse montieren</td>
+    </tr>
+    <tr>
+      <td><strong>Mittlere Motoren (Pumpen, Kompressoren, 100&nbsp;W–2&nbsp;kW)</strong></td>
+      <td>100–500&nbsp;µT</td>
+      <td><strong>20–50&nbsp;mm</strong></td>
+      <td>Gute Erkennbarkeit, auch bei Montage an Gehäuseflansch</td>
+    </tr>
+    <tr>
+      <td><strong>Große Industriemotoren (&gt;2&nbsp;kW)</strong></td>
+      <td>500&nbsp;µT – mehrere&nbsp;mT</td>
+      <td><strong>50–150&nbsp;mm</strong></td>
+      <td>Montage auch auf benachbartem Chassis möglich</td>
+    </tr>
+    <tr>
+      <td><strong>Magnetventile / Relais</strong></td>
+      <td>200–1000&nbsp;µT</td>
+      <td><strong>0–10&nbsp;mm</strong></td>
+      <td>Sensor direkt an der Spule platzieren</td>
+    </tr>
+    <tr>
+      <td><strong>Generator / Lichtmaschine</strong></td>
+      <td>500&nbsp;µT – 5&nbsp;mT</td>
+      <td><strong>20–100&nbsp;mm</strong></td>
+      <td>Ideal: Position mit minimaler Abschirmung (z.&nbsp;B. Enddeckel)</td>
+    </tr>
+  </tbody>
+</table>
+<div class="note-strip note-strip--green">
+  <p><strong>Empfohlener Montageort:</strong></p>
+  <ul>
+    <li>
+      <strong>Direkt am Motorgehäuse oder nahe der Wicklungen</strong>,
+      bevorzugt an einer ungeschirmten Stelle (nicht direkt hinter Stahlblech).
+    </li>
+    <li>
+      <strong>Nicht auf oder neben stromführenden Leitungen</strong>,
+      um Störfelder durch andere Quellen zu vermeiden.
+    </li>
+    <li>
+      <strong>Mechanisch stabil</strong>, vibrationsarm und geschützt vor direkter Wärmeabstrahlung.
+    </li>
+    <li>
+      <strong>Ausrichtung:</strong> Der Sensor misst 3D – die Orientierung ist unkritisch,
+      aber <strong>eine Achse sollte möglichst radial zum Motorfeld</strong> zeigen,
+      um den größten Effekt zu erfassen.
+    </li>
+    <li>
+      <strong>Befestigung:</strong>
+      z.&nbsp;B. über Schraube, Clip oder doppelseitiges Klebepad
+      mit thermischer Isolierung.
+    </li>
+  </ul>
+</div>
+
+
+
+<h3>2.5 Störeinflüsse</h3>
+<p>
+  Das Magnetfeld eines Motors nimmt mit zunehmender Entfernung
+  <strong>exponentiell bzw. nach 1/r³</strong> (Dipolfeld) ab.
+</p>
+
+<p>
+  Das bedeutet:
+</p>
+
+<div class="note-strip note-strip--red">
+  <p>
+    <strong>
+      Bereits wenige Zentimeter Abstand reduzieren das Signal eines Motors deutlich,
+    </strong>
+    während weiter entfernte Quellen kaum noch messbar sind.
+  </p>
+</div>
+
+<p>Aus daraus folgt:</p>
+
+<ul>
+  <li>
+    Wenn der Sensor <strong>nah am Zielmotor</strong>
+    (z.&nbsp;B. &lt;5&nbsp;cm) angebracht ist,
+    ist <strong>der Einfluss anderer Maschinen praktisch vernachlässigbar</strong>.
+  </li>
+  <li>
+    Entfernt sich der Sensor (&gt;10&nbsp;cm), kann das Nutzsignal
+    schnell schwächer werden und
+    <strong>stärkere externe Felder</strong>
+    (z.&nbsp;B. von größeren Motoren oder Transformatoren)
+    können sich überlagern.
+  </li>
+</ul>
+<h3>3. Kennzeichnung und Zertifizierung</h3>
+
+<!-- Erstes Bild direkt unter Punkt 3 -->
+<div style="margin:16px 0 12px;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d372ae57f065fbe65c937d4543c6db6ea492348e/Juno_BSX/Juno_BSX_Betriebsanleitung/pic/Juno_BSX_logo1.webp"
+    alt="JUNO BSX Zertifizierungslogos"
+    style="max-width:100%; height:auto;"
+    loading="lazy"
+  >
+</div>
+
+<!-- Zweites Zeichen linksbündig darunter -->
+<div style="margin:12px 0;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d372ae57f065fbe65c937d4543c6db6ea492348e/Juno_BSX/Juno_BSX_Betriebsanleitung/pic/Juno_BSX_logo2.png"
+    alt="Weitere Kennzeichnungen JUNO BSX"
+    style="height:auto; max-width:180px;"
+    loading="lazy"
+  >
+</div>
+<div style="border-top:1px solid #d0d7de;margin-top:40px;padding-top:16px;font-size:.85rem;color:#6b7280;">
+</div>
+ <!-- FOOTER (DEUTSCH) -->
+    <div class="footer-note">
+      <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+      <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+      <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+      <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+      <p style="padding-left:14px; font-style:italic;">
+        Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
+      </p>
+    </div>
+
+
+
+</body>
+</html>
