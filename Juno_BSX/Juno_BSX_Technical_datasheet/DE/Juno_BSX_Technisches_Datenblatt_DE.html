@@ -1,5 +1,5 @@
 <meta charset="UTF-8">
-<title>NYX – Technical Data Sheet</title>
+<title>JUNO BSX – Technisches Datenblatt</title>
 
 <style>
     /* ============================================================
@@ -136,10 +136,9 @@
       font-weight:700;
       border-bottom:2px solid var(--black);
     }
-    /* ---------- Unified table column widths ---------- */
-    
+
     table{
-      table-layout: fixed; /* Forces consistent column sizing */
+      table-layout: fixed;
       width:100%;
     }
     
@@ -181,168 +180,166 @@
     
     .footer-note p{ margin:0; }
 </style>
+
 <!-- PDF -->
 <div class="pdf-viewer">
-    <iframe src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/dd500e802b24aeb04f408bb35d96cacf4c1c00d9/Juno_BSX/Juno_BSX_Technical_datasheet/En/Juno_BSX_Technical_Datasheet_en-US.pdf" loading="lazy">
+    <iframe src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/0ed4dcb7e3bfeefe80b1a6adbeb2b46ccebe53ce/Juno_BSX/Juno_BSX_Technical_datasheet/DE/Juno_BSX_Technisches_Datenblatt_DE.pdf" loading="lazy">
     </iframe>
 </div>
 
 <div class="pdf-download">
-    📄 You can view the PDF above or
-    <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/dd500e802b24aeb04f408bb35d96cacf4c1c00d9/Juno_BSX/Juno_BSX_Technical_datasheet/En/Juno_BSX_Technical_Datasheet_en-US.pdf" target="_blank">
-    download it here
+    📄 Sie können das PDF oben ansehen oder
+    <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/0ed4dcb7e3bfeefe80b1a6adbeb2b46ccebe53ce/Juno_BSX/Juno_BSX_Technical_datasheet/DE/Juno_BSX_Technisches_Datenblatt_DE.pdf" target="_blank">
+    hier herunterladen
   </a>.
 </div>
+
 <!-- TOC -->
 <nav class="main-toc">
-    <h4>Table of Contents</h4>
+    <h4>Inhaltsverzeichnis</h4>
     <ul>
-        <li><a href="#versions">1. Versions</a></li>
-        <li><a href="#general">2. General Features</a></li>
-        <li><a href="#rf">3. Connectivity and RF Specification</a></li>
-        <li><a href="#magnetic">4. Magnetic Field Sensor Specification</a></li>
-        <li><a href="#vibration">5. Vibration Sensor Specification</a></li>
-        <li><a href="#temperature">6. Temperature Sensor Specification</a></li>
-        <li><a href="#humidity">7. Relative Humidity Sensor Specification</a></li>
-        <li><a href="#acceleration">8. Acceleration Sensor Temperature Specification</a></li>
-        <li><a href="#drawings">9. Technical Drawings</a></li>
+        <li><a href="#versionen">1. Versionen</a></li>
+        <li><a href="#allgemein">2. Allgemeine Eigenschaften</a></li>
+        <li><a href="#rf">3. Konnektivität und RF-Spezifikation</a></li>
+        <li><a href="#magnetfeld">4. Magnetfeldsensor-Spezifikation</a></li>
+        <li><a href="#schwingung">5. Schwingungssensor-Spezifikation</a></li>
+        <li><a href="#temperatur">6. Sensorspezifikation Temperatur</a></li>
+        <li><a href="#luftfeuchtigkeit">7. Sensorspezifikation rel. Luftfeuchtigkeit</a></li>
+        <li><a href="#beschleunigung">8. Sensorspezifikation Temperatur Beschleunigungssensor</a></li>
+        <li><a href="#zeichnung">9. Technische Zeichnung</a></li>
     </ul>
 </nav>
 
-<!-- SECTION: VERSIONS -->
-<h3 id="versions">Versions</h3>
+<!-- SECTION: VERSIONEN -->
+<h3 id="versionen">Versionen</h3>
 
 <div class="table-wrap">
     <table>
         <thead>
             <tr>
-                <th>Item Code</th>
+                <th>Artikel Code</th>
                 <th>Features</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>S-JUNO-IX-LOEU-BSX-BM</td>
-                <td>INDUSTRIAL JUNO IP69k operating hours counter with magnetic field sensor LoRaWAN®</td>
+                <td>INDUSTRIAL JUNO IP69k Betriebsstundenzähler mit Magnetfeldsensor LoRaWAN®</td>
             </tr>
             <tr>
                 <td>S-JUNO-IX-MIOTY-BSX-BM</td>
-                <td>INDUSTRIAL JUNO IP69k operating hours counter with magnetic field sensor mioty®</td>
+                <td>INDUSTRIAL JUNO IP69k Betriebsstundenzähler mit Magnetfeldsensor mioty®</td>
             </tr>
             <tr>
                 <td>S-JUNO-IX-NBM1-BSX-BM</td>
-                <td>INDUSTRIAL JUNO IP69k operating hours counter with magnetic field sensor Cellular</td>
+                <td>INDUSTRIAL JUNO IP69k Betriebsstundenzähler mit Magnetfeldsensor Cellular</td>
             </tr>
             <tr>
                 <td>S-JUNO-IX-LOEU-BSX-BM-TH</td>
-                <td>INDUSTRIAL JUNO IP67 operating hours counter and TH sensor (temperature and relative humidity) with magnetic field sensor LoRaWAN® – only available on request and MOQ</td>
+                <td>INDUSTRIAL JUNO IP67 Betriebsstundenzähler und TH Sensor, Temperatur und rel. Luftfeuchtigkeit mit Magnetfeldsensor LoRaWAN® – nur auf Anfrage und MOQ erhältlich</td>
             </tr>
             <tr>
                 <td>S-JUNO-IX-MIOTY-BSX-BM-TH</td>
-                <td>INDUSTRIAL JUNO IP67 operating hours counter and TH sensor (temperature and relative humidity) with magnetic field sensor mioty® – only available on request and MOQ</td>
+                <td>INDUSTRIAL JUNO IP67 Betriebsstundenzähler und TH Sensor, Temperatur und rel. Luftfeuchtigkeit mit Magnetfeldsensor mioty® – nur auf Anfrage und MOQ erhältlich</td>
             </tr>
             <tr>
                 <td>S-JUNO-IX-NBM1-BSX-BM-TH</td>
-                <td>INDUSTRIAL JUNO IP67 operating hours counter and TH sensor (temperature and relative humidity) with magnetic field sensor Cellular – only available on request and MOQ</td>
+                <td>INDUSTRIAL JUNO IP67 Betriebsstundenzähler und TH Sensor, Temperatur und rel. Luftfeuchtigkeit mit Magnetfeldsensor Cellular – nur auf Anfrage und MOQ erhältlich</td>
             </tr>
             <tr>
                 <td>S-JUNO-IX-LOEU-BSX</td>
-                <td>INDUSTRIAL JUNO IP69k operating hours counter with vibration and magnetic field sensor LoRaWAN®</td>
+                <td>INDUSTRIAL JUNO IP69k Betriebsstundenzähler und TH Sensor, Temperatur und rel. Luftfeuchtigkeit mit Magnetfeldsensor LoRaWAN®</td>
             </tr>
             <tr>
                 <td>S-JUNO-IX-MIOTY-BSX</td>
-                <td>INDUSTRIAL JUNO IP69k operating hours counter with vibration and magnetic field sensor mioty®</td>
+                <td>INDUSTRIAL JUNO IP69k Betriebsstundenzähler mit Vibrations- und Magnetfeldsensor mioty®</td>
             </tr>
             <tr>
                 <td>S-JUNO-IX-NBM1-BSX</td>
-                <td>INDUSTRIAL JUNO IP69k operating hours counter with vibration and magnetic field sensor Cellular</td>
+                <td>INDUSTRIAL JUNO IP69k Betriebsstundenzähler mit Vibrations- und Magnetfeldsensor Cellular</td>
             </tr>
             <tr>
                 <td>S-JUNO-IX-LOEU-BSX-TH</td>
-                <td>INDUSTRIAL JUNO IP67 operating hours counter with vibration and magnetic field sensor LoRaWAN® – only available on request and MOQ</td>
+                <td>INDUSTRIAL JUNO IP67 Betriebsstundenzähler mit Vibrations- und Magnetfeldsensor LoRaWAN® – nur auf Anfrage und MOQ erhältlich</td>
             </tr>
             <tr>
                 <td>S-JUNO-IX-MIOTY-BSX-TH</td>
-                <td>INDUSTRIAL JUNO IP67 operating hours counter with vibration and magnetic field sensor mioty® – only available on request and MOQ</td>
+                <td>INDUSTRIAL JUNO IP67 Betriebsstundenzähler mit Vibrations- und Magnetfeldsensor mioty® – nur auf Anfrage und MOQ erhältlich</td>
             </tr>
             <tr>
                 <td>S-JUNO-IX-NBM1-BSX-TH</td>
-                <td>INDUSTRIAL JUNO IP67 operating hours counter with vibration and magnetic field sensor Cellular – only available on request and MOQ</td>
+                <td>INDUSTRIAL JUNO IP67 Betriebsstundenzähler mit Vibrations- und Magnetfeldsensor Cellular – nur auf Anfrage und MOQ erhältlich</td>
             </tr>
         </tbody>
     </table>
 </div>
 
-<!-- SECTION: GENERAL FEATURES -->
-<h3 id="general">General Features</h3>
+<!-- SECTION: ALLGEMEINE EIGENSCHAFTEN -->
+<h3 id="allgemein">Allgemeine Eigenschaften</h3>
 
 <div class="table-wrap">
     <table>
         <thead>
             <tr>
-                <th>Feature</th>
-                <th>Value</th>
-                <th>Unit</th>
+                <th>Merkmal</th>
+                <th>Wert</th>
+                <th>Einheit</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Dimensions (L × W × H)</td>
+                <td>Dimensionen l×b×h</td>
                 <td>86 × 86 × 25</td>
                 <td>mm</td>
             </tr>
             <tr>
-                <td>Weight</td>
+                <td>Gewicht</td>
                 <td>&lt; 200</td>
                 <td>g</td>
             </tr>
             <tr>
-                <td>Operating temperature</td>
-                <td>
-                    -25 to +75 (please inquire about extended temperature range. Temperature range is limited by the maximum operating temperature of the primary cells)
-                </td>
+                <td>Betriebstemperatur</td>
+                <td>-25 bis +75 (erweiterter Temperaturbereich bitte anfragen. Temperaturbereich ist durch die maximale Betriebstemperatur der Primärzellen begrenzt)</td>
                 <td>°C</td>
             </tr>
             <tr>
-                <td>Maximum operating temperature (device)</td>
+                <td>Betriebstemperatur maximal Gerät</td>
                 <td>85</td>
                 <td>°C</td>
             </tr>
             <tr>
-                <td>Storage temperature (recommended)</td>
-                <td>15 to +30</td>
+                <td>Lagertemperatur (empfohlen)</td>
+                <td>15 bis +30</td>
                 <td>°C</td>
             </tr>
             <tr>
-                <td>Relative humidity during operation</td>
-                <td>5 to 99</td>
+                <td>Rel. Luftfeuchtigkeit im Betrieb</td>
+                <td>5 bis 99</td>
                 <td>%RH</td>
             </tr>
             <tr>
-                <td>IP rating</td>
-                <td>IP69k (TH version: IP67)</td>
+                <td>IP Rating</td>
+                <td>IP69k (TH Version IP67)</td>
                 <td></td>
             </tr>
             <tr>
-                <td>IK rating</td>
+                <td>IK Rating</td>
                 <td>TBD</td>
                 <td></td>
             </tr>
             <tr>
-                <td>Sensors</td>
-                <td>
-                    Magnetic field sensor, advanced acceleration sensor, temperature, relative humidity (optional), activity sensor
-                </td>
+                <td>Sensorik</td>
+                <td>Magnetfeldsensor, Beschleunigungssensor ADVANCED, Temperatur, rel. Luftfeuchtigkeit (optional), Aktivitätssensor</td>
                 <td></td>
             </tr>
             <tr>
-                <td>Traffic light function</td>
-                <td>No</td>
+                <td>Ampelfunktion</td>
+                <td>Nein</td>
                 <td></td>
             </tr>
             <tr>
-                <td>Acoustic alarm function</td>
-                <td>Yes, buzzer</td>
+                <td>Alarmfunktion akustisch</td>
+                <td>Ja, Buzzer</td>
                 <td></td>
             </tr>
             <tr>
@@ -356,256 +353,258 @@
                 <td></td>
             </tr>
             <tr>
-                <td>NFC / BLE antenna</td>
-                <td>Integrated</td>
+                <td>NFC / BLE Antenne</td>
+                <td>Integriert</td>
                 <td></td>
             </tr>
             <tr>
-                <td>RF antenna</td>
-                <td>Integrated</td>
+                <td>RF Antenne</td>
+                <td>Integriert</td>
                 <td></td>
             </tr>
             <tr>
                 <td>Accelerometer</td>
-                <td>Yes</td>
+                <td>Ja</td>
                 <td></td>
             </tr>
             <tr>
-                <td>Batteries</td>
-                <td>Primary cell, replaceable, AA</td>
+                <td>Batterien</td>
+                <td>Primärzelle, wechselbar, AA</td>
                 <td></td>
             </tr>
             <tr>
-                <td>Primary cell type</td>
+                <td>Primärzelle Typ</td>
                 <td>
                     <strong>LoRaWAN®, mioty®:</strong>
                     <ul>
-                        <li>2 × 3.6 V LiSOCl₂ (SAFT LS14500 recommended)</li>
+                        <li>2 × 3,6 V LiSOCl₂ (empfohlen SAFT LS14500)</li>
                     </ul>
                     <strong>Cellular:</strong>
                     <ul>
-                        <li>2 × 3 V LiMnO₂ spiral AA cell</li>
-                        <li>2 × 3.6 V LiSOCl₂ spiral AA cell</li>
+                        <li>2 × 3 V LiMnO₂ Spiral AA Zelle</li>
+                        <li>2 × 3,6 V LiSOCl₂ Spiral AA Zelle</li>
                     </ul>
                 </td>
                 <td></td>
             </tr>
             <tr>
-                <td>Housing color</td>
-                <td>S-JUNO-IX-XXXX silk gray</td>
+                <td>Gehäuse Farbe</td>
+                <td>S-JUNO-IX-XXXX seidengrau</td>
                 <td></td>
             </tr>
         </tbody>
     </table>
 </div>
-<!-- SECTION: CONNECTIVITY AND RF SPECIFICATION -->
-<h3 id="rf">Connectivity and RF Specification</h3>
+
+<!-- SECTION: KONNEKTIVITÄT UND RF SPEZIFIKATION -->
+<h3 id="rf">Konnektivität und RF-Spezifikation</h3>
 
 <div class="table-wrap">
     <table>
         <thead>
             <tr>
-                <th>Feature</th>
-                <th>Value</th>
-                <th>Unit</th>
+                <th>Merkmal</th>
+                <th>Wert</th>
+                <th>Einheit</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>RF standards</td>
+                <td>RF Standards</td>
                 <td></td>
                 <td>MHz</td>
             </tr>
             <tr>
-                <td>Frequency LoRaWAN® / mioty® (EU)</td>
+                <td>Frequenz LoRaWAN® / mioty® EU</td>
                 <td>868</td>
                 <td>MHz</td>
             </tr>
             <tr>
-                <td>Frequency mobile communications</td>
-                <td>Band 8, 20 (900 MHz, 800 MHz)</td>
-                <td>MHz</td>
+                <td>Frequenz Mobilfunk</td>
+                <td>Band 8, 20 (900 MHz, 800 MHz)</td>
+                <td>dBm</td>
             </tr>
             <tr>
-                <td>Transmission power LoRaWAN® / mioty® (EU)</td>
+                <td>Sendeleistung LoRaWAN® / mioty® EU</td>
                 <td>14</td>
                 <td>dBm</td>
             </tr>
             <tr>
-                <td>Transmission power NB-IoT</td>
+                <td>Sendeleistung NB-IoT</td>
                 <td>23</td>
                 <td>dBm</td>
             </tr>
             <tr>
-                <td>LoRa® MAC layer version</td>
+                <td>LoRa® MAC Layer Version</td>
                 <td>1.0.4</td>
                 <td></td>
             </tr>
         </tbody>
     </table>
 </div>
-<!-- SECTION: MAGNETIC FIELD SENSOR SPECIFICATION -->
-<h3 id="magnetic">Magnetic Field Sensor Specification</h3>
+
+<!-- SECTION: MAGNETFELDSENSOR -->
+<h3 id="magnetfeld">Magnetfeldsensor-Spezifikation</h3>
 
 <div class="table-wrap">
     <table>
         <thead>
             <tr>
-                <th>Feature</th>
-                <th>Value</th>
-                <th>Unit</th>
+                <th>Merkmal</th>
+                <th>Wert</th>
+                <th>Einheit</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Axes</td>
+                <td>Achsen</td>
                 <td>3</td>
                 <td></td>
             </tr>
             <tr>
-                <td>Measuring range</td>
+                <td>Messbereich</td>
                 <td>±2000</td>
                 <td>µT</td>
             </tr>
             <tr>
-                <td>Resolution</td>
-                <td>0.1</td>
+                <td>Auflösung</td>
+                <td>0,1</td>
                 <td>µT</td>
             </tr>
             <tr>
-                <td>Noise</td>
+                <td>Rauschen</td>
                 <td>450</td>
                 <td>nT RMS</td>
             </tr>
         </tbody>
     </table>
 </div>
-<!-- SECTION: VIBRATION SENSOR SPECIFICATION -->
-<h3 id="vibration">Vibration Sensor Specification</h3>
+
+<!-- SECTION: SCHWINGUNGSSENSOR -->
+<h3 id="schwingung">Schwingungssensor-Spezifikation</h3>
 
 <div class="table-wrap">
     <table>
         <thead>
             <tr>
-                <th>Feature</th>
-                <th>Value</th>
-                <th>Unit</th>
+                <th>Merkmal</th>
+                <th>Wert</th>
+                <th>Einheit</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Measuring range (FS)</td>
+                <td>Messbereich (FS)</td>
                 <td>±2 / ±4 / ±8 / ±16</td>
                 <td>g</td>
             </tr>
             <tr>
-                <td>Bandwidth</td>
-                <td>Up to 6.3</td>
+                <td>Bandbreite</td>
+                <td>Bis 6,3</td>
                 <td>kHz</td>
             </tr>
             <tr>
                 <td>ODR</td>
-                <td>26 667</td>
-                <td>Hz</td>
+                <td>26 667</td>
+                <td>kHz</td>
             </tr>
             <tr>
-                <td>Sensitivity</td>
-                <td>
-                    0.061 (±2 g), 0.122 (±4 g), 0.244 (±8 g), 0.488 (±16 g)
-                </td>
+                <td>Sensitivität</td>
+                <td>0,061 (±2 g), 0,122 (±4 g), 0,244 (±8 g), 0,488 (±16 g)</td>
                 <td>g</td>
             </tr>
             <tr>
-                <td>Zero‑g offset</td>
+                <td>Null-g-Offset</td>
                 <td>±60</td>
-                <td>mg</td>
+                <td>g</td>
             </tr>
         </tbody>
     </table>
 </div>
-<!-- SECTION: TEMPERATURE SENSOR SPECIFICATION -->
-<h3 id="temperature">Temperature Sensor Specification</h3>
+
+<!-- SECTION: SENSORSPEZIFIKATION TEMPERATUR -->
+<h3 id="temperatur">Sensorspezifikation Temperatur</h3>
 
 <div class="table-wrap">
     <table>
         <thead>
             <tr>
-                <th>Feature</th>
-                <th>Value</th>
-                <th>Unit</th>
+                <th>Merkmal</th>
+                <th>Wert</th>
+                <th>Einheit</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Measuring range</td>
-                <td>-40 to +125</td>
+                <td>Messbereich</td>
+                <td>-40 bis +125</td>
                 <td>°C</td>
             </tr>
             <tr>
-                <td>Drift (long-term)</td>
-                <td>&lt; 0.03</td>
-                <td>°C/year</td>
+                <td>Drift (Langzeit)</td>
+                <td>&lt; 0,03</td>
+                <td>°C/Jahr</td>
             </tr>
             <tr>
-                <td>Accuracy</td>
-                <td>±0.2</td>
+                <td>Genauigkeit</td>
+                <td>±0,2</td>
                 <td>°C</td>
             </tr>
             <tr>
-                <td>Resolution</td>
-                <td>0.1</td>
+                <td>Auflösung</td>
+                <td>0,1</td>
                 <td>°C</td>
             </tr>
             <tr>
-                <td>Repeatability</td>
-                <td>0.2</td>
+                <td>Wiederholgenauigkeit</td>
+                <td>0,2</td>
                 <td>°C</td>
             </tr>
         </tbody>
     </table>
 </div>
+
 <div class="figure">
     <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/9a784d6cda6d42fc9d0422bcc6f8495fa084c920/Juno_BSX/Juno_BSX_Technical_datasheet/relative_humidity.png" alt="HT_DS_Datasheet_SHT4x_5.pdf" />
-    <figcaption>
-        HT_DS_Datasheet_SHT4x_5.pdf
-    </figcaption>
+    <figcaption>HT_DS_Datasheet_SHT4x_5.pdf</figcaption>
 </div>
-<!-- SECTION: RELATIVE HUMIDITY SENSOR SPECIFICATION -->
-<h3 id="humidity">Relative Humidity Sensor Specification</h3>
+
+<!-- SECTION: SENSORSPEZIFIKATION REL. LUFTFEUCHTIGKEIT -->
+<h3 id="luftfeuchtigkeit">Sensorspezifikation rel. Luftfeuchtigkeit</h3>
 
 <div class="table-wrap">
     <table>
         <thead>
             <tr>
-                <th>Feature</th>
-                <th>Value</th>
-                <th>Unit</th>
+                <th>Merkmal</th>
+                <th>Wert</th>
+                <th>Einheit</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Measuring range</td>
-                <td>0 to +100</td>
+                <td>Messbereich</td>
+                <td>0 bis +100</td>
                 <td>%RH</td>
             </tr>
             <tr>
-                <td>Drift (long-term)</td>
-                <td>&lt; 0.25</td>
-                <td>%RH/year</td>
+                <td>Drift (Langzeit)</td>
+                <td>&lt; 0,25</td>
+                <td>%RH/Jahr</td>
             </tr>
             <tr>
-                <td>Accuracy</td>
-                <td>±1.8</td>
+                <td>Genauigkeit</td>
+                <td>±1,8</td>
                 <td>%RH</td>
             </tr>
             <tr>
-                <td>Resolution</td>
+                <td>Auflösung</td>
                 <td>1</td>
                 <td>%RH</td>
             </tr>
             <tr>
-                <td>Repeatability</td>
-                <td>0.25</td>
+                <td>Wiederholgenauigkeit</td>
+                <td>0,25</td>
                 <td>%RH</td>
             </tr>
         </tbody>
@@ -613,79 +612,73 @@
 </div>
 
 <div class="figure">
-    <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/1500f4bf878457d391662a4b8304b18e340467cc/Juno_BSX/Juno_BSX_Technical_datasheet/td%20pic%202.png" alt="Relative humidity sensor characteristics">
-    <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/1500f4bf878457d391662a4b8304b18e340467cc/Juno_BSX/Juno_BSX_Technical_datasheet/td%20pic%203.png" alt="Relative humidity sensor performance">
-    <figcaption>
-        HT_DS_Datasheet_SHT4x_5.pdf
-    </figcaption>
+    <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/1500f4bf878457d391662a4b8304b18e340467cc/Juno_BSX/Juno_BSX_Technical_datasheet/td%20pic%202.png" alt="Rel. Luftfeuchtigkeit Sensorkennlinie">
+    <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/1500f4bf878457d391662a4b8304b18e340467cc/Juno_BSX/Juno_BSX_Technical_datasheet/td%20pic%203.png" alt="Rel. Luftfeuchtigkeit Sensorleistung">
+    <figcaption>HT_DS_Datasheet_SHT4x_5.pdf</figcaption>
 </div>
-<!-- SECTION: ACCELERATION SENSOR TEMPERATURE SPECIFICATION -->
-<h3 id="acceleration">Acceleration Sensor Temperature Specification</h3>
+
+<p>Genauere Temperatursensoren auf Anfrage erhältlich.</p>
+
+<!-- SECTION: SENSORSPEZIFIKATION TEMPERATUR BESCHLEUNIGUNGSSENSOR -->
+<h3 id="beschleunigung">Sensorspezifikation Temperatur Beschleunigungssensor</h3>
 
 <div class="table-wrap">
     <table>
         <thead>
             <tr>
-                <th>Feature</th>
-                <th>Value</th>
-                <th>Unit</th>
+                <th>Merkmal</th>
+                <th>Wert</th>
+                <th>Einheit</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Measuring range</td>
-                <td>-40 to +85</td>
+                <td>Messbereich</td>
+                <td>-40 bis +85</td>
                 <td>°C</td>
             </tr>
             <tr>
-                <td>Accuracy</td>
-                <td>±0.8</td>
+                <td>Genauigkeit</td>
+                <td>±0,8</td>
                 <td>°C</td>
             </tr>
         </tbody>
     </table>
 </div>
 
-
-<p>More accurate temperature sensors available on request.</p>
-<!-- SECTION: TECHNICAL DRAWINGS -->
-<h3 id="drawings">Technical Drawings</h3>
+<!-- SECTION: TECHNISCHE ZEICHNUNG -->
+<h3 id="zeichnung">Technische Zeichnung</h3>
 
 <div class="figure">
-    <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/0ed4dcb7e3bfeefe80b1a6adbeb2b46ccebe53ce/Juno_BSX/Juno_BSX_Technical_datasheet/technical%20drawing%20juno%20%20BSX.png" alt="Technical drawing of JUNO BSX device">
-    <figcaption>
-        Technical drawing – JUNO BSX
-    </figcaption>
+    <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/0ed4dcb7e3bfeefe80b1a6adbeb2b46ccebe53ce/Juno_BSX/Juno_BSX_Technical_datasheet/technical%20drawing%20juno%20%20BSX.png" alt="Technische Zeichnung JUNO BSX">
+    <figcaption>Technische Zeichnung – JUNO BSX</figcaption>
 </div>
-<h4><strong>Position of magnetic switch</strong></h4>
+
+<h4><strong>Position Magnetschalter</strong></h4>
 
 <div class="figure">
-    <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/0ed4dcb7e3bfeefe80b1a6adbeb2b46ccebe53ce/Juno_BSX/Juno_BSX_Technical_datasheet/position%20of%20the%20magnetic%20switch.png" alt="Position of magnetic switch – JUNO BSX">
+    <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/0ed4dcb7e3bfeefe80b1a6adbeb2b46ccebe53ce/Juno_BSX/Juno_BSX_Technical_datasheet/position%20of%20the%20magnetic%20switch.png" alt="Position Magnetschalter – JUNO BSX">
 </div>
 
-<h4><strong>Orientation of the axes – acceleration sensor</strong></h4>
+<h4><strong>Orientierung der Achsen – Beschleunigungssensor</strong></h4>
 
 <div class="figure">
-    <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/0ed4dcb7e3bfeefe80b1a6adbeb2b46ccebe53ce/Juno_BSX/Juno_BSX_Technical_datasheet/ORIENTATION%20OF%20THE%20AXES%20ACCELERATION%20SENSOR.png" alt="Orientation of the axes – acceleration sensor">
+    <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/0ed4dcb7e3bfeefe80b1a6adbeb2b46ccebe53ce/Juno_BSX/Juno_BSX_Technical_datasheet/ORIENTATION%20OF%20THE%20AXES%20ACCELERATION%20SENSOR.png" alt="Orientierung der Achsen – Beschleunigungssensor">
 </div>
+
 <div class="figure">
     <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/0ed4dcb7e3bfeefe80b1a6adbeb2b46ccebe53ce/Juno_BSX/Juno_BSX_Betriebsanleitung/pic/Juno_BSX_logo1.webp" alt="JUNO BSX Logo 1">
-
 </div>
 <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/0ed4dcb7e3bfeefe80b1a6adbeb2b46ccebe53ce/Juno_BSX/Juno_BSX_Betriebsanleitung/pic/Juno_BSX_logo2.png" alt="JUNO BSX Logo 2" />
 
-
-
-
-
 <!-- DISCLAIMER -->
 <div class="footer-note">
-    <p>© Sentinum GmbH – All rights reserved.</p>
-    <p>All contents of this document, including text, tables and images, are protected by copyright and are the property of Sentinum GmbH.</p>
-    <p>All images are subject to the copyright of Sentinum GmbH unless otherwise stated.</p>
-    <p>Reproduction, distribution or use — even in part — is not permitted without explicit written permission.</p>
+    <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+    <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+    <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+    <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
     <p style="padding-left:14px; font-style:italic;">
-        Specifications subject to change. All information provided without warranty.
+        Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
     </p>
 </div>
 
