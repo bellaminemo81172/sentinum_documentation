@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JUNO TILT – NFC & Downlink Beschreibung</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+        
+        :root{
+          --black:#000000;
+          --text-main:#111827;
+          --text-muted:#6b7280;
+          --border:#d0d7de;
+          --table-header:#f5f7fa;
+          --blue-bg:#f0f8ff;
+          --blue-border:#a0c4ff;
+          --blue-text:#1a3e8c;
+          --toc-bg:#f7fbff;
+          --toc-border:#d6e4fa;
+        }
+        
+        *{ box-sizing:border-box; }
+        
+        body{
+          margin:0;
+          font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+          color:var(--text-main);
+          line-height:1.65;
+          background:#ffffff;
+        }
+        
+        .container{ width:100%; }
+        
+        /* Headings */
+        
+        h1{
+          margin:48px 0 16px;
+          padding-bottom:12px;
+          font-family:"Montserrat",Arial,sans-serif;
+          font-size:42px;
+          font-weight:700;
+          line-height:1.25;
+          color:#000;
+          border-bottom:2px solid var(--border);
+        }
+        
+        h2{
+          margin:14px 0 36px;
+          font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+          font-size:24px;
+          font-weight:500;
+          line-height:1.5;
+          color:var(--text-muted);
+        }
+        
+        h3{
+          margin:24px 0 8px;
+          padding-bottom:6px;
+          font-family:"Montserrat",Arial,sans-serif;
+          font-size:18px;
+          font-weight:600;
+          color:#000;
+          border-bottom:1.5px solid var(--border);
+          scroll-margin-top:100px;
+        }
+        
+        /* TOC */
+        
+        .main-toc{
+          max-width:900px;
+          margin:0 auto 40px;
+          padding:16px 20px;
+          background:var(--toc-bg);
+          border:1px solid var(--toc-border);
+          border-radius:6px;
+        }
+        
+        .main-toc ul{ list-style:none; padding:0; margin:0; }
+        .main-toc li{ margin:.3rem 0; }
+        .main-toc a{
+          color:var(--blue-text);
+          font-weight:600;
+          text-decoration:none;
+        }
+        /* ---------- PDF ---------- */
+        .pdf-viewer{
+          max-width:900px;
+          height:600px;
+          margin:0 auto 20px;
+          border:1px solid #ccc;
+          border-radius:6px;
+          overflow:hidden;
+        }
+        
+        .pdf-viewer iframe{
+          width:100%;
+          height:100%;
+          border:none;
+        }
+        
+        .pdf-download{
+          max-width:900px;
+          margin:0 auto 36px;
+          padding:14px 18px;
+          background:var(--blue-bg);
+          border:1px solid var(--blue-border);
+          border-radius:6px;
+          text-align:center;
+        }
+        
+        .pdf-download a{
+          color:var(--blue-text);
+          font-weight:600;
+        }
+        
+        /* Tables */
+        
+        .table-wrap{ margin:12px 0 32px; }
+        
+        table{
+          width:100%;
+          border-collapse:collapse;
+          font-size:14px;
+        }
+        
+        th,td{
+          border:1px solid var(--border);
+          padding:8px 12px;
+          vertical-align:top;
+        }
+        
+        th{
+          background:var(--table-header);
+          font-weight:700;
+          border-bottom:2px solid var(--black);
+        }
+        
+        /* Footer */
+        
+
+/* ---------- CE / WEEE LOGO ---------- */
+
+.logo-ce{
+  margin:16px 0;
+}
+
+.logo-ce img{
+  height:38px;
+  width:auto;
+  display:block;
+}
+/* ---------- RADIO TECHNOLOGIES LOGO ---------- */
+
+.logo-radio-tech{
+  margin:16px 0;
+}
+
+.logo-radio-tech img{
+  height:46px;
+  width:auto;
+  display:block;
+}
+
+/* ============================================================
+   LOGO STYLING (CERTIFICATIONS / TECHNOLOGIES)
+   ============================================================ */
+
+.doc-logos{
+  margin:24px 0;
+  display:flex;
+  gap:20px;
+  align-items:center;
+}
+
+.doc-logos img{
+  height:42px;      /* unified visual size */
+  width:auto;
+  display:block;
+}
+
+
+/* ---------- Footer ---------- */
+
+
+
+.footer-note{
+  margin-top:40px;
+  padding-top:16px;
+  border-top:1px solid var(--border);
+  font-size:.82rem;
+  color:var(--text-muted);
+}
+
+.footer-note p{
+  margin:0;
+}
+
+.footer-note p:last-child{
+  padding-left:14px;
+  font-style:italic;
+
+}
+
+/* ---------- Inline code ---------- */
+code{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size:0.95em;
+  padding:0.1em 0.35em;
+  border-radius:4px;
+  background:#f5f7fa;
+  border:1px solid var(--border);
+}
+</style>
+</head>
+<!-- ================= PDF VIEWER ================= -->
+<div class="pdf-viewer">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/53e0a7c4c65d7885b2b4322e7d99a1c401ca5493/Juno_TILT/Juno_ID_TILT_NFC_and_downlink_description/Juno_TILT_NFC_und_Downlinkbeschreibung_DE_1.0.1.pdf"
+    title="JUNO TILT – NFC & Downlink Beschreibung PDF">
+  </iframe>
+</div>
+
+<div class="pdf-download">
+  📄 Sie können das PDF oben ansehen oder
+  <a
+    href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/53e0a7c4c65d7885b2b4322e7d99a1c401ca5493/Juno_TILT/Juno_ID_TILT_NFC_and_downlink_description/Juno_TILT_NFC_und_Downlinkbeschreibung_DE_1.0.1.pdf"
+    target="_blank"
+    rel="noopener noreferrer">
+    hier herunterladen
+  </a>.
+</div>
+<!-- ================= TABLE OF CONTENTS ================= -->
+<nav class="main-toc">
+  <h4>Inhaltsverzeichnis</h4>
+  <ul>
+    <li><a href="#history">1. Versionshistorie</a></li>
+    <li><a href="#overview">2. Modulübersicht</a></li>
+    <li><a href="#timings">3. Timings Gruppe (0x00)</a></li>
+    <li><a href="#opening">4. Öffnungsdetektion Gruppe (0x02)</a></li>
+    <li><a href="#tilt">5. Neigungseinstellungen Gruppe (0x03)</a></li>
+    <li><a href="#examples">6. Beispiel Downlinks</a></li>
+  </ul>
+</nav>
+
+<!-- ================= VERSIONSHISTORIE ================= -->
+<h3 id="history">1. Versionshistorie</h3>
+
+<div class="table-wrap" style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>Version</th>
+        <th>Datum</th>
+        <th>Änderung</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1.0.0</td>
+        <td>18.02.2025</td>
+        <td>Erstellung</td>
+      </tr>
+      <tr>
+        <td>1.0.1</td>
+        <td>24.04.2026</td>
+        <td>Formatierung, Versionshistorie</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- ================= MODULÜBERSICHT ================= -->
+<h3 id="overview">2. Modulübersicht</h3>
+
+<div class="table-wrap" style="overflow-x:auto;">
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Modul</th>
+        <th>Modulschlüssel</th>
+        <th>Gruppe</th>
+        <th>Gruppen ID</th>
+        <th>Beschreibung</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Sentiface</td>
+        <td><code>0x1XXX</code></td>
+        <td>Timings</td>
+        <td><code>0x00</code></td>
+        <td>Definiert Parameter für Messungen und Übertragungsverhalten</td>
+      </tr>
+      <tr>
+        <td>Sentiface</td>
+        <td><code>0x1XXX</code></td>
+        <td>Einstellungen für die Öffnungsdetektion</td>
+        <td><code>0x02</code></td>
+        <td>
+          Definiert Messschwellen zum Auslösen des Alarms für Temperatur
+          und relative Luftfeuchtigkeit
+        </td>
+      </tr>
+      <tr>
+        <td>Sentiface</td>
+        <td><code>0x1XXX</code></td>
+        <td>Einstellungen für Neigungserkennung</td>
+        <td><code>0x03</code></td>
+        <td>Legt das Verhalten des Beschleunigungssensors fest</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<p>
+  Tabellen für produktübergreifende Module (Senticom / Sentivisor) finden Sie in der
+  <a href="https://docs.sentinum.de/generische-nfc-und-downlink-dokumentation"
+     target="_blank" rel="noopener noreferrer">
+    Generischen NFC und Downlink Dokumentation
+  </a>.
+</p>
+
+<p>
+  Weitere Informationen zur Konfiguration der Sensor-Kommunikation finden Sie je nach Version
+  in der jeweiligen generischen
+  <a href="https://docs.sentinum.de/generische-lorawan"
+     target="_blank" rel="noopener noreferrer">
+    LoRaWAN® Dokumentation
+  </a>
+  oder
+  <a href="https://docs.sentinum.de/generische-mioty"
+     target="_blank" rel="noopener noreferrer">
+    mioty® Dokumentation
+  </a>.
+</p>
+<div class="table-wrap" style="overflow-x:auto; margin-top:24px;">
+  <table>
+    <thead>
+      <tr>
+        <th>Artikel Code</th>
+        <th>Features</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>S-JUNO-LOEU-ID</td>
+        <td>JUNO Neigungssensor, Neigungserkennung und Öffnungsdetektion LoRaWAN®</td>
+      </tr>
+      <tr>
+        <td>S-JUNO-IX-LOEU-ID</td>
+        <td>INDUSTRIAL JUNO Neigungssensor, Neigungserkennung und Öffnungsdetektion LoRaWAN®</td>
+      </tr>
+      <tr>
+        <td>S-JUNO-MIOTY-ID</td>
+        <td>JUNO Neigungssensor, Neigungserkennung und Öffnungsdetektion mioty®</td>
+      </tr>
+      <tr>
+        <td>S-JUNO-IX-MIOTY-ID</td>
+        <td>INDUSTRIAL JUNO Neigungssensor, Neigungserkennung und Öffnungsdetektion mioty®</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p style="margin-top:16px; font-style:italic;">
+  Anleitung gültig für Versionen wie oben aufgeführt.
+</p>
+<!-- ================= TIMINGS ================= -->
+<h3 id="timings">3. SENTIFACE: Gruppe Timings <code>0x00</code></h3>
+
+
+<div class="table-wrap" style="overflow-x:auto;">
+  <table class="resource-table" style="width:120%;">
+    <colgroup>
+      <col style="width:12%;">
+      <col style="width:8%;">
+      <col style="width:42%;">
+      <col style="width:10%;">
+      <col style="width:6%;">
+      <col style="width:6%;">
+      <col style="width:8%;">
+      <col style="width:8%;">
+      <col style="width:10%;">
+    </colgroup>
+
+    <thead>
+      <tr>
+        <th>Ressourcen</th>
+        <th>Ressourcen ID</th>
+        <th>Beschreibung</th>
+        <th>Schlüssel (NFC/BLE)</th>
+        <th>Min</th>
+        <th>Max</th>
+        <th>Werks&shy;einstellung</th>
+        <th>Einheit</th>
+        <th>Modul&shy;schlüssel</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>MESSPERIODE</td>
+        <td><code>0x00</code></td>
+        <td>
+          Gibt die Periode an, in der die Messwerte erfasst werden.
+          5 Minuten heißt, dass immer nach 5 Minuten eine Messung durch den Sensor durchgeführt wird.
+        </td>
+        <td><code>period</code></td>
+        <td>1 / 5*</td>
+        <td>360</td>
+        <td>30</td>
+        <td>min</td>
+        <td><code>1111</code></td>
+      </tr>
+
+      <tr>
+        <td>REGULÄRES SENDEINTERVALL</td>
+        <td><code>0x01</code></td>
+        <td>
+          Anzahl der bis zur Übertragung durchgeführten Messungen.
+        </td>
+        <td><code>every</code></td>
+        <td>1</td>
+        <td>64</td>
+        <td>6</td>
+        <td></td>
+        <td><code>1111</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p style="margin-top:12px; font-size:0.9rem;">
+  * <br>
+  <strong>5</strong>: Für Version <em>S-JUNO-LOEU-ID</em> und <em>S-JUNO-MIOTY-ID</em><br>
+  <strong>1</strong>: Für Version <em>S-JUNO-IX-LOEU-ID</em> und <em>S-JUNO-IX-MIOTY-ID</em>
+</p>
+
+<!-- ================= ÖFFNUNGSDETEKTION ================= -->
+<h3 id="opening">4. SENTIFACE: Öffnungsdetektion Gruppe <code>0x02</code></h3>
+
+<div class="table-wrap" style="overflow-x:auto;">
+  <table class="resource-table" style="width:120%;">
+    <colgroup>
+      <col style="width:12%;">
+      <col style="width:8%;">
+      <col style="width:42%;">
+      <col style="width:10%;">
+      <col style="width:6%;">
+      <col style="width:6%;">
+      <col style="width:8%;">
+      <col style="width:8%;">
+      <col style="width:10%;">
+    </colgroup>
+
+    <thead>
+      <tr>
+        <th>Ressourcen</th>
+        <th>Ressourcen ID</th>
+        <th>Beschreibung</th>
+        <th>Schlüssel (NFC/BLE)</th>
+        <th>Min</th>
+        <th>Max</th>
+        <th>Werks&shy;einstellung</th>
+        <th>Einheit</th>
+        <th>Modul&shy;schlüssel</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>OPENING COOLDOWN</td>
+        <td><code>0x00</code></td>
+        <td>
+          Gibt eine Zeitspanne an, in der nach dem Auslösen einer Öffnung eine
+          weitere Öffnung nicht noch einmal ausgelöst werden kann (entprellt die
+          Öffnungen). Als Referenzwert dient die letzte gezählte Öffnung.
+        </td>
+        <td><code>acool</code></td>
+        <td>0</td>
+        <td>600</td>
+        <td>0</td>
+        <td>sec</td>
+        <td><code>1111</code></td>
+      </tr>
+
+      <tr>
+        <td>OPENING TIME ALARM</td>
+        <td><code>0x01</code></td>
+        <td>
+          Gibt an, wie lange der Deckel geöffnet sein muss, bis ein Alarm ausgelöst wird.
+        </td>
+        <td><code>oaaf</code></td>
+        <td>0</td>
+        <td>2880</td>
+        <td>0</td>
+        <td>sec</td>
+        <td><code>1111</code></td>
+      </tr>
+
+      <tr>
+        <td>OPENING MODE</td>
+        <td><code>0x02</code></td>
+        <td>
+          Beschreibt, in welche Richtung der Sensor schaut, wenn er geschlossen ist, und
+          welche Winkel für die Öffnungsdetektion festgelegt sind.
+          Face up beschreibt dabei den Zustand, wenn der Sensor auf dem Tisch liegt und
+          nach oben an die Decke schaut.
+          <br><br>
+          Einstellungen <strong>0–7</strong> mit Beschleunigungssensor,
+          <strong>8–9</strong> mit Hall-Sensor:
+          <br><br>
+          <code>0</code>: Off<br>
+          <code>1</code>: Ultra Low Power. Fester Schwellenwert 50°. Geschlossen, wenn nach unten gerichtet (Face Down).<br>
+          <code>2</code>: Ultra Low Power. Fester Schwellenwert 50°. Geschlossen, wenn nach oben gerichtet (Face Up).<br>
+          <code>3</code>: Ultra Low Power. Fester Schwellenwert 50°. Geschlossen, wenn zur Seite gerichtet.<br>
+          <code>4</code>: Erweiterte Neigungsabtastung. Einstellbarer Schwellenwert. Geschlossen, wenn nach unten gerichtet (Face Down).<br>
+          <code>5</code>: Erweiterte Neigungsabtastung. Einstellbarer Schwellenwert. Geschlossen, wenn nach oben gerichtet (Face Up).<br>
+          <code>6</code>: Erweiterte Neigungsabtastung. Einstellbarer Schwellenwert. Geschlossen, wenn seitwärts gerichtet.<br>
+          <code>7</code>: Erweitertes Tilt-Sampling. Einstellbarer Schwellenwert. Automatische Kalibrierung der geschlossenen Ausrichtung.<br>
+          <code>8</code>: Behälter ist geschlossen, wenn Magnet anliegt.<br>
+          <code>9</code>: Behälter ist offen, wenn Magnet anliegt.
+        </td>
+        <td><code>opmo</code></td>
+        <td>0</td>
+        <td>8</td>
+        <td>1</td>
+        <td></td>
+        <td><code>1111</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- ================= ERWEITERTE NEIGUNGSEINSTELLUNGEN ================= -->
+<h3 id="tilt">5. SENTIFACE: Erweiterte Neigungseinstellungen Gruppe <code>0x03</code></h3>
+
+<div class="table-wrap" style="overflow-x:auto;">
+  <table class="resource-table" style="width:120%;">
+    <colgroup>
+      <col style="width:12%;">
+      <col style="width:8%;">
+      <col style="width:42%;">
+      <col style="width:10%;">
+      <col style="width:6%;">
+      <col style="width:6%;">
+      <col style="width:8%;">
+      <col style="width:8%;">
+      <col style="width:10%;">
+    </colgroup>
+
+    <thead>
+      <tr>
+        <th>Ressourcen</th>
+        <th>Ressourcen ID</th>
+        <th>Beschreibung</th>
+        <th>Schlüssel (NFC/BLE)</th>
+        <th>Min</th>
+        <th>Max</th>
+        <th>Werks&shy;einstellung</th>
+        <th>Einheit</th>
+        <th>Modul&shy;schlüssel</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>SAMPLING PERIODE</td>
+        <td><code>0x00</code></td>
+        <td>
+          Gibt an, wie oft der Beschleunigungssensor den Winkel bestimmt.
+          Je höher die Frequenz, desto höher der Stromverbrauch.
+        </td>
+        <td><code>tspe</code></td>
+        <td>2</td>
+        <td>600</td>
+        <td>2</td>
+        <td>s</td>
+        <td><code>1111</code></td>
+      </tr>
+
+      <tr>
+        <td>TRIGGER LEVEL</td>
+        <td><code>0x01</code></td>
+        <td>
+          Gibt den Winkel an, ab dem eine Öffnung gezählt wird oder ein Alarm erfolgt.
+        </td>
+        <td><code>ttle</code></td>
+        <td>5</td>
+        <td>180</td>
+        <td>20</td>
+        <td>°</td>
+        <td><code>1111</code></td>
+      </tr>
+
+      <tr>
+        <td>TRIGGER HYSTERESE</td>
+        <td><code>0x02</code></td>
+        <td>
+          Hysterese-Wert für den Öffnungswinkel.
+        </td>
+        <td><code>tthy</code></td>
+        <td>1</td>
+        <td>90</td>
+        <td>4</td>
+        <td>°</td>
+        <td><code>1111</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- ================= BEISPIEL DOWNLINKS ================= -->
+<h3 id="examples">6. Beispiel Downlinks</h3>
+
+<div class="table-wrap" style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>Einstellung</th>
+        <th>Downlink</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>period = 10</code></td>
+        <td><code>00 11 11 00 00 00 00 00 0A</code></td>
+      </tr>
+      <tr>
+        <td><code>every = 5</code></td>
+        <td><code>00 11 11 00 01 00 00 00 05</code></td>
+      </tr>
+      <tr>
+        <td><code>alarm_act = 0</code></td>
+        <td><code>00 11 11 01 00 00 00 00 00</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="doc-logos">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/logo/mioty_lora_nb-IOT_LTE.png"
+    alt="mioty / LoRa / NB‑IoT / LTE">
+</div>
+
+
+
+<!-- CE / WEEE LOGO -->
+<div class="logo-ce">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/logo/CE_Trash_seals.png"
+    alt="CE- und WEEE-Konformitätskennzeichen"
+    style="height:38px;">
+</div>
+
+
+<!-- DISCLAIMER -->
+<div class="footer-note">
+  <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bilder, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+  <p>Vervielfältigung, Verbreitung oder Nutzung – auch auszugsweise – ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Technische Änderungen vorbehalten. Alle Angaben ohne Gewähr.
+  </p>
+</div>
