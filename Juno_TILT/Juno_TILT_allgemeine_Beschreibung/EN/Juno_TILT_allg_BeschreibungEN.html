@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<!-- ✅ CSS – UNCHANGED -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+  --blue-bg:#f7fbff;
+  --blue-border:#d6e4fa;
+  --blue-text:#1a3e8c;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+}
+
+/* Base */
+body{
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+}
+
+/* Headings */
+h1{
+  margin:48px 0 16px;
+  padding-bottom:12px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:42px;
+  font-weight:700;
+  border-bottom:2px solid var(--border);
+}
+
+h3{
+  margin:32px 0 12px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:120px;
+}
+
+p{margin:8px 0 12px}
+
+/* Tables */
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+  table-layout:fixed;
+}
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid #000;
+}
+
+/* TOC */
+.main-toc{
+  max-width:900px;
+  margin:24px auto 40px;
+  padding:16px 20px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+}
+.main-toc strong{display:block;margin-bottom:8px;}
+.main-toc ul{list-style:none;padding:0;margin:0;}
+.main-toc li{margin:.35rem 0;}
+.main-toc a{color:var(--blue-text);font-weight:600;text-decoration:none;}
+.main-toc a:hover{text-decoration:underline;}
+
+/* PDF */
+.pdf-container{
+  width:100%;
+  max-width:900px;
+  height:600px;
+  margin:24px auto 12px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  overflow:hidden;
+}
+.pdf-info{
+  max-width:900px;
+  margin:8px auto 32px;
+  padding:10px 14px;
+  background:#f8fbff;
+  border:1px solid #b6d4fe;
+  border-radius:6px;
+  text-align:center;
+}
+.pdf-info a{color:#2563eb;font-weight:600;text-decoration:underline;}
+
+.figure{
+  max-width:900px;
+  margin:24px auto;
+}
+.figure img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+</style>
+</head>
+
+<body>
+
+
+
+<!-- ✅ PDF VIEWER (FIXED & VISIBLE) -->
+<div class="pdf-container">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/8f835237d91e7d360326f52853f0fd83dccd78f6/Juno_TILT/Juno_TILT_allgemeine_Beschreibung/EN/Juno_TILT_General_Description_en-US.pdf"
+    style="width:100%;height:100%;border:none;"
+    loading="lazy"
+    title="JUNO TILT General Description PDF">
+  </iframe>
+</div>
+
+<div class="pdf-info">
+  📄 You can view the PDF above or
+  <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/8f835237d91e7d360326f52853f0fd83dccd78f6/Juno_TILT/Juno_TILT_allgemeine_Beschreibung/EN/Juno_TILT_General_Description_en-US.pdf"
+     target="_blank" rel="noopener noreferrer">
+    download it here
+  </a>.
+</div>
+
+<!-- ✅ TABLE OF CONTENTS -->
+<div class="main-toc">
+  <strong>Table of Contents</strong>
+  <ul>
+    <li><a href="#description">1. General description</a></li>
+    <li><a href="#features">2. Features</a></li>
+    <li><a href="#applications">3. Example applications</a></li>
+    <li><a href="#versions">4. Versions</a></li>
+  </ul>
+</div>
+
+<h3 id="description">1. General description</h3>
+
+<p>
+The Juno IP67 TH is a versatile temperature and relative humidity sensor
+that uses mioty®, LoRaWAN® or cellular technologies such as NB‑IoT for
+reliable and energy‑efficient data transmission. Its robust design and
+IP67 rating make it ideal for use in demanding environments, withstanding
+dust, water and high pressures.
+</p>
+
+<!-- ✅ PRODUCT IMAGE (FIXED & VISIBLE) -->
+<div class="figure">
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/64b1f9208cec0e59552a8ac361c09133eff4a2c5/Juno_TILT/Juno_TILT_allgemeine_Beschreibung/Pic/Juno_TILT_allgemeine_BeschreibungPic1.webp"
+    alt="JUNO TILT product view">
+</div>
+
+<h3 id="features">2. Features</h3>
+
+<ul>
+  <li>LoRaWAN®, mioty® or NB‑IoT communication</li>
+  <li>IP67, −25 °C to 85 °C, IK07</li>
+  <li>Tilt and flap opening detection</li>
+  <li>Advanced tilt detection with 1° resolution and limit values</li>
+  <li>Magnetic switch</li>
+  <li>Can be activated with a magnet (no smartphone required) or via NFC</li>
+  <li>Configurable via downlinks or NFC</li>
+  <li>Adjustable limit values</li>
+  <li>Replaceable AA cells (LiSOCl₂, see Saft LS14500)</li>
+  <li>Acoustic signal</li>
+</ul>
+
+<h3 id="applications">3. Example applications</h3>
+
+<ul>
+  <li>Cold chain monitoring</li>
+  <li>Temperature monitoring in building management or smart city applications</li>
+  <li>Manhole cover monitoring</li>
+  <li>Flap opening detection</li>
+</ul>
+
+<h3 id="versions">4. Versions</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Article code</th>
+      <th>Features</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>S‑JUNO‑LOEU</strong></td>
+      <td>JUNO IP67 TH sensor, temperature and relative humidity with tilt detection and opening detection LoRaWAN®</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO‑MIOTY</strong></td>
+      <td>JUNO IP67 TH sensor, temperature and relative humidity with tilt detection and opening detection mioty®</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO‑NB</strong></td>
+      <td>JUNO IP67 TH sensor, temperature and relative humidity with tilt detection and opening detection NB‑IoT</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO‑IX‑LOEU</strong></td>
+      <td>INDUSTRIAL JUNO IP67 TH sensor with tilt detection and opening detection LoRaWAN®</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO‑IX‑MIOTY</strong></td>
+      <td>INDUSTRIAL JUNO IP67 TH sensor with tilt detection and opening detection mioty®</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO‑IX‑NB</strong></td>
+      <td>INDUSTRIAL JUNO IP67 TH sensor with tilt detection and opening detection NB‑IoT</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="figure" style="text-align:center;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/8f835237d91e7d360326f52853f0fd83dccd78f6/Juno_TILT/Juno_TILT_allgemeine_Beschreibung/Pic/Juno_TILT_logo.png"
+    alt="JUNO TILT logo"
+    loading="lazy">
+</div>
+
+<div class="figure" style="text-align:center;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/8f835237d91e7d360326f52853f0fd83dccd78f6/Juno_TILT/Juno_TILT_allgemeine_Beschreibung/Pic/Juno_TILT_allgemeine_BeschreibungPiclogo2.png"
+    alt="Sentinum certification logos"
+    loading="lazy">
+</div>
+
+
+
+<!-- ✅ FOOTER -->
+<div style="border-top:1px solid #d0d7de;margin-top:40px;padding-top:16px;font-size:.85rem;color:#6b7280;"></div>
+
+<div class="footer-note">
+  <p>© Sentinum GmbH – All rights reserved.</p>
+  <p>All contents of this document, including text, tables and images, are protected by copyright and are the property of Sentinum GmbH.</p>
+  <p>Reproduction, distribution or use – even in part – is not permitted without prior written consent.</p>
+  <p style="padding-left:14px;font-style:italic;">
+    Subject to change. All information provided without guarantee.
+  </p>
+</div>
+
+</body>
+</html>
