@@ -1,0 +1,554 @@
+<meta charset="UTF-8">
+<title>JUNO ID/TILT – Technisches Datenblatt</title>
+
+<style>
+/* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --black:#000000;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+
+  --blue-bg:#f0f8ff;
+  --blue-border:#a0c4ff;
+  --blue-text:#1a3e8c;
+
+  --toc-bg:#f7fbff;
+  --toc-border:#d6e4fa;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+  background:#ffffff;
+}
+
+.container{ width:100%; }
+
+h1{
+  margin:48px 0 16px;
+  padding-bottom:12px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:42px;
+  font-weight:700;
+  line-height:1.25;
+  color:#000;
+  border-bottom:2px solid var(--border);
+}
+
+h2{
+  margin:14px 0 36px;
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:24px;
+  font-weight:500;
+  line-height:1.5;
+  color:var(--text-muted);
+}
+
+h3{
+  margin:24px 0 8px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  color:#000;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:100px;
+}
+
+/* ---------- PDF ---------- */
+
+.pdf-viewer{
+  max-width:900px;
+  height:600px;
+  margin:0 auto 20px;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
+.pdf-viewer iframe{ width:100%; height:100%; border:none; }
+
+.pdf-download{
+  max-width:900px;
+  margin:0 auto 36px;
+  padding:14px 18px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+  text-align:center;
+}
+
+.pdf-download a{
+  color:var(--blue-text);
+  font-weight:600;
+}
+
+/* ---------- TOC ---------- */
+
+.main-toc{
+  max-width:900px;
+  margin:0 auto 40px;
+  padding:16px 20px;
+  background:var(--toc-bg);
+  border:1px solid var(--toc-border);
+  border-radius:6px;
+}
+
+.main-toc ul{ list-style:none; padding:0; margin:0; }
+.main-toc li{ margin:.3rem 0; }
+.main-toc a{
+  color:var(--blue-text);
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* ---------- Tables ---------- */
+
+.table-wrap{ margin:8px 0 24px; }
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+  table-layout:fixed;
+}
+
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid var(--black);
+}
+
+table th:nth-child(1),
+table td:nth-child(1){ width:30%; }
+
+table th:nth-child(2),
+table td:nth-child(2){ width:50%; }
+
+table th:nth-child(3),
+table td:nth-child(3){ width:20%; }
+
+/* ---------- Figures ---------- */
+
+.figure{ margin:32px auto; text-align:center; }
+.figure img{ max-width:100%; }
+.figure figcaption{
+  margin-top:8px;
+  font-size:.85rem;
+  color:var(--text-muted);
+  font-style:italic;
+}
+
+/* ---------- Logos ---------- */
+
+.logo-ce{ margin:16px 0; }
+.logo-ce img{ height:38px; width:auto; display:block; }
+
+.doc-logos{ margin:24px 0; display:flex; gap:20px; align-items:center; }
+.doc-logos img{ height:42px; width:auto; display:block; }
+
+/* ---------- Footer ---------- */
+
+.footer-note{
+  margin-top:40px;
+  padding-top:16px;
+  border-top:1px solid var(--border);
+  font-size:.82rem;
+  color:var(--text-muted);
+}
+
+.footer-note p{ margin:0; }
+.footer-note p:last-child{ padding-left:14px; font-style:italic; }
+</style>
+
+<!-- PDF -->
+<div class="pdf-viewer">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/eb0dab5a252f98c3eb81299546bca293bc2cc6ce/Juno_TILT/Juno_ID_TILT_Technical_datasheet/Juno_TILT_Technisches%20Datenblatt_DE.1.0.1.pdf"
+    loading="lazy">
+  </iframe>
+</div>
+
+<div class="pdf-download">
+  📄 Sie können das PDF oben ansehen oder
+  <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/eb0dab5a252f98c3eb81299546bca293bc2cc6ce/Juno_TILT/Juno_ID_TILT_Technical_datasheet/Juno_TILT_Technisches%20Datenblatt_DE.1.0.1.pdf"
+     target="_blank">
+    hier herunterladen
+  </a>.
+</div>
+
+<!-- TOC -->
+<nav class="main-toc">
+  <h4>Inhaltsverzeichnis</h4>
+  <ul>
+    <li><a href="#versionshistorie">1. Versionshistorie</a></li>
+    <li><a href="#uebersicht">2. Übersicht</a></li>
+    <li><a href="#versionen">3. Versionen</a></li>
+    <li><a href="#allgemein">4. Allgemeine Eigenschaften</a></li>
+    <li><a href="#rf">5. Konnektivität und RF-Spezifikation</a></li>
+    <li><a href="#neigung">6. Sensorspezifikation – Neigung</a></li>
+    <li><a href="#temperatur">7. Sensorspezifikation – Temperatur</a></li>
+    <li><a href="#zeichnung">8. Technische Zeichnung</a></li>
+  </ul>
+</nav>
+
+<!-- VERSIONSHISTORIE -->
+<h3 id="versionshistorie">1. Versionshistorie</h3>
+
+<div class="table-wrap">
+  <table>
+    <colgroup>
+      <col style="width:33.33%">
+      <col style="width:33.33%">
+      <col style="width:33.33%">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Version</th>
+        <th>Datum</th>
+        <th>Änderung</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1.0.0</td>
+        <td>18.02.2025</td>
+        <td>Erstellung</td>
+      </tr>
+      <tr>
+        <td>1.0.1</td>
+        <td>24.04.2026</td>
+        <td>Formatierung, Versionshistorie</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ÜBERSICHT -->
+<h3 id="uebersicht">2. Übersicht</h3>
+
+<p>
+  Der Juno IP69k ID/TILT ist für die zuverlässige Neigungserkennung und Öffnungsdetektion
+  von Klappen und Türen konzipiert. Der Sensor verfügt über keine eigenen Tracking-Mechanismen
+  und muss passiv über das jeweilige Netzwerk getrackt werden. Der Juno ID/TILT ist wahlweise
+  mit mioty® oder LoRaWAN® erhältlich. Mit einem präzisen Neigungssensor kann er Klappenöffnungen
+  zuverlässig erkennen. Dank seiner robusten Bauweise und dem Schutzgrad IP69k ist er ideal
+  für den Einsatz in anspruchsvollen Umgebungen und widersteht Staub, Wasser und hohem Druck.
+</p>
+
+<figure class="figure">
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/ea9f8aa025058fddc8c8482b6a910a3814b88e37/Juno_TILT/Juno_TILT_allgemeine_Beschreibung/Pic/Juno_TILT_allgemeine_BeschreibungPic1.webp"
+    alt="Juno ID TILT Sensor"
+  >
+  <figcaption>Juno ID TILT</figcaption>
+</figure>
+
+<!-- VERSIONEN -->
+<h3 id="versionen">3. Versionen</h3>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Artikel Code</th>
+        <th>Features</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>S-JUNO-LOEU-ID</td>
+        <td>JUNO IP69k Temperatur, Neigungserkennung und Öffnungsdetektion LoRaWAN</td>
+      </tr>
+      <tr>
+        <td>S-JUNO-MIOTY-ID</td>
+        <td>JUNO IP69k Temperatur, Neigungserkennung und Öffnungsdetektion mioty</td>
+      </tr>
+      <tr>
+        <td>S-JUNO-IX-LOEU-ID</td>
+        <td>INDUSTRIAL JUNO IP69k Temperatur, Neigungserkennung und Öffnungsdetektion LoRaWAN</td>
+      </tr>
+      <tr>
+        <td>S-JUNO-IX-MIOTY-ID</td>
+        <td>INDUSTRIAL JUNO IP69k Temperatur, Neigungserkennung und Öffnungsdetektion mioty</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ALLGEMEINE EIGENSCHAFTEN -->
+<h3 id="allgemein">4. Allgemeine Eigenschaften</h3>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Merkmal</th>
+        <th>Wert</th>
+        <th>Einheit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Dimensionen l×b×h</td>
+        <td>86 × 86 × 25</td>
+        <td>mm</td>
+      </tr>
+      <tr>
+        <td>Gewicht</td>
+        <td>&lt; 200</td>
+        <td>g</td>
+      </tr>
+      <tr>
+        <td>Betriebstemperatur</td>
+        <td>-25 bis +75 (erweiterter Temperaturbereich bitte anfragen. Temperaturbereich ist durch die maximale Betriebstemperatur der Primärzellen begrenzt)</td>
+        <td>°C</td>
+      </tr>
+      <tr>
+        <td>Betriebstemperatur maximal Gerät</td>
+        <td>85</td>
+        <td>°C</td>
+      </tr>
+      <tr>
+        <td>Lagertemperatur (empfohlen)</td>
+        <td>15 bis +30</td>
+        <td>°C</td>
+      </tr>
+      <tr>
+        <td>Rel. Luftfeuchtigkeit im Betrieb</td>
+        <td>5 bis 99</td>
+        <td>%RH</td>
+      </tr>
+      <tr>
+        <td>IP Rating</td>
+        <td>IP69k</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>IK Rating</td>
+        <td>TBD</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Sensorik</td>
+        <td>Temperatur, rel. Luftfeuchtigkeit, Beschleunigungssensor</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Ampelfunktion</td>
+        <td>Nein</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Alarmfunktion akustisch</td>
+        <td>Ja, Buzzer</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Provisioning</td>
+        <td>NFC</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Material</td>
+        <td>PBT GF20 + ASA</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>NFC Antenne</td>
+        <td>Integriert</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>RF Antenne</td>
+        <td>Integriert</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Accelerometer</td>
+        <td>Ja</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Batterien</td>
+        <td>Primärzelle, wechselbar, AA</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Primärzelle Typ</td>
+        <td>
+          LoRaWAN, mioty:<br>
+          • 2 × 3,6 V LiSOCl₂ (empfohlen SAFT LS14500)
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Gehäuse Farbe</td>
+        <td>
+          S-JUNO-XXXX: schwarz<br>
+          S-JUNO-IX-XXXX: seidengrau
+        </td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- KONNEKTIVITÄT UND RF SPEZIFIKATION -->
+<h3 id="rf">5. Konnektivität und RF-Spezifikation</h3>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Merkmal</th>
+        <th>Wert</th>
+        <th>Einheit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>RF Standards</td>
+        <td></td>
+        <td>MHz</td>
+      </tr>
+      <tr>
+        <td>Frequenz LoRaWAN® / mioty® EU</td>
+        <td>868</td>
+        <td>MHz</td>
+      </tr>
+      <tr>
+        <td>Sendeleistung LoRaWAN® / mioty® EU</td>
+        <td>14</td>
+        <td>dBm</td>
+      </tr>
+      <tr>
+        <td>LoRa® MAC Layer Version</td>
+        <td>1.0.4</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SENSORSPEZIFIKATION NEIGUNG -->
+<h3 id="neigung">6. Sensorspezifikation – Neigung</h3>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Merkmal</th>
+        <th>Wert</th>
+        <th>Einheit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Messbereich</td>
+        <td>0 bis 360</td>
+        <td>°</td>
+      </tr>
+      <tr>
+        <td>Genauigkeit</td>
+        <td>±2</td>
+        <td>°</td>
+      </tr>
+      <tr>
+        <td>Auslösung im Low Power Mode für Öffnungsdetektion</td>
+        <td>±60</td>
+        <td>°</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SENSORSPEZIFIKATION TEMPERATUR DES BESCHLEUNIGUNGSSENSORS -->
+<h3 id="temperatur">7. Sensorspezifikation – Temperatur des Beschleunigungssensors</h3>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Merkmal</th>
+        <th>Wert</th>
+        <th>Einheit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Messbereich</td>
+        <td>-40 bis +85</td>
+        <td>°C</td>
+      </tr>
+      <tr>
+        <td>Genauigkeit</td>
+        <td>±0,8</td>
+        <td>°C</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- TECHNISCHE ZEICHNUNG -->
+<h3 id="zeichnung">8. Technische Zeichnung</h3>
+
+<figure class="figure">
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/aedccdd5f1a36c0cc446d3a3078dc665745e256e/Juno_TILT/Juno_ID_TILT_Technical_datasheet/technical_drawing.png"
+    alt="Juno ID TILT Technische Zeichnung"
+  >
+  <figcaption>Juno ID TILT – Technische Zeichnung</figcaption>
+</figure>
+
+<h4><strong>Position Magnetschalter</strong></h4>
+
+<figure class="figure">
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/86c26e4e4707d0abc9d4015e30b3eacfdd8b0f86/Juno_TILT/Juno_ID_TILT_Technical_datasheet/position%20of%20magnetic%20switch.png"
+    alt="Position Magnetschalter – Juno ID TILT"
+  >
+  <figcaption>Juno ID TILT – Position Magnetschalter</figcaption>
+</figure>
+
+<div class="doc-logos">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/logo/mioty_lora_nb-IOT_LTE.png"
+    alt="mioty / LoRa / NB-IoT / LTE">
+</div>
+
+<!-- CE / WEEE LOGO -->
+<div class="logo-ce">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/logo/CE_Trash_seals.png"
+    alt="CE und WEEE Kennzeichnung"
+    style="height:38px;">
+</div>
+
+<!-- DISCLAIMER -->
+<div class="footer-note">
+  <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+  <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
+  </p>
+</div>

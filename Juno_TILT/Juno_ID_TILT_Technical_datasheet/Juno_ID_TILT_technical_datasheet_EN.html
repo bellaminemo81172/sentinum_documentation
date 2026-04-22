@@ -171,8 +171,50 @@ table td:nth-child(3){
   color:var(--text-muted);
   font-style:italic;
 }
+/* ---------- CE / WEEE LOGO ---------- */
+
+.logo-ce{
+  margin:16px 0;
+}
+
+.logo-ce img{
+  height:38px;
+  width:auto;
+  display:block;
+}
+/* ---------- RADIO TECHNOLOGIES LOGO ---------- */
+
+.logo-radio-tech{
+  margin:16px 0;
+}
+
+.logo-radio-tech img{
+  height:46px;
+  width:auto;
+  display:block;
+}
+
+/* ============================================================
+   LOGO STYLING (CERTIFICATIONS / TECHNOLOGIES)
+   ============================================================ */
+
+.doc-logos{
+  margin:24px 0;
+  display:flex;
+  gap:20px;
+  align-items:center;
+}
+
+.doc-logos img{
+  height:42px;      /* unified visual size */
+  width:auto;
+  display:block;
+}
+
 
 /* ---------- Footer ---------- */
+
+
 
 .footer-note{
   margin-top:40px;
@@ -182,13 +224,21 @@ table td:nth-child(3){
   color:var(--text-muted);
 }
 
-.footer-note p{ margin:0; }
+.footer-note p{
+  margin:0;
+}
+
+.footer-note p:last-child{
+  padding-left:14px;
+  font-style:italic;
+}
+
+
 </style>
 
 
 <body>
 
-<h2>Technical Data Sheet</h2>
 
 <!-- ================= PDF ================= -->
 <div class="pdf-viewer">
@@ -536,26 +586,39 @@ table td:nth-child(3){
   <figcaption>Juno ID TILT – Position of Magnetic Switch</figcaption>
 </figure>
 
-<figure class="figure">
+
+
+<div class="doc-logos">
   <img
-    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/25750abfc4e0cfb8af37ac2792d8ba5aeaf99d00/Juno_TILT/Juno_ID_TILT_Technical_datasheet/logo%20lora%20mioty.png"
-    alt="LoRaWAN and mioty logos"
-  >
-</figure>
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/logo/mioty_lora_nb-IOT_LTE.png"
+    alt="mioty / LoRa / NB‑IoT / LTE">
 </div>
-<img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/0ed4dcb7e3bfeefe80b1a6adbeb2b46ccebe53ce/Juno_BSX/Juno_BSX_Betriebsanleitung/pic/Juno_BSX_logo2.png" alt="JUNO BSX Logo 2" />
+
+
+
+<!-- CE / WEEE LOGO -->
+<div class="logo-ce">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/logo/CE_Trash_seals.png"
+    alt="CE and WEEE compliance marks"
+    style="height:38px;">
+</div>
+
+
 
 
 
 <!-- DISCLAIMER -->
 <div class="footer-note">
-    <p>© Sentinum GmbH – All rights reserved.</p>
+<p>© Sentinum GmbH – All rights reserved.</p>
     <p>All contents of this document, including text, tables and images, are protected by copyright and are the property of Sentinum GmbH.</p>
     <p>All images are subject to the copyright of Sentinum GmbH unless otherwise stated.</p>
     <p>Reproduction, distribution or use — even in part — is not permitted without explicit written permission.</p>
     <p style="padding-left:14px; font-style:italic;">
         Specifications subject to change. All information provided without warranty.
-    </p>
+    </p>provided without warranty.
+  </p>
 </div>
 
-</div>
+
+
