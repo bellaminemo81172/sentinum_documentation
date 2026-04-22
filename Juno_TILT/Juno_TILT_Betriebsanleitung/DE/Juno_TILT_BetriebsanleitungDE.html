@@ -1,1 +1,1966 @@
-<a href="tel:+"></a>
+<!-- ========================================================= -->
+<!-- JUNO TH TILT – BETRIEBSANLEITUNG                          -->
+<!-- BLOCK 1: PDF · EINLEITUNG · INHALTSVERZEICHNIS · SICHERH. -->
+<!-- ========================================================= -->
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+
+<!-- ✅ CSS – UNVERÄNDERT -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+  --blue-bg:#f7fbff;
+  --blue-border:#d6e4fa;
+  --blue-text:#1a3e8c;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+}
+
+/* Base */
+body{
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+}
+
+/* Headings */
+h1{
+  margin:48px 0 16px;
+  padding-bottom:12px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:42px;
+  font-weight:700;
+  border-bottom:2px solid var(--border);
+}
+
+h3{
+  margin:32px 0 12px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:120px;
+}
+
+p{margin:8px 0 12px}
+
+/* Tables */
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+  table-layout:fixed;
+}
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid #000;
+}
+
+/* TOC */
+.main-toc{
+  max-width:900px;
+  margin:24px auto 40px;
+  padding:16px 20px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+}
+.main-toc strong{display:block;margin-bottom:8px;}
+.main-toc ul{list-style:none;padding:0;margin:0;}
+.main-toc li{margin:.35rem 0;}
+.main-toc a{color:var(--blue-text);font-weight:600;text-decoration:none;}
+.main-toc a:hover{text-decoration:underline;}
+
+/* PDF */
+.pdf-container{
+  width:100%;
+  max-width:900px;
+  height:600px;
+  margin:24px auto 12px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  overflow:hidden;
+}
+.pdf-info{
+  max-width:900px;
+  margin:8px auto 32px;
+  padding:10px 14px;
+  background:#f8fbff;
+  border:1px solid #b6d4fe;
+  border-radius:6px;
+  text-align:center;
+}
+.pdf-info a{color:#2563eb;font-weight:600;text-decoration:underline;}
+
+.figure{
+  max-width:900px;
+  margin:24px auto;
+}
+.figure img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+</style>
+</head>
+
+<!-- PDF VIEWER -->
+<div class="pdf-container">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/DE/Juno_Betriebsanleitung_DE_1.0.1.pdf"
+    title="JUNO TH TILT Betriebsanleitung PDF"
+    loading="lazy"
+    style="width:100%;height:100%;border:none;">
+  </iframe>
+</div>
+
+<div class="pdf-info">
+  📄 Sie können die Betriebsanleitung oben ansehen oder
+  <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/DE/Juno_Betriebsanleitung_DE_1.0.1.pdf" target="_blank">
+    hier als PDF herunterladen
+  </a>.
+</div>
+
+
+<div class="main-toc">
+  <strong>Inhaltsverzeichnis</strong>
+  <ul>
+    <li><a href="#versionhistorie">1. Versionhistorie</a></li>
+    <li><a href="#sicherheit">2. Allgemeine Warn- und Sicherheitshinweise</a></li>
+    <li><a href="#dokumentation">3. Weiterführende Dokumentation</a></li>
+
+    <li><a href="#verwendung">4. Vorgesehene Verwendung und Produktversionen</a></li>
+    <li><a href="#produktcodes">4.1. Produktcodes und Funktionen</a></li>
+    <li><a href="#lokalisierung">4.2. Produktcodes und Lokalisierungsverfahren</a></li>
+    <li><a href="#verwendung-details">4.3. Vorgesehene Verwendung</a></li>
+    <li><a href="#ix-versionen">4.4. Unterschiede der iX Versionen</a></li>
+
+    <li><a href="#zeichnungen">5. Technische Zeichnung</a></li>
+    <li><a href="#zeichnung-ohne-th">5.1. Juno (ohne TH)</a></li>
+    <li><a href="#zeichnung-mit-th">5.2. Juno TH (mit TH Öffnung)</a></li>
+
+    <li><a href="#lieferumfang">6. Lieferumfang</a></li>
+    <li><a href="#klebepad">6.1. Klebepad – technische Zeichnung</a></li>
+
+    <li><a href="#batterien">7. Zugelassene Batterien und Typen</a></li>
+    <li><a href="#zubehoer">8. Zubehör</a></li>
+
+    <li><a href="#ortung">9. Ortungs- und Lokalisierungsverfahren Übersicht</a></li>
+    <li><a href="#technologien">9.1. Gegenüberstellung unterschiedlicher Technologien</a></li>
+    <li><a href="#energieoptimierung">9.2. Intelligenter Einsatz von Tracking-Technologien zur Energieoptimierung</a></li>
+    <li><a href="#wifi-scan">9.3. Welche Sensoren setzen WIFI SSID Scan ein?</a></li>
+    <li><a href="#wifi-funktion">9.4. Wie funktioniert WIFI SSID Scanning</a></li>
+    <li><a href="#wifi-vorteile">9.5. Vorteile und Anwendungen der Wi‑Fi-basierten Lokalisierung</a></li>
+    <li><a href="#genauigkeit">9.6. Abhängigkeit der Genauigkeit</a></li>
+    <li><a href="#warum-wifi">9.7. Darum ist für JUNO die Ortung über WIFI SSID sinnvoll</a></li>
+    <li><a href="#gnss-scan">9.8. Funktionsweise von GNSS Scan</a></li>
+    <li><a href="#loracloud">9.9. GNSS Scan und LoRa® Cloud</a></li>
+    <li><a href="#ports">9.10. Portbelegung für Payloads</a></li>
+    <li><a href="#tracking-lora">9.11. Tracking im LoRaWAN®</a></li>
+    <li><a href="#cell-locate">9.12. Tracking über das Mobilfunknetzwerk "Cell Locate"</a></li>
+    <li><a href="#edrx">9.13. eDRX – Auf dem Weg zum abfragbaren Tracker</a></li>
+
+    <li><a href="#handhabung">10. Generelle Handhabungshinweise</a></li>
+    <li><a href="#th-handhabung">10.1. Besondere Hinweise für -TH Versionen</a></li>
+
+    <li><a href="#montage">11. Montage und Installation</a></li>
+    <li><a href="#montage-sicherheit">11.1. Warn- und Sicherheitshinweise zur Montage</a></li>
+    <li><a href="#befestigung">11.2. Empfohlene Befestigungsmethoden</a></li>
+    <li><a href="#installation">11.3. Allgemeine Installationsanweisungen</a></li>
+    <li><a href="#th-installation">11.4. Installationsanweisungen für Juno TH Versionen</a></li>
+    <li><a href="#tracker-installation">11.5. Montagehinweise für Tracker Versionen</a></li>
+    <li><a href="#antenne">11.6. Wichtiger Hinweis für Geräte mit externer Antenne</a></li>
+    <li><a href="#schrauben">11.7. Wandmontage mit Schrauben</a></li>
+    <li><a href="#magnet">11.8. Wandmontage mit Magneten</a></li>
+    <li><a href="#kleben">11.9. Wandmontage mit Klebestreifen</a></li>
+
+    <li><a href="#inbetriebnahme">12. Inbetriebnahme und Verwendung</a></li>
+    <li><a href="#magnet-start">12.1. Inbetriebnahme des Sensors mit Magnet</a></li>
+    <li><a href="#ble-kurz">12.2. Inbetriebnahme des Sensors über BLE (Kurzanleitung)</a></li>
+    <li><a href="#nfc">12.3. Inbetriebnahme des Sensors über NFC</a></li>
+    <li><a href="#ble">12.4. Inbetriebnahme über BLE</a></li>
+    <li><a href="#akustisch">12.5. Akustisches Signal und Feedback</a></li>
+
+    <li><a href="#sensorfunktionen">13. Sensorfunktionen</a></li>
+    <li><a href="#hysterese">13.1. Hysterese</a></li>
+    <li><a href="#tracking-motion">13.2. Tracking und Tracking in Motion</a></li>
+    <li><a href="#tilt">13.3. Neigungs- und Tilt-Erkennung</a></li>
+
+    <li><a href="#schnittstelle">14. Kommunikation mit der Schnittstelle</a></li>
+    <li><a href="#pflege">15. Pflege und Reinigung</a></li>
+    <li><a href="#batteriewechsel">16. Batteriewechsel</a></li>
+
+    <li><a href="#klappe">17. Klappenöffnungs- und Neigungsdetektion</a></li>
+    <li><a href="#klappe-magnet">17.1. Klappenöffnungsdetektion über den Magnetschalter</a></li>
+    <li><a href="#klappe-beschl">17.2. Klappenöffnungsdetektion mit Beschleunigungssensor und Neigungsdetektion</a></li>
+    <li><a href="#orientierung">17.3. Orientierungen</a></li>
+
+    <li><a href="#lorawan">18. LoRaWAN spezifische Eigenschaften</a></li>
+    <li><a href="#join">18.1. LoRaWAN Join Verhalten</a></li>
+
+    <li><a href="#zertifizierung">19. Kennzeichnung und Zertifizierung</a></li>
+  </ul>
+</div>
+
+
+
+
+<h3  id="versionhistorie">1. Versionhistorie</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Version</th>
+      <th>Datum</th>
+      <th>Änderung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.0.0</td>
+      <td>18.02.2025</td>
+      <td>Erstellung</td>
+    </tr>
+    <tr>
+      <td>1.0.1</td>
+      <td>24.04.2026</td>
+      <td>Formatierung, Versionshistorie</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<h3>2. Allgemeine Warn- und Sicherheitshinweise</h3>
+
+<p>
+Warnungen und wichtige Informationen über potenzielle Gefahren oder Beschädigungen
+</p>
+<p>Wichtige Hinweise die zum reibungsfreien Betrieb der Geräte nötig sind</p>
+
+<p><strong>Bitte beachten:</strong></p>
+
+<ul>
+  <li>
+    Beachten Sie die Sicherheitshinweise und Installationsanweisungen in der Anleitung
+    und der Montageliste.
+  </li>
+  <li>
+    Beachten Sie, dass die Installationsumgebung den vorgeschriebenen
+    Einsatzbereichsrichtlinien entspricht. Halten Sie Temperatur und andere
+    Grenzwerte zu jederzeit ein.
+  </li>
+  <li>
+    Das Gerät darf nur in den in den technischen Spezifikationen vorgegebenen
+    Bereichen eingesetzt werden.
+  </li>
+  <li>
+    Das Gerät darf nur für den beschriebenen Einsatzzwecken und Bereichen verwendet werden.
+  </li>
+  <li>
+    Die Sicherheit und Funktionsfähigkeit kann nicht mehr garantiert werden,
+    wenn das Gerät modifiziert oder erweitert wird.
+  </li>
+  <li>
+    Der Sensor darf nicht an Decken oder Böden montiert werden.
+  </li>
+  <li>
+    Der Betrieb des Sensors ist nur bis maximal 2000&nbsp;Meter über Normal&nbsp;Null zugelassen.
+  </li>
+  <li>
+    Der Betrieb ist nur in maximal 2&nbsp;Meter Raumhöhe zugelassen.
+  </li>
+  <li>
+    Aufgrund der Human‑Exposure‑Vorschrift ist ein Mindestabstand zwischen Gerät
+    und Personen von 20&nbsp;cm einzuhalten.
+  </li>
+  <li>
+    Stellen Sie sicher, dass die Installationsumgebung den vorgeschriebenen
+    Richtlinien für den Einsatzbereich entspricht. Halten Sie die Temperatur‑ und
+    sonstigen Grenzwerte jederzeit ein.
+  </li>
+  <li>
+    Stellen Sie sicher, dass die Installationsumgebung den vorgeschriebenen
+    Richtlinien für den Einsatzbereich entspricht. Halten Sie die Temperatur‑ und
+    sonstigen Grenzwerte jederzeit ein.
+  </li>
+</ul>
+
+
+<p>Falls das Gerät <strong>inkorrekt</strong> installiert wird:</p>
+
+<ul>
+  <li>
+    Könnte es nicht ordnungsgemäß funktionieren.
+  </li>
+  <li>
+    Könnte es permanent beschädigt werden.
+  </li>
+  <li>
+    Könnte es eine Verletzungsgefahr darstellen.
+  </li>
+</ul>
+
+<p><strong>Bitte beachten:</strong></p>
+
+<ul>
+  <li>
+    Eine unsachgemäße Handhabung, wie z. B. unsachgemäße mechanische Belastung
+    oder das Fallenlassen des Gerätes, kann zu Beschädigungen führen.
+  </li>
+  <li>
+    Werden andere als die empfohlenen Batteriezellen verwendet,
+    können Performance und Produktsicherheit negativ beeinflusst werden.
+  </li>
+  <li>
+    Das Gerät darf nur dann installiert und in Betrieb genommen werden,
+    wenn es unbeschädigt aus der Originalverpackung entnommen wurde.
+    Direkt nach der Entnahme ist eine Sichtprüfung auf Beschädigungen
+    durchzuführen. Sollte das Produkt beschädigt sein,
+    ist eine Inbetriebnahme untersagt.
+  </li>
+</ul>
+
+<h3 idf="dokumentation">3. Weiterführende Dokumentation</h3>
+<p>
+Bitte beachten Sie die Informationen und Grenzwerte im
+<a href="https://docs.sentinum.de/sensoren-und-produktreihen" target="_blank" rel="noopener">
+  technischen Datenblatt
+</a>.
+</p>
+<p>
+Die sensorspezifischen Werkseinstellungen (Sentiface) sowie die Schlüssel und
+zulässigen Werte des Sensors finden Sie in der
+<a href="https://docs.sentinum.de/sensoren-und-produktreihen" target="_blank" rel="noopener">
+  NFC‑ und Downlinkbeschreibung
+</a>.
+Die Senticom‑ und Sentivisor‑Tabellen sind in der
+<a href="https://docs.sentinum.de/generische-nfc-und-downlink-dokumentation" target="_blank" rel="noopener">
+  generischen NFC‑ und Downlink‑Dokumentation
+</a>
+zu finden.
+Die Sonderfunktionen zur
+<a href="https://docs.sentinum.de/generische-sensorsonderfunktionen" target="_blank" rel="noopener">
+  Vandalismusdetektion und Öffnungsdetektion
+</a>
+sind ebenfalls generisch beschrieben.
+</p>
+
+<p>
+Die Möglichkeit zur Konfiguration der Sensor‑Kommunikation finden Sie je nach
+Version in der jeweiligen generischen
+<a href="https://docs.sentinum.de/generische-lorawan" target="_blank" rel="noopener">
+  LoRaWAN®‑
+</a>,
+<a href="https://docs.sentinum.de/generische-mioty" target="_blank" rel="noopener">
+  Mioty®
+</a>
+oder
+<a href="https://docs.sentinum.de/generische-cellular-dokumentation" target="_blank" rel="noopener">
+  Cellular‑Dokumentation (NB‑IoT und LTE‑M1)
+</a>.
+</p>
+
+<p>
+Alle Dokumente zur generischen Dokumentation finden Sie unter:<br>
+<a href="https://docs.sentinum.de/wichtig-produktübergreifende-dokumentation-für-sensoren"
+   target="_blank" rel="noopener">
+  https://docs.sentinum.de/wichtig-produktübergreifende-dokumentation-für-sensoren
+</a>
+</p>
+
+
+<h3 id ="verwendung">4. Vorgesehene Verwendung und Produktversionen</h3>
+
+<p>
+<strong>Diese Betriebsanleitung gilt für die gesamte Produktserie Juno.</strong>
+Innerhalb der Serie gibt es verschiedene Produktversionen, die sich in ihren Lokalisationsmethoden sowie in der Ausstattung und Funktionalität der Sensorik unterscheiden. Die spezifischen Eigenschaften und Funktionen der jeweiligen Versionen werden im weiteren Verlauf dieser Anleitung gesondert erläutert.
+</p>
+
+
+
+<h3 id="produktcodes">4.1. Produktcodes und Funktionen</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Artikelnummer</th>
+      <th>Funkstandard</th>
+      <th>Funktionen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>S-JUNO(-iX)-LOEU</strong></td>
+      <td>LoRaWAN®</td>
+      <td>Neigungsdetektion (Tilt), Aktivitätserkennung, Öffnungs- und Bewegungserkennung</td>
+    </tr>
+    <tr>
+      <td><strong>S-JUNO(-iX)-MIOTY</strong></td>
+      <td>mioty®</td>
+      <td>Neigungsdetektion (Tilt), Aktivitätserkennung, Öffnungs- und Bewegungserkennung</td>
+    </tr>
+    <tr>
+      <td><strong>S-JUNO(-iX)-LOEU-TH</strong></td>
+      <td>LoRaWAN®</td>
+      <td>Temperatur, relative Luftfeuchtigkeit, Neigungsdetektion (Tilt), Aktivitätserkennung, Öffnungs- und Bewegungserkennung</td>
+    </tr>
+    <tr>
+      <td><strong>S-JUNO(-iX)-MIOTY-TH</strong></td>
+      <td>mioty®</td>
+      <td>Temperatur, relative Luftfeuchtigkeit, Neigungsdetektion (Tilt), Aktivitätserkennung, Öffnungs- und Bewegungserkennung</td>
+    </tr>
+    <tr>
+      <td><strong>S-JUNO-NB-TH</strong></td>
+      <td>NB‑IoT</td>
+      <td>Temperatur, relative Luftfeuchtigkeit, Neigungsdetektion (Tilt), Aktivitätserkennung, Öffnungs- und Bewegungserkennung</td>
+    </tr>
+    <tr>
+      <td><strong>S-JUNO(-iX)-LOEU-TRACK</strong></td>
+      <td>LoRaWAN®</td>
+      <td>Neigungsdetektion (Tilt), Aktivitätserkennung, Öffnungs- und Bewegungserkennung</td>
+    </tr>
+    <tr>
+      <td><strong>S-JUNO(-iX)-LOEU-TH-TRACK</strong></td>
+      <td>LoRaWAN®</td>
+      <td>Temperatur, relative Luftfeuchtigkeit, Neigungsdetektion (Tilt), Aktivitätserkennung, Öffnungs- und Bewegungserkennung</td>
+    </tr>
+    <tr>
+      <td><strong>S-JUNO(-iX)-NBM1-TRACK-2</strong></td>
+      <td>NB‑IoT, CAT‑M1</td>
+      <td>Neigungsdetektion (Tilt), Aktivitätserkennung, Öffnungs- und Bewegungserkennung</td>
+    </tr>
+    <tr>
+      <td><strong>S-JUNO(-iX)-NBM1-TRACK-3</strong></td>
+      <td>NB‑IoT, CAT‑M1</td>
+      <td>Neigungsdetektion (Tilt), Aktivitätserkennung, Öffnungs- und Bewegungserkennung</td>
+    </tr>
+    <tr>
+      <td><strong>S-JUNO(-iX)-NBM1-TH-TRACK-2</strong></td>
+      <td>NB‑IoT, CAT‑M1</td>
+      <td>Temperatur, relative Luftfeuchtigkeit, Neigungsdetektion (Tilt), Aktivitätserkennung, Öffnungs- und Bewegungserkennung</td>
+    </tr>
+    <tr>
+      <td><strong>S-JUNO(-iX)-NBM1-TH-TRACK-3</strong></td>
+      <td>NB‑IoT, CAT‑M1</td>
+      <td>Temperatur, relative Luftfeuchtigkeit, Neigungsdetektion (Tilt), Aktivitätserkennung, Öffnungs- und Bewegungserkennung</td>
+    </tr>
+    <tr>
+      <td><strong>S-JUNO(-iX)-MIOTY-TRACK</strong></td>
+      <td>mioty®</td>
+      <td>Neigungsdetektion (Tilt), Aktivitätserkennung, Öffnungs- und Bewegungserkennung</td>
+    </tr>
+    <tr>
+      <td><strong>S-JUNO(-iX)-MIOTY-TH-TRACK</strong></td>
+      <td>mioty®</td>
+      <td>Temperatur, relative Luftfeuchtigkeit, Neigungsdetektion (Tilt), Aktivitätserkennung, Öffnungs- und Bewegungserkennung</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<h3 id="lokalisierung">4.2. Produktcodes und Lokalisierungsverfahren</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Artikelnummer</th>
+      <th>Funkstandard</th>
+      <th>WIFI SSID Scan</th>
+      <th>GNSS Scan</th>
+      <th>GNSS</th>
+      <th>Cell Locate</th>
+      <th>Tracking im LPWAN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>S-JUNO(-iX)-LOEU</td>
+      <td>LoRaWAN®</td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-MIOTY</td>
+      <td>mioty®</td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-LOEU-TH</td>
+      <td>LoRaWAN®</td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-MIOTY-TH</td>
+      <td>mioty®</td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td>S-JUNO-NB-TH</td>
+      <td>NB‑IoT</td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-LOEU-TRACK</td>
+      <td>LoRaWAN®</td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-LOEU-TH-TRACK</td>
+      <td>LoRaWAN®</td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-NBM1-TRACK-2</td>
+      <td>NB‑IoT, CAT‑M1</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-NBM1-TRACK-3</td>
+      <td>NB‑IoT, CAT‑M1</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-NBM1-TH-TRACK-2</td>
+      <td>NB‑IoT, CAT‑M1</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-NBM1-TH-TRACK-3</td>
+      <td>NB‑IoT, CAT‑M1</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-MIOTY-TRACK</td>
+      <td>mioty®</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-MIOTY-TH-TRACK</td>
+      <td>mioty®</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h3 id="verwendung-details">4.3. Vorgesehene Verwendung</h3>
+
+<p>
+Der Juno‑Sensor ist ein drahtloses, batteriebetriebenes IoT‑Gerät zur
+Erfassung von Umwelt‑ und Bewegungsdaten. Er ist für den Einsatz in
+industriellen und gewerblichen Anwendungen konzipiert, insbesondere
+zur Zustandsüberwachung und Lokalisierung von Objekten in Innen‑ und
+Außenbereichen.
+</p>
+
+<p>
+Je nach Produktvariante verfügt der Sensor über unterschiedliche
+Sensorik‑Module (z.&nbsp;B. Temperatur, Bewegung, Neigung) sowie über
+verschiedene Lokalisierungstechnologien (z.&nbsp;B. GNSS, WIFI SSID Scan,
+GNSS Scan, LoRaWAN‑basierte Positionsbestimmung). Der Sensor ist
+ausschließlich für die in dieser Anleitung beschriebenen Anwendungen
+bestimmt und darf nur im Rahmen der darin genannten technischen
+Spezifikationen betrieben werden.
+</p>
+
+<p>
+Eine anderweitige oder darüber hinausgehende Nutzung gilt als nicht
+bestimmungsgemäß. Für daraus resultierende Schäden übernimmt die
+Sentinum GmbH keine Haftung.
+</p>
+
+<h3 id="ix-versionen">4.4. Unterschiede der iX Versionen</h3>
+
+<p>
+Die Juno iX‑Versionen verfügen über erweiterte Zertifizierungen für den
+industriellen Einsatz.
+</p>
+
+<p>
+Darüber hinaus bieten sie einen erweiterten Lieferumfang sowie zusätzliche
+Konfigurationsmöglichkeiten in Bezug auf Mess‑ und Sendeintervalle.
+So ermöglichen die iX‑Modelle beispielsweise ein minimales Mess‑ und
+Sendeintervall von einer Minute, während bei der Standardversion ein
+Mindestintervall von fünf Minuten eingehalten werden muss.
+</p>
+
+<p>
+Die industriellen Juno‑Versionen und die Standardversionen unterscheiden sich
+zudem in ihrer Gehäusefarbe.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Version</th>
+      <th>Gehäusefarbe</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Standard Version</td>
+      <td>schwarz</td>
+    </tr>
+    <tr>
+      <td>-iX industrielle Versionen</td>
+      <td>seidengrau</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>5. Technische Zeichnungen</h3>
+<h3>5.1 Juno (Ohne TH)</h3>
+<p>Technische Zeichnung ohne die Öffnung für den TH Sensor.</p>
+
+<!-- ABBILDUNG 1 -->
+<figure>
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_technischeZeichnung(junooth)1.webp"
+    alt="Technische Zeichnung Juno ohne TH Öffnung">
+  <figcaption>
+    <strong>Abbildung 1:</strong> Technische Zeichnung Juno (ohne TH‑Öffnung)
+  </figcaption>
+</figure>
+
+<h3>5.2 Juno TH (mit TH Öffnung)</h3>
+<p>Technische Zeichnung mit der Öffnung für den TH Sensor.</p>
+
+
+<!-- ABBILDUNG 2 -->
+<figure>
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_technischeZeichnung(junomth)2.webp"
+    alt="Technische Zeichnung Juno TH mit Öffnung">
+  <figcaption>
+    <strong>Abbildung 2:</strong> Technische Zeichnung Juno TH (mit Membranöffnung)
+  </figcaption>
+</figure>
+
+
+
+<h3>6. Lieferumfang</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Produktversion</th>
+      <th>Lieferumfang</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Standard Version</td>
+      <td>
+        Sensor<br>
+        Batterien
+      </td>
+    </tr>
+    <tr>
+      <td>-iX Industrielle Version</td>
+      <td> 
+        Sensor<br>
+        Batterie<br>
+        Bohrschablone<br>
+        Klebepad
+        
+      </td> 
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="klebepad">6.1. Klebepad – Technische Zeichnung</h3>
+
+<figure>
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_technischeZeichnungklebepad3.webp"
+    alt="Technische Zeichnung des Juno Klebepads">
+  <figcaption>
+    <strong>Abbildung 3:</strong> Technische Zeichnung des Juno Klebepads
+  </figcaption>
+</figure>
+
+
+
+
+
+<h3>7. Zugelassene Batterien und Typen</h3>
+
+<p>
+<strong>Für den Betrieb des Produkts sind ausschließlich die folgenden Batterietypen zugelassen.</strong>
+Die Wahl der Batterie hat einen erheblichen Einfluss auf die Laufzeit.
+Für maximale Lebensdauer wird die Verwendung der Standardbatterien empfohlen.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Artikelnummer</th>
+      <th>Zugelassene Batterien</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        S‑JUNO(-iX)-LOEU / MIOTY<br>
+        S‑JUNO(-iX)-LOEU / MIOTY‑TH<br>
+        S‑JUNO(-iX)-LOEU / MIOTY‑TRACK<br>
+        S‑JUNO(-iX)-LOEU / MIOTY‑TH‑TRACK
+      </td>
+      <td>
+        Energizer Ultimate Lithium AA<br>
+        Varta ULTRA Lithium AA<br>
+        Varta Longlife Power AA<br>
+        SAFT LS14500 <strong>(Standard)</strong>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        S‑JUNO(-iX)-NBM1‑TRACK‑2<br>
+        S‑JUNO(-iX)-NBM1‑TRACK‑3<br>
+        S‑JUNO(-iX)-NBM1‑TH‑TRACK‑2<br>
+        S‑JUNO(-iX)-NBM1‑TH‑TRACK‑3<br>
+        S‑JUNO‑NB‑TH
+      </td>
+      <td>
+        CR14505 (HCB)<br>
+        ER14505M (HCB, <strong>Standard</strong>)<br>
+        UHR‑ER14505‑X (Ultralife)
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>8. Zubehör</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Artikelnummer</th>
+      <th>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PBA-000102</td>
+      <td>Klebepad für Juno</td>
+    </tr>
+    <tr>
+      <td>Z-JUNO-MAG-NEO</td>
+      <td>2× Neodym-Magnete mit Schrauben, Haltekraft bis 36 kg</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="ortung">9. Ortungs- und Lokalisierungsverfahren – Übersicht</h2>
+
+<p>
+Generell lassen sich alle LoRaWAN®‑Geräte über das LoRaWAN®‑Netzwerk orten.
+Dazu werden Gateways mit GPS‑Synchronisation benötigt.
+</p>
+
+<p>
+Im Sentinum Produktportfolio sind Stand Q2&nbsp;2025 die Apollon‑Q‑ und
+die Juno‑Serie mit erweiterten Tracking‑Funktionen ausgestattet.
+</p>
+
+<p>
+Eine Ortung über BLE‑Funktion kann auf Anfrage freigeschaltet werden.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Artikelnummer</th>
+      <th>Funkstandard</th>
+      <th>WIFI SSID Scan</th>
+      <th>GNSS Scan</th>
+      <th>GNSS</th>
+      <th>Cell Locate</th>
+      <th>Tracking im LPWAN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>S-JUNO(-iX)-LOEU</td>
+      <td>LoRaWAN®</td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-MIOTY</td>
+      <td>mioty®</td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-LOEU-TH</td>
+      <td>LoRaWAN®</td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-MIOTY-TH</td>
+      <td>mioty®</td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td>S-JUNO-NB-TH</td>
+      <td>NB‑IoT</td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-LOEU-TRACK</td>
+      <td>LoRaWAN®</td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-LOEU-TH-TRACK</td>
+      <td>LoRaWAN®</td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-NBM1-TRACK-2</td>
+      <td>NB‑IoT, CAT‑M1</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-NBM1-TRACK-3</td>
+      <td>NB‑IoT, CAT‑M1</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-NBM1-TH-TRACK-2</td>
+      <td>NB‑IoT, CAT‑M1</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-NBM1-TH-TRACK-3</td>
+      <td>NB‑IoT, CAT‑M1</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-MIOTY-TRACK</td>
+      <td>mioty®</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-MIOTY-TH-TRACK</td>
+      <td>mioty®</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="technologien">9.1. Gegenüberstellung unterschiedlicher Technologien</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Technologie</th>
+      <th>Reichweite unter guten Bedingungen (m)<sup>*</sup></th>
+      <th>Reichweite unter schlechten Bedingungen (m)<sup>**</sup></th>
+      <th>Stromverbrauch</th>
+      <th>Eignung für Indoor Tracking</th>
+      <th>Kosten</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>BLE Scanning (nicht implementiert, auf Anfrage)</td>
+      <td>1 – 3</td>
+      <td>5 – 10</td>
+      <td>Gering</td>
+      <td>Hoch</td>
+      <td>Mittel</td>
+    </tr>
+    <tr>
+      <td>WIFI SSID Scanning</td>
+      <td>1 – 5</td>
+      <td>5 – 20</td>
+      <td>Gering</td>
+      <td>Hoch</td>
+      <td>Mittel</td>
+    </tr>
+    <tr>
+      <td>GNSS (GPS, Glonass, BeiDou, Galileo)</td>
+      <td>3 – 5</td>
+      <td>5 – 10</td>
+      <td>Hoch</td>
+      <td>Nicht geeignet</td>
+      <td>Hoch</td>
+    </tr>
+    <tr>
+      <td>Mobilfunk‑Lokalisierung über Triangulation oder Funkzellen</td>
+      <td>10 – 150</td>
+      <td>150 bis mehrere Kilometer</td>
+      <td>Gering</td>
+      <td>Gering</td>
+      <td>Gering</td>
+    </tr>
+    <tr>
+      <td>GNSS Scan</td>
+      <td>1 – 10</td>
+      <td>10 – 200</td>
+      <td>Gering</td>
+      <td>Nicht geeignet</td>
+      <td>Mittel</td>
+    </tr>
+    <tr>
+      <td>UWB</td>
+      <td>&lt;0,1 – 0,3</td>
+      <td>0,3 – 0,5</td>
+      <td>Gering</td>
+      <td>Sehr hoch</td>
+      <td>Mittel</td>
+    </tr>
+    <tr>
+      <td>Tracking über das LoRaWAN<sup>***</sup></td>
+      <td>200 – 500</td>
+      <td>500 – 1500</td>
+      <td>Keiner</td>
+      <td>Praktisch nicht geeignet</td>
+      <td>Gering</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+<sup>*</sup>Gute Bedingungen: Wenig Abschattungseffekte, direkte Verbindungen zu Satelliten
+oder Gateways, sehr gute Antennen.
+</p>
+
+<p>
+<sup>**</sup>Schlechte Bedingungen: Große Abschattungseffekte wie z.&nbsp;B. Bäume, Gebäude
+oder Wände, schlechte Verbindungsqualität.
+</p>
+
+<p>
+<sup>***</sup>Abhängig von der Anzahl der Gateways und der Gateway‑Ausstattung.
+</p>
+
+<h3 id="energieoptimierung">
+  9.2. Intelligenter Einsatz von unterschiedlichen Tracking‑Technologien zur Energieoptimierung
+</h3>
+
+<p>
+Für die präzise und energieeffiziente Standortbestimmung kombinieren wir
+verschiedene Tracking‑Technologien: WIFI‑SSID‑Scan, GNSS, GNSS‑Scan und
+Cell Locate. Jede dieser Technologien besitzt spezifische Stärken, die je
+nach Situation gezielt eingesetzt werden.
+</p>
+
+<ul>
+  <li>
+    Beim <strong>WIFI‑SSID‑Scan</strong> werden in der Umgebung verfügbare
+    WLAN‑Netzwerke erkannt und anhand bekannter SSID‑Standorte eine Position
+    ermittelt. Diese Methode ist äußerst energiesparend und ermöglicht schnelle
+    Standortupdates – ideal für urbane Gebiete mit dichter WLAN‑Abdeckung.
+  </li>
+  <li>
+    <strong>GNSS</strong> (Global Navigation Satellite System, z.&nbsp;B. GPS)
+    bietet eine sehr präzise Positionsbestimmung, ist jedoch im Vergleich
+    energieintensiv. Daher wird GNSS gezielt nur dann aktiviert, wenn andere
+    Methoden keine ausreichende Genauigkeit liefern.
+  </li>
+  <li>
+    Beim <strong>GNSS‑Scan</strong> werden Satellitendaten lediglich gesammelt
+    und die Positionsberechnung vorbereitet, ohne dauerhaft eine aktive
+    GNSS‑Sitzung aufrechtzuerhalten. Dadurch wird im Vergleich zu einer
+    permanenten GNSS‑Nutzung erheblich Energie eingespart.
+  </li>
+  <li>
+    <strong>Cell Locate</strong> ermöglicht eine Positionsbestimmung auf Basis
+    von Mobilfunkzellen. Diese Methode ist global verfügbar und gewährleistet
+    auch bei fehlendem WLAN‑ oder GNSS‑Signal eine grobe, aber kontinuierliche
+    Standortbestimmung.
+  </li>
+</ul>
+
+<p>
+Durch eine intelligente Steuerung und Priorisierung – beispielsweise die
+bevorzugte Nutzung von WIFI‑Scans – kann der Energieverbrauch des Geräts
+erheblich reduziert werden. Erst wenn WIFI‑ oder Zellortung nicht ausreichend
+sind, erfolgt automatisch eine Umschaltung auf GNSS oder andere genauere
+Verfahren.
+</p>
+
+<p>
+Alle Tracking‑Strategien und Fallback‑Mechanismen sind individuell
+konfigurierbar. Dadurch kann für unterschiedliche Anwendungen und Regionen
+eine optimale Balance zwischen Energieeffizienz, Positionsgenauigkeit und
+Verfügbarkeit gewählt werden.
+</p>
+
+<p>
+Auch bei wechselnden Umgebungsbedingungen ermöglicht diese flexible
+Kombination eine nahezu lückenlose und detailreiche Routenaufzeichnung
+weltweit.
+</p>
+
+<p>
+Für Indoor‑Szenarien, in denen GNSS‑Signale häufig nicht verfügbar oder
+ungenau sind, stehen ebenfalls geeignete Lösungen zur Verfügung. Durch
+WIFI‑SSID‑Scan sowie die Nutzung bekannter Indoor‑Access‑Points lässt sich
+die Position auch innerhalb von Gebäuden zuverlässig bestimmen.
+</p>
+
+<p>
+Optional kann die Indoor‑Positionierung durch zusätzliche Technologien wie
+<strong>Bluetooth Low Energy (BLE) Beacons</strong> oder
+<strong>Inertialsensorik</strong> ergänzt werden. Dadurch ist eine präzise
+Standortbestimmung auch in komplexen Umgebungen wie Einkaufszentren,
+Flughäfen oder Industriehallen möglich – nahtlos integriert in das bestehende
+Tracking‑Konzept.
+</p>
+<h3 id="wifi-scan">9.3. Welche Sensoren setzen WIFI SSID Scan ein?</h3>
+
+<p>
+Im Sentinum Produktportfolio sind Teile der Juno‑ und Apollon‑Q‑Reihe mit
+einer WIFI‑SSID‑Scan‑Funktion ausgestattet. Die Cellular‑ und mioty®‑Produkte
+verfügen über einen <strong>2,4&nbsp;GHz‑ und 5&nbsp;GHz WIFI‑SSID‑Scan</strong>
+zur Auswertung von bis zu <strong>20 MAC‑Adressen</strong>.  
+Die LoRaWAN®‑Produkte sind mit einem <strong>2,4&nbsp;GHz WIFI‑SSID‑Scan</strong>
+für die Auswertung von bis zu <strong>sechs MAC‑Adressen</strong> ausgestattet.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Artikelnummer</th>
+      <th>Funkstandard</th>
+      <th>2,4&nbsp;GHz Scan</th>
+      <th>5&nbsp;GHz Scan</th>
+      <th>Maximale Anzahl der MAC‑Adressen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>S‑JUNO(-iX)-LOEU‑TRACK</td>
+      <td>LoRaWAN®</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>6</strong></td>
+    </tr>
+    <tr>
+      <td>S‑JUNO(-iX)-LOEU‑TH‑TRACK</td>
+      <td>LoRaWAN®</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>6</strong></td>
+    </tr>
+    <tr>
+      <td>S‑JUNO(-iX)-NBM1‑TRACK‑2</td>
+      <td>Cellular</td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>20</strong></td>
+    </tr>
+    <tr>
+      <td>S‑JUNO(-iX)-NBM1‑TRACK‑3</td>
+      <td>Cellular</td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>20</strong></td>
+    </tr>
+    <tr>
+      <td>S‑JUNO(-iX)-NBM1‑TH‑TRACK‑2</td>
+      <td>Cellular</td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>20</strong></td>
+    </tr>
+    <tr>
+      <td>S‑JUNO(-iX)-NBM1‑TH‑TRACK‑3</td>
+      <td>Cellular</td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>20</strong></td>
+    </tr>
+    <tr>
+      <td>S‑JUNO(-iX)-MIOTY‑TRACK</td>
+      <td>mioty®</td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>20</strong></td>
+    </tr>
+    <tr>
+      <td>S‑JUNO(-iX)-MIOTY‑TH‑TRACK</td>
+      <td>mioty®</td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>20</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>10. Ortungs- und Lokalisierungsverfahren – Übersicht</h3>
+
+<p>
+Grundsätzlich können alle LoRaWAN®-Geräte über das LoRaWAN®-Netz lokalisiert werden.
+Hierfür sind Gateways mit GPS‑Synchronisation erforderlich.
+</p>
+
+<p>
+Im Sentinum‑Produktportfolio sind (Stand Q2 2025) die Apollon‑Q‑Serie
+sowie die Juno‑Serie mit erweiterten Tracking‑Funktionen ausgestattet.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Artikelnummer</th>
+      <th>Funkstandard</th>
+      <th>WIFI SSID Scan</th>
+      <th>GNSS Scan</th>
+      <th>GNSS</th>
+      <th>Cell Locate</th>
+      <th>Tracking im LPWAN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>S-JUNO(-iX)-LOEU</td>
+      <td>LoRaWAN®</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>✔</td>
+    </tr>
+    <tr>
+      <td>S-JUNO-NB-TH</td>
+      <td>NB‑IoT</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>✔</td>
+      <td>X</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<h3>11. Gegenüberstellung unterschiedlicher Technologien</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Technologie</th>
+      <th>Reichweite (gute Bedingungen)</th>
+      <th>Reichweite (schlechte Bedingungen)</th>
+      <th>Stromverbrauch</th>
+      <th>Indoor‑Eignung</th>
+      <th>Kosten</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>WIFI SSID Scanning</td>
+      <td>1–5 m</td>
+      <td>5–20 m</td>
+      <td>Gering</td>
+      <td>Hoch</td>
+      <td>Mittel</td>
+    </tr>
+    <tr>
+      <td>GNSS</td>
+      <td>3–5 m</td>
+      <td>5–10 m</td>
+      <td>Hoch</td>
+      <td>Nicht geeignet</td>
+      <td>Hoch</td>
+    </tr>
+    <tr>
+      <td>Cell Locate</td>
+      <td>10–150 m</td>
+      <td>bis mehrere km</td>
+      <td>Gering</td>
+      <td>Gering</td>
+      <td>Gering</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+*Gute Bedingungen: geringe Abschattung, freie Sicht, gute Antennen*<br>
+**Schlechte Bedingungen: starke Abschattung durch Gebäude, Wände, Vegetation**
+</p>
+
+
+
+<h3>12. Portbelegung für Payloads</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>LoRaWAN‑Port</th>
+      <th>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GNSS Scan Payload</td>
+      <td>197</td>
+      <td>Rohdaten zur Positionsberechnung</td>
+    </tr>
+    <tr>
+      <td>WIFI SSID Scan Payload</td>
+      <td>194</td>
+      <td>MAC‑Adressen und RSSI‑Daten</td>
+    </tr>
+    <tr>
+      <td>Reguläre Payload</td>
+      <td>1</td>
+      <td>Sensorwerte (Temperatur, Winkel, Batterie etc.)</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<!-- ABBILDUNG 9 -->
+<figure>
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_Advertising9.webp"
+    alt="BLE Advertising Illustration">
+  <figcaption>
+    <strong>Abbildung 9:</strong> BLE Advertising und Aktivierungsdarstellung
+  </figcaption>
+</figure>
+
+<!-- ABBILDUNG 10 -->
+<figure>
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_Qrcode10.webp"
+    alt="QR-Code Juno Sensor">
+  <figcaption>
+    <strong>Abbildung 10:</strong> QR‑Code zur Geräteidentifikation
+  </figcaption>
+</figure>
+
+<!-- ABBILDUNG 11 -->
+<figure>
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_pfeilOrange11.webp"
+    alt="NFC Markierung">
+  <figcaption>
+    <strong>Abbildung 11:</strong> Position des NFC‑Tags am Sensor
+  </figcaption>
+</figure>
+
+<!-- ABBILDUNG 12–14 (App Screens) -->
+<figure>
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_screen12.webp"
+    alt="LinQs App Startscreen">
+  <figcaption>
+    <strong>Abbildung 12:</strong> LinQs App – Startansicht
+  </figcaption>
+</figure>
+
+<figure>
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_screen13.webp"
+    alt="BLE Gerät suchen">
+  <figcaption>
+    <strong>Abbildung 13:</strong> BLE‑Geräte suchen in der App
+  </figcaption>
+</figure>
+
+<figure>
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_screen14.webp"
+    alt="Sensor verbinden">
+  <figcaption>
+    <strong>Abbildung 14:</strong> Verbindung mit dem Juno Sensor herstellen
+  </figcaption>
+</figure>
+<!-- ========================================================= -->
+<!-- JUNO TH TILT – BETRIEBSANLEITUNG                          -->
+<!-- BLOCK 5: MONTAGE & INSTALLATION                           -->
+<!-- ========================================================= -->
+
+
+
+<h3>11. Montage und Installation</h3>
+
+<h3>11.1 Warn- und Sicherheitshinweise zur Montage</h3>
+
+<p>
+Falls der Sensor nach der Montage gut zugänglich ist, montieren Sie zuerst den
+Sensor und aktivieren diesen anschließend.  
+Ist der Sensor nach der Montage nicht mehr zugänglich, aktivieren Sie den Sensor
+zuerst und montieren ihn anschließend.
+</p>
+
+<p>
+Vergewissern Sie sich vor der Montage, dass der Untergrund eben ist.
+Unebene Oberflächen können das Gehäuse beschädigen.
+</p>
+
+<ul>
+  <li>Keine Gegenstände oder Körperteile in Öffnungen des Sensors einführen.</li>
+  <li>Sensor nicht an Decken oder am Boden montieren.</li>
+  <li>Sensor nicht über 2 m Höhe montieren.</li>
+  <li>Nur an Wänden in üblichen Innenräumen montieren (1,50 m – 1,80 m).</li>
+</ul>
+
+<p>
+Dauermagnete können starke Magnetfelder erzeugen. Beachten Sie daher:
+</p>
+
+<ul>
+  <li><strong>Hände schützen:</strong> Quetschgefahr durch schlagartiges Anziehen.</li>
+  <li><strong>Elektronik fernhalten:</strong> Gefahr für Smartphones, Karten, Herzschrittmacher.</li>
+  <li><strong>Bruchgefahr:</strong> Neodym‑Magnete sind spröde.</li>
+  <li><strong>Kinder fernhalten:</strong> Erstickungs‑ und Verletzungsgefahr.</li>
+  <li><strong>Hitze vermeiden:</strong> Magnetkraftverlust ab 80–200 °C.</li>
+</ul>
+
+
+
+<!-- ABBILDUNG 15 -->
+<figure>
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_vorbereitungMontage5.webp" alt="Vorbereitung der Montage">
+  <figcaption>
+    <strong>Abbildung 15:</strong> Vorbereitung der Montage
+  </figcaption>
+</figure>
+
+
+
+<h3>11.2 Empfohlene Befestigungsmethoden</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Montageart</th>
+      <th>Beschreibung</th>
+      <th>Empfohlenes Zubehör</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Verschraubung</td>
+      <td>2 Schrauben M4 oder M5</td>
+      <td>Senkopfschrauben, ggf. Holzschrauben (4–5 mm)</td>
+    </tr>
+    <tr>
+      <td>Magneten</td>
+      <td>2× Neodym‑Topfmagnete M4</td>
+      <td>Neodym‑Magnete (16–32 kg Tragkraft)</td>
+    </tr>
+    <tr>
+      <td>Kleben</td>
+      <td>Doppelseitiges Klebeband oder Montagekleber</td>
+      <td>Industrie‑Klebepad</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<h3>11.3 Wandmontage mit Schrauben</h3>
+
+<p>
+Die Montage erfolgt über die vorgesehenen Schraublöcher am Gehäuse.
+Empfohlen werden M4‑Schrauben.  
+Maximales Anzugsdrehmoment: <strong>3 Nm</strong>.
+</p>
+
+<ul>
+  <li>Schrauben gleichmäßig über Kreuz anziehen</li>
+  <li>Gehäuse muss plan aufliegen</li>
+  <li>Keine zusätzlichen Bohrungen am Gehäuse vornehmen</li>
+</ul>
+
+<!-- ABBILDUNG 16 -->
+<figure>
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_port-Zuordnung4.webp" alt="Schraubmontage">
+  <figcaption>
+    <strong>Abbildung 16:</strong> Wandmontage mit Schrauben
+  </figcaption>
+</figure>
+
+
+
+<h3>11.4 Wandmontage mit Magneten</h3>
+
+<p>
+Zur temporären oder lösbaren Befestigung kann der Sensor mit Magneten montiert
+werden. Die Magnetmodule werden zunächst am Gehäuse verschraubt.
+</p>
+
+<p>
+Die Kontaktfläche muss eben, sauber und fettfrei sein.
+Unebenheiten oder Beschichtungen reduzieren die Haltekraft.
+</p>
+
+<!-- ABBILDUNG 17 -->
+<figure>
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_SicherheitshinweiseMontage6.webp" alt="Magnetmontage">
+  <figcaption>
+    <strong>Abbildung 17:</strong> Montage mit Neodym‑Magneten
+  </figcaption>
+</figure>
+
+
+
+<h3>11.5 Wandmontage mit Klebepad</h3>
+
+<p>
+Alternativ kann der Sensor mit vorgeschnittenen 3M‑Klebepads befestigt werden.
+Diese Methode eignet sich für glatte, feste Untergründe.
+</p>
+
+<ul>
+  <li>Untergrund reinigen (Isopropanol)</li>
+  <li>Sensor nach dem Anbringen 24 h nicht belasten</li>
+  <li>Klebepads sind nicht wiederverwendbar</li>
+</ul>
+
+<!-- ABBILDUNG 18 -->
+<figure>
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_technischeZeichnungklebepad3.webp" alt="Klebepad Montage">
+  <figcaption>
+    <strong>Abbildung 18:</strong> Montage mit Klebepad
+  </figcaption>
+</figure>
+<!-- ========================================================= -->
+<!-- JUNO TH TILT – BETRIEBSANLEITUNG                          -->
+<!-- BLOCK 6: INBETRIEBNAHME UND VERWENDUNG                     -->
+<!-- ========================================================= -->
+
+
+
+<h3>12. Inbetriebnahme und Verwendung</h3>
+
+<p>
+Bitte beachten Sie, dass beim Umgang mit spitzen oder scharfen Gegenständen
+Beschädigungen am Gehäuse oder der Elektronik entstehen können.
+</p>
+
+
+<h3>12.1 Inbetriebnahme des Sensors mit Magnet</h3>
+
+<p>
+Der Juno Sensor verfügt über einen integrierten Magnetfeldschalter
+zur einfachen Aktivierung des Geräts.
+</p>
+
+<p>
+Um den Sensor zu aktivieren, halten Sie einen handelsüblichen Magneten
+an die mit <strong>X</strong> markierte Position am Gehäuse.
+Empfohlen wird ein Neodym‑Magnet mit einer Mindestfläche von 1 cm².
+</p>
+
+<p>
+Der Magnet muss mindestens <strong>2 Sekunden</strong> an der Position verbleiben.
+Die erfolgreiche Aktivierung wird durch einen Piepton bestätigt.
+</p>
+
+<!-- ABBILDUNG 19 -->
+<figure>
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_Advertising9.webp"
+    alt="Position des Magnetfeldschalters am Juno Sensor">
+  <figcaption>
+    <strong>Abbildung 19:</strong> Position des Magnetfeldschalters zur Aktivierung
+  </figcaption>
+</figure>
+
+<p>
+Bitte beachten Sie, dass der Hall‑Switch 1 für die Klappenöffnungsdetektion
+verwendet wird, während der Magnetschalter 2 das Aktivieren des Sensors
+oder das BLE‑Advertising auslöst.
+</p>
+
+
+
+<h3>12.2 Inbetriebnahme des Sensors über BLE (Kurzanleitung)</h3>
+
+<p>
+Diese Aktivierung über BLE gilt ausschließlich für folgende Artikelnummern:
+</p>
+
+<ul>
+  <li>S‑JUNO(-iX)-LOEU / MIOTY‑TRACK</li>
+  <li>S‑JUNO(-iX)-LOEU / MIOTY‑TH‑TRACK</li>
+  <li>S‑JUNO(-iX)-NBM1‑TRACK‑2</li>
+  <li>S‑JUNO(-iX)-NBM1‑TRACK‑3</li>
+  <li>S‑JUNO(-iX)-NBM1‑TH‑TRACK‑2</li>
+  <li>S‑JUNO(-iX)-NBM1‑TH‑TRACK‑3</li>
+</ul>
+
+<p>
+Versetzen Sie den Sensor in den BLE‑Advertising‑Modus, damit er von
+BLE‑fähigen Endgeräten erkannt werden kann.
+</p>
+
+<!-- ABBILDUNG 20 -->
+<figure>
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_screen12.webp"
+    alt="BLE Advertising Modus in der Sentinum LinQs App">
+  <figcaption>
+    <strong>Abbildung 20:</strong> BLE‑Advertising‑Modus in der LinQs App
+  </figcaption>
+</figure>
+
+
+<h3>12.3 Inbetriebnahme des Sensors über NFC</h3>
+
+<p>
+Diese Aktivierung gilt für folgende Artikelnummern:
+</p>
+
+<ul>
+  <li>S‑JUNO(-iX)-LOEU / MIOTY</li>
+  <li>S‑JUNO(-iX)-LOEU / MIOTY‑TH</li>
+  <li>S‑JUNO‑NB‑TH</li>
+</ul>
+
+<p>
+Die Aktivierung erfolgt über eine NFC‑fähige Smartphone‑App.
+Bitte laden Sie hierzu die <strong>Sentinum LinQs App</strong> aus dem
+Apple App Store oder Google Play Store.
+</p>
+
+<p>
+Lokalisieren Sie zuerst den NFC‑Tag auf dem Sensor.
+Die Position ist durch einen orangefarbenen Pfeil gekennzeichnet
+und zusätzlich mit der Aufschrift <em>„Tap here“</em> markiert.
+</p>
+
+<!-- ABBILDUNG 21 -->
+<figure>
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_pfeilOrange11.webp"
+    alt="Position des NFC Tags am Juno Sensor">
+  <figcaption>
+    <strong>Abbildung 21:</strong> Position des NFC‑Tags am Sensor
+  </figcaption>
+</figure>
+
+<p>
+Öffnen Sie die LinQs App und wählen Sie im Startmenü
+<em>„Sensor aktivieren“</em>.  
+Legen Sie anschließend Ihr Smartphone auf die NFC‑Markierung des Sensors.
+Nach erfolgreicher Aktivierung erscheint die Meldung
+<em>„Sensor aktualisiert!“</em>.
+</p>
+
+
+
+<h3>12.4 Inbetriebnahme des Sensors über BLE</h3>
+
+<p>
+Alle TRACK‑Varianten sowie zukünftige Juno‑Versionen verfügen über BLE.
+Für andere Varianten verwenden Sie bitte die Aktivierung per NFC oder Magnet.
+</p>
+
+<p>
+Aktivieren Sie den Magnetfeldschalter, um den BLE‑Advertising‑Modus zu starten.
+Der Sensor bestätigt dies mit einem akustischen Signal.
+Anschließend können Sie den Sensor per BLE über Ihr Endgerät konfigurieren.
+</p>
+<!-- ========================================================= -->
+<!-- JUNO TH TILT – BETRIEBSANLEITUNG                          -->
+<!-- BLOCK 7: SENSORFUNKTIONEN & AKUSTISCHES FEEDBACK          -->
+<!-- ========================================================= -->
+
+
+
+<h3>13. Akustisches Signal und Feedback</h3>
+
+<p>
+Beim Einschalten des Gerätes ertönt ein akustisches Signal,
+bestehend aus mehreren aufsteigenden Tönen.
+Diese Tonfolge bestätigt die erfolgreiche Aktivierung des Sensors.
+</p>
+
+<p>
+Beim Ausschalten des Gerätes werden mehrere abfallende Töne abgespielt,
+die das ordnungsgemäße Herunterfahren signalisieren.
+</p>
+
+<p>
+Auch beim Herstellen oder Trennen einer Bluetooth‑Verbindung (BLE)
+gibt der Sensor ein akustisches Feedback aus, um den Verbindungsstatus
+zu bestätigen.
+</p>
+
+
+
+<h3>14. Sensorfunktionen</h3>
+
+<p>
+Im Folgenden werden die wichtigsten Sensorfunktionen des Juno erläutert.
+</p>
+
+
+
+<h3>14.1 Hysterese</h3>
+
+<p>
+<strong>Hysterese</strong> beschreibt ein Verhalten,
+bei dem die Reaktion eines Systems nicht nur vom aktuellen Messwert,
+sondern auch von dessen Verlauf abhängt.
+</p>
+
+<p>
+Beim Juno werden separate Hysterese‑Grenzwerte
+für Temperatur und relative Luftfeuchtigkeit verwendet.
+Diese Grenzwerte gelten sowohl für absolute Schwellen
+als auch für Delta‑Werte.
+</p>
+
+<!-- ABBILDUNG 21 -->
+<figure>
+  https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_graphSensor21.webp
+  <figcaption>
+    <strong>Abbildung 21:</strong> Beispielhafte Darstellung der Hysterese‑Funktion
+  </figcaption>
+</figure>
+
+<p>
+Beispiel:
+</p>
+
+<ul>
+  <li>MAX‑Alarm wird ausgelöst bei ≥ 30 °C</li>
+  <li>Alarm wird erst zurückgesetzt, wenn der Wert unter 28 °C fällt</li>
+  <li>MIN‑Alarm entsprechend bei ≤ 10 °C mit Rücksetzung bei 12 °C</li>
+</ul>
+
+<p>
+Dieses Verhalten verhindert ständiges Ein‑ und Ausschalten von Alarmen
+bei minimalen Schwankungen.
+</p>
+
+
+<h3>14.2 Tracking und Tracking in Motion</h3>
+
+<p>
+Die Lokalisierung des Geräts ist unabhängig von der Übertragung
+der Sensordaten (Temperatur, Neigungswinkel, Luftfeuchtigkeit).
+</p>
+
+<p>
+Das bedeutet:
+</p>
+
+<ul>
+  <li>Tracking‑Intervalle sind unabhängig von Sensor‑Sendeintervallen</li>
+  <li>Messwerte werden unabhängig vom Bewegungszustand erfasst</li>
+  <li>Ortung erfolgt zeitbasiert oder ereignisgesteuert (z. B. Bewegung)</li>
+</ul>
+
+<p>
+Tracking in Motion beschreibt eine aktivitätsabhängige Ortung,
+bei der Standortupdates verstärkt bei Bewegung übertragen werden.
+</p>
+
+
+
+<h3>14.3 Neigungs- und „Tilt“-Erkennung</h3>
+
+<p>
+Für Juno‑Sensoren mit Neigungserkennung stehen zwei Betriebsmodi zur Verfügung:
+</p>
+
+<ul>
+  <li>
+    <strong>Ultra‑Low‑Power‑Neigungserkennung</strong><br>
+    Stromverbrauch ca. 1 µA,
+    Erkennung ab ca. 50°.
+  </li>
+  <li>
+    <strong>Erweiterte Neigungserkennung</strong><br>
+    Gradgenaue Erfassung,
+    höherer Energiebedarf abhängig von Abtastfrequenz.
+  </li>
+</ul>
+
+<p>
+<strong>Die Funktionen Neigungs‑/Öffnungserkennung und Tracking in Motion
+schließen sich gegenseitig aus.</strong>
+</p>
+
+<p>
+Bei aktivem Tracking in Motion wird der aktuelle Neigungswinkel
+weiterhin regelmäßig übertragen und kann nachträglich ausgewertet werden.
+</p>
+
+
+<h3>15. Klappenöffnungsdetektion</h3>
+
+<p>
+Die Klappenöffnungsdetektion kann auf zwei Arten erfolgen:
+</p>
+
+<ul>
+  <li>über den Magnetschalter</li>
+  <li>über den Beschleunigungssensor (Neigungsänderung)</li>
+</ul>
+
+<!-- ABBILDUNG 28 -->
+<figure>
+  https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_Klappenerkennung28.webp
+  <figcaption>
+    <strong>Abbildung 28:</strong> Klappenöffnungsdetektion über Magnetschalter
+  </figcaption>
+</figure>
+
+<p>
+Der Hall‑Switch 1 wird für die Öffnungserkennung genutzt,
+der Magnetschalter 2 für Aktivierung oder BLE‑Advertising.
+</p>
+
+<p>
+Je nach Konfiguration sind folgende Modi möglich:
+</p>
+
+<ul>
+  <li>Behälter ist geschlossen, wenn Magnet anliegt</li>
+  <li>Behälter ist offen, wenn Magnet anliegt</li>
+  <li>Öffnung wird gezählt, wenn Magnet zweimal erkennt wird</li>
+</ul>
+
+
+<h3>17.3 Orientierungen</h3>
+
+<!-- ABBILDUNG 29 -->
+<figure>
+  https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_Ausrichtung29.webp
+  <figcaption>
+    <strong>Abbildung 29:</strong> Übersicht möglicher Sensor‑Orientierungen
+  </figcaption>
+</figure>
+<!-- ========================================================= -->
+<!-- JUNO TH TILT – BETRIEBSANLEITUNG                          -->
+<!-- BLOCK 8: LORAWAN · WARTUNG · KENNZEICHNUNG · ENDE         -->
+<!-- ========================================================= -->
+
+
+
+<h3>16. LoRaWAN® spezifische Eigenschaften</h3>
+
+<h3>16.1 LoRaWAN® Join Verhalten</h3>
+
+<p>
+Bevor Telemetriedaten über LoRaWAN® gesendet werden können,
+muss der Sensor dem Netzwerk beitreten (Join‑Vorgang).
+</p>
+
+<p>
+Der Juno Sensor sendet Join‑Requests, bis ein Join‑Accept empfangen wird.
+Um einen optimalen Kompromiss zwischen Energieverbrauch
+und schneller Netzanmeldung zu erreichen, werden:
+</p>
+
+<ul>
+  <li>die Sendeintervalle der Join‑Requests schrittweise verlängert</li>
+  <li>die Datenrate variiert (DR5 → DR0 / SF7 → SF12)</li>
+</ul>
+
+<p>
+Die Umsetzung erfolgt gemäß den Vorgaben der LoRa‑Alliance.
+Ein <strong>Join‑Burst</strong> besteht aus bis zu sechs Join‑Requests
+mit abnehmender Datenrate.
+</p>
+
+<p>
+Die Abstände zwischen den Join‑Bursts vergrößern sich progressiv,
+um die Duty‑Cycle‑Vorgaben einzuhalten.
+</p>
+
+
+
+<h3>17. Pflege und Reinigung</h3>
+
+<p>
+Für einen zuverlässigen Betrieb und eine lange Lebensdauer
+sollte der Sensor regelmäßig gepflegt werden.
+</p>
+
+<ul>
+  <li>Gehäuse mit trockenem oder leicht feuchtem Mikrofasertuch reinigen</li>
+  <li>Keine aggressiven oder lösungsmittelhaltigen Reinigungsmittel verwenden</li>
+  <li>Keine Druckluft oder Hochdruckreiniger einsetzen</li>
+  <li>Keine Feuchtigkeit in das Gerät eindringen lassen</li>
+</ul>
+
+<p>
+Insbesondere in staubigen oder pollenreichen Umgebungen
+empfiehlt sich eine regelmäßige Sichtprüfung.
+</p>
+
+
+<h3>18. Wartung</h3>
+
+<p>
+Der Juno Sensor ist wartungsarm.
+Ein Batteriewechsel ist je nach Nutzung nach mehreren Jahren erforderlich.
+</p>
+
+<p>
+Überprüfen Sie regelmäßig:
+</p>
+
+<ul>
+  <li>den festen Sitz des Sensors</li>
+  <li>die Funkverbindung</li>
+  <li>die Zustandsdaten im Backend</li>
+</ul>
+
+
+
+<h3>19. Entsorgung</h3>
+
+<p>
+Entsorgen Sie den Sensor am Ende seiner Lebensdauer
+gemäß den geltenden lokalen Vorschriften für
+Elektro‑ und Batterieentsorgung.
+</p>
+
+<p>
+Batterien dürfen nicht über den Hausmüll entsorgt werden,
+sondern müssen einer geeigneten Sammelstelle zugeführt werden.
+</p>
+
+<h3>20. Kennzeichnung und Zertifizierung</h3>
+
+<!-- ZERTIFIZIERUNGSABBILDUNGEN -->
+<figure>
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_graphSensor21.webp" alt="Zertifizierungskennzeichnungen">
+</figure>
+
+
+
+    <!-- FOOTER -->
+    <div class="footer-note">
+      <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+      <p>Alle Inhalte dieses Dokuments, einschließlich Texte, Tabellen und Bilder, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+      <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+      <p>Vervielfältigung, Verbreitung oder Nutzung – auch auszugsweise – ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+      <p style="padding-left:14px; font-style:italic;">
+        Technische Änderungen vorbehalten. Alle Angaben ohne Gewähr.
+      </p>
+    </div>
