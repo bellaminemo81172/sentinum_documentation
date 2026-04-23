@@ -1,1 +1,3463 @@
-a
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<!-- ✅ CSS – UNCHANGED -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+  --blue-bg:#f7fbff;
+  --blue-border:#d6e4fa;
+  --blue-text:#1a3e8c;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+}
+
+body{
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+}
+
+h1{
+  margin:48px 0 16px;
+  padding-bottom:12px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:42px;
+  font-weight:700;
+  border-bottom:2px solid var(--border);
+}
+
+h3{
+  margin:32px 0 12px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:120px;
+}
+
+p{margin:8px 0 12px}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+  table-layout:fixed;
+}
+
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid #000;
+}
+
+.main-toc{
+  max-width:900px;
+  margin:24px auto 40px;
+  padding:16px 20px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+}
+
+.main-toc strong{display:block;margin-bottom:8px;}
+.main-toc ul{list-style:none;padding:0;margin:0;}
+.main-toc li{margin:.35rem 0;}
+.main-toc a{color:var(--blue-text);font-weight:600;text-decoration:none;}
+.main-toc a:hover{text-decoration:underline;}
+
+.pdf-container{
+  width:100%;
+  max-width:900px;
+  height:600px;
+  margin:24px auto 12px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  overflow:hidden;
+}
+
+.pdf-info{
+  max-width:900px;
+  margin:8px auto 32px;
+  padding:10px 14px;
+  background:#f8fbff;
+  border:1px solid #b6d4fe;
+  border-radius:6px;
+  text-align:center;
+}
+
+.pdf-info a{
+  color:#2563eb;
+  font-weight:600;
+  text-decoration:underline;
+}
+
+.figure{
+  max-width:900px;
+  margin:24px auto;
+}
+
+.figure img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+
+.figure figcaption{
+  margin-top:6px;
+  color:var(--text-muted);
+  font-size:0.875rem;
+}
+
+.note-strip{
+  padding:14px 16px;
+  margin:18px 0;
+  border-radius:6px;
+  border-left-width:6px;
+  border-left-style:solid;
+}
+
+.note-strip--red{background:#fdecea;border-left-color:#d32f2f;}
+.note-strip--yellow{background:#fff8e1;border-left-color:#f9a825;}
+.note-strip--green{background:#e8f5e9;border-left-color:#2e7d32;}
+.note-strip p,.note-strip ul{margin:0;}
+
+table.auto-layout{table-layout:auto;}
+table.auto-layout th,table.auto-layout td{width:auto;}
+</style>
+</head>
+<body>
+
+
+<div class="pdf-container">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/10c335818934d5e22031bdc44ef6234f15481246/Juno_TILT/Juno_TILT_Betriebsanleitung/EN/Juno_Betriebsanleitung_EN_1.0.1.pdf"
+    title="JUNO TILT User Manual PDF"
+    loading="lazy"
+    style="width:100%;height:100%;border:none;">
+  </iframe>
+</div>
+
+<div class="pdf-info">
+  📄 You can view the user manual above or
+  <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/10c335818934d5e22031bdc44ef6234f15481246/Juno_TILT/Juno_TILT_Betriebsanleitung/EN/Juno_Betriebsanleitung_EN_1.0.1.pdf"
+     target="_blank" rel="noopener">
+    download it here as a PDF
+  </a>.
+</div>
+
+<div class="main-toc">
+<strong>Table of Contents</strong>
+<ul>
+<li><a href="#versionhistorie">1. Version History</a></li>
+<li><a href="#sicherheit">2. General Warnings and Safety Instructions</a></li>
+<li><a href="#dokumentation">3. Further Documentation</a></li>
+
+<li><a href="#verwendung">4. Intended Use and Product Versions</a></li>
+<li><a href="#produktcodes">4.1 Product Codes and Functions</a></li>
+<li><a href="#lokalisierung">4.2 Product Codes and Localization Procedures</a></li>
+<li><a href="#verwendung-details">4.3 Intended Use</a></li>
+<li><a href="#ix-versionen">4.4 Differences of iX Versions</a></li>
+
+<li><a href="#zeichnungen">5. Technical Drawings</a></li>
+<li><a href="#zeichnung-ohne-th">5.1 Juno (Without TH)</a></li>
+<li><a href="#zeichnung-mit-th">5.2 Juno TH (With TH Opening)</a></li>
+
+<li><a href="#lieferumfang">6. Scope of Delivery</a></li>
+<li><a href="#klebepad">6.1 Adhesive Pad – Technical Drawing</a></li>
+
+<li><a href="#batterien">7. Approved Batteries and Types</a></li>
+<li><a href="#zubehoer">8. Accessories</a></li>
+
+<li><a href="#ortung">9. Detection and Localization Methods Overview</a></li>
+<li><a href="#technologien">9.1 Comparison of Different Technologies</a></li>
+<li><a href="#energieoptimierung">9.2 Intelligent Use of Different Tracking Technologies for Energy Optimization</a></li>
+<li><a href="#wifi-scan">9.3 Which Sensors Use Wi‑Fi SSID Scan?</a></li>
+<li><a href="#wifi-funktion">9.4 How Wi‑Fi SSID Scanning Works</a></li>
+<li><a href="#wifi-vorteile">9.5 Advantages and Applications of Wi‑Fi‑Based Localization</a></li>
+<li><a href="#genauigkeit">9.6 Accuracy Dependencies</a></li>
+<li><a href="#warum-wifi">9.7 Why Positioning via Wi‑Fi SSID Is Useful for JUNO</a></li>
+<li><a href="#gnss-scan">9.8 How GNSS Scan Works</a></li>
+<li><a href="#loracloud">9.9 GNSS Scan and LoRa® Cloud</a></li>
+<li><a href="#ports">9.10 Port Assignment for Wi‑Fi SSID Scan Payload, GNSS Scan Payload and Regular Payload</a></li>
+<li><a href="#tracking-lora">9.11 Tracking in the LoRaWAN®</a></li>
+<li><a href="#cell-locate">9.12 Tracking via the “Cell Locate” Mobile Network</a></li>
+<li><a href="#edrx">9.13 eDRX: On the Way to the Interrogable Tracker</a></li>
+
+<li><a href="#handhabung">10. General Handling Instructions</a></li>
+<li><a href="#th-handhabung">10.1 Special Handling Instructions for TH Versions</a></li>
+
+<li><a href="#montage">11. Assembly and Installation</a></li>
+<li><a href="#montage-sicherheit">11.1 Warnings and Safety Instructions for Installation</a></li>
+<li><a href="#befestigung">11.2 Recommended Fastening Methods</a></li>
+<li><a href="#installation">11.3 General Installation Instructions</a></li>
+<li><a href="#th-installation">11.4 Installation Instructions for Juno TH Versions</a></li>
+<li><a href="#tracker-installation">11.5 Installation Instructions for Tracker Versions</a></li>
+<li><a href="#antenne">11.6 Important Notice for Devices with External Antenna</a></li>
+<li><a href="#schrauben">11.7 Wall Mounting with Screws</a></li>
+<li><a href="#magnet">11.8 Wall Mounting with Magnets</a></li>
+<li><a href="#kleben">11.9 Wall Mounting with Adhesive Strips</a></li>
+
+<li><a href="#inbetriebnahme">12. Commissioning and Use</a></li>
+<li><a href="#magnet-start">12.1 Commissioning the Sensor Using a Magnet</a></li>
+<li><a href="#ble-kurz">12.2 Commissioning the Sensor via BLE (Quick Guide)</a></li>
+<li><a href="#nfc">12.3 Commissioning the Sensor via NFC</a></li>
+<li><a href="#ble">12.4 Commissioning the Sensor via BLE</a></li>
+<li><a href="#akustisch">12.5 Audible Signal and Feedback</a></li>
+
+<li><a href="#sensorfunktionen">13. Sensor Functions</a></li>
+<li><a href="#hysterese">13.1 Hysteresis</a></li>
+<li><a href="#tracking-motion">13.2 Tracking and Tracking in Motion</a></li>
+<li><a href="#tilt">13.3 Inclination and “Tilt” Detection</a></li>
+
+<li><a href="#schnittstelle">14. Communication with the Interface</a></li>
+<li><a href="#pflege">15. Care and Cleaning</a></li>
+<li><a href="#batteriewechsel">16. Battery Change</a></li>
+
+<li><a href="#klappe">17. Flap Opening Detection and Tilt Detection</a></li>
+<li><a href="#klappe-magnet">17.1 Flap Opening Detection via the Magnetic Switch</a></li>
+<li><a href="#klappe-beschleunigung">17.2 Flap Opening Detection with Acceleration Sensor and Tilt Detection</a></li>
+<li><a href="#orientierung">17.3 Orientations</a></li>
+
+<li><a href="#lorawan">18. LoRaWAN‑Specific Features</a></li>
+<li><a href="#join">18.1 LoRaWAN Join Behavior</a></li>
+
+<li><a href="#zertifizierung">19. Labeling and Certification</a></li>
+</ul>
+</div>
+
+<h3 id="versionhistorie">1. Version History</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Version</th>
+      <th>Date</th>
+      <th>Change</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.0.0</td>
+      <td>18.02.2025</td>
+      <td>Creation</td>
+    </tr>
+    <tr>
+      <td>1.0.1</td>
+      <td>24.04.2026</td>
+      <td>Formatting, version history</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="sicherheit">2. General Warnings and Safety Instructions</h3>
+
+<p>
+Warnings and important information about potential hazards or damage.
+</p>
+<p>
+Important information required for smooth operation of the devices.
+</p>
+
+<div class="note-strip note-strip--yellow">
+<p><strong>Please note:</strong></p>
+
+<ul>
+  <li>
+   Observe the safety instructions and installation instructions in the manual and the installation list.
+  </li>
+  <li>
+  Ensure that the installation environment complies with the prescribed application area guidelines. Observe the temperature and other limit values at all times.
+  </li>
+  <li>
+ The device may only be used in the areas specified in the technical specifications.
+  </li>
+  <li>
+   	The device may only be used for the purposes and in the areas described.
+  </li>
+  <li>
+    Safety and functionality can no longer be guaranteed if the device is modified
+    or extended.
+  </li>
+  <li>
+    The sensor must not be mounted on ceilings or floors.
+  </li>
+  <li>
+    Operation of the sensor is permitted only up to a maximum of 2000 m above sea level.
+  </li>
+  <li>
+    Operation is only permitted up to a maximum room height of 2 m.
+  </li>
+  <li>
+    Due to human-exposure regulations, a minimum distance of 20 cm between the
+    device and persons must be maintained.
+  </li>
+  <li>Ensure that the installation environment complies with the prescribed guidelines for the area of application. Observe the temperature and other limit values at all times.</li>
+</ul>
+</div>
+
+<div class="note-strip note-strip--yellow">
+<p>If the device is <strong>incorrectly</strong> installed:</p>
+
+<ul>
+  <li>The device may not function properly.</li>
+  <li>The device may be permanently damaged.</li>
+  <li>The device may pose a risk of injury.</li>
+</ul>
+</div>
+
+<div class="note-strip note-strip--red">
+<p><strong>Please note:</strong></p>
+
+<ul>
+  <li>
+    Improper handling, such as excessive mechanical stress or dropping the
+    device, may cause damage.
+  </li>
+  <li>
+    Using batteries other than the recommended types may negatively affect
+    performance and product safety.
+  </li>
+  <li>
+   The appliance may only be installed and put into operation if it can be removed from its original packaging undamaged. A visual inspection for damage must be carried out immediately after removal. If the product is damaged, it must not be put into operation.
+  </li>
+</ul>
+</div>
+
+<h3 id="dokumentation">3. Further Documentation</h3>
+
+<p>
+Please observe the information and limit values in the 
+<a href="https://docs.sentinum.de/sensoren-und-produktreihen" target="_blank" rel="noopener">
+  technical data sheet
+</a>.
+</p>
+
+<p>
+The sensor-specific default settings (Sentiface) as well as the keys and
+permitted values of the sensor can be found in the 
+<a href="https://docs.sentinum.de/sensoren-und-produktreihen" target="_blank" rel="noopener">
+  NFC and downlink description
+</a>.
+The Senticom and Sentivisor tables are available in the
+<a href="https://docs.sentinum.de/generische-nfc-und-downlink-dokumentation" target="_blank" rel="noopener">
+  generic NFC and downlink documentation
+</a>.
+Special functions for
+<a href="https://docs.sentinum.de/generische-sensorsonderfunktionen" target="_blank" rel="noopener">
+  vandalism detection and opening detection
+</a>
+are also described there.
+</p>
+
+<p>
+The option to configure sensor communication can be found in the respective generic 
+<a href="https://docs.sentinum.de/generische-lorawan" target="_blank" rel="noopener">
+  LoRaWAN®
+</a> 
+<a href="https://docs.sentinum.de/generische-mioty" target="_blank" rel="noopener">
+  mioty®
+</a>
+or
+<a href="https://docs.sentinum.de/generische-cellular-dokumentation" target="_blank" rel="noopener">
+  cellular documentation (NB‑IoT and LTE‑M1)
+</a> documentation, depending on the version.
+</p>
+
+<p>
+All documents related to generic documentation can be found at:<br>
+<a href="https://docs.sentinum.de/wichtig-produktübergreifende-dokumentation-für-sensoren"
+   target="_blank" rel="noopener">
+  https://docs.sentinum.de/wichtig-produktübergreifende-dokumentation-für-sensoren
+</a>
+</p>
+
+<h3 id="verwendung">4. Intended Use and Product Versions</h3>
+
+<p>
+<strong>This user manual applies to the entire Juno product series.</strong>
+Within the series, there are various product versions that differ in their
+localization methods as well as sensor equipment and functionality.
+The specific characteristics and functions of each version are described
+in the following sections of this manual.
+</p>
+
+<h3 id="produktcodes">4.1 Product Codes and Functions</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item number</th>
+      <th>Radio Standard</th>
+      <th>Functions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-LOEU</strong></td>
+      <td>LoRaWAN®</td>
+      <td>Tilt detection, activity detection, opening and motion detection</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-MIOTY</strong></td>
+      <td>mioty®</td>
+      <td>Tilt detection, activity detection, opening and motion detection</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-LOEU‑TH</strong></td>
+      <td>LoRaWAN®</td>
+      <td>Temperature, relative humidity, tilt detection, activity detection, opening and motion detection</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-MIOTY‑TH</strong></td>
+      <td>mioty®</td>
+      <td>Temperature, relative humidity, tilt detection, activity detection, opening and motion detection</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO‑NB‑TH</strong></td>
+      <td>NB‑IoT</td>
+      <td>Temperature, relative humidity, tilt detection, activity detection, opening and motion detection</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-LOEU‑TRACK</strong></td>
+      <td>LoRaWAN®</td>
+      <td>Tilt detection, activity detection, opening and motion detection</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-LOEU‑TH‑TRACK</strong></td>
+      <td>LoRaWAN®</td>
+      <td>Temperature, relative humidity, tilt detection, activity detection, opening and motion detection</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-NBM1‑TRACK‑2</strong></td>
+      <td>NB‑IoT, CAT‑M1</td>
+      <td>Tilt detection, activity detection, opening and motion detection</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-NBM1‑TRACK‑3</strong></td>
+      <td>NB‑IoT, CAT‑M1</td>
+      <td>Tilt detection, activity detection, opening and motion detection</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-NBM1‑TH‑TRACK‑2</strong></td>
+      <td>NB‑IoT, CAT‑M1</td>
+      <td>Temperature, relative humidity, tilt detection, activity detection, opening and motion detection</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-NBM1‑TH‑TRACK‑3</strong></td>
+      <td>NB‑IoT, CAT‑M1</td>
+      <td>Temperature, relative humidity, tilt detection, activity detection, opening and motion detection</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-MIOTY‑TRACK</strong></td>
+      <td>mioty®</td>
+      <td>Tilt detection, activity detection, opening and motion detection</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-MIOTY‑TH‑TRACK</strong></td>
+      <td>mioty®</td>
+      <td>Temperature, relative humidity, tilt detection, activity detection, opening and motion detection</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h3 id="lokalisierung">4.2 Product Codes and Localization Methods</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item number</th>
+      <th>Radio Standard</th>
+      <th>WIFI SSID Scan</th>
+      <th>GNSS Scan</th>
+      <th>GNSS</th>
+      <th>Cell Locate</th>
+      <th>LPWAN Tracking</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-LOEU</strong></td>
+      <td>LoRaWAN®</td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-MIOTY</strong></td>
+      <td>mioty®</td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-LOEU‑TH</strong></td>
+      <td>LoRaWAN®</td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-MIOTY‑TH</strong></td>
+      <td>mioty®</td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO‑NB‑TH</strong></td>
+      <td>NB‑IoT</td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-LOEU‑TRACK</strong></td>
+      <td>LoRaWAN®</td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-LOEU‑TH‑TRACK</strong></td>
+      <td>LoRaWAN®</td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-NBM1‑TRACK‑2</strong></td>
+      <td>NB‑IoT, CAT‑M1</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-NBM1‑TRACK‑3</strong></td>
+      <td>NB‑IoT, CAT‑M1</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-NBM1‑TH‑TRACK‑2</strong></td>
+      <td>NB‑IoT, CAT‑M1</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-NBM1‑TH‑TRACK‑3</strong></td>
+      <td>NB‑IoT, CAT‑M1</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-MIOTY‑TRACK</strong></td>
+      <td>mioty®</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-MIOTY‑TH‑TRACK</strong></td>
+      <td>mioty®</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h3 id="verwendung-details">4.3 Intended Use</h3>
+
+<p>
+The Juno sensor is a wireless, battery-powered IoT device designed to capture
+environmental and motion-related data. It is intended for use in industrial
+and commercial applications, particularly for condition monitoring and
+object localization in indoor and outdoor environments.
+</p>
+
+<p>
+Depending on the product variant, the sensor has different sensor modules (e.g. temperature, movement, inclination) and different localization technologies (e.g. GNSS, WIFI SSID Scan, GNSS Scna, LoRaWAN-based positioning). The sensor is intended exclusively for the applications described in the instructions and may only be operated within the scope of the technical specifications stated therein.
+</p>
+
+<p>
+Any other use or use beyond this is considered improper use. Sentinum GmbH accepts no liability for any resulting damage.
+</p>
+
+<h3 id="ix-versionen">4.4 Differences of iX Versions</h3>
+
+<p>
+The Juno iX versions have extended certifications for industrial use.</
+p>
+They also offer an extended scope of delivery and additional configuration options in terms of measurement and transmission intervals. For example, the iX models allow a minimum measurement and transmission interval of one minute, while the standard version requires a minimum interval of five minutes . 
+<p>The industrial Juno versions and the standard versions also differ in their housing color.</p>
+
+</p>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Version</th>
+      <th>Housing Color</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Standard Version</td>
+      <td>Black</td>
+    </tr>
+    <tr>
+      <td>-iX Industrial Versions</td>
+      <td>Silk gray</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h3 id="zeichnungen">5. Technical Drawings</h3>
+
+<h3 id="zeichnung-ohne-th">5.1 Juno (Without TH)</h3>
+
+<p>Technical drawing without the opening for the TH sensor.</p>
+
+<!-- FIGURE 1 -->
+<div class="figure">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_technischeZeichnung(junooth)1.webp" 
+       alt="Technical drawing of Juno without TH opening">
+  <figcaption>
+    Figure 1: Technical drawing of Juno (without TH opening)
+  </figcaption>
+</div>
+
+<h3 id="zeichnung-mit-th">5.2 Juno TH (With TH Opening)</h3>
+
+<p>Technical drawing with the opening for the TH sensor.</p>
+
+<!-- FIGURE 2 -->
+<div class="figure">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_technischeZeichnung(junomth)2.webp" 
+       alt="Technical drawing of Juno TH with membrane opening">
+  <figcaption>
+    Figure 2: Technical drawing of Juno TH (with membrane opening)
+  </figcaption>
+</div>
+
+<h3 id="lieferumfang">6. Scope of Delivery</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product Version</th>
+      <th>Scope of Delivery</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Standard Version</strong></td>
+      <td>
+        Sensor<br>
+        Batteries
+      </td>
+    </tr>
+    <tr>
+      <td><strong>-iX Industrial Version</strong></td>
+      <td>
+        Sensor<br>
+        Battery<br>
+        Drilling template<br>
+        Adhesive pad
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="klebepad">6.1 Adhesive Pad – Technical Drawing</h3>
+
+<!-- FIGURE 3 -->
+<div class="figure">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_technischeZeichnungklebepad3.webp" 
+       alt="Technical drawing of the Juno adhesive pad">
+  <figcaption>
+    Figure 3: Technical drawing of the Juno adhesive pad
+  </figcaption>
+</div>
+<h3 id="batterien">7. Approved Batteries and Types</h3>
+
+<div class="note-strip note-strip--yellow">
+  <p>
+    <strong>Only the following battery types are approved for operating the product.</strong>
+    The choice of battery has a significant impact on runtime.
+    For maximum service life, the use of standard batteries is recommended.
+  </p>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item number</th>
+      <th>Approved Batteries</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <strong>
+          S‑JUNO(-iX)-LOEU / MIOTY<br>
+          S‑JUNO(-iX)-LOEU / MIOTY‑TH<br>
+          S‑JUNO(-iX)-LOEU / MIOTY‑TRACK<br>
+          S‑JUNO(-iX)-LOEU / MIOTY‑TH‑TRACK
+        </strong>
+      </td>
+      <td>
+        Energizer Ultimate Lithium AA<br>
+        Varta ULTRA Lithium AA<br>
+        Varta Longlife Power AA<br>
+        SAFT LS14500 <strong>(Standard)</strong>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <strong>
+          S‑JUNO(-iX)-NBM1‑TRACK‑2<br>
+          S‑JUNO(-iX)-NBM1‑TRACK‑3<br>
+          S‑JUNO(-iX)-NBM1‑TH‑TRACK‑2<br>
+          S‑JUNO(-iX)-NBM1‑TH‑TRACK‑3<br>
+          S‑JUNO‑NB‑TH
+        </strong>
+      </td>
+      <td>
+        CR14505 (HCB)<br>
+        ER14505M (HCB, <strong>Standard</strong>)<br>
+        UHR‑ER14505‑X (Ultralife)
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="zubehoer">8. Accessories</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Article Number</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>PBA‑000102</strong></td>
+      <td>Adhesive pad for Juno</td>
+    </tr>
+    <tr>
+      <td><strong>Z‑JUNO‑MAG‑NEO</strong></td>
+      <td>2× neodymium magnets with screws, holding force up to 36 kg</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h3 id="ortung">9. Overview of Tracking and Localization Methods</h3>
+
+<div class="note-strip note-strip--green">
+<p>
+In general, all LoRaWAN® devices can be localized via the LoRaWAN® network.
+Gateways with GPS synchronization are required for this purpose.
+</p>
+</div>
+
+<p>
+As of Q2 2025, the Apollon-Q and Juno series in the Sentinum product portfolio are equipped with extended tracking functions.
+</p>
+
+<p>
+Localization via BLE function can be activated on request.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Article Number</th>
+      <th>Wireless Standard</th>
+      <th>WIFI SSID Scan</th>
+      <th>GNSS Scan</th>
+      <th>GNSS</th>
+      <th>Cell Locate</th>
+      <th>LPWAN Tracking</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-LOEU</strong></td>
+      <td>LoRaWAN®</td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-MIOTY</strong></td>
+      <td>mioty®</td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-LOEU‑TH</strong></td>
+      <td>LoRaWAN®</td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-MIOTY‑TH</strong></td>
+      <td>mioty®</td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO‑NB‑TH</strong></td>
+      <td>NB‑IoT</td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-LOEU‑TRACK</strong></td>
+      <td>LoRaWAN®</td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-LOEU‑TH‑TRACK</strong></td>
+      <td>LoRaWAN®</td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-NBM1‑TRACK‑2</strong></td>
+      <td>NB‑IoT, CAT‑M1</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-NBM1‑TRACK‑3</strong></td>
+      <td>NB‑IoT, CAT‑M1</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-NBM1‑TH‑TRACK‑2</strong></td>
+      <td>NB‑IoT, CAT‑M1</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-NBM1‑TH‑TRACK‑3</strong></td>
+      <td>NB‑IoT, CAT‑M1</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-MIOTY‑TRACK</strong></td>
+      <td>mioty®</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-MIOTY‑TH‑TRACK</strong></td>
+      <td>mioty®</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td><strong>✔</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h3 id="technologien">9.1 Comparison of Different Technologies</h3>
+
+<table class="auto-layout">
+  <thead>
+    <tr>
+      <th>Technology</th>
+      <th>Range Under Good Conditions (m)<sup>*</sup></th>
+      <th>Range Under Poor Conditions (m)<sup>**</sup></th>
+      <th>Power Consumption</th>
+      <th>Suitability for Indoor Tracking</th>
+      <th>Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>BLE Scanning (not implemented, on request)</td>
+      <td>1 – 3</td>
+      <td>5 – 10</td>
+      <td>Low</td>
+      <td>High</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>WIFI SSID Scanning</td>
+      <td>1 – 5</td>
+      <td>5 – 20</td>
+      <td>Low</td>
+      <td>High</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>GNSS (GPS, GLONASS, BeiDou, Galileo)</td>
+      <td>3 – 5</td>
+      <td>5 – 10</td>
+      <td>High</td>
+      <td>Not suitable</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Cellular localization via triangulation or cells</td>
+      <td>10 – 150</td>
+      <td>150 up to several kilometers</td>
+      <td>Low</td>
+      <td>Low</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <td>GNSS Scan</td>
+      <td>1 – 10</td>
+      <td>10 – 200</td>
+      <td>Low</td>
+      <td>Not suitable</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>UWB</td>
+      <td>&lt;0.1 – 0.3</td>
+      <td>0.3 – 0.5</td>
+      <td>Low</td>
+      <td>Very high</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>LoRaWAN® tracking<sup>***</sup></td>
+      <td>200 – 500</td>
+      <td>500 – 1500</td>
+      <td>None</td>
+      <td>Practically unsuitable</td>
+      <td>Low</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><sup>*</sup>Good conditions: minimal shielding, direct connections to satellites or gateways, very good antennas.</p>
+<p><sup>**</sup>Poor conditions: heavy shielding such as trees, buildings or walls, poor connection quality.</p>
+<p><sup>***</sup>Depends on the number of gateways and their configuration.</p>
+
+<h3 id="energieoptimierung">
+  9.2 Intelligent Use of Tracking Technologies for Energy Optimization
+</h3>
+
+<p>
+We combine various tracking technologies for precise and energy-efficient location determination: WiFi SSID scan, GNSS, GNSS scan and Cell Locate. Each of these technologies has specific strengths that we use flexibly and depending on the situation.
+</p>
+
+<ul>
+  <li>
+    The <strong>WiFi SSID scan</strong> detects available WiFi networks in the vicinity and determines a position based on known SSID locations. This method is extremely energy-efficient and enables fast location updates - ideal in urban areas with dense Wi-Fi coverage..
+  </li>
+  <li>
+    <strong>GNSS</strong> (Global Navigation Satellite System, e.g. GPS) offers very precise positioning, but is very energy-intensive in comparison. GNSS is therefore only activated when other methods do not provide sufficiently accurate data.
+  </li>
+  <li>
+    The <strong>GNSS Scan</strong> scan only collects satellite data and optimizes the position calculation without permanently maintaining an active GNSS session. This also saves a considerable amount of energy compared to permanent GNSS use.
+  </li>
+  <li>
+    <strong>Cell Locate</strong> enables positioning based on mobile radio cells. This method is available globally and ensures a rough but continuous location determination even if there is no WLAN or GNSS signal.
+  </li>
+</ul>
+
+<p>
+Intelligent control and prioritization - such as the preferred use of WiFi scans - can significantly reduce the device's energy consumption. Only when WiFi or cell positioning is not sufficient does the device automatically switch to GNSS or other more precise methods.
+</p>
+
+<p>
+All tracking strategies and fallback mechanisms are individually configurable so that the best balance between energy efficiency, accuracy and availability can be selected for different applications and regions.
+Even if individual technologies vary depending on the environment, this flexible combination enables virtually seamless and detailed route recording worldwide.
+
+</p>
+<p>
+    We also offer suitable solutions for indoor scenarios in which GNSS signals are often unavailable or inaccurate. The WiFi SSID scan and the use of known indoor access points make it possible to reliably determine the position even inside buildings. Optionally, indoor positioning can be supplemented by additional technologies such as <strong>Bluetooth Low Energy (BLE) beacons</strong>  or <strong>inertial sensors
+    </strong>.
+</p>
+<p>This enables precise location determination even in complex environments such as shopping centers, airports or industrial halls - seamlessly integrated into the existing tracking concept.</p>
+
+<h3 id="wifi-scan">9.3 Which Sensors Using WIFI SSID Scan</h3>
+
+<p>
+In the Sentinum product portfolio, parts of the Juno and Apollon-Q series are equipped with a WIFI SSID scan function. The Cellular and mioty® products are equipped with a <strong>2.4 GHz and 5 GHz</strong> WIFI SSID scan for the evaluation of up to <strong>20 MAC addresses</strong>, the LoRaWAN® products with a <strong>2.4 GHz</strong> WIFI SSID scan for up to <strong>six addresses</strong>:
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item number</th>
+      <th>Radio Standard</th>
+      <th>2.4 GHz Scan</th>
+      <th>5 GHz Scan</th>
+      <th>Maximum number of MAC addresses</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-LOEU‑TRACK</strong></td>
+      <td>LoRaWAN®</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-LOEU‑TH‑TRACK</strong></td>
+      <td>LoRaWAN®</td>
+      <td><strong>✔</strong></td>
+      <td><strong>X</strong></td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-NBM1‑TRACK‑2</strong></td>
+      <td>Cellular</td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-NBM1‑TRACK‑3</strong></td>
+      <td>Cellular</td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-NBM1‑TH‑TRACK‑2</strong></td>
+      <td>Cellular</td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-NBM1‑TH‑TRACK‑3</strong></td>
+      <td>Cellular</td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-MIOTY‑TRACK</strong></td>
+      <td>mioty®</td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO(-iX)-MIOTY‑TH‑TRACK</strong></td>
+      <td>mioty®</td>
+      <td><strong>✔</strong></td>
+      <td><strong>✔</strong></td>
+      <td>20</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h3 id="wifi-funktion">9.4 How WIFI SSID Scanning Works</h3>
+
+<p>
+  Wi‑Fi SSID scan-based localization uses the detection of Wi‑Fi networks in the environment 
+  to determine the location of a device. It uses the signal strength (RSSI) of the Wi‑Fi signals 
+  to estimate the distance to the various access points (APs). This technique is often used 
+  indoors where GPS signals may be unavailable or inaccurate.
+</p>
+
+<p>Essentially, the localization process works as follows:</p>
+
+<ol>
+  <li>
+    <strong>Activation of the SSID scan:</strong>
+    The device starts with a passive Wi‑Fi scan, during which it listens for all beacon frames 
+    emitted by the access points (APs) in the vicinity. These beacon frames contain the SSID 
+    (the name of the network), the BSSID (the MAC address of the AP) and the signal strength 
+    of the received signal (RSSI).
+  </li>
+
+  <li>
+    <strong>Measuring the signal strength:</strong>
+    The RSSI (Received Signal Strength Indicator) is measured for each signal received. 
+    This signal strength indicates how strongly the signal from the access point is received 
+    by the device. A higher RSSI usually means that the device is closer to the corresponding 
+    access point.
+  </li>
+
+  <li>
+    <strong>Comparison with known positions:</strong>
+    To determine the position of the device, the measured RSSI values are used in combination 
+    with the known positions of the access points. This is done using methods such as 
+    triangulation or trilateration, in which the distances to at least three or more access 
+    points are calculated. Using these calculations, the device can determine its position 
+    on a map or in a room.
+  </li>
+
+  <li>
+    <strong>Position determination:</strong>
+    The data collected from the access points is analyzed to determine the most likely 
+    position of the device. This is done taking into account the signal strength and the 
+    known positions of the access points. Modern algorithms can also further refine the 
+    localization by considering additional factors such as environmental conditions or 
+    the movements of the device.
+  </li>
+
+  <li>
+    <strong>Position display:</strong>
+    Once the device has determined the position, it is displayed to the user on a map or 
+    in a corresponding user interface. If required, the accuracy of the position can also 
+    be updated in real time based on further SSID scans and changing signal strengths.
+  </li>
+</ol>
+
+
+<h3 id="wifi-vorteile">9.5 Advantages and Applications of Wi‑Fi‑Based Localization</h3>
+
+
+
+
+<div class="note-strip note-strip--green">
+<ul>
+  <li>
+    <strong>High accuracy indoors:</strong>
+    As GPS signals are often weak or non-existent indoors, Wi‑Fi scanning offers an excellent
+    alternative for indoor positioning.
+  </li>
+
+  <li>
+    <strong>Simple implementation:</strong>
+    Since many buildings are already equipped with Wi‑Fi networks, localization via Wi‑Fi can
+    be implemented with minimal additional effort.
+  </li>
+
+  <li>
+    <strong>Cost-effective:</strong>
+    Wi‑Fi-based localization requires no additional hardware investment if Wi‑Fi access points
+    are already available.
+  </li>
+</ul></div>
+
+<p>
+  This localization approach is particularly advantageous in <strong>indoor navigation systems</strong>, <strong>asset
+  tracking or fleet management</strong>, as it enables precise positioning even without the use of
+  expensive GPS systems.
+</p>
+
+<p>
+  Positioning technology based on Wi‑Fi SSID scanning is used in a variety of applications
+  where a rough to medium level of positioning accuracy is required and existing Wi‑Fi
+  infrastructure can be used. A device records the names (SSIDs) and signal strengths (RSSI)
+  of the surrounding Wi‑Fi networks without connecting to them. This information can be used
+  to estimate where the device is located – either by comparing it with an existing Wi‑Fi
+  database (e.g. from Google or Apple), by prior fingerprinting or with the help of a
+  self-built Wi‑Fi mapping model.
+</p>
+
+<p>
+  This technology is used, for example, for indoor localization in buildings such as shopping
+  malls, airports or large office complexes where GPS signals are only available to a limited
+  extent or not at all. Wi‑Fi scanning is also used in <strong>logistics</strong> and <strong>asset tracking</strong> to track
+  the location of devices or goods within warehouses or on company premises – often in
+  combination with other technologies such as BLE or LoRaWAN.
+</p>
+
+<p>
+  In smartphones and wearables, the method is used to enable location-based services such as
+  map navigation, geofencing or location sharing, even if there is no mobile network
+  connection.
+</p>
+
+<p>
+  Another typical use case is supportive positioning for battery-powered IoT devices where
+  GNSS would be too energy-intensive. Here, Wi‑Fi Scan can help determine a sufficiently
+  accurate position without putting a heavy strain on the battery.
+</p>
+
+<p>
+  Due to the wide availability of Wi‑Fi networks and the ability to estimate a position even
+  without an active network connection, Wi‑Fi SSID scanning represents a flexible,
+  cost-effective and energy-saving alternative or supplement to classic GNSS or cellular
+  positioning systems.
+</p>
+
+
+<h3 id="genauigkeit">9.6 Accuracy Dependencies</h3>
+
+<p>
+The accuracy of Wi-Fi SSID scan localization depends on several factors and can vary greatly depending on the environment and system architecture. In general, the accuracy of position-based localization using Wi-Fi is typically between <strong>1 and 20 meters</strong>. The exact position determination depends on various parameters that are both technical and environmental in nature.
+</p>
+<p>
+  A key influencing factor is the signal strength, also known as <strong>RSSI (Received Signal Strength Indicator)</strong>. 
+  This is used to estimate the distance between the device and an access point. However, the relationship 
+  between signal strength and distance is not linear and can be significantly distorted by walls, furniture, 
+  other devices or structural conditions. In open spaces with few obstacles, the accuracy can be around 
+  <strong>1 to 5 meters</strong>, while in more complex environments such as residential or office buildings with many 
+  obstacles, it tends to fluctuate between <strong>5 and 20 meters</strong>.
+</p>
+
+<p>
+  The number and distribution of available access points also plays a decisive role. The more access points 
+  with a known and stable position are available, the more precise the positioning can be. If the device 
+  receives signals from at least three well-distributed access points, more precise positioning is possible 
+  through <strong>triangulation</strong> or <strong>trilateration</strong>. If, on the other hand, only one or two access points are available 
+  or if they are unfavorably distributed, the accuracy decreases accordingly.
+</p>
+
+<p>
+  The environment also has a significant influence on localization accuracy. Wi‑Fi signals can be reflected, 
+  absorbed or scattered – depending on the material and arrangement of walls, furniture or other objects in 
+  the room. Nearby electronic devices can also cause interference. In a densely built-up office building with 
+  many steel beams, partition walls and other obstacles, for example, the localization accuracy can be between 
+  <strong>5 and 15 meters</strong>, while in an open storage room or corridor it can be between <strong>1 and 3 meters</strong>.
+</p>
+
+<p>
+  In addition to the hardware, the software also plays an important role: the quality of the positioning 
+  algorithms used can significantly improve accuracy. Methods based on machine learning or calibration data, 
+  for example, can take better account of environmental influences and help to interpret and smooth the 
+  measured RSSI values. This increases the reliability of the position information, particularly in more 
+  complex environments.
+</p>
+
+<p>
+  Another aspect is the visibility of the networks. Hidden SSIDs, i.e. WLANs that do not broadcast their 
+  network name, as well as interference from neighboring networks or other devices, can also reduce 
+  positioning accuracy. In such cases, the device has less usable information at its disposal, which can 
+  lead to less accurate positioning.
+</p>
+
+<p>
+  Overall, Wi‑Fi scanning is a flexible and, in many cases, sufficiently accurate method for determining 
+  position – especially when other positioning technologies such as GPS are not available or are too 
+  energy-intensive. However, the accuracy that can be achieved always depends on the interplay of various 
+  factors.
+</p>
+
+<h3 id="warum-wifi">9.7 Why WIFI SSID Localization Is Suitable for JUNO</h3>
+
+<p>
+  The Juno with Wi‑Fi SSID scanning is particularly suitable for positioning applications where 
+  GNSS signals are weak or unavailable, such as indoors or in urban environments. By combining 
+  Wi‑Fi scanning with GNSS and cell-based positioning technologies, more precise location data 
+  can be achieved.
+</p>
+<div class="note-strip note-strip--green">
+<ul>
+  <li><strong>Wi‑Fi scanning:</strong> Supports both active and passive scanning of 2.4 GHz and 5 GHz Wi‑Fi networks.</li>
+  <li><strong>Energy efficiency:</strong> Optimized for applications with low power consumption, ideal for battery-operated devices.</li>
+  <li><strong>High security:</strong> Includes WPA3 support.</li>
+  <li><strong>Excellent detection method for indoor environments</strong></li>
+  <li><strong>Large number of existing networks</strong></li>
+  <li><strong>Can significantly extend device lifetime</strong> as it is far more energy-efficient than conventional GNSS.</li>
+</ul> </div>
+
+<p>
+  Juno Cellular can evaluate up to <strong>20 different access points</strong>  and thus provide very precise 
+  localization. The accuracy varies depending on the application. Accuracies of <strong>3 to 20 meters</strong> 
+  are realistic.
+</p>
+
+
+<h3 id="gnss-scan">9.8 Functionality of GNSS Scan</h3>
+
+<p>
+  The GNSS scan functionality makes it possible to determine position data via various GNSS 
+  systems such as <strong>GPS</strong>, <strong>Galileo</strong>, <strong>GLONASS</strong> or <strong>BeiDou</strong>. The position is determined by an integrated 
+  GNSS receiver, which continuously scans for visible satellites and calculates the position 
+  of the device based on the signals received. As soon as the position has been determined, 
+  the corresponding data is transmitted to a central station or cloud platform. This enables 
+  precise localization, even in remote areas, with low energy consumption as the GNSS receiver 
+  is only activated when needed.
+</p>
+
+<p>
+  The accuracy of the GNSS scan function in LoRa modules depends on various factors. The typical 
+  accuracies of GNSS positioning are between <strong>2.5 and 10 meters</strong> when standard GPS is used. When 
+  multiple GNSS systems such as GPS, Galileo, GLONASS and BeiDou are combined, accuracy can be 
+  improved to <strong>1 to 3 meters</strong>. However, in difficult environments, such as urban canyons or areas 
+  with strong signal shadowing, the accuracy can decrease to <strong>10 to 50 meters</strong> or more.
+</p>
+
+<ul>
+  <li>
+    <strong>Signal reception:</strong>
+    The GNSS receiver (e.g., in the device) receives radio signals from at least four GNSS 
+    satellites (e.g., GPS, Galileo, GLONASS).
+  </li>
+
+  <li>
+    <strong>Time of flight measurement:</strong>
+    Each signal contains a timestamp. The receiver measures how long the signal took to travel 
+    from the satellite to the device (transit time).
+  </li>
+
+  <li>
+    <strong>Distance estimation:</strong>
+    The distance to each satellite is calculated from the signal transit time 
+    (distance = speed of light × transit time).
+  </li>
+
+  <li>
+    <strong>Position calculation (trilateration):</strong>
+    Using the distances to at least four satellites, the receiver calculates its own location 
+    (longitude, latitude, altitude) and the exact time by determining the intersection points 
+    of the spheres around the satellites.
+  </li>
+
+  <li>
+    <strong>Corrections:</strong>
+    Errors caused by the atmosphere, satellite orbits or clock deviations are partially corrected 
+    by algorithms or additional systems (such as <strong>DGPS or SBAS</strong>).
+  </li>
+</ul>
+
+
+<h3 id="loracloud">9.9 GNSS Scan and LoRa® Cloud</h3>
+
+<p>
+The LoRaWAN® devices such as the Juno Tracker or the Apollon-Q are based on the
+LoRa® Edge LR1110 chipset and send the GNSS scan information on port 192 and the
+WIFI SSID scan data on port 197. The data is sent to databases such as the
+LoRa® Cloud, where the latitude and longitude coordinates are calculated.
+The coordinates are then returned to the network server via standardized interfaces.
+</p>
+
+<p>
+Sentinum offers such a service. You can simply send the data to our servers and
+we will do the rest for you. Just give us a call.
+</p>
+
+<p>
+If you want your own integration, the following links will help you:
+</p>
+
+<ul>
+  <li>
+    <a href="https://www.thethingsindustries.com/docs/integrations/semtech-loracloud/"
+       target="_blank" rel="noopener">
+      LoRa Cloud | The Things Stack for LoRaWAN®
+    </a>
+  </li>
+  <li>
+    <a href="https://www.chirpstack.io/docs/integrations/loracloud.html"
+       target="_blank" rel="noopener">
+      LoRa Cloud – ChirpStack open-source LoRaWAN® Network Server documentation
+    </a>
+  </li>
+  <li>
+    <a href="https://www.semtech.com/products/cloud-services/loracloud"
+       target="_blank" rel="noopener">
+      Semtech LoRa Cloud
+    </a>
+  </li>
+</ul>
+
+<p>Example of TTI integration:</p>
+
+<p>
+To connect The Things Stack (TTI) – the LoRaWAN® platform from The Things Industries –
+with the Semtech LoRa Cloud, you need to set up an integration so that data,
+e.g. GNSS scans, are correctly transmitted to the LoRa® Cloud and processed.
+The LoRa® Cloud handles tasks such as geolocation, GNSS conversion,
+Wi‑Fi positioning or modem services.
+</p>
+
+<div class="note-strip note-strip--yellow">
+<p><strong>Prerequisites:</strong></p>
+
+<ul>
+  <li>An active account at The Things Stack (TTI).</li>
+  <li>A registered LoRaWAN device (e.g. a tracker with GNSS).</li>
+  <li>
+    API access to Semtech LoRa Cloud Services
+    (via Dev Portal:
+    <a href="https://lora-developers.semtech.com" target="_blank" rel="noopener">
+      https://lora-developers.semtech.com
+    </a>).
+  </li>
+  <li>LoRa Cloud Token (API Key) – you can get this in the LoRa Cloud Portal.</li>
+</ul>
+</div>
+
+<p><strong>1. Activate Semtech LoRa Cloud</strong></p>
+
+<ul>
+  <li>
+    Go to
+    <a href="https://lora-developers.semtech.com" target="_blank" rel="noopener">
+      https://lora-developers.semtech.com
+    </a>.
+  </li>
+  <li>Create an account or log in.</li>
+  <li>
+    Under LoRa Cloud → Modem Services you will find your token (API key),
+    which you must enter later in TTI.
+  </li>
+</ul>
+
+<p><strong>2. Set up integration in The Things Stack</strong></p>
+
+<ul>
+  <li>
+    Log in to The Things Stack Console
+    (e.g.
+    <a href="https://eu1.cloud.thethings.industries/" target="_blank" rel="noopener">
+      https://eu1.cloud.thethings.industries/
+    </a>).
+  </li>
+  <li>Open the device you want to connect.</li>
+  <li>Go to Integrations → Webhooks.</li>
+  <li>Click on <em>Add Webhook</em> and select <em>Semtech LoRa Cloud</em> as the template.</li>
+</ul>
+
+<p><strong>3. Configure webhook</strong></p>
+
+<ul>
+  <li>Base URL: Automatically suggested by TTI.</li>
+  <li>Token: Enter your API key from the LoRa Cloud here.</li>
+  <li>
+    Activate the desired services, e.g.:
+    <ul>
+      <li>Modem Services (for GNSS and Wi‑Fi scans).</li>
+      <li>Geolocation (for TDOA/RSSI).</li>
+    </ul>
+  </li>
+  <li>You can also send GNSS or Wi‑Fi data, depending on the device type.</li>
+</ul>
+
+<p><strong>4. Adapt payload formats (if necessary)</strong></p>
+
+<ul>
+  <li>
+    Make sure that your end device uses the expected payload structure for
+    Semtech LoRa Cloud Services (e.g. the format provided by Semtech’s
+    LoRa Basics Modem).
+  </li>
+</ul>
+
+<p><strong>5. Check data</strong></p>
+
+<ul>
+  <li>
+    As soon as your device sends position data (e.g. GNSS raw data), it is forwarded
+    to the LoRa Cloud via TTI.
+  </li>
+  <li>
+    The response from the LoRa Cloud is then sent back to the end device or your
+    application via TTI.
+  </li>
+</ul>
+
+<p><strong>Test &amp; Monitoring:</strong></p>
+
+<ul>
+  <li>Use the Live Data view in TTI to see whether data is being transmitted.</li>
+  <li>In the Semtech Cloud, you can check whether requests are arriving and being processed.</li>
+  <li>
+    Check the response packets with the geodata (latitude, longitude) and
+    position accuracy.
+  </li>
+</ul>
+
+<div class="note-strip note-strip--green">
+<p><strong>Note:</strong></p>
+
+<p>
+This integration works particularly well with devices based on Semtech’s
+LoRa Basics Modem‑E architecture (e.g. LoRa Edge™ chips such as LR1110),
+but custom formats are also possible as long as the API requests are compatible.
+</p>
+</div>
+
+
+<h3 id="ports">9.10 Port Assignment</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>LoRaWAN Port</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>GNSS Scan Payload</strong></td>
+      <td>197</td>
+      <td>
+        Raw data (satellite ID, time, etc.) is sent to the geolocation backend.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>WIFI SSID Scan Payload</strong></td>
+      <td>194</td>
+      <td>
+        Scanned MAC addresses + RSSI data are transmitted for localization.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Regular payload</strong></td>
+      <td>1</td>
+      <td>
+        Regular payload data from the sensor, such as temperature, relative humidity,
+        angle, battery voltage, etc.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example of the WIFI SSID scan payload:</strong></p>
+
+<div class="figure">
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/5cfcfec06d7c4d0e0303bff5956167c76d1eed97/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_port-Zuordnung4.webp"
+    alt="Port assignment for WIFI SSID Scan, GNSS Scan and regular payload">
+  <figcaption>
+    Figure 3: Port assignment for WIFI SSID Scan, GNSS Scan and regular payload
+  </figcaption>
+</div>
+
+<p>
+The following providers can be recommended for decoding the WIFI SSID SCAN and GNSS SCAN data:
+</p>
+
+<ul>
+  <li>Semtech LoRa Cloud (discontinued at the end of July 2025)</li>
+  <li>AWS</li>
+  <li>Tencent</li>
+  <li>Traxmate</li>
+  <li>Sentinel</li>
+</ul>
+
+<p>
+Local databases can be used for on-prem applications.
+</p>
+
+
+<h3 id="tracking-lora">9.11 Tracking in LoRaWAN®</h3>
+
+<p>
+Tracking in the LoRaWAN® network works by end devices (so-called nodes) transmitting radio signals
+that are received by several LoRaWAN® gateways. The exact position of the device is not determined
+directly by the device itself, but by evaluating the signals received in the network or in a special
+positioning platform (e.g. the Semtech LoRa® Cloud). There are various methods for determining
+position, which can be combined depending on the application and infrastructure.
+</p>
+
+<p>
+A frequently used approach is the so-called TDOA method (Time Difference of Arrival). Here, the
+network measures the time difference with which a radio signal from a LoRaWAN® device arrives at
+various gateways. As radio signals propagate at the speed of light, these minimal time differences
+can be used to derive distance differences to the gateways. If at least three gateways receive the
+same signal, the position of the device can be calculated by triangulation. This calculation is
+performed centrally in the LoRaWAN® network server or in a connected cloud solution. The accuracy
+of TDOA is usually in the range of around <strong>200 to 1000 meters</strong>, depending on gateway density,
+synchronization and environmental conditions.
+</p>
+
+<p>
+The TDOA (Time Difference of Arrival) method in the LoRaWAN® network works on a principle similar
+to triangulation, or more precisely, it is a variant of multilateration. The position of a device is
+not calculated directly from the signal strengths (as with the RSSI method), but from the time
+differences of a radio signal at several gateways.
+</p>
+
+<p>
+When a LoRaWAN® end device (node) sends a message, this signal is received simultaneously (or almost
+simultaneously) by several gateways within range. Each of these gateways notes with extremely high
+time resolution exactly when the signal arrived. As the radio signal propagates at the speed of
+light, even differences in the nanosecond range make a measurable difference to the calculated
+distance.
+</p>
+
+<p>
+By calculating the time differences with which the signal arrives at the various gateways, the
+system can calculate circles (or hyperbolas) with possible positions of the device. The more
+gateways receive the signal, the more accurately the intersection of these hyperbolas can be
+determined — i.e. the actual position of the device. This method requires at least three
+synchronized gateways to calculate a two-dimensional position (latitude/longitude).
+</p>
+
+<div class="note-strip note-strip--yellow">
+<p><strong>Are special gateways required?</strong></p>
+
+<p>
+A special type of gateway is required for tracking in the LoRaWAN® via TDOA:
+</p>
+
+<ul>
+  <li>
+    These must be GPS-synchronized or have another precise time synchronization
+    (e.g. PTP – Precision Time Protocol) so that the timestamps for receiving the signal
+    are exact and comparable.
+  </li>
+</ul>
+
+<p>
+Standard LoRaWAN® gateways without time synchronization cannot provide reliable TDOA data, as even
+the smallest deviations in time recording would lead to large errors in position determination.
+</p>
+
+<p><strong>Accuracy</strong></p>
+
+<p>
+The accuracy of TDOA depends heavily on the density and distribution of the gateways, the quality of
+the time synchronization and the environment (e.g. reflections). Typically, it is in the range of
+200 to 1000 meters, in ideal conditions even better. In urban environments, it can be affected by
+multipath effects (reflections).
+</p>
+
+<p><strong>TDOA for indoor tracking:</strong></p>
+
+<p>
+Indoor tracking with the TDOA method in the LoRaWAN® network is theoretically possible, but in
+practice it is very limited and usually not recommended when it comes to precise positioning inside
+buildings. Here are the reasons in detail:
+</p>
+</div>
+
+<div class="note-strip note-strip--red">
+<p><strong>Why TDOA is problematic for indoor applications:</strong></p>
+
+<ol>
+  <li>
+    <strong>Radio wave distortion due to obstacles</strong><br>
+    Walls, ceilings, furniture and other objects cause strong attenuation, scattering and
+    reflections of radio signals. This changes the effective propagation time of the signal,
+    which leads to massive accuracy errors with a method based on time differences such as TDOA.
+  </li>
+
+  <li>
+    <strong>Multipath propagation</strong><br>
+    Radio signals not only reach the gateways directly, but often also via reflections. These
+    signals arrive with a minimal delay and distort the time measurement, making the position
+    calculation inaccurate.
+  </li>
+
+  <li>
+    <strong>Difficult gateway placement</strong><br>
+    For meaningful TDOA tracking, there must be at least three gateways with a clear line of
+    sight to the device — this is difficult to achieve in buildings. Even large buildings are
+    often only covered by one gateway, which does not allow TDOA positioning.
+  </li>
+
+  <li>
+    <strong>Synchronization suffers from poor GPS reception</strong><br>
+    GPS synchronization of gateways is often not possible or unreliable indoors, which ruins the
+    basis for TDOA. Without accurate time synchronization, the entire method does not work.
+  </li>
+</ol>
+</div>
+
+<div class="note-strip note-strip--yellow">
+<p><strong>When TDOA works indoors with restrictions:</strong></p>
+
+<ul>
+  <li>In very large halls, airport terminals or open logistics areas with good gateway coverage.</li>
+  <li>
+    If additional technologies are used for error correction (e.g. algorithms that detect
+    multipath effects).
+  </li>
+  <li>
+    In combination with other localization technologies such as Bluetooth, UWB or Wi‑Fi to
+    compensate for failures or inaccuracies.
+  </li>
+</ul>
+</div>
+
+
+<h3 id="cell-locate">9.12 Cellular Tracking via “Cell Locate”</h3>
+<p>
+Mobile phone positioning works by a mobile device communicating with the mobile phone network
+via its radio signal, and the network then calculates the approximate location based on various
+parameters. Here is an overview of the most important methods:
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>Typical accuracy</th>
+      <th>Remark</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Cell ID</strong></td>
+      <td>100 m – several km</td>
+      <td>Very rough; depends on cell size (city vs. country)</td>
+    </tr>
+    <tr>
+      <td><strong>Enhanced Cell‑ID</strong></td>
+      <td>50 – 500 m</td>
+      <td>Better through timing information, but dependent on the network</td>
+    </tr>
+    <tr>
+      <td><strong>TDOA (Time Difference of Arrival)</strong></td>
+      <td>50 – 150 m</td>
+      <td>Requires several synchronized stations</td>
+    </tr>
+    <tr>
+      <td><strong>AOA (Angle of Arrival)</strong></td>
+      <td>100 – 200 m</td>
+      <td>Less common, requires special antennas</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+The accuracy of positioning via mobile radio depends heavily on the method used, the network
+coverage and the environment. The power consumption is very low compared to other technologies.
+</p>
+
+
+<h3 id="edrx">9.13 eDRX – Towards a Queryable Tracker</h3>
+
+<div class="note-strip note-strip--yellow">
+<p>
+The eDRX function is only available for mobile devices!
+</p>
+</div>
+
+<p>
+The dream of a tracker that is constantly listening and can be actively interrogated is becoming a reality.
+The eDRX function helps to realize this dream.
+</p>
+
+<p>
+eDRX (Extended Discontinuous Reception) allows a <strong>mobile device</strong> to switch to an energy‑saving
+“sleep mode” after a data transmission, in which it does not constantly communicate with the mobile network.
+Normally, mobile devices have to check at short intervals whether the network has new messages for them
+(e.g. incoming commands or updates). These frequent checks consume energy, even if no new data is available.
+</p>
+
+<p>
+With eDRX, these check intervals are significantly extended: a sensor can be configured so that it only listens
+for new network messages every few minutes or even hours. During idle periods, the device’s receiver largely
+switches off, which drastically reduces energy consumption. As soon as the defined eDRX phase ends, the sensor
+“wakes up”, briefly listens for new messages and can then return to sleep if nothing important has been received.
+The location of the device can also be queried via a message from the network to the sensor.
+</p>
+
+<p>
+The device remains registered with the network — it is not completely offline — but simply reduces its active
+readiness to receive data. This is ideal for applications where the device mainly sends data itself
+(e.g. location, sensor readings) and only rarely needs to be reachable.
+</p>
+
+<p>
+eDRX cycles can last from seconds to hours (depending on the network operator and the application).
+The higher the eDRX frequency, the higher the quiescent current consumption of the device.
+It is therefore crucial to carefully define the required polling frequencies and always relate them
+to the intended service life of the device.
+</p>
+
+<h3 id="handhabung">10. General Handling Instructions</h3>
+
+<p><strong>1. Transport and Storage</strong></p>
+
+<ul>
+  <li>
+    Transport and store the sensor in its original packaging to prevent
+    mechanical damage and electrostatic discharge.
+  </li>
+  <li>
+    Store the device according to the parameters specified in the technical
+    data sheet.
+  </li>
+</ul>
+
+<p><strong>2. Assembly</strong></p>
+
+<ul>
+  <li>
+   Only use the mounting points provided on the housing for fastening.
+  </li>
+  <li>
+    Ensure the sensor is mounted securely and vibration-free to avoid
+    impairing measurement accuracy.
+  </li>
+</ul>
+
+<p><strong>3. Commissioning</strong></p>
+
+<ul>
+  <li>
+    Ensure that the battery is correctly inserted and sufficiently charged.
+  </li>
+  <li>
+    Activate the sensor using the integrated magnetic switch or the
+    designated smartphone app (model-dependent).
+  </li>
+  <li>
+    Use the software or app provided by Sentinum for configuration.
+  </li>
+</ul>
+
+<p><strong>4. Operation</strong></p>
+
+<ul>
+  <li>
+   Only operate the sensor within the specified ambient conditions (temperature, humidity, protection class).
+  </li>
+  <li>
+    Avoid strong magnetic fields or metallic shielding that may impair
+    radio communication or sensor functionality.
+  </li>
+</ul>
+
+<p><strong>5. Cleaning</strong></p>
+
+<ul>
+  <li>
+  If necessary, clean the housing with a slightly damp, lint-free cloth.
+  </li>
+  <li>
+    Do not use aggressive cleaning agents or solvents.
+  </li>
+  <li>
+    Tracker versions (non-TH, without opening) are IP69k rated and can be
+    cleaned accordingly.
+  </li>
+</ul>
+
+<p><strong>6. Maintenance</strong></p>
+
+<ul>
+  <li>
+    The Juno sensor is low-maintenance. Depending on usage, battery
+    replacement may be required after several years.
+  </li>
+  <li>
+    Regularly check functionality and connection to the backend system.
+  </li>
+</ul>
+
+<p><strong>7. Waste Disposal</strong></p>
+
+<ul>
+  <li>
+    Dispose of the device at the end of its service life in accordance with
+    local regulations for electronic devices and batteries.
+  </li>
+</ul>
+
+<h3 id="th-handhabung">10.1 Special Handling Instructions for -TH Versions</h3>
+
+<p>
+Juno TH versions are equipped with a special membrane enabling air exchange
+to ensure precise temperature and humidity measurement.
+</p>
+
+<div class="note-strip note-strip--green">
+<p><strong>Please observe the following instructions when handling the membrane:</strong></p>
+
+<ul>
+  <li>
+    The membrane is sensitive to mechanical stress. Do not insert sharp or
+    pointed objects into the opening.
+  </li>
+  <li>
+    Contamination from chips, dust or particles must be avoided. Clogged
+    membranes reduce measurement accuracy.
+  </li>
+  <li>
+  Do not clean or replace the membrane yourself. Always contact the manufacturer or authorized specialists for this.
+  </li>
+  <li>
+    The membrane must not come into contact with aggressive cleaning agents,
+    as this may cause permanent damage.
+  </li>
+</ul>
+</div>
+
+<div class="note-strip note-strip--yellow">
+<p><strong>Mounting note:</strong></p>
+
+<ul>
+  <li>
+  Even if the sensor has protection class IP67, water must not collect in the area of the membrane opening. Accumulated water can lead to incorrect measured values.
+  </li>
+  <li>
+  For outdoor use, the sensor must always be mounted at an angle of at least 45° so that the membrane points downwards.
+  </li>
+  <li>
+  Do not position the sensor close to the ground or in splash water areas to prevent splash dirt, mud or standing water from entering the opening.
+  </li>
+</ul>
+
+<p>
+Improper handling may lead to incorrect measurements or malfunction.
+</p>
+</div>
+
+<p>
+The following still applies:
+</p>
+
+<ul>
+  <li>
+    <strong>Ensure air circulation:</strong>
+    The sensor should not be installed in completely enclosed housings or heavily
+    shielded areas. Free air circulation is essential for accurate humidity and
+    temperature measurements.
+  </li>
+
+  <li>
+    <strong>Avoid UV exposure:</strong>
+    Long-term exposure to direct sunlight can affect the housing material and
+    possibly the membrane structure. Installation in a (partially) shaded area
+    or under a small cover (e.g. weather protection roof) is recommended if the
+    ambient conditions permit.
+  </li>
+
+  <li>
+    <strong>Avoid condensation:</strong>
+    If temperatures fluctuate greatly, condensation can form in the area of the
+    membrane opening in an unfavorable installation position. This is another
+    reason why angled, downward-facing installation is crucial.
+  </li>
+
+  <li>
+    <strong>Do not paint or coat:</strong>
+    The housing — especially the diaphragm opening — must not be painted,
+    varnished or coated. Even thin layers can seal the membrane and lead to
+    significant measurement errors.
+  </li>
+
+  <li>
+    <strong>Do not use in aggressive atmospheres</strong>
+    (e.g. with high concentrations of solvent vapors, sulfur compounds, etc.)
+    unless explicitly approved: Such conditions can affect the membrane and
+    electronics.
+  </li>
+</ul>
+
+
+<h3 id="montage">11. Assembly and Installation</h3>
+
+<h3 id="montage-sicherheit">11.1 Warnings and Safety Instructions for Installation</h3>
+
+<div class="note-strip note-strip--yellow">
+<p>
+If the sensor is still easily accessible after installation, install the sensor first and activate it after installation!
+</p>
+
+<p>
+If the sensor is no longer accessible after installation, first activate the sensor and then install it after activation!
+</p>
+
+<p>
+Before mounting the sensor in this way, make sure that the surface on which it is to be screwed is flat, otherwise the housing may be damaged.
+</p>
+</div>
+
+<div class="note-strip note-strip--red">
+<p><strong>Please note:</strong></p>
+
+<ul>
+  <li>Do not insert objects or body parts into the sensor openings.</li>
+  <li>Do not mount the sensor on ceilings or floors.</li>
+  <li>•	Do not install the sensor at heights above two meters.</li>
+  <li>
+   •	Only install the sensor indoors on a wall in a standard room at a height of 1.50 m to 1.80 m.
+  </li>
+</ul>
+</div>
+<div class="note-strip note-strip--yellow">
+<p>
+Permanent magnets can generate strong magnetic fields, which can be dangerous if handled incorrectly.
+Therefore, observe the following warnings:
+</p>
+
+<ul>
+  <li>
+    <strong>Protect hands and fingers:</strong>
+    Strong magnets can suddenly attract and pinch fingers or skin. This can lead to painful
+    crushing and injuries. Always keep sufficient distance when handling permanent magnets
+    and wear protective gloves if necessary.
+  </li>
+
+  <li>
+    <strong>Keep electronic devices away:</strong>
+    Magnetic fields can damage electronic devices such as computers, smartphones, credit cards,
+    pacemakers and other sensitive electronics or impair their function. Therefore, always keep
+    a sufficient distance from such devices.
+  </li>
+
+  <li>
+    <strong>Be aware of the risk of breakage:</strong>
+    Many permanent magnets are made of brittle materials (e.g. neodymium) that can break under
+    sudden impacts or high loads. The splinters can be sharp and cause injuries. Therefore, use
+    the magnets carefully and avoid impacts or excessive loads.
+  </li>
+
+  <li>
+    <strong>Health risks:</strong>
+    People with pacemakers or other implanted medical devices should avoid contact with strong
+    magnets as the magnetic fields may interfere with or disable these devices. If necessary,
+    consult a doctor before use.
+  </li>
+
+  <li>
+    <strong>Store magnets safely:</strong>
+    Keep magnets at a safe distance from each other and from other metal objects. Sudden
+    attraction can lead to damage, injuries or uncontrollable flying around of the objects.
+  </li>
+
+  <li>
+    <strong>Danger for children:</strong>
+    Permanent magnets are not toys! Small magnets in particular can be life‑threatening if
+    swallowed or inhaled and can cause serious internal injuries. Therefore, always keep magnets
+    out of the reach of children.
+  </li>
+
+  <li>
+    <strong>Avoid heating:</strong>
+    Permanent magnets permanently lose their magnetic force at temperatures above their maximum
+    operating temperature (between 80 and 200 °C, depending on the material). Therefore, do not
+    expose magnets to direct heat or open flames.
+  </li>
+</ul>
+</div>
+
+<h3 id="befestigung">11.2 Recommended Mounting Methods</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mounting type</th>
+      <th>Description</th>
+      <th>Recommended Accessories</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Screw connection</td>
+      <td>2 screws M4 or M5</td>
+      <td>2× countersunk screws, optionally wood screws (4–5 mm)</td>
+    </tr>
+    <tr>
+      <td>Magnets</td>
+      <td>2 neodymium cup magnets M4, internal thread</td>
+      <td>2× neodymium magnets, combined holding force 16–32 kg</td>
+    </tr>
+    <tr>
+      <td>Gluing</td>
+      <td>Double‑sided adhesive tape or mounting adhesive</td>
+      <td>Double‑sided adhesive tape or mounting adhesive</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="installation">11.3 General Installation Instructions</h3>
+
+<p>
+Installation of the Juno Tracker versions (without opening)
+</p>
+
+<p>
+The standard versions of the Juno sensor are designed for a wide range of industrial and
+logistical applications and have robust housings with a high degree of protection.
+The following points must be observed during installation:
+</p>
+
+<ul>
+  <li>
+    Select an installation location that is within the specified ambient temperatures
+    and conditions (see technical data).
+  </li>
+
+  <li>
+    Do not cover the housing: Radio communication (e.g. LoRaWAN, BLE) must not be
+    obstructed by metallic objects, sealed housings or structure‑shielding materials.
+  </li>
+
+  <div class="note-strip note-strip--green">
+    <p>
+      Ideally, mount the sensor with a clear line of sight to the sky.
+      This will ensure smooth operation of the radio interfaces.
+    </p>
+  </div>
+
+  <li>
+    Mount the sensor securely, ideally using the mounting holes provided.
+    Low‑vibration or solid surfaces are recommended.
+  </li>
+
+  <li>
+    Alignment: The standard version does not require any special alignment,
+    so it can be mounted flat, vertically or horizontally — depending on the application.
+  </li>
+
+  <li>
+    Do not install in the immediate vicinity of strong electromagnetic sources
+    in order to avoid signal interference.
+  </li>
+</ul>
+
+<h3 id="th-installation">11.4 Installation Instructions for Juno TH Versions</h3>
+
+<div class="note-strip note-strip--yellow">
+<p>
+The TH versions contain a sensitive air exchange membrane for precise climate monitoring.
+Additional requirements therefore apply:
+</p>
+</div>
+
+<ul>
+  <li>
+    Always mount the sensor in an inclined position (at least 45° inclination) so that the
+    membrane points downwards. This prevents water or dirt from collecting in the membrane opening.
+  </li>
+  <li>
+    Do not install close to the ground or in splash water areas — the sensor should be mounted
+    in an elevated position and protected from direct entry of dirt.
+  </li>
+  <li>
+    Select an installation location that ensures free air circulation. Do not install in
+    enclosed housings without ventilation.
+  </li>
+  <li>
+    Do not expose to direct sunlight to avoid overheating and measurement distortion.
+    (Partial) shading or a small weather protection is recommended.
+  </li>
+  <li>
+    Avoid exposure to particles or dust: Do not install TH models in areas where high levels
+    of dust or chips are to be expected (e.g. workshops, grinding stations).
+  </li>
+  <li>
+    The membrane must not be sealed, glued or painted over.
+  </li>
+  <li>
+    Cleaning or replacement of the membrane only by authorized bodies or in consultation
+    with the manufacturer.
+  </li>
+</ul>
+
+<h3 id="tracker-installation">11.5 Installation Instructions for Tracker Versions</h3>
+
+<p>
+To ensure the best possible performance, please observe the following installation instructions
+for the tracker versions:
+</p>
+
+<ul>
+  <li>
+    The GNSS sensor should always be mounted <strong>outside of metal housings</strong>.
+  </li>
+  <li>
+    Avoid installation in the immediate vicinity of metal surfaces or metallic structures.
+  </li>
+  <li>
+    Make sure you have a <strong>clear line of sight to the sky</strong> to ensure the best possible
+    GNSS reception.
+  </li>
+  <li>
+    Keep <strong>at least 30 cm distance from metallic materials to the front and sides</strong>.
+  </li>
+  <li>
+    Place the sensor away from high‑voltage power lines and strong electromagnetic fields.
+  </li>
+  <li>
+    Avoid mounting in closed rooms or under covers that could block GNSS signals.
+  </li>
+  <li>
+    If the tracker is used as a mobile device, make sure that the sensor is securely mounted
+    during operation.
+  </li>
+</ul>
+
+<h3 id="antenne">11.6 Important Note for Devices with External Antenna</h3>
+
+<p>
+If you have ordered a device with an external antenna, which can be recognized by the
+gold RP‑SMA connector, first install the antenna included in the scope of delivery.
+</p>
+
+<div class="note-strip note-strip--yellow">
+<p>
+<strong>External antenna:</strong>
+Please note that the antenna should always be mounted vertically and that the tip should
+point to the sky if the application permits. The antenna should be at least 2 cm away
+from metal surfaces. Make sure that the antenna is not shielded by surrounding metal
+parts, if the application allows this.
+</p>
+
+<p>
+<strong>Internal antenna:</strong>
+If your device has an internal antenna (no external antenna visible), the sensor should
+always be mounted with the long side vertical, as this allows the maximum signal strength
+of the device to be achieved. The antenna is located on the top (logo side) of the housing
+and should be at least 2 cm away from metal surfaces. Ensure that the antenna is not
+shielded by surrounding metal parts, as far as the application allows.
+</p>
+</div>
+
+<div class="note-strip note-strip--red">
+<p>
+<strong>Please note:</strong>
+If you receive a device with an external antenna, never operate the device without an
+external antenna! This can lead to irreparable damage to the sensor.
+</p>
+</div>
+
+<h3 id="schrauben">11.7 Wall Mounting with Screws</h3>
+
+<p>
+The Juno sensor can be securely and permanently mounted on a wall or other solid surface.
+It is mounted using the screw holes provided in the housing flange.
+</p>
+
+<p><strong>Preparation for assembly</strong></p>
+
+<ul>
+  <li>
+    Determine the mounting position: Select a mounting location that is low‑vibration,
+    dry and suitable for the sensor function (e.g. free air circulation for TH versions).
+  </li>
+  <li>
+    Check the mounting surface: Solid substrates such as concrete, masonry, wood or
+    technical plastic panels are suitable. Use suitable dowels for porous substrates.
+  </li>
+  <li>
+    Provide tools
+    <ul>
+      <li>Cordless screwdriver or screwdriver with torque control</li>
+      <li>Drill bit (suitable for the wall texture)</li>
+      <li>Dowels (if required)</li>
+      <li>Screws (see below)</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="figure">
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/77c7488a6907f64cd361572943506b7f2be36033/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_vorbereitungMontage5.webp"
+    alt="Preparation for wall mounting with screws on the Juno sensor"
+  >
+  <figcaption>
+    Figure 4: Preparation for wall mounting with screws
+  </figcaption>
+</div>
+
+<p><strong>Screw selection</strong></p>
+
+<ul>
+  <li>
+    The mounting holes in the sensor housing are designed for M4 screws.
+  </li>
+  <li>
+    Depending on the mounting surface, we recommend:
+    <ul>
+      <li>
+        M4 cylinder head screws (e.g. DIN 912, stainless steel) for plastic housings
+        or metal frames
+      </li>
+      <li>
+        Spax screws 4×35 mm with suitable plugs for concrete, brick or timber walls
+      </li>
+    </ul>
+  </li>
+  <li>
+    The screw must be able to pass freely through the housing without distorting
+    or damaging it.
+  </li>
+</ul>
+
+<p><strong>Installation instructions</strong></p>
+
+<ul>
+  <li>
+    Maximum tightening torque: 3 Nm. A higher torque can lead to housing deformation
+    or breakage.
+  </li>
+  <li>Tighten the screws evenly and without tension.</li>
+  <li>
+    Ensure that the housing lies flat without mechanical stresses building up.
+  </li>
+  <li>
+    Do not drill any additional holes or modify the housing.
+  </li>
+  <li>
+    Do not mount upside down if condensation or dirt could collect in the sensor area.
+  </li>
+</ul>
+
+<div class="note-strip note-strip--red">
+<p><strong>Safety instructions</strong></p>
+
+<ul>
+  <li>
+    Wear suitable protective equipment during installation (e.g. safety goggles
+    for drilling work).
+  </li>
+  <li>
+    Check that it is correctly attached by gently pulling and pushing on the housing.
+  </li>
+  <li>
+    Make sure that no cables or electrical lines behind the wall are damaged.
+  </li>
+  <li>
+    For TH versions: Observe the recommended tilt angle (min. 45°) and the downward
+    orientation of the membrane.
+  </li>
+</ul>
+</div>
+
+<h3 id="magnet">11.8 Wall Mounting with Magnets</h3>
+
+<p>
+For applications where flexible or removable mounting is required, the Juno sensor can be attached
+to metallic surfaces using mounting magnets. The magnet modules are first firmly attached to the
+sensor housing with screws. The housing design has specially designed mounting holes for this
+purpose, the position and dimensions of which can be found in the technical drawing supplied.
+</p>
+
+<div class="figure">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TLT11_8pic.png" alt="Wall mounting with magnets">
+  <figcaption>
+    Figure 5: Wall mounting of the Juno sensor using mounting magnets
+  </figcaption>
+</div>
+
+<p>
+To mount the magnets securely, it is important to only use the screw points provided and to ensure
+that the screws are tightened to a maximum torque of 3 Nm. Depending on the magnet type, M3
+stainless steel cylinder head screws are generally suitable for fastening the magnets. The magnets
+themselves must be firmly attached to the housing to prevent slipping or loosening in the event of
+vibrations or impacts.
+</p>
+
+<p>
+After mounting the magnets, the sensor can be placed on a suitable ferromagnetic surface (e.g.
+steel beam, switch cabinet, machine housing). Make sure that the contact surface is flat, clean and
+sufficiently load‑bearing. Unevenness, rust, paint or dirt can significantly reduce the holding force
+of the magnets.
+</p>
+
+<p>
+Magnetic mounting is particularly suitable for temporary use, test installations or locations where
+tool‑free replacement is required. However, it must be noted that mechanical loads or vibrations can
+reduce the hold. In safety‑relevant applications or for permanent installation, we recommend
+additionally securing the sensor or using a fixed screw connection.
+</p>
+
+<p>
+Depending on the material composition, magnets can also age more quickly or become porous when
+exposed to direct sunlight, heat and weather conditions. Over time, this can lead to a loss of
+holding force or to the sensor slipping off — especially when used outdoors for long periods of
+time. For permanent outdoor applications, only weather‑resistant, encapsulated magnetic holders
+should therefore be used and the sensor should be checked regularly to ensure that it is firmly
+seated.
+</p>
+
+<p>
+The general notes on alignment also apply to magnet mounting — especially for TH versions with a
+sensitive diaphragm: The sensor should always be mounted at an angle of at least 45° with the
+diaphragm facing downwards to prevent water accumulation or particle ingress.
+</p>
+
+<h3 id="kleben">11.9 Wall Mounting with Adhesive Strips</h3>
+
+<p>
+As an alternative to screw or magnetic mounting, the Juno sensor can also be attached using
+high‑quality 3M adhesive strips. The adhesive strips are pre‑cut and specially adapted to the
+shape of the Juno housing to enable quick, clean and permanent installation – especially on
+smooth, solid surfaces.
+</p>
+
+<div class="figure">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_SicherheitshinweiseMontage6.webp"
+       alt="Safety instructions for mounting">
+  <figcaption>
+    Figure 6: Wall mounting with adhesive strips
+  </figcaption>
+</div>
+
+<p><strong>Prerequisites and preparation</strong></p>
+
+<ul>
+  <li>
+    The mounting surface must be even, stable, clean, dry and grease‑free.
+  </li>
+  <li>
+    Before application, clean the surface with isopropanol or a suitable plastic cleaner.
+  </li>
+  <li>
+    The adhesive strip should not be used on porous, textured or very uneven surfaces,
+    as adhesion will be impaired.
+  </li>
+</ul>
+
+<p><strong>Assembly instructions</strong></p>
+
+<ul>
+  <li>
+    Remove the protective film from one side of the adhesive strip and apply the strip flat
+    to the back of the sensor. Placement can be based on the markings provided. Make sure
+    that the strip is positioned exactly and that there are no air pockets.
+  </li>
+  <li>
+    Then remove the second protective film and apply the sensor to the prepared surface
+    with even pressure (approx. 10–15 seconds).
+  </li>
+  <li>
+    The sensor should adhere undisturbed for at least 24 hours to achieve full adhesive strength.
+  </li>
+</ul>
+
+<div class="note-strip note-strip--yellow">
+<p><strong>Important notes</strong></p>
+
+<ul>
+  <li>
+    The adhesive connection is designed for long‑term use indoors or in protected outdoor areas.
+  </li>
+  <li>
+    Adhesive performance may be impaired in environments with high UV exposure, moisture,
+    high heat (&gt; 80 °C) or constant vibration.
+  </li>
+  <li>
+    Subsequent correction of the position after application is only possible to a very limited extent.
+  </li>
+  <li>
+    For TH versions, the recommended mounting position (at least 45° inclined, membrane facing
+    downwards) must also be observed for adhesive mounting in order not to jeopardize the
+    functionality of the sensor membrane.
+  </li>
+  <li>
+    The adhesive strips are not reusable. A new adhesive strip must be used when moving the sensor.
+  </li>
+</ul>
+</div>
+
+
+<h3 id="inbetriebnahme">12. Commissioning and Operation</h3>
+
+<div class="note-strip note-strip--red">
+<p>
+Please note that the housing or electronics may be damaged if knives or other sharp objects are used.
+</p>
+</div>
+
+<h3 id="magnet-start">12.1 Commissioning the Sensor Using a Magnet</h3>
+
+<div class="note-strip note-strip--green">
+<p>
+There is a magnetic field switch on the sensor for easy activation of the sensor. The following graphic shows the position of the magnetic field switch.
+</p>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>Item number</th>
+      <th>Magnetic switch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>
+        S-JUNO(-iX)-LOEU/MIOTY<br>
+        S-JUNO(-iX)-LOEU/MIOTY-TH<br>
+        S-JUNO(-iX)-LOEU/MIOTY-TRACK<br>
+        S-JUNO(-iX)-LOEU/MIOTY-TH-TRACK<br>
+        S-JUNO(-iX)-NBM1-TRACK-2<br>
+        S-JUNO(-iX)-NBM1-TRACK-3<br>
+        S-JUNO(-iX)-NBM1-TH-TRACK-2<br>
+        S-JUNO(-iX)-NBM1-TH-TRACK-3<br>
+        S-JUNO-NB-TH
+      </strong></td>
+      <td>
+        <div class="figure">
+          <img
+            src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_Advertising9.webp"
+            alt="Position of the magnetic switch on the Juno sensor">
+          <figcaption>
+            Figure 7: Position of the magnetic switch for activation
+          </figcaption>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+To activate the sensor, hold a commercially available magnet to the point marked
+<strong>X</strong>. A neodymium magnet with a minimum surface area of 1 cm² is recommended.
+The magnet must remain in place for at least 2 seconds until the device is activated.
+This is acknowledged with a beep.
+</p>
+
+<div class="figure">
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_Klappenerkennung28.webp"
+    alt="Flap detection and switch positions on the Juno sensor">
+  <figcaption>
+    Figure 8: Marking of the magnet position
+  </figcaption>
+</div>
+
+<div class="note-strip note-strip--yellow">
+<p>
+Please note for operation that Hall switch 1 can always be used to detect a flap
+opening, and magnetic switch 2 is always triggered to activate or advertise BLE.
+</p>
+</div>
+<h3 id="ble-kurz">12.2 Commissioning the Sensor via BLE (Quick Guide)</h3>
+
+<div class="note-strip note-strip--green">
+<p>
+This activation via BLE only applies to the following item numbers:
+</p>
+
+<ul>
+  <li>S‑JUNO(-iX)-LOEU / MIOTY‑TRACK</li>
+  <li>S‑JUNO(-iX)-LOEU / MIOTY‑TH‑TRACK</li>
+  <li>S‑JUNO(-iX)-NBM1‑TRACK‑2</li>
+  <li>S‑JUNO(-iX)-NBM1‑TRACK‑3</li>
+  <li>S‑JUNO(-iX)-NBM1‑TH‑TRACK‑2</li>
+  <li>S‑JUNO(-iX)-NBM1‑TH‑TRACK‑3</li>
+</ul>
+</div>
+
+
+  <li>
+    Set the sensor to BLE advertising mode so that the Juno can be recognized and found
+    by BLE‑enabled end devices.
+  </li>
+
+
+<p>
+To activate advertising mode, hold a standard magnet to the point on the housing marked
+with an <strong>X</strong> in the image on the right.
+</p>
+
+<div style="display: flex; gap: 32px; align-items: flex-start;">
+
+  <div style="flex: 1;">
+    <ul>
+      <li>
+        Hold the magnet close to the housing for at least 2 seconds,
+      </li>
+      <li>
+        or briefly place it directly on the marked position.
+      </li>
+    </ul>
+  </div>
+
+  <div style="flex: 1;">
+    <div class="figure">
+      <img
+        src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_Advertising9.webp"
+        alt="Position of the magnetic switch on the Juno sensor">
+      <figcaption>
+        Figure 9: Position of the magnetic switch for activation
+      </figcaption>
+    </div>
+  </div>
+
+</div>
+
+<p>
+Advertising mode is then started automatically.
+</p>
+
+<h3 id="nfc">12.3 Commissioning the Sensor via NFC</h3>
+
+<div class="note-strip note-strip--green">
+<p>
+This activation only applies to the following item numbers:
+</p> 
+
+<ul>
+  <li>S-JUNO(-iX)-LOEU/MIOTY</li>
+  <li>S-JUNO(-iX)-LOEU/MIOTY-TH</li>
+  <li>S-JUNO-NB-TH</li>
+</ul>
+</div>
+
+<p>
+Activation takes place via an NFC app. A smartphone is required for this.
+The app can be downloaded from the respective app stores. Simply search for
+“Sentinum LinQs” and download the LinQs app.
+</p>
+
+<div class="figure">
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_Qrcode10.webp"
+    alt="QR code for the LinQs app">
+  <figcaption>
+    Figure 10: QR code for the Sentinum LinQs app
+  </figcaption>
+</div>
+
+<p>
+First locate the tag on the sensor and then the reader on your end device.
+The position of the NFC tag can be found at the position of the orange arrow.
+</p>
+
+<div class="figure">
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_pfeilOrange11.webp"
+    alt="Position of the NFC tag on the Juno sensor">
+  <figcaption>
+    Figure 11: Position of the NFC tag on the sensor
+  </figcaption>
+</div>
+
+<p>
+The location of the tag is also marked on the top and labeled “Tap here”.
+You can also find the position of the NFC tag in the technical drawing.
+</p>
+
+<p>
+Open the app and activate the sensor. To start the sensor in the basic settings,
+click on the “Activate sensor” button in the app’s start menu. Now place your
+device on the NFC mark on the sensor.
+</p>
+
+<p>
+When the sensor is activated, “Sensor updated!” is displayed.
+You can then continue with the activation of the other sensors.
+</p>
+
+<div style="display: flex; gap: 32px; align-items: flex-start; flex-wrap: wrap;">
+
+  <div style="flex: 1; text-align: center;">
+    <p><strong>Activate sensor</strong></p>
+
+    <figure style="margin: 0;">
+      <img
+        src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_screen12.webp"
+        alt="Activate sensor">
+    </figure>
+
+    <p>
+      Use the “Activate Sensor” button to activate the sensor and enable BLE
+      advertising mode for the sensor.
+    </p>
+  </div>
+
+  <div style="flex: 1; text-align: center;">
+    <p><strong>Read and set parameters via NFC</strong></p>
+
+    <figure style="margin: 0;">
+      <img
+        src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_screen13.webp"
+        alt="Read parameters">
+    </figure>
+
+    <p>
+      Use the “Read” button to read out the parameters.
+    </p>
+  </div>
+
+  <div style="flex: 1; text-align: center;">
+    <p><strong>Set values via NFC</strong></p>
+
+    <figure style="margin: 0;">
+      <img
+        src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_screen14.webp"
+        alt="Set values via NFC">
+    </figure>
+
+    <p>
+      Tap the desired table entry and change the values. Confirm with the button
+      below “Update &amp; Reboot” or “Update”.  
+      “Update &amp; Reboot” forces a reboot in addition to the change,  
+      “Update” applies the change at the next measurement or transmission.
+    </p>
+  </div>
+
+</div>
+
+
+
+<h3 id="ble">12.4 Commissioning the Sensor via BLE</h3>
+
+<p>
+All TRACK and future versions of the Juno have BLE; for other versions, please use the NFC or
+magnetic version accordingly. To do this, use our “LinQs APP,” which you can find in the
+<a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">App Store</a>
+and
+<a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">Google Play Store</a>.
+</p>
+
+<p>
+Activate the magnetic field switch at the bottom left of the sensor to start advertising mode.
+The sensor should now emit an acoustic signal. You can now conveniently control the sensor via BLE
+from your device. Make sure that BLE is enabled on your smartphone and that you are within range
+of the sensor.
+</p>
+
+<div style="display: flex; gap: 32px; align-items: flex-start; flex-wrap: wrap;">
+
+  <div style="flex: 1; text-align: center;">
+    <p><strong>Activate BLE Advertising</strong></p>
+
+    <figure style="margin: 0;">
+      <img
+        src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_screen12.webp"
+        alt="Activate sensor">
+    </figure>
+
+    <p>
+      The BLE advertising mode can be activated with the magnet or after activating the sensor.
+    </p>
+  </div>
+
+  <div style="flex: 1; text-align: center;">
+    <p><strong>Search for BLE device</strong></p>
+
+    <figure style="margin: 0;">
+      <img
+        src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_screen13.webp"
+        alt="Search BLE device">
+    </figure>
+
+    <p>
+      Use the “Search” button to search for the sensor via BLE.
+    </p>
+  </div>
+
+  <div style="flex: 1; text-align: center;">
+    <p><strong>Connect to the sensor via BLE</strong></p>
+
+    <figure style="margin: 0;">
+      <img
+        src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_screen17.webp"
+        alt="Connect to sensor">
+    </figure>
+
+    <p>
+      Select the correct sensor and confirm by clicking on “juno”.
+    </p>
+  </div>
+
+</div>
+
+
+<div style="display: flex; gap: 32px; align-items: flex-start; flex-wrap: wrap;">
+
+  <div style="flex: 1; text-align: center;">
+    <p><strong>Connect to the sensor via BLE</strong></p>
+
+    <figure style="margin: 0;">
+      <img
+        src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_screen18.webp"
+        alt="Connect button">
+    </figure>
+
+    <p>
+      Click the “Connect” button.
+    </p>
+  </div>
+
+  <div style="flex: 1; text-align: center;">
+    <p><strong>Configure the sensor via BLE</strong></p>
+
+    <figure style="margin: 0;">
+      <img
+        src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_screen19.webp"
+        alt="Configure sensor">
+    </figure>
+
+    <p>
+      Now use the “Configure” button to set parameters.
+    </p>
+  </div>
+
+  <div style="flex: 1; text-align: center;">
+    <p><strong>Configure the sensor via BLE</strong></p>
+
+    <figure style="margin: 0;">
+      <img
+        src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_screen20.webp"
+        alt="Trigger send and update values">
+    </figure>
+
+    <p>
+      A transmission can be triggered using the “Trigger Send” button.  
+      Tap the desired table entry and change the values.  
+      Confirm with the button below “Update &amp; Reboot” or “Update”.  
+      “Update &amp; Reboot” forces a reboot in addition to the change,  
+      “Update” is applied at the next measurement or transmission.
+    </p>
+  </div>
+
+</div>
+
+<h3 id="akustisch">12.5 Audible Signal and Feedback</h3>
+
+<ul>
+  <li>
+    When the device is switched on, an acoustic signal consisting of several ascending tones sounds.
+    This sequence of tones signals that the sensor has been successfully activated.
+  </li>
+  <li>
+    When the device is switched off, several descending tones are played to acoustically confirm
+    that the device has shut down.
+  </li>
+  <li>
+    When establishing or disconnecting a Bluetooth connection (BLE), the sensor also emits an
+    acoustic signal to confirm the connection status.
+  </li>
+</ul>
+
+<h3 id="sensorfunktionen">13. Sensor Functions</h3>
+
+<p>
+Specific sensor functions for the Juno are explained below.
+</p>
+
+<h3 id="hysterese">13.1 Hysteresis</h3>
+
+<p>
+Hysteresis describes a behavior in which the reaction of a system depends not only on its current
+state, but also on its previous history. This means that the system “remembers” where it came from
+— and therefore reacts differently to the same stimulus, depending on whether the stimulus is
+currently increasing or decreasing.
+</p>
+
+<p>
+<strong>Hysteresis = delay or difference in behavior when a signal or stimulus is increased or decreased.</strong>
+</p>
+
+<p>
+Two hysteresis limit values are specified for the Juno, one for the temperature and one for the
+relative humidity. The values are applied to both the delta and the absolute limit values.
+</p>
+
+<div class="figure">
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/140ba3afa92db6a1eeb1d1d8fa3c0f63ff963bc6/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_graphSensor21.webp"
+    alt="Hysteresis diagram of the Juno sensor">
+</div>
+
+<p><strong>Description:</strong></p>
+
+<ul>
+  <li>
+    <strong>Orange line:</strong> Sensor values over time.
+  </li>
+  <li>
+    <strong>Red lines:</strong>
+    <ul>
+      <li>Dashed (––): Maximum alarm threshold value (e.g. 30 °C).</li>
+      <li>Dotted (···): Reset point when temperature decreases (e.g. 28 °C).</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Blue lines:</strong>
+    <ul>
+      <li>Dashed (––): Minimum alarm threshold value (e.g. 10 °C).</li>
+      <li>Dotted (···): Reset point when temperature increases (e.g. 12 °C).</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Example procedure:</strong></p>
+
+<ul>
+  <li>
+    The sensor triggers a “MAX alarm” as soon as the value is ≥ 30 °C.
+  </li>
+  <li>
+    The alarm remains active until the value falls below 28 °C → only then is it reset.
+  </li>
+  <li>
+    Conversely, the same applies to the lower range with the “MIN alarm” at ≤ 10 °C.
+  </li>
+</ul>
+
+<p>
+This behavior prevents alarms from being constantly triggered or deactivated in the event of minimal
+fluctuations — typical for hysteresis.
+</p>
+
+<h3 id="tracking-motion">13.2 Tracking and Tracking in Motion</h3>
+
+<p>
+The localization of the device is independent of the transmission of the sensor data
+(e.g. temperature, tilt angle or relative humidity).
+</p>
+
+<p>This means:</p>
+
+<ul>
+  <li>
+    The interval for determining the location can be freely configured without changing
+    the transmission intervals of the sensor data.
+  </li>
+  <li>
+    The measured values from the sensors are recorded and transmitted regardless of the
+    tracker’s movement status — whether the device is in motion or stationary.
+  </li>
+  <li>
+    The device is located either at fixed intervals or event‑controlled, e.g. by detected
+    movement or other activity parameters.
+  </li>
+</ul>
+
+<h3 id="tilt">13.3 Tilt and Tilt Detection</h3>
+
+<p>
+Two operating modes are available for the Juno sensors with integrated tilt detection:
+</p>
+
+<ol>
+  <li>
+    <strong>Ultra‑low power tilt detection</strong><br>
+    This mode is characterized by a particularly low power consumption of only 1 µA.
+    It reliably detects a tilt or damper opening from approx. 50 degrees.
+    Ideal for applications where coarse tilt detection is sufficient and energy
+    efficiency is paramount.
+  </li>
+
+  <li>
+    <strong>Advanced tilt detection</strong><br>
+    In addition, an advanced mode is available that enables the precise detection of
+    inclinations or flap openings. The power consumption here depends on the selected
+    scanning frequency, but is higher than that of the ultra‑low power variant.
+    This mode is suitable for applications with higher accuracy requirements.
+  </li>
+</ol>
+
+<p><strong>
+The tilt and opening detection and tracking‑in‑motion functions are mutually exclusive.
+</strong></p>
+
+<p>
+This means that a sensor with tracking‑in‑motion activated cannot perform real‑time tilt
+or flap opening detection.
+</p>
+
+<p>
+However, the current tilt angle is still transmitted regularly so that the position can
+be evaluated retrospectively.
+</p>
+<h3 id="schnittstelle">14. Communication with the Interface</h3>
+
+<p>
+The option to configure the sensor communication and the join behavior can be found,
+depending on the version, in the respective generic
+<a href="https://docs.sentinum.de/generische-lorawan-dokumentation" target="_blank" rel="noopener">
+  LoRaWAN®
+</a>,
+<a href="https://docs.sentinum.de/generische-mioty-dokumentation" target="_blank" rel="noopener">
+  Mioty®
+</a>
+or
+<a href="https://docs.sentinum.de/generische-cellular-dokumentation" target="_blank" rel="noopener">
+  Cellular (NB‑IoT and LTE‑M1)
+</a>
+documentation.
+</p>
+
+<p>
+You can also find all documents relating to the generic documentation at
+<a href="https://docs.sentinum.de/wichtig-produktübergreifende-dokumentation-für-sensoren" target="_blank" rel="noopener">
+  https://docs.sentinum.de/wichtig-produktübergreifende-dokumentation-für-sensoren
+</a>.
+</p>
+
+
+<h3 id="pflege">15. Care and Cleaning</h3>
+
+<p>
+To ensure that the sensor functions reliably and has a long service life, it should be
+maintained regularly. Please observe the following instructions:
+</p>
+
+<ul>
+  <li>
+    Clean the housing, especially the ventilation slots of the sensor, with a dry or
+    slightly damp microfiber cloth. Make sure that no moisture penetrates the device.
+  </li>
+  <li>
+    Carry out cleaning regularly, especially in dusty or pollen‑rich environments,
+    to ensure the long‑term functionality of the sensor.
+  </li>
+  <li>
+    Do not use cleaning agents containing alcohol or solvents, as these can damage
+    the surface of the sensor.
+  </li>
+  <li>
+    Do not use compressed air or other intensive cleaning methods, as these can
+    damage sensitive sensor components.
+  </li>
+  <li>
+    Hard deposits (e.g. limescale, oil or grease) can impair measuring accuracy.
+    If necessary, clean early with a soft, damp cloth and mild detergent.
+  </li>
+  <li>
+    Make sure that no leaves, water or snow lie on or adhere to the sensor.
+    This can negatively affect the performance of the sensor.
+  </li>
+</ul>
+<h3 id="batteriewechsel">16. Battery Change</h3>
+
+<!-- Step 1 -->
+<div style="display:flex; gap:24px; margin-bottom:32px;">
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/140ba3afa92db6a1eeb1d1d8fa3c0f63ff963bc6/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_batteriewechsel22.webp"
+    style="width:260px; height:auto;"
+  />
+  <p>
+    <strong>1.</strong><br>
+    Open the 4 screws on the back of the sensor marked with the orange arrows.
+    You will need a Torx T10 screwdriver for this. Make sure that the seal is not damaged.
+  </p>
+</div>
+
+<!-- Step 2 -->
+<div style="display:flex; gap:24px; margin-bottom:32px;">
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/140ba3afa92db6a1eeb1d1d8fa3c0f63ff963bc6/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_batteriewechsel23.webp"
+    style="width:260px; height:auto;"
+  />
+  <p>
+    <strong>2.</strong><br>
+    Remove the back of the sensor housing. Check that the seal is in place and take care
+    not to damage it when opening it.
+  </p>
+</div>
+
+<!-- Step 3 -->
+<div style="display:flex; gap:24px; margin-bottom:32px;">
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/140ba3afa92db6a1eeb1d1d8fa3c0f63ff963bc6/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_batteriewechsel24.webp"
+    style="width:260px; height:auto;"
+  />
+  <p>
+    <strong>3.</strong><br>
+    Remove the old batteries from the battery holder.
+  </p>
+</div>
+
+<!-- Step 4 -->
+<div style="display:flex; gap:24px; margin-bottom:32px;">
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/140ba3afa92db6a1eeb1d1d8fa3c0f63ff963bc6/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_batteriewechsel25.webp"
+    style="width:260px; height:auto;"
+  />
+  <p>
+    <strong>4.</strong><br>
+    Insert 2 new battery cells. If cells other than those recommended are used, performance
+    and product safety may be impaired and the running times and performance specified in the
+    data sheets may not be achieved.  
+    After insertion, the sensor should start with a short beep. As soon as you hear this signal,
+    replace the back of the housing.
+  </p>
+</div>
+
+<!-- Step 5 -->
+<div style="display:flex; gap:24px; margin-bottom:32px;">
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/140ba3afa92db6a1eeb1d1d8fa3c0f63ff963bc6/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_batteriewechsel26.webp"
+    style="width:260px; height:auto;"
+  />
+  <p>
+    <strong>5.</strong><br>
+    Place the rear panel back on the top of the housing. Make sure that the seal is properly
+    seated and that the housing can be closed correctly.
+  </p>
+</div>
+
+<!-- Step 6 -->
+<div style="display:flex; gap:24px;">
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/140ba3afa92db6a1eeb1d1d8fa3c0f63ff963bc6/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_batteriewechsel27.webp"
+    style="width:260px; height:auto;"
+  />
+  <p>
+    <strong>6.</strong><br>
+    Screw the housing together. Tighten the screws crosswise to ensure even and tension‑free
+    fastening. Make sure that the original position of the seal has not changed.  
+    Then reinstall the sensor at its place of use. Dispose of the old batteries in an
+    environmentally friendly manner.
+  </p>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item number</th>
+      <th>Approved batteries</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>
+        S-JUNO(-iX)-LOEU/MIOTY<br>
+        S-JUNO(-iX)-LOEU/MIOTY-TH<br>
+        S-JUNO(-iX)-LOEU/MIOTY-TRACK<br>
+        S-JUNO(-iX)-LOEU/MIOTY-TH-TRACK
+      </strong></td>
+      <td>
+        <ul>
+          <li>Energizer Ultimate Lithium AA</li>
+          <li>Varta ULTRA Lithium AA</li>
+          <li>Varta Longlife Power AA</li>
+          <li>SAFT LS14500 (<strong>standard</strong>)</li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <td><strong>
+        S-JUNO(-iX)-NBM1-TRACK-2<br>
+        S-JUNO(-iX)-NBM1-TRACK-3<br>
+        S-JUNO(-iX)-NBM1-TH-TRACK-2<br>
+        S-JUNO(-iX)-NBM1-TH-TRACK-3<br>
+        S-JUNO-NB-TH
+      </strong></td>
+      <td>
+        <ul>
+          <li>CR14505 (HCB)</li>
+          <li>ER14505M (HCB, <strong>standard</strong>)</li>
+          <li>UHR-ER14505-X (Ultralife)</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h3 id="klappe">17. Flap Opening Detection and Tilt Detection</h3>
+
+<p>
+The flap opening detection can be carried out either via the magnetic switch or the
+acceleration sensor. Tilt detection (tilt feature) is carried out via the acceleration sensor.
+</p>
+
+<h3 id="klappe-magnet">17.1 Flap Opening Detection via the Magnetic Switch</h3>
+
+<figure>
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/140ba3afa92db6a1eeb1d1d8fa3c0f63ff963bc6/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_ApprovedBatterienachTabelle8.webp"
+    alt="Position of the magnetic switches on the Juno sensor">
+</figure>
+
+<div class="note-strip note-strip--green">
+<p>
+For operation, please note that Hall switch 1 can always be used to detect a flap opening,
+and magnetic switch 2 is always triggered to activate or advertise BLE.
+</p>
+</div>
+
+<ol>
+  <li>
+    The magnetic field switch is active. Either one or both sensors can be used.
+  </li>
+  <li>
+    Large neodymium magnets are recommended. These should be attached as close as possible
+    to the sensor. A recommended distance cannot be specified universally due to the variable
+    magnet size. A maximum distance of 1 cm between the magnet and the housing is recommended.
+  </li>
+  <li>
+    For comparison: With a neodymium disk magnet with d = 20 mm and h = 5 mm, reliable values
+    are achieved at distances of less than 1 cm.
+  </li>
+  <li>
+    The magnetic field switches can be operated in three different modes:
+    <ul>
+      <li>The container is closed when the magnet is applied.</li>
+      <li>The container is open when the magnet is applied.</li>
+      <li>The sensor counts an opening when the magnet passes through twice.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="klappe-beschleunigung">
+  17.2 Flap Opening Detection with Acceleration Sensor and Tilt Detection
+</h3>
+
+<p>
+The Juno sensor is equipped with an integrated 3‑axis acceleration sensor used for the
+reliable detection of movement and position changes. One of the key functions of this
+sensor is detecting the opening of flaps, lids or housings, as typically found in
+industrial applications.
+</p>
+
+<ol>
+  <li>
+    <strong>Position detection in idle state:</strong>
+    <ul>
+      <li>
+        When the flap is closed, the sensor is in a defined, stable position.
+      </li>
+      <li>
+        The LIS2DTW12 continuously measures acceleration along the X, Y and Z axes.
+      </li>
+      <li>
+        The absolute position of the flap can be clearly identified via static acceleration
+        (mainly caused by gravity).
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Change of inclination or movement:</strong>
+    <ul>
+      <li>
+        When the flap is opened or moved, the orientation of the sensor changes.
+      </li>
+      <li>
+        The sensor detects this change by a clear deviation of the measured acceleration
+        values on at least one axis.
+      </li>
+      <li>
+        This change is interpreted as a trigger event.
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Threshold‑based detection:</strong>
+    <ul>
+      <li>
+        A tilt angle or movement threshold can be defined in the Juno firmware setup
+        (e.g. change by 15°, not ultra‑low‑power operation).
+      </li>
+
+      <div class="note-strip note-strip--green">
+        <p>
+          The sensor can still be operated in a very energy‑saving manner by setting the
+          measurement frequency of the angle to a correspondingly high value, e.g. 5 minutes.
+          In this case, the measurement is insignificant compared to the remaining power
+          consumption.
+        </p>
+      </div>
+
+      <li>
+        As soon as the measured values exceed this threshold, a flap opening event is registered.
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Optional: Interrupt‑controlled operation:</strong>
+    <ul>
+      <li>
+        The sensor supports low‑power modes with interrupt triggering.
+      </li>
+      <li>
+        This means the sensor remains in a low‑power state and only triggers an interrupt to
+        the microcontroller when movement is detected — ideal for extending battery life.
+      </li>
+      <li>
+        <strong>Disadvantage: The angle cannot be adjusted and is fixed at 65°.</strong>
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Event processing and data transmission:</strong>
+    <ul>
+      <li>
+        After a detected opening, the event is logged in the internal memory.
+      </li>
+      <li>
+        Depending on the configuration, a data packet can be sent immediately via LoRaWAN,
+        BLE or another network protocol to report the event.
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<div class="note-strip note-strip--green">
+<p><strong>Advantages of this method</strong></p>
+
+<ul>
+  <li>No mechanical components required (compared to reed or magnetic switches)</li>
+  <li>Insensitive to magnetic field interference</li>
+  <li>Easy retrofitting or adaptation via software</li>
+</ul>
+</div>
+<h3 id="orientierung">17.3 Orientations</h3>
+
+<div class="figure">
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TLTvertical_faceUp_faceDown.png"
+    alt="Overview of possible sensor orientations: vertical, face up and face down"
+  >
+  <figcaption>
+    Figure: Overview of possible sensor orientations (vertical, face up and face down)
+  </figcaption>
+</div>
+
+
+<h3 id="lorawan">18. LoRaWAN Specific Features</h3>
+
+<h3 id="join">18.1 LoRaWAN Join Behavior</h3>
+
+<p>
+Before telemetry data can be sent via LoRaWAN, the device must establish a connection
+with the network. To do this, the device sends join requests until a join accept has
+been successfully received.
+</p>
+
+<p>
+As a compromise between energy consumption and a fast join, the transmission intervals
+of the join requests become longer and longer. In addition, the data rate is varied
+(initially high data rate or small spreading factor, then lower data rate or larger
+spreading factor).  
+The join behavior strictly adheres to the specifications and recommendations of the
+LoRa Alliance specification.
+</p>
+
+<div class="note-strip note-strip--green">
+<p>
+Sentinum sensors implement the specifications by means of so‑called join bursts,
+the distance between which increases.
+</p>
+</div>
+
+<p>
+A join burst consists of a maximum of 6 join requests with decreasing data rate (DR5-DR0) or increasing spreading factor (SF7-SF12). The intervals between the requests increase quadratically in order not to violate the Lora-Alliance specific duty cycle guidelines. The LoRa Alliance prescribes a decreasing duty cycle for join requests according to the following table Time duty cycle <1h 1% <11h 0.1%
+</p>
+
+<p>
+This means that in the first phase (&lt; 1 h) the same amount of transmission budget
+is available as in the second (&lt; 11 h), although only one tenth of the time is
+available.
+</p>
+
+<p>
+To make maximum use of the budget, the intervals between join bursts (each consisting
+of up to 6 join requests) are initially small and then become larger.
+</p>
+
+<p>
+Specifically, 2 bursts are carried out in phase 1. In phase 2, 2 further bursts are
+carried out, and from phase 3 onwards, 1 burst is carried out per day.
+</p>
+
+<p>
+The length of the bursts increases from approx. 10 minutes in phase 1, to approx.
+100 minutes in phase 2, to up to 16 hours in phase 3.
+</p>
+<h3 id="zertifizierung">19. Marking and Certification</h3>
+
+<div style="display: flex; gap: 32px; align-items: center; flex-wrap: wrap;">
+
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png"
+    alt="Supported radio technologies"
+    style="max-width: 720px; height: auto;"
+  >
+
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/CE_Trash_seals.png"
+    alt="CE marking and disposal symbols"
+    style="max-width: 320px; height: auto;"
+  >
+
+</div>
+
+<!-- FOOTER -->
+<div style="border-top:1px solid #d0d7de;margin-top:40px;padding-top:16px;font-size:.85rem;color:#6b7280;">
+</div>
+
+<!-- FOOTER (ENGLISH) -->
+<div class="footer-note">
+  <p>© Sentinum GmbH – All rights reserved.</p>
+  <p>All contents of this document, including text, tables and images, are protected by copyright and are the property of Sentinum GmbH.</p>
+  <p>All images are subject to the copyright of Sentinum GmbH unless otherwise stated.</p>
+  <p>Reproduction, distribution or use — even in part — is not permitted without explicit written authorization.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Specifications are subject to change. All information is provided without guarantee.
+  </p>
+</div>
+
+</div>
+</body>
+</html>
