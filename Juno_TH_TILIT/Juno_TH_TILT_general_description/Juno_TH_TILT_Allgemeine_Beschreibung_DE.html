@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>JUNO TH TILT – Allgemeine Beschreibung</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+  --blue-bg:#f7fbff;
+  --blue-border:#d6e4fa;
+  --blue-text:#1a3e8c;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+}
+
+/* Base */
+body{
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+}
+
+/* Headings */
+h1{
+  margin:48px 0 16px;
+  padding-bottom:12px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:42px;
+  font-weight:700;
+  border-bottom:2px solid var(--border);
+}
+
+h3{
+  margin:32px 0 12px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:120px;
+}
+
+p{margin:8px 0 12px}
+
+/* Tables */
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+  table-layout:fixed;
+}
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid #000;
+}
+
+/* TOC */
+.main-toc{
+  max-width:900px;
+  margin:24px auto 40px;
+  padding:16px 20px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+}
+.main-toc strong{display:block;margin-bottom:8px;}
+.main-toc ul{list-style:none;padding:0;margin:0;}
+.main-toc li{margin:.35rem 0;}
+.main-toc a{color:var(--blue-text);font-weight:600;text-decoration:none;}
+.main-toc a:hover{text-decoration:underline;}
+
+/* PDF */
+.pdf-container{
+  width:100%;
+  max-width:900px;
+  height:600px;
+  margin:24px auto 12px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  overflow:hidden;
+}
+.pdf-info{
+  max-width:900px;
+  margin:8px auto 32px;
+  padding:10px 14px;
+  background:#f8fbff;
+  border:1px solid #b6d4fe;
+  border-radius:6px;
+  text-align:center;
+}
+.pdf-info a{color:#2563eb;font-weight:600;text-decoration:underline;}
+
+.figure{
+  max-width:900px;
+  margin:24px auto;
+}
+.figure img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+
+/* Doc logos */
+.doc-logos{
+  margin:24px 0;
+  display:flex;
+  gap:20px;
+  align-items:center;
+}
+.doc-logos img{
+  height:42px;
+  width:auto;
+  display:block;
+}
+
+.logo-ce{
+  margin:16px 0;
+}
+.logo-ce img{
+  height:38px;
+  width:auto;
+  display:block;
+}
+
+/* Footer */
+.footer-note{
+  margin-top:40px;
+  padding-top:16px;
+  border-top:1px solid var(--border);
+  font-size:.82rem;
+  color:var(--text-muted);
+}
+.footer-note p{margin:0;}
+.footer-note p:last-child{padding-left:14px;font-style:italic;}
+</style>
+</head>
+
+<body>
+
+<!-- PDF VIEWER -->
+<div class="pdf-container">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/aeb76eb050024b353c6c3898a53072bbda12363f/Juno_TH_TILIT/Juno_TH_TILT_general_description/Juno_TH_TILT_allgemeine_Beschreibung_DE_1.0.1.pdf"
+    style="width:100%;height:100%;border:none;"
+    loading="lazy"
+    title="JUNO TH TILT Allgemeine Beschreibung PDF">
+  </iframe>
+</div>
+
+<div class="pdf-info">
+  📄 Sie können das PDF oben ansehen oder
+  <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/aeb76eb050024b353c6c3898a53072bbda12363f/Juno_TH_TILIT/Juno_TH_TILT_general_description/Juno_TH_TILT_allgemeine_Beschreibung_DE_1.0.1.pdf"
+     target="_blank" rel="noopener noreferrer">
+    hier herunterladen
+  </a>.
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<div class="main-toc">
+  <strong>Inhaltsverzeichnis</strong>
+  <ul>
+    <li><a href="#history">1. Versionshistorie</a></li>
+    <li><a href="#description">2. Allgemeine Beschreibung</a></li>
+    <li><a href="#features">3. Features</a></li>
+    <li><a href="#applications">4. Beispielanwendungen</a></li>
+    <li><a href="#versions">5. Versionen</a></li>
+  </ul>
+</div>
+
+<!-- VERSIONSHISTORIE -->
+<h3 id="history">1. Versionshistorie</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Version</th>
+      <th>Datum</th>
+      <th>Änderung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.0.0</td>
+      <td>18.02.2025</td>
+      <td>Erstellung</td>
+    </tr>
+    <tr>
+      <td>1.0.1</td>
+      <td>24.04.2026</td>
+      <td>
+        Formatierung<br>
+        Versionshistorie
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ALLGEMEINE BESCHREIBUNG -->
+<h3 id="description">2. Allgemeine Beschreibung</h3>
+
+<p>
+  Der Juno IP67 TH ist ein vielseitiger Temperatur und rel. Luftfeuchtigkeitssensor, der mioty®,
+  LoRaWAN® oder cellular Technologien wie z.B. NB‑IoT für eine zuverlässige und energieeffiziente
+  Datenübertragung nutzt. Durch seine robuste Bauweise und das IP67 Rating ist er optimal für den
+  Einsatz in anspruchsvollen Umgebungen geeignet und widersteht Staub, Wasser und hohen Drücken.
+</p>
+
+<!-- PRODUCT IMAGE -->
+<div class="figure">
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/64b1f9208cec0e59552a8ac361c09133eff4a2c5/Juno_TILT/Juno_TILT_allgemeine_Beschreibung/Pic/Juno_TILT_allgemeine_BeschreibungPic1.webp"
+    alt="JUNO TH TILT Produktansicht">
+</div>
+
+<!-- FEATURES -->
+<h3 id="features">3. Features</h3>
+
+<ul>
+  <li>LoRaWAN®, mioty® oder NB‑IoT Kommunikation</li>
+  <li>IP67, −25 °C bis 85 °C, IK07</li>
+  <li>Temperatur- und rel. Luftfeuchtigkeitssensor mit hoher Genauigkeit</li>
+  <li>Neigungs- und Klappenöffnungsdetektion</li>
+  <li>Fortgeschrittene Neigungsdetektion mit 1° Auflösung und Grenzwerte</li>
+  <li>Magnetschalter</li>
+  <li>Aktivierbar mit Magnet (kein Smartphone nötig) oder über NFC</li>
+  <li>Konfigurierbar über Downlinks oder NFC</li>
+  <li>Einstellbare Grenzwerte</li>
+  <li>Wechselbare AA Zellen (LiSOCl₂ vgl. Saft LS14500)</li>
+  <li>Akustisches Signal</li>
+</ul>
+
+<!-- BEISPIELANWENDUNGEN -->
+<h3 id="applications">4. Beispielanwendungen</h3>
+
+<ul>
+  <li>Temperatur und rel. Luftfeuchteüberwachung in der Industrie</li>
+  <li>Kühlkettenüberwachung</li>
+  <li>Temperaturüberwachung im Gebäude Management oder Smart City Anwendungen</li>
+  <li>Schaltschranküberwachung</li>
+  <li>Schachtdeckelüberwachung</li>
+  <li>Klappenöffnungsdetektion</li>
+</ul>
+
+<!-- VERSIONEN -->
+<h3 id="versions">5. Versionen</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Artikel Code</th>
+      <th>Features</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>S‑JUNO‑LOEU‑TH</strong></td>
+      <td>JUNO IP67 TH Sensor, Temperatur und rel. Luftfeuchtigkeit mit Neigungserkennung und Öffnungsdetektion LoRaWAN®</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO‑MIOTY‑TH</strong></td>
+      <td>JUNO IP67 TH Sensor, Temperatur und rel. Luftfeuchtigkeit mit Neigungserkennung und Öffnungsdetektion mioty®</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO‑NB‑TH</strong></td>
+      <td>JUNO IP67 TH Sensor, Temperatur und rel. Luftfeuchtigkeit mit Neigungserkennung und Öffnungsdetektion NB‑IoT</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO‑IX‑LOEU‑TH</strong></td>
+      <td>INDUSTRIAL JUNO IP67 TH Sensor, Temperatur und rel. Luftfeuchtigkeit mit Neigungserkennung und Öffnungsdetektion LoRaWAN®</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO‑IX‑MIOTY‑TH</strong></td>
+      <td>INDUSTRIAL JUNO IP67 TH Sensor, Temperatur und rel. Luftfeuchtigkeit mit Neigungserkennung und Öffnungsdetektion mioty®</td>
+    </tr>
+    <tr>
+      <td><strong>S‑JUNO‑IX‑NB‑TH</strong></td>
+      <td>INDUSTRIAL JUNO IP67 TH Sensor, Temperatur und rel. Luftfeuchtigkeit mit Neigungserkennung und Öffnungsdetektion NB‑IoT</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="doc-logos">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/logo/mioty_lora_nb-IOT_LTE.png"
+    alt="mioty / LoRa / NB‑IoT / LTE">
+</div>
+
+<div class="logo-ce">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/logo/CE_Trash_seals.png"
+    alt="CE- und WEEE-Kennzeichen"
+    style="height:38px;">
+</div>
+
+<!-- FOOTER -->
+<div class="footer-note">
+  <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bilder, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+  <p>Vervielfältigung, Verbreitung oder Nutzung – auch auszugsweise – ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px;font-style:italic;">
+    Technische Änderungen vorbehalten. Alle Angaben ohne Gewähr.
+  </p>
+</div>
+
+</body>
+</html>
