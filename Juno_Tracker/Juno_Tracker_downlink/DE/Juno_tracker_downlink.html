@@ -175,20 +175,20 @@ table.auto-layout td{
   <!-- PDF Viewer -->
   <div class="pdf-viewer">
     <iframe
-      src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/eb09c5baf1217881ab8073283f93a3a06caa36b2/Juno_Tracker/Juno_Tracker_downlink/DE/Juno_Cellular_Tracker_TH_TRACK_NFC_und_Downlinkbeschreibung_DE_1.0.1%201.pdf"
+      src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/9703d90036354abbf46fb8c93151dc213624deff/Juno_Tracker/Juno_Tracker_downlink/DE/Juno_Cellular_Tracker_TH_TRACK_NFC_und_Downlinkbeschreibung_DE_%C2%AD1.0.1.pdf"
       loading="lazy"
     ></iframe>
   </div>
 
   <!-- PDF Download -->
   <div class="pdf-download">
-    📄
+    📄 Sie können das Dokument oben ansehen oder 
     <a
-      href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/eb09c5baf1217881ab8073283f93a3a06caa36b2/Juno_Tracker/Juno_Tracker_downlink/DE/Juno_Cellular_Tracker_TH_TRACK_NFC_und_Downlinkbeschreibung_DE_1.0.1%201.pdf"
+      href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/9703d90036354abbf46fb8c93151dc213624deff/Juno_Tracker/Juno_Tracker_downlink/DE/Juno_Cellular_Tracker_TH_TRACK_NFC_und_Downlinkbeschreibung_DE_%C2%AD1.0.1.pdf"
       target="_blank"
       rel="noopener"
     >
-      PDF herunterladen
+     hier als PDF herunterladen
     </a>
   </div>
 
@@ -274,17 +274,31 @@ table.auto-layout td{
   </table>
 </section>
         
-        <section>
+<section>
   <p>
-    Tabellen für produktübergreifende Module finden Sie in der generischen
-    NFC‑ und Downlink‑Dokumentation.
+    Tabellen für produktübergreifende Module finden Sie in der
+    <a href="https://docs.sentinum.de/generische-nfc-und-downlink-dokumentation" target="_blank" rel="noopener">
+      generischen NFC‑ und Downlink‑Dokumentation
+    </a>.
   </p>
+
   <p>
-    Weitere Informationen zur Konfiguration der Sensor‑Kommunikation und der
-    Tracking‑Einstellungen finden Sie – je nach Version – in der jeweiligen
-    generischen LoRaWAN®‑ oder mioty®‑Dokumentation.
+    <strong>
+      Weitere Informationen zur Konfiguration der Sensor‑Kommunikation und der
+      Tracking‑Einstellungen finden Sie – je nach Version – in der jeweiligen
+      generischen
+      <a href="https://docs.sentinum.de/generische-lorawan" target="_blank" rel="noopener">
+        LoRaWAN®
+      </a>
+      oder
+      <a href="https://docs.sentinum.de/generische-mioty" target="_blank" rel="noopener">
+        mioty®
+      </a>
+      ‑Dokumentation.
+    </strong>
   </p>
 </section>
+
 
 
 <section id="valid-versions">
@@ -337,7 +351,7 @@ table.auto-layout td{
     </thead>
     <tbody>
       <tr>
-        <td>Messperiode</td>
+        <td><strong>Messperiode</strong></td>
         <td>0x00</td>
         <td>Gibt die Periode an, in der die Messwerte erfasst werden.</td>
         <td>period</td>
@@ -348,7 +362,7 @@ table.auto-layout td{
         <td>1111</td>
       </tr>
       <tr>
-        <td>Reguläres Sendeintervall</td>
+        <td><strong>Reguläres Sendeintervall</strong></td>
         <td>0x01</td>
         <td>Anzahl der bis zur Übertragung durchgeführten Messungen.</td>
         <td>every</td>
@@ -388,7 +402,7 @@ table.auto-layout td{
     <tbody>
 
       <tr>
-        <td>Alarm aktiv</td>
+        <td><strong>Alarm aktiv</strong></td>
         <td>0x00</td>
         <td>
           Gibt an, welche Alarme, ob für Temperatur oder rel. Luftfeuchtigkeit aktiviert sind:<br>
@@ -406,7 +420,7 @@ table.auto-layout td{
       </tr>
 
       <tr>
-        <td>Temperatur Delta</td>
+        <td><strong>Temperatur Delta</strong></td>
         <td>0x01</td>
         <td>
           Gibt an, um wie viel sich die Temperatur im Vergleich zur letzten Übertragung absolut ändern muss,
@@ -422,7 +436,7 @@ table.auto-layout td{
       </tr>
 
       <tr>
-        <td>Temperatur oberer Grenzwert</td>
+        <td><strong>Temperatur oberer Grenzwert</strong></td>
         <td>0x02</td>
         <td>Gibt den oberen absoluten Grenzwert an, bei dem ein Alarm ausgelöst wird.</td>
         <td>tht</td>
@@ -434,7 +448,7 @@ table.auto-layout td{
       </tr>
 
       <tr>
-        <td>Temperatur unterer Grenzwert</td>
+        <td><strong>Temperatur unterer Grenzwert</strong></td>
         <td>0x03</td>
         <td>Gibt den unteren absoluten Grenzwert an, bei dem ein Alarm ausgelöst wird.</td>
         <td>tlt</td>
@@ -446,7 +460,7 @@ table.auto-layout td{
       </tr>
 
       <tr>
-        <td>Rel.Luftfeuchtigkeit Delta</td>
+        <td><strong>Rel.Luftfeuchtigkeit Delta</strong></td>
         <td>0x04</td>
         <td>
           Gibt an, um wie viel sich die rel. Luftfeuchtigkeit im Vergleich zur letzten Übertragung absolut ändern muss,
@@ -461,7 +475,7 @@ table.auto-layout td{
       </tr>
 
       <tr>
-        <td>Rel. Luftfeuchte oberer Grenzwert</td>
+        <td><strong>Rel. Luftfeuchte oberer Grenzwert</strong></td>
         <td>0x05</td>
         <td>Gibt den oberen absoluten Grenzwert an, bei dem ein Alarm ausgelöst wird.</td>
         <td>hht</td>
@@ -473,7 +487,7 @@ table.auto-layout td{
       </tr>
 
       <tr>
-        <td>Rel. Luftfeuchte unterer Grenzwert</td>
+        <td><strong>Rel. Luftfeuchte unterer Grenzwert</strong></td>
         <td>0x06</td>
         <td>Gibt den unteren absoluten Grenzwert an, bei dem ein Alarm ausgelöst wird.</td>
         <td>hlt</td>
@@ -485,7 +499,7 @@ table.auto-layout td{
       </tr>
 
       <tr>
-        <td>Hysterese rel. Luftfeuchte</td>
+        <td><strong>Hysterese rel. Luftfeuchte</strong></td>
         <td>0x07</td>
         <td>
           Bestimmt die absolute Hysterese in °C bei Zustandswechseln. Wenn die Temperatur
@@ -501,7 +515,7 @@ table.auto-layout td{
       </tr>
 
       <tr>
-        <td>Hysterese Temperatur</td>
+        <td><strong>Hysterese Temperatur</strong></td>
         <td>0x08</td>
         <td>
           Bestimmt die absolute Hysterese in %RH bei Zustandswechseln. Wenn die rel.
@@ -541,7 +555,7 @@ table.auto-layout td{
     <tbody>
 
       <tr>
-        <td>Move Mode</td>
+        <td><strong>Move Mode</strong></td>
         <td>0x00</td>
         <td>
           Gibt an, welcher Modus aktiviert ist:<br>
@@ -564,7 +578,7 @@ table.auto-layout td{
       </tr>
 
       <tr>
-        <td>Move activity threshold</td>
+        <td><strong>Move activity threshold</strong></td>
         <td>0x01</td>
         <td>
           Beschreibt, ab welcher Beschleunigung eine Aktivität als Aktivität gezählt und
@@ -580,7 +594,7 @@ table.auto-layout td{
       </tr>
 
       <tr>
-        <td>Move ongoing timeE</td>
+        <td><strong>Move ongoing time</strong></td>
         <td>0x02</td>
         <td>
           Gibt die Zeit an, die zwischen zwei Übertragungen und Lokalisierungen vergeht,
@@ -595,7 +609,7 @@ table.auto-layout td{
       </tr>
 
       <tr>
-        <td>Move inactivity time</td>
+        <td><strong>Move inactivity time</strong></td>
         <td>0x03</td>
         <td>
           Beschreibt die Zeit zwischen dem Zeitpunkt, ab dem eine Aktivität endet und dem
@@ -610,7 +624,7 @@ table.auto-layout td{
       </tr>
 
       <tr>
-        <td>Move impact max</td>
+        <td><strong>Move impact max</strong></td>
         <td>0x04</td>
         <td>
           Anzahl der Schläge/Stöße. Wird diese Anzahl erreicht, ohne dass
