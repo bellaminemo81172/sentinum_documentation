@@ -1,0 +1,923 @@
+
+<meta charset="UTF-8">
+<title>JUNO TH TRACKER – Technical Data Sheet</title>
+
+<style>
+/* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --black:#000000;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+
+  --blue-bg:#f0f8ff;
+  --blue-border:#a0c4ff;
+  --blue-text:#1a3e8c;
+
+  --toc-bg:#f7fbff;
+  --toc-border:#d6e4fa;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+  background:#ffffff;
+}
+
+.container{ width:100%; }
+
+/* ---------- Headings ---------- */
+
+h1{
+  margin:48px 0 16px;
+  padding-bottom:12px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:42px;
+  font-weight:700;
+  line-height:1.25;
+  color:#000;
+  border-bottom:2px solid var(--border);
+}
+
+h2{
+  margin:14px 0 36px;
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:24px;
+  font-weight:500;
+  line-height:1.5;
+  color:var(--text-muted);
+}
+
+h3{
+  margin:24px 0 8px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  color:#000;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:100px;
+}
+
+/* ---------- PDF ---------- */
+
+.pdf-viewer{
+  max-width:900px;
+  height:600px;
+  margin:0 auto 20px;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
+.pdf-viewer iframe{ width:100%; height:100%; border:none; }
+
+.pdf-download{
+  max-width:900px;
+  margin:0 auto 36px;
+  padding:14px 18px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+  text-align:center;
+}
+
+.pdf-download a{
+  color:var(--blue-text);
+  font-weight:600;
+}
+
+/* ---------- TOC ---------- */
+
+.main-toc{
+  max-width:900px;
+  margin:0 auto 40px;
+  padding:16px 20px;
+  background:var(--toc-bg);
+  border:1px solid var(--toc-border);
+  border-radius:6px;
+}
+
+.main-toc ul{ list-style:none; padding:0; margin:0; }
+.main-toc li{ margin:.3rem 0; }
+.main-toc a{
+  color:var(--blue-text);
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* ---------- Tables ---------- */
+
+.table-wrap{ margin:8px 0 24px; }
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+  table-layout:fixed;
+}
+
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid var(--black);
+}
+
+table th:nth-child(1),
+table td:nth-child(1){ width:30%; }
+
+table th:nth-child(2),
+table td:nth-child(2){ width:50%; }
+
+table th:nth-child(3),
+table td:nth-child(3){ width:20%; }
+
+/* ---------- Figures ---------- */
+
+.figure{ margin:32px auto; text-align:center; }
+.figure img{ max-width:100%; }
+.figure figcaption{
+  margin-top:8px;
+  font-size:.85rem;
+  color:var(--text-muted);
+  font-style:italic;
+}
+
+/* ---------- Tracking overview table ---------- */
+.tracking-table th,
+.tracking-table td{ text-align:left; }
+
+.tracking-table th:nth-child(n+3),
+.tracking-table td:nth-child(n+3){ text-align:center; }
+
+.tracking-table .check{ color:#16a34a; font-size:1.1rem; font-weight:700; }
+.tracking-table .cross{ color:#dc2626; font-size:1.1rem; font-weight:700; }
+
+/* ---------- CE / WEEE LOGO ---------- */
+.logo-ce{ margin:16px 0; }
+.logo-ce img{ height:38px; width:auto; display:block; }
+
+/* ---------- RADIO TECHNOLOGIES LOGO ---------- */
+.logo-radio-tech{ margin:16px 0; }
+.logo-radio-tech img{ height:46px; width:auto; display:block; }
+
+/* ---------- DOC LOGOS ---------- */
+.doc-logos{
+  margin:24px 0;
+  display:flex;
+  gap:20px;
+  align-items:center;
+}
+.doc-logos img{ height:42px; width:auto; display:block; }
+
+/* ---------- Footer ---------- */
+.footer-note{
+  margin-top:40px;
+  padding-top:16px;
+  border-top:1px solid var(--border);
+  font-size:.82rem;
+  color:var(--text-muted);
+}
+.footer-note p{ margin:0; }
+.footer-note p:last-child{
+  padding-left:14px;
+  font-style:italic;
+}
+</style>
+
+
+<body>
+
+
+
+<!-- ================= PDF ================= -->
+<div class="pdf-viewer">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/1cd215032c62e5516f05116df340bcb4035de0eb/Juno_Tracker/Juno_Tracker_Technical_datasheet/Juno_Tracker_TH_Technical_Datasheet_EN_1.0.1.pdf"
+    loading="lazy">
+  </iframe>
+</div>
+
+<div class="pdf-download">
+  📄 You can view the PDF above or
+  <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/1cd215032c62e5516f05116df340bcb4035de0eb/Juno_Tracker/Juno_Tracker_Technical_datasheet/Juno_Tracker_TH_Technical_Datasheet_EN_1.0.1.pdf"
+     target="_blank">
+    download it here
+  </a>.
+</div>
+
+<!-- ================= TOC ================= -->
+<nav class="main-toc">
+  <h4>Table of Contents</h4>
+  <ul>
+    <li><a href="#version-history">1. Version History</a></li>
+    <li><a href="#overview">2. Overview</a></li>
+    <li><a href="#versions">3. Versions</a></li>
+    <li><a href="#general">4. General Properties</a></li>
+    <li><a href="#rf">5. Connectivity and RF Specification</a></li>
+    <li><a href="#tracking-overview">6. Overview of Tracking Features</a></li>
+    <li><a href="#localization-lorawan">7. Localization – LoRaWAN Sensors</a></li>
+    <li><a href="#localization-cellular">8. Localization – Cellular Sensors</a></li>
+    <li><a href="#sensor-temp">9. Sensor Specification – Temperature</a></li>
+    <li><a href="#sensor-humidity">10. Sensor Specification – Relative Humidity</a></li>
+    <li><a href="#inclination">11. Sensor Specification – Inclination</a></li>
+    <li><a href="#accel-temp">12. Sensor Specification – Temperature of Acceleration Sensor</a></li>
+    <li><a href="#drawings">13. Technical Drawing</a></li>
+  </ul>
+</nav>
+
+
+<!-- ================= CONTENT ================= -->
+
+<h3 id="version-history">1. Version History</h3>
+
+<div class="table-wrap">
+  <table>
+    <colgroup>
+      <col style="width:33.33%">
+      <col style="width:33.33%">
+      <col style="width:33.33%">
+    </colgroup>
+    <tr>
+      <th>Version</th>
+      <th>Date</th>
+      <th>Revision</th>
+    </tr>
+    <tr>
+      <td>1.0.0</td>
+      <td>18.02.2025</td>
+      <td>Creation</td>
+    </tr>
+    <tr>
+      <td>1.0.1</td>
+      <td>24.04.2026</td>
+      <td>
+        <ul style="margin:0;padding-left:18px;">
+          <li>Formatting, version history</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<h3 id="overview">2. Overview</h3>
+
+<p>
+  The Juno Tracker is a versatile tracker that uses mioty®, LoRaWAN® or cellular technologies
+  such as NB-IoT and LTE-CAT-M1 for reliable and energy-efficient data transmission. The tracker
+  is also available in different versions, e.g. for cold chain monitoring. Thanks to its robust
+  design and IP69k/IP67 rating, it is ideal for use in demanding environments and can withstand
+  dust, water and high pressures.
+</p>
+
+<figure class="figure">
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/ea9f8aa025058fddc8c8482b6a910a3814b88e37/Juno_TILT/Juno_TILT_allgemeine_Beschreibung/Pic/Juno_TILT_allgemeine_BeschreibungPic1.webp"
+    alt="Juno Tracker"
+  >
+  <figcaption>Juno Tracker</figcaption>
+</figure>
+
+
+<h3 id="versions">3. Versions</h3>
+
+<div class="table-wrap">
+  <table>
+    <colgroup>
+      <col style="width:35%">
+      <col style="width:65%">
+    </colgroup>
+    <tr>
+      <th>Article Code</th>
+      <th>Features</th>
+    </tr>
+    <tr>
+      <td>S-JUNO-LOEU-TRACK</td>
+      <td>JUNO Tracker with tilt and activity detection and opening detection LoRaWAN®, GNSS Scan, WIFI SSID Scan</td>
+    </tr>
+    <tr>
+      <td>S-JUNO-MIOTY-TRACK</td>
+      <td>JUNO Tracker with tilt and activity detection and opening detection mioty®, GNSS Scan, WIFI SSID Scan</td>
+    </tr>
+    <tr>
+      <td>S-JUNO-iX-LOEU-TRACK</td>
+      <td>INDUSTRIAL JUNO Tracker with tilt and activity detection and opening detection LoRaWAN®, GNSS Scan, WIFI SSID Scan</td>
+    </tr>
+    <tr>
+      <td>S-JUNO-iX-MIOTY-TRACK</td>
+      <td>INDUSTRIAL JUNO Tracker with tilt and activity detection and opening detection mioty®, GNSS Scan, WIFI SSID Scan</td>
+    </tr>
+    <tr>
+      <td>S-JUNO-LOEU-TH-TRACK</td>
+      <td>JUNO IP67 TH Tracker, temperature and relative humidity with tilt and activity detection and LoRaWAN® opening detection</td>
+    </tr>
+    <tr>
+      <td>S-JUNO-MIOTY-TH-TRACK</td>
+      <td>JUNO IP67 TH Tracker, temperature and relative humidity with tilt and activity detection and opening detection mioty®</td>
+    </tr>
+    <tr>
+      <td>S-JUNO-IX-LOEU-TH-TRACK</td>
+      <td>INDUSTRIAL JUNO IP67 TH Tracker, temperature and relative humidity with tilt and activity detection and LoRaWAN® opening detection</td>
+    </tr>
+    <tr>
+      <td>S-JUNO-IX-MIOTY-TH-TRACK</td>
+      <td>INDUSTRIAL JUNO IP67 TH Tracker, temperature and relative humidity with tilt and activity detection and opening detection mioty®</td>
+    </tr>
+    <tr>
+      <td>S-JUNO-NBM1-TRACK-2</td>
+      <td>JUNO Tracker with tilt and activity detection and opening detection NB-IoT, LTE-CAT-M1, GNSS, WIFI SSID Scan, with SIM card slot, two batteries</td>
+    </tr>
+    <tr>
+      <td>S-JUNO-NBM1-TRACK-3</td>
+      <td>JUNO Tracker with tilt and activity detection and opening detection NB-IoT, LTE-CAT-M1, GNSS, WIFI SSID Scan, with on board SIM, three batteries</td>
+    </tr>
+    <tr>
+      <td>S-JUNO-IX-NBM1-TRACK-2</td>
+      <td>INDUSTRIAL JUNO tracker with tilt and activity detection and opening detection NB-IoT, LTE-CAT-M1, GNSS, WIFI SSID scan, with SIM card slot, two batteries</td>
+    </tr>
+    <tr>
+      <td>S-JUNO-IX-NBM1-TRACK-3</td>
+      <td>INDUSTRIAL JUNO Tracker with tilt and activity detection and opening detection NB-IoT, LTE-CAT-M1, GNSS, WIFI SSID Scan, with on board SIM, three batteries</td>
+    </tr>
+    <tr>
+      <td>S-JUNO-NBM1-TH-TRACK-2</td>
+      <td>JUNO IP67 TH Tracker, temperature and relative humidity tracker with tilt and activity detection and opening detection NB-IoT, LTE-CAT-M1, GNSS, WIFI SSID Scan, with SIM card slot, two batteries</td>
+    </tr>
+    <tr>
+      <td>S-JUNO-NBM1-TH-TRACK-3</td>
+      <td>JUNO IP67 TH Tracker, temperature and relative humidity tracker with tilt and activity detection and opening detection NB-IoT, LTE-CAT-M1, GNSS, WIFI SSID Scan, with on board SIM, three batteries</td>
+    </tr>
+    <tr>
+      <td>S-JUNO-IX-NBM1-TH-TRACK-2</td>
+      <td>INDUSTRIAL JUNO IP67 TH tracker, temperature and relative humidity tracker with tilt and activity detection and opening detection NB-IoT, LTE-CAT-M1, GNSS, WIFI SSID scan, with SIM card slot, two batteries</td>
+    </tr>
+    <tr>
+      <td>S-JUNO-IX-NBM1-TH-TRACK-3</td>
+      <td>INDUSTRIAL JUNO IP67 TH Tracker, temperature and relative humidity with tilt and activity detection and opening detection NB-IoT, LTE-CAT-M1, GNSS, WIFI SSID Scan, with on board SIM, three batteries</td>
+    </tr>
+  </table>
+</div>
+
+<h3 id="general">4. General Properties</h3>
+
+<div class="table-wrap">
+  <table>
+    <tr>
+      <th>Feature</th>
+      <th>Value</th>
+      <th>Unit</th>
+    </tr>
+    <tr>
+      <td>Dimensions (L × W × H)</td>
+      <td>86 × 86 × 25</td>
+      <td>mm</td>
+    </tr>
+    <tr>
+      <td>Weight</td>
+      <td>&lt; 200</td>
+      <td>g</td>
+    </tr>
+    <tr>
+      <td>Operating temperature</td>
+      <td>-25 to +75 (extended temperature range on request. Temperature range is limited by the maximum operating temperature of the primary cells)</td>
+      <td>°C</td>
+    </tr>
+    <tr>
+      <td>Maximum operating temperature (device)</td>
+      <td>85</td>
+      <td>°C</td>
+    </tr>
+    <tr>
+      <td>Storage temperature (recommended)</td>
+      <td>15 to +30</td>
+      <td>°C</td>
+    </tr>
+    <tr>
+      <td>Relative humidity during operation</td>
+      <td>5 to 99</td>
+      <td>%RH</td>
+    </tr>
+    <tr>
+      <td>IP rating</td>
+      <td>
+        <ul style="margin:0;padding-left:18px;">
+          <li>IP67/IP65 for -TH variants</li>
+          <li>IP69k for non-TH variants</li>
+        </ul>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>IK rating</td>
+      <td>TBD</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Sensors</td>
+      <td>Temperature, relative humidity, acceleration sensor</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Traffic light function</td>
+      <td>No</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Audible alarm function</td>
+      <td>Yes, buzzer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Provisioning</td>
+      <td>NFC</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Material</td>
+      <td>PBT GF20 + ASA</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NFC antenna</td>
+      <td>Integrated</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>RF antenna</td>
+      <td>Integrated</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Accelerometer</td>
+      <td>Yes</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Batteries</td>
+      <td>Primary cell, replaceable, AA</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Primary cell type</td>
+      <td>
+        LoRaWAN®, mioty®:<br>
+        • 2 × 3.6 V LiSOCl₂ (recommended: SAFT LS14500)<br><br>
+        Cellular:<br>
+        • 2 × 3 V LiMnO₂ spiral AA cell<br>
+        • 2 × 3.6 V LiSOCl₂ spiral AA cell
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Housing color</td>
+      <td>
+        S-JUNO-XXXX: black<br>
+        S-JUNO-IX-XXXX: silk gray
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Assembly and installation</td>
+      <td>
+        <ul style="margin:0;padding-left:18px;">
+          <li>Adhesive pad</li>
+          <li>Magnets</li>
+          <li>Screws</li>
+          <li>Gluing</li>
+        </ul>
+      </td>
+      <td></td>
+    </tr>
+  </table>
+</div>
+
+<h3 id="rf">5. Connectivity and RF Specification</h3>
+
+<div class="table-wrap">
+  <table>
+    <tr>
+      <th>Characteristic</th>
+      <th>Value</th>
+      <th>Unit</th>
+    </tr>
+    <tr>
+      <td>RF standards</td>
+      <td></td>
+      <td>MHz</td>
+    </tr>
+    <tr>
+      <td>Frequency LoRaWAN® / mioty® (EU)</td>
+      <td>868</td>
+      <td>MHz</td>
+    </tr>
+    <tr>
+      <td>Mobile radio frequency</td>
+      <td>Band 8, 20 (900 MHz, 800 MHz)</td>
+      <td>dBm</td>
+    </tr>
+    <tr>
+      <td>Transmission power LoRaWAN® / mioty® (EU)</td>
+      <td>14</td>
+      <td>dBm</td>
+    </tr>
+    <tr>
+      <td>Transmission power NB-IoT</td>
+      <td>23</td>
+      <td>dBm</td>
+    </tr>
+    <tr>
+      <td>LoRa® MAC layer version</td>
+      <td>1.0.4</td>
+      <td></td>
+    </tr>
+  </table>
+</div>
+
+<h3 id="tracking-overview">6. Overview of Tracking Features</h3>
+
+<div class="table-wrap">
+  <table class="tracking-table">
+    <colgroup>
+      <col style="width:42%">
+      <col style="width:18%">
+      <col style="width:13%">
+      <col style="width:13%">
+      <col style="width:14%">
+    </colgroup>
+    <tr>
+      <th>Item Number</th>
+      <th>Radio Standard</th>
+      <th>2.4 GHz Scan</th>
+      <th>5 GHz Scan</th>
+      <th>Max. MAC Addresses</th>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-LOEU-TRACK</td>
+      <td>LoRaWAN®</td>
+      <td><span class="check">✔</span></td>
+      <td><span class="cross">✗</span></td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-LOEU-TH-TRACK</td>
+      <td>LoRaWAN®</td>
+      <td><span class="check">✔</span></td>
+      <td><span class="cross">✗</span></td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-NBM1-TRACK-2</td>
+      <td>Cellular</td>
+      <td><span class="check">✔</span></td>
+      <td><span class="check">✔</span></td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-NBM1-TRACK-3</td>
+      <td>Cellular</td>
+      <td><span class="check">✔</span></td>
+      <td><span class="check">✔</span></td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-NBM1-TH-TRACK-2</td>
+      <td>Cellular</td>
+      <td><span class="check">✔</span></td>
+      <td><span class="check">✔</span></td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-NBM1-TH-TRACK-3</td>
+      <td>Cellular</td>
+      <td><span class="check">✔</span></td>
+      <td><span class="check">✔</span></td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-MIOTY-TRACK</td>
+      <td>mioty®</td>
+      <td><span class="check">✔</span></td>
+      <td><span class="check">✔</span></td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>S-JUNO(-iX)-MIOTY-TH-TRACK</td>
+      <td>mioty®</td>
+      <td><span class="check">✔</span></td>
+      <td><span class="check">✔</span></td>
+      <td>20</td>
+    </tr>
+  </table>
+</div>
+
+<h3 id="localization-lorawan">7. Localization – LoRaWAN Sensors</h3>
+
+<div class="table-wrap">
+  <table>
+    <tr>
+      <th>Characteristic</th>
+      <th>Value</th>
+      <th>Unit</th>
+    </tr>
+    <tr>
+      <td>WIFI SSID Scan</td>
+      <td>Up to 6 MAC addresses on port 199</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>WIFI SSID Scan frequency</td>
+      <td>2.4</td>
+      <td>GHz</td>
+    </tr>
+    <tr>
+      <td>WIFI SSID scan accuracy</td>
+      <td>6 to 50</td>
+      <td>m</td>
+    </tr>
+    <tr>
+      <td>GNSS</td>
+      <td>GNSS scan with GPS and BeiDou</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>GNSS accuracy</td>
+      <td>10 to 100</td>
+      <td>m</td>
+    </tr>
+    <tr>
+      <td>Antenna</td>
+      <td>Integrated</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Chipset</td>
+      <td>LR1110</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Feature for on-prem indoor tracking</td>
+      <td>Customization by configuring that up to 5 MAC addresses and RSSI values are transmitted in the standard uplink payload</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Tracking in the LoRaWAN</td>
+      <td>Network-dependent</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Tracking in motion</td>
+      <td>Yes</td>
+      <td></td>
+    </tr>
+  </table>
+</div>
+
+<h3 id="localization-cellular">8. Localization – Cellular Sensors</h3>
+
+<div class="table-wrap">
+  <table>
+    <tr>
+      <th>Characteristic</th>
+      <th>Value</th>
+      <th>Unit</th>
+    </tr>
+    <tr>
+      <td>WIFI SSID Scan</td>
+      <td>Up to 20 MAC addresses</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>WIFI SSID Scan frequency</td>
+      <td>2.4 and 5</td>
+      <td>GHz</td>
+    </tr>
+    <tr>
+      <td>WIFI SSID scan accuracy</td>
+      <td>2 to 50</td>
+      <td>m</td>
+    </tr>
+    <tr>
+      <td>GNSS</td>
+      <td>GPS, Galileo, GLONASS, BeiDou</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>GNSS accuracy</td>
+      <td>5 to 100</td>
+      <td>m</td>
+    </tr>
+    <tr>
+      <td>Antenna</td>
+      <td>Integrated</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Cell Locate</td>
+      <td>Supported</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Tracking in motion</td>
+      <td>Yes</td>
+      <td></td>
+    </tr>
+  </table>
+</div>
+
+<h3 id="sensor-temp">9. Sensor Specification – Temperature</h3>
+
+<div class="table-wrap">
+  <table>
+    <tr>
+      <th>Characteristic</th>
+      <th>Value</th>
+      <th>Unit</th>
+    </tr>
+    <tr>
+      <td>Measuring range</td>
+      <td>-40 to +125</td>
+      <td>°C</td>
+    </tr>
+    <tr>
+      <td>Drift (long-term)</td>
+      <td>&lt; 0.03</td>
+      <td>°C/year</td>
+    </tr>
+    <tr>
+      <td>Accuracy</td>
+      <td>±0.2</td>
+      <td>°C</td>
+    </tr>
+    <tr>
+      <td>Resolution</td>
+      <td>0.1</td>
+      <td>°C</td>
+    </tr>
+    <tr>
+      <td>Repeatability</td>
+      <td>0.2</td>
+      <td>°C</td>
+    </tr>
+  </table>
+</div>
+
+<figure class="figure">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/9a784d6cda6d42fc9d0422bcc6f8495fa084c920/Juno_BSX/Juno_BSX_Technical_datasheet/relative_humidity.png"
+    alt="HT_DS_Datasheet_SHT4x_5.pdf"
+  >
+  <figcaption>HT_DS_Datasheet_SHT4x_5.pdf</figcaption>
+</figure>
+
+<p><em>More accurate temperature sensors available on request.</em></p>
+
+<h3 id="sensor-humidity">10. Sensor Specification – Relative Humidity</h3>
+
+<div class="table-wrap">
+  <table>
+    <tr>
+      <th>Characteristic</th>
+      <th>Value</th>
+      <th>Unit</th>
+    </tr>
+    <tr>
+      <td>Measuring range</td>
+      <td>0 to 100</td>
+      <td>%RH</td>
+    </tr>
+    <tr>
+      <td>Drift (long-term)</td>
+      <td>&lt; 0.25</td>
+      <td>%RH/year</td>
+    </tr>
+    <tr>
+      <td>Accuracy</td>
+      <td>±1.8</td>
+      <td>%RH</td>
+    </tr>
+    <tr>
+      <td>Resolution</td>
+      <td>1</td>
+      <td>%RH</td>
+    </tr>
+    <tr>
+      <td>Repeatability</td>
+      <td>0.25</td>
+      <td>%RH</td>
+    </tr>
+  </table>
+</div>
+
+<figure class="figure">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/1500f4bf878457d391662a4b8304b18e340467cc/Juno_BSX/Juno_BSX_Technical_datasheet/td%20pic%202.png"
+    alt="Relative humidity sensor characteristics"
+  >
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/1500f4bf878457d391662a4b8304b18e340467cc/Juno_BSX/Juno_BSX_Technical_datasheet/td%20pic%203.png"
+    alt="Relative humidity sensor performance"
+  >
+  <figcaption>HT_DS_Datasheet_SHT4x_5.pdf</figcaption>
+</figure>
+
+<h3 id="inclination">11. Sensor Specification – Inclination</h3>
+
+<div class="table-wrap">
+  <table>
+    <tr>
+      <th>Characteristic</th>
+      <th>Value</th>
+      <th>Unit</th>
+    </tr>
+    <tr>
+      <td>Measuring range</td>
+      <td>0 to 360</td>
+      <td>°</td>
+    </tr>
+    <tr>
+      <td>Accuracy</td>
+      <td>±2</td>
+      <td>°</td>
+    </tr>
+    <tr>
+      <td>Triggering in low power mode for opening detection</td>
+      <td>±60</td>
+      <td>°</td>
+    </tr>
+  </table>
+</div>
+
+<h3 id="accel-temp">12. Sensor Specification – Temperature of Acceleration Sensor</h3>
+
+<div class="table-wrap">
+  <table>
+    <tr>
+      <th>Characteristic</th>
+      <th>Value</th>
+      <th>Unit</th>
+    </tr>
+    <tr>
+      <td>Measuring range</td>
+      <td>-40 to +85</td>
+      <td>°C</td>
+    </tr>
+    <tr>
+      <td>Accuracy</td>
+      <td>±0.8</td>
+      <td>°C</td>
+    </tr>
+  </table>
+</div>
+
+<h3 id="drawings">13. Technical Drawing</h3>
+
+<figure class="figure">
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/aedccdd5f1a36c0cc446d3a3078dc665745e256e/Juno_TILT/Juno_ID_TILT_Technical_datasheet/technical_drawing.png"
+    alt="Juno Tracker – Technical Drawing"
+  >
+  <figcaption>Juno Tracker – Technical Drawing</figcaption>
+</figure>
+
+<div class="doc-logos">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/logo/mioty_lora_nb-IOT_LTE.png"
+    alt="mioty / LoRa / NB‑IoT / LTE">
+</div>
+
+<!-- CE / WEEE LOGO -->
+<div class="logo-ce">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/logo/CE_Trash_seals.png"
+    alt="CE and WEEE compliance marks"
+    style="height:38px;">
+</div>
+
+<!-- DISCLAIMER -->
+<div class="footer-note">
+  <p>© Sentinum GmbH – All rights reserved.</p>
+  <p>All contents of this document, including text, tables and images, are protected by copyright and are the property of Sentinum GmbH.</p>
+  <p>All images are subject to the copyright of Sentinum GmbH unless otherwise stated.</p>
+  <p>Reproduction, distribution or use — even in part — is not permitted without explicit written permission.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Specifications subject to change. All information provided without warranty.
+  </p>
+</div>
+
+</body>
