@@ -167,85 +167,76 @@ table.auto-layout td{
 
 </style>
 </head>
-<body>
-  <main>
 
-  <main>
+<!-- PDF Viewer -->
+<div class="pdf-viewer">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/9703d90036354abbf46fb8c93151dc213624deff/Juno_Tracker/Juno_Tracker_downlink/EN/Juno_Cellular_Tracker_TH_TRACK_NFC_and_Downlink_Description_EN.1.0.1.pdf"
+    loading="lazy"
+  ></iframe>
+</div>
 
-  <!-- PDF Viewer -->
-  <div class="pdf-viewer">
-    <iframe
-      src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/9703d90036354abbf46fb8c93151dc213624deff/Juno_Tracker/Juno_Tracker_downlink/DE/Juno_Cellular_Tracker_TH_TRACK_NFC_und_Downlinkbeschreibung_DE_%C2%AD1.0.1.pdf"
-      loading="lazy"
-    ></iframe>
-  </div>
-
-  <!-- PDF Download -->
-  <div class="pdf-download">
-    📄 Sie können das Dokument oben ansehen oder 
-    <a
-      href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/9703d90036354abbf46fb8c93151dc213624deff/Juno_Tracker/Juno_Tracker_downlink/DE/Juno_Cellular_Tracker_TH_TRACK_NFC_und_Downlinkbeschreibung_DE_%C2%AD1.0.1.pdf"
-      target="_blank"
-      rel="noopener"
-    >
-     hier als PDF herunterladen
-    </a>
-  </div>
-
-</main>
-</main>
-
+<!-- PDF Download -->
+<div class="pdf-download">
+  📄 You can view the document above or
+  <a
+    href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/9703d90036354abbf46fb8c93151dc213624deff/Juno_Tracker/Juno_Tracker_downlink/EN/Juno_Cellular_Tracker_TH_TRACK_NFC_and_Downlink_Description_EN.1.0.1.pdf"
+    target="_blank"
+    rel="noopener"
+  >
+    download the PDF here
+  </a>
+</div>
 
 <section class="main-toc">
-  <strong>Inhaltszusammenfassung</strong>
+  <strong>Contents</strong>
   <ul>
-    <li><a href="#versionshistorie">1. Versionshistorie</a></li>
-    <li><a href="#module-overview">2. Modulübersicht</a></li>
-    <li><a href="#valid-versions">3. Gültige Geräteversionen</a></li>
-    <li><a href="#timings">4. JUNO – Gruppe Timings (0x00)</a></li>
-    <li><a href="#alarms">5. JUNO – Gruppe Alarm‑Einstellungen (0x01)</a></li>
-    <li><a href="#tracking-activity">6. JUNO – Gruppe Tracking on Activity (0x04)</a></li>
+    <li><a href="#versionshistorie">1. Version History</a></li>
+    <li><a href="#module-overview">2. Module Overview</a></li>
+    <li><a href="#valid-versions">3. Instructions Valid for Versions</a></li>
+    <li><a href="#timings">4. JUNO – Group Timings (0x00)</a></li>
+    <li><a href="#alarms">5. JUNO – Group Alarm Settings (0x01)</a></li>
+    <li><a href="#tracking-activity">6. JUNO – Group Tracking on Activity Settings (0x04)</a></li>
   </ul>
 </section>
 
-        
-        <section id="versionshistorie">
-  <h3>1. Versionshistorie</h3>
+<section id="versionshistorie">
+  <h3>1. Version History</h3>
 
   <table class="auto-layout">
     <thead>
       <tr>
         <th>Version</th>
-        <th>Datum</th>
-        <th>Änderung</th>
+        <th>Date</th>
+        <th>Revision</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>1.0.0</td>
         <td>18.02.2025</td>
-        <td>Erstellung</td>
+        <td>Creation</td>
       </tr>
       <tr>
         <td>1.0.1</td>
         <td>24.04.2026</td>
-        <td>Formatierung, Versionshistorie</td>
+        <td>Formatting, version history</td>
       </tr>
     </tbody>
   </table>
 </section>
 
 <section id="module-overview">
-  <h3>2. Modulübersicht</h3>
+  <h3>2. Module Overview</h3>
 
   <table class="auto-layout">
     <thead>
       <tr>
-        <th>Modul</th>
-        <th>Modulschlüssel</th>
-        <th>Gruppe</th>
-        <th>Gruppen ID</th>
-        <th>Beschreibung</th>
+        <th>Module</th>
+        <th>Module key</th>
+        <th>Group</th>
+        <th>Group ID</th>
+        <th>Description</th>
       </tr>
     </thead>
     <tbody>
@@ -254,106 +245,102 @@ table.auto-layout td{
         <td>0x1XXX</td>
         <td>Timings</td>
         <td>0x00</td>
-        <td>Definiert Parameter für Messungen und Übertragungsverhalten</td>
+        <td>Defines parameters for measurements and transmission behavior</td>
       </tr>
       <tr>
         <td>Juno</td>
         <td>0x1XXX</td>
-        <td>Alarme und Grenzwerte</td>
+        <td>Alarms and limit values</td>
         <td>0x01</td>
-        <td>Definiert Alarme und Grenzwerte wie z. B. obere und untere Temperaturgrenze</td>
+        <td>Defines alarms and limit values, e.g. upper and lower temperature limits</td>
       </tr>
       <tr>
         <td>Juno</td>
         <td>0x1XXX</td>
         <td>Tracking on Activity</td>
         <td>0x04</td>
-        <td>Definiert Messschwellen und Einstellungen für das Tracking‑on‑Activity‑Feature</td>
+        <td>Defines measurement thresholds for triggering the Tracking on Activity feature and other tracking settings</td>
       </tr>
     </tbody>
   </table>
 </section>
-        
+
 <section>
-  <p>
-    Tabellen für produktübergreifende Module finden Sie in der
-    <a href="https://docs.sentinum.de/generische-nfc-und-downlink-dokumentation" target="_blank" rel="noopener">
-      generischen NFC‑ und Downlink‑Dokumentation
-    </a>.
-  </p>
+ <p>
+  Tables for cross-product modules can be found in the
+  <a href="https://docs.sentinum.de/generische-nfc-und-downlink-dokumentation" target="_blank" rel="noopener">
+    Generic NFC and Downlink documentation
+  </a>.
+</p>
 
-  <p>
-    <strong>
-      Weitere Informationen zur Konfiguration der Sensor‑Kommunikation und der
-      Tracking‑Einstellungen finden Sie – je nach Version – in der jeweiligen
-      generischen
-      <a href="https://docs.sentinum.de/generische-lorawan" target="_blank" rel="noopener">
-        LoRaWAN®
-      </a>
-      oder
-      <a href="https://docs.sentinum.de/generische-mioty" target="_blank" rel="noopener">
-        mioty®
-      </a>
-      ‑Dokumentation.
-    </strong>
-  </p>
+<p>
+  <strong>
+    Further information on the configuration of sensor communication and tracking settings
+    can be found in the respective generic
+    <a href="https://docs.sentinum.de/generische-lorawan" target="_blank" rel="noopener">
+      LoRaWAN®
+    </a>
+    or
+    <a href="https://docs.sentinum.de/generische-mioty" target="_blank" rel="noopener">
+      mioty®
+    </a>
+    documentation, depending on the version.
+  </strong>
+</p>
 </section>
-
-
-
 <section id="valid-versions">
-  <h3>3. Anleitung gültig für Versionen</h3>
+  <h3>3. Instructions valid for versions</h3>
 
   <table class="auto-layout">
     <thead>
       <tr>
-        <th>Artikel Code</th>
+        <th>Article Code</th>
         <th>Features</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><strong>S-JUNO-NBM1-TH-TRACK-X</strong></td>
-        <td>JUNO TH Tracker, Temperatur und rel. Luftfeuchtigkeit mit Tracking‑Funktion und Tracking on Activity Cellular</td>
+        <td>JUNO TH Tracker, temperature and relative humidity with tracking function and Tracking on Activity Cellular</td>
       </tr>
       <tr>
         <td><strong>S-JUNO-IX-NBM1-TH-TRACK-X</strong></td>
-        <td>INDUSTRIAL JUNO TH Tracker, Temperatur und rel. Luftfeuchtigkeit mit Tracking‑Funktion und Tracking on Activity Cellular</td>
+        <td>INDUSTRIAL JUNO TH Tracker, temperature and relative humidity with tracking function and Tracking on Activity Cellular</td>
       </tr>
       <tr>
         <td><strong>S-JUNO-NBM1-TRACK-X</strong></td>
-        <td>JUNO Tracker mit Tracking on Activity Cellular</td>
+        <td>JUNO Tracker with Tracking on Activity Cellular</td>
       </tr>
       <tr>
         <td><strong>S-JUNO-IX-NBM1-TRACK-X</strong></td>
-        <td>INDUSTRIAL JUNO Tracker mit Tracking on Activity Cellular</td>
+        <td>INDUSTRIAL JUNO Tracker with Tracking on Activity Cellular</td>
       </tr>
     </tbody>
   </table>
 </section>
 
 <section id="timings">
-  <h3>4. JUNO – Gruppe Timings (0x00)</h3>
+  <h3>4. JUNO – Group Timings (0x00)</h3>
 
   <table class="auto-layout">
     <thead>
       <tr>
-        <th>Ressourcen</th>
-        <th>Ressourcen ID</th>
-        <th>Beschreibung</th>
-        <th>Schlüssel (NFC/BLE)</th>
+        <th>Resources</th>
+        <th>Resource ID</th>
+        <th>Description</th>
+        <th>Key (NFC/BLE)</th>
         <th>Min</th>
         <th>Max</th>
-        <th>Werkseinstellung</th>
-        <th>Einheit</th>
-        <th>Modulschlüssel</th>
+        <th>Factory setting</th>
+        <th>Unit</th>
+        <th>Module key</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><strong>Messperiode</strong></td>
+        <td><strong>Measurement period</strong></td>
         <td>0x00</td>
-        <td>Gibt die Periode an, in der die Messwerte erfasst werden.</td>
+        <td>Specifies the period in which measured values are recorded.</td>
         <td>period</td>
         <td>1 / 5*</td>
         <td>360</td>
@@ -362,9 +349,9 @@ table.auto-layout td{
         <td>1111</td>
       </tr>
       <tr>
-        <td><strong>Reguläres Sendeintervall</strong></td>
+        <td><strong>Regular transmission interval</strong></td>
         <td>0x01</td>
-        <td>Anzahl der bis zur Übertragung durchgeführten Messungen.</td>
+        <td>Number of measurements performed up to transmission.</td>
         <td>every</td>
         <td>1</td>
         <td>64</td>
@@ -376,40 +363,40 @@ table.auto-layout td{
   </table>
 
   <p>
-    * 5: Für Version S‑JUNO‑XXXX<br>
-    1: Für Version S‑JUNO‑IX‑XXXX
+    * 5: For version S‑JUNO‑XXXX<br>
+    1: For version S‑JUNO‑IX‑XXXX
   </p>
 </section>
 
 
 <section id="alarms">
-  <h3>5. JUNO: Gruppe Alarm Einstellungen (0x01)</h3>
+  <h3>5. JUNO: Group Alarm Settings (0x01)</h3>
 
   <table class="auto-layout">
     <thead>
       <tr>
-        <th>Ressourcen</th>
-        <th>Ressourcen ID</th>
-        <th>Beschreibung</th>
-        <th>Schlüssel (NFC/BLE)</th>
+        <th>Resources</th>
+        <th>Resource ID</th>
+        <th>Description</th>
+        <th>Key (NFC/BLE)</th>
         <th>Min</th>
         <th>Max</th>
-        <th>Werkseinstellung</th>
-        <th>Einheit</th>
-        <th>Modulschlüssel</th>
+        <th>Factory setting</th>
+        <th>Unit</th>
+        <th>Module key</th>
       </tr>
     </thead>
     <tbody>
 
       <tr>
-        <td><strong>Alarm aktiv</strong></td>
+        <td><strong>Alarm active</strong></td>
         <td>0x00</td>
         <td>
-          Gibt an, welche Alarme, ob für Temperatur oder rel. Luftfeuchtigkeit aktiviert sind:<br>
-          • 0: Beide Alarme deaktiviert<br>
-          • 1: Temperaturalarm aktiv<br>
-          • 2: Rel. Luftfeuchtigkeitsalarm aktiv<br>
-          • 3: Beide Alarme aktiv
+          Indicates which alarms are activated, whether for temperature or relative humidity:<br>
+          • 0: Both alarms deactivated<br>
+          • 1: Temperature alarm active<br>
+          • 2: Rel. humidity alarm active<br>
+          • 3: Both alarms active
         </td>
         <td>alarm_act</td>
         <td>0</td>
@@ -420,12 +407,12 @@ table.auto-layout td{
       </tr>
 
       <tr>
-        <td><strong>Temperatur Delta</strong></td>
+        <td><strong>Temperature delta</strong></td>
         <td>0x01</td>
         <td>
-          Gibt an, um wie viel sich die Temperatur im Vergleich zur letzten Übertragung absolut ändern muss,
-          damit eine ALARM‑Übertragung ausgelöst wird. Diese Übertragung wird unabhängig vom normalen
-          Übertragungsintervall durchgeführt.
+          Specifies by how much the temperature must change in absolute terms compared
+          to the last transmission for an ALARM transmission to be triggered.
+          This transmission is carried out independently of the normal transmission interval.
         </td>
         <td>tdt</td>
         <td>1</td>
@@ -436,9 +423,9 @@ table.auto-layout td{
       </tr>
 
       <tr>
-        <td><strong>Temperatur oberer Grenzwert</strong></td>
+        <td><strong>Temperature upper limit</strong></td>
         <td>0x02</td>
-        <td>Gibt den oberen absoluten Grenzwert an, bei dem ein Alarm ausgelöst wird.</td>
+        <td>Specifies the upper absolute limit value at which an alarm is triggered.</td>
         <td>tht</td>
         <td>0</td>
         <td>85</td>
@@ -448,9 +435,9 @@ table.auto-layout td{
       </tr>
 
       <tr>
-        <td><strong>Temperatur unterer Grenzwert</strong></td>
+        <td><strong>Temperature lower limit</strong></td>
         <td>0x03</td>
-        <td>Gibt den unteren absoluten Grenzwert an, bei dem ein Alarm ausgelöst wird.</td>
+        <td>Specifies the lower absolute limit value at which an alarm is triggered.</td>
         <td>tlt</td>
         <td>-25</td>
         <td>75</td>
@@ -460,11 +447,11 @@ table.auto-layout td{
       </tr>
 
       <tr>
-        <td><strong>Rel.Luftfeuchtigkeit Delta</strong></td>
+        <td><strong>Rel. humidity delta</strong></td>
         <td>0x04</td>
         <td>
-          Gibt an, um wie viel sich die rel. Luftfeuchtigkeit im Vergleich zur letzten Übertragung absolut ändern muss,
-          damit eine ALARM‑Übertragung ausgelöst wird.
+          Specifies by how much the relative humidity must change in absolute terms
+          compared to the last transmission for an ALARM transmission to be triggered.
         </td>
         <td>hdt</td>
         <td>1</td>
@@ -475,9 +462,9 @@ table.auto-layout td{
       </tr>
 
       <tr>
-        <td><strong>Rel. Luftfeuchte oberer Grenzwert</strong></td>
+        <td><strong>Rel. humidity upper limit value </strong></td>
         <td>0x05</td>
-        <td>Gibt den oberen absoluten Grenzwert an, bei dem ein Alarm ausgelöst wird.</td>
+        <td>Specifies the upper absolute limit value at which an alarm is triggered.</td>
         <td>hht</td>
         <td>5</td>
         <td>100</td>
@@ -487,9 +474,9 @@ table.auto-layout td{
       </tr>
 
       <tr>
-        <td><strong>Rel. Luftfeuchte unterer Grenzwert</strong></td>
+        <td><strong>Rel. humidity lower limit value</strong></td>
         <td>0x06</td>
-        <td>Gibt den unteren absoluten Grenzwert an, bei dem ein Alarm ausgelöst wird.</td>
+        <td>Specifies the lower absolute limit value at which an alarm is triggered.</td>
         <td>hlt</td>
         <td>0</td>
         <td>95</td>
@@ -499,12 +486,12 @@ table.auto-layout td{
       </tr>
 
       <tr>
-        <td><strong>Hysterese rel. Luftfeuchte</strong></td>
+        <td><strong>Hysterese rel. air fluid</strong></td>
         <td>0x07</td>
         <td>
-          Bestimmt die absolute Hysterese in °C bei Zustandswechseln. Wenn die Temperatur
-          einen Schwellwert abzüglich Hysterese unter‑ oder überschreitet, wird von einem höheren
-          in einen niedrigeren Alarmzustand gewechselt.
+          Determines the absolute hysteresis in °C for state changes.
+          If the temperature falls below or exceeds a threshold value minus hysteresis,
+          the system switches from a higher to a lower alarm status.
         </td>
         <td>thy</td>
         <td>5</td>
@@ -515,12 +502,12 @@ table.auto-layout td{
       </tr>
 
       <tr>
-        <td><strong>Hysterese Temperatur</strong></td>
+        <td><strong>Hysteresis temperature</strong></td>
         <td>0x08</td>
         <td>
-          Bestimmt die absolute Hysterese in %RH bei Zustandswechseln. Wenn die rel.
-          Luftfeuchtigkeit einen Schwellwert abzüglich Hysterese unter‑ oder überschreitet,
-          wird von einem höheren in einen niedrigeren Alarmzustand gewechselt.
+          Determines the absolute hysteresis in %RH for status changes.
+          If the relative humidity falls below or exceeds a threshold value minus hysteresis,
+          the system switches from a higher to a lower alarm status.
         </td>
         <td>hhy</td>
         <td>2</td>
@@ -535,21 +522,22 @@ table.auto-layout td{
 </section>
 
 
+
 <section id="tracking-activity">
-  <h3>6. JUNO: Gruppe Tracking on Activity Einstellungen (0x04)</h3>
+  <h3>6. JUNO: Group Tracking on Activity Settings (0x04)</h3>
 
   <table class="auto-layout">
     <thead>
       <tr>
-        <th>Ressourcen</th>
-        <th>Ressourcen ID</th>
-        <th>Beschreibung</th>
-        <th>Schlüssel (NFC/BLE)</th>
+        <th>Resources</th>
+        <th>Resource ID</th>
+        <th>Description</th>
+        <th>Key (NFC/BLE)</th>
         <th>Min</th>
         <th>Max</th>
-        <th>Werkseinstellung</th>
-        <th>Einheit</th>
-        <th>Modulschlüssel</th>
+        <th>Factory setting</th>
+        <th>Unit</th>
+        <th>Module key</th>
       </tr>
     </thead>
     <tbody>
@@ -558,16 +546,16 @@ table.auto-layout td{
         <td><strong>Move Mode</strong></td>
         <td>0x00</td>
         <td>
-          Gibt an, welcher Modus aktiviert ist:<br>
-          • 0: Kein Tracking on Activity Feature aktiv<br>
-          • 1: Tracking on Start<br>
-          • 2: Tracking on Ongoing<br>
-          • 3: Tracking on Start and Ongoing<br>
-          • 4: Tracking on Inactivity<br>
-          • 5: Tracking on Start and Inactivity<br>
-          • 6: Tracking on Inactivity and Ongoing<br>
-          • 7: Tracking on Start, Inactivity and Ongoing<br>
-          • 8: Vandalismusdetektion und Vibrationsmusterkennung
+          Indicates whether Tracking on Activity mode is activated:<br>
+          • 0: No Tracking on Activity feature active<br>
+          • 1: Tracking on Start: Localization is carried out when an activity is detected.<br>
+          • 2: Tracking on Ongoing: Localization is carried out during an ongoing activity.<br>
+          • 3: Tracking on Start and Ongoing: Localization is carried out when an activity is detected and while an activity is already running.<br>
+          • 4: Tracking on Inactivity: When an activity is finished, localization is carried out.<br>
+          • 5: Tracking on Start and Inactivity: Localization is carried out when an activity is detected and when an activity ends.<br>
+          • 6: Tracking on Inactivity and Ongoing: Localization takes place when the activity is in progress and the activity has ended.<br>
+          • 7: Tracking on Start, Inactivity and Ongoing: Localization takes place when the activity starts, is in progress and the activity has ended.<br>
+          • 8: Vandalism detection and vibration pattern recognition.
         </td>
         <td>mode</td>
         <td>0</td>
@@ -581,9 +569,8 @@ table.auto-layout td{
         <td><strong>Move activity threshold</strong></td>
         <td>0x01</td>
         <td>
-          Beschreibt, ab welcher Beschleunigung eine Aktivität als Aktivität gezählt und
-          aufgezeichnet wird. Für die Vandalismuserkennung (Move Mode = 8) ist das die
-          Schwelle für einen Stoß.
+          Specifies the acceleration at which a movement is counted and logged as an activity.
+          For vandalism detection (Move Mode = 8), this value defines the impact threshold.
         </td>
         <td>moat</td>
         <td>100</td>
@@ -594,11 +581,11 @@ table.auto-layout td{
       </tr>
 
       <tr>
-        <td><strong>Move ongoing time</strong></td>
+        <td><strong> Move ongoing time</strong></td>
         <td>0x02</td>
         <td>
-          Gibt die Zeit an, die zwischen zwei Übertragungen und Lokalisierungen vergeht,
-          während eine Aktivität andauert.
+          Specifies the time that elapses between two transmissions and localizations
+          while an activity is ongoing.
         </td>
         <td>mont</td>
         <td>1</td>
@@ -612,8 +599,8 @@ table.auto-layout td{
         <td><strong>Move inactivity time</strong></td>
         <td>0x03</td>
         <td>
-          Beschreibt die Zeit zwischen dem Zeitpunkt, ab dem eine Aktivität endet und dem
-          Lokalisieren bzw. Übertragen der Daten.
+          Describes the time between the point at which an activity ends
+          and the localization or transfer of the data.
         </td>
         <td>moit</td>
         <td>1</td>
@@ -624,11 +611,12 @@ table.auto-layout td{
       </tr>
 
       <tr>
-        <td><strong>Move impact max</strong></td>
+        <td><strong>Move impact</strong></td>
         <td>0x04</td>
         <td>
-          Anzahl der Schläge/Stöße. Wird diese Anzahl erreicht, ohne dass
-          „Move Inactivity Time“ zwischen den Schlägen abläuft, wird ein Vandalismusalarm ausgelöst.
+          Number of impacts. If this count is reached before
+          “Move Inactivity Time” expires between impacts,
+          a vandalism alarm is triggered.
         </td>
         <td>miom</td>
         <td>1</td>
@@ -659,20 +647,16 @@ table.auto-layout td{
 
 
 </div>
-    <!-- FOOTER -->
+<!-- Footer -->
+<!-- FOOTER (ENGLISH) -->
 <div style="border-top:1px solid #d0d7de;margin-top:40px;padding-top:16px;font-size:.85rem;color:#6b7280;">
 </div>
- <!-- FOOTER (DEUTSCH) -->
-    <div class="footer-note">
-      <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
-      <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
-      <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
-      <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
-      <p style="padding-left:14px; font-style:italic;">
-        Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
-      </p>
-    </div>
-  </div>
-
-</main>
-</body>
+<div class="footer-note">
+  <p>© Sentinum GmbH – All rights reserved.</p>
+  <p>All contents of this document, including text, tables and images, are protected by copyright and are the property of Sentinum GmbH.</p>
+  <p>All images are subject to the copyright of Sentinum GmbH unless otherwise stated.</p>
+  <p>Reproduction, distribution or use — even in part — is not permitted without explicit written authorization.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Specifications are subject to change. All information is provided without guarantee.
+  </p>
+</div>
