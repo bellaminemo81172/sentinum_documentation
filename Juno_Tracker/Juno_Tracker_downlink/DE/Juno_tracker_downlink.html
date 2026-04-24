@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+
+<!-- ✅ CSS – UNVERÄNDERT -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+  --blue-bg:#f7fbff;
+  --blue-border:#d6e4fa;
+  --blue-text:#1a3e8c;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+}
+
+/* Base */
+body{
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+}
+
+/* Headings */
+h1{
+  margin:48px 0 16px;
+  padding-bottom:12px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:42px;
+  font-weight:700;
+  border-bottom:2px solid var(--border);
+}
+
+h3{
+  margin:32px 0 12px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:120px;
+}
+
+p{margin:8px 0 12px}
+
+/* Tables */
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+  table-layout:fixed;
+}
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid #000;
+}
+
+/* TOC */
+.main-toc{
+  max-width:900px;
+  margin:24px auto 40px;
+  padding:16px 20px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+}
+.main-toc strong{display:block;margin-bottom:8px;}
+.main-toc ul{list-style:none;padding:0;margin:0;}
+.main-toc li{margin:.35rem 0;}
+.main-toc a{color:var(--blue-text);font-weight:600;text-decoration:none;}
+.main-toc a:hover{text-decoration:underline;}
+
+/*/* ---------- PDF ---------- */
+        .pdf-viewer{
+          max-width:900px;
+          height:600px;
+          margin:0 auto 20px;
+          border:1px solid #ccc;
+          border-radius:6px;
+          overflow:hidden;
+        }
+        
+        .pdf-viewer iframe{
+          width:100%;
+          height:100%;
+          border:none;
+        }
+        
+        .pdf-download{
+          max-width:900px;
+          margin:0 auto 36px;
+          padding:14px 18px;
+          background:var(--blue-bg);
+          border:1px solid var(--blue-border);
+          border-radius:6px;
+          text-align:center;
+        }
+        
+        .pdf-download a{
+          color:var(--blue-text);
+          font-weight:600;
+        }
+
+
+/* ---------- Figures ---------- */
+.figure{
+  max-width:900px;
+  margin:24px auto;
+}
+
+.figure img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+
+.figure figcaption{
+  margin-top:6px;
+  color:var(--text-muted);
+  font-size:0.875rem;
+}
+  .note-strip{
+    padding:14px 16px;
+    margin:18px 0;
+    border-radius:6px;
+    border-left-width:6px;
+    border-left-style:solid;
+  }
+
+  .note-strip--red{
+    background:#fdecea;
+    border-left-color:#d32f2f;
+  }
+
+  .note-strip--yellow{
+    background:#fff8e1;
+    border-left-color:#f9a825;
+  }
+
+  .note-strip--green{
+    background:#e8f5e9;
+    border-left-color:#2e7d32;
+  }
+  .note-strip p,
+  .note-strip ul{
+    margin:0;
+  }
+  /* ---------- Tabelle mit automatischer Spaltenbreite ---------- */
+table.auto-layout{
+  table-layout: auto;
+}
+
+table.auto-layout th,
+table.auto-layout td{
+  width: auto;          /* überschreibt nth-child Breiten */
+}
+
+
+</style>
+</head>
+<body>
+  <main>
+
+  <main>
+
+  <!-- PDF Viewer -->
+  <div class="pdf-viewer">
+    <iframe
+      src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/eb09c5baf1217881ab8073283f93a3a06caa36b2/Juno_Tracker/Juno_Tracker_downlink/DE/Juno_Cellular_Tracker_TH_TRACK_NFC_und_Downlinkbeschreibung_DE_1.0.1%201.pdf"
+      loading="lazy"
+    ></iframe>
+  </div>
+
+  <!-- PDF Download -->
+  <div class="pdf-download">
+    📄
+    <a
+      href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/eb09c5baf1217881ab8073283f93a3a06caa36b2/Juno_Tracker/Juno_Tracker_downlink/DE/Juno_Cellular_Tracker_TH_TRACK_NFC_und_Downlinkbeschreibung_DE_1.0.1%201.pdf"
+      target="_blank"
+      rel="noopener"
+    >
+      PDF herunterladen
+    </a>
+  </div>
+
+</main>
+</main>
+
+
+<section class="main-toc">
+  <strong>Inhaltszusammenfassung</strong>
+  <ul>
+    <li><a href="#versionshistorie">1. Versionshistorie</a></li>
+    <li><a href="#module-overview">2. Modulübersicht</a></li>
+    <li><a href="#valid-versions">3. Gültige Geräteversionen</a></li>
+    <li><a href="#timings">4. JUNO – Gruppe Timings (0x00)</a></li>
+    <li><a href="#alarms">5. JUNO – Gruppe Alarm‑Einstellungen (0x01)</a></li>
+    <li><a href="#tracking-activity">6. JUNO – Gruppe Tracking on Activity (0x04)</a></li>
+  </ul>
+</section>
+
+        
+        <section id="versionshistorie">
+  <h3>1. Versionshistorie</h3>
+
+  <table class="auto-layout">
+    <thead>
+      <tr>
+        <th>Version</th>
+        <th>Datum</th>
+        <th>Änderung</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1.0.0</td>
+        <td>18.02.2025</td>
+        <td>Erstellung</td>
+      </tr>
+      <tr>
+        <td>1.0.1</td>
+        <td>24.04.2026</td>
+        <td>Formatierung, Versionshistorie</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="module-overview">
+  <h3>2. Modulübersicht</h3>
+
+  <table class="auto-layout">
+    <thead>
+      <tr>
+        <th>Modul</th>
+        <th>Modulschlüssel</th>
+        <th>Gruppe</th>
+        <th>Gruppen ID</th>
+        <th>Beschreibung</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Juno</td>
+        <td>0x1XXX</td>
+        <td>Timings</td>
+        <td>0x00</td>
+        <td>Definiert Parameter für Messungen und Übertragungsverhalten</td>
+      </tr>
+      <tr>
+        <td>Juno</td>
+        <td>0x1XXX</td>
+        <td>Alarme und Grenzwerte</td>
+        <td>0x01</td>
+        <td>Definiert Alarme und Grenzwerte wie z. B. obere und untere Temperaturgrenze</td>
+      </tr>
+      <tr>
+        <td>Juno</td>
+        <td>0x1XXX</td>
+        <td>Tracking on Activity</td>
+        <td>0x04</td>
+        <td>Definiert Messschwellen und Einstellungen für das Tracking‑on‑Activity‑Feature</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+        
+        <section>
+  <p>
+    Tabellen für produktübergreifende Module finden Sie in der generischen
+    NFC‑ und Downlink‑Dokumentation.
+  </p>
+  <p>
+    Weitere Informationen zur Konfiguration der Sensor‑Kommunikation und der
+    Tracking‑Einstellungen finden Sie – je nach Version – in der jeweiligen
+    generischen LoRaWAN®‑ oder mioty®‑Dokumentation.
+  </p>
+</section>
+
+
+<section id="valid-versions">
+  <h3>3. Anleitung gültig für Versionen</h3>
+
+  <table class="auto-layout">
+    <thead>
+      <tr>
+        <th>Artikel Code</th>
+        <th>Features</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>S-JUNO-NBM1-TH-TRACK-X</strong></td>
+        <td>JUNO TH Tracker, Temperatur und rel. Luftfeuchtigkeit mit Tracking‑Funktion und Tracking on Activity Cellular</td>
+      </tr>
+      <tr>
+        <td><strong>S-JUNO-IX-NBM1-TH-TRACK-X</strong></td>
+        <td>INDUSTRIAL JUNO TH Tracker, Temperatur und rel. Luftfeuchtigkeit mit Tracking‑Funktion und Tracking on Activity Cellular</td>
+      </tr>
+      <tr>
+        <td><strong>S-JUNO-NBM1-TRACK-X</strong></td>
+        <td>JUNO Tracker mit Tracking on Activity Cellular</td>
+      </tr>
+      <tr>
+        <td><strong>S-JUNO-IX-NBM1-TRACK-X</strong></td>
+        <td>INDUSTRIAL JUNO Tracker mit Tracking on Activity Cellular</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="timings">
+  <h3>4. JUNO – Gruppe Timings (0x00)</h3>
+
+  <table class="auto-layout">
+    <thead>
+      <tr>
+        <th>Ressourcen</th>
+        <th>Ressourcen ID</th>
+        <th>Beschreibung</th>
+        <th>Schlüssel (NFC/BLE)</th>
+        <th>Min</th>
+        <th>Max</th>
+        <th>Werkseinstellung</th>
+        <th>Einheit</th>
+        <th>Modulschlüssel</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Messperiode</td>
+        <td>0x00</td>
+        <td>Gibt die Periode an, in der die Messwerte erfasst werden.</td>
+        <td>period</td>
+        <td>1 / 5*</td>
+        <td>360</td>
+        <td>30</td>
+        <td>min</td>
+        <td>1111</td>
+      </tr>
+      <tr>
+        <td>Reguläres Sendeintervall</td>
+        <td>0x01</td>
+        <td>Anzahl der bis zur Übertragung durchgeführten Messungen.</td>
+        <td>every</td>
+        <td>1</td>
+        <td>64</td>
+        <td>6</td>
+        <td></td>
+        <td>1111</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    * 5: Für Version S‑JUNO‑XXXX<br>
+    1: Für Version S‑JUNO‑IX‑XXXX
+  </p>
+</section>
+
+
+<section id="alarms">
+  <h3>5. JUNO: Gruppe Alarm Einstellungen (0x01)</h3>
+
+  <table class="auto-layout">
+    <thead>
+      <tr>
+        <th>Ressourcen</th>
+        <th>Ressourcen ID</th>
+        <th>Beschreibung</th>
+        <th>Schlüssel (NFC/BLE)</th>
+        <th>Min</th>
+        <th>Max</th>
+        <th>Werkseinstellung</th>
+        <th>Einheit</th>
+        <th>Modulschlüssel</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Alarm aktiv</td>
+        <td>0x00</td>
+        <td>
+          Gibt an, welche Alarme, ob für Temperatur oder rel. Luftfeuchtigkeit aktiviert sind:<br>
+          • 0: Beide Alarme deaktiviert<br>
+          • 1: Temperaturalarm aktiv<br>
+          • 2: Rel. Luftfeuchtigkeitsalarm aktiv<br>
+          • 3: Beide Alarme aktiv
+        </td>
+        <td>alarm_act</td>
+        <td>0</td>
+        <td>3</td>
+        <td>1</td>
+        <td></td>
+        <td>1111</td>
+      </tr>
+
+      <tr>
+        <td>Temperatur Delta</td>
+        <td>0x01</td>
+        <td>
+          Gibt an, um wie viel sich die Temperatur im Vergleich zur letzten Übertragung absolut ändern muss,
+          damit eine ALARM‑Übertragung ausgelöst wird. Diese Übertragung wird unabhängig vom normalen
+          Übertragungsintervall durchgeführt.
+        </td>
+        <td>tdt</td>
+        <td>1</td>
+        <td>50</td>
+        <td>5</td>
+        <td>°C</td>
+        <td>1111</td>
+      </tr>
+
+      <tr>
+        <td>Temperatur oberer Grenzwert</td>
+        <td>0x02</td>
+        <td>Gibt den oberen absoluten Grenzwert an, bei dem ein Alarm ausgelöst wird.</td>
+        <td>tht</td>
+        <td>0</td>
+        <td>85</td>
+        <td>40</td>
+        <td>°C</td>
+        <td>1111</td>
+      </tr>
+
+      <tr>
+        <td>Temperatur unterer Grenzwert</td>
+        <td>0x03</td>
+        <td>Gibt den unteren absoluten Grenzwert an, bei dem ein Alarm ausgelöst wird.</td>
+        <td>tlt</td>
+        <td>-25</td>
+        <td>75</td>
+        <td>0</td>
+        <td>°C</td>
+        <td>1111</td>
+      </tr>
+
+      <tr>
+        <td>Rel.Luftfeuchtigkeit Delta</td>
+        <td>0x04</td>
+        <td>
+          Gibt an, um wie viel sich die rel. Luftfeuchtigkeit im Vergleich zur letzten Übertragung absolut ändern muss,
+          damit eine ALARM‑Übertragung ausgelöst wird.
+        </td>
+        <td>hdt</td>
+        <td>1</td>
+        <td>80</td>
+        <td>20</td>
+        <td>%RH</td>
+        <td>1111</td>
+      </tr>
+
+      <tr>
+        <td>Rel. Luftfeuchte oberer Grenzwert</td>
+        <td>0x05</td>
+        <td>Gibt den oberen absoluten Grenzwert an, bei dem ein Alarm ausgelöst wird.</td>
+        <td>hht</td>
+        <td>5</td>
+        <td>100</td>
+        <td>80</td>
+        <td>%RH</td>
+        <td>1111</td>
+      </tr>
+
+      <tr>
+        <td>Rel. Luftfeuchte unterer Grenzwert</td>
+        <td>0x06</td>
+        <td>Gibt den unteren absoluten Grenzwert an, bei dem ein Alarm ausgelöst wird.</td>
+        <td>hlt</td>
+        <td>0</td>
+        <td>95</td>
+        <td>20</td>
+        <td>%RH</td>
+        <td>1111</td>
+      </tr>
+
+      <tr>
+        <td>Hysterese rel. Luftfeuchte</td>
+        <td>0x07</td>
+        <td>
+          Bestimmt die absolute Hysterese in °C bei Zustandswechseln. Wenn die Temperatur
+          einen Schwellwert abzüglich Hysterese unter‑ oder überschreitet, wird von einem höheren
+          in einen niedrigeren Alarmzustand gewechselt.
+        </td>
+        <td>thy</td>
+        <td>5</td>
+        <td>0</td>
+        <td>30</td>
+        <td>°C</td>
+        <td>1111</td>
+      </tr>
+
+      <tr>
+        <td>Hysterese Temperatur</td>
+        <td>0x08</td>
+        <td>
+          Bestimmt die absolute Hysterese in %RH bei Zustandswechseln. Wenn die rel.
+          Luftfeuchtigkeit einen Schwellwert abzüglich Hysterese unter‑ oder überschreitet,
+          wird von einem höheren in einen niedrigeren Alarmzustand gewechselt.
+        </td>
+        <td>hhy</td>
+        <td>2</td>
+        <td>0</td>
+        <td>10</td>
+        <td>%RH</td>
+        <td>1111</td>
+      </tr>
+
+    </tbody>
+  </table>
+</section>
+
+
+<section id="tracking-activity">
+  <h3>6. JUNO: Gruppe Tracking on Activity Einstellungen (0x04)</h3>
+
+  <table class="auto-layout">
+    <thead>
+      <tr>
+        <th>Ressourcen</th>
+        <th>Ressourcen ID</th>
+        <th>Beschreibung</th>
+        <th>Schlüssel (NFC/BLE)</th>
+        <th>Min</th>
+        <th>Max</th>
+        <th>Werkseinstellung</th>
+        <th>Einheit</th>
+        <th>Modulschlüssel</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Move Mode</td>
+        <td>0x00</td>
+        <td>
+          Gibt an, welcher Modus aktiviert ist:<br>
+          • 0: Kein Tracking on Activity Feature aktiv<br>
+          • 1: Tracking on Start<br>
+          • 2: Tracking on Ongoing<br>
+          • 3: Tracking on Start and Ongoing<br>
+          • 4: Tracking on Inactivity<br>
+          • 5: Tracking on Start and Inactivity<br>
+          • 6: Tracking on Inactivity and Ongoing<br>
+          • 7: Tracking on Start, Inactivity and Ongoing<br>
+          • 8: Vandalismusdetektion und Vibrationsmusterkennung
+        </td>
+        <td>mode</td>
+        <td>0</td>
+        <td>7</td>
+        <td>6</td>
+        <td></td>
+        <td>1111</td>
+      </tr>
+
+      <tr>
+        <td>Move activity threshold</td>
+        <td>0x01</td>
+        <td>
+          Beschreibt, ab welcher Beschleunigung eine Aktivität als Aktivität gezählt und
+          aufgezeichnet wird. Für die Vandalismuserkennung (Move Mode = 8) ist das die
+          Schwelle für einen Stoß.
+        </td>
+        <td>moat</td>
+        <td>100</td>
+        <td>2000</td>
+        <td>400</td>
+        <td>mg</td>
+        <td>1111</td>
+      </tr>
+
+      <tr>
+        <td>Move ongoing timeE</td>
+        <td>0x02</td>
+        <td>
+          Gibt die Zeit an, die zwischen zwei Übertragungen und Lokalisierungen vergeht,
+          während eine Aktivität andauert.
+        </td>
+        <td>mont</td>
+        <td>1</td>
+        <td>1440</td>
+        <td>10</td>
+        <td>min</td>
+        <td>1111</td>
+      </tr>
+
+      <tr>
+        <td>Move inactivity time</td>
+        <td>0x03</td>
+        <td>
+          Beschreibt die Zeit zwischen dem Zeitpunkt, ab dem eine Aktivität endet und dem
+          Lokalisieren bzw. Übertragen der Daten.
+        </td>
+        <td>moit</td>
+        <td>1</td>
+        <td>1440</td>
+        <td>5</td>
+        <td>min</td>
+        <td>1111</td>
+      </tr>
+
+      <tr>
+        <td>Move impact max</td>
+        <td>0x04</td>
+        <td>
+          Anzahl der Schläge/Stöße. Wird diese Anzahl erreicht, ohne dass
+          „Move Inactivity Time“ zwischen den Schlägen abläuft, wird ein Vandalismusalarm ausgelöst.
+        </td>
+        <td>miom</td>
+        <td>1</td>
+        <td>1440</td>
+        <td>4</td>
+        <td></td>
+        <td>1111</td>
+      </tr>
+
+    </tbody>
+  </table>
+</section>
+
+
+   <div style="display: flex; gap: 32px; align-items: center; flex-wrap: wrap;">
+
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png"
+    alt="Unterstützte Funktechnologien"
+    style="max-width: 720px; height: auto;"
+  >
+
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/CE_Trash_seals.png"
+    alt="CE Kennzeichnung und Entsorgungssymbole"
+    style="max-width: 320px; height: auto;"
+  >
+
+
+</div>
+    <!-- FOOTER -->
+<div style="border-top:1px solid #d0d7de;margin-top:40px;padding-top:16px;font-size:.85rem;color:#6b7280;">
+</div>
+ <!-- FOOTER (DEUTSCH) -->
+    <div class="footer-note">
+      <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+      <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+      <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+      <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+      <p style="padding-left:14px; font-style:italic;">
+        Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
+      </p>
+    </div>
+  </div>
+
+</main>
+</body>
