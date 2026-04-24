@@ -1,0 +1,813 @@
+
+
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+
+<!-- ✅ CSS – UNVERÄNDERT -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+  --blue-bg:#f7fbff;
+  --blue-border:#d6e4fa;
+  --blue-text:#1a3e8c;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+}
+
+/* Base */
+body{
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+}
+
+/* Headings */
+h1{
+  margin:48px 0 16px;
+  padding-bottom:12px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:42px;
+  font-weight:700;
+  border-bottom:2px solid var(--border);
+}
+
+h3{
+  margin:32px 0 12px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:120px;
+}
+
+p{margin:8px 0 12px}
+
+/* Tables */
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+  table-layout:fixed;
+}
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid #000;
+}
+
+/* TOC */
+.main-toc{
+  max-width:900px;
+  margin:24px auto 40px;
+  padding:16px 20px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+}
+.main-toc strong{display:block;margin-bottom:8px;}
+.main-toc ul{list-style:none;padding:0;margin:0;}
+.main-toc li{margin:.35rem 0;}
+.main-toc a{color:var(--blue-text);font-weight:600;text-decoration:none;}
+.main-toc a:hover{text-decoration:underline;}
+
+/*/* ---------- PDF ---------- */
+        .pdf-viewer{
+          max-width:900px;
+          height:600px;
+          margin:0 auto 20px;
+          border:1px solid #ccc;
+          border-radius:6px;
+          overflow:hidden;
+        }
+        
+        .pdf-viewer iframe{
+          width:100%;
+          height:100%;
+          border:none;
+        }
+        
+        .pdf-download{
+          max-width:900px;
+          margin:0 auto 36px;
+          padding:14px 18px;
+          background:var(--blue-bg);
+          border:1px solid var(--blue-border);
+          border-radius:6px;
+          text-align:center;
+        }
+        
+        .pdf-download a{
+          color:var(--blue-text);
+          font-weight:600;
+        }
+
+
+/* ---------- Figures ---------- */
+.figure{
+  max-width:900px;
+  margin:24px auto;
+}
+
+.figure img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+
+.figure figcaption{
+  margin-top:6px;
+  color:var(--text-muted);
+  font-size:0.875rem;
+}
+  .note-strip{
+    padding:14px 16px;
+    margin:18px 0;
+    border-radius:6px;
+    border-left-width:6px;
+    border-left-style:solid;
+  }
+
+  .note-strip--red{
+    background:#fdecea;
+    border-left-color:#d32f2f;
+  }
+
+  .note-strip--yellow{
+    background:#fff8e1;
+    border-left-color:#f9a825;
+  }
+
+  .note-strip--green{
+    background:#e8f5e9;
+    border-left-color:#2e7d32;
+  }
+  .note-strip p,
+  .note-strip ul{
+    margin:0;
+  }
+  /* ---------- Tabelle mit automatischer Spaltenbreite ---------- */
+table.auto-layout{
+  table-layout: auto;
+}
+
+table.auto-layout th,
+table.auto-layout td{
+  width: auto;          /* überschreibt nth-child Breiten */
+}
+
+
+:root{
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+  --blue-bg:#f7fbff;
+  --blue-border:#d6e4fa;
+  --blue-text:#1a3e8c;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+}
+
+body{
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+}
+
+h1{
+  margin:48px 0 16px;
+  padding-bottom:12px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:42px;
+  font-weight:700;
+  border-bottom:2px solid var(--border);
+}
+
+h3{
+  margin:32px 0 12px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:120px;
+}
+
+p{margin:8px 0 12px}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+}
+
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid #000;
+}
+
+.main-toc{
+  max-width:900px;
+  margin:24px auto 40px;
+  padding:16px 20px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+}
+
+.main-toc strong{display:block;margin-bottom:8px;}
+.main-toc ul{list-style:none;margin:0;padding:0;}
+.main-toc li{margin:.35rem 0;}
+.main-toc a{color:var(--blue-text);font-weight:600;text-decoration:none;}
+.main-toc a:hover{text-decoration:underline;}
+
+/* ✅ NUR diese eine Tabelle im Abschnitt #timings */
+#timings > table.auto-layout th:nth-child(3),
+#timings > table.auto-layout td:nth-child(3) {
+  width: 40%;
+}
+
+</style>
+
+
+<body>
+<main>
+
+<!-- PDF Viewer -->
+<div class="pdf-viewer">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/31cd86302fbee7df3cde30a1457a06a09c9426d4/Juno_Tracker/Juno_Tracker_Lorawan_NFC_Downlink/DE/Juno_LOEU_Tracker_TH_TRACK_LOEU_NFC_und_Downlinkbeschreibung_DE_1.0.1.pdf"
+    loading="lazy"
+    title="SENTIFACE LoRaWAN NFC & Downlink Dokumentation"
+  ></iframe>
+</div>
+
+<!-- PDF Download -->
+<div class="pdf-download">
+  📄 Sie können das Dokument oben ansehen oder
+  <a
+    href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/31cd86302fbee7df3cde30a1457a06a09c9426d4/Juno_Tracker/Juno_Tracker_Lorawan_NFC_Downlink/DE/Juno_LOEU_Tracker_TH_TRACK_LOEU_NFC_und_Downlinkbeschreibung_DE_1.0.1.pdf"
+    target="_blank"
+    rel="noopener"
+  >
+    hier als PDF herunterladen
+  </a>.
+</div>
+
+
+
+
+<!-- Inhaltsverzeichnis -->
+<section class="main-toc">
+<strong>Inhalt</strong>
+<ul>
+<li><a href="#versionshistorie">1. Versionshistorie</a></li>
+<li><a href="#module">2. Modulübersicht</a></li>
+<li><a href="#valid-versions">3. Gültige Versionen</a></li>
+<li><a href="#timings">4. Timings (0x00)</a></li>
+<li><a href="#alarms">5. Alarm‑Einstellungen (0x01)</a></li>
+<li><a href="#tracking">6. Tracking on Activity (0x01)</a></li>
+<li><a href="#downlinks">7. Beispiel‑Downlinks</a></li>
+</ul>
+</section>
+
+<!-- Versionshistorie -->
+<section id="versionshistorie">
+<h3>1. Versionshistorie</h3>
+
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Änderung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0.0</td>
+<td>18.02.2025</td>
+<td>Erstellung</td>
+</tr>
+<tr>
+<td>1.0.1</td>
+<td>24.04.2026</td>
+<td>Formatierung, Versionshistorie</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<!-- Modulübersicht -->
+<section id="module">
+<h3>2. Modulübersicht</h3>
+
+<table>
+<thead>
+<tr>
+<th>Modul</th>
+<th>Modulschlüssel</th>
+<th>Gruppe</th>
+<th>Gruppen ID</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sentiface</strong></td>
+<td>0x1XXX</td>
+<td>Timings</td>
+<td>0x00</td>
+<td>Definiert Parameter für Messungen und Übertragungsverhalten</td>
+</tr>
+<tr>
+<td><strong>Sentiface</strong></td>
+<td>0x1XXX</td>
+<td>Alarme und Grenzwerte</td>
+<td>0x01</td>
+<td>Definiert Alarme und Grenzwerte wie obere und untere Temperaturgrenzen</td>
+</tr>
+<tr>
+<td><strong>Sentiface</strong></td>
+<td>0x1XXX</td>
+<td>Tracking on Activity</td>
+<td>0x04</td>
+<td>Definiert Messschwellen und Einstellungen für Tracking on Activity</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+  Tabellen für produktübergreifende Module (Senticom/Sentivisor) finden Sie in der
+  <a
+    href="https://docs.sentinum.de/generische-nfc-und-downlink-dokumentation"
+    target="_blank"
+    rel="noopener"
+  >
+    generischen NFC‑ und Downlink‑Dokumentation
+  </a>.
+</p>
+
+<p>
+  <strong>
+    Weitere Informationen zur Konfiguration der Sensor‑Kommunikation und
+    Tracking‑Einstellungen finden Sie je nach Version in der jeweiligen
+    generischen
+    <a
+      href="https://docs.sentinum.de/generische-lorawan"
+      target="_blank"
+      rel="noopener"
+    >
+      LoRaWAN®
+    </a>
+    oder
+    <a
+      href="https://docs.sentinum.de/generische-mioty"
+      target="_blank"
+      rel="noopener"
+    >
+      mioty®
+    </a>
+    Dokumentation.
+  </strong>
+</p>
+</section>
+
+<!-- Gültige Versionen -->
+<section id="valid-versions">
+<h3>3. Anleitung gültig für Versionen</h3>
+
+<table>
+<thead>
+<tr>
+<th>Artikel Code</th>
+<th>Features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>S-JUNO-LOEU-TH-TRACK</strong></td>
+<td>JUNO TH Tracker, Temperatur und rel. Luftfeuchtigkeit, Tracking Funktion und Tracking on Activity LoRaWAN®</td>
+</tr>
+<tr>
+<td><strong>S-JUNO-IX-LOEU-TH-TRACK</strong></td>
+<td>INDUSTRIAL JUNO TH Tracker, Temperatur und rel. Luftfeuchtigkeit, Tracking Funktion und Tracking on Activity LoRaWAN®</td>
+</tr>
+<tr>
+<td><strong>S-JUNO-LOEU-TRACK</strong></td>
+<td>JUNO Tracker mit Tracking on Activity LoRaWAN®</td>
+</tr>
+<tr>
+<td><strong>S-JUNO-IX-LOEU-TRACK</strong></td>
+<td>INDUSTRIAL JUNO Tracker mit Tracking on Activity LoRaWAN®</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<!-- Timings -->
+<section id="timings">
+<h3>4. Sentiface – Gruppe Timings (0x00)</h3>
+
+
+  <table class="auto-layout">
+    <thead>
+      <tr>
+        <th>Ressource</th>
+        <th>ID</th>
+        <th>Beschreibung</th>
+        <th>Schlüssel</th>
+        <th>Min</th>
+        <th>Max</th>
+        <th>Werkseinstellung</th>
+        <th>Einheit</th>
+        <th>Modulschlüssel</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Messperiode</strong></td>
+        <td>0x00</td>
+        <td>
+          Gibt die Periode an, in der die Messwerte erfasst werden.
+          5 Minuten heißt, dass immer nach 5 Minuten eine Messung durch
+          den Sensor durchgeführt wird.
+        </td>
+        <td>period</td>
+        <td>1 / 5*</td>
+        <td>360</td>
+        <td>30</td>
+        <td>min</td>
+        <td>1111</td>
+      </tr>
+      <tr>
+        <td><strong>Reguläres Sendeintervall</strong></td>
+        <td>0x01</td>
+        <td>Anzahl der bis zur Übertragung durchgeführten Messungen.</td>
+        <td>every</td>
+        <td>1</td>
+        <td>64</td>
+        <td>6</td>
+        <td></td>
+        <td>1111</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<p>
+*<br>
+5: Für Version S-JUNO-LOEU-TH und S-JUNO-MIOTY-TH<br>
+1: Für Version S-JUNO-IX-LOEU-TH und S-JUNO-IX-MIOTY-TH 
+</p>
+
+
+<!-- Alarm Einstellungen -->
+<section id="alarms">
+  <h3>5. Sentiface – Gruppe Alarm Einstellungen (0x01)</h3>
+
+  <table class="auto-layout">
+    <thead>
+      <tr>
+        <th>Ressource</th>
+        <th>Ressourcen&nbsp;ID</th>
+        <th>Beschreibung</th>
+        <th>Schlüssel<br>(NFC/BLE)</th>
+        <th>Min</th>
+        <th>Max</th>
+        <th>Werkseinstellung</th>
+        <th>Einheit</th>
+        <th>Modulschlüssel</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><strong>Alarm aktiv</strong></td>
+        <td>0x00</td>
+        <td>
+          Gibt an, welche Alarme – Temperatur oder relative Luftfeuchtigkeit –
+          aktiviert sind:
+          <ul>
+            <li><strong>0</strong>: Beide Alarme deaktiviert</li>
+            <li><strong>1</strong>: Temperaturalarm aktiv</li>
+            <li><strong>2</strong>: Relativer Luftfeuchtigkeitsalarm aktiv</li>
+            <li><strong>3</strong>: Beide Alarme aktiv</li>
+          </ul>
+        </td>
+        <td>alarm_act</td>
+        <td>0</td>
+        <td>3</td>
+        <td>1</td>
+        <td></td>
+        <td>1111</td>
+      </tr>
+
+      <tr>
+        <td><strong>Temperatur delta</strong></td>
+        <td>0x01</td>
+        <td>
+          Gibt an, um wie viel sich die Temperatur im Vergleich zur letzten
+          Übertragung absolut ändern muss, damit eine Alarm‑Übertragung
+          ausgelöst wird. Diese Übertragung erfolgt unabhängig vom regulären
+          Übertragungsintervall.
+        </td>
+        <td>tdt</td>
+        <td>1</td>
+        <td>50</td>
+        <td>5</td>
+        <td>°C</td>
+        <td>1111</td>
+      </tr>
+
+      <tr>
+        <td><strong>Temperatur oberer Grenzwert</strong></td>
+        <td>0x02</td>
+        <td>
+          Gibt den oberen absoluten Grenzwert an, bei dessen Überschreitung
+          ein Alarm ausgelöst wird.
+        </td>
+        <td>tht</td>
+        <td>0</td>
+        <td>85</td>
+        <td>40</td>
+        <td>°C</td>
+        <td>1111</td>
+      </tr>
+
+      <tr>
+        <td><strong>Temperatur unterer Grenzwert</strong></td>
+        <td>0x03</td>
+        <td>
+          Gibt den unteren absoluten Grenzwert an, bei dessen Unterschreitung
+          ein Alarm ausgelöst wird.
+        </td>
+        <td>tlt</td>
+        <td>-25</td>
+        <td>75</td>
+        <td>0</td>
+        <td>°C</td>
+        <td>1111</td>
+      </tr>
+
+      <tr>
+        <td><strong>Relative Luftfeuchtigkeit delta</strong></td>
+        <td>0x04</td>
+        <td>
+          Gibt an, um wie viel sich die relative Luftfeuchtigkeit im Vergleich
+          zur letzten Übertragung ändern muss, um eine Alarm‑Übertragung
+          auszulösen.
+        </td>
+        <td>hdt</td>
+        <td>1</td>
+        <td>80</td>
+        <td>20</td>
+        <td>%RH</td>
+        <td>1111</td>
+      </tr>
+
+      <tr>
+        <td><strong>Relative Luftfeuchte oberer Grenzwert</strong></td>
+        <td>0x05</td>
+        <td>
+          Gibt den oberen absoluten Grenzwert der relativen Luftfeuchtigkeit an,
+          bei dem ein Alarm ausgelöst wird.
+        </td>
+        <td>hht</td>
+        <td>5</td>
+        <td>100</td>
+        <td>80</td>
+        <td>%RH</td>
+        <td>1111</td>
+      </tr>
+
+      <tr>
+        <td><strong>Relative Luftfeuchte unterer Grenzwert</strong></td>
+        <td>0x06</td>
+        <td>
+          Gibt den unteren absoluten Grenzwert der relativen Luftfeuchtigkeit an,
+          bei dem ein Alarm ausgelöst wird.
+        </td>
+        <td>hlt</td>
+        <td>0</td>
+        <td>95</td>
+        <td>20</td>
+        <td>%RH</td>
+        <td>1111</td>
+      </tr>
+
+      <tr>
+        <td><strong>Hysterese relative Luftfeuchte</strong></td>
+        <td>0x07</td>
+        <td>
+          Bestimmt die absolute Hysterese in Grad Celsius bei Zustandswechseln.
+          Wird ein Schwellwert abzüglich der Hysterese unter‑ oder überschritten,
+          erfolgt ein Wechsel in einen niedrigeren Alarmzustand.
+        </td>
+        <td>thy</td>
+        <td>5</td>
+        <td>0</td>
+        <td>30</td>
+        <td>°C</td>
+        <td>1111</td>
+      </tr>
+
+      <tr>
+        <td><strong>Hysterese Temperatur</strong></td>
+        <td>0x08</td>
+        <td>
+          Bestimmt die absolute Hysterese in Prozent relativer Luftfeuchtigkeit
+          bei Zustandswechseln.
+        </td>
+        <td>hhy</td>
+        <td>2</td>
+        <td>0</td>
+        <td>10</td>
+        <td>%RH</td>
+        <td>1111</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+<!-- Tracking -->
+<section id="tracking">
+<h3>6. Sentiface – Tracking on Activity (0x01)</h3>
+
+
+
+  <table class="auto-layout">
+    <thead>
+      <tr>
+        <th>Ressource</th>
+        <th>Ressourcen&nbsp;ID</th>
+        <th>Beschreibung</th>
+        <th>Schlüssel<br>(NFC/BLE)</th>
+        <th>Min</th>
+        <th>Max</th>
+        <th>Werkseinstellung</th>
+        <th>Einheit</th>
+        <th>Modulschlüssel</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><strong>Move mode</strong></td>
+        <td>0x00</td>
+        <td>
+          Gibt an, welcher Tracking‑on‑Activity‑Modus aktiviert ist:
+          <ul>
+            <li><strong>0</strong>: Kein Tracking on Activity Feature aktiv</li>
+            <li><strong>1</strong>: Tracking on Start – bei Detektion einer Aktivität wird eine Lokalisierung durchgeführt</li>
+            <li><strong>2</strong>: Tracking on Ongoing – Lokalisierung während einer laufenden Aktivität</li>
+            <li><strong>3</strong>: Tracking on Start and Ongoing – Lokalisierung beim Start und während der Aktivität</li>
+            <li><strong>4</strong>: Tracking on Inactivity – Lokalisierung nach Beendigung der Aktivität</li>
+            <li><strong>5</strong>: Tracking on Start and Inactivity – Lokalisierung beim Start und nach Ende der Aktivität</li>
+            <li><strong>6</strong>: Tracking on Inactivity and Ongoing – Lokalisierung während und nach der Aktivität</li>
+            <li>
+              <strong>7</strong>: Tracking on Start, Inactivity and Ongoing:
+              Lokalisierung beim Start, während der Aktivität und nach deren Ende
+            </li>
+          </ul>
+        </td>
+        <td>lmode</td>
+        <td>0</td>
+        <td>7</td>
+        <td>6</td>
+        <td></td>
+        <td>1111</td>
+      </tr>
+
+      <tr>
+        <td><strong>Move activity threshold</strong></td>
+        <td>0x01</td>
+        <td>
+          Beschreibt, ab welcher Beschleunigung eine Bewegung als Aktivität
+          gezählt und aufgezeichnet wird.
+        </td>
+        <td>moat</td>
+        <td>100</td>
+        <td>2000</td>
+        <td>400</td>
+        <td>mg</td>
+        <td>1111</td>
+      </tr>
+
+      <tr>
+        <td><strong>Move ongoing time</strong></td>
+        <td>0x02</td>
+        <td>
+          Gibt die Zeit an, die zwischen zwei Übertragungen und Lokalisierungen
+          vergeht, während eine Aktivität andauert.
+        </td>
+        <td>mont</td>
+        <td>1</td>
+        <td>1440</td>
+        <td>10</td>
+        <td>min</td>
+        <td>1111</td>
+      </tr>
+
+      <tr>
+        <td><strong>Move inactivity time</strong></td>
+        <td>0x03</td>
+        <td>
+          Beschreibt die Zeit zwischen dem Ende einer Aktivität und der
+          anschließenden Lokalisierung beziehungsweise Datenübertragung.
+        </td>
+        <td>moit</td>
+        <td>1</td>
+        <td>1440</td>
+        <td>5</td>
+        <td>min</td>
+        <td>1111</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+</section>
+
+<!-- Beispiel Downlinks -->
+<section id="downlinks">
+<h3>7. Beispiel Downlinks</h3>
+
+<table>
+<thead>
+<tr>
+<th>Einstellung</th>
+<th>Downlink</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>period = 10</strong></td>
+<td>00 11 11 00 00 00 00 00 0A</td>
+</tr>
+<tr>
+<td><strong>every = 5</strong></td>
+<td>00 11 11 00 01 00 00 00 05</td>
+</tr>
+<tr>
+<td><strong>alarm_act = 0</strong></td>
+<td>00 11 11 01 00 00 00 00 00</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<br>
+<br>
+   <div style="display: flex; gap: 32px; align-items: center; flex-wrap: wrap;">
+
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/afa9c7aa3dcbe9ba04c6b5b4b31423451b2b759d/logo/mioty_lora_nb-iot.png"
+    alt="Unterstützte Funktechnologien"
+    style="max-width: 720px; height: auto;"
+  >
+
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/CE_Trash_seals.png"
+    alt="CE Kennzeichnung und Entsorgungssymbole"
+    style="max-width: 320px; height: auto;"
+  >
+
+
+</div>
+
+
+    <!-- FOOTER -->
+<div style="border-top:1px solid #d0d7de;margin-top:40px;padding-top:16px;font-size:.85rem;color:#6b7280;">
+</div>
+ <!-- FOOTER (DEUTSCH) -->
+    <div class="footer-note">
+      <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+      <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+      <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+      <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+      <p style="padding-left:14px; font-style:italic;">
+        Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
+      </p>
+    </div>
+
+</main>
+</body>
+</html>
