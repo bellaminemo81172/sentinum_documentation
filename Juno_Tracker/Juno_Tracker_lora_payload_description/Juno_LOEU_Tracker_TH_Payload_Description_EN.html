@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Juno LoRaWAN TH Tracker - Payload Description</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root{
+      --black:#000000;
+      --text-main:#111827;
+      --text-muted:#6b7280;
+      --border:#d0d7de;
+      --table-header:#f5f7fa;
+      --blue-bg:#f0f8ff;
+      --blue-border:#a0c4ff;
+      --blue-text:#1a3e8c;
+      --toc-bg:#f7fbff;
+      --toc-border:#d6e4fa;
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+      color:var(--text-main);
+      line-height:1.65;
+      background:#ffffff;
+    }
+
+    .container{ width:100%; }
+
+    h3{
+      margin:24px 0 8px;
+      padding-bottom:6px;
+      font-family:"Montserrat",Arial,sans-serif;
+      font-size:18px;
+      font-weight:600;
+      color:#000;
+      border-bottom:1.5px solid var(--border);
+      scroll-margin-top:100px;
+    }
+
+    .main-toc{
+      max-width:900px;
+      margin:0 auto 40px;
+      padding:16px 20px;
+      background:var(--toc-bg);
+      border:1px solid var(--toc-border);
+      border-radius:6px;
+    }
+
+    .main-toc ul{ list-style:none; padding:0; margin:0; }
+    .main-toc li{ margin:.3rem 0; }
+    .main-toc a{
+      color:var(--blue-text);
+      font-weight:600;
+      text-decoration:none;
+    }
+
+    .pdf-viewer{
+      max-width:900px;
+      height:600px;
+      margin:24px auto 20px;
+      border:1px solid #ccc;
+      border-radius:6px;
+      overflow:hidden;
+    }
+
+    .pdf-viewer iframe{
+      width:100%;
+      height:100%;
+      border:none;
+    }
+
+    .pdf-download{
+      max-width:900px;
+      margin:0 auto 36px;
+      padding:14px 18px;
+      background:var(--blue-bg);
+      border:1px solid var(--blue-border);
+      border-radius:6px;
+      text-align:center;
+    }
+
+    .pdf-download a{
+      color:var(--blue-text);
+      font-weight:600;
+    }
+
+    .table-wrap{ margin:12px 0 32px; }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      font-size:14px;
+    }
+
+    th,td{
+      border:1px solid var(--border);
+      padding:8px 12px;
+      vertical-align:top;
+    }
+
+    th{
+      background:var(--table-header);
+      font-weight:700;
+      border-bottom:2px solid var(--black);
+    }
+
+    code{
+      font-family:ui-monospace,monospace;
+      font-size:.95em;
+      padding:.15em .35em;
+      border-radius:4px;
+      background:#f5f7fa;
+      border:1px solid var(--border);
+    }
+
+    figure { text-align:center; }
+
+    figure figcaption{
+      margin-top:6px;
+      font-size:0.85rem;
+      color:#6b7280;
+    }
+
+    .doc-logos{
+      margin:24px 0;
+      display:flex;
+      gap:20px;
+      align-items:center;
+    }
+
+    .doc-logos img{
+      height:42px;
+      width:auto;
+      display:block;
+    }
+
+    .logo-ce{ margin:16px 0; }
+    .logo-ce img{
+      height:38px;
+      width:auto;
+      display:block;
+    }
+
+    .footer-note{
+      margin-top:40px;
+      padding-top:16px;
+      border-top:1px solid var(--border);
+      font-size:.82rem;
+      color:var(--text-muted);
+    }
+
+    .footer-note p{ margin:0; }
+
+    .footer-note p:last-child{
+      padding-left:14px;
+      font-style:italic;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- PDF -->
+<div class="pdf-viewer">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/30302d595a2e8874af3d958684b29bf5ff68168e/Juno_Tracker/Juno_Tracker_lora_payload_description/Juno_LOEU_Tracker_TH_Payload_Description_EN_1.0.1.pdf"
+    title="Juno LoRaWAN TH Tracker Payload Description">
+  </iframe>
+</div>
+
+<div class="pdf-download">
+  You can view the PDF above or
+  <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/30302d595a2e8874af3d958684b29bf5ff68168e/Juno_Tracker/Juno_Tracker_lora_payload_description/Juno_LOEU_Tracker_TH_Payload_Description_EN_1.0.1.pdf"
+     target="_blank" rel="noopener noreferrer">
+    download it here
+  </a>.
+</div>
+
+<!-- TOC -->
+<div class="main-toc">
+  <strong>Table of Contents</strong>
+  <ul>
+    <li><a href="#version-history">1. Version History</a></li>
+    <li><a href="#overview">2. Overview</a></li>
+    <li><a href="#module-key-structure">3. Structure of the Module Key</a></li>
+    <li><a href="#uplink-example">4. Uplink Example (Not Applicable for Juno)</a></li>
+    <li><a href="#port-assignment">5. Port Assignment</a></li>
+    <li><a href="#decoding">6. Decoding of WIFI SSID and GNSS Scan Data</a></li>
+    <li><a href="#payload-th">7. Juno LoRaWAN TH Tracker Payload Description</a></li>
+    <li><a href="#payload-without-th">8. Juno LoRaWAN TH Tracker Payload Description (Without TH)</a></li>
+  </ul>
+</div>
+
+<!-- ================= VERSION HISTORY ================= -->
+<h3 id="version-history">1. Version History</h3>
+
+<div class="table-wrap" style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>Version</th>
+        <th>Date</th>
+        <th>Revision</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1.0.0</td>
+        <td>18.02.2025</td>
+        <td>Creation</td>
+      </tr>
+      <tr>
+        <td>1.0.1</td>
+        <td>24.04.2026</td>
+        <td>
+          Formatting<br>
+          Version history
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ================= OVERVIEW ================= -->
+<h3 id="overview">2. Overview</h3>
+
+<p>
+  This chapter describes the structure of the telemetry data. The number of bytes in the payload depends on
+  the configuration of the sensor. The structure of the data depends on which sensors are present in your product.
+</p>
+
+<p>
+  In principle, each version has a header. This has information about the version and status of the sensor and
+  also contains a master measured value. This measured value can simply be assumed to be the current measured value.
+</p>
+
+<p>
+  The header is followed by an additional payload part that contains further information, such as special parameters
+  for the measuring principle or settings for position and opening detection. Not every sensor has an additional
+  payload part.
+</p>
+
+<div class="table-wrap" style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>Terms</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Byte No.</td>
+        <td>Byte number starting at 1</td>
+      </tr>
+      <tr>
+        <td>Alias</td>
+        <td>Comprehensible name of the variable</td>
+      </tr>
+      <tr>
+        <td>Description</td>
+        <td>Description of the variables</td>
+      </tr>
+      <tr>
+        <td>Designation</td>
+        <td>Designation in the Dataconverter</td>
+      </tr>
+      <tr>
+        <td>Unit</td>
+        <td>Unit of the variables</td>
+      </tr>
+      <tr>
+        <td>Datahub .json key</td>
+        <td>Key in the .json when using the data hub</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ================= STRUCTURE OF MODULE KEY ================= -->
+<h3 id="module-key-structure">3. Structure of the Module Key</h3>
+
+<div class="table-wrap" style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2">Byte 1</th>
+        <th colspan="2">Byte 2</th>
+      </tr>
+      <tr>
+        <th>Bit 7 - 4</th>
+        <th>Bit 3 - 0</th>
+        <th>Bit 7 - 4</th>
+        <th>Bit 3 - 0</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Basic ID module e.g. Sentiface, Senticom, Sentivisor</td>
+        <td>Major version (SW/HW version)</td>
+        <td>Minor version (SW/HW version)</td>
+        <td>Product version (sensors, e.g. TH, THL, ACC, ...)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+  The module key of the SENTIFACE module can be taken from the first 2 bytes of each uplink.
+  The module key is required for the downlink.
+</p>
+
+<!-- ================= UPLINK EXAMPLE ================= -->
+<h3 id="uplink-example">4. Uplink Example (Not Applicable for Juno)</h3>
+
+<figure style="max-width:900px; margin:20px auto 28px;">
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/5ceafdfcdc00deecaa83a32598787361304f0715/Nyx/Nyx_Payload/uplink%20example%20pic%20%20payload%20decoder.png"
+    alt="Uplink payload decoding example"
+    style="width:100%; height:auto; display:block;"
+  >
+  <figcaption>Figure 1: Uplink payload decoding.</figcaption>
+</figure>
+
+<p>The following payload example is given for the Helios pressure sensor:</p>
+<p><code>11 11 FE 1A D5 95 06 03 00 23 BE</code></p>
+
+<div class="table-wrap" style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>Bytes</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+        <th>9</th>
+        <th>10</th>
+        <th>11</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>HEX</td>
+        <td>11</td>
+        <td>11</td>
+        <td>FE</td>
+        <td>1A</td>
+        <td>D5</td>
+        <td>95</td>
+        <td>06</td>
+        <td>03</td>
+        <td>00</td>
+        <td>23</td>
+        <td>BE</td>
+      </tr>
+      <tr>
+        <td>Description</td>
+        <td>Module key</td>
+        <td>Module key</td>
+        <td>Uplink counter</td>
+        <td>Battery voltage</td>
+        <td>Battery voltage</td>
+        <td>Temperature</td>
+        <td>Alarm flag</td>
+        <td>Alarm flag</td>
+        <td>Measurement status</td>
+        <td>Pressure mbar</td>
+        <td>Pressure mbar</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ================= PORT ASSIGNMENT ================= -->
+<h3 id="port-assignment">5. Port Assignment for WIFI SSID Scan Payload, GNSS Scan Payload and Regular Payload</h3>
+
+<div class="table-wrap" style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>LoRaWAN Port</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>GNSS Scan Payload</td>
+        <td>192</td>
+        <td>Raw data (satellite ID, time, etc.) is sent to the geolocation backend.</td>
+      </tr>
+      <tr>
+        <td>WIFI SSID Scan Payload</td>
+        <td>197</td>
+        <td>Scanned MAC addresses + RSSI data are transmitted for localization.</td>
+      </tr>
+      <tr>
+        <td>Regular telemetry data</td>
+        <td>1</td>
+        <td>Regular payload data from the sensor, such as temperature, relative humidity, angle, battery voltage, etc.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Example of the WIFI SSID scan payload:</p>
+
+<figure style="max-width:420px; margin:20px 0 28px; text-align:left;">
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/afa9c7aa3dcbe9ba04c6b5b4b31423451b2b759d/Juno_BSX/Juno_BSX_Payload/Pic/Juno_BSX_pic2_WIFISSIDBeispiel.webp"
+    alt="WIFI SSID scan payload example"
+    style="width:100%; height:auto; display:block;"
+  >
+</figure>
+
+<!-- ================= DECODING ================= -->
+<h3 id="decoding">6. Decoding of WIFI SSID Scan and GNSS Scan Data</h3>
+
+<p>The following providers can be recommended for decoding the WIFI SSID SCAN and GNSS SCAN data:</p>
+<ul>
+  <li>Semtech LoRa Cloud (discontinued at the end of July 2025)</li>
+  <li>AWS</li>
+  <li>Tencent</li>
+  <li>Traxmate</li>
+  <li>Sentinum</li>
+</ul>
+<p>Local databases can be used for on-prem applications.</p>
+
+<!-- ================= PAYLOAD TH ================= -->
+<h3 id="payload-th">7. Juno LoRaWAN TH Tracker Payload Description</h3>
+
+<div class="table-wrap" style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>Item number</th>
+        <th>Radio standard</th>
+        <th>Functions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>S-JUNO(-iX)-LOEU-TH-TRACK</td>
+        <td>LoRaWAN®</td>
+        <td>Temperature, relative humidity, tilt detection, activity detection, opening and motion detection</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="table-wrap" style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>Byte number</th>
+        <th>Alias name</th>
+        <th>Description</th>
+        <th>Unit</th>
+        <th>Designation in the payload decoder</th>
+        <th>Module key</th>
+        <th>Datahub .json key</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1 - 2</td>
+        <td>Module key</td>
+        <td>
+          <strong>Byte 1:</strong><br>
+          4-bit MSB: Module code. For Mioty exclusively "Sentiface" telemetry module, i.e. always 0x1.<br>
+          4 bit LSB: Major version. FW of the same major version but larger minor version remain compatible with older decoders. However, the number of bytes may change!<br><br>
+          <strong>Byte 2:</strong><br>
+          4-bit MSB: Minor version. New SW versions may incrementally add new telemetry to the data packet.<br>
+          4 Bit LSB: Sub / Product Version. With Helios, these bits encode the specific configuration of connected sensors.
+        </td>
+        <td></td>
+        <td><code>module_key</code></td>
+        <td>XXX1</td>
+        <td><code>module_key</code></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Uplink counter</td>
+        <td>Uplink counter: Protocol-independent uplink counter that reaches a maximum of 255. After that, the counter starts again at 0.</td>
+        <td></td>
+        <td><code>uplink_counter</code></td>
+        <td>XXX1</td>
+        <td><code>uplink_counter</code></td>
+      </tr>
+      <tr>
+        <td>4 - 5</td>
+        <td>Battery voltage</td>
+        <td>Current voltage of the battery in millivolts. Voltage in volts: <code>battery_voltage: (dataBytes[3] << 8 | dataBytes[4])/1000.0</code></td>
+        <td>mV</td>
+        <td><code>battery_voltage</code></td>
+        <td>XXX1</td>
+        <td><code>battery_voltage</code></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Internal temperature</td>
+        <td>Temperature of the sensor: <code>Internal_temperature = | bytes[6] - 128;</code> This value is the temperature value of the controller for this sensor and an inaccurate temperature value +/-2°C.</td>
+        <td>°C</td>
+        <td><code>internal_temperature</code></td>
+        <td>XXX1</td>
+        <td><code>internal_temperature</code></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Alarms</td>
+        <td>
+          The alarms are coded as follows. Caution: Several alarms can be active at the same time!<br>
+          DEZ 1, BIN 0000 0001: Temperature High limit value exceeded<br>
+          DEZ 2, BIN 0000 0010: Temperature low below limit value<br>
+          DEZ 4, BIN 0000 0100: Delta alarm temperature<br>
+          DEZ 8, BIN 0000 1000: Relative humidity High limit value exceeded<br>
+          DEZ 16, BIN 0001 0000: Relative humidity Low below limit value<br>
+          DEZ 32, BIN 0010 0000: Delta alarm rel. humidity
+        </td>
+        <td></td>
+        <td><code>humidity</code></td>
+        <td>XXX1</td>
+        <td><code>humidity</code></td>
+      </tr>
+      <tr>
+        <td>8 - 9</td>
+        <td>Temperature</td>
+        <td>Exact temperature of the SHT40, as described in the data sheet. <code>decoded.temperature = ((bytes[idx++] << 8) | bytes[idx++]) / 10 - 100;</code></td>
+        <td>°C</td>
+        <td><code>temperature</code></td>
+        <td>XXX1</td>
+        <td><code>temperature</code></td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>Relative humidity</td>
+        <td>Relative humidity of the SHT40, as described in the data sheet.</td>
+        <td>%RH</td>
+        <td><code>humidity</code></td>
+        <td>XXX1</td>
+        <td><code>humidity</code></td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>Acceleration sensor status</td>
+        <td>0: Acceleration sensor without error, other: Acceleration sensor error</td>
+        <td></td>
+        <td><code>acc_status</code></td>
+        <td>XXX1</td>
+        <td><code>acc_status</code></td>
+      </tr>
+      <tr>
+        <td>12 - 15</td>
+        <td>Timestamp start of a movement</td>
+        <td>Returns the timestamp in seconds at the start of the movement.</td>
+        <td>s</td>
+        <td><code>move_start</code></td>
+        <td>XXX1</td>
+        <td><code>move_start</code></td>
+      </tr>
+      <tr>
+        <td>16 - 19</td>
+        <td>Timestamp end of a movement</td>
+        <td>Returns the timestamp in seconds at the end of the movement.</td>
+        <td>s</td>
+        <td><code>move_end</code></td>
+        <td>XXX1</td>
+        <td><code>move_end</code></td>
+      </tr>
+      <tr>
+        <td>20</td>
+        <td>Object is currently moving</td>
+        <td>Returns whether the object is currently in motion: 0: No activity, 1: Object in motion.</td>
+        <td></td>
+        <td><code>moving</code></td>
+        <td>XXX1</td>
+        <td><code>moving</code></td>
+      </tr>
+      <tr>
+        <td>21 - 22</td>
+        <td>Number of activities counted</td>
+        <td>Counts the number of activities.</td>
+        <td></td>
+        <td><code>move_cnt</code></td>
+        <td>XXX1</td>
+        <td><code>move_cnt</code></td>
+      </tr>
+      <tr>
+        <td>23</td>
+        <td>Angle</td>
+        <td>Returns the angle in °, resolution 1°.</td>
+        <td>°</td>
+        <td><code>angle</code></td>
+        <td>XXX1</td>
+        <td><code>angle</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ================= PAYLOAD WITHOUT TH ================= -->
+<h3 id="payload-without-th">8. Juno LoRaWAN TH Tracker Payload Description (Without TH)</h3>
+
+<div class="table-wrap" style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>Item number</th>
+        <th>Radio standard</th>
+        <th>Functions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>S-JUNO(-iX)-LOEU-TRACK</td>
+        <td>LoRaWAN®</td>
+        <td>Tilt detection, activity detection, opening and motion detection</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="table-wrap" style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>Byte number</th>
+        <th>Alias name</th>
+        <th>Description</th>
+        <th>Unit</th>
+        <th>Designation in the payload decoder</th>
+        <th>Module key</th>
+        <th>Datahub .json key</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1 - 2</td>
+        <td>Module key</td>
+        <td>
+          <strong>Byte 1:</strong><br>
+          4-bit MSB: Module code. For Mioty exclusively "Sentiface" telemetry module, i.e. always 0x1.<br>
+          4 bit LSB: Major version. FW of the same major version but larger minor version remain compatible with older decoders. However, the number of bytes may change!<br><br>
+          <strong>Byte 2:</strong><br>
+          4-bit MSB: Minor version. New SW versions may incrementally add new telemetry to the data packet.<br>
+          4 Bit LSB: Sub / Product Version. With Helios, these bits encode the specific configuration of connected sensors.
+        </td>
+        <td></td>
+        <td><code>module_key</code></td>
+        <td>XXX1</td>
+        <td><code>module_key</code></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Uplink counter</td>
+        <td>Uplink counter: Protocol-independent uplink counter that reaches a maximum of 255. After that, the counter starts again at 0.</td>
+        <td></td>
+        <td><code>uplink_counter</code></td>
+        <td>XXX1</td>
+        <td><code>uplink_counter</code></td>
+      </tr>
+      <tr>
+        <td>4 - 5</td>
+        <td>Battery voltage</td>
+        <td>Current voltage of the battery in millivolts. Voltage in volts: <code>battery_voltage: (dataBytes[3] << 8 | dataBytes[4])/1000.0</code></td>
+        <td>mV</td>
+        <td><code>battery_voltage</code></td>
+        <td>XXX1</td>
+        <td><code>battery_voltage</code></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Internal temperature</td>
+        <td>Temperature of the sensor: <code>Internal_temperature = | bytes[6] - 128;</code> For this sensor, this value is the temperature value of the controller and an inaccurate temperature value +/-2°C.</td>
+        <td>°C</td>
+        <td><code>internal_temperature</code></td>
+        <td>XXX1</td>
+        <td><code>internal_temperature</code></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Acceleration sensor status</td>
+        <td>0: Acceleration sensor without error, other: Acceleration sensor error</td>
+        <td></td>
+        <td><code>acc_status</code></td>
+        <td>XXX1</td>
+        <td><code>acc_status</code></td>
+      </tr>
+      <tr>
+        <td>8 - 11</td>
+        <td>Timestamp start of a movement</td>
+        <td>Returns the timestamp in seconds at the start of the movement.</td>
+        <td>s</td>
+        <td><code>move_start</code></td>
+        <td>XXX1</td>
+        <td><code>move_start</code></td>
+      </tr>
+      <tr>
+        <td>12 - 15</td>
+        <td>Timestamp end of a movement</td>
+        <td>Returns the timestamp in seconds at the end of the movement.</td>
+        <td>s</td>
+        <td><code>move_end</code></td>
+        <td>XXX1</td>
+        <td><code>move_end</code></td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td>Object is currently moving</td>
+        <td>Returns whether the object is currently in motion: 0: No activity, 1: Object in motion.</td>
+        <td></td>
+        <td><code>moving</code></td>
+        <td>XXX1</td>
+        <td><code>moving</code></td>
+      </tr>
+      <tr>
+        <td>17 - 18</td>
+        <td>Number of activities counted</td>
+        <td>Counts the number of activities.</td>
+        <td></td>
+        <td><code>move_cnt</code></td>
+        <td>XXX1</td>
+        <td><code>move_cnt</code></td>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td>Angle</td>
+        <td>Returns the angle in °, resolution 1°.</td>
+        <td>°</td>
+        <td><code>angle</code></td>
+        <td>XXX1</td>
+        <td><code>angle</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="doc-logos">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/logo/mioty_lora_nb-IOT_LTE.png"
+    alt="mioty / LoRa / NB-IoT / LTE">
+</div>
+
+<!-- CE / WEEE LOGO -->
+<div class="logo-ce">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/logo/CE_Trash_seals.png"
+    alt="CE and WEEE compliance marks"
+    style="height:38px;">
+</div>
+
+<!-- DISCLAIMER -->
+<div class="footer-note">
+  <p>© Sentinum GmbH - All rights reserved.</p>
+  <p>All contents of this document, including text, tables and images, are protected by copyright and are the property of Sentinum GmbH.</p>
+  <p>All images are subject to the copyright of Sentinum GmbH unless otherwise stated.</p>
+  <p>Reproduction, distribution or use - even in part - is not permitted without explicit written permission.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Specifications subject to change. All information provided without warranty.
+  </p>
+</div>
+
+</body>
+</html>
