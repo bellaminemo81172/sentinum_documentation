@@ -1,0 +1,557 @@
+
+
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+
+<!-- ✅ CSS – UNVERÄNDERT -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+  --blue-bg:#f7fbff;
+  --blue-border:#d6e4fa;
+  --blue-text:#1a3e8c;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+}
+
+/* Base */
+body{
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+}
+
+/* Headings */
+h1{
+  margin:48px 0 16px;
+  padding-bottom:12px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:42px;
+  font-weight:700;
+  border-bottom:2px solid var(--border);
+}
+
+h3{
+  margin:32px 0 12px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:120px;
+}
+
+p{margin:8px 0 12px}
+
+/* Tables */
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+  table-layout:fixed;
+}
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid #000;
+}
+
+/* TOC */
+.main-toc{
+  max-width:900px;
+  margin:24px auto 40px;
+  padding:16px 20px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+}
+.main-toc strong{display:block;margin-bottom:8px;}
+.main-toc ul{list-style:none;padding:0;margin:0;}
+.main-toc li{margin:.35rem 0;}
+.main-toc a{color:var(--blue-text);font-weight:600;text-decoration:none;}
+.main-toc a:hover{text-decoration:underline;}
+
+/*/* ---------- PDF ---------- */
+        .pdf-viewer{
+          max-width:900px;
+          height:600px;
+          margin:0 auto 20px;
+          border:1px solid #ccc;
+          border-radius:6px;
+          overflow:hidden;
+        }
+        
+        .pdf-viewer iframe{
+          width:100%;
+          height:100%;
+          border:none;
+        }
+        
+        .pdf-download{
+          max-width:900px;
+          margin:0 auto 36px;
+          padding:14px 18px;
+          background:var(--blue-bg);
+          border:1px solid var(--blue-border);
+          border-radius:6px;
+          text-align:center;
+        }
+        
+        .pdf-download a{
+          color:var(--blue-text);
+          font-weight:600;
+        }
+
+
+/* ---------- Figures ---------- */
+.figure{
+  max-width:900px;
+  margin:24px auto;
+}
+
+.figure img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+
+.figure figcaption{
+  margin-top:6px;
+  color:var(--text-muted);
+  font-size:0.875rem;
+}
+  .note-strip{
+    padding:14px 16px;
+    margin:18px 0;
+    border-radius:6px;
+    border-left-width:6px;
+    border-left-style:solid;
+  }
+
+  .note-strip--red{
+    background:#fdecea;
+    border-left-color:#d32f2f;
+  }
+
+  .note-strip--yellow{
+    background:#fff8e1;
+    border-left-color:#f9a825;
+  }
+
+  .note-strip--green{
+    background:#e8f5e9;
+    border-left-color:#2e7d32;
+  }
+  .note-strip p,
+  .note-strip ul{
+    margin:0;
+  }
+  /* ---------- Tabelle mit automatischer Spaltenbreite ---------- */
+table.auto-layout{
+  table-layout: auto;
+}
+
+table.auto-layout th,
+table.auto-layout td{
+  width: auto;          /* überschreibt nth-child Breiten */
+}
+
+
+</style>
+</head>
+
+<body>
+<main>
+
+<!-- PDF Viewer -->
+<div class="pdf-viewer">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/9ba684e84f29d26ae6a00b9e2b1e3474df5c7f69/Apollon_q/Apollon_q_downlink/DE/Apollon_Q_PP_NFC_und_Downlinkbeschreibung_DE.pdf"
+    loading="lazy"
+    title="Apollon Q – NFC und Downlink Beschreibung (PDF)">
+  </iframe>
+</div>
+
+<!-- PDF Download -->
+<div class="pdf-download">
+  📄 Sie können das Dokument oben ansehen oder
+  <a
+    href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/9ba684e84f29d26ae6a00b9e2b1e3474df5c7f69/Apollon_q/Apollon_q_downlink/DE/Apollon_Q_PP_NFC_und_Downlinkbeschreibung_DE.pdf"
+    target="_blank"
+    rel="noopener">
+    hier als PDF herunterladen
+  </a>.
+</div>
+
+<!-- Inhaltsverzeichnis -->
+<section class="main-toc">
+  <strong>Inhalt</strong>
+  <ul>
+    <li><a href="#module">1. Modulübersicht</a></li>
+    <li><a href="#measurements">2. Messungen (0x00)</a></li>
+    <li><a href="#levels">3. Level (0x01)</a></li>
+  </ul>
+</section>
+
+<!-- Modulübersicht -->
+<section id="module">
+<h3>1. Modulübersicht</h3>
+
+<table>
+<thead>
+<tr>
+<th>Modul</th>
+<th>Modulschlüssel</th>
+<th>Gruppe</th>
+<th>Gruppen ID</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sentiface</strong></td>
+<td>0x1XXX</td>
+<td>Messungen</td>
+<td>0x00</td>
+<td>Einstellungen wie Sensorverhalten, Genauigkeit, Erfassungsraten und Feinabstimmung</td>
+</tr>
+<tr>
+<td><strong>Sentiface</strong></td>
+<td>0x1XXX</td>
+<td>Level</td>
+<td>0x01</td>
+<td>Anzahl und Distanz der Level sowie Hysterese</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+  Tabellen für produktübergreifende Module (Senticom/Sentivisor) finden Sie in der
+  <a
+    href="https://docs.sentinum.de/generische-nfc-und-downlink-dokumentation"
+    target="_blank"
+    rel="noopener"
+  >
+    Generischen NFC‑ und Downlink‑Dokumentation
+  </a>.
+</p>
+
+<p><strong>
+  Weitere Informationen zur Konfiguration der Sensor‑Kommunikation finden Sie je
+  nach Version in der jeweiligen generischen
+  <a
+    href="https://docs.sentinum.de/generische-lorawan"
+    target="_blank"
+    rel="noopener"
+  >
+    LoRaWAN®
+  </a>,
+  <a
+    href="https://docs.sentinum.de/generische-mioty"
+    target="_blank"
+    rel="noopener"
+  >
+    mioty®
+  </a>
+  oder
+  <a
+    href="https://docs.sentinum.de/generische-cellular-dokumentation"
+    target="_blank"
+    rel="noopener"
+  >
+    Cellular
+  </a>
+  Dokumentation.</strong>
+</p>
+
+</section>
+
+<!-- Messungen -->
+<section id="measurements">
+<h3>2. Sentiface – Gruppe Messungen (0x00, PP)</h3>
+
+<table class="auto-layout">
+<thead>
+<tr>
+<th>Ressource</th>
+<th>ID</th>
+<th>Beschreibung</th>
+<th>Schlüssel</th>
+<th>Min</th>
+<th>Max</th>
+<th>Werkseinstellung</th>
+<th>Einheit</th>
+<th>Modulschlüssel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Messperiode</strong></td>
+<td>0x01</td>
+<td>Gibt die Periode an, in der die Messwerte erfasst werden. 5000 heißt, dass immer nach 5 Sekunden eine Messungen durch den Sensor durchgeführt wird.</td>
+<td>mper</td>
+<td>20</td>
+<td>60000</td>
+<td>5000</td>
+<td>ms</td>
+<td>1111</td>
+</tr>
+<tr>
+<td><strong>Proben</strong></td>
+<td>0x02</td>
+<td>ADVANCED: Einstellung der Sensorperformance, je höher desto robuster und weiter kann die Messung erfolgen, auf Kosten erhöhten Stromverbrauchs.</td>
+<td>samples</td>
+<td>1</td>
+<td>255</td>
+<td>100</td>
+<td></td>
+<td>1111</td>
+</tr>
+<tr>
+<td><strong>Sigma</strong></td>
+<td>0x03</td>
+<td>ADVANCED: Mindestvarianz und Standardabweichung, mit der ein Ziel als Ziel wahrgenommen wird. Wenn Sigma zu klein steigt die Wahrscheinlichkeit für Fehldetektionen..</td>
+<td>sigma</td>
+<td>1</td>
+<td>16383</td>
+<td>1500</td>
+<td></td>
+<td>1111</td>
+</tr>
+<tr>
+<td><strong>Signal</strong></td>
+<td>0x04</td>
+<td>ADVANCED: Mindestanzahl von Photonen, Mindestreflektivität, die vom Ziel zurückkommen muss, um als Ziel erkannt zu werden.</td>
+<td>signal</td>
+<td>1</td>
+<td>16383</td>
+<td>50</td>
+<td></td>
+<td>1111</td>
+</tr>
+<tr>
+<td><strong>Buzzer</strong></td>
+<td>0x05</td>
+<td>Gibt an, ob der Piepton (Buzzer) eingeschaltet ist:
+0: Aus
+1: Ein
+</td>
+<td>buzz</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td></td>
+<td>1111</td> </tr>
+<tr>
+  <td><strong>Stabil</strong></td>
+  <td>0x06</td>
+  <td>
+    Beschreibt, wie viele Messungen auf ein Level gemessen werden müssen,
+    um als Level erkannt zu werden. Kann dafür verwendet werden,
+    Fehlmessungen oder Schwankungen auszugleichen, z.B. wenn ein Arm in
+    eine Kiste greift, um Güter zu entnehmen.
+  </td>
+  <td>stabl</td>
+  <td>1</td>
+  <td>8</td>
+  <td>2</td>
+  <td></td>
+  <td>1111</td>
+</tr>
+
+<tr>
+  <td><strong>Region of interest</strong></td>
+  <td>0x07</td>
+  <td>
+    Advanced: Region of Interest
+  </td>
+  <td>roi</td>
+  <td>4</td>
+  <td>16</td>
+  <td>16</td>
+  <td></td>
+  <td>1111</td>
+</tr>
+
+<tr>
+  <td><strong>Statusperiode, heartbeat</strong></td>
+  <td>0x08</td>
+  <td>
+    Statusperiode in Minuten: Nach jedem Ablauf der Statusperiode wird
+    ein Uplink gesendet.
+  </td>
+  <td>sper</td>
+  <td>10</td>
+  <td>10080</td>
+  <td>60</td>
+  <td>min</td>
+  <td>1111</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<!-- Level -->
+<section id="levels">
+<h3>3. Sentiface – Gruppe Level (0x01, PP)</h3>
+
+
+
+<table class="auto-layout">
+    <thead>
+  <tr>
+    <th>Ressource</th>
+    <th>Ressourcen&nbsp;ID</th>
+    <th>Beschreibung</th>
+    <th>Schlüssel<br>(NFC/BLE)</th>
+    <th>Min</th>
+    <th>Max</th>
+    <th>Werkseinstellung</th>
+    <th>Einheit</th>
+    <th>Modulschlüssel</th>
+  </tr>
+</thead>
+
+<thead>
+<tr>
+  <td><strong>Anzahl der level</strong></td>
+  <td>0x01</td>
+  <td>
+    Anzahl der Level, die definiert werden können:<br>
+    1: 1 Level&nbsp;&nbsp;&nbsp;&nbsp;
+    2: 2 Level<br>
+    3: 3 Level&nbsp;&nbsp;&nbsp;&nbsp;
+    4: 4 Level
+  </td>
+  <td>lvls</td>
+  <td>1</td>
+  <td>4</td>
+  <td>2</td>
+  <td></td>
+  <td>1111</td>
+</tr>
+
+<tr>
+  <td><strong>Dynamisches level</strong></td>
+  <td>0x02</td>
+  <td>
+    Beschreibt, ob bei Wechsel zwischen den Levels auch Alarme gesendet
+    werden sollen:<br>
+    1: Ja<br>
+    0: Nur bei Wechsel, Über‑ oder Unterschreitung von Distanz Level 1
+  </td>
+  <td>dynlvl</td>
+  <td>0</td>
+  <td>1</td>
+  <td>0</td>
+  <td></td>
+  <td>1111</td>
+</tr>
+
+<tr>
+  <td><strong>Distanz level 1</strong></td>
+  <td>0x03</td>
+  <td>Distanz, um eine Zustandsänderung von Level 1 auszulösen.</td>
+  <td>l1d</td>
+  <td>50</td>
+  <td>2000</td>
+  <td>400</td>
+  <td>mm</td>
+  <td>1111</td>
+</tr>
+
+<tr>
+  <td><strong>Distanz level 2</strong></td>
+  <td>0x04</td>
+  <td>Distanz, um eine Zustandsänderung von Level 2 auszulösen.</td>
+  <td>l2d</td>
+  <td>50</td>
+  <td>2000</td>
+  <td>50</td>
+  <td>mm</td>
+  <td>1111</td>
+</tr>
+
+<tr>
+  <td><strong>Distanz level 3</strong></td>
+  <td>0x05</td>
+  <td>Distanz, um eine Zustandsänderung von Level 3 auszulösen.</td>
+  <td>l3d</td>
+  <td>50</td>
+  <td>2000</td>
+  <td>400</td>
+  <td>mm</td>
+  <td>1111</td>
+</tr>
+
+<tr>
+  <td><strong>Distanz level 4</strong></td>
+  <td>0x06</td>
+  <td>Distanz, um eine Zustandsänderung von Level 4 auszulösen.</td>
+  <td>l4d</td>
+  <td>50</td>
+  <td>2000</td>
+  <td>100</td>
+  <td>mm</td>
+  <td>1111</td>
+</tr>
+
+<tr>
+  <td><strong>Hysterese</strong></td>
+  <td>0x07</td>
+  <td>
+    Hysterese um die Schwellwerte herum, um Oszillation bei Messungen im
+    Grenzbereich zu vermeiden.
+  </td>
+  <td>lhyst</td>
+  <td>10</td>
+  <td>500</td>
+  <td>20</td>
+  <td></td>
+  <td>1111</td>
+</tr></thead></table>
+
+<br>
+<br>
+<div style="display: flex; flex-direction: column; gap: 24px; align-items: center;">
+
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png"
+    alt="Unterstützte Funktechnologien"
+    style="max-width: 620px; height: auto;"
+  >
+
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/CE_Trash_seals.png"
+    alt="CE Kennzeichnung und Entsorgungssymbole"
+    style="max-width: 320px; height: auto;"
+  >
+
+</div>
+
+
+<!-- FOOTER -->
+<div style="border-top:1px solid #d0d7de;margin-top:40px;padding-top:16px;font-size:.85rem;color:#6b7280;">
+</div>
+<div class="footer-note">
+  <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+  <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
+  </p>
+</div>
+
+</body>
+</html>

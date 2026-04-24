@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>Apollon Q – NFC and Downlink Description</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+  --blue-bg:#f7fbff;
+  --blue-border:#d6e4fa;
+  --blue-text:#1a3e8c;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+}
+
+body{
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+}
+
+h3{
+  margin:32px 0 12px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  border-bottom:1.5px solid var(--border);
+}
+
+p{margin:8px 0 12px}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+}
+
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid #000;
+}
+
+.main-toc{
+  max-width:900px;
+  margin:24px auto 40px;
+  padding:16px 20px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+}
+
+.main-toc strong{display:block;margin-bottom:8px;}
+.main-toc ul{list-style:none;margin:0;padding:0;}
+.main-toc li{margin:.35rem 0;}
+.main-toc a{color:var(--blue-text);font-weight:600;text-decoration:none;}
+
+.pdf-viewer{
+  max-width:900px;
+  height:600px;
+  margin:0 auto 20px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  overflow:hidden;
+}
+.pdf-viewer iframe{
+  width:100%;
+  height:100%;
+  border:none;
+}
+
+.pdf-download{
+  max-width:900px;
+  margin:0 auto 36px;
+  padding:14px 18px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+  text-align:center;
+}
+.pdf-download a{
+  color:var(--blue-text);
+  font-weight:600;
+}
+
+table.auto-layout{
+  table-layout:auto;
+}
+</style>
+</head>
+
+<body>
+<main>
+
+<!-- PDF Viewer -->
+<div class="pdf-viewer">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/e0a639a98388d7d7b9d9a71546b402308127fc10/Apollon_q/Apollon_q_downlink/EN/Apollon_Q_PP_NFC_and_Downlink_Description_EN.pdf"
+    loading="lazy"
+    title="Apollon Q – NFC and Downlink Description (PDF)">
+  </iframe>
+</div>
+
+<!-- PDF Download -->
+<div class="pdf-download">
+  📄 You can view the document above or
+  <a
+    href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/e0a639a98388d7d7b9d9a71546b402308127fc10/Apollon_q/Apollon_q_downlink/EN/Apollon_Q_PP_NFC_and_Downlink_Description_EN.pdf"
+    target="_blank"
+    rel="noopener">
+    download the PDF here
+  </a>.
+</div>
+
+<!-- Contents -->
+<section class="main-toc">
+  <strong>Contents</strong>
+  <ul>
+    <li><a href="#module">1. Module overview</a></li>
+    <li><a href="#measurements">2. Measurements (0x00)</a></li>
+    <li><a href="#levels">3. Levels (0x01)</a></li>
+  </ul>
+</section>
+
+<!-- Module overview -->
+<section id="module">
+<h3>1. Module overview</h3>
+
+<table>
+<thead>
+<tr>
+  <th>Module</th>
+  <th>Module key</th>
+  <th>Group</th>
+  <th>Group ID</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>Sentiface</strong></td>
+  <td>0x1XXX</td>
+  <td>Measurement</td>
+  <td>0x00</td>
+  <td>Settings such as sensor behavior, accuracy of detection rates and fine tuning</td>
+</tr>
+<tr>
+  <td><strong>Sentiface</strong></td>
+  <td>0x1XXX</td>
+  <td>Level</td>
+  <td>0x01</td>
+  <td>Number and distance of levels and hysteresis</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+  Tables for cross‑product modules (Senticom/Sentivisor) can be found in the
+  <a href="https://docs.sentinum.de/en/important-cross-product-documentation-for-sensors" target="_blank" rel="noopener">
+    generic NFC and downlink documentation
+  </a>.
+</p>
+
+<p><strong>
+  Further information on configuring sensor communication can be found in the
+  respective generic
+  <a href="https://docs.sentinum.de/en/generische-lorawan-dokumentation" target="_blank" rel="noopener">LoRaWAN®</a>,
+  <a href="https://docs.sentinum.de/en/generic-mioty-documentation" target="_blank" rel="noopener">mioty®</a>
+  or
+  <a href="https://docs.sentinum.de/en/generic-cellular-documentation" target="_blank" rel="noopener">Cellular</a>
+  documentation, depending on the version.
+</strong></p>
+</section>
+
+<!-- Measurements -->
+<section id="measurements">
+<h3>2. Sentiface – Measurement group (0x00, PP)</h3>
+
+<table class="auto-layout">
+<thead>
+<tr>
+  <th>Resource</th>
+  <th>Resource ID</th>
+  <th>Description</th>
+  <th>Key (NFC/BLE)</th>
+  <th>Min</th>
+  <th>Max</th>
+  <th>Default</th>
+  <th>Unit</th>
+  <th>Module key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>Measurement period</strong></td>
+  <td>0x01</td>
+  <td>Specifies the period in which the measured values are recorded. 5000 ms means that a measurement is taken every 5 seconds.</td>
+  <td>mper</td>
+  <td>20</td>
+  <td>60000</td>
+  <td>5000</td>
+  <td>ms</td>
+  <td>1111</td>
+</tr>
+<tr>
+  <td><strong>Samples</strong></td>
+  <td>0x02</td>
+  <td>Advanced: Sensor performance setting. Higher values increase robustness and range at the cost of higher power consumption.</td>
+  <td>samples</td>
+  <td>1</td>
+  <td>255</td>
+  <td>100</td>
+  <td></td>
+  <td>1111</td>
+</tr>
+<tr>
+  <td><strong>Sigma</strong></td>
+  <td>0x03</td>
+  <td>Advanced: Minimum variance and standard deviation for target detection.</td>
+  <td>sigma</td>
+  <td>1</td>
+  <td>16383</td>
+  <td>1500</td>
+  <td></td>
+  <td>1111</td>
+</tr>
+<tr>
+  <td><strong>Signal</strong></td>
+  <td>0x04</td>
+  <td>Advanced: Minimum number of photons / reflectivity required to detect a target.</td>
+  <td>signal</td>
+  <td>1</td>
+  <td>16383</td>
+  <td>50</td>
+  <td></td>
+  <td>1111</td>
+</tr>
+<tr>
+  <td><strong>Buzzer</strong></td>
+  <td>0x05</td>
+  <td>Indicates whether the buzzer is enabled:<br>0: Off<br>1: On</td>
+  <td>buzz</td>
+  <td>0</td>
+  <td>1</td>
+  <td>1</td>
+  <td></td>
+  <td>1111</td>
+</tr>
+<tr>
+  <td><strong>Stable</strong></td>
+  <td>0x06</td>
+  <td>Defines how many measurements must be taken on one level to be recognized as valid.</td>
+  <td>stabl</td>
+  <td>1</td>
+  <td>8</td>
+  <td>2</td>
+  <td></td>
+  <td>1111</td>
+</tr>
+<tr>
+  <td><strong>Region of interest</strong></td>
+  <td>0x07</td>
+  <td>Advanced: Region of Interest.</td>
+  <td>roi</td>
+  <td>4</td>
+  <td>16</td>
+  <td>16</td>
+  <td></td>
+  <td>1111</td>
+</tr>
+<tr>
+  <td><strong>Status period, heartbeat</strong></td>
+  <td>0x08</td>
+  <td>Status period in minutes. An uplink is sent after each expiration.</td>
+  <td>sper</td>
+  <td>10</td>
+  <td>10080</td>
+  <td>60</td>
+  <td>min</td>
+  <td>1111</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<!-- Levels -->
+<section id="levels">
+<h3>3. Sentiface – Level group (0x01, PP)</h3>
+
+<table class="auto-layout">
+<thead>
+<tr>
+  <th>Resource</th>
+  <th>Resource ID</th>
+  <th>Description</th>
+  <th>Key (NFC/BLE)</th>
+  <th>Min</th>
+  <th>Max</th>
+  <th>Default</th>
+  <th>Unit</th>
+  <th>Module key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>Number of levels</strong></td>
+  <td>0x01</td>
+  <td>
+    Number of levels that can be defined:<br>
+    1: 1 level<br>
+    2: 2 levels<br>
+    3: 3 levels<br>
+    4: 4 levels
+  </td>
+  <td>lvls</td>
+  <td>1</td>
+  <td>4</td>
+  <td>2</td>
+  <td></td>
+  <td>1111</td>
+</tr>
+<tr>
+  <td><strong>Dynamic level</strong></td>
+  <td>0x02</td>
+  <td>
+    Defines whether alarms are sent when switching between levels:<br>
+    1: Yes<br>
+    0: Only when changing or exceeding distance level 1
+  </td>
+  <td>dynlvl</td>
+  <td>0</td>
+  <td>1</td>
+  <td>0</td>
+  <td></td>
+  <td>1111</td>
+</tr>
+<tr>
+  <td><strong>Distance level 1</strong></td>
+  <td>0x03</td>
+  <td>Distance to trigger level‑1 state change.</td>
+  <td>l1d</td>
+  <td>50</td>
+  <td>2000</td>
+  <td>400</td>
+  <td>mm</td>
+  <td>1111</td>
+</tr>
+<tr>
+  <td><strong>Distance level 2</strong></td>
+  <td>0x04</td>
+  <td>Distance to trigger level‑2 state change.</td>
+  <td>l2d</td>
+  <td>50</td>
+  <td>2000</td>
+  <td>50</td>
+  <td>mm</td>
+  <td>1111</td>
+</tr>
+<tr>
+  <td><strong>Distance level 3</strong></td>
+  <td>0x05</td>
+  <td>Distance to trigger level‑3 state change.</td>
+  <td>l3d</td>
+  <td>50</td>
+  <td>2000</td>
+  <td>400</td>
+  <td>mm</td>
+  <td>1111</td>
+</tr>
+<tr>
+  <td><strong>Distance level 4</strong></td>
+  <td>0x06</td>
+  <td>Distance to trigger level‑4 state change.</td>
+  <td>l4d</td>
+  <td>50</td>
+  <td>2000</td>
+  <td>100</td>
+  <td>mm</td>
+  <td>1111</td>
+</tr>
+<tr>
+  <td><strong>Hysteresis</strong></td>
+  <td>0x07</td>
+  <td>Hysteresis around threshold values to prevent oscillation.</td>
+  <td>lhyst</td>
+  <td>10</td>
+  <td>500</td>
+  <td>20</td>
+  <td></td>
+  <td>1111</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<br><br>
+
+<div style="display:flex;flex-direction:column;gap:24px;align-items:center;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png" style="max-width:620px;height:auto;" alt="Supported radio technologies">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/CE_Trash_seals.png" style="max-width:320px;height:auto;" alt="CE marking and disposal symbols">
+</div>
+
+<!-- FOOTER -->
+<div style="border-top:1px solid #d0d7de;margin-top:40px;padding-top:16px;font-size:.85rem;color:#6b7280;"></div>
+<div class="footer-note">
+  <p>© Sentinum GmbH – All rights reserved.</p>
+  <p>All contents of this document, including text, tables and images, are protected by copyright and are the property of Sentinum GmbH.</p>
+  <p>All images are subject to copyright of Sentinum GmbH unless otherwise stated.</p>
+  <p>Reproduction, distribution or use – even in excerpts – is not permitted without prior written consent.</p>
+  <p style="padding-left:14px;font-style:italic;">
+    Specifications subject to change. All information provided without guarantee.
+  </p>
+</div>
+
+</main>
+</body>
+</html>
