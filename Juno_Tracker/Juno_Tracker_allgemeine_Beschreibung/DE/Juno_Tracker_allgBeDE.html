@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+
+<!-- ✅ CSS – UNVERÄNDERT -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+  --blue-bg:#f7fbff;
+  --blue-border:#d6e4fa;
+  --blue-text:#1a3e8c;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+}
+
+/* Base */
+body{
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+}
+
+/* Headings */
+h1{
+  margin:48px 0 16px;
+  padding-bottom:12px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:42px;
+  font-weight:700;
+  border-bottom:2px solid var(--border);
+}
+
+h3{
+  margin:32px 0 12px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:120px;
+}
+
+p{margin:8px 0 12px}
+
+/* Tables */
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+  table-layout:fixed;
+}
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid #000;
+}
+
+/* TOC */
+.main-toc{
+  max-width:900px;
+  margin:24px auto 40px;
+  padding:16px 20px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+}
+.main-toc strong{display:block;margin-bottom:8px;}
+.main-toc ul{list-style:none;padding:0;margin:0;}
+.main-toc li{margin:.35rem 0;}
+.main-toc a{color:var(--blue-text);font-weight:600;text-decoration:none;}
+.main-toc a:hover{text-decoration:underline;}
+
+/* PDF */
+.pdf-container{
+  width:100%;
+  max-width:900px;
+  height:600px;
+  margin:24px auto 12px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  overflow:hidden;
+}
+.pdf-info{
+  max-width:900px;
+  margin:8px auto 32px;
+  padding:10px 14px;
+  background:#f8fbff;
+  border:1px solid #b6d4fe;
+  border-radius:6px;
+  text-align:center;
+}
+.pdf-info a{color:#2563eb;font-weight:600;text-decoration:underline;}
+
+
+/* ---------- Figures ---------- */
+.figure{
+  max-width:900px;
+  margin:24px auto;
+}
+
+.figure img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+
+.figure figcaption{
+  margin-top:6px;
+  color:var(--text-muted);
+  font-size:0.875rem;
+}
+  .note-strip{
+    padding:14px 16px;
+    margin:18px 0;
+    border-radius:6px;
+    border-left-width:6px;
+    border-left-style:solid;
+  }
+
+  .note-strip--red{
+    background:#fdecea;
+    border-left-color:#d32f2f;
+  }
+
+  .note-strip--yellow{
+    background:#fff8e1;
+    border-left-color:#f9a825;
+  }
+
+  .note-strip--green{
+    background:#e8f5e9;
+    border-left-color:#2e7d32;
+  }
+  .note-strip p,
+  .note-strip ul{
+    margin:0;
+  }
+  /* ---------- Tabelle mit automatischer Spaltenbreite ---------- */
+table.auto-layout{
+  table-layout: auto;
+}
+
+table.auto-layout th,
+table.auto-layout td{
+  width: auto;          /* überschreibt nth-child Breiten */
+}
+
+
+</style>
+</head>
+
+<body>
+<main>
+<div class="pdf-container">
+<iframe
+  src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/823e1ab14a6723af5e2f235751050c853b6273cd/Juno_Tracker/Juno_Tracker_allgemeine_Beschreibung/DE/Juno_Tracker_Cellular_allgemeine_Beschreibung_DE.pdf"
+  width="100%" height="100%" style="border:0">
+</iframe>
+</div>
+
+<div class="pdf-info">
+📄 <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/823e1ab14a6723af5e2f235751050c853b6273cd/Juno_Tracker/Juno_Tracker_allgemeine_Beschreibung/DE/Juno_Tracker_Cellular_allgemeine_Beschreibung_DE.pdf" target="_blank">
+Vollständige PDF‑Dokumentation herunterladen
+</a>
+</div>
+
+
+<section class="main-toc">
+<strong>Inhalt</strong>
+<ul>
+  <li><a href="#overview">1. Allgemeine Beschreibung</a></li>
+  <li><a href="#features">2. Hauptmerkmale</a></li>
+  <li><a href="#applications">3. Typische Anwendungen</a></li>
+     <li><a href="#versionen">4. Versionen</a></li>
+</ul>
+</section>
+
+<section id="overview">
+<h3>1. Allgemeine Beschreibung</h3>
+<section>
+  <p>
+    Der <strong>JUNO Tracker</strong> ist ein vielseitiger Tracker, der
+    <strong>mioty®</strong>, <strong>LoRaWAN®</strong> oder
+    <strong>cellulare Technologien</strong> wie
+    <strong>NB‑IoT</strong> und <strong>LTE‑CAT‑M1</strong>
+    für eine zuverlässige und energieeffiziente Datenübertragung nutzt.
+  </p>
+
+  <p>
+    Der Tracker ist in unterschiedlichen Versionen erhältlich und steht
+    unter anderem auch für das <strong>Kühlkettenmonitoring</strong>
+    zur Verfügung.
+  </p>
+
+  <p>
+    Durch seine robuste Bauweise sowie das
+    <strong>IP69k/IP67‑Schutzrating</strong> ist er optimal für den Einsatz
+    in anspruchsvollen Umgebungen geeignet und widersteht zuverlässig
+    <strong>Staub, Wasser und hohen Drücken</strong>.
+  </p>
+</section>
+
+<figure class="figure">
+<img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/823e1ab14a6723af5e2f235751050c853b6273cd/Juno_Tracker/Juno_Tracker_allgemeine_Beschreibung/Pic/Juno_tracker_allg.Be.webp" alt="JUNO Tracker Cellular">
+<figcaption>Abbildung 1: JUNO Tracker Cellular – Industrieausführung</figcaption>
+</figure>
+</section>
+
+<section id="features">
+<h3>2. Hauptmerkmale</h3>
+<section>
+  <ul>
+    <li>
+      <strong>NB‑IoT und LTE‑CAT‑M1® Kommunikation</strong>
+    </li>
+
+    <li>
+      <strong>Tracking‑Optionen:</strong>
+      <ul>
+        <li>GNSS</li>
+        <li>WLAN‑SSID‑Scan</li>
+        <li>Cell‑ID‑Ortung</li>
+        <li>
+          Positionsdaten werden in <strong>Latitude (LAT)</strong> und
+          <strong>Longitude (LON)</strong> dekodiert – sehr energieeffizient
+        </li>
+        <li>Einstellbare Tracking‑Präferenzen</li>
+      </ul>
+    </li>
+
+    <li>
+      <strong>Gehäusevarianten:</strong>
+      Tracker‑Version <strong>IP69k</strong>,
+      TH‑Version <strong>IP67</strong>
+    </li>
+
+    <li>
+      <strong>Betriebsbedingungen:</strong>
+      −25 °C bis +85 °C, Stoßfestigkeit <strong>IK07</strong>
+    </li>
+
+    <li>
+      <strong>Optionale Sensorik (TH‑Versionen):</strong>
+      Hochgenauer Temperatur‑ und
+      Sensor für relative Luftfeuchtigkeit
+    </li>
+
+    <li>
+      <strong>Tracking‑on‑Activity‑Feature</strong>
+      (bewegungsbasiertes Tracking)
+    </li>
+
+    <li><strong>Magnetschalter integriert</strong></li>
+
+    <li>
+      Aktivierbar per Magnet
+      (kein Smartphone erforderlich) oder über
+      <strong>NFC</strong> bzw. <strong>BLE</strong>
+    </li>
+
+    <li>
+      Konfiguration über
+      <strong>Downlinks</strong>, <strong>NFC</strong> oder <strong>BLE</strong>
+    </li>
+
+    <li><strong>Firmware‑Updates (FOTA)</strong> über BLE</li>
+
+    <li><strong>Einstellbare Grenzwerte</strong></li>
+
+    <li>
+      Wechselbare <strong>AA‑Batterien</strong>
+      (Li‑SOCl₂, z. B. Saft LS14500)
+    </li>
+
+    <li><strong>Akustisches Signal</strong> zur Statusanzeige</li>
+
+    <li>
+      <strong>Vandalismuserkennung</strong>
+      durch Schock‑ und Vibrationserfassung
+    </li>
+
+    <li>
+      Versionen mit <strong>SIM‑Karten‑Slot</strong> verfügbar
+    </li>
+  </ul>
+</section>
+
+<section id="applications">
+<h3>3. Typische Anwendungsbereiche</h3>
+<section>
+
+  <ul>
+    <li>Asset‑Tracking</li>
+    <li>Temperatur‑ und Tracking der relativen Luftfeuchtigkeit</li>
+    <li>Kühlkettenüberwachung</li>
+    <li>Logistik und Supply‑Chain‑Monitoring</li>
+    <li>Inventarisierung und Überwachung von Betriebsmitteln</li>
+    <li>Überwachung von Wild‑, Nutz‑ und Haustieren</li>
+    <li>Baumaschinen‑ und Geräteüberwachung</li>
+    <li>Anwendungen in Landwirtschaft und Umwelt</li>
+    <li>Diebstahlschutz</li>
+    <li>Nachweis beim Versand von Gütern</li>
+    <li>Schock‑ und Vibrationserfassung</li>
+ 
+  </ul>
+</section>
+<section id="versionen">
+  <h3>4. Versionen</h3>
+
+  <table class="auto-layout">
+    <thead>
+      <tr>
+        <th>Artikelcode</th>
+        <th>Features</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>S-JUNO-NBM1-TRACK-2</strong></td>
+        <td>
+          JUNO Tracker mit Neigungs- und Aktivitätserkennung sowie Öffnungsdetektion,
+          NB‑IoT, LTE‑CAT‑M1, GNSS, WLAN‑SSID‑Scan,
+          SIM‑Kartenschacht, zwei Batterien
+        </td>
+      </tr>
+
+      <tr>
+        <td><strong>S-JUNO-NBM1-TRACK-3</strong></td>
+        <td>
+          JUNO Tracker mit Neigungs- und Aktivitätserkennung sowie Öffnungsdetektion,
+          NB‑IoT, LTE‑CAT‑M1, GNSS, WLAN‑SSID‑Scan,
+          integrierte On‑Board‑SIM, drei Batterien
+        </td>
+      </tr>
+
+      <tr>
+        <td><strong>S-JUNO-IX-NBM1-TRACK-2</strong></td>
+        <td>
+          <strong>INDUSTRIAL</strong> JUNO Tracker mit Neigungs- und Aktivitätserkennung
+          sowie Öffnungsdetektion,
+          NB‑IoT, LTE‑CAT‑M1, GNSS, WLAN‑SSID‑Scan,
+          SIM‑Kartenschacht, zwei Batterien
+        </td>
+      </tr>
+
+      <tr>
+        <td><strong>S-JUNO-IX-NBM1-TRACK-3</strong></td>
+        <td>
+          <strong>INDUSTRIAL</strong> JUNO Tracker mit Neigungs- und Aktivitätserkennung
+          sowie Öffnungsdetektion,
+          NB‑IoT, LTE‑CAT‑M1, GNSS, WLAN‑SSID‑Scan,
+          integrierte On‑Board‑SIM, drei Batterien
+        </td>
+      </tr>
+
+      <tr>
+        <td><strong>S-JUNO-NBM1-TH-TRACK-2</strong></td>
+        <td>
+          JUNO <strong>IP67 TH Tracker</strong> für Temperatur und relative Luftfeuchte,
+          mit Neigungs- und Aktivitätserkennung sowie Öffnungsdetektion,
+          NB‑IoT, LTE‑CAT‑M1, GNSS, WLAN‑SSID‑Scan,
+          SIM‑Kartenschacht, zwei Batterien
+        </td>
+      </tr>
+
+      <tr>
+        <td><strong>S-JUNO-NBM1-TH-TRACK-3</strong></td>
+        <td>
+          JUNO <strong>IP67 TH Tracker</strong> für Temperatur und relative Luftfeuchte,
+          mit Neigungs- und Aktivitätserkennung sowie Öffnungsdetektion,
+          NB‑IoT, LTE‑CAT‑M1, GNSS, WLAN‑SSID‑Scan,
+          integrierte On‑Board‑SIM, drei Batterien
+        </td>
+      </tr>
+
+      <tr>
+        <td><strong>S-JUNO-IX-NBM1-TH-TRACK-2</strong></td>
+        <td>
+          <strong>INDUSTRIAL</strong> JUNO <strong>IP67 TH Tracker</strong>
+          für Temperatur und relative Luftfeuchte,
+          mit Neigungs- und Aktivitätserkennung sowie Öffnungsdetektion,
+          NB‑IoT, LTE‑CAT‑M1, GNSS, WLAN‑SSID‑Scan,
+          SIM‑Kartenschacht, zwei Batterien
+        </td>
+      </tr>
+
+      <tr>
+        <td><strong>S-JUNO-IX-NBM1-TH-TRACK-3</strong></td>
+        <td>
+          <strong>INDUSTRIAL</strong> JUNO <strong>IP67 TH Tracker</strong>
+          für Temperatur und relative Luftfeuchte,
+          mit Neigungs- und Aktivitätserkennung sowie Öffnungsdetektion,
+          NB‑IoT, LTE‑CAT‑M1, GNSS, WLAN‑SSID‑Scan,
+          integrierte On‑Board‑SIM, drei Batterien
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+</section>
+<br>
+<br>
+<div style="display: flex; gap: 32px; align-items: center; flex-wrap: wrap;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/823e1ab14a6723af5e2f235751050c853b6273cd/logo/mioty_lora_nb-IOT_LTE.png"
+    alt="Funkstandards"
+  style="max-width: 720px; height: auto;"
+  >
+
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/823e1ab14a6723af5e2f235751050c853b6273cd/logo/CE_Trash_seals.png"
+    alt="Zertifizierungen"
+   style="max-width: 320px; height: auto;"
+  >
+</div>
+
+</section>
+
+
+
+
+
+<div style="border-top:1px solid #d0d7de;margin-top:40px;padding-top:16px;font-size:.85rem;color:#6b7280;">
+</div>
+ <!-- FOOTER (DEUTSCH) -->
+    <div class="footer-note">
+      <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+      <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+      <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+      <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+      <p style="padding-left:14px; font-style:italic;">
+        Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
+      </p>
+    </div>
+</main>
+</body>
+</html>
