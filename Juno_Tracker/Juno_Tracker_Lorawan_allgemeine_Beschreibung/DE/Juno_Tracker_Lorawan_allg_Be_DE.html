@@ -1,0 +1,404 @@
+
+
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+
+<!-- ✅ CSS – UNVERÄNDERT -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+  --blue-bg:#f7fbff;
+  --blue-border:#d6e4fa;
+  --blue-text:#1a3e8c;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+}
+
+/* Base */
+body{
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+}
+
+/* Headings */
+h1{
+  margin:48px 0 16px;
+  padding-bottom:12px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:42px;
+  font-weight:700;
+  border-bottom:2px solid var(--border);
+}
+
+h3{
+  margin:32px 0 12px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:120px;
+}
+
+p{margin:8px 0 12px}
+
+/* Tables */
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+  table-layout:fixed;
+}
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid #000;
+}
+
+/* TOC */
+.main-toc{
+  max-width:900px;
+  margin:24px auto 40px;
+  padding:16px 20px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+}
+.main-toc strong{display:block;margin-bottom:8px;}
+.main-toc ul{list-style:none;padding:0;margin:0;}
+.main-toc li{margin:.35rem 0;}
+.main-toc a{color:var(--blue-text);font-weight:600;text-decoration:none;}
+.main-toc a:hover{text-decoration:underline;}
+
+/*/* ---------- PDF ---------- */
+        .pdf-viewer{
+          max-width:900px;
+          height:600px;
+          margin:0 auto 20px;
+          border:1px solid #ccc;
+          border-radius:6px;
+          overflow:hidden;
+        }
+        
+        .pdf-viewer iframe{
+          width:100%;
+          height:100%;
+          border:none;
+        }
+        
+        .pdf-download{
+          max-width:900px;
+          margin:0 auto 36px;
+          padding:14px 18px;
+          background:var(--blue-bg);
+          border:1px solid var(--blue-border);
+          border-radius:6px;
+          text-align:center;
+        }
+        
+        .pdf-download a{
+          color:var(--blue-text);
+          font-weight:600;
+        }
+
+
+/* ---------- Figures ---------- */
+.figure{
+  max-width:900px;
+  margin:24px auto;
+}
+
+.figure img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+
+.figure figcaption{
+  margin-top:6px;
+  color:var(--text-muted);
+  font-size:0.875rem;
+}
+  .note-strip{
+    padding:14px 16px;
+    margin:18px 0;
+    border-radius:6px;
+    border-left-width:6px;
+    border-left-style:solid;
+  }
+
+  .note-strip--red{
+    background:#fdecea;
+    border-left-color:#d32f2f;
+  }
+
+  .note-strip--yellow{
+    background:#fff8e1;
+    border-left-color:#f9a825;
+  }
+
+  .note-strip--green{
+    background:#e8f5e9;
+    border-left-color:#2e7d32;
+  }
+  .note-strip p,
+  .note-strip ul{
+    margin:0;
+  }
+  /* ---------- Tabelle mit automatischer Spaltenbreite ---------- */
+table.auto-layout{
+  table-layout: auto;
+}
+
+table.auto-layout th,
+table.auto-layout td{
+  width: auto;          /* überschreibt nth-child Breiten */
+}
+
+
+</style>
+</head>
+
+<main>
+<!-- PDF Viewer -->
+<div class="pdf-viewer">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/1cd215032c62e5516f05116df340bcb4035de0eb/Juno_Tracker/Juno_Tracker_Lorawan_allgemeine_Beschreibung/DE/Juno_Tracker_LoRaWAN_allgemeine_Beschreibung_DE_1.0.1_.pdf"
+    loading="lazy"
+    title="JUNO LoRaWAN Tracker – Allgemeine Beschreibung (PDF)"
+  ></iframe>
+</div>
+
+<!-- PDF Download -->
+<div class="pdf-download">
+  📄 Sie können das Dokument oben ansehen oder
+  <a
+    href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/1cd215032c62e5516f05116df340bcb4035de0eb/Juno_Tracker/Juno_Tracker_Lorawan_allgemeine_Beschreibung/DE/Juno_Tracker_LoRaWAN_allgemeine_Beschreibung_DE_1.0.1_.pdf"
+    target="_blank"
+    rel="noopener"
+  >
+    hier als PDF herunterladen
+  </a>.
+</div>
+
+  <!-- INHALTSVERZEICHNIS -->
+  <section class="main-toc">
+    <strong>Inhalt</strong>
+    <ul>
+        <li><a href="#overview">1. Allgemeine Beschreibung</a></li>
+      <li><a href="#versionshistorie">2. Versionshistorie</a></li>
+      <li><a href="#features">3. Features LoRaWAN Tracker</a></li>
+      <li><a href="#applications">4. Beispielanwendungen</a></li>
+      <li><a href="#versionen">5. Versionen</a></li>
+    </ul>
+  </section>
+
+<section id="overview">
+  <h3>1. Allgemeine Beschreibung</h3>
+
+
+ <figure class="figure">
+    <img
+      src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/42859428a484e9d49d3116b051455a6fe9e40ac8/Juno_Tracker/Juno_Tracker_Lorawan_allgemeine_Beschreibung/Pic/Juno_trackerlorawan_allg.Be.webp"
+      alt="JUNO LoRaWAN Tracker – Industrieausführung"
+      loading="lazy"
+    >
+    <figcaption>
+      JUNO LoRaWAN Tracker – Industrieausführung
+    </figcaption>
+  </figure>
+
+
+  <p>
+    Der Juno Tracker ist ein vielseitiger Tracker, der mioty®, LoRaWAN® oder
+    cellulare Technologien wie z.B. NB‑IoT und LTE‑CAT‑M1 für eine zuverlässige
+    und energieeffiziente Datenübertragung nutzt.
+    Der Tracker ist in unterschiedlichen Versionen z.B. auch für das
+    Kühlkettenmonitoring verfügbar.
+    Durch seine robuste Bauweise und das IP69k/IP67‑Rating ist er optimal für den
+    Einsatz in anspruchsvollen Umgebungen geeignet und widersteht Staub,
+    Wasser und hohen Drücken.
+  </p>
+</section>
+
+  <!-- VERSIONSHISTORIE -->
+  <section id="versionshistorie">
+    <h3>2. Versionshistorie</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Version</th>
+          <th>Datum</th>
+          <th>Änderung</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1.0.0</td>
+          <td>18.02.2025</td>
+          <td>Erstellung</td>
+        </tr>
+        <tr>
+          <td>1.0.1</td>
+          <td>24.04.2026</td>
+          <td>Formatierung, Versionshistorie</td>
+        </tr>
+      </tbody>
+    </table>
+ </section>
+ <!-- Features LoRaWAN Tracker -->
+  <section id="features">
+    <h3>3. Features LoRaWAN Tracker</h3>
+
+    <ul>
+      <li>LoRaWAN® Kommunikation</li>
+
+      <li>
+        Tracking Optionen:
+        <ul>
+          <li><strong>GNSS Scan</strong></li>
+          <li><strong>WIFI SSID Scan</strong></li>
+          <li>
+            Daten müssen in Latitude und Longitude dekodiert werden,
+            sehr energieeffizient
+          </li>
+          <li>Tracking über das LoRaWAN®</li>
+          <li><strong>Tracking Präferenzen einstellbar</strong></li>
+        </ul>
+      </li>
+
+      <li>Tracker Version IP69k, TH Version IP67</li>
+      <li>−25&nbsp;°C bis 85&nbsp;°C, IK07</li>
+      <li>
+        Temperatur- und relative Luftfeuchtigkeitssensoren mit hoher Genauigkeit
+        (optional TH Versionen)
+      </li>
+      <li>Tracking‑on‑Activity Feature</li>
+      <li>Magnetschalter</li>
+      <li>
+        Aktivierbar mit Magnet (kein Smartphone nötig) oder über NFC oder BLE
+      </li>
+      <li>Konfigurierbar über Downlinks, NFC oder BLE</li>
+      <li>FOTA über BLE</li>
+      <li>Einstellbare Grenzwerte</li>
+      <li>
+        Wechselbare AA Zellen (Li‑SOCl₂, vgl. Saft LS14500)
+      </li>
+      <li>Akustisches Signal</li>
+      <li>Vandalismusdetektion (Schock‑ und Vibrationserfassung)</li>
+    </ul>
+  </section>
+
+  <!-- Beispielanwendungen -->
+  <section id="applications">
+    <h3>4. Beispielanwendungen</h3>
+
+    <ul>
+      <li>Asset Tracking</li>
+      <li>Temperatur‑ und relative Luftfeuchtetracking</li>
+      <li>Kühlkettenüberwachung</li>
+      <li>Logistik und Supply Chain</li>
+      <li>Inventarisierung und Überwachung von Betriebsmitteln</li>
+      <li>Wild‑, Nutz‑ und Haustierüberwachung</li>
+      <li>Baumaschinenüberwachung</li>
+      <li>Landwirtschaft und Umwelt</li>
+      <li>Diebstahlschutz</li>
+      <li>Nachweis bei Versand von Gütern</li>
+      <li>Schock‑ und Vibrationserfassung</li>
+    </ul>
+  </section>
+  
+<!-- Versionen -->
+  <section id="versionen">
+    <h3>5. Versionen</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Artikel Code</th>
+          <th>Features</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>S-JUNO-LOEU-TRACK</strong></td>
+          <td>
+            JUNO Tracker mit Neigungs- und Aktivitätserkennung und Öffnungsdetektion
+            LoRaWAN®, GNSS Scan, WIFI SSID Scan
+          </td>
+        </tr>
+
+        <tr>
+          <td><strong>S-JUNO-iX-LOEU-TRACK</strong></td>
+          <td>
+            INDUSTRIAL JUNO Tracker mit Neigungs- und Aktivitätserkennung und
+            Öffnungsdetektion LoRaWAN®, GNSS Scan, WIFI SSID Scan
+          </td>
+        </tr>
+
+        <tr>
+          <td><strong>S-JUNO-LOEU-TH-TRACK</strong></td>
+          <td>
+            JUNO IP67 TH Tracker, Temperatur und relative Luftfeuchtigkeit
+            mit Neigungs- und Aktivitätserkennung und Öffnungsdetektion
+            LoRaWAN®
+          </td>
+        </tr>
+
+        <tr>
+          <td><strong>S-JUNO-IX-LOEU-TH-TRACK</strong></td>
+          <td>
+            INDUSTRIAL JUNO IP67 TH Tracker, Temperatur und relative Luftfeuchtigkeit
+            mit Neigungs- und Aktivitätserkennung und Öffnungsdetektion
+            LoRaWAN®
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+<br>
+<br>
+   <div style="display: flex; gap: 32px; align-items: center; flex-wrap: wrap;">
+
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png"
+    alt="Unterstützte Funktechnologien"
+    style="max-width: 720px; height: auto;"
+  >
+
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/CE_Trash_seals.png"
+    alt="CE Kennzeichnung und Entsorgungssymbole"
+    style="max-width: 320px; height: auto;"
+  >
+
+
+</div>
+    <!-- FOOTER -->
+<div style="border-top:1px solid #d0d7de;margin-top:40px;padding-top:16px;font-size:.85rem;color:#6b7280;">
+</div>
+ <!-- FOOTER (DEUTSCH) -->
+    <div class="footer-note">
+      <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+      <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+      <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+      <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+      <p style="padding-left:14px; font-style:italic;">
+        Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
+      </p>
+    </div>
+
+</main>
+</body>
