@@ -165,7 +165,19 @@ table.auto-layout th,
 table.auto-layout td{
   width: auto;          /* überschreibt nth-child Breiten */
 }
-
+/* Inline-Code-Badge wie im Screenshot (z.B. 0x00) */
+.code-inline{
+  display: inline-block;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  padding: 2px 6px;
+  background-color: #f5f7fa;
+  border: 1px solid #d0d7de;
+  border-radius: 4px;
+  color: #111827;
+  white-space: nowrap;
+}
 
 </style>
 </head>
@@ -208,31 +220,46 @@ table.auto-layout td{
 <h3>1. Modulübersicht</h3>
 
 <table>
-<thead>
-<tr>
-<th>Modul</th>
-<th>Modulschlüssel</th>
-<th>Gruppe</th>
-<th>Gruppen ID</th>
-<th>Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Sentiface</strong></td>
-<td>0x1XXX</td>
-<td>Messungen</td>
-<td>0x00</td>
-<td>Einstellungen wie Sensorverhalten, Genauigkeit, Erfassungsraten und Feinabstimmung</td>
-</tr>
-<tr>
-<td><strong>Sentiface</strong></td>
-<td>0x1XXX</td>
-<td>Level</td>
-<td>0x01</td>
-<td>Anzahl und Distanz der Level sowie Hysterese</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Modul</th>
+      <th>Modulschlüssel</th>
+      <th>Gruppe</th>
+      <th>Gruppen&nbsp;ID</th>
+      <th>Beschreibung</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><strong>Sentiface</strong></td>
+      <td>
+        <span class="code-inline">0x1XXX</span>
+      </td>
+      <td>Messungen</td>
+      <td>
+        <span class="code-inline">0x00</span>
+      </td>
+      <td>
+        Einstellungen wie Sensorverhalten, Genauigkeit,
+        Erfassungsraten und Feinabstimmung
+      </td>
+    </tr>
+
+    <tr>
+      <td><strong>Sentiface</strong></td>
+      <td>
+        <span class="code-inline">0x1XXX</span>
+      </td>
+      <td>Level</td>
+      <td>
+        <span class="code-inline">0x01</span>
+      </td>
+      <td>
+        Anzahl und Distanz der Level sowie Hysterese
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 <p>
@@ -276,130 +303,148 @@ table.auto-layout td{
 
 </section>
 
-<!-- Messungen -->
 <section id="measurements">
 <h3>2. Sentiface – Gruppe Messungen (0x00, PP)</h3>
 
 <table class="auto-layout">
-<thead>
-<tr>
-<th>Ressource</th>
-<th>ID</th>
-<th>Beschreibung</th>
-<th>Schlüssel</th>
-<th>Min</th>
-<th>Max</th>
-<th>Werkseinstellung</th>
-<th>Einheit</th>
-<th>Modulschlüssel</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Messperiode</strong></td>
-<td>0x01</td>
-<td>Gibt die Periode an, in der die Messwerte erfasst werden. 5000 heißt, dass immer nach 5 Sekunden eine Messungen durch den Sensor durchgeführt wird.</td>
-<td>mper</td>
-<td>20</td>
-<td>60000</td>
-<td>5000</td>
-<td>ms</td>
-<td>1111</td>
-</tr>
-<tr>
-<td><strong>Proben</strong></td>
-<td>0x02</td>
-<td>ADVANCED: Einstellung der Sensorperformance, je höher desto robuster und weiter kann die Messung erfolgen, auf Kosten erhöhten Stromverbrauchs.</td>
-<td>samples</td>
-<td>1</td>
-<td>255</td>
-<td>100</td>
-<td></td>
-<td>1111</td>
-</tr>
-<tr>
-<td><strong>Sigma</strong></td>
-<td>0x03</td>
-<td>ADVANCED: Mindestvarianz und Standardabweichung, mit der ein Ziel als Ziel wahrgenommen wird. Wenn Sigma zu klein steigt die Wahrscheinlichkeit für Fehldetektionen..</td>
-<td>sigma</td>
-<td>1</td>
-<td>16383</td>
-<td>1500</td>
-<td></td>
-<td>1111</td>
-</tr>
-<tr>
-<td><strong>Signal</strong></td>
-<td>0x04</td>
-<td>ADVANCED: Mindestanzahl von Photonen, Mindestreflektivität, die vom Ziel zurückkommen muss, um als Ziel erkannt zu werden.</td>
-<td>signal</td>
-<td>1</td>
-<td>16383</td>
-<td>50</td>
-<td></td>
-<td>1111</td>
-</tr>
-<tr>
-<td><strong>Buzzer</strong></td>
-<td>0x05</td>
-<td>Gibt an, ob der Piepton (Buzzer) eingeschaltet ist:
-0: Aus
-1: Ein
-</td>
-<td>buzz</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td></td>
-<td>1111</td> </tr>
-<tr>
-  <td><strong>Stabil</strong></td>
-  <td>0x06</td>
-  <td>
-    Beschreibt, wie viele Messungen auf ein Level gemessen werden müssen,
-    um als Level erkannt zu werden. Kann dafür verwendet werden,
-    Fehlmessungen oder Schwankungen auszugleichen, z.B. wenn ein Arm in
-    eine Kiste greift, um Güter zu entnehmen.
-  </td>
-  <td>stabl</td>
-  <td>1</td>
-  <td>8</td>
-  <td>2</td>
-  <td></td>
-  <td>1111</td>
-</tr>
+  <thead>
+    <tr>
+      <th>Ressource</th>
+      <th>ID</th>
+      <th>Beschreibung</th>
+      <th>Schlüssel</th>
+      <th>Min</th>
+      <th>Max</th>
+      <th>Werkseinstellung</th>
+      <th>Einheit</th>
+      <th>Modulschlüssel</th>
+    </tr>
+  </thead>
 
-<tr>
-  <td><strong>Region of interest</strong></td>
-  <td>0x07</td>
-  <td>
-    Advanced: Region of Interest
-  </td>
-  <td>roi</td>
-  <td>4</td>
-  <td>16</td>
-  <td>16</td>
-  <td></td>
-  <td>1111</td>
-</tr>
+  <tbody>
+    <tr>
+      <td><strong>Messperiode</strong></td>
+      <td><span class="code-inline">0x01</span></td>
+      <td>
+        Gibt die Periode an, in der die Messwerte erfasst werden.
+        5000 heißt, dass immer nach 5 Sekunden eine Messung durch den Sensor durchgeführt wird.
+      </td>
+      <td><span class="code-inline">mper</span></td>
+      <td>20</td>
+      <td>60000</td>
+      <td>5000</td>
+      <td>ms</td>
+      <td><span class="code-inline">1111</span></td>
+    </tr>
 
-<tr>
-  <td><strong>Statusperiode, heartbeat</strong></td>
-  <td>0x08</td>
-  <td>
-    Statusperiode in Minuten: Nach jedem Ablauf der Statusperiode wird
-    ein Uplink gesendet.
-  </td>
-  <td>sper</td>
-  <td>10</td>
-  <td>10080</td>
-  <td>60</td>
-  <td>min</td>
-  <td>1111</td>
-</tr>
-</tbody>
+    <tr>
+      <td><strong>Proben</strong></td>
+      <td><span class="code-inline">0x02</span></td>
+      <td>
+        Advanced: Einstellung der Sensorperformance, je höher desto robuster und weiter
+        kann die Messung erfolgen, auf Kosten erhöhten Stromverbrauchs.
+      </td>
+      <td><span class="code-inline">samples</span></td>
+      <td>1</td>
+      <td>255</td>
+      <td>100</td>
+      <td></td>
+      <td><span class="code-inline">1111</span></td>
+    </tr>
+
+    <tr>
+      <td><strong>Sigma</strong></td>
+      <td><span class="code-inline">0x03</span></td>
+      <td>
+        Advanced: Mindestvarianz und Standardabweichung, mit der ein Ziel als Ziel
+        wahrgenommen wird. Wenn Sigma zu klein ist, steigt die Wahrscheinlichkeit
+        für Fehldetektionen.
+      </td>
+      <td><span class="code-inline">sigma</span></td>
+      <td>1</td>
+      <td>16383</td>
+      <td>1500</td>
+      <td></td>
+      <td><span class="code-inline">1111</span></td>
+    </tr>
+
+    <tr>
+      <td><strong>Signal</strong></td>
+      <td><span class="code-inline">0x04</span></td>
+      <td>
+        Advanced: Mindestanzahl von Photonen, Mindestreflektivität, die vom Ziel
+        zurückkommen muss, um als Ziel erkannt zu werden.
+      </td>
+      <td><span class="code-inline">signal</span></td>
+      <td>1</td>
+      <td>16383</td>
+      <td>50</td>
+      <td></td>
+      <td><span class="code-inline">1111</span></td>
+    </tr>
+
+    <tr>
+      <td><strong>Buzzer</strong></td>
+      <td><span class="code-inline">0x05</span></td>
+      <td>
+        Gibt an, ob der Piepton (Buzzer) eingeschaltet ist:<br>
+        0: Aus<br>
+        1: Ein
+      </td>
+      <td><span class="code-inline">buzz</span></td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td></td>
+      <td><span class="code-inline">1111</span></td>
+    </tr>
+
+    <tr>
+      <td><strong>Stabil</strong></td>
+      <td><span class="code-inline">0x06</span></td>
+      <td>
+        Beschreibt, wie viele Messungen auf ein Level gemessen werden müssen,
+        um als Level erkannt zu werden. Kann verwendet werden, um Fehlmessungen
+        oder Schwankungen auszugleichen.
+      </td>
+      <td><span class="code-inline">stabl</span></td>
+      <td>1</td>
+      <td>8</td>
+      <td>2</td>
+      <td></td>
+      <td><span class="code-inline">1111</span></td>
+    </tr>
+
+    <tr>
+      <td><strong>Region of interest</strong></td>
+      <td><span class="code-inline">0x07</span></td>
+      <td>Advanced: Region of Interest</td>
+      <td><span class="code-inline">roi</span></td>
+      <td>4</td>
+      <td>16</td>
+      <td>16</td>
+      <td></td>
+      <td><span class="code-inline">1111</span></td>
+    </tr>
+
+    <tr>
+      <td><strong>Statusperiode, heartbeat</strong></td>
+      <td><span class="code-inline">0x08</span></td>
+      <td>
+        Statusperiode in Minuten: Nach jedem Ablauf der Statusperiode wird
+        ein Uplink gesendet.
+      </td>
+      <td><span class="code-inline">sper</span></td>
+      <td>10</td>
+      <td>10080</td>
+      <td>60</td>
+      <td>min</td>
+      <td><span class="code-inline">1111</span></td>
+    </tr>
+  </tbody>
 </table>
 </section>
+
 
 <!-- Level -->
 <section id="levels">
@@ -425,7 +470,7 @@ table.auto-layout td{
 <thead>
 <tr>
   <td><strong>Anzahl der level</strong></td>
-  <td>0x01</td>
+  <td> <span class="code-inline">0x01</span></td>
   <td>
     Anzahl der Level, die definiert werden können:<br>
     1: 1 Level&nbsp;&nbsp;&nbsp;&nbsp;
@@ -433,92 +478,92 @@ table.auto-layout td{
     3: 3 Level&nbsp;&nbsp;&nbsp;&nbsp;
     4: 4 Level
   </td>
-  <td>lvls</td>
+  <td> <span class="code-inline">lvls</span></td>
   <td>1</td>
   <td>4</td>
   <td>2</td>
   <td></td>
-  <td>1111</td>
+  <td> <span class="code-inline">1111</span></td>
 </tr>
 
 <tr>
   <td><strong>Dynamisches level</strong></td>
-  <td>0x02</td>
+  <td> <span class="code-inline">0x02</span></td>
   <td>
     Beschreibt, ob bei Wechsel zwischen den Levels auch Alarme gesendet
     werden sollen:<br>
     1: Ja<br>
     0: Nur bei Wechsel, Über‑ oder Unterschreitung von Distanz Level 1
   </td>
-  <td>dynlvl</td>
+  <td> <span class="code-inline">dynlvl</span></td>
   <td>0</td>
   <td>1</td>
   <td>0</td>
   <td></td>
-  <td>1111</td>
+  <td><span class="code-inline">1111</span></td>
 </tr>
 
 <tr>
   <td><strong>Distanz level 1</strong></td>
-  <td>0x03</td>
+  <td><span class="code-inline">0x03</span></td>
   <td>Distanz, um eine Zustandsänderung von Level 1 auszulösen.</td>
-  <td>l1d</td>
+  <td><span class="code-inline">l1d</span></td>
   <td>50</td>
   <td>2000</td>
   <td>400</td>
   <td>mm</td>
-  <td>1111</td>
+  <td><span class="code-inline">1111</span></td>
 </tr>
 
 <tr>
   <td><strong>Distanz level 2</strong></td>
-  <td>0x04</td>
+  <td><span class="code-inline">0x04</span></td>
   <td>Distanz, um eine Zustandsänderung von Level 2 auszulösen.</td>
-  <td>l2d</td>
+  <td><span class="code-inline">l2d</span></td>
   <td>50</td>
   <td>2000</td>
   <td>50</td>
   <td>mm</td>
-  <td>1111</td>
+  <td><span class="code-inline">1111</span></td>
 </tr>
 
 <tr>
   <td><strong>Distanz level 3</strong></td>
-  <td>0x05</td>
+  <td><span class="code-inline">0x05</span></td>
   <td>Distanz, um eine Zustandsänderung von Level 3 auszulösen.</td>
-  <td>l3d</td>
+  <td><span class="code-inline">l3d</span></td>
   <td>50</td>
   <td>2000</td>
   <td>400</td>
   <td>mm</td>
-  <td>1111</td>
+  <td><span class="code-inline">1111</span></td>
 </tr>
 
 <tr>
   <td><strong>Distanz level 4</strong></td>
-  <td>0x06</td>
+  <td><span class="code-inline">0x06</span></td>
   <td>Distanz, um eine Zustandsänderung von Level 4 auszulösen.</td>
-  <td>l4d</td>
+  <td><span class="code-inline">ld4</span></td>
   <td>50</td>
   <td>2000</td>
   <td>100</td>
   <td>mm</td>
-  <td>1111</td>
+  <td><span class="code-inline">1111</span></td>
 </tr>
 
 <tr>
   <td><strong>Hysterese</strong></td>
-  <td>0x07</td>
+  <td><span class="code-inline">0x07</span></td>
   <td>
     Hysterese um die Schwellwerte herum, um Oszillation bei Messungen im
     Grenzbereich zu vermeiden.
   </td>
-  <td>lhyst</td>
+  <td><span class="code-inline">lhyst</span></td>
   <td>10</td>
   <td>500</td>
   <td>20</td>
   <td></td>
-  <td>1111</td>
+  <td><span class="code-inline">1111</span></td>
 </tr></thead></table>
 
 <br>
