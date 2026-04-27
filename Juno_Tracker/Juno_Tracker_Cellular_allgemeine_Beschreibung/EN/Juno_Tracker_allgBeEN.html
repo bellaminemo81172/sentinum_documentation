@@ -111,9 +111,24 @@ table.auto-layout{
 }
 .figure figcaption{
   margin-top:6px;
-  color:#6b7280;
+  color:var(--text-muted);
   font-size:0.875rem;
+  text-align:center;   /* ← DAS ist die Lösung */
 }
+/* ---------- Footer / Disclaimer ---------- */
+.footer-note{
+  margin-top:60px;
+  padding-top:20px;
+  border-top:2px solid var(--border);
+  font-size:.82rem;
+  color:var(--text-muted);
+}
+
+.footer-note p{ margin:0 0 6px 0; line-height:1.4; }
+  </style>
+</head>
+<body>
+<div class="container">
 </style>
 </head>
 
@@ -345,8 +360,7 @@ alt="JUNO Tracker Cellular">
 
 <!-- Footer -->
 <!-- FOOTER (ENGLISH) -->
-<div style="border-top:1px solid #d0d7de;margin-top:40px;padding-top:16px;font-size:.85rem;color:#6b7280;">
-</div>
+
 <div class="footer-note">
   <p>© Sentinum GmbH – All rights reserved.</p>
   <p>All contents of this document, including text, tables and images, are protected by copyright and are the property of Sentinum GmbH.</p>

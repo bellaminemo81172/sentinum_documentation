@@ -113,11 +113,8 @@ th{
   height:auto;
 }
 
-.figure figcaption{
-  margin-top:6px;
-  color:var(--text-muted);
-  font-size:0.875rem;
-}
+
+
   .note-strip{
     padding:14px 16px;
     margin:18px 0;
@@ -153,7 +150,26 @@ table.auto-layout th,
 table.auto-layout td{
   width: auto;          /* überschreibt nth-child Breiten */
 }
+.figure figcaption{
+  margin-top:6px;
+  color:var(--text-muted);
+  font-size:0.875rem;
+  text-align:center;   /* ← DAS ist die Lösung */
+}
+/* ---------- Footer / Disclaimer ---------- */
+.footer-note{
+  margin-top:60px;
+  padding-top:20px;
+  border-top:2px solid var(--border);
+  font-size:.82rem;
+  color:var(--text-muted);
+}
 
+.footer-note p{ margin:0 0 6px 0; line-height:1.4; }
+  </style>
+</head>
+<body>
+<div class="container">
 
 </style>
 </head>
@@ -438,8 +454,7 @@ Vollständige PDF‑Dokumentation herunterladen
 
 
 
-<div style="border-top:1px solid #d0d7de;margin-top:40px;padding-top:16px;font-size:.85rem;color:#6b7280;">
-</div>
+
  <!-- FOOTER (DEUTSCH) -->
     <div class="footer-note">
       <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>

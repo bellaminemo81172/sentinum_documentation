@@ -123,11 +123,7 @@ th{
   height:auto;
 }
 
-.figure figcaption{
-  margin-top:6px;
-  color:var(--text-muted);
-  font-size:0.875rem;
-}
+
   .note-strip{
     padding:14px 16px;
     margin:18px 0;
@@ -164,19 +160,7 @@ table.auto-layout td{
   width: auto;          /* überschreibt nth-child Breiten */
 }
 
-.footer-note{
-  border-top:1px solid #d0d7de;
-  margin-top:40px;
-  padding-top:16px;
-  font-size:.82rem;
-  color:#6b7280;
-  line-height:1.45;
-}
 
-.footer-note p{
-  margin:0 0 6px 0;
-  line-height:1.4;
-}
 
 .footer-note p:last-child{
   margin:0;
@@ -221,7 +205,26 @@ code{
   border:1px solid var(--border);
 }
 
+.figure figcaption{
+  margin-top:6px;
+  color:var(--text-muted);
+  font-size:0.875rem;
+  text-align:center;   /* ← DAS ist die Lösung */
+}
+/* ---------- Footer / Disclaimer ---------- */
+.footer-note{
+  margin-top:60px;
+  padding-top:20px;
+  border-top:2px solid var(--border);
+  font-size:.82rem;
+  color:var(--text-muted);
+}
 
+.footer-note p{ margin:0 0 6px 0; line-height:1.4; }
+  </style>
+</head>
+<body>
+<div class="container">
 </style>
 </head>
 <body>
@@ -710,14 +713,15 @@ code{
   >
 
 
-</div>
  <!-- FOOTER (DEUTSCH) -->
     <div class="footer-note">
       <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
       <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
       <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
       <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
-      <p>Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.</p>
+      <p style="padding-left:14px; font-style:italic;">
+        Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
+      </p>
     </div>
 
 </main>
