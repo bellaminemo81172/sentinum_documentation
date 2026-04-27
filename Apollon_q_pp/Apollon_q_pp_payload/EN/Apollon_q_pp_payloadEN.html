@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>Apollon Q – NFC and Downlink Description</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+  --blue-bg:#f7fbff;
+  --blue-border:#d6e4fa;
+  --blue-text:#1a3e8c;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+}
+
+body{
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+}
+
+h3{
+  margin:32px 0 12px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  border-bottom:1.5px solid var(--border);
+}
+
+p{margin:8px 0 12px}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+}
+
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid #000;
+}
+
+.main-toc{
+  max-width:900px;
+  margin:24px auto 40px;
+  padding:16px 20px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+}
+
+.main-toc strong{display:block;margin-bottom:8px;}
+.main-toc ul{list-style:none;margin:0;padding:0;}
+.main-toc li{margin:.35rem 0;}
+.main-toc a{color:var(--blue-text);font-weight:600;text-decoration:none;}
+
+.pdf-viewer{
+  max-width:900px;
+  height:600px;
+  margin:0 auto 20px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  overflow:hidden;
+}
+.pdf-viewer iframe{
+  width:100%;
+  height:100%;
+  border:none;
+}
+
+.pdf-download{
+  max-width:900px;
+  margin:0 auto 36px;
+  padding:14px 18px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+  text-align:center;
+}
+.pdf-download a{
+  color:var(--blue-text);
+  font-weight:600;
+}
+
+table.auto-layout{
+  table-layout:auto;
+}
+/* Inline code badge (e.g. 0x00) */
+.code-inline{
+  display:inline-block;
+  font-family:"Courier New", Courier, monospace;
+  font-size:0.8rem;
+  line-height:1.2;
+  padding:2px 6px;
+  background-color:#f5f7fa;
+  border:1px solid #d0d7de;
+  border-radius:4px;
+  color:#111827;
+  white-space:nowrap;
+}
+/* ---------- Figures ---------- */
+.figure{
+  max-width:900px;
+  margin:24px auto;
+}
+
+.figure img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+
+.figure figcaption{
+  margin-top:6px;
+  color:var(--text-muted);
+  font-size:0.875rem;
+}
+</style>
+</head>
+
+
+<!-- PDF Viewer -->
+<div class="pdf-viewer">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d1b84bc54f63ce98bc821b1579ed1df20e8f6bf3/Apollon_q_pp/Apollon_q_pp_payload/EN/Apollon_Q_PP_Payload_Description_EN.pdf"
+    loading="lazy"
+    title="Apollon Q PP Payload Description (PDF)">
+  </iframe>
+</div>
+
+<!-- PDF Download -->
+<div class="pdf-download">
+  📄 You can view the document above or
+  <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d1b84bc54f63ce98bc821b1579ed1df20e8f6bf3/Apollon_q_pp/Apollon_q_pp_payload/EN/Apollon_Q_PP_Payload_Description_EN.pdf"
+     target="_blank" rel="noopener">
+    download the PDF here
+  </a>.
+</div>
+
+<!-- TOC -->
+<section class="main-toc">
+<strong>Contents</strong>
+<ul>
+  <li><a href="#module">1. Payload description</a></li>
+  <li><a href="#measurements">2. Structure of the module key</a></li>
+  <li><a href="#levels">3. Uplink example</a></li>
+  <li><a href="#payload">4. Apollon Q PP payload description</a></li>
+  <li><a href="#payload1">5. Decoding examples (Febris)</a></li>
+</ul>
+</section>
+
+<!-- 1 -->
+<section id="module">
+<h3>1. Payload description</h3>
+<p>
+This chapter describes the structure of the telemetry data.
+The number of bytes in the payload depends on the configuration of the sensor.
+The structure of the data depends on which sensors are present in your product.
+</p>
+<p>
+In principle, each version has a header. This provides information about
+the version and the status of the sensor and also contains a master measured value.
+This value can be regarded as the current measured value.
+</p>
+<p>
+The header is followed by an additional payload section containing further information,
+such as parameters of the measuring principle or position and opening detection settings.
+Not every sensor has an additional payload part.
+</p>
+
+<table class="auto-layout">
+<thead>
+<tr><th>Term</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Byte No.</strong></td><td>Byte number starting at 1</td></tr>
+<tr><td><strong>Alias</strong></td><td>Comprehensible name of the variable</td></tr>
+<tr><td><strong>Description of the variable</strong></td><td>Description of the variable</td></tr>
+<tr><td><strong>Designation</strong></td><td>Designation in the dataconverter</td></tr>
+<tr><td><strong>Unit</strong></td><td>Unit of the variable</td></tr>
+<tr><td><strong>Datahub .json key</strong></td><td>Key in the .json when using the Datahub</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- 2 -->
+<section id="measurements">
+<h3>2. Structure of the module key</h3>
+
+<table class="auto-layout">
+<thead>
+<tr>
+  <th colspan="2">Byte 1</th>
+  <th colspan="2">Byte 2</th>
+</tr>
+<tr>
+  <th>Bit 7 – 4</th>
+  <th>Bit 3 – 0</th>
+  <th>Bit 7 – 4</th>
+  <th>Bit 3 – 0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Basic ID module<br>e.g. Sentiface, Senticom, Sentivisor</td>
+  <td>Major version<br>(SW/HW version)</td>
+  <td>Minor version<br>(SW/HW version)</td>
+  <td>Product version<br>(sensors, e.g. TH, THL, ACC, …)</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+The module key of the Sentiface module can be taken from the first
+2 bytes of each uplink.
+The module key is required for the downlink.
+</p>
+
+
+ </section>
+
+
+<!-- 3 -->
+<section id="levels">
+<h3>3. Uplink example (not applicable for Apollon Q PP)</h3>
+
+ <!-- Bild direkt nach den Erklärungssätzen -->
+  <figure class="figure">
+       <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d1b84bc54f63ce98bc821b1579ed1df20e8f6bf3/Nyx/Nyx_Payload/uplink%20example%20pic%20%20payload%20decoder.png"
+      alt="Payload Decoder Beispiel – Modulschlüssel Struktur"
+      >
+  <figcaption>
+    Figure&nbsp;1: Example representation of the payload decoder and module key structure
+  </figcaption>
+</figure>
+
+<p>The following payload example is given for the Helios pressure sensor:</p>
+<p><span class="code-inline">11 11 FE 1A D5 95 06 03 00 23 BE</span></p>
+
+<table class="auto-layout">
+  <thead>
+    <tr>
+      <th>Bytes</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>10</th>
+      <th>11</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>HEX</strong></td>
+      <td><span class="code-inline">11</span></td>
+      <td><span class="code-inline">11</span></td>
+      <td><span class="code-inline">FE</span></td>
+      <td><span class="code-inline">1A</span></td>
+      <td><span class="code-inline">D5</span></td>
+      <td><span class="code-inline">95</span></td>
+      <td><span class="code-inline">06</span></td>
+      <td><span class="code-inline">03</span></td>
+      <td><span class="code-inline">00</span></td>
+      <td><span class="code-inline">23</span></td>
+      <td><span class="code-inline">BE</span></td>
+    </tr>
+    <tr>
+      <td><strong>Beschreibung</strong></td>
+      <td>Modul‑key</td>
+      <td>Modul‑key</td>
+      <td>Uplink Counter</td>
+      <td>Battery Voltage</td>
+      <td>Battery Voltage</td>
+      <td>Temperature</td>
+      <td>Alarm Flag</td>
+      <td>Alarm Flag</td>
+      <td>Measurement Status</td>
+      <td>Pressure mbar</td>
+      <td>Pressure mbar</td>
+    </tr>
+  </tbody>
+</table>
+</section>
+
+
+
+
+
+<!-- 4 -->
+<section id="payload">
+<h3>4. Apollon Q PP payload description</h3>
+
+<!-- (payload table unchanged structurally, text translated as given above – omitted here for brevity, but should be exactly as translated from your EN content) -->
+<table class="auto-layout">
+  <thead>
+    <tr>
+      <th>Byte number</th>
+      <th>Alias name</th>
+      <th>Byte description</th>
+      <th>Unit</th>
+      <th>Designation in the payload decoder</th>
+      <th>Module key</th>
+      <th>Datahub .json key</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><strong>1 – 2</strong></td>
+      <td>Module key</td>
+      <td>
+        <strong>Byte 1</strong><br>
+        • 4 bit MSB: Module code. For Mioty exclusively <em>Sentiface</em> telemetry module,
+        i.e. always <span class="code-inline">0x1</span>.<br>
+        • 4 bit LSB: Major version. FW of the same major version but larger minor versions
+        remain compatible with older decoders. However, the number of bytes may change!<br><br>
+
+        <strong>Byte 2</strong><br>
+        • 4 bit MSB: Minor version. New SW versions may incrementally add new telemetry
+        to the data packet.<br>
+        • 4 bit LSB: Sub / Product version. With Helios, these bits encode the specific
+        configuration of connected sensors.
+      </td>
+      <td></td>
+      <td><span class="code-inline">module_key</span></td>
+      <td><span class="code-inline">XXX1</span></td>
+      <td><span class="code-inline">module_key</span></td>
+    </tr>
+
+    <tr>
+      <td><strong>3</strong></td>
+      <td>Uplink counter</td>
+      <td>
+        Protocol‑independent uplink counter that reaches a maximum of
+        255. After that, the counter starts again at
+       0.
+      </td>
+      <td></td>
+      <td><span class="code-inline">uplink_counter</span></td>
+      <td><span class="code-inline">XXX1</span></td>
+      <td><span class="code-inline">uplink_counter</span></td>
+    </tr>
+
+    <tr>
+      <td><strong>4 – 5</strong></td>
+      <td>Battery voltage</td>
+      <td>
+        Current voltage of the battery in millivolts<br>
+        <span class="code-inline">
+          battery_voltage: (dataBytes[3] &lt;&lt; 8 | dataBytes[4]) / 1000.0
+        </span>
+      </td>
+      <td>mV</td>
+      <td><span class="code-inline">battery_voltage</span></td>
+      <td><span class="code-inline">XXX1</span></td>
+      <td><span class="code-inline">battery_voltage</span></td>
+    </tr>
+
+    <tr>
+      <td><strong>6</strong></td>
+      <td>Internal temperature</td>
+      <td>
+        Internal temperature of the sensor + 128<br>
+        <span class="code-inline">
+          internal_temperature: dataBytes[5] - 128
+        </span>
+      </td>
+      <td>°C</td>
+      <td><span class="code-inline">internal_temperature</span></td>
+      <td><span class="code-inline">XXX1</span></td>
+      <td><span class="code-inline">internal_temperature</span></td>
+    </tr>
+
+    <tr>
+      <td><strong>7</strong></td>
+      <td>Alarm variable</td>
+      <td>
+        Variable that indicates whether error codes and values are being transmitted.<br>
+        An error occurs with values &gt; 16.<br>
+        255: Internal hardware error ToF<br>
+        For all values &lt; 16, measured levels are transmitted.
+      </td>
+      <td></td>
+      <td><span class="code-inline">alarm</span></td>
+      <td><span class="code-inline">XXX1</span></td>
+      <td><span class="code-inline">alarm</span></td>
+    </tr>
+
+    <tr>
+      <td><strong>8</strong></td>
+      <td>Status object / ToF sensor status</td>
+      <td>
+        Status of the sensor in relation to the last measured value<br>
+        • <span class="code-inline">0</span>: Valid range<br>
+        • <span class="code-inline">2 / 4</span>: Out of bounds<br>
+        • <span class="code-inline">5</span>: Hardware fail<br>
+        • <span class="code-inline">7</span>: Wrapped target<br>
+        • <span class="code-inline">8</span>: Algorithm fail<br>
+        • <span class="code-inline">14</span>: Invalid range<br>
+        • <span class="code-inline">99</span>: More than one valid target detected
+      </td>
+      <td></td>
+      <td><span class="code-inline">object_status</span></td>
+      <td><span class="code-inline">XXX1</span></td>
+      <td><span class="code-inline">object_status</span></td>
+    </tr>
+
+    <tr>
+      <td><strong>9 – 10</strong></td>
+      <td>Distance</td>
+      <td>Distance to the current object in millimeters</td>
+      <td>mm</td>
+      <td><span class="code-inline">object_distance</span></td>
+      <td><span class="code-inline">XXX1</span></td>
+      <td><span class="code-inline">object_distance</span></td>
+    </tr>
+
+    <tr>
+      <td><strong>11 – 12</strong></td>
+      <td>Object sigma</td>
+      <td>
+        Minimum variance and standard deviation with which a target is perceived
+        as a target. If the sigma is too small, the probability of false detections
+        increases.
+      </td>
+      <td></td>
+      <td><span class="code-inline">object_sigma</span></td>
+      <td><span class="code-inline">XXX1</span></td>
+      <td><span class="code-inline">object_sigma</span></td>
+    </tr>
+
+    <tr>
+      <td><strong>13 – 14</strong></td>
+      <td>Object signal</td>
+      <td>
+        Minimum number of photons and minimum reflectivity that must return
+        from the target to be recognized as a target.
+      </td>
+      <td></td>
+      <td><span class="code-inline">object_signal</span></td>
+      <td><span class="code-inline">XXX1</span></td>
+      <td><span class="code-inline">object_signal</span></td>
+    </tr>
+
+    <tr>
+      <td><strong>15 – 16</strong></td>
+      <td>Object ambient</td>
+      <td>Ambient light of the target, not qualitative</td>
+      <td></td>
+      <td><span class="code-inline">object_ambient</span></td>
+      <td><span class="code-inline">XXX1</span></td>
+      <td><span class="code-inline">object_ambient</span></td>
+    </tr>
+  </tbody>
+</table>
+
+</section>
+
+<!-- 5 -->
+<section id="payload1">
+<h3>5. Decoding examples (Febris)</h3>
+<p>
+Payload:
+<span class="code-inline">11 11 CE 14 8E 07 EE 1D 00 02 03 D6 01 D1 00</span>
+</p>
+
+<table class="auto-layout">
+  <thead>
+    <tr>
+      <th>Bytes</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>10</th>
+      <th>11</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>HEX</strong></td>
+      <td><span class="code-inline">11</span></td>
+      <td><span class="code-inline">11</span></td>
+      <td><span class="code-inline">CE</span></td>
+      <td><span class="code-inline">14</span></td>
+      <td><span class="code-inline">8E</span></td>
+      <td><span class="code-inline">07</span></td>
+      <td><span class="code-inline">EE</span></td>
+      <td><span class="code-inline">1D</span></td>
+      <td><span class="code-inline">00</span></td>
+      <td><span class="code-inline">02</span></td>
+      <td><span class="code-inline">03</span></td>
+    </tr>
+    <tr>
+      <td><strong>Module description</strong></td>
+      <td>Module key</td>
+      <td>Module key</td>
+      <td>Uplink counter</td>
+      <td>Battery voltage</td>
+      <td>Battery voltage</td>
+      <td>Internal temperature</td>
+      <td>Internal temperature</td>
+      <td>Rel. humidity</td>
+      <td>Dew point</td>
+      <td>Dew point</td>
+      <td>Air pressure</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table class="auto-layout">
+  <thead>
+    <tr>
+      <th>Bytes</th>
+      <th>12</th>
+      <th>13</th>
+      <th>14</th>
+      <th>15</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>HEX</strong></td>
+      <td><span class="code-inline">D6</span></td>
+      <td><span class="code-inline">01</span></td>
+      <td><span class="code-inline">D1</span></td>
+      <td><span class="code-inline">00</span></td>
+    </tr>
+    <tr>
+      <td><strong>Description</strong></td>
+      <td>Air pressure</td>
+      <td>CO2</td>
+      <td>CO2 alarm</td>
+      <td>Alarm</td>
+    </tr>
+  </tbody>
+</table>
+
+<figure class="figure">
+<img
+  src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d1b84bc54f63ce98bc821b1579ed1df20e8f6bf3/Apollon_q_pp/Apollon_q_pp_payload/Pic/Apollon-Q_PP_Payload_code.webp"
+  alt="Apollon Q PP Payload Code"
+/>
+  <figcaption>
+    Abbildung&nbsp;2: Apollon Q PP Payload Code – schematische Darstellung der Byte‑ und Feldzuordnung
+  </figcaption>
+</figure>
+</section>
+<br><br>
+
+<div style="display:flex;flex-direction:column;gap:24px;align-items:center;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png" style="max-width:620px;height:auto;" alt="Supported radio technologies">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/CE_Trash_seals.png" style="max-width:320px;height:auto;" alt="CE marking and disposal symbols">
+</div>
+
+
+
+
+
+
+
+
+<!-- FOOTER -->
+<div style="border-top:1px solid #d0d7de;margin-top:40px;padding-top:16px;font-size:.85rem;color:#6b7280;"></div>
+<div class="footer-note">
+  <p>© Sentinum GmbH – All rights reserved.</p>
+  <p>All contents of this document, including text, tables and images, are protected by copyright and are the property of Sentinum GmbH.</p>
+  <p>All images are subject to copyright of Sentinum GmbH unless otherwise stated.</p>
+  <p>Reproduction, distribution or use – even in excerpts – is not permitted without prior written consent.</p>
+  <p style="padding-left:14px;font-style:italic;">
+    Specifications subject to change. All information provided without guarantee.
+  </p>
+</div>
+</body>
+</html>
