@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>Apollon Q – NFC and Downlink Description</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+  --blue-bg:#f7fbff;
+  --blue-border:#d6e4fa;
+  --blue-text:#1a3e8c;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+}
+
+body{
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+}
+
+h3{
+  margin:32px 0 12px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  border-bottom:1.5px solid var(--border);
+}
+
+p{margin:8px 0 12px}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+}
+
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid #000;
+}
+
+.main-toc{
+  max-width:900px;
+  margin:24px auto 40px;
+  padding:16px 20px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+}
+
+.main-toc strong{display:block;margin-bottom:8px;}
+.main-toc ul{list-style:none;margin:0;padding:0;}
+.main-toc li{margin:.35rem 0;}
+.main-toc a{color:var(--blue-text);font-weight:600;text-decoration:none;}
+
+.pdf-viewer{
+  max-width:900px;
+  height:600px;
+  margin:0 auto 20px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  overflow:hidden;
+}
+.pdf-viewer iframe{
+  width:100%;
+  height:100%;
+  border:none;
+}
+
+.pdf-download{
+  max-width:900px;
+  margin:0 auto 36px;
+  padding:14px 18px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+  text-align:center;
+}
+.pdf-download a{
+  color:var(--blue-text);
+  font-weight:600;
+}
+
+table.auto-layout{
+  table-layout:auto;
+}
+/* Inline code badge (e.g. 0x00) */
+.code-inline{
+  display:inline-block;
+  font-family:"Courier New", Courier, monospace;
+  font-size:0.8rem;
+  line-height:1.2;
+  padding:2px 6px;
+  background-color:#f5f7fa;
+  border:1px solid #d0d7de;
+  border-radius:4px;
+  color:#111827;
+  white-space:nowrap;
+}
+/* ---------- Figures ---------- */
+.figure{
+  max-width:900px;
+  margin:24px auto;
+}
+
+.figure img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+
+.figure figcaption{
+  margin-top:6px;
+  color:var(--text-muted);
+  font-size:0.875rem;
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- PDF Viewer -->
+<div class="pdf-viewer">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d813481e6e6e65bc3f3f3df6503e717b0aa7c1e8/Apollon_q_pp/Apollon_q_pp_allgemeine_Beschreibung/DE/Apollon-Q_PP_Allgemeine_Beschreibung_DE.pdf"
+    loading="lazy"
+    title="Apollon‑Q PP – Allgemeine Beschreibung (PDF)">
+  </iframe>
+</div>
+
+<!-- PDF Download -->
+<div class="pdf-download">
+  📄 Sie können das Dokument oben ansehen oder
+  <a
+    href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d813481e6e6e65bc3f3f3df6503e717b0aa7c1e8/Apollon_q_pp/Apollon_q_pp_allgemeine_Beschreibung/DE/Apollon-Q_PP_Allgemeine_Beschreibung_DE.pdf"
+    target="_blank"
+    rel="noopener">
+    hier als PDF herunterladen
+  </a>.
+</div>
+
+<section class="main-toc">
+  <strong>Inhalt</strong>
+  <ul>
+    <li><a href="#overview">1. Allgemeine Beschreibung</a></li>
+    <li><a href="#about-series">2. Über die Apollon‑Q Serie</a></li>
+    <li><a href="#features">3. Merkmale</a></li>
+    <li><a href="#applications">4. Einsatzfelder</a></li>
+    <li><a href="#article-tree">5. Artikelbaum</a></li>
+  </ul>
+</section>
+
+<section id="overview">
+  <h3>1. Allgemeine Beschreibung</h3>
+
+  <figure class="figure">
+    <img
+      src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/40371017662bb073171eb6cdb56b922db0434920/Apollon_q_pp/Apollon_q_pp_allgemeine_Beschreibung/Pic/Apollon-Q_PP_allgemeine_Beschreibungpic1.webp"
+      alt="Apollon‑Q PP Anwendungsszenarien und Detektionszonen">
+    <figcaption>
+      Abbildung&nbsp;1: Apollon‑Q PP – Typische Anwendungsszenarien und Detektionsprinzipien
+    </figcaption>
+  </figure>
+
+  <p>
+    Der Apollon-Q PP ist eine spezialisierte 
+Variante der Apollon-Q-Serie, entwickelt 
+für die Echtzeit-Präsenz- und 
+Zustandsdetektion in Logistik- und 
+Industrieumgebungen.
+ 
+     Er kann bis zu 
+vier konfigurierbare Zonen überwachen, 
+mit einstellbaren Messfrequenzen von 
+bis zu mehreren Hertz. Ein integrierter 
+Beschleunigungssensor kann.
+
+   Messungen bei Bedarf auslösen und so 
+Energie sparen. Typische 
+Einsatzbereiche sind das Erkennen von 
+Waren in Regalen oder das Identifizieren 
+geöffneter Türen und Klappen.
+Der 
+Sensor kombiniert eine optimierte 
+Reichweite mit kurzen Mess- und 
+Sendeintervallen, bietet umfangreiche 
+Konfigurationsmöglichkeiten und 
+unterstützt MIOTY®, NB-IoT, LoRaWAN® 
+und LTE-CAT-M1.
+  </p>
+
+</section>
+
+<section id="about-series">
+  <h3>2. Über die Apollon‑Q Serie</h3>
+
+  <p>
+ Der Apollon-Q PP ist Teil der Apollon-Q-Sensorfamilie und vereint die bewährte 
+Robustheit und Konnektivität der Serie mit Funktionen, die speziell für eine präzise 
+Präsenzdetektion entwickelt wurden. 
+  </p>
+
+  <p>
+   Die Apollon-Q-Serie umfasst drahtlose IoT-Füllstandsensoren, die dank eines einzigartigen 
+komplementären Messprinzips hochwertige Messergebnisse liefern.
+  </p>
+
+  <p>
+ Jeder Sensor 
+kombiniert optische Messung mit Radartechnologie und ermöglicht Füllstandmessungen 
+bis zu 2,50 Metern. Ob feste Objekte, Flüssigkeiten oder Schüttgüter – Apollon-Q-Geräte 
+liefern präzise und zuverlässige Ergebnisse für Anwendungen wie die Überwachung von 
+Behältern, Schächten und Kanälen. Auch in kleinen Behältern, einschließlich Abfallkörben, 
+arbeiten sie zuverlässig. 
+  </p>
+
+  <p>
+Mit optimierter Reichweite, kurzen Mess- und Sendeintervallen 
+sowie erweiterten Funktionen unterstützt die Serie führende Kommunikationsstandards 
+wie MIOTY®, NB-IoT, LoRaWAN® und LTE-CAT-M1. 
+  </p>
+</section>
+
+<section id="features">
+  <h3>3. Merkmale</h3>
+
+  <ul>
+    <li>Robustes Messprinzip mit Radar‑ und/oder ToF‑Technologie</li>
+    <li>Verfügbar mit mioty®, LoRaWAN®, NB‑IoT und LTE‑M1</li>
+    <li>Widerstandsfähiges IP69k-Gehäuse </li>
+    <li>Austauschbare Batterien</li>
+    <li>Öffnungs‑ und Vandalismuserkennung verfügbar</li>
+    <li>Provisionierung über NFC und Downlinks möglich </li>
+    <li>
+    Zellulare Kommunikation über CoAP über den Sentinum Datahub verfügbar 
+(generisches LWM2M in Vorbereitung)
+    </li>
+  </ul>
+</section>
+
+<section id="applications">
+  <h3>4. Einsatzfelder</h3>
+
+  <ul>
+    <li><strong>Intralogistik:</strong> Präsenzdetektion von Waren, Paletten oder Containern in Lager- 
+und Handhabungsbereichen.</li>
+    <li><strong>Industrielle Automatisierung:</strong> Überwachung von Bauteilen, Materialien oder 
+Produkten in Fertigungsprozessen.</li>
+    <li><strong>Facility Management:</strong> Erkennung von geöffneten/geschlossenen Zuständen bei 
+Türen, Toren oder Zugangspunkten .</li>
+    <li><strong>Transport und Materialfluss:</strong> Belegungsverfolgung in Förderanlagen, 
+Übergabestellen oder Ladezonen.</li>
+    <li><strong>Smarte Infrastruktur:</strong> Integration in IoT-Systeme für automatisierte 
+Benachrichtigungen, Prozesssteuerung und Effizienzoptimierung </li>
+  </ul>
+</section>
+
+<section id="article-tree">
+  <h3>5. Artikelbaum</h3>
+
+  <table class="auto-layout">
+    <thead>
+      <tr>
+        <th>Präfix</th>
+        <th> Code Produktserie</th>
+        <th>Kommunikation</th>
+        <th>Sensorik</th>
+        <th>Zusätzliche Sensoren</th>
+        <th>Beispiel-Artikelcode</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>S</td>
+        <td>(I)APOQ</td>
+        <td>LOEU, MIOTY, NB, NBM1</td>
+        <td>PP‑T1</td>
+        <td>ACC</td>
+        <td>S‑APOQ‑LOEU‑PP‑T1‑ACC</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<br><br>
+
+<div style="display:flex;flex-direction:column;gap:24px;align-items:center;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png" style="max-width:620px;height:auto;" alt="Supported radio technologies">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/CE_Trash_seals.png" style="max-width:320px;height:auto;" alt="CE marking and disposal symbols">
+</div>
+     
+<!-- FOOTER -->
+<div style="border-top:1px solid #d0d7de;margin-top:40px;padding-top:16px;font-size:.85rem;color:#6b7280;">
+</div>
+<div class="footer-note">
+  <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+  <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
+  </p>
+</div>
+     
+</body>
+</html>
