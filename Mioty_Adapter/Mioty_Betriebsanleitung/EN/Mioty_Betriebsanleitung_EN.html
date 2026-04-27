@@ -177,7 +177,12 @@ table td:nth-child(3){
   border: none;   /* sichtbarer Rand (Sentinum-Grau) */
   border-radius: 6px;          /* abgerundete Ecken */
 }
-
+.figure figcaption{
+  margin-top:6px;
+  color:var(--text-muted);
+  font-size:0.875rem;
+  text-align:center;   /* ← DAS ist die Lösung */
+}
 
 /* PDF */
 .pdf-viewer{
@@ -261,7 +266,19 @@ table td:nth-child(3){
   margin: 40px auto 16px;
   border-top: 1px solid #d0d7de;
 }
+.footer-note{
+  border-top:1px solid #d0d7de;
+  margin-top:40px;
+  padding-top:16px;
+  font-size:.82rem;
+  color:#6b7280;
+  line-height:1.45;
+}
 
+.footer-note p{
+  margin:0 0 6px 0;
+  line-height:1.4;
+}
 </style>
 </head>
 
@@ -649,7 +666,7 @@ The device is maintenance-free.
   >
 </figure>
 
-<div class="footer-divider"></div>
+
 
 <div class="footer-note">
   <p>© Sentinum GmbH – All rights reserved.</p>

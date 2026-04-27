@@ -196,7 +196,12 @@
     max-width:100%;
     height:auto;
   }
-
+.figure figcaption{
+  margin-top:6px;
+  color:var(--text-muted);
+  font-size:0.875rem;
+  text-align:center;   /* ← DAS ist die Lösung */
+}
   /* ---------- Note Strips (Option A – Word-Style) ---------- */
   .note-strip{
     padding:14px 16px;
@@ -238,18 +243,19 @@
   }
 
   /* ---------- Footer / Disclaimer ---------- */
-  .footer-note{
-    margin-top:40px;
-    padding-top:16px;
-    border-top:1px solid var(--border);
-    font-size:.82rem;
-    color:var(--footer-font-color);
-  }
+.footer-note{
+  border-top:1px solid #d0d7de;
+  margin-top:40px;
+  padding-top:16px;
+  font-size:.82rem;
+  color:#6b7280;
+  line-height:1.45;
+}
 
-  .footer-note p{
-    margin:0 0 6px 0;
-  }
-
+.footer-note p{
+  margin:0 0 6px 0;
+  line-height:1.4;
+}
   .footer-note p:last-child{
     margin-bottom:0;
   }
