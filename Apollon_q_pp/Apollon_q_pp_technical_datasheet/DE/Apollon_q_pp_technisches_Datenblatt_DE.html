@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>Apollon Q – NFC and Downlink Description</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+  --blue-bg:#f7fbff;
+  --blue-border:#d6e4fa;
+  --blue-text:#1a3e8c;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+}
+
+body{
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+}
+
+h3{
+  margin:32px 0 12px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  border-bottom:1.5px solid var(--border);
+}
+
+p{margin:8px 0 12px}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+}
+
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid #000;
+}
+
+.main-toc{
+  max-width:900px;
+  margin:24px auto 40px;
+  padding:16px 20px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+}
+
+.main-toc strong{display:block;margin-bottom:8px;}
+.main-toc ul{list-style:none;margin:0;padding:0;}
+.main-toc li{margin:.35rem 0;}
+.main-toc a{color:var(--blue-text);font-weight:600;text-decoration:none;}
+
+.pdf-viewer{
+  max-width:900px;
+  height:600px;
+  margin:0 auto 20px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  overflow:hidden;
+}
+.pdf-viewer iframe{
+  width:100%;
+  height:100%;
+  border:none;
+}
+
+.pdf-download{
+  max-width:900px;
+  margin:0 auto 36px;
+  padding:14px 18px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+  text-align:center;
+}
+.pdf-download a{
+  color:var(--blue-text);
+  font-weight:600;
+}
+
+table.auto-layout{
+  table-layout:auto;
+}
+/* Inline code badge (e.g. 0x00) */
+.code-inline{
+  display:inline-block;
+  font-family:"Courier New", Courier, monospace;
+  font-size:0.8rem;
+  line-height:1.2;
+  padding:2px 6px;
+  background-color:#f5f7fa;
+  border:1px solid #d0d7de;
+  border-radius:4px;
+  color:#111827;
+  white-space:nowrap;
+}
+/* ---------- Figures ---------- */
+.figure{
+  max-width:900px;
+  margin:24px auto;
+}
+
+.figure img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+
+.figure figcaption{
+  margin-top:6px;
+  color:var(--text-muted);
+  font-size:0.875rem;
+}
+</style>
+</head>
+
+<!-- PDF Viewer -->
+<div class="pdf-viewer">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/3eb604924a06fa886ced4c1028810f974cc97810/Apollon_q_pp/Apollon_q_pp_technical_datasheet/DE/Apollon_Q_PP_Technisches_Datenblatt_DE.pdf"
+    loading="lazy"
+    title="Apollon Q PP – Technisches Datenblatt (PDF)">
+  </iframe>
+</div>
+
+<!-- PDF Download -->
+<div class="pdf-download">
+  📄 Sie können das technische Datenblatt oben ansehen oder
+  <a
+    href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/3eb604924a06fa886ced4c1028810f974cc97810/Apollon_q_pp/Apollon_q_pp_technical_datasheet/DE/Apollon_Q_PP_Technisches_Datenblatt_DE.pdf"
+    target="_blank"
+    rel="noopener">
+    hier als PDF herunterladen
+  </a>.
+</div>
+
+
+<section class="main-toc">
+  <strong>Inhalt</strong>
+  <ul>
+    <li><a href="#overview">1. Allgemeine Beschreibung</a></li>
+    <li><a href="#versions">2. Versionen</a></li>
+    <li><a href="#lifetime">3. Lebensdauer Abschätzung</a></li>
+    <li><a href="#general">4. Allgemeine Eigenschaften</a></li>
+    <li><a href="#connectivity">5. Konnektivität und RF Spezifikation</a></li>
+    <li><a href="#tof">6. Sensorspezifikation ToF (optisch)</a></li>
+    <li><a href="#radar">7. Sensorspezifikation Radar</a></li>
+    <li><a href="#temperature-acc">8. Sensorspezifikation Temperatur (-ACC)</a></li>
+    <li><a href="#temperature">9. Sensorspezifikation Temperatur (ohne ACC)</a></li>
+    <li><a href="#drawing">10. Technische Zeichnung</a></li>
+  </ul>
+</section>
+
+<section id="overview">
+  <h3>1. Überblick</h3>
+  <p>
+   Die Apollon-Q Serie bietet drahtlose IoT Füllstandsensoren mit hochwertigen Ergebnissen dank eines einzigartigen optischen und Radar-Messprinzips. Sie messen Füllstände bis zu 2,50 Metern für Stück-, Flüssig- oder Schüttgut und sind vielseitig einsetzbar für verschiedene Anwendungen, einschließlich Behälter, Schächte, Kanäle und kleine Behälter wie Papierkörbe. Mit optimierter Reichweite, kurzen Mess- und Sendeintervallen und Unterstützung für MIOTY®, NB-IoT, LoRaWAN® und LTE-CAT-M1 bieten sie erweiterte Funktionalitäten.
+  </p>
+</section>
+
+
+<section id="versions">
+  <h3>2. Versionen</h3>
+
+  <table class="auto-layout">
+    <thead>
+      <tr>
+        <th>Präfix</th>
+        <th>Code Produktserie</th>
+        <th>Kommunikation</th>
+        <th>Sensorik</th>
+        <th>zusätz. Sensorik</th>
+        <th>Beispiel</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>S</td>
+        <td>(i)APOQ</td>
+        <td>LOEU, MIOTY, NB, NBM1</td>
+        <td>PP‑T1</td>
+        <td>ACC</td>
+        <td>S‑APOQ‑LOEU‑PP‑T1‑ACC</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="lifetime">
+  <h3>3. Lebensdauer Abschätzung</h3>
+
+  <table class="auto-layout">
+    <thead>
+      <tr>
+        <th>Sendungen pro Tag</th>
+        <th>6</th>
+        <th>4</th>
+        <th>2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>LoRaWAN® SF12 energizer ultimate lithium</strong></td>
+        <td>5</td>
+        <td>5</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td><strong>LoRaWAN® SF7 energizer ultimate lithium</strong></td>
+        <td>4,5</td>
+        <td>4,5</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td><strong>Mioty® energizer ultimate lithium</strong></td>
+        <td>4,5</td>
+        <td>5</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td><strong>NB‑IoT best case (60 μWh/transmission)</strong></td>
+        <td>4</td>
+        <td>4</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td><strong>NB‑IoT avg case (250 μWh/transmission)</strong></td>
+        <td>3,5</td>
+        <td>4</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td><strong>NB‑IoT worse case (1000 μWh/transmission)</strong></td>
+        <td>2</td>
+        <td>2,5</td>
+        <td>2,5</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="general"><h3>4. Allgemeine Eigenschaften</h3></section>
+
+
+  
+  <table class="auto-layout">
+    <thead>
+      <tr>
+        <th>Merkmal</th>
+        <th>Wert</th>
+        <th>Einheit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Dimensionen (L × B × H)</strong></td>
+        <td>109 × 53 × 33</td>
+        <td>mm</td>
+      </tr>
+      <tr>
+        <td><strong>Gewicht</strong></td>
+        <td>160</td>
+        <td>g</td>
+      </tr>
+      <tr>
+        <td><strong>Betriebstemperatur</strong></td>
+        <td>
+          -30 bis 75
+          (bis 85 °C oder 125 °C nach Rücksprache vor Bestellung möglich,
+          abhängig vom Batterietyp)
+        </td>
+        <td>°C</td>
+      </tr>
+      <tr>
+        <td><strong>Lagertemperatur (empfohlen)</strong></td>
+        <td>15 bis 25</td>
+        <td>°C</td>
+      </tr>
+      <tr>
+        <td><strong>Rel. Luftfeuchtigkeit im Betrieb</strong></td>
+        <td>5 bis 99</td>
+        <td>%</td>
+      </tr>
+      <tr>
+        <td><strong>IP‑Rating</strong></td>
+        <td>IP69k</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>Sensorik Distanz</strong></td>
+        <td>ToF (optisch) und/oder Radar</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>Ampelfunktion</strong></td>
+        <td>–</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>Alarmfunktion akustisch</strong></td>
+        <td>–</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>Provisioning</strong></td>
+        <td>NFC</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>Material</strong></td>
+        <td>
+          Glasfaserverstärktes Polybutylenterephthalat (PBT‑GB‑20)
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>NFC‑Antenne</strong></td>
+        <td>Integriert</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>RF‑Antenne</strong></td>
+        <td>Integriert</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>Accelerometer</strong></td>
+        <td>
+          Optional für Klappenöffnungen und Vandalismuserkennung
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>Batterien</strong></td>
+        <td>Wechselbar</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>Primärzellentyp</strong></td>
+        <td>
+          <strong>LoRaWAN und Mioty:</strong><br>
+          2 × 1,5 V (empfohlen: Energizer Ultimate Lithium) oder
+          LiSOCl₂ nach Rücksprache (LS14500, Saft)<br><br>
+          <strong>NB‑IoT / LTE‑M:</strong><br>
+          2 × 3 V (empfohlen: LiMnO₂ Varta CR AH‑R)
+        </td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+
+<section id="connectivity"><h3>5. Konnektivität und RF Spezifikation</h3>
+
+  <table class="auto-layout">
+    <thead>
+      <tr>
+        <th>Merkmal</th>
+        <th>Wert</th>
+        <th>Einheit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>RF Standards</strong></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>Frequenz LoRaWAN® / mioty® EU</strong></td>
+        <td>868</td>
+        <td>MHz</td>
+      </tr>
+      <tr>
+        <td><strong>Frequenz cellular</strong></td>
+        <td>Band 8, 20 (900 MHz, 800 MHz)</td>
+        <td>MHz</td>
+      </tr>
+      <tr>
+        <td><strong>Sendeleistung LoRaWAN® / Mioty® EU</strong></td>
+        <td>14</td>
+        <td>dBm</td>
+      </tr>
+      <tr>
+        <td><strong>Sendeleistung NB‑IoT</strong></td>
+        <td>23</td>
+        <td>dBm</td>
+      </tr>
+      <tr>
+        <td><strong>LoRa® MAC‑Layer Version</strong></td>
+        <td>1.0.2</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="tof"><h3>6. Sensorspezifikation ToF (optisch)</h3>
+
+  <table class="auto-layout">
+    <thead>
+      <tr>
+        <th>Merkmal</th>
+        <th>Wert</th>
+        <th>Einheit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Messfeld</strong></td>
+        <td>bis zu 16 × 16 Punkte</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>Öffnungswinkel</strong></td>
+        <td>Standard 27° – Öffnungswinkel anpassbar</td>
+        <td>°</td>
+      </tr>
+      <tr>
+        <td><strong>Wellenlänge</strong></td>
+        <td>940</td>
+        <td>nm</td>
+      </tr>
+      <tr>
+        <td><strong>Messfrequenz</strong></td>
+        <td>bis zu 50</td>
+        <td>Hz</td>
+      </tr>
+      <tr>
+        <td><strong>Reichweite</strong></td>
+        <td>2,50 Meter Standard (bis 3,50 m möglich)</td>
+        <td>m</td>
+      </tr>
+      <tr>
+        <td><strong>Laser Klasse</strong></td>
+        <td>Klasse 1</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>Minimale Reichweite</strong></td>
+        <td>Standard 5 cm (bis 2 cm mit geringerer Genauigkeit möglich)</td>
+        <td>cm</td>
+      </tr>
+      <tr>
+        <td><strong>Wiederholgenauigkeit</strong></td>
+        <td>2</td>
+        <td>mm</td>
+      </tr>
+      <tr>
+        <td><strong>Linse Eigenschaften</strong></td>
+        <td>Hydrophob und staubabweisend</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="radar"><h3>7. Sensorspezifikation Radar</h3>
+
+
+  <table class="auto-layout">
+    <thead>
+      <tr>
+        <th>Merkmal</th>
+        <th>Wert</th>
+        <th>Einheit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Art</strong></td>
+        <td>Pulse Radar (CPR)</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>Öffnungswinkel</strong></td>
+        <td>ca. 25° Ebene 1, ca. 15° Ebene 2</td>
+        <td>°</td>
+      </tr>
+      <tr>
+        <td><strong>Frequenz</strong></td>
+        <td>60,5</td>
+        <td>GHz</td>
+      </tr>
+      <tr>
+        <td><strong>Reichweite</strong></td>
+        <td>2,50 Meter standard (bis 3,50 m möglich)</td>
+        <td>m</td>
+      </tr>
+      <tr>
+        <td><strong>Absolute Genauigkeit</strong></td>
+        <td>nm</td>
+        <td>nm</td>
+      </tr>
+      <tr>
+        <td><strong>Relative Genauigkeit</strong></td>
+        <td>μm</td>
+        <td>μm</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<section id="temperature-acc"><h3>8. Sensorspezifikation Temperatur (-ACC)</h3>
+
+
+  <table class="auto-layout">
+    <thead>
+      <tr>
+        <th>Merkmal</th>
+        <th>Wert</th>
+        <th>Einheit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Temperaturbereich</strong></td>
+        <td>-40 bis +85</td>
+        <td>°C</td>
+      </tr>
+      <tr>
+        <td><strong>Genauigkeit 0 °C bis 70 °C</strong></td>
+        <td>±0,8</td>
+        <td>°C</td>
+      </tr>
+      <tr>
+        <td><strong>Genauigkeit -40 °C bis +85 °C</strong></td>
+        <td>±1,3</td>
+        <td>°C</td>
+      </tr>
+      <tr>
+        <td><strong>Auflösung</strong></td>
+        <td>1</td>
+        <td>°C</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+<section id="temperature"><h3>9. Sensorspezifikation Temperatur (ohne ACC)</h3>
+
+<table class="auto-layout">
+    <thead>
+      <tr>
+        <th>Merkmal</th>
+        <th>Wert</th>
+        <th>Einheit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Temperaturbereich</strong></td>
+        <td>-30 bis +85</td>
+        <td>°C</td>
+      </tr>
+      <tr>
+        <td><strong>Genauigkeit 0 °C bis 70 °C</strong></td>
+        <td>±2</td>
+        <td>°C</td>
+      </tr>
+      <tr>
+        <td><strong>Genauigkeit -40 °C bis +85 °C</strong></td>
+        <td>±1,5</td>
+        <td>°C</td>
+      </tr>
+      <tr>
+        <td><strong>Auflösung</strong></td>
+        <td>1</td>
+        <td>°C</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="drawing">
+  <h3>10. Technische Zeichnung</h3>
+
+  <figure class="figure">
+    <img
+      src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/e6200395d971a89956c1fbc98e993fb3bd05db05/Apollon_q_pp/Apollon_q_pp_technical_datasheet/Pic/Apollon_q_pp_technical_datasheet1.png"
+      alt="Technische Zeichnung Apollon Q PP">
+    <figcaption>
+      Abbildung 1: Apollon Q PP – Abmessungen und mechanische Darstellung
+    </figcaption>
+  </figure>
+
+
+<figure class="figure">
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/ba5c1f8b75cecef4379a69aef4fc4d3e98532d0a/Apollon_q_pp/Apollon_q_pp_technical_datasheet/Pic/Apollon_q_pp_technical_datasheet2.png"
+    alt="Technische Zeichnung Apollon Q PP"
+  >
+  <figcaption>
+    Abbildung&nbsp;2: Technische Zeichnung Apollon Q PP – Maßangaben und mechanische Darstellung
+  </figcaption>
+</figure>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+<div style="display:flex;flex-direction:column;gap:24px;align-items:center;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png" style="max-width:620px;height:auto;" alt="Supported radio technologies">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/CE_Trash_seals.png" style="max-width:320px;height:auto;" alt="CE marking and disposal symbols">
+</div>
+     
+<!-- FOOTER -->
+<div style="border-top:1px solid #d0d7de;margin-top:40px;padding-top:16px;font-size:.85rem;color:#6b7280;">
+</div>
+<div class="footer-note">
+  <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+  <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
+  </p>
+</div>
+     
