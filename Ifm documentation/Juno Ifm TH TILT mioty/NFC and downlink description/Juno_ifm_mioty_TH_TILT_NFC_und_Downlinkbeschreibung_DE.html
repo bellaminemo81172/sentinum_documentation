@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>JUNO IFM TH TILT – NFC- und Downlinkbeschreibung</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root{
+      --black:#000000;
+      --text-main:#111827;
+      --text-muted:#6b7280;
+      --border:#d0d7de;
+      --table-header:#f5f7fa;
+      --blue-bg:#f0f8ff;
+      --blue-border:#a0c4ff;
+      --blue-text:#1a3e8c;
+      --toc-bg:#f7fbff;
+      --toc-border:#d6e4fa;
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+      color:var(--text-main);
+      line-height:1.65;
+      background:#ffffff;
+    }
+
+    p{ margin:8px 0 12px; }
+
+    h3{
+      margin:24px 0 8px;
+      padding-bottom:6px;
+      font-family:"Montserrat",Arial,sans-serif;
+      font-size:18px;
+      font-weight:600;
+      color:#000;
+      border-bottom:1.5px solid var(--border);
+      scroll-margin-top:100px;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer{
+      max-width:900px;
+      height:600px;
+      margin:0 auto 20px;
+      border:1px solid #ccc;
+      border-radius:6px;
+      overflow:hidden;
+    }
+
+    .pdf-viewer iframe{ width:100%; height:100%; border:none; }
+
+    .pdf-download{
+      max-width:900px;
+      margin:0 auto 36px;
+      padding:14px 18px;
+      background:var(--blue-bg);
+      border:1px solid var(--blue-border);
+      border-radius:6px;
+      text-align:center;
+    }
+
+    .pdf-download a{ color:var(--blue-text); font-weight:600; }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc{
+      max-width:900px;
+      margin:0 auto 40px;
+      padding:16px 20px;
+      background:var(--toc-bg);
+      border:1px solid var(--toc-border);
+      border-radius:6px;
+    }
+
+    .main-toc ul{ list-style:none; padding:0; margin:0; }
+    .main-toc li{ margin:.3rem 0; }
+    .main-toc a{ color:var(--blue-text); font-weight:600; text-decoration:none; }
+
+    /* ---------- Tables ---------- */
+
+    .table-wrap{ margin:12px 0 32px; overflow-x:auto; }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      font-size:14px;
+    }
+
+    th,td{
+      border:1px solid var(--border);
+      padding:8px 12px;
+      vertical-align:top;
+    }
+
+    th{
+      background:var(--table-header);
+      font-weight:700;
+      border-bottom:2px solid var(--black);
+    }
+
+    .resource-table{ width:120%; }
+
+    .resource-table colgroup col:nth-child(1){ width:12%; }
+    .resource-table colgroup col:nth-child(2){ width:8%; }
+    .resource-table colgroup col:nth-child(3){ width:40%; }
+    .resource-table colgroup col:nth-child(4){ width:10%; }
+    .resource-table colgroup col:nth-child(5){ width:5%; }
+    .resource-table colgroup col:nth-child(6){ width:5%; }
+    .resource-table colgroup col:nth-child(7){ width:8%; }
+    .resource-table colgroup col:nth-child(8){ width:6%; }
+    .resource-table colgroup col:nth-child(9){ width:10%; }
+
+    .history-table th,
+    .history-table td{ width:33.33%; }
+
+    .versions-table th:nth-child(1),
+    .versions-table td:nth-child(1){ width:22%; }
+    .versions-table th:nth-child(2),
+    .versions-table td:nth-child(2){ width:18%; }
+    .versions-table th:nth-child(3),
+    .versions-table td:nth-child(3){ width:60%; }
+
+    /* ---------- Inline code ---------- */
+
+    code{
+      font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+      font-size:0.92em;
+      padding:0.1em 0.35em;
+      border-radius:4px;
+      background:#f5f7fa;
+      border:1px solid var(--border);
+    }
+
+    /* ---------- Logos ---------- */
+
+    .doc-logos{
+      margin:24px 0;
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+      align-items:flex-start;
+    }
+
+    .doc-logos img{
+      height:54px;
+      width:auto;
+      display:block;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note{
+      margin-top:40px;
+      padding-top:16px;
+      border-top:1px solid var(--border);
+      font-size:.82rem;
+      color:var(--text-muted);
+    }
+
+    .footer-note p{ margin:0; }
+
+    .footer-note p:last-child{
+      padding-left:14px;
+      font-style:italic;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= PDF ================= -->
+<div class="pdf-viewer">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/9a58ac3c5584e5648419a23b5f8f4f66199e1d9d/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/NFC%20and%20downlink%20description/Juno_ifm_mioty_TH_TILT_NFC_und_Downlinkbeschreibung_DE.pdf"
+    loading="lazy">
+  </iframe>
+</div>
+
+<div class="pdf-download">
+  📄 Sie können das PDF oben ansehen oder
+  <a href="https://github.com/bellaminemo81172/sentinum_documentation/blob/9a58ac3c5584e5648419a23b5f8f4f66199e1d9d/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/NFC%20and%20downlink%20description/Juno_ifm_mioty_TH_TILT_NFC_und_Downlinkbeschreibung_DE.pdf"
+     target="_blank" rel="noopener noreferrer">
+    hier herunterladen
+  </a>.
+</div>
+
+<!-- ================= TOC ================= -->
+<nav class="main-toc">
+  <h4>Inhaltsverzeichnis</h4>
+  <ul>
+    <li><a href="#history">1. Versionshistorie</a></li>
+    <li><a href="#overview">2. Modulübersicht</a></li>
+    <li><a href="#timings">3. Sentiface: Gruppe Timings (0x00)</a></li>
+    <li><a href="#alarms">4. Sentiface: Gruppe Alarm Einstellungen (0x01)</a></li>
+    <li><a href="#opening">5. Sentiface: Öffnungsdetektion Gruppe (0x02)</a></li>
+    <li><a href="#tilt">6. Sentiface: Erweiterte Neigungseinstellungen Gruppe (0x03)</a></li>
+    <li><a href="#examples">7. Beispiel Downlinks</a></li>
+  </ul>
+</nav>
+
+<!-- ================= VERSION HISTORY ================= -->
+<h3 id="history">1. Versionshistorie</h3>
+
+<div class="table-wrap">
+  <table class="history-table">
+    <thead>
+      <tr><th>Version</th><th>Datum</th><th>Überarbeitung</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1.0.0</td><td>30. April 2026</td><td>Erstellt</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ================= MODULE OVERVIEW ================= -->
+<h3 id="overview">2. Modulübersicht</h3>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Modul</th>
+        <th>Modulschlüssel</th>
+        <th>Gruppe</th>
+        <th>Gruppen ID</th>
+        <th>Beschreibung</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Sentiface</td>
+        <td><code>0x1XXX</code></td>
+        <td>Timings</td>
+        <td><code>0x00</code></td>
+        <td>Definiert Parameter für Messungen und Übertragungsverhalten</td>
+      </tr>
+      <tr>
+        <td>Sentiface</td>
+        <td><code>0x1XXX</code></td>
+        <td>Alarme und Grenzwerte</td>
+        <td><code>0x01</code></td>
+        <td>Definiert Alarme und Grenzwerte wie z.B. obere Temperaturgrenze und untere Temperaturgrenze</td>
+      </tr>
+      <tr>
+        <td>Sentiface</td>
+        <td><code>0x1XXX</code></td>
+        <td>Einstellungen für die Öffnungsdetektion</td>
+        <td><code>0x02</code></td>
+        <td>Definiert Messschwellen zum Auslösen des Alarms für Temperatur und relative Luftfeuchtigkeit</td>
+      </tr>
+      <tr>
+        <td>Sentiface</td>
+        <td><code>0x1XXX</code></td>
+        <td>Einstellungen für Neigungserkennung</td>
+        <td><code>0x03</code></td>
+        <td>Legt das Verhalten des Beschleunigungssensors fest</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Tabellen für produktübergreifende Module (Senticom/Sentivisor) finden Sie in der generischen NFC- und Downlink-Dokumentation.</p>
+<p>Weitere Informationen zur Konfiguration der Sensor-Kommunikation finden Sie je nach Version in der jeweiligen mioty® Dokumentation.</p>
+<p>Anleitung gültig für Versionen:</p>
+
+<div class="table-wrap">
+  <table class="versions-table">
+    <thead>
+      <tr><th>Artikel Code</th><th>IFM Artikelcode</th><th>Features</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>S-JUNO-IX-MIOTY-TH</td>
+        <td>ZJF 201</td>
+        <td>INDUSTRIAL JUNO IP67 TH Sensor, Temperatur und rel. Luftfeuchtigkeit mit Neigungserkennung und Öffnungsdetektion mioty</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ================= TIMINGS 0x00 ================= -->
+<h3 id="timings">3. Sentiface: Gruppe Timings <code>0x00</code></h3>
+
+<div class="table-wrap">
+  <table class="resource-table">
+    <colgroup>
+      <col><col><col><col><col><col><col><col><col>
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Ressourcen</th>
+        <th>Ressourcen ID</th>
+        <th>Beschreibung</th>
+        <th>Schlüssel (NFC/BLE)</th>
+        <th>Min</th>
+        <th>Max</th>
+        <th>Werkseinstellung</th>
+        <th>Einheit</th>
+        <th>Modulschlüssel</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>MESSPERIODE</td>
+        <td><code>0x00</code></td>
+        <td>Gibt die Periode an, in der die Messwerte erfasst werden. 5 Minuten heißt, dass immer nach 5 Minuten eine Messung durch den Sensor durchgeführt wird.</td>
+        <td><code>period</code></td>
+        <td>1</td>
+        <td>360</td>
+        <td>30</td>
+        <td>min</td>
+        <td><code>1111</code></td>
+      </tr>
+      <tr>
+        <td>REGULÄRES SENDEINTERVALL</td>
+        <td><code>0x01</code></td>
+        <td>Anzahl der bis zur Übertragung durchgeführten Messungen.</td>
+        <td><code>every</code></td>
+        <td>1</td>
+        <td>64</td>
+        <td>6</td>
+        <td></td>
+        <td><code>1111</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ================= ALARM SETTINGS 0x01 ================= -->
+<h3 id="alarms">4. Sentiface: Gruppe Alarm Einstellungen <code>0x01</code></h3>
+
+<div class="table-wrap">
+  <table class="resource-table">
+    <colgroup>
+      <col><col><col><col><col><col><col><col><col>
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Ressourcen</th>
+        <th>Ressourcen ID</th>
+        <th>Beschreibung</th>
+        <th>Schlüssel (NFC/BLE)</th>
+        <th>Min</th>
+        <th>Max</th>
+        <th>Werkseinstellung</th>
+        <th>Einheit</th>
+        <th>Modulschlüssel</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ALARM AKTIV</td>
+        <td><code>0x00</code></td>
+        <td>
+          Gibt an, welche Alarme, ob für Temperatur oder rel. Luftfeuchtigkeit aktiviert sind:<br>
+          <code>0</code>: Beide Alarme deaktiviert<br>
+          <code>1</code>: Temperaturalarm aktiv<br>
+          <code>2</code>: Rel. Luftfeuchtigkeitsalarm aktiv<br>
+          <code>3</code>: Beide Alarme aktiv
+        </td>
+        <td><code>aact</code></td>
+        <td>0</td>
+        <td>3</td>
+        <td>1</td>
+        <td></td>
+        <td><code>1111</code></td>
+      </tr>
+      <tr>
+        <td>TEMPERATUR DELTA</td>
+        <td><code>0x01</code></td>
+        <td>Gibt an, um wie viel sich die Temperatur im Vergleich zur letzten Übertragung absolut ändern muss, damit eine ALARM-Übertragung ausgelöst wird. Diese Übertragung wird unabhängig vom normalen Übertragungsintervall durchgeführt.</td>
+        <td><code>tdt</code></td>
+        <td>1</td>
+        <td>50</td>
+        <td>5</td>
+        <td>°C</td>
+        <td><code>1111</code></td>
+      </tr>
+      <tr>
+        <td>TEMPERATUR OBERER GRENZWERT</td>
+        <td><code>0x02</code></td>
+        <td>Gibt den oberen absoluten Grenzwert an, bei dem ein Alarm ausgelöst wird.</td>
+        <td><code>tht</code></td>
+        <td>0</td>
+        <td>85</td>
+        <td>40</td>
+        <td>°C</td>
+        <td><code>1111</code></td>
+      </tr>
+      <tr>
+        <td>TEMPERATUR UNTERER GRENZWERT</td>
+        <td><code>0x03</code></td>
+        <td>Gibt den unteren absoluten Grenzwert an, bei dem ein Alarm ausgelöst wird.</td>
+        <td><code>tlt</code></td>
+        <td>-25</td>
+        <td>75</td>
+        <td>0</td>
+        <td>°C</td>
+        <td><code>1111</code></td>
+      </tr>
+      <tr>
+        <td>REL. LUFTFEUCHTIGKEIT DELTA</td>
+        <td><code>0x04</code></td>
+        <td>Gibt an, um wie viel sich die rel. Luftfeuchtigkeit im Vergleich zur letzten Übertragung absolut ändern muss, damit eine ALARM-Übertragung ausgelöst wird. Diese Übertragung wird unabhängig vom normalen Übertragungsintervall durchgeführt (für Musterversionen wurde hier mit <code>0x05</code> und folgend gearbeitet).</td>
+        <td><code>hdt</code></td>
+        <td>1</td>
+        <td>80</td>
+        <td>20</td>
+        <td>%RH</td>
+        <td><code>1111</code></td>
+      </tr>
+      <tr>
+        <td>REL. LUFTFEUCHTE OBERER GRENZWERT</td>
+        <td><code>0x05</code></td>
+        <td>Gibt den oberen absoluten Grenzwert an, bei dem ein Alarm ausgelöst wird.</td>
+        <td><code>hht</code></td>
+        <td>5</td>
+        <td>100</td>
+        <td>80</td>
+        <td>%RH</td>
+        <td><code>1111</code></td>
+      </tr>
+      <tr>
+        <td>REL. LUFTFEUCHTE UNTERER GRENZWERT</td>
+        <td><code>0x06</code></td>
+        <td>Gibt den unteren absoluten Grenzwert an, bei dem ein Alarm ausgelöst wird.</td>
+        <td><code>hlt</code></td>
+        <td>0</td>
+        <td>95</td>
+        <td>20</td>
+        <td>%RH</td>
+        <td><code>1111</code></td>
+      </tr>
+      <tr>
+        <td>HYSTERESE TEMPERATUR</td>
+        <td><code>0x07</code></td>
+        <td>Bestimmt die absolute Hysterese in °C bei Zustandswechseln. Wenn die Temperatur einen Schwellwert abzüglich Hysterese unter- oder überschreitet, wird von einem höheren in einen niedrigeren Alarmzustand gewechselt.</td>
+        <td><code>thy</code></td>
+        <td>0</td>
+        <td>10</td>
+        <td>2</td>
+        <td>°C</td>
+        <td><code>1111</code></td>
+      </tr>
+      <tr>
+        <td>HYSTERESE REL. LUFTFEUCHTE</td>
+        <td><code>0x08</code></td>
+        <td>Bestimmt die absolute Hysterese in %RH bei Zustandswechseln. Wenn die rel. Luftfeuchtigkeit einen Schwellwert abzüglich Hysterese unter- oder überschreitet, wird von einem höheren in einen niedrigeren Alarmzustand gewechselt.</td>
+        <td><code>hhy</code></td>
+        <td>0</td>
+        <td>30</td>
+        <td>5</td>
+        <td>%RH</td>
+        <td><code>1111</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ================= OPENING DETECTION 0x02 ================= -->
+<h3 id="opening">5. Sentiface: Öffnungsdetektion Gruppe <code>0x02</code></h3>
+
+<div class="table-wrap">
+  <table class="resource-table">
+    <colgroup>
+      <col><col><col><col><col><col><col><col><col>
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Property</th>
+        <th>Property ID</th>
+        <th>Beschreibung</th>
+        <th>Schlüssel (NFC/BLE)</th>
+        <th>Min</th>
+        <th>Max</th>
+        <th>Default</th>
+        <th>Unit</th>
+        <th>Module Key</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>OPENING COOLDOWN</td>
+        <td><code>0x00</code></td>
+        <td>Gibt eine Zeitspanne an, in der nach dem Auslösen einer Öffnung eine weitere Öffnung nicht noch einmal ausgelöst werden kann (entprellt die Öffnungen). Als Referenzwert dient die letzte gezählte Öffnung.</td>
+        <td><code>acool</code></td>
+        <td>0</td>
+        <td>600</td>
+        <td>0</td>
+        <td>sec</td>
+        <td><code>1111</code></td>
+      </tr>
+      <tr>
+        <td>OPENING TIME ALARM</td>
+        <td><code>0x01</code></td>
+        <td>Gibt an, wie lange der Deckel geöffnet sein muss, bis ein Alarm ausgelöst wird (<code>0</code> = sofortiger Alarm).</td>
+        <td><code>oaaf</code></td>
+        <td>0</td>
+        <td>2880</td>
+        <td>0</td>
+        <td>sec</td>
+        <td><code>1111</code></td>
+      </tr>
+      <tr>
+        <td>OPENING MODE</td>
+        <td><code>0x02</code></td>
+        <td>
+          Beschreibt, in welche Richtung der Sensor schaut, wenn er geschlossen ist, und welche Winkel für die Öffnungsdetektion festgelegt sind. Face Up beschreibt dabei den Zustand, wenn der Sensor auf dem Tisch liegt und nach oben an die Decke schaut. Einstellungen von <code>0</code> bis <code>7</code> mit Beschleunigungssensor, <code>8</code> und <code>9</code> Hall Sensor:<br>
+          <code>0</code>: off<br>
+          <code>1</code>: Ultra Low Power. Fester Schwellenwert 50°. Geschlossen, wenn nach unten gerichtet (Face Down).<br>
+          <code>2</code>: Ultra Low Power. Fester Schwellenwert 50°. Geschlossen, wenn nach oben gerichtet (Face Up).<br>
+          <code>3</code>: Ultra Low Power. Fester Schwellenwert 50°. Geschlossen, wenn zur Seite gerichtet (sidewards).<br>
+          <code>4</code>: Erweiterte Neigungsabtastung. Einstellbarer Schwellenwert. Geschlossen, wenn nach unten gerichtet (Face Down).<br>
+          <code>5</code>: Erweiterte Neigungsabtastung. Einstellbarer Schwellenwert. Geschlossen, wenn nach oben gerichtet (Face Up).<br>
+          <code>6</code>: Erweiterte Neigungsabtastung. Einstellbarer Schwellenwert. Geschlossen, wenn seitwärts gerichtet (sidewards).<br>
+          <code>7</code>: Erweitertes Tilt-Sampling. Einstellbarer Schwellenwert. Automatische Kalibrierung der geschlossenen Ausrichtung.<br>
+          <code>8</code>: Behälter ist geschlossen, wenn Magnet anliegt.<br>
+          <code>9</code>: Behälter ist offen, wenn Magnet anliegt.
+        </td>
+        <td><code>opmo</code></td>
+        <td>0</td>
+        <td>8</td>
+        <td>1</td>
+        <td></td>
+        <td><code>1111</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ================= ADVANCED TILT SETTINGS 0x03 ================= -->
+<h3 id="tilt">6. Sentiface: Erweiterte Neigungseinstellungen Gruppe <code>0x03</code></h3>
+
+<div class="table-wrap">
+  <table class="resource-table">
+    <colgroup>
+      <col><col><col><col><col><col><col><col><col>
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Property</th>
+        <th>Property ID</th>
+        <th>Beschreibung</th>
+        <th>Schlüssel (NFC/BLE)</th>
+        <th>Min</th>
+        <th>Max</th>
+        <th>Default</th>
+        <th>Unit</th>
+        <th>Module Key</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>SAMPLING PERIODE</td>
+        <td><code>0x00</code></td>
+        <td>Gibt an, wie oft der Beschleunigungssensor den Winkel bestimmt. Je höher die Frequenz, desto höher der Stromverbrauch.</td>
+        <td><code>tspe</code></td>
+        <td>2</td>
+        <td>600</td>
+        <td>2</td>
+        <td>s</td>
+        <td><code>1111</code></td>
+      </tr>
+      <tr>
+        <td>TRIGGER LEVEL</td>
+        <td><code>0x01</code></td>
+        <td>Gibt den Winkel an, ab dem eine Öffnung gezählt wird oder ein Alarm erfolgt.</td>
+        <td><code>ttle</code></td>
+        <td>5</td>
+        <td>180</td>
+        <td>20</td>
+        <td>°</td>
+        <td><code>1111</code></td>
+      </tr>
+      <tr>
+        <td>TRIGGER HYSTERSE</td>
+        <td><code>0x02</code></td>
+        <td>Hysterese Wert für den Öffnungswinkel</td>
+        <td><code>tthy</code></td>
+        <td>1</td>
+        <td>90</td>
+        <td>4</td>
+        <td>°</td>
+        <td><code>1111</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ================= EXAMPLE DOWNLINKS ================= -->
+<h3 id="examples">7. Beispiel Downlinks</h3>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Einstellung</th><th>Downlink</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>period = 10</td><td><code>00 11 11 00 00 00 00 00 0A</code></td></tr>
+      <tr><td>every = 5</td><td><code>00 11 11 00 01 00 00 00 05</code></td></tr>
+      <tr><td>alarm_act = 0</td><td><code>00 11 11 01 00 00 00 00 00</code></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="doc-logos">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/fa2c05d60d5e64bee7631a58da61bb9ccdd472ff/logo/mioty.png"
+    alt="mioty">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/logo/CE_Trash_seals.png"
+    alt="CE and WEEE compliance marks">
+</div>
+
+<div class="footer-note">
+  <p>© Sentinum GmbH – All rights reserved.</p>
+  <p>All contents of this document, including text, tables and images, are protected by copyright and are the property of Sentinum GmbH.</p>
+  <p>All images are subject to the copyright of Sentinum GmbH unless otherwise stated.</p>
+  <p>Reproduction, distribution or use, even in part, is not permitted without explicit written permission.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Specifications subject to change. All information provided without warranty.
+  </p>
+</div>
+
+</body>
+</html>
