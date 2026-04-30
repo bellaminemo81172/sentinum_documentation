@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Blueprint Sensoren Einbindung - ifm Gateway</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --black:#000000;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+  --blue-bg:#f0f8ff;
+  --blue-border:#a0c4ff;
+  --blue-text:#1a3e8c;
+  --toc-bg:#f7fbff;
+  --toc-border:#d6e4fa;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+  background:#ffffff;
+}
+
+h2{
+  margin:14px 0 36px;
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:24px;
+  font-weight:500;
+  line-height:1.5;
+  color:var(--text-muted);
+}
+
+h3{
+  margin:24px 0 8px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  color:#000;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:100px;
+}
+
+h4{
+  margin:22px 0 10px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:16px;
+  font-weight:600;
+  color:#000;
+}
+
+.main-toc{
+  max-width:900px;
+  margin:0 auto 40px;
+  padding:16px 20px;
+  background:var(--toc-bg);
+  border:1px solid var(--toc-border);
+  border-radius:6px;
+}
+
+.main-toc ul{ list-style:none; padding:0; margin:0; }
+.main-toc li{ margin:.3rem 0; }
+.main-toc a{
+  color:var(--blue-text);
+  font-weight:600;
+  text-decoration:none;
+}
+
+.pdf-viewer{
+  max-width:900px;
+  height:600px;
+  margin:0 auto 20px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  overflow:hidden;
+}
+
+.pdf-viewer iframe{
+  width:100%;
+  height:100%;
+  border:none;
+}
+
+.pdf-download{
+  max-width:900px;
+  margin:0 auto 36px;
+  padding:14px 18px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+  text-align:center;
+}
+
+.pdf-download a{
+  color:var(--blue-text);
+  font-weight:600;
+}
+
+.table-wrap{ margin:12px 0 32px; overflow-x:auto; }
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+}
+
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid var(--black);
+}
+
+.figure{
+  margin:22px auto 34px;
+  text-align:center;
+  max-width:900px;
+}
+
+.figure img{
+  max-width:100%;
+  height:auto;
+  border:1px solid var(--border);
+  border-radius:6px;
+}
+
+.figure figcaption{
+  margin-top:8px;
+  font-size:.85rem;
+  color:var(--text-muted);
+  font-style:italic;
+}
+
+.image-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:18px;
+  margin:18px 0 32px;
+}
+
+.step{
+  margin-bottom:28px;
+}
+
+.separator{
+  margin:20px 0;
+  border-top:1px solid var(--border);
+}
+
+.doc-logos{
+  margin:24px 0;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  align-items:flex-start;
+}
+
+.doc-logos img{
+  height:54px;
+  width:auto;
+  display:block;
+  border:none;
+}
+
+.footer-note{
+  margin-top:40px;
+  padding-top:16px;
+  border-top:1px solid var(--border);
+  font-size:.82rem;
+  color:var(--text-muted);
+}
+
+.footer-note p{ margin:0 0 6px 0; line-height:1.4; }
+</style>
+</head>
+<body>
+
+<div class="pdf-viewer">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/mioty_blueprint_Sensoren_Einbindung_ifm_Gateway_DE.pdf"
+    allowfullscreen
+    title="Blueprint Sensoren Einbindung PDF">
+  </iframe>
+</div>
+
+<div class="pdf-download">
+  📄 Sie k&ouml;nnen das PDF oben ansehen oder
+  <a href="https://github.com/bellaminemo81172/sentinum_documentation/blob/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/mioty_blueprint_Sensoren_Einbindung_ifm_Gateway_DE.pdf" target="_blank" rel="noopener noreferrer">
+    hier herunterladen
+  </a>.
+</div>
+
+<nav class="main-toc">
+  <h2>Inhaltsverzeichnis</h2>
+  <ul>
+    <li><a href="#history">1. Versionshistorie</a></li>
+    <li><a href="#integration">2. Einbindung von Blueprint Sensoren in das ifm mioty Gateway</a></li>
+  </ul>
+</nav>
+
+<h3 id="history">1. Versionshistorie</h3>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Version</th>
+        <th>Datum</th>
+        <th>&Uuml;berarbeitung</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1.0.0</td>
+        <td>30. April 2026</td>
+        <td>Erstellt</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 id="integration">2. Einbindung von Blueprint Sensoren in das ifm mioty Gateway</h3>
+
+<div class="step">
+  <h4>Schritt 1</h4>
+  <p>Nehmen Sie das Gateway in Betrieb. Halten Sie sich dabei an die von ifm bereitgestellten Dokumente. Im Folgenden sollten Sie folgenden Bildschirmausschnitt sehen.</p>
+  <figure class="figure">
+    <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/first%20pic.png" alt="Gateway Startansicht">
+    <figcaption>Abbildung 1: Gateway Startansicht</figcaption>
+  </figure>
+</div>
+
+<div class="separator"></div>
+
+<div class="step">
+  <h4>Schritt 2</h4>
+  <p>Navigieren Sie zum Reiter &bdquo;Data Interpretation&ldquo; und hier zum Reiter &bdquo;Blueprint&ldquo;.</p>
+  <figure class="figure">
+    <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(1).png" alt="Data Interpretation und Blueprint">
+    <figcaption>Abbildung 2: Reiter Data Interpretation und Blueprint</figcaption>
+  </figure>
+</div>
+
+<div class="step">
+  <h4>Schritt 3</h4>
+  <p>Laden Sie sich den Blueprint f&uuml;r Ihren ausgew&auml;hlten Sensor herunter. Navigieren Sie dazu auf die Seite https://docs.sentinum.de und suchen Sie nach Ihrem Sensor und dem entsprechenden Blueprint. In diesem Fall legen wir einen Juno Temperatur- und rel. Luftfeuchtigkeitssensor an.</p>
+  <figure class="figure">
+    <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(2).png" alt="Blueprint Auswahl auf docs.sentinum.de">
+    <figcaption>Abbildung 3: Auswahl des passenden Blueprints</figcaption>
+  </figure>
+</div>
+
+<div class="separator"></div>
+
+<div class="step">
+  <h4>Schritt 4</h4>
+  <p>Klicken Sie auf den Eintrag und dann auf die Schaltfl&auml;che JSON-Datei. Alternativ kann weiter unten auch eine TXT-Datei heruntergeladen werden.</p>
+  <figure class="figure">
+    <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(3).png" alt="JSON-Datei herunterladen">
+    <figcaption>Abbildung 4: Download der JSON-Datei</figcaption>
+  </figure>
+</div>
+
+<div class="step">
+  <h4>Schritt 5</h4>
+  <p>Jetzt sollte sich der Blueprint &ouml;ffnen. Speichern Sie diese Datei mit einem Rechtsklick und &bdquo;Speichern unter&hellip;&ldquo; in einem Ordner ab.</p>
+  <figure class="figure">
+    <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(4).png" alt="Blueprint speichern">
+    <figcaption>Abbildung 5: Ge&ouml;ffnete Blueprint-Datei speichern</figcaption>
+  </figure>
+</div>
+
+<div class="separator"></div>
+
+<div class="step">
+  <h4>Schritt 6</h4>
+  <p>Springen Sie jetzt wieder zur&uuml;ck in die Oberfl&auml;che des Gateways. Klicken Sie im Reiter &bdquo;Data Interpretation&ldquo; und im Reiter &bdquo;Blueprint&ldquo; auf die Schaltfl&auml;che &bdquo;+ Add New&hellip;&ldquo;. Laden Sie jetzt die gespeicherte Blueprint-Datei als .json hoch.</p>
+  <div class="image-grid">
+    <figure class="figure">
+      <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(5).png" alt="Add New im Blueprint Reiter">
+      <figcaption>Abbildung 6: Neuen Blueprint anlegen</figcaption>
+    </figure>
+    <figure class="figure">
+      <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(6).png" alt="Blueprint JSON hochladen">
+      <figcaption>Abbildung 7: JSON-Datei hochladen</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="step">
+  <h4>Schritt 7</h4>
+  <p>Jetzt sollten Sie einen neu angelegten Blueprint sehen, in diesem Fall Juno. Dem Blueprint wird automatisch eine EUI zugewiesen. Kopieren oder speichern Sie diese EUI, da sie sp&auml;ter nochmals ben&ouml;tigt wird.</p>
+  <figure class="figure">
+    <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(7).png" alt="Blueprint mit zugewiesener EUI">
+    <figcaption>Abbildung 8: Angelegter Blueprint mit Blueprint EUI</figcaption>
+  </figure>
+</div>
+
+<div class="separator"></div>
+
+<div class="step">
+  <h4>Schritt 8</h4>
+  <p>Binden wir jetzt den Sensor ein. Navigieren Sie dazu in den Reiter mioty auf der Gateway-Oberfl&auml;che und klicken Sie auf &bdquo;+ Attach New&ldquo;.</p>
+  <figure class="figure">
+    <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(8).png" alt="Attach New im mioty Reiter">
+    <figcaption>Abbildung 9: Sensor im mioty Reiter anlegen</figcaption>
+  </figure>
+</div>
+
+<div class="step">
+  <h4>Schritt 9</h4>
+  <p>Jetzt erscheint folgendes Fenster. Klicken Sie oben in der Checkbox auf Blueprint, sodass Sie unten das Eingabefeld Blueprint EUI sehen. Geben Sie hier die n&ouml;tigen Informationen ein und klicken Sie dann auf &bdquo;OK&ldquo;. Diese finden Sie in der Verpackung als QR-Code oder Sie fordern diese bequem als CSV-Datei bei info@sentinum.de an. Wichtig: Bei diesem Schritt ben&ouml;tigen Sie die Blueprint EUI wieder.</p>
+  <div class="image-grid">
+    <figure class="figure">
+      <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(9).png" alt="Anhangfenster mit Blueprint Auswahl">
+      <figcaption>Abbildung 10: Blueprint im Anhangfenster ausw&auml;hlen</figcaption>
+    </figure>
+    <figure class="figure">
+      <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(10).png" alt="Blueprint EUI eingeben">
+      <figcaption>Abbildung 11: Blueprint EUI und Sensordaten eingeben</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="separator"></div>
+
+<div class="step">
+  <h4>Schritt 10</h4>
+  <p>Jetzt haben Sie den Sensor erfolgreich hinzugef&uuml;gt.</p>
+  <figure class="figure">
+    <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(11).png" alt="Sensor erfolgreich hinzugefuegt">
+    <figcaption>Abbildung 12: Sensor erfolgreich eingebunden</figcaption>
+  </figure>
+</div>
+
+<div class="step">
+  <h4>Schritt 11</h4>
+  <p>Sie sollten jetzt den Sensor mit allen n&ouml;tigen Informationen sehen.</p>
+  <figure class="figure">
+    <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(12).png" alt="Sensoruebersicht mit Informationen">
+    <figcaption>Abbildung 13: Sensor mit allen relevanten Informationen</figcaption>
+  </figure>
+</div>
+
+<div class="separator"></div>
+
+<div class="step">
+  <h4>Schritt 11</h4>
+  <p>Aktivieren Sie den Sensor jetzt mit Magnet oder NFC. Warten Sie danach eine kurze Zeit und bet&auml;tigen Sie die Schaltfl&auml;che &bdquo;Refresh&ldquo;. Dann sollten Sie folgende Werte sehen k&ouml;nnen.</p>
+  <div class="image-grid">
+    <figure class="figure">
+      <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(13).png" alt="Sensorwerte nach Refresh 1">
+      <figcaption>Abbildung 14: Erste aktualisierte Sensorwerte</figcaption>
+    </figure>
+    <figure class="figure">
+      <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(14).png" alt="Sensorwerte nach Refresh 2">
+      <figcaption>Abbildung 15: Weitere aktualisierte Sensorwerte</figcaption>
+    </figure>
+    <figure class="figure">
+      <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(15).png" alt="Sensorwerte nach Refresh 3">
+      <figcaption>Abbildung 16: Vollst&auml;ndige Werte nach Refresh</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="step">
+  <h4>Schritt 12</h4>
+  <p>Mit einem Klick auf den Graph rechts in der Aktionsspalte k&ouml;nnen Sie die Sensorwerte einsehen.</p>
+  <figure class="figure">
+    <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(16).png" alt="Graphansicht der Sensorwerte">
+    <figcaption>Abbildung 17: Graphische Ansicht der Sensorwerte</figcaption>
+  </figure>
+</div>
+
+<div class="doc-logos">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/fa2c05d60d5e64bee7631a58da61bb9ccdd472ff/logo/mioty.png" alt="mioty">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/logo/CE_Trash_seals.png" alt="CE und WEEE Kennzeichnungen">
+</div>
+
+<div class="footer-note">
+  <p>© Sentinum GmbH - Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschlie&szlig;lich Texte, Tabellen und Bilder, sind urheberrechtlich gesch&uuml;tzt und Eigentum der Sentinum GmbH.</p>
+  <p>Sofern nicht anders angegeben, unterliegen alle Bilder dem Urheberrecht der Sentinum GmbH.</p>
+  <p>Eine Vervielf&auml;ltigung, Verbreitung oder Nutzung, auch auszugsweise, ist ohne ausdr&uuml;ckliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">Technische &Auml;nderungen vorbehalten. Alle Angaben erfolgen ohne Gew&auml;hr.</p>
+</div>
+
+</body>
+</html>
