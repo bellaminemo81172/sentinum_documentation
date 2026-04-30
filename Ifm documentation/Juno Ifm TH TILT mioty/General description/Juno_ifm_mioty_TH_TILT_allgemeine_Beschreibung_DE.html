@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+/* ============================================================
+   SENTINUM – ALLGEMEINE BESCHREIBUNG (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --black:#000000;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+
+  --blue-bg:#f0f8ff;
+  --blue-border:#a0c4ff;
+  --blue-text:#1a3e8c;
+
+  --toc-bg:#f7fbff;
+  --toc-border:#d6e4fa;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+  background:#ffffff;
+}
+
+.container{ width:100%; }
+
+p{ margin:8px 0 12px; }
+
+h3{
+  margin:24px 0 8px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  color:#000;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:100px;
+}
+
+/* ---------- PDF ---------- */
+
+.pdf-viewer{
+  max-width:900px;
+  height:600px;
+  margin:0 auto 20px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  overflow:hidden;
+}
+
+.pdf-viewer iframe{ width:100%; height:100%; border:none; }
+
+.pdf-download{
+  max-width:900px;
+  margin:0 auto 36px;
+  padding:14px 18px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+  text-align:center;
+}
+
+.pdf-download a{
+  color:var(--blue-text);
+  font-weight:600;
+}
+
+/* ---------- TOC ---------- */
+
+.main-toc{
+  max-width:900px;
+  margin:0 auto 40px;
+  padding:16px 20px;
+  background:var(--toc-bg);
+  border:1px solid var(--toc-border);
+  border-radius:6px;
+}
+
+.main-toc ul{ list-style:none; padding:0; margin:0; }
+.main-toc li{ margin:.3rem 0; }
+.main-toc a{
+  color:var(--blue-text);
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* ---------- Tables ---------- */
+
+.table-wrap{ margin:12px 0 32px; }
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+}
+
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid var(--black);
+}
+
+.versions-table th:nth-child(1),
+.versions-table td:nth-child(1){ width:22%; }
+.versions-table th:nth-child(2),
+.versions-table td:nth-child(2){ width:18%; }
+.versions-table th:nth-child(3),
+.versions-table td:nth-child(3){ width:60%; }
+
+.history-table th,
+.history-table td{ width:33.33%; }
+
+/* ---------- Figures ---------- */
+
+.figure{ margin:32px auto; text-align:center; }
+.figure img{ max-width:100%; height:auto; }
+
+/* ---------- RADIO TECHNOLOGIES LOGO ---------- */
+
+.doc-logos{
+  margin:24px 0;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  align-items:flex-start;
+}
+
+.doc-logos img{
+  height:54px;
+  width:auto;
+  display:block;
+}
+
+/* ---------- Footer ---------- */
+
+.footer-note{
+  margin-top:60px;
+  padding-top:20px;
+  border-top:2px solid var(--border);
+  font-size:.82rem;
+  color:var(--text-muted);
+}
+
+.footer-note p{ margin:0 0 6px 0; line-height:1.4; }
+
+.footer-note p:last-child{
+  padding-left:14px;
+  font-style:italic;
+}
+
+  </style>
+</head>
+
+<body>
+
+<!-- ================= PDF ================= -->
+<div class="pdf-viewer">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/c7f544f9e3782499bec41c17d0f35847c407e119/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/General%20description/Juno_ifm_mioty_TH_TILT_allgemeine_Beschreibung_DE.pdf"
+    loading="lazy">
+  </iframe>
+</div>
+
+<div class="pdf-download">
+  📄 Sie können das PDF oben ansehen oder
+  <a href="https://github.com/bellaminemo81172/sentinum_documentation/blob/c7f544f9e3782499bec41c17d0f35847c407e119/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/General%20description/Juno_ifm_mioty_TH_TILT_allgemeine_Beschreibung_DE.pdf"
+     target="_blank" rel="noopener noreferrer">
+    hier herunterladen
+  </a>.
+</div>
+
+<!-- ================= TOC ================= -->
+<nav class="main-toc">
+  <h3>Inhaltsverzeichnis</h3>
+  <ul>
+    <li><a href="#versionhistorie">1. Versionhistorie</a></li>
+    <li><a href="#uebersicht">2. Übersicht</a></li>
+    <li><a href="#merkmale">3. Merkmale</a></li>
+    <li><a href="#anwendungen">4. Beispielanwendungen</a></li>
+    <li><a href="#versionen">5. Versionen</a></li>
+  </ul>
+</nav>
+
+<!-- ================= VERSIONHISTORIE ================= -->
+<h3 id="versionhistorie">1. Versionhistorie</h3>
+
+<div class="table-wrap">
+  <table class="history-table">
+    <tr>
+      <th>Version</th>
+      <th>Datum</th>
+      <th>Überarbeitung</th>
+    </tr>
+    <tr>
+      <td>1.0.0</td>
+      <td>30. April 2026</td>
+      <td>Erstellt</td>
+    </tr>
+  </table>
+</div>
+
+<!-- ================= ÜBERSICHT ================= -->
+<h3 id="uebersicht">2. Übersicht</h3>
+
+<p>
+  Der Juno IP67 TH ist ein vielseitiger Temperatur- und Luftfeuchtigkeitssensor mit mioty® Funktechnologie für eine zuverlässige und energieeffiziente Datenübertragung über große Distanzen. Dank robuster Bauweise und IP67 Schutz ist er ideal für den Einsatz in anspruchsvollen Umgebungen. Zusätzlich verfügt der Sensor über eine Neigungs- und Klappenöffnungsdetektion mit gradgenauer Einstellung.
+</p>
+
+<div class="figure">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/fa2c05d60d5e64bee7631a58da61bb9ccdd472ff/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/pictures/juno%20ifm%20mioty%20sensor%20pic.png"
+    alt="JUNO IFM TH TILT mioty Sensor"
+  >
+</div>
+
+<!-- ================= MERKMALE ================= -->
+<h3 id="merkmale">3. Merkmale</h3>
+
+<ul>
+  <li>mioty® Funktechnologie</li>
+  <li>IP67, -25 °C bis 85 °C, IK07</li>
+  <li>Temperatur- und rel. Luftfeuchtigkeitssensor mit hoher Genauigkeit</li>
+  <li>Neigungs- und Klappenöffnungsdetektion</li>
+  <li>Fortgeschrittene Neigungsdetektion mit 1° Auflösung und Grenzwerten</li>
+  <li>Magnetschalter</li>
+  <li>Aktivierbar mit Magnet (kein Smartphone nötig) oder über NFC</li>
+  <li>Konfigurierbar über NFC</li>
+  <li>Einstellbare Grenzwerte</li>
+  <li>Wechselbare AA Zellen (LiSOCl₂ vgl. Saft LS14500)</li>
+  <li>Akustisches Signal</li>
+</ul>
+
+<!-- ================= BEISPIELANWENDUNGEN ================= -->
+<h3 id="anwendungen">4. Beispielanwendungen</h3>
+
+<ul>
+  <li>Temperatur und rel. Luftfeuchteüberwachung in der Industrie</li>
+  <li>Kühlkettenüberwachung</li>
+  <li>Temperaturüberwachung im Gebäudemanagement oder Smart-City-Anwendungen</li>
+  <li>Schaltschranküberwachung</li>
+  <li>Schachtdeckelüberwachung</li>
+  <li>Klappenöffnungsdetektion</li>
+</ul>
+
+<!-- ================= VERSIONEN ================= -->
+<h3 id="versionen">5. Versionen</h3>
+
+<div class="table-wrap">
+  <table class="versions-table">
+    <tr>
+      <th>Artikel Code</th>
+      <th>IFM Artikelcode</th>
+      <th>Features</th>
+    </tr>
+    <tr>
+      <td>S-JUNO-IX-MIOTY-TH</td>
+      <td>ZJF 201</td>
+      <td>INDUSTRIAL JUNO IP67 TH Sensor, Temperatur und rel. Luftfeuchtigkeit mit Neigungserkennung und Öffnungsdetektion mioty®</td>
+    </tr>
+  </table>
+</div>
+
+<div class="doc-logos">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/fa2c05d60d5e64bee7631a58da61bb9ccdd472ff/logo/mioty.png"
+    alt="mioty">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/logo/CE_Trash_seals.png"
+    alt="CE und WEEE Kennzeichnung">
+</div>
+
+<div class="footer-note">
+  <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Abbildungen, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Alle Abbildungen unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+  <p>Vervielfältigung, Verbreitung oder Nutzung – auch auszugsweise – ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Technische Änderungen vorbehalten. Alle Angaben ohne Gewähr.
+  </p>
+</div>
+
+</body>
+</html>
