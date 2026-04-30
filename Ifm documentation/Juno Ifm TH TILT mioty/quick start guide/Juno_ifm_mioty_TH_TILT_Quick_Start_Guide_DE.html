@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>JUNO TH Schnellstart - ZJF201</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --black:#000000;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+  --blue-bg:#f0f8ff;
+  --blue-border:#a0c4ff;
+  --blue-text:#1a3e8c;
+  --toc-bg:#f7fbff;
+  --toc-border:#d6e4fa;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+  background:#ffffff;
+}
+
+h1{
+  margin:48px 0 16px;
+  padding-bottom:12px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:42px;
+  font-weight:700;
+  line-height:1.25;
+  color:#000;
+  border-bottom:2px solid var(--border);
+}
+
+h2{
+  margin:14px 0 36px;
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:24px;
+  font-weight:500;
+  line-height:1.5;
+  color:var(--text-muted);
+}
+
+h3{
+  margin:24px 0 8px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  color:#000;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:100px;
+}
+
+.main-toc{
+  max-width:900px;
+  margin:0 auto 40px;
+  padding:16px 20px;
+  background:var(--toc-bg);
+  border:1px solid var(--toc-border);
+  border-radius:6px;
+}
+
+.main-toc ul{ list-style:none; padding:0; margin:0; }
+.main-toc li{ margin:.3rem 0; }
+.main-toc a{
+  color:var(--blue-text);
+  font-weight:600;
+  text-decoration:none;
+}
+
+.pdf-viewer{
+  max-width:900px;
+  height:600px;
+  margin:0 auto 20px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  overflow:hidden;
+}
+
+.pdf-viewer iframe{
+  width:100%;
+  height:100%;
+  border:none;
+}
+
+.pdf-download{
+  max-width:900px;
+  margin:0 auto 36px;
+  padding:14px 18px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+  text-align:center;
+}
+
+.pdf-download a{
+  color:var(--blue-text);
+  font-weight:600;
+}
+
+.table-wrap{ margin:12px 0 32px; overflow-x:auto; }
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+}
+
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid var(--black);
+}
+
+.figure{
+  margin:32px auto;
+  text-align:center;
+  max-width:900px;
+}
+
+.figure img{ max-width:100%; height:auto; }
+
+.figure figcaption{
+  margin-top:8px;
+  font-size:.85rem;
+  color:var(--text-muted);
+  font-style:italic;
+}
+
+.doc-logos{
+  margin:24px 0;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  align-items:flex-start;
+}
+
+.doc-logos img{
+  height:54px;
+  width:auto;
+  display:block;
+}
+
+.footer-note{
+  margin-top:40px;
+  padding-top:16px;
+  border-top:1px solid var(--border);
+  font-size:.82rem;
+  color:var(--text-muted);
+}
+
+.footer-note p{ margin:0 0 6px 0; line-height:1.4; }
+</style>
+</head>
+<body>
+
+<div class="pdf-viewer">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/c56bdcb26adc137358c77da6ae30bba33b585a12/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/quick%20start%20guide/Juno_ifm_mioty_TH_TILT_Quick_Start_Guide_DE.pdf"
+    allowfullscreen
+    title="JUNO TH Schnellstart PDF">
+  </iframe>
+</div>
+
+<div class="pdf-download">
+  📄 Sie koennen das PDF oben ansehen oder
+  <a href="https://github.com/bellaminemo81172/sentinum_documentation/blob/c56bdcb26adc137358c77da6ae30bba33b585a12/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/quick%20start%20guide/Juno_ifm_mioty_TH_TILT_Quick_Start_Guide_DE.pdf" target="_blank" rel="noopener noreferrer">
+    hier herunterladen
+  </a>.
+</div>
+
+<nav class="main-toc">
+  <h2>Inhaltsverzeichnis</h2>
+  <ul>
+    <li><a href="#overview">1. Ueberblick</a></li>
+    <li><a href="#history">2. Versionshistorie</a></li>
+    <li><a href="#magnet">3. Inbetriebnahme des Sensors mit Magnet</a></li>
+    <li><a href="#nfc">4. Inbetriebnahme des Sensors ueber NFC</a></li>
+  </ul>
+</nav>
+
+<h3 id="overview">1. Ueberblick</h3>
+
+<p><strong>JUNO TH QUICK START - ZJF201</strong></p>
+<p>Danke, dass Sie sich fuer den Juno Sensor von Sentinum entschieden haben. Bitte lesen Sie die folgende Betriebsanleitung aufmerksam durch, um Schaeden am Sensor, von Ihnen und der Umwelt abzuwenden.</p>
+<p>Bitte beachten Sie die Sicherheitshinweise, Montagehinweise und sonstige Hinweise in der Betriebsanleitung.</p>
+
+<figure class="figure">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/fa2c05d60d5e64bee7631a58da61bb9ccdd472ff/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/pictures/juno%20ifm%20mioty%20sensor%20pic.png"
+    alt="JUNO IFM TH TILT mioty Sensor"
+  >
+</figure>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>ARTIKEL CODE</th>
+        <th>IFM ARTIKELCODE</th>
+        <th>FEATURES</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>S-JUNO-IX-MIOTY-TH</td>
+        <td>ZJF 201</td>
+        <td>INDUSTRIAL JUNO IP67 TH Sensor, Temperatur und rel. Luftfeuchtigkeit mit Neigungserkennung und Oeffnungsdetektion mioty</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 id="history">2. Versionshistorie</h3>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Version</th>
+        <th>Datum</th>
+        <th>Ueberarbeitung</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1.0.0</td>
+        <td>30. April 2026</td>
+        <td>Erstellt</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 id="magnet">3. Inbetriebnahme des Sensors mit Magnet</h3>
+
+<p>Auf dem Sensor befindet sich ein Magnetfeldschalter zum einfachen Aktivieren des Sensors. Die folgende Grafik zeigt die Lage des Magnetfeldschalters.</p>
+
+<figure class="figure">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_Advertising9.webp" alt="Position des Magnetfeldschalters auf dem Juno Sensor">
+  <figcaption>Abbildung 1: Position des Magnetfeldschalters zur Aktivierung</figcaption>
+</figure>
+
+<p>Um den Sensor zu aktivieren, halten Sie einen handelsueblichen Magneten an die mit X gekennzeichnete Stelle. Empfohlen wird ein Neodym-Magnet mit einer Mindestflaeche von 1 cm&sup2;. Der Magnet muss mindestens 2 Sekunden an der Stelle verweilen, bis sich das Geraet aktiviert. Dies wird mit einem Piepton quittiert.</p>
+
+<h3 id="nfc">4. Inbetriebnahme des Sensors ueber NFC</h3>
+
+<p>Die Aktivierung erfolgt ueber eine NFC App. Dazu wird ein Smartphone benoetigt. Die App kann in den jeweiligen App Stores heruntergeladen werden. Suchen Sie dazu einfach nach "Sentinum LinQs" und laden Sie die LinQs App herunter.</p>
+<p>Lokalisieren Sie zuerst den Tag auf dem Sensor und dann den Reader an Ihrem Endgeraet.</p>
+
+<figure class="figure">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/b1bf86b8d26c68fe2687d08e5bc04c4c29f243a9/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/quick%20start%20guide/nfc%20tag%20pic.png" alt="Position des NFC Tags auf dem Juno IFM TH TILT Sensor">
+  <figcaption>Abbildung 2: Position des NFC Tags auf dem Sensor</figcaption>
+</figure>
+
+<p>Die Lage des Tags ist ausserdem auf der Oberseite markiert und mit der Aufschrift "Tap here" versehen. Weiterhin koennen Sie der technischen Zeichnung die Lage des NFC Tags entnehmen.</p>
+
+<p>Oeffnen Sie die App und aktivieren Sie den Sensor. Um den Sensor in den Grundeinstellungen zu starten, klicken Sie im Startmenue der App auf die Schaltflaeche "Sensor aktivieren". Legen Sie nun Ihr Geraet auf die NFC-Markierung des Sensors. Wenn der Sensor aktiviert ist, wird "Sensor aktualisiert!" angezeigt. Danach koennen Sie mit der Aktivierung der anderen Sensoren fortfahren.</p>
+
+<p>Je nach Endgeraetehersteller befinden sich die NFC Reader an unterschiedlichen Stellen. Deren Lage kann experimentell ermittelt werden. Erfahrungsgemaess sind diese entweder weiter oben, wie im Bild beschrieben fuer iOS Geraete, oder mehr zur Mitte hin bei Android.</p>
+
+<div style="display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap;">
+  <div style="flex:1; text-align:center;">
+    <p><strong>Sensor aktivieren</strong></p>
+    <figure style="margin:0;">
+      <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_screen12.webp" alt="Sensor aktivieren">
+    </figure>
+    <p>Nutze die Schaltflaeche "Activate Sensor", um den Sensor zu aktivieren.</p>
+  </div>
+  <div style="flex:1; text-align:center;">
+    <p><strong>Parameter auslesen und setzen ueber NFC</strong></p>
+    <figure style="margin:0;">
+      <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_screen13.webp" alt="Parameter ueber NFC auslesen und setzen">
+    </figure>
+    <p>Nutze die Schaltflaeche "Read", um die Parameter auszulesen.</p>
+  </div>
+  <div style="flex:1; text-align:center;">
+    <p><strong>Werte ueber NFC setzen</strong></p>
+    <figure style="margin:0;">
+      <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_screen14.webp" alt="Werte ueber NFC setzen">
+    </figure>
+    <p>Tippe in den gewuenschten Tabelleneintrag und aendere die Werte. Bestaetige mit der Schaltflaeche unten "Update &amp; Reboot". Zeigt der Sensor im oberen Feld "on" in Gruen, ist der Sensor aktiv und uebertraegt Daten.</p>
+  </div>
+</div>
+
+<div class="doc-logos">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/fa2c05d60d5e64bee7631a58da61bb9ccdd472ff/logo/mioty.png" alt="mioty">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/logo/CE_Trash_seals.png" alt="CE- und WEEE-Konformitaetszeichen">
+</div>
+
+<div class="footer-note">
+  <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschliesslich Texte, Tabellen und Bilder, sind urheberrechtlich geschuetzt und Eigentum der Sentinum GmbH.</p>
+  <p>Sofern nicht anders angegeben, unterliegen alle Bilder dem Urheberrecht der Sentinum GmbH.</p>
+  <p>Eine Vervielfaeltigung, Verbreitung oder Nutzung, auch auszugsweise, ist ohne ausdrueckliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">Technische Aenderungen vorbehalten. Alle Angaben erfolgen ohne Gewaehr.</p>
+</div>
+
+</body>
+</html>
