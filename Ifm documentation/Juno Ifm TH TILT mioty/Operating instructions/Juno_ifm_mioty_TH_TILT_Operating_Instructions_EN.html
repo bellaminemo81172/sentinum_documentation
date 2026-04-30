@@ -89,6 +89,36 @@ th{
 .main-toc a{ color:var(--blue-text); font-weight:600; text-decoration:none; }
 .main-toc a:hover{ text-decoration:underline; }
 
+.pdf-viewer{
+  max-width:900px;
+  height:600px;
+  margin:24px auto 20px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  overflow:hidden;
+}
+
+.pdf-viewer iframe{
+  width:100%;
+  height:100%;
+  border:none;
+}
+
+.pdf-download{
+  max-width:900px;
+  margin:0 auto 36px;
+  padding:14px 18px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+  text-align:center;
+}
+
+.pdf-download a{
+  color:var(--blue-text);
+  font-weight:600;
+}
+
 .table-wrap{
   margin:12px 0 32px;
   overflow-x:auto;
@@ -109,6 +139,20 @@ th{
   margin-top:6px;
   color:var(--text-muted);
   font-size:0.875rem;
+}
+
+.doc-logos{
+  margin:24px 0;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  align-items:flex-start;
+}
+
+.doc-logos img{
+  height:54px;
+  width:auto;
+  display:block;
 }
 
 .note-strip{
@@ -153,6 +197,22 @@ table.auto-layout th,table.auto-layout td{ width:auto; }
 </style>
 </head>
 <body>
+
+<div class="pdf-viewer">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/1e607c45927ed886cc81c390e0f17e21487a0ab7/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/Operating%20instructions/Juno_IFM_TH_TILT_operating_Instructions_EN.pdf"
+    title="JUNO TH IFM Operating Instructions PDF"
+    loading="lazy">
+  </iframe>
+</div>
+
+<div class="pdf-download">
+  📄 You can view the PDF above or
+  <a href="https://github.com/bellaminemo81172/sentinum_documentation/blob/1e607c45927ed886cc81c390e0f17e21487a0ab7/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/Operating%20instructions/Juno_IFM_TH_TILT_operating_Instructions_EN.pdf"
+     target="_blank" rel="noopener noreferrer">
+    download it here
+  </a>.
+</div>
 
 <div class="main-toc">
 <strong>Table of Contents</strong>
@@ -886,9 +946,9 @@ table.auto-layout th,table.auto-layout td{ width:auto; }
 
 <h3 id="certification">16. Marking and certification</h3>
 
-<div style="display:flex; gap:32px; align-items:center; flex-wrap:wrap; margin:24px 0;">
-  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png" alt="Supported radio technologies" style="max-width:720px; height:auto;">
-  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/CE_Trash_seals.png" alt="CE marking and disposal symbols" style="max-width:320px; height:auto;">
+<div class="doc-logos">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/fa2c05d60d5e64bee7631a58da61bb9ccdd472ff/logo/mioty.png" alt="mioty">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/logo/CE_Trash_seals.png" alt="CE marking and disposal symbols">
 </div>
 
 <div class="footer-note">

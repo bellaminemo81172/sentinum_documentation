@@ -1,0 +1,963 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>JUNO TH Betriebsanleitung - ZJF201</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+  --blue-bg:#f7fbff;
+  --blue-border:#d6e4fa;
+  --blue-text:#1a3e8c;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+  margin:0;
+  background:#fff;
+}
+
+h1{
+  margin:48px 0 16px;
+  padding-bottom:12px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:42px;
+  font-weight:700;
+  border-bottom:2px solid var(--border);
+}
+
+h3{
+  margin:32px 0 12px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:120px;
+}
+
+h4{
+  margin:22px 0 10px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:16px;
+  font-weight:600;
+}
+
+p{ margin:8px 0 12px; }
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+  table-layout:fixed;
+}
+
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid #000;
+}
+
+.main-toc{
+  max-width:900px;
+  margin:24px auto 40px;
+  padding:16px 20px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+}
+
+.main-toc strong{ display:block; margin-bottom:8px; }
+.main-toc ul{ list-style:none; padding:0; margin:0; }
+.main-toc li{ margin:.35rem 0; }
+.main-toc a{ color:var(--blue-text); font-weight:600; text-decoration:none; }
+.main-toc a:hover{ text-decoration:underline; }
+
+.pdf-viewer{
+  max-width:900px;
+  height:600px;
+  margin:24px auto 20px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  overflow:hidden;
+}
+
+.pdf-viewer iframe{
+  width:100%;
+  height:100%;
+  border:none;
+}
+
+.pdf-download{
+  max-width:900px;
+  margin:0 auto 36px;
+  padding:14px 18px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+  text-align:center;
+}
+
+.pdf-download a{
+  color:var(--blue-text);
+  font-weight:600;
+}
+
+.table-wrap{
+  margin:12px 0 32px;
+  overflow-x:auto;
+}
+
+.figure{
+  max-width:900px;
+  margin:24px auto;
+}
+
+.figure img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+
+.figure figcaption{
+  margin-top:6px;
+  color:var(--text-muted);
+  font-size:0.875rem;
+}
+
+.doc-logos{
+  margin:24px 0;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  align-items:flex-start;
+}
+
+.doc-logos img{
+  height:54px;
+  width:auto;
+  display:block;
+}
+
+.note-strip{
+  padding:14px 16px;
+  margin:18px 0;
+  border-radius:6px;
+  border-left-width:6px;
+  border-left-style:solid;
+}
+
+.note-strip--red{ background:#fdecea; border-left-color:#d32f2f; }
+.note-strip--yellow{ background:#fff8e1; border-left-color:#f9a825; }
+.note-strip--green{ background:#e8f5e9; border-left-color:#2e7d32; }
+.note-strip p,.note-strip ul{ margin:0; }
+
+.footer-note{
+  margin-top:40px;
+  padding-top:16px;
+  border-top:1px solid var(--border);
+  font-size:.82rem;
+  color:var(--text-muted);
+}
+
+.footer-note p{ margin:0; }
+
+.footer-note p:last-child{
+  padding-left:14px;
+  font-style:italic;
+}
+
+code{
+  font-family:ui-monospace,monospace;
+  font-size:.95em;
+  padding:.15em .35em;
+  border-radius:4px;
+  background:#f5f7fa;
+  border:1px solid var(--border);
+}
+
+table.auto-layout{ table-layout:auto; }
+table.auto-layout th,table.auto-layout td{ width:auto; }
+</style>
+</head>
+<body>
+
+<div class="pdf-viewer">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/1e607c45927ed886cc81c390e0f17e21487a0ab7/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/Operating%20instructions/Juno_ifm_mioty_TH_TILT_Betriebsanleitung_DE.pdf"
+    title="JUNO TH IFM Betriebsanleitung PDF"
+    loading="lazy">
+  </iframe>
+</div>
+
+<div class="pdf-download">
+  📄 Sie können das PDF oben ansehen oder
+  <a href="https://github.com/bellaminemo81172/sentinum_documentation/blob/1e607c45927ed886cc81c390e0f17e21487a0ab7/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/Operating%20instructions/Juno_ifm_mioty_TH_TILT_Betriebsanleitung_DE.pdf"
+     target="_blank" rel="noopener noreferrer">
+    hier herunterladen
+  </a>.
+</div>
+
+<div class="main-toc">
+<strong>Inhaltsverzeichnis</strong>
+<ul>
+<li><a href="#version-history">1. Versionhistorie</a></li>
+<li><a href="#warnings">2. Allgemeine Warn- und Sicherheitshinweise</a></li>
+<li><a href="#documentation">3. Weiterführende Dokumentation</a></li>
+<li><a href="#intended-use">4. Vorgesehene Verwendung und Produktversionen</a></li>
+<li><a href="#product-codes">4.1 Produktcodes und Funktionen</a></li>
+<li><a href="#intended-use-detail">4.2 Vorgesehene Verwendung</a></li>
+<li><a href="#ix-differences">4.3 Unterschiede der iX Versionen</a></li>
+<li><a href="#technical-drawing">5. Technische Zeichnung</a></li>
+<li><a href="#technical-drawing-th">5.1 Juno TH (mit TH Öffnung)</a></li>
+<li><a href="#scope-of-delivery">6. Lieferumfang</a></li>
+<li><a href="#adhesive-pad">6.1 Klebepad technische Zeichnung</a></li>
+<li><a href="#batteries">7. Zugelassene Batterien und Typen</a></li>
+<li><a href="#accessories">8. Zubehör</a></li>
+<li><a href="#handling">9. Generelle Handhabungshinweise</a></li>
+<li><a href="#handling-th">9.1 Besondere Handhabungshinweise für -TH Versionen</a></li>
+<li><a href="#assembly">10. Montage und Installation</a></li>
+<li><a href="#assembly-warning">10.1 Warn- und Sicherheitshinweise zur Montage</a></li>
+<li><a href="#mounting-methods">10.2 Empfohlene Befestigungsmethoden</a></li>
+<li><a href="#installation-general">10.3 Allgemeine Installationsanweisungen</a></li>
+<li><a href="#installation-th">10.4 Installationsanweisungen für Juno TH Versionen</a></li>
+<li><a href="#range">10.5 Weiterführende Montagehinweise für optimale Reichweiten</a></li>
+<li><a href="#mounting-screws">10.6 Wandmontage mit Schrauben</a></li>
+<li><a href="#mounting-magnets">10.7 Wandmontage mit Magneten</a></li>
+<li><a href="#mounting-adhesive">10.8 Wandmontage mit Klebestreifen</a></li>
+<li><a href="#commissioning">11. Inbetriebnahme und Verwendung</a></li>
+<li><a href="#commissioning-magnet">11.1 Inbetriebnahme des Sensors mit Magnet</a></li>
+<li><a href="#commissioning-nfc">11.2 Inbetriebnahme des Sensors über NFC</a></li>
+<li><a href="#feedback">11.3 Akustisches Signal und Feedback</a></li>
+<li><a href="#sensor-functions">12. Sensorfunktionen</a></li>
+<li><a href="#hysteresis">12.1 Hysterese</a></li>
+<li><a href="#tilt">12.2 Neigungs- und Tilt-Erkennung</a></li>
+<li><a href="#maintenance">13. Pflege und Reinigung</a></li>
+<li><a href="#battery-replacement">14. Batteriewechsel</a></li>
+<li><a href="#flap-opening">15. Klappenöffnungsdetektion und Neigungsdetektion</a></li>
+<li><a href="#flap-magnetic">15.1 Klappenöffnungsdetektion über den Magnetschalter</a></li>
+<li><a href="#flap-accelerometer">15.2 Klappenöffnungsdetektion mit Beschleunigungssensor und Neigungsdetektion</a></li>
+<li><a href="#orientations">15.3 Orientierungen</a></li>
+<li><a href="#certification">16. Kennzeichnung und Zertifizierung</a></li>
+</ul>
+</div>
+
+<h3 id="version-history">1. Versionhistorie</h3>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th>Version</th>
+      <th>Datum</th>
+      <th>Überarbeitung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.0.0</td>
+      <td>30. April 2026</td>
+      <td>Erstellt</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3 id="warnings">2. Allgemeine Warn- und Sicherheitshinweise</h3>
+
+<p>Warnungen und wichtige Informationen über potenzielle Gefahren oder Beschädigungen.</p>
+<p>Wichtige Hinweise die zum reibungsfreien Betrieb der Geräte nötig sind.</p>
+
+<div class="note-strip note-strip--yellow">
+<p><strong>Bitte beachten:</strong></p>
+<ul>
+  <li>Beachten Sie die Sicherheitshinweise und Installationsanweisungen in der Anleitung und der Montageliste.</li>
+  <li>Beachten Sie, dass die Installationsumgebung den vorgeschriebenen Einsatzbereichsrichtlinien entspricht. Halten Sie Temperatur und andere Grenzwerte zu jederzeit ein.</li>
+  <li>Das Gerät darf nur in den in den technischen Spezifikationen vorgegebenen Bereichen eingesetzt werden.</li>
+  <li>Das Gerät darf nur für den beschriebenen Einsatzzwecken und Bereichen verwendet werden.</li>
+  <li>Die Sicherheit und Funktionsfähigkeit kann nicht mehr garantiert werden, wenn das Gerät modifiziert oder erweitert wird.</li>
+  <li>Der Sensor darf nicht an Decken oder Böden montiert werden.</li>
+  <li>Der Betrieb des Sensors ist nur bis maximal 2000 Meter über Normal Null zugelassen.</li>
+  <li>Der Betrieb ist nur in maximal 2 Meter Raumhöhe zugelassen.</li>
+  <li>Aufgrund der Human-Exposure-Vorschrift ist ein Mindestabstand zwischen Gerät und Personen von 20 cm einzuhalten.</li>
+  <li>Stellen Sie sicher, dass die Installationsumgebung den vorgeschriebenen Richtlinien für den Einsatzbereich entspricht. Halten Sie die Temperatur- und sonstigen Grenzwerte jederzeit ein.</li>
+</ul>
+</div>
+
+<div class="note-strip note-strip--yellow">
+<p>Falls das Gerät inkorrekt installiert wird:</p>
+<ul>
+  <li>Könnte es nicht ordnungsgemäß funktionieren.</li>
+  <li>Könnte es permanent beschädigt werden.</li>
+  <li>Könnte es eine Verletzungsgefahr darstellen.</li>
+</ul>
+</div>
+
+<div class="note-strip note-strip--red">
+<p><strong>Bitte beachten:</strong></p>
+<ul>
+  <li>Eine unsachgemäße Handhabung wie z.B. unsachgemäße mechanische Belastung, wie z.B. beim fallen lassen des Gerätes kann es zu Beschädigungen kommen.</li>
+  <li>Werden andere als die empfohlenen Batteriezellen verwendet, so kann die Performance und Produktsicherheit negativ beeinflusst werden.</li>
+  <li>Das Gerät darf nur dann installiert und in Betrieb genommen werden, wenn es unbeschädigt aus der Originalverpackung entnommen werden kann. Direkt nach der Entnahme ist eine Sichtprüfung auf Beschädigungen durchzuführen. Sollte das Produkt beschädigt sein, ist eine Inbetriebnahme untersagt.</li>
+</ul>
+</div>
+
+<h3 id="documentation">3. Weiterführende Dokumentation</h3>
+
+<p>Bitte beachten Sie die Informationen und Grenzwerte im technischen Datenblatt.</p>
+<p>Die sensorspezifischen Werkseinstellungen sowie Einstellungsmöglichkeiten, sowie die Schlüssel und zulässigen Werte des Sensors finden Sie in der NFC und Downlinkbeschreibung.</p>
+<p>Die Möglichkeit zur Konfiguration der Sensor-Kommunikation finden Sie je nach Version in der jeweiligen generischen mioty&reg; Dokumentation.</p>
+<p>Alle Dokumente zur generischen Dokumentation finden Sie unter <a href="https://docs.sentinum.de/wichtig-produkt%C3%BCbergreifende-dokumentation-f%C3%BCr-sensoren" target="_blank" rel="noopener">https://docs.sentinum.de/wichtig-produktübergreifende-dokumentation-für-sensoren</a>.</p>
+
+<h3 id="intended-use">4. Vorgesehene Verwendung und Produktversionen</h3>
+
+<p>Diese Betriebsanleitung gilt für die gesamte Produktserie Juno.</p>
+<p>Innerhalb der Serie gibt es verschiedene Produktversionen, die sich in ihren Lokalisationsmethoden sowie in der Ausstattung und Funktionalität der Sensorik unterscheiden. Die spezifischen Eigenschaften und Funktionen der jeweiligen Versionen werden im weiteren Verlauf dieser Anleitung gesondert erläutert.</p>
+
+<h3 id="product-codes">4.1 Produktcodes und Funktionen</h3>
+
+<div class="table-wrap">
+<table class="auto-layout">
+  <thead>
+    <tr>
+      <th>ARTIKEL CODE</th>
+      <th>IFM ARTIKELCODE</th>
+      <th>FEATURES</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>S-JUNO-IX-MIOTY-TH</td>
+      <td>ZJF 201</td>
+      <td>INDUSTRIAL JUNO IP67 TH Sensor, Temperatur und rel. Luftfeuchtigkeit mit Neigungserkennung und Öffnungsdetektion mioty</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3 id="intended-use-detail">4.2 Vorgesehene Verwendung</h3>
+
+<p>Der Juno-Sensor ist ein drahtloses, batteriebetriebenes IoT-Gerät zur Erfassung von Temperatur und rel. Luftfeuchtigkeitsdaten. Er ist für den Einsatz in industriellen und gewerblichen Anwendungen konzipiert, insbesondere zur Zustandsüberwachung und Lokalisierung von Objekten in Innen- und Außenbereichen.</p>
+<p>Je nach Produktvariante verfügt der Sensor über unterschiedliche Sensorik-Module (z.&nbsp;B. Temperatur, Bewegung, Neigung). Der Sensor ist ausschließlich für die in der Anleitung beschriebenen Anwendungen bestimmt und darf nur im Rahmen der darin genannten technischen Spezifikationen betrieben werden.</p>
+<p>Eine anderweitige oder darüber hinausgehende Nutzung gilt als nicht bestimmungsgemäß. Für daraus resultierende Schäden übernimmt die Sentinum GmbH keine Haftung.</p>
+
+<h3 id="ix-differences">4.3 Unterschiede der iX Versionen</h3>
+
+<p>Die Juno iX-Versionen verfügen über erweiterte Zertifizierungen für den industriellen Einsatz.</p>
+<p>Darüber hinaus bieten sie einen erweiterten Lieferumfang sowie zusätzliche Konfigurationsmöglichkeiten in Bezug auf Mess- und Sendeintervalle. So ermöglichen die iX-Modelle beispielsweise ein minimales Mess- und Sendeintervall von einer Minute, während bei der Standardversion ein Mindestintervall von fünf Minuten eingehalten werden muss. Die industriellen Juno-Versionen und die Standardversionen unterscheiden sich auch in ihrer Gehäusefarbe.</p>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th>Version</th>
+      <th>Gehäusefarbe</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-iX industrielle Versionen</td>
+      <td>lichtgrau</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3 id="technical-drawing">5. Technische Zeichnung</h3>
+
+<h3 id="technical-drawing-th">5.1 Juno TH (mit TH Öffnung)</h3>
+
+<p>Technische Zeichnung mit der Öffnung für den TH Sensor.</p>
+
+<div class="figure">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_technischeZeichnung(junomth)2.webp" alt="Technische Zeichnung von Juno TH mit Membranöffnung">
+  <figcaption>Abbildung 1: Technische Zeichnung von Juno TH (mit TH Öffnung)</figcaption>
+</div>
+
+<h3 id="scope-of-delivery">6. Lieferumfang</h3>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th>Produktversionen</th>
+      <th>Lieferumfang</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-iX industrielle Versionen</td>
+      <td>Sensor<br>Batterie<br>Klebepad</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3 id="adhesive-pad">6.1 Klebepad technische Zeichnung</h3>
+
+<div class="figure">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_technischeZeichnungklebepad3.webp" alt="Technische Zeichnung des Juno Klebepads">
+  <figcaption>Abbildung 2: Technische Zeichnung des Juno Klebepads</figcaption>
+</div>
+
+<h3 id="batteries">7. Zugelassene Batterien und Typen</h3>
+
+<p>Für den Betrieb des Produkts sind die folgenden Batterietypen zugelassen.</p>
+<p>Bitte beachten Sie, dass die Wahl der Batterie einen erheblichen Einfluss auf die Laufzeit hat.</p>
+<p>Für eine maximale Betriebsdauer empfehlen wir die Verwendung der Standardbatterien.</p>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th>Artikelnummer</th>
+      <th>Zugelassene Batterien</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>S-JUNO(-iX)-MIOTY</td>
+      <td>Energizer Ultimate Lithium AA<br>Varta ULTRA Lithium AA<br>Varta Longlife Power AA<br>SAFT LS14500 (Standard)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3 id="accessories">8. Zubehör</h3>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th>Artikelnummer</th>
+      <th>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PBA-000102</td>
+      <td>Klebepad für Juno</td>
+    </tr>
+    <tr>
+      <td>Z-JUNO-MAG-NEO</td>
+      <td>2x Neodymmagnet mit Schrauben für Sensoren der Juno Serie, hält 36 kg.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3 id="handling">9. Generelle Handhabungshinweise</h3>
+
+<ol>
+  <li><strong>Transport und Lagerung</strong><br>Transportieren und lagern Sie den Sensor in der Originalverpackung, um mechanische Beschädigungen und statische Entladungen zu vermeiden.<br>Lagern Sie das Gerät nach dem im technischen Datenblatt spezifizierten Parametern.</li>
+  <li><strong>Montage</strong><br>Verwenden Sie zur Befestigung ausschließlich die vorgesehenen Montagepunkte am Gehäuse.<br>Achten Sie darauf, den Sensor stabil und erschütterungsfrei zu befestigen, um die Messgenauigkeit nicht zu beeinträchtigen.</li>
+  <li><strong>Inbetriebnahme</strong><br>Stellen Sie sicher, dass die Batterie korrekt eingesetzt ist und ausreichend Ladung besitzt.<br>Aktivieren Sie den Sensor über den integrierten Magnetschalter oder mit der vorgesehenen Smart Phone App (modellabhängig).<br>Verwenden Sie zur Konfiguration die von Sentinum bereitgestellte Software oder App.</li>
+  <li><strong>Betrieb</strong><br>Betreiben Sie den Sensor ausschließlich innerhalb der spezifizierten Umgebungsbedingungen (Temperatur, Feuchtigkeit, Schutzklasse).<br>Vermeiden Sie starke magnetische Felder oder metallische Abschirmungen, die die Funkkommunikation oder Sensorfunktionen beeinträchtigen können.</li>
+  <li><strong>Reinigung</strong><br>Reinigen Sie das Gehäuse bei Bedarf mit einem leicht feuchten, fusselfreien Tuch.<br>Verwenden Sie keine aggressiven Reinigungsmittel oder Lösungsmittel.<br>Die Tracker Versionen (nicht -TH, ohne Öffnung) sind IP69k zugelassen und können dementsprechend gereinigt werden.</li>
+  <li><strong>Wartung</strong><br>Der Juno-Sensor ist wartungsarm. Ein Batteriewechsel ist je nach Nutzung nach mehreren Jahren erforderlich.<br>Überprüfen Sie regelmäßig die Funktion und die Verbindung zum Backend-System.</li>
+  <li><strong>Entsorgung</strong><br>Entsorgen Sie das Gerät am Ende seiner Lebensdauer gemäß den lokalen Vorschriften für Elektronik- und Batterierücknahme.</li>
+</ol>
+
+<h3 id="handling-th">9.1 Besondere Handhabungshinweise für -TH Versionen</h3>
+
+<p>Die Juno TH-Versionen sind mit einer speziellen Membran zur Ermöglichung des Luftaustauschs ausgestattet, um präzise Temperatur- und Feuchtemessungen zu gewährleisten.</p>
+<p>Bitte beachten Sie im Umgang mit der Membran folgende Hinweise:</p>
+<ul>
+  <li>Die Membran ist empfindlich gegenüber mechanischer Belastung. Keine spitzen oder scharfen Gegenstände in die Öffnung einführen.</li>
+  <li>Verschmutzungen durch Späne, Staub oder Partikel müssen unbedingt vermieden werden. Achten Sie darauf, dass sich die Membran nicht zusetzt. Dies beeinträchtigt die Messgenauigkeit.</li>
+  <li>Eine Reinigung oder ein Austausch der Membran darf nicht eigenständig vorgenommen werden. Wenden Sie sich hierzu stets an den Hersteller oder autorisierte Fachstellen.</li>
+  <li>Die Membran darf nicht mit aggressiven Reinigungsmitteln in Kontakt kommen. Dies kann die Membran dauerhaft beschädigen oder ihre Durchlässigkeit verändern.</li>
+</ul>
+
+<p><strong>Montagehinweis:</strong></p>
+<ul>
+  <li>Auch wenn der Sensor über die Schutzklasse IP67 verfügt, darf sich kein Wasser im Bereich der Membranöffnung sammeln. Stauendes Wasser kann zu verfälschten Messwerten führen.</li>
+  <li>Für den Außeneinsatz ist der Sensor immer in einem Winkel von mindestens 45&deg; geneigt anzubringen, sodass die Membran nach unten zeigt.</li>
+  <li>Positionieren Sie den Sensor nicht bodennah und nicht in Spritzwasserbereichen, um das Eindringen von Spritzschmutz, Schlamm oder stehendem Wasser in die Öffnung zu vermeiden.</li>
+</ul>
+
+<p>Ein unsachgemäßer Umgang kann zu Messfehlern oder Funktionsstörungen führen.</p>
+
+<p><strong>Weiterhin gilt:</strong></p>
+<ul>
+  <li>Luftzirkulation sicherstellen: Der Sensor sollte nicht in vollständig abgeschlossenen Gehäusen oder stark abgeschirmten Bereichen montiert werden. Eine freie Luftzirkulation ist für genaue Feuchte- und Temperaturmessungen essenziell.</li>
+  <li>UV-Exposition vermeiden: Langfristige direkte Sonneneinstrahlung kann das Gehäusematerial und möglicherweise die Membranstruktur beeinträchtigen. Empfohlen wird eine Montage im teilbeschatteten Bereich oder unter einer kleinen Abdeckung, sofern die Umgebungsbedingungen dies zulassen.</li>
+  <li>Kondenswasserbildung vermeiden: Bei stark schwankenden Temperaturen kann sich in ungünstiger Einbaulage Kondenswasser im Bereich der Membranöffnung bilden. Auch deshalb ist die schräge, nach unten gerichtete Montage entscheidend.</li>
+  <li>Nicht lackieren oder beschichten: Das Gehäuse, insbesondere die Membranöffnung, darf nicht überstrichen, lackiert oder beschichtet werden. Selbst dünne Schichten können die Membran verschließen und zu erheblichen Messfehlern führen.</li>
+  <li>Nicht in aggressiven Atmosphären einsetzen, wenn nicht explizit freigegeben. Solche Bedingungen können die Membran und Elektronik beeinträchtigen.</li>
+</ul>
+
+<h3 id="assembly">10. Montage und Installation</h3>
+
+<h3 id="assembly-warning">10.1 Warn- und Sicherheitshinweise zur Montage</h3>
+
+<p>Falls der Sensor auch nach der Montage gut zugänglich ist, montieren Sie erst den Sensor und aktivieren diesen nach der Montage.</p>
+<p>Falls der Sensor nach der Montage nicht mehr zugänglich ist, aktivieren Sie erst den Sensor und montieren diesen nach der Aktivierung.</p>
+<p>Vergewissern Sie sich vor dieser Art der Montage, dass die Oberfläche, auf die der Sensor geschraubt werden soll, eben ist, da sonst das Gehäuse beschädigt werden kann.</p>
+
+<div class="note-strip note-strip--yellow">
+<p><strong>Bitte beachten:</strong></p>
+<ul>
+  <li>Führen Sie keine Gegenstände oder Körperteile in die Öffnungen des Sensors ein.</li>
+  <li>Montieren Sie den Sensor nicht an der Decke oder am Boden.</li>
+  <li>Montieren Sie den Sensor nicht in Höhen über zwei Meter.</li>
+  <li>Montieren Sie den Sensor nur in Innenräumen an einer Wand in einem gewöhnlichen Raum bei einer Höhe von 1,50 m bis 1,80 m.</li>
+</ul>
+</div>
+
+<p>Dauermagnete können starke Magnetfelder erzeugen, die bei unsachgemäßer Handhabung gefährlich sein können. Beachten Sie daher folgende Warnhinweise:</p>
+<ul>
+  <li>Hände und Finger schützen: Starke Magnete können sich schlagartig anziehen und Finger oder Haut einklemmen.</li>
+  <li>Elektronische Geräte fernhalten: Magnetfelder können elektronische Geräte wie Computer, Smartphones, Kreditkarten, Herzschrittmacher und andere empfindliche Elektronik beschädigen oder ihre Funktion beeinträchtigen.</li>
+  <li>Bruchgefahr beachten: Viele Dauermagnete bestehen aus spröden Materialien, die bei plötzlichen Stößen oder hoher Belastung brechen können.</li>
+  <li>Gesundheitliche Risiken: Menschen mit Herzschrittmachern oder anderen implantierten medizinischen Geräten sollten den Kontakt mit starken Magneten vermeiden.</li>
+  <li>Magnete sicher lagern: Bewahren Sie Magnete in einem sicheren Abstand voneinander und von anderen metallischen Gegenständen auf.</li>
+  <li>Gefahr für Kinder: Dauermagnete sind kein Spielzeug.</li>
+  <li>Erwärmung vermeiden: Dauermagnete verlieren bei Temperaturen über ihrer maximalen Betriebstemperatur dauerhaft ihre Magnetkraft.</li>
+</ul>
+
+<h3 id="mounting-methods">10.2 Empfohlene Befestigungsmethoden</h3>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th>Montageart</th>
+      <th>Beschreibung</th>
+      <th>Empfohlenes Zubehör</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Verschraubung</td>
+      <td>2 Schrauben M4 oder M5</td>
+      <td>2x geeignete Senkkopfschraube, ggf. Holzschraube 4 mm - 5 mm</td>
+    </tr>
+    <tr>
+      <td>Magneten</td>
+      <td>2 Mal Neodytopfmagnet M4, Innengewinde</td>
+      <td>2x Neodymmagneten (indoor) zusammen 16-32 kg Tragkraft</td>
+    </tr>
+    <tr>
+      <td>Kleben</td>
+      <td>Doppelseitiges Klebeband oder Montagekleber</td>
+      <td>Doppelseitiges Klebeband oder Montagekleber</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3 id="installation-general">10.3 Allgemeine Installationsanweisungen</h3>
+
+<p><strong>Installation der Juno Tracker Versionen (ohne Öffnung)</strong></p>
+<p>Die Standardversionen des Juno-Sensors sind für eine Vielzahl industrieller und logistischer Anwendungen ausgelegt und verfügen über robuste Gehäuse mit hoher Schutzart. Bei der Installation sind folgende Punkte zu beachten:</p>
+<ul>
+  <li>Montageort wählen, der innerhalb der spezifizierten Umgebungstemperaturen und -bedingungen liegt.</li>
+  <li>Gehäuse nicht verdecken.</li>
+  <li>Montieren Sie den Sensor im Optimalfall mit freier Sichtverbindung zum Himmel. Damit kann ein reibungsfreier Betrieb der Funkschnittstellen sichergestellt werden.</li>
+  <li>Sensor stabil befestigen, idealerweise über die vorgesehenen Montagelöcher. Vibrationsarme oder feste Untergründe werden empfohlen.</li>
+  <li>Ausrichtung: Die Standardversion benötigt keine spezielle Ausrichtung, kann also flach, vertikal oder horizontal montiert werden.</li>
+  <li>Nicht in unmittelbarer Nähe von starken elektromagnetischen Quellen montieren, um Signalstörungen zu vermeiden.</li>
+</ul>
+
+<h3 id="installation-th">10.4 Installationsanweisungen für Juno TH Versionen</h3>
+
+<p>Die TH-Versionen enthalten eine empfindliche Luftaustausch-Membran zur präzisen Klimaüberwachung. Daher gelten zusätzliche Anforderungen:</p>
+<ul>
+  <li>Sensor immer in geneigter Position montieren (mindestens 45&deg; Neigung), sodass die Membran nach unten zeigt.</li>
+  <li>Nicht bodennah oder in Spritzwasserbereichen montieren.</li>
+  <li>Montageort so wählen, dass freie Luftzirkulation gewährleistet ist.</li>
+  <li>Nicht direkter Sonneneinstrahlung aussetzen, um Überhitzung und Messverfälschungen zu vermeiden.</li>
+  <li>Vermeidung von Partikel- oder Staubbelastung: TH-Modelle nicht in Bereichen montieren, in denen mit hoher Staubbelastung oder Spänen zu rechnen ist.</li>
+  <li>Die Membran darf nicht verschlossen, verklebt oder überstrichen werden.</li>
+  <li>Reinigung oder Austausch der Membran nur durch autorisierte Stellen oder in Rücksprache mit dem Hersteller.</li>
+</ul>
+
+<h3 id="range">10.5 Weiterführende Montagehinweise für optimale Reichweiten</h3>
+
+<p>Um bestmögliche Performance zu gewährleisten berücksichtigen Sie bitte folgende Montagehinweise für die Tracker Versionen:</p>
+<ul>
+  <li>Der Sensor sollte stets außerhalb von Metallgehäusen montiert werden.</li>
+  <li>Vermeiden Sie die Installation in unmittelbarer Nähe von Metalloberflächen oder metallischen Strukturen.</li>
+  <li>Halten Sie mindestens 30 cm Abstand zu metallischen Materialien nach vorne und zur Seite.</li>
+  <li>Platzieren Sie den Sensor fern von Hochspannungsleitungen und starken elektromagnetischen Feldern.</li>
+</ul>
+
+<h3 id="mounting-screws">10.6 Wandmontage mit Schrauben</h3>
+
+<p>Der Juno-Sensor kann sicher und dauerhaft an einer Wand oder anderen festen Oberfläche montiert werden. Die Montage erfolgt über die dafür vorgesehenen Schraublöcher im Gehäuseflansch.</p>
+
+<p><strong>Vorbereitung der Montage</strong></p>
+<ul>
+  <li>Montageposition bestimmen: Wählen Sie einen Montageort, der vibrationsarm, trocken und für die Sensorfunktion geeignet ist.</li>
+  <li>Befestigungsuntergrund prüfen: Geeignet sind massive Untergründe wie Beton, Mauerwerk, Holz oder technische Kunststoffplatten. Für poröse Untergründe geeignete Dübel verwenden.</li>
+  <li>Werkzeug bereitstellen: Akkuschrauber oder Schraubendreher mit Drehmomentkontrolle, Bohrer, Dübel bei Bedarf, Schrauben.</li>
+</ul>
+
+<div class="figure">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/77c7488a6907f64cd361572943506b7f2be36033/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_vorbereitungMontage5.webp" alt="Vorbereitung zur Wandmontage mit Schrauben am Juno Sensor">
+  <figcaption>Abbildung 3: Vorbereitung zur Wandmontage mit Schrauben</figcaption>
+</div>
+
+<p><strong>Schraubenauswahl</strong></p>
+<ul>
+  <li>Die Montagebohrungen im Sensorgehäuse sind für M4-Schrauben ausgelegt.</li>
+  <li>Je nach Montageuntergrund empfehlen sich Zylinderkopfschrauben M4 für Kunststoffgehäuse oder Metallrahmen oder Spax-Schrauben 43 mm mit geeigneten Dübeln für Wände aus Beton, Ziegel oder Holz.</li>
+  <li>Die Schraube muss durch das Gehäuse frei geführt werden können, ohne das Gehäuse zu verspannen oder zu beschädigen.</li>
+</ul>
+
+<p><strong>Montagehinweise</strong></p>
+<ul>
+  <li>Maximales Anzugsdrehmoment: 3 Nm. Ein höheres Drehmoment kann zu Gehäuseverformung oder Bruch führen.</li>
+  <li>Schrauben gleichmäßig und spannungsfrei anziehen.</li>
+  <li>Achten Sie darauf, dass das Gehäuse plan aufliegt, ohne dass sich mechanische Spannungen aufbauen.</li>
+  <li>Keine zusätzlichen Löcher bohren oder das Gehäuse modifizieren.</li>
+  <li>Nicht über Kopf montieren, wenn sich Kondenswasser oder Schmutz im Sensorbereich sammeln könnte.</li>
+</ul>
+
+<div class="note-strip note-strip--red">
+<p><strong>Sicherheitshinweise</strong></p>
+<ul>
+  <li>Tragen Sie bei der Montage geeignete Schutzausrüstung.</li>
+  <li>Prüfen Sie die korrekte Befestigung durch leichtes Ziehen und Drücken am Gehäuse.</li>
+  <li>Stellen Sie sicher, dass keine Kabel oder elektrische Leitungen hinter der Wand beschädigt werden.</li>
+  <li>Bei TH-Versionen: Beachten Sie den empfohlenen Neigungswinkel von mind. 45&deg; und die Ausrichtung der Membran nach unten.</li>
+</ul>
+</div>
+
+<h3 id="mounting-magnets">10.7 Wandmontage mit Magneten</h3>
+
+<p>Für Anwendungen, bei denen eine flexible oder wiederlösbare Befestigung erforderlich ist, kann der Juno-Sensor mithilfe von Montagemagneten an metallischen Oberflächen angebracht werden. Die Magnetmodule werden zunächst fest mit Schrauben am Sensorgehäuse befestigt. Die Gehäusekonstruktion bietet dafür speziell vorgesehene Montagelöcher, deren Position und Abmessung der mitgelieferten technischen Zeichnung entnommen werden können.</p>
+
+<div class="figure">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TLT11_8pic.png" alt="Wandmontage mit Magneten">
+  <figcaption>Abbildung 4: Wandmontage des Juno Sensors mit Montagemagneten</figcaption>
+</div>
+
+<p>Zur sicheren Montage der Magnete ist es wichtig, ausschließlich die vorgesehenen Schraubpunkte zu verwenden und darauf zu achten, dass die Schrauben mit einem maximalen Drehmoment von 3 Nm angezogen werden. Für die Befestigung der Magnete eignen sich je nach Magnettyp in der Regel Zylinderkopfschrauben M3 aus Edelstahl. Die Magneten selbst müssen fest mit dem Gehäuse verbunden sein, um ein Verrutschen oder Lösen bei Vibrationen oder Stößen zu verhindern.</p>
+<p>Nach der Montage der Magnete kann der Sensor auf eine geeignete, ferromagnetische Fläche aufgesetzt werden. Es ist darauf zu achten, dass die Kontaktfläche eben, sauber und ausreichend tragfähig ist. Unebenheiten, Rost, Lack oder Schmutz können die Haltekraft der Magnete deutlich reduzieren.</p>
+<p>Die magnetische Befestigung bietet sich insbesondere für temporäre Einsätze, Testinstallationen oder Standorte an, bei denen ein werkzeugloser Austausch erforderlich ist. Dennoch muss beachtet werden, dass mechanische Belastungen oder Erschütterungen den Halt verringern können. In sicherheitsrelevanten Anwendungen oder bei dauerhafter Montage wird empfohlen, den Sensor zusätzlich zu sichern oder auf eine feste Verschraubung zurückzugreifen.</p>
+<p>Zudem können Magnete je nach Materialzusammensetzung unter direkter Sonneneinstrahlung, Hitze und Witterungseinflüssen schneller altern oder porös werden. Dadurch kann es im Laufe der Zeit zu einem Verlust der Haltekraft oder zum Abrutschen des Sensors kommen. Für dauerhafte Außenanwendungen sollten deshalb ausschließlich witterungsbeständige, gekapselte Magnethalter verwendet und der Sensor regelmäßig auf festen Sitz überprüft werden.</p>
+<p>Auch bei der Magnetmontage gelten die allgemeinen Hinweise zur Ausrichtung, insbesondere bei TH-Versionen mit empfindlicher Membran: Der Sensor sollte stets mindestens 45&deg; geneigt mit der Membran nach unten montiert werden, um Wasseransammlungen oder Partikeleindrang zu verhindern.</p>
+
+<h3 id="mounting-adhesive">10.8 Wandmontage mit Klebestreifen</h3>
+
+<p>Alternativ zur Verschraubung oder Magnetmontage kann der Juno-Sensor auch mithilfe von hochwertigen 3M-Klebestreifen befestigt werden. Die Klebestreifen sind vorgeschnitten und speziell an die Gehäuseform des Juno angepasst, um eine schnelle, saubere und dauerhafte Montage zu ermöglichen, insbesondere auf glatten, festen Untergründen.</p>
+
+<div class="figure">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_SicherheitshinweiseMontage6.webp" alt="Wandmontage mit Klebestreifen">
+  <figcaption>Abbildung 5: Wandmontage mit Klebestreifen</figcaption>
+</div>
+
+<p><strong>Voraussetzungen und Vorbereitung</strong></p>
+<ul>
+  <li>Der Montageuntergrund muss eben, tragfähig, sauber, trocken und fettfrei sein.</li>
+  <li>Vor dem Aufbringen ist die Fläche mit Isopropanol oder einem geeigneten Kunststoffreiniger zu säubern.</li>
+  <li>Der Klebestreifen sollte nicht auf porösen, strukturierten oder stark unebenen Flächen verwendet werden.</li>
+</ul>
+
+<p><strong>Montageanleitung</strong></p>
+<ul>
+  <li>Die Schutzfolie auf einer Seite des Klebestreifens abziehen und den Streifen plan auf die Rückseite des Sensors aufbringen. Dabei ist darauf zu achten, dass der Streifen exakt sitzt und keine Lufteinschlüsse entstehen.</li>
+  <li>Anschließend die zweite Schutzfolie abziehen und den Sensor mit gleichmäßigem Druck von ca. 10-15 Sekunden auf die vorbereitete Fläche aufkleben.</li>
+  <li>Der Sensor sollte mindestens 24 Stunden ungestört haften, um die vollständige Klebkraft zu erreichen.</li>
+</ul>
+
+<p><strong>Wichtige Hinweise</strong></p>
+<ul>
+  <li>Die Klebeverbindung ist für den langfristigen Einsatz in Innenräumen oder geschützten Außenbereichen ausgelegt.</li>
+  <li>In Umgebungen mit starker UV-Belastung, Feuchtigkeit, starker Hitze über 80 &deg;C oder ständiger Vibration kann die Klebeleistung beeinträchtigt werden.</li>
+  <li>Eine nachträgliche Korrektur der Position ist nach dem Aufbringen nur sehr eingeschränkt möglich.</li>
+  <li>Bei TH-Versionen ist auch bei der Klebemontage die empfohlene Montageposition von mindestens 45&deg; geneigt mit Membran nach unten einzuhalten.</li>
+  <li>Die Klebestreifen sind nicht wiederverwendbar. Beim Umsetzen des Sensors muss ein neuer Klebestreifen verwendet werden.</li>
+</ul>
+
+<h3 id="commissioning">11. Inbetriebnahme und Verwendung</h3>
+
+<p>Bitte beachten, dass es bei der Nutzung von Messern oder anderen spitzen Gegenständen zur Beschädigung des Gehäuses oder Elektronik kommen kann.</p>
+
+<h3 id="commissioning-magnet">11.1 Inbetriebnahme des Sensors mit Magnet</h3>
+
+<p>Auf dem Sensor befindet sich ein Magnetfeldschalter zum einfachen aktivieren des Sensors. Die folgende Grafik zeigt die Lage des Magnetfeldschalter.</p>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th>Artikelnummer</th>
+      <th>Magnetfeldschalter</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>S-JUNO(-iX)-MIOTY-TH</strong></td>
+      <td>
+        <div class="figure">
+          <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_Advertising9.webp" alt="Position des Magnetschalters am Juno Sensor">
+          <figcaption>Abbildung 6: Position des Magnetschalters zur Aktivierung</figcaption>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Um den Sensor zu aktivieren, halten Sie einen handelsüblichen Magneten an die mit X gekennzeichnete Stelle. Empfohlen wird ein Neodym Magnet mit einer Mindestfläche von 1 cm&sup2;. Der Magnet muss mindestens 2 Sekunden an der Stelle verweilen, bis sich das Gerät aktiviert. Dies wird mit einem Piepton quittiert.</p>
+
+<div class="figure">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_Klappenerkennung28.webp" alt="Markierung der Magnetposition am Juno Sensor">
+  <figcaption>Abbildung 7: Markierung der Magnetposition</figcaption>
+</div>
+
+<div class="note-strip note-strip--yellow">
+<p>Bitte beachten Sie für den Betrieb, dass der Hall-Switch 1 immer für die Detektion einer Klappenöffnung genutzt werden kann und der Magnetschalter 2 immer für das Aktivieren.</p>
+</div>
+
+<h3 id="commissioning-nfc">11.2 Inbetriebnahme des Sensors über NFC</h3>
+
+<div class="note-strip note-strip--green">
+<p>Diese Aktivierung gilt nur für die Artikelnummern:</p>
+<ul>
+  <li>S-JUNO(-iX)-MIOTY-TH</li>
+</ul>
+</div>
+
+<p>Die Aktivierung erfolgt über eine NFC App. Dazu wird ein Smartphone benötigt. Die App kann in den jeweiligen App Stores heruntergeladen werden. Suchen Sie dazu einfach nach Sentinum LinQs und laden Sie die LinQs App herunter.</p>
+
+<div class="figure">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_Qrcode10.webp" alt="QR Code für die LinQs App">
+  <figcaption>Abbildung 8: QR Code für die Sentinum LinQs App</figcaption>
+</div>
+
+<p>Lokalisieren Sie zuerst den Tag auf dem Sensor und dann den Reader an Ihrem Endgerät. Die Lage des NFC Tags finden Sie an der Position des orangenen Pfeils.</p>
+
+<div class="figure">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_pfeilOrange11.webp" alt="Position des NFC Tags am Juno Sensor">
+  <figcaption>Abbildung 9: Position des NFC Tags am Sensor</figcaption>
+</div>
+
+<p>Die Lage des Tags ist außerdem auf der Oberseite markiert und mit der Aufschrift Tap here versehen. Weiterhin können Sie der technischen Zeichnung die Lage des NFC Tags entnehmen.</p>
+<p>Öffnen Sie die App und aktivieren Sie den Sensor. Um den Sensor in den Grundeinstellungen zu starten, klicken Sie im Startmenü der App auf die Schaltfläche Sensor aktivieren. Legen Sie nun Ihr Gerät auf die NFC-Markierung des Sensors.</p>
+<p>Wenn der Sensor aktiviert ist, wird Sensor aktualisiert! angezeigt. Danach können Sie mit der Aktivierung der anderen Sensoren fortfahren.</p>
+<p>Je nach Endgeräte Hersteller befinden sich die NFC Reader an unterschiedlichen Stellen. Die Lage kann experimentell ermittelt werden. Erfahrungsgemäß sind diese entweder weiter oben für iOS Geräte oder eher in der Mitte für Android.</p>
+
+<div style="display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap;">
+  <div style="flex:1; text-align:center;">
+    <p><strong>Sensor aktivieren</strong></p>
+    <figure style="margin:0;">
+      <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_screen12.webp" alt="Sensor aktivieren">
+    </figure>
+    <p>Nutze die Schaltfläche Activate Sensor um den Sensor zu aktivieren.</p>
+  </div>
+  <div style="flex:1; text-align:center;">
+    <p><strong>Parameter auslesen und setzen über NFC</strong></p>
+    <figure style="margin:0;">
+      <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_screen13.webp" alt="Parameter auslesen">
+    </figure>
+    <p>Nutze die Schaltfläche Read um die Parameter auszulesen.</p>
+  </div>
+  <div style="flex:1; text-align:center;">
+    <p><strong>Werte über NFC setzen</strong></p>
+    <figure style="margin:0;">
+      <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_screen14.webp" alt="Werte über NFC setzen">
+    </figure>
+    <p>Tippe in den gewünschten Tabelleneintrag und ändere die Werte. Bestätige mit der Schaltfläche unten Update &amp; Reboot oder Update. Update &amp; Reboot erzwingt zusätzlich zur Änderung einen Reboot, Update wird bei der nächsten Messung oder Übertragung angewendet.</p>
+  </div>
+</div>
+
+<h3 id="feedback">11.3 Akustisches Signal und Feedback</h3>
+
+<ul>
+  <li>Beim Einschalten des Geräts ertönt ein akustisches Signal, das aus mehreren aufsteigenden Tönen besteht. Diese Tonfolge signalisiert erfolgreiches Aktivieren des Sensors.</li>
+  <li>Beim Ausschalten werden mehrere abfallende Töne abgespielt, die das Herunterfahren des Geräts akustisch bestätigen.</li>
+</ul>
+
+<h3 id="sensor-functions">12. Sensorfunktionen</h3>
+
+<p>Im Folgenden werden spezifische Sensorfunktionen für den Juno erklärt.</p>
+
+<h3 id="hysteresis">12.1 Hysterese</h3>
+
+<p>Hysterese bezeichnet ein Verhalten, bei dem die Reaktion eines Systems nicht nur vom aktuellen Zustand, sondern auch von seiner Vorgeschichte abhängt. Das heißt: Das System merkt sich, wo es herkommt und reagiert deshalb unterschiedlich auf den gleichen Reiz, je nachdem, ob sich der Reiz gerade erhöht oder verringert.</p>
+
+<p><strong>Hysterese = Verzögerung oder Unterschied im Verhalten beim Hoch- und Runterfahren eines Signals oder Reizes.</strong></p>
+
+<p>Für den Juno werden zwei Hysterese Grenzwerte, einer für die Temperatur und einer für die rel. Luftfeuchtigkeit angegeben. Die Werte werden sowohl auf die Delta als auch auf die absoluten Grenzwerte angewendet.</p>
+
+<div class="figure">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/140ba3afa92db6a1eeb1d1d8fa3c0f63ff963bc6/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_graphSensor21.webp" alt="Hysteresediagramm des Juno Sensors">
+</div>
+
+<p><strong>Beschreibung:</strong></p>
+<ul>
+  <li>Orange Linie: Sensorwerte über die Zeit.</li>
+  <li>Rote Linien: Gestrichelte Linie für den maximalen Alarm-Schwellenwert, gepunktete Linie für den Rücksetzpunkt bei fallender Temperatur.</li>
+  <li>Blaue Linien: Gestrichelte Linie für den minimalen Alarm-Schwellenwert, gepunktete Linie für den Rücksetzpunkt bei steigender Temperatur.</li>
+</ul>
+
+<p><strong>Beispiel-Ablauf:</strong></p>
+<ul>
+  <li>Der Sensor löst einen MAX Alarm aus, sobald der Wert größer oder gleich 30 &deg;C ist.</li>
+  <li>Der Alarm bleibt aktiv, bis der Wert unter 28 &deg;C fällt und erst dann wird zurückgesetzt.</li>
+  <li>Umgekehrt gilt das gleiche für den unteren Bereich mit dem MIN Alarm bei kleiner oder gleich 10 &deg;C.</li>
+</ul>
+
+<p>Das Verhalten verhindert, dass bei minimalen Schwankungen ständig Alarme ausgelöst oder deaktiviert werden, typisch für Hysterese.</p>
+
+<h3 id="tilt">12.2 Neigungs- und Tilt-Erkennung</h3>
+
+<p>Für die Juno-Sensoren mit integrierter Neigungserkennung stehen zwei Betriebsmodi zur Verfügung:</p>
+
+<ol>
+  <li><strong>Ultra-Low-Power-Neigungserkennung</strong><br>Dieser Modus zeichnet sich durch einen besonders geringen Stromverbrauch von nur 1 &micro;A aus. Er erkennt zuverlässig eine Neigung oder Klappenöffnung ab ca. 50 Grad. Ideal für Anwendungen, bei denen eine grobe Neigungserkennung ausreicht und Energieeffizienz im Vordergrund steht.</li>
+  <li><strong>Erweiterte Neigungserkennung</strong><br>Zusätzlich ist ein fortschrittlicher Modus verfügbar, der eine gradgenaue Erfassung von Neigungen oder Klappenöffnungen ermöglicht. Der Stromverbrauch ist hierbei abhängig von der gewählten Abtastfrequenz, liegt jedoch über dem der Ultra-Low-Power-Variante. Dieser Modus eignet sich für Anwendungen mit höheren Anforderungen an die Genauigkeit.</li>
+</ol>
+
+<p><strong>Die Funktionen Neigungs- und Öffnungserkennung sowie Tracking in Motion schließen sich gegenseitig aus.</strong></p>
+<p>Das bedeutet: Ein Sensor, bei dem das Tracking in Motion aktiviert ist, kann keine Echtzeit-Neigungs- oder Klappenöffnungserkennung durchführen.</p>
+<p>Der aktuelle Neigungswinkel wird jedoch weiterhin regelmäßig mitübertragen, sodass eine nachträgliche Auswertung der Position möglich ist.</p>
+
+<h3 id="maintenance">13. Pflege und Reinigung</h3>
+
+<p>Damit der Sensor zuverlässig funktioniert und eine lange Lebensdauer gewährleistet ist, sollte er regelmäßig gepflegt werden. Beachten Sie dabei die folgenden Hinweise:</p>
+<ul>
+  <li>Reinigen Sie das Gehäuse, insbesondere die Lüftungsschlitze des Sensors mit einem trockenen oder leicht angefeuchteten Mikrofasertuch. Achten Sie darauf, dass keine Feuchtigkeit in das Gerät eindringt.</li>
+  <li>Führen Sie die Reinigung regelmäßig durch, insbesondere in staubigen oder pollenreichen Umgebungen, um die Funktionalität des Sensors langfristig sicherzustellen.</li>
+  <li>Verzichten Sie auf alkohol- oder lösungsmittelhaltige Reinigungsmittel, da diese die Oberfläche des Sensors beschädigen können.</li>
+  <li>Verwenden Sie keine Druckluft oder andere intensive Reinigungsmethoden, da diese empfindliche Sensorbauteile beschädigen können.</li>
+  <li>Harte Ablagerungen können die Messgenauigkeit beeinträchtigen. Falls notwendig, mit einem weichen, feuchten Tuch und mildem Reinigungsmittel frühzeitig reinigen.</li>
+  <li>Achten Sie darauf, dass keine Blätter, Wasser oder Schnee auf dem Sensor liegen oder haften.</li>
+</ul>
+
+<h3 id="battery-replacement">14. Batteriewechsel</h3>
+
+<div style="display:flex; gap:24px; margin-bottom:32px;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/140ba3afa92db6a1eeb1d1d8fa3c0f63ff963bc6/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_batteriewechsel22.webp" style="width:260px; height:auto;" alt="Schrauben auf der Rückseite des Sensors öffnen">
+  <p><strong>1.</strong><br>Öffnen Sie die 4 Schrauben auf der Rückseite des Sensors, die mit den orangenen Pfeilen markiert sind. Hierzu benötigen Sie einen Torx T10 Schraubendreher und vergewissern Sie sich, dass die Dichtung nicht beschädigt ist.</p>
+</div>
+
+<div style="display:flex; gap:24px; margin-bottom:32px;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/140ba3afa92db6a1eeb1d1d8fa3c0f63ff963bc6/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_batteriewechsel23.webp" style="width:260px; height:auto;" alt="Rückseite des Gehäuses abnehmen">
+  <p><strong>2.</strong><br>Nehmen Sie die Rückseite des Gehäuses des Sensors ab. Überprüfen Sie den Sitz der Dichtung und achten Sie darauf, diese beim Öffnen nicht zu beschädigen.</p>
+</div>
+
+<div style="display:flex; gap:24px; margin-bottom:32px;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/140ba3afa92db6a1eeb1d1d8fa3c0f63ff963bc6/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_batteriewechsel24.webp" style="width:260px; height:auto;" alt="Alte Batterien entfernen">
+  <p><strong>3.</strong><br>Entfernen Sie die alten Batterien aus dem Batteriehalter.</p>
+</div>
+
+<div style="display:flex; gap:24px; margin-bottom:32px;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/140ba3afa92db6a1eeb1d1d8fa3c0f63ff963bc6/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_batteriewechsel25.webp" style="width:260px; height:auto;" alt="Neue Batteriezellen einsetzen">
+  <p><strong>4.</strong><br>Setzen Sie 2 neue Batteriezellen ein. Wenn andere als die empfohlenen Zellen verwendet werden, können Leistung und Produktsicherheit beeinträchtigt werden und die in den Datenblättern angegebenen Laufzeiten und Leistungen ggf. nicht erreicht werden. Nach dem Einsetzen sollte der Sensor mit einem kurzen Piepton starten. Sobald Sie dieses Signal hören, setzen Sie die Rückseite des Gehäuses wieder auf.</p>
+</div>
+
+<div style="display:flex; gap:24px; margin-bottom:32px;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/140ba3afa92db6a1eeb1d1d8fa3c0f63ff963bc6/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_batteriewechsel26.webp" style="width:260px; height:auto;" alt="Rückseite des Gehäuses wieder aufsetzen">
+  <p><strong>5.</strong><br>Legen Sie die Rückseite wieder auf die Gehäuseoberseite. Achten Sie darauf, dass die Dichtung ordentlich sitzt und dass sich das Gehäuse ordnungsgemäß verschließen lässt.</p>
+</div>
+
+<div style="display:flex; gap:24px; margin-bottom:32px;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/140ba3afa92db6a1eeb1d1d8fa3c0f63ff963bc6/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_batteriewechsel27.webp" style="width:260px; height:auto;" alt="Gehäuse wieder verschrauben">
+  <p><strong>6.</strong><br>Verschrauben Sie das Gehäuse. Ziehen Sie die Schrauben über Kreuz an, um eine gleichmäßige und spannungsfreie Befestigung sicherzustellen. Vergewissern Sie sich, dass die ursprüngliche Position der Dichtung nicht verändert wurde. Montieren Sie den Sensor anschließend wieder an seinem Einsatzort. Entsorgen Sie die alten Batterien umweltgerecht.</p>
+</div>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th>Artikelnummer</th>
+      <th>Zugelassene Batterien</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>S-JUNO(-iX)-MIOTY-TH</strong></td>
+      <td>Energizer Ultimate Lithium AA<br>Varta ULTRA Lithium AA<br>Varta Longlife Power AA<br>SAFT LS14500 (Standard)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3 id="flap-opening">15. Klappenöffnungsdetektion und Neigungsdetektion</h3>
+
+<p>Die Klappenöffnungsdetektion kann entweder über den Magnetschalter oder den Beschleunigungssensor erfolgen. Die Neigungsdetektion erfolgt über den Beschleunigungssensor.</p>
+
+<h3 id="flap-magnetic">15.1 Klappenöffnungsdetektion über den Magnetschalter</h3>
+
+<figure class="figure">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/140ba3afa92db6a1eeb1d1d8fa3c0f63ff963bc6/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_ApprovedBatterienachTabelle8.webp" alt="Position der Magnetschalter am Juno Sensor">
+  <figcaption>Abbildung 10: Position der Magnetschalter zur Klappenöffnungsdetektion</figcaption>
+</figure>
+
+<div class="note-strip note-strip--green">
+<p>Bitte beachten Sie für den Betrieb, dass der Hall-Switch 1 immer für die Detektion einer Klappenöffnung genutzt werden kann und der Magnetschalter 2 immer für das Aktivieren oder das Advertising des BLEs auslöst.</p>
+</div>
+
+<ol>
+  <li>Der Magnetfeldschalter ist aktiv. Es können entweder einer oder beide Sensoren verwendet werden.</li>
+  <li>Als Magnete werden große Neodym-Magnete empfohlen. Diese sollten so nah wie möglich am Sensor angebracht werden. Es wird ein maximaler Abstand von 1 cm zwischen Magnet und Gehäuse empfohlen.</li>
+  <li>Zum Vergleich: Mit einem Neodym-Scheibenmagneten mit d = 20 mm und h = 5 mm werden zuverlässige Werte bei Abständen unter 1 cm erreicht.</li>
+  <li>Die Magnetfeldschalter können in drei verschiedenen Modi betrieben werden: Behälter ist geschlossen, wenn der Magnet angelegt ist; der Behälter ist offen, wenn der Magnet angelegt wird; der Sensor zählt eine Öffnung, wenn der Magnet zweimal durchläuft.</li>
+</ol>
+
+<h3 id="flap-accelerometer">15.2 Klappenöffnungsdetektion mit Beschleunigungssensor und Neigungsdetektion</h3>
+
+<p>Der Juno-Sensor ist mit einem integrierten 3-Achsen-Beschleunigungssensor ausgestattet, der für die zuverlässige Erkennung von Bewegungs- und Lageänderungen genutzt wird. Eine der zentralen Funktionen dieses Sensors ist die Detektion des Öffnens von Klappen, Deckeln oder Gehäusen, wie sie typischerweise in industriellen Anwendungen vorkommen.</p>
+
+<ol>
+  <li><strong>Lageerkennung im Ruhezustand:</strong><br>Im geschlossenen Zustand der Klappe befindet sich der Sensor in einer definierten, stabilen Position. Der LIS2DTW12 misst kontinuierlich die Beschleunigung entlang der X-, Y- und Z-Achse. Über die statische Beschleunigung kann die absolute Lage der Klappe eindeutig erkannt werden.</li>
+  <li><strong>Änderung der Neigung oder Bewegung:</strong><br>Wird die Klappe geöffnet oder bewegt, ändert sich die Orientierung des Sensors im Raum. Der Sensor erkennt diese Änderung durch eine deutliche Abweichung der gemessenen Beschleunigungswerte auf mindestens einer Achse. Diese Änderung wird als Trigger-Ereignis interpretiert.</li>
+  <li><strong>Schwellwertbasierte Erkennung:</strong><br>Im Firmware-Setup des Juno kann ein Neigungswinkel oder eine Bewegungsschwelle definiert werden, z.B. Änderung um 15 Grad. Der Sensor kann weiter sehr stromsparend betrieben werden, indem die Messfrequenz des Winkels entsprechend hoch eingestellt wird, z.B. 5 Minuten. Sobald die Messwerte diesen Schwellenwert überschreiten, wird ein Klappenöffnungsereignis registriert.</li>
+  <li><strong>Optional: Interrupt-gesteuerter Betrieb:</strong><br>Der Sensor unterstützt Low-Power-Modi mit Interrupt-Auslösung. Das bedeutet, dass der Sensor im stromsparenden Zustand verbleibt und nur bei erkannter Bewegung einen Interrupt an den Mikrocontroller auslöst. Nachteil: Der Winkel kann nicht eingestellt werden und ist auf 65&deg; festgelegt.</li>
+  <li><strong>Ereignisverarbeitung und Datenübertragung:</strong><br>Nach einer erkannten Öffnung wird das Ereignis im internen Speicher protokolliert.</li>
+</ol>
+
+<div class="note-strip note-strip--green">
+<p><strong>Vorteil dieser Methode</strong></p>
+<ul>
+  <li>Keine mechanischen Komponenten notwendig im Vergleich zu Reed- oder Magnetschaltern.</li>
+  <li>Unempfindlich gegenüber Magnetfeldstörungen.</li>
+  <li>Einfache Nachrüstung oder Anpassung über Software.</li>
+</ul>
+</div>
+
+<h3 id="orientations">15.3 Orientierungen</h3>
+
+<div class="figure">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TLTvertical_faceUp_faceDown.png" alt="Übersicht möglicher Sensororientierungen">
+  <figcaption>Abbildung 11: Übersicht möglicher Sensororientierungen (vertikal, face up und face down)</figcaption>
+</div>
+
+<h3 id="certification">16. Kennzeichnung und Zertifizierung</h3>
+
+<div class="doc-logos">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/fa2c05d60d5e64bee7631a58da61bb9ccdd472ff/logo/mioty.png" alt="mioty">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/logo/CE_Trash_seals.png" alt="CE Kennzeichnung und Entsorgungssymbole">
+</div>
+
+<div class="footer-note">
+  <p>&copy; Sentinum GmbH - All rights reserved.</p>
+  <p>All contents of this document, including text, tables and images, are protected by copyright and are the property of Sentinum GmbH.</p>
+  <p>All images are subject to the copyright of Sentinum GmbH unless otherwise stated.</p>
+  <p>Reproduction, distribution or use, even in part, is not permitted without explicit written authorization.</p>
+  <p>Specifications are subject to change. All information is provided without guarantee.</p>
+</div>
+
+</body>
+</html>
