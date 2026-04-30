@@ -1,0 +1,625 @@
+<meta charset="UTF-8">
+<title>JUNO IFM TH TILT – Technical Data Sheet</title>
+
+<style>
+/* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --black:#000000;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+
+  --blue-bg:#f0f8ff;
+  --blue-border:#a0c4ff;
+  --blue-text:#1a3e8c;
+
+  --toc-bg:#f7fbff;
+  --toc-border:#d6e4fa;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+  background:#ffffff;
+}
+
+.container{ width:100%; }
+
+h3{
+  margin:24px 0 8px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  color:#000;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:100px;
+}
+
+/* ---------- PDF ---------- */
+
+.pdf-viewer{
+  max-width:900px;
+  height:600px;
+  margin:0 auto 20px;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
+.pdf-viewer iframe{ width:100%; height:100%; border:none; }
+
+.pdf-download{
+  max-width:900px;
+  margin:0 auto 36px;
+  padding:14px 18px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+  text-align:center;
+}
+
+.pdf-download a{
+  color:var(--blue-text);
+  font-weight:600;
+}
+
+/* ---------- TOC ---------- */
+
+.main-toc{
+  max-width:900px;
+  margin:0 auto 40px;
+  padding:16px 20px;
+  background:var(--toc-bg);
+  border:1px solid var(--toc-border);
+  border-radius:6px;
+}
+
+.main-toc ul{ list-style:none; padding:0; margin:0; }
+.main-toc li{ margin:.3rem 0; }
+.main-toc a{
+  color:var(--blue-text);
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* ---------- Tables ---------- */
+
+.table-wrap{ margin:8px 0 24px; }
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+  table-layout:fixed;
+}
+
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid var(--black);
+}
+
+table th:nth-child(1),
+table td:nth-child(1){
+  width:30%;
+}
+
+table th:nth-child(2),
+table td:nth-child(2){
+  width:50%;
+}
+
+table th:nth-child(3),
+table td:nth-child(3){
+  width:20%;
+}
+
+.versions-table th:nth-child(1),
+.versions-table td:nth-child(1){ width:22%; }
+.versions-table th:nth-child(2),
+.versions-table td:nth-child(2){ width:18%; }
+.versions-table th:nth-child(3),
+.versions-table td:nth-child(3){ width:60%; }
+
+.history-table th,
+.history-table td{ width:33.33%; }
+
+/* ---------- Figures ---------- */
+
+.figure{ margin:32px auto; text-align:center; }
+.figure img{ max-width:100%; }
+.figure figcaption{
+  margin-top:8px;
+  font-size:.85rem;
+  color:var(--text-muted);
+  font-style:italic;
+}
+
+/* ---------- CE / WEEE LOGO ---------- */
+
+.logo-ce{
+  margin:16px 0;
+}
+
+.logo-ce img{
+  height:38px;
+  width:auto;
+  display:block;
+}
+
+/* ---------- RADIO TECHNOLOGIES LOGO ---------- */
+
+.doc-logos{
+  margin:24px 0;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  align-items:flex-start;
+}
+
+.doc-logos img{
+  height:54px;
+  width:auto;
+  display:block;
+}
+
+/* ---------- Footer ---------- */
+
+.footer-note{
+  margin-top:40px;
+  padding-top:16px;
+  border-top:1px solid var(--border);
+  font-size:.82rem;
+  color:var(--text-muted);
+}
+
+.footer-note p{ margin:0; }
+
+.footer-note p:last-child{
+  padding-left:14px;
+  font-style:italic;
+}
+
+</style>
+
+<body>
+
+<!-- ================= PDF ================= -->
+<div class="pdf-viewer">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/f601b3bb5d233a919b1bce8dc837e19706434c3e/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/Technical%20data%20sheet/Juno_ifm_mioty_TH_TILT_Technical_Datasheet_EN.pdf"
+    loading="lazy">
+  </iframe>
+</div>
+
+<div class="pdf-download">
+  📄 You can view the PDF above or
+  <a href="https://github.com/bellaminemo81172/sentinum_documentation/blob/f601b3bb5d233a919b1bce8dc837e19706434c3e/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/Technical%20data%20sheet/Juno_ifm_mioty_TH_TILT_Technical_Datasheet_EN.pdf"
+     target="_blank" rel="noopener noreferrer">
+    download it here
+  </a>.
+</div>
+
+<!-- ================= TOC ================= -->
+<nav class="main-toc">
+  <h4>Table of Contents</h4>
+  <ul>
+    <li><a href="#overview">1. Overview</a></li>
+    <li><a href="#version-history">2. Version History</a></li>
+    <li><a href="#versions">3. Versions</a></li>
+    <li><a href="#general">4. General Features</a></li>
+    <li><a href="#rf">5. Connectivity and RF Specifications</a></li>
+    <li><a href="#temp-sensor">6. Sensor Specification – Temperature</a></li>
+    <li><a href="#humidity-sensor">7. Sensor Specification – Relative Humidity</a></li>
+    <li><a href="#tilt">8. Sensor Specification – Tilt</a></li>
+    <li><a href="#acc-temp">9. Sensor Specification – Temperature of the Accelerometer</a></li>
+    <li><a href="#drawings">10. Technical Drawing</a></li>
+  </ul>
+</nav>
+
+<!-- ================= OVERVIEW ================= -->
+<h3 id="overview">1. Overview</h3>
+
+<p>
+  The Juno IP67 TH is a versatile temperature and humidity sensor featuring mioty® wireless technology for reliable and energy-efficient data transmission over long distances. Thanks to its robust construction and IP67 protection, it is ideal for use in demanding environments. Additionally, the sensor features tilt and damper opening detection with degree-precise adjustment.
+</p>
+
+<figure class="figure">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/fa2c05d60d5e64bee7631a58da61bb9ccdd472ff/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/pictures/juno%20ifm%20mioty%20sensor%20pic.png"
+    alt="JUNO IFM TH TILT mioty sensor"
+  >
+</figure>
+
+<!-- ================= VERSION HISTORY ================= -->
+<h3 id="version-history">2. Version History</h3>
+
+<div class="table-wrap">
+  <table class="history-table">
+    <tr>
+      <th>Version</th>
+      <th>Date</th>
+      <th>Revision</th>
+    </tr>
+    <tr>
+      <td>1.0.0</td>
+      <td>April 30, 2026</td>
+      <td>Created</td>
+    </tr>
+  </table>
+</div>
+
+<!-- ================= VERSIONS ================= -->
+<h3 id="versions">3. Versions</h3>
+
+<div class="table-wrap">
+  <table class="versions-table">
+    <tr>
+      <th>Item Code</th>
+      <th>IFM Item Code</th>
+      <th>Features</th>
+    </tr>
+    <tr>
+      <td>S-JUNO-IX-MIOTY-TH</td>
+      <td>ZJF 201</td>
+      <td>INDUSTRIAL JUNO IP67 TH Sensor, Temperature and Relative Humidity with Tilt Detection and Door Open Detection mioty®</td>
+    </tr>
+  </table>
+</div>
+
+<!-- ================= GENERAL FEATURES ================= -->
+<h3 id="general">4. General Features</h3>
+
+<div class="table-wrap">
+  <table>
+    <tr>
+      <th>Feature</th>
+      <th>Value</th>
+      <th>Unit</th>
+    </tr>
+    <tr>
+      <td>Dimensions (L x W x H)</td>
+      <td>86 x 86 x 25</td>
+      <td>mm</td>
+    </tr>
+    <tr>
+      <td>Weight</td>
+      <td>&lt;200</td>
+      <td>g</td>
+    </tr>
+    <tr>
+      <td>Operating temperature</td>
+      <td>-25 to +75 (please inquire about extended temperature range. Temperature range is limited by the maximum operating temperature of the primary cells)</td>
+      <td>°C</td>
+    </tr>
+    <tr>
+      <td>Maximum operating temperature of the device</td>
+      <td>85</td>
+      <td>°C</td>
+    </tr>
+    <tr>
+      <td>Storage temperature (recommended)</td>
+      <td>15 to +30</td>
+      <td>°C</td>
+    </tr>
+    <tr>
+      <td>Relative humidity during operation</td>
+      <td>5 to 99</td>
+      <td>%RH</td>
+    </tr>
+    <tr>
+      <td>IP rating</td>
+      <td>IP67/IP65</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>IK rating</td>
+      <td>TBD</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Sensors</td>
+      <td>Temperature, relative humidity, accelerometer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Traffic light function</td>
+      <td>No</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Acoustic alarm function</td>
+      <td>Yes, buzzer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Provisioning</td>
+      <td>NFC</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Material</td>
+      <td>PBT GF20</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NFC antenna</td>
+      <td>Integrated</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>RF antenna</td>
+      <td>Integrated</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Accelerometer</td>
+      <td>Yes</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Batteries</td>
+      <td>Primary cell, replaceable, AA</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Primary cell type</td>
+      <td>2 x 3.6V LiSOCl2 (SAFT LS14500 recommended)</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Housing color</td>
+      <td>S-JUNO-IX-XXXX light gray</td>
+      <td></td>
+    </tr>
+  </table>
+</div>
+
+<!-- ================= CONNECTIVITY AND RF ================= -->
+<h3 id="rf">5. Connectivity and RF Specifications</h3>
+
+<div class="table-wrap">
+  <table>
+    <tr>
+      <th>Feature</th>
+      <th>Value</th>
+      <th>Unit</th>
+    </tr>
+    <tr>
+      <td>RF standards</td>
+      <td></td>
+      <td>MHz</td>
+    </tr>
+    <tr>
+      <td>Frequency mioty® EU</td>
+      <td>868</td>
+      <td>MHz</td>
+    </tr>
+    <tr>
+      <td>Transmit power mioty® EU</td>
+      <td>14</td>
+      <td>dBm</td>
+    </tr>
+  </table>
+</div>
+
+<!-- ================= SENSOR SPEC – TEMPERATURE ================= -->
+<h3 id="temp-sensor">6. Sensor Specification – Temperature</h3>
+
+<div class="table-wrap">
+  <table>
+    <tr>
+      <th>Feature</th>
+      <th>Value</th>
+      <th>Unit</th>
+    </tr>
+    <tr>
+      <td>Measuring range</td>
+      <td>-40 to +125</td>
+      <td>°C</td>
+    </tr>
+    <tr>
+      <td>Drift (long-term)</td>
+      <td>&lt;0.03</td>
+      <td>°C/year</td>
+    </tr>
+    <tr>
+      <td>Accuracy</td>
+      <td>±0.2</td>
+      <td>°C</td>
+    </tr>
+    <tr>
+      <td>Resolution</td>
+      <td>0.1</td>
+      <td>°C</td>
+    </tr>
+    <tr>
+      <td>Repeatability</td>
+      <td>0.2</td>
+      <td>°C</td>
+    </tr>
+  </table>
+</div>
+
+<figure class="figure">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/9a784d6cda6d42fc9d0422bcc6f8495fa084c920/Juno_BSX/Juno_BSX_Technical_datasheet/relative_humidity.png"
+    alt="HT_DS_Datasheet_SHT4x_5.pdf"
+  >
+  <figcaption>HT_DS_Datasheet_SHT4x_5.pdf</figcaption>
+</figure>
+
+<p style="font-size:0.9rem; color:var(--text-muted);">
+  Higher-precision temperature sensors available upon request.
+</p>
+
+<!-- ================= SENSOR SPEC – REL. HUMIDITY ================= -->
+<h3 id="humidity-sensor">7. Sensor Specification – Relative Humidity</h3>
+
+<div class="table-wrap">
+  <table>
+    <tr>
+      <th>Feature</th>
+      <th>Value</th>
+      <th>Unit</th>
+    </tr>
+    <tr>
+      <td>Measuring range</td>
+      <td>0 to +100</td>
+      <td>%RH</td>
+    </tr>
+    <tr>
+      <td>Drift (long-term)</td>
+      <td>&lt;0.25</td>
+      <td>%RH/year</td>
+    </tr>
+    <tr>
+      <td>Accuracy</td>
+      <td>±1.8</td>
+      <td>%RH</td>
+    </tr>
+    <tr>
+      <td>Resolution</td>
+      <td>1</td>
+      <td>%RH</td>
+    </tr>
+    <tr>
+      <td>Repeatability</td>
+      <td>0.25</td>
+      <td>%RH</td>
+    </tr>
+  </table>
+</div>
+
+<figure class="figure">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/1500f4bf878457d391662a4b8304b18e340467cc/Juno_BSX/Juno_BSX_Technical_datasheet/td%20pic%202.png"
+    alt="Relative humidity sensor characteristics"
+  >
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/1500f4bf878457d391662a4b8304b18e340467cc/Juno_BSX/Juno_BSX_Technical_datasheet/td%20pic%203.png"
+    alt="Relative humidity sensor performance"
+  >
+  <figcaption>HT_DS_Datasheet_SHT4x_5.pdf</figcaption>
+</figure>
+
+<!-- ================= SENSOR SPEC – TILT ================= -->
+<h3 id="tilt">8. Sensor Specification – Tilt</h3>
+
+<div class="table-wrap">
+  <table>
+    <tr>
+      <th>Feature</th>
+      <th>Value</th>
+      <th>Unit</th>
+    </tr>
+    <tr>
+      <td>Measuring range</td>
+      <td>0 to 360</td>
+      <td>°</td>
+    </tr>
+    <tr>
+      <td>Accuracy</td>
+      <td>±2°</td>
+      <td>°</td>
+    </tr>
+    <tr>
+      <td>Triggering in low-power mode for door detection</td>
+      <td>±60</td>
+      <td>°</td>
+    </tr>
+  </table>
+</div>
+
+<!-- ================= SENSOR SPEC – TEMP ACCELEROMETER ================= -->
+<h3 id="acc-temp">9. Sensor Specification – Temperature of the Accelerometer</h3>
+
+<div class="table-wrap">
+  <table>
+    <tr>
+      <th>Feature</th>
+      <th>Value</th>
+      <th>Unit</th>
+    </tr>
+    <tr>
+      <td>Measuring range</td>
+      <td>-40 to +85</td>
+      <td>°C</td>
+    </tr>
+    <tr>
+      <td>Accuracy</td>
+      <td>±0.8</td>
+      <td>°C</td>
+    </tr>
+  </table>
+</div>
+
+<!-- ================= TECHNICAL DRAWING ================= -->
+<h3 id="drawings">10. Technical Drawing</h3>
+
+<figure class="figure">
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/aedccdd5f1a36c0cc446d3a3078dc665745e256e/Juno_TILT/Juno_ID_TILT_Technical_datasheet/technical_drawing.png"
+    alt="JUNO IFM TH TILT technical drawing"
+  >
+  <figcaption>JUNO IFM TH TILT – Technical Drawing</figcaption>
+</figure>
+
+<h4><strong>Magnetic Switch Position</strong></h4>
+
+<figure class="figure">
+  <img
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/86c26e4e4707d0abc9d4015e30b3eacfdd8b0f86/Juno_TILT/Juno_ID_TILT_Technical_datasheet/position%20of%20magnetic%20switch.png"
+    alt="Magnetic switch position – JUNO IFM TH TILT"
+  >
+  <figcaption>JUNO IFM TH TILT – Magnetic Switch Position</figcaption>
+</figure>
+
+<h4><strong>Orientation of the Axes of the Acceleration Sensor</strong></h4>
+
+<figure class="figure">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/0ed4dcb7e3bfeefe80b1a6adbeb2b46ccebe53ce/Juno_BSX/Juno_BSX_Technical_datasheet/ORIENTATION%20OF%20THE%20AXES%20ACCELERATION%20SENSOR.png"
+    alt="Orientation of the axes of the acceleration sensor"
+  >
+  <figcaption>JUNO IFM TH TILT – Orientation of the Axes of the Acceleration Sensor</figcaption>
+</figure>
+
+<div class="doc-logos">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/fa2c05d60d5e64bee7631a58da61bb9ccdd472ff/logo/mioty.png"
+    alt="mioty">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/logo/CE_Trash_seals.png"
+    alt="CE and WEEE compliance marks">
+</div>
+
+<div class="footer-note">
+  <p>© Sentinum GmbH – All rights reserved.</p>
+  <p>All contents of this document, including text, tables and images, are protected by copyright and are the property of Sentinum GmbH.</p>
+  <p>All images are subject to the copyright of Sentinum GmbH unless otherwise stated.</p>
+  <p>Reproduction, distribution or use, even in part, is not permitted without explicit written permission.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Specifications subject to change. All information provided without warranty.
+  </p>
+</div>
+
+</body>
+</html>
