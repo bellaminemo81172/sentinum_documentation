@@ -1,0 +1,85 @@
+function Decoder(bytes, port) {
+ 
+    // Conversion of signed integers
+    function uncomplement(val, bitwidth) {
+        var isnegative = val & (1 << (bitwidth - 1));
+        var boundary   = (1 << bitwidth);
+        var minval     = -boundary;
+        var mask       = boundary - 1;
+        return isnegative ? minval + (val & mask) : val;
+    }
+ 
+    var decoded = {};
+ 
+    if (port === 1) {
+ 
+        // Attributes
+        decoded.base_id         = bytes[0] >> 4;
+        decoded.major_version   = bytes[0] & 0x0F;
+        decoded.minor_version   = bytes[1] >> 4;
+        decoded.product_version = bytes[1] & 0x0F;
+ 
+        // Telemetry
+        decoded.up_cnt               = bytes[2];
+        decoded.battery_voltage      = ((bytes[3] << 8) | bytes[4]) / 1000.0;
+        decoded.internal_temperature = bytes[5] - 128;
+        
+        var idx = 6;//Start of variable size, version dependent payload section
+
+        if(decoded.product_version & 0x01){//magentic field sensor for operating hours counting
+            decoded.operating_seconds = (bytes[idx++] << 24) | (bytes[idx++] << 16) | (bytes[idx++] << 8) | bytes[idx++];
+            decoded.cycles = (bytes[idx++] << 24) | (bytes[idx++] << 16) | (bytes[idx++] << 8) | bytes[idx++];
+            decoded.utilization_rate = ((bytes[idx++] << 8) | bytes[idx++]) / 100.0;
+            decoded.is_active = bytes[idx++];
+        }
+        if(decoded.product_version & 0x08){//Has Precision TH Sensor
+            decoded.temperature = ((bytes[idx++] << 8) | bytes[idx++]) / 10 - 100;
+            decoded.humidity = bytes[idx++];
+        }
+
+    }else if(port == 197){ //Manual decode of wifi scan for when semtech cloud is not available
+      
+      var format = bytes[0];
+      var offset = 1;
+      var results = [];
+      var count = 0;
+      var i = 0;
+      var macBytes;
+      var mac;
+      
+      if (format === 0) {
+        // MAC-only format
+       // Remaining length should be divisible by 6
+        count = Math.floor((bytes.length - offset) / 6);
+        for (i = 0; i < count; i++) {
+          macBytes = bytes.slice(offset + i*6, offset + i*6 + 6);
+          mac = macBytes.map(function(b) {
+            return (b < 16 ? "0" : "") + b.toString(16).toUpperCase();
+          }).join(":");
+          results.push({ mac: mac });
+        }
+      } else if (format === 1) {
+        // MAC+RSSI format
+        // Remaining length should be divisible by 7
+        count = Math.floor((bytes.length - offset) / 7);
+        for (i = 0; i < count; i++) {
+          var rssiRaw = bytes[offset + i*7];
+          // Convert to signed int8
+          var rssi = rssiRaw > 127 ? rssiRaw - 256 : rssiRaw;
+          macBytes = bytes.slice(offset + i*7 + 1, offset + i*7 + 7);
+          mac = macBytes.map(function(b) {
+            return (b < 16 ? "0" : "") + b.toString(16).toUpperCase();
+          }).join(":");
+          results.push({ mac: mac, rssi: rssi });
+        }
+      } else {
+        return { errors: ["Unknown payload format: " + format] };
+      }
+    
+      decoded.format = format;
+      decoded.access_points = results;
+      
+    }
+    
+    return decoded;
+}
