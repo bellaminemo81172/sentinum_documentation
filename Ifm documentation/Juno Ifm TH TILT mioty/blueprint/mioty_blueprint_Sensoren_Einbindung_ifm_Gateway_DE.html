@@ -105,6 +105,45 @@ h4{
   font-weight:600;
 }
 
+.json-viewer{
+  max-width:900px;
+  height:600px;
+  margin:0 auto 20px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  overflow:hidden;
+  background:#f5f5f5;
+}
+
+.json-content{
+  width:100%;
+  height:100%;
+  overflow:auto;
+  padding:16px;
+  font-family:"Courier New",monospace;
+  font-size:12px;
+  line-height:1.5;
+  color:#333;
+  white-space:pre-wrap;
+  word-break:break-word;
+}
+
+.json-download{
+  max-width:900px;
+  margin:0 auto 36px;
+  padding:14px 18px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+  text-align:center;
+}
+
+.json-download a{
+  color:var(--blue-text);
+  font-weight:600;
+  text-decoration:none;
+}
+
 .table-wrap{ margin:12px 0 32px; overflow-x:auto; }
 
 table{
@@ -203,7 +242,16 @@ th{
     hier herunterladen
   </a>.
 </div>
+<div class="json-viewer">
+  <div class="json-content" id="jsonContent">JSON Code wird geladen...</div>
+</div>
 
+<div class="json-download">
+  📋 Blueprint JSON Code oder
+  <a href="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/1e1f8c5918a0132a56d2ca23b88f39c69cc191a2/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Juno%20TH%20TILT%20Mioty%20blueprint.json" download="Juno_TH_TILT_Mioty_blueprint.json" target="_blank">
+    JSON Datei herunterladen
+  </a>.
+</div>
 <nav class="main-toc">
   <h2>Inhaltsverzeichnis</h2>
   <ul>
@@ -398,6 +446,28 @@ th{
   <p>Eine Vervielf&auml;ltigung, Verbreitung oder Nutzung, auch auszugsweise, ist ohne ausdr&uuml;ckliche schriftliche Genehmigung nicht gestattet.</p>
   <p style="padding-left:14px; font-style:italic;">Technische &Auml;nderungen vorbehalten. Alle Angaben erfolgen ohne Gew&auml;hr.</p>
 </div>
+
+<script>
+// Fetch and display JSON file in the viewer
+async function loadJSON() {
+  try {
+    const response = await fetch('https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/1e1f8c5918a0132a56d2ca23b88f39c69cc191a2/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Juno%20TH%20TILT%20Mioty%20blueprint.json');
+    const text = await response.text();
+    const jsonContent = document.getElementById('jsonContent');
+    jsonContent.textContent = text;
+  } catch (error) {
+    const jsonContent = document.getElementById('jsonContent');
+    jsonContent.textContent = 'Fehler beim Laden der JSON-Datei: ' + error.message;
+  }
+}
+
+// Load JSON when page loads
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', loadJSON);
+} else {
+  loadJSON();
+}
+</script>
 
 </body>
 </html>
