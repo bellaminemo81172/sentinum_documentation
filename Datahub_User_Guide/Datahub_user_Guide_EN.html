@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Datahub 2.0 User Guide</title>
+
+  <style>
+/* ============================================================
+   SENTINUM – HUBSPOT TECHNICAL CONTENT
+   Global Base Stylesheet (Stable)
+   ============================================================ */
+
+/* ---------- Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+/* ---------- Design Tokens ---------- */
+:root{
+  --black:#000000;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+  --blue-bg:#f0f8ff;
+  --blue-border:#a0c4ff;
+  --blue-text:#1a3e8c;
+  --toc-bg:#f7fbff;
+  --toc-border:#d6e4fa;
+}
+
+/* ---------- Base ---------- */
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+  background:#ffffff;
+}
+
+.container{
+  width:100%;
+  max-width:900px;
+  margin:0 auto;
+  padding:0 20px;
+}
+
+/* ---------- Headings ---------- */
+
+h1{
+  margin:48px 0 16px;
+  padding-bottom:12px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:42px;
+  font-weight:700;
+  line-height:1.25;
+  color:#000;
+  border-bottom:2px solid var(--border);
+}
+
+h2{
+  margin:32px 0 24px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:28px;
+  font-weight:600;
+  line-height:1.4;
+  color:var(--text-main);
+  scroll-margin-top:100px;
+}
+
+h3{
+  margin:24px 0 12px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  color:#000;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:100px;
+}
+
+/* ---------- Paragraphs ---------- */
+p{
+  margin:8px 0 12px;
+}
+
+ul, ol{
+  margin:12px 0;
+  padding-left:24px;
+}
+
+li{
+  margin:6px 0;
+}
+
+/* ---------- PDF Viewer ---------- */
+.pdf-viewer{
+  max-width:900px;
+  height:600px;
+  margin:0 auto 20px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  overflow:hidden;
+}
+
+.pdf-viewer iframe{
+  width:100%;
+  height:100%;
+  border:none;
+}
+
+/* ---------- PDF Download Box ---------- */
+.pdf-download{
+  max-width:900px;
+  margin:0 auto 36px;
+  padding:14px 18px;
+  background:var(--blue-bg);
+  border:1px solid var(--blue-border);
+  border-radius:6px;
+  text-align:center;
+}
+
+.pdf-download a{
+  color:var(--blue-text);
+  font-weight:600;
+}
+
+/* ---------- Table of Contents ---------- */
+.main-toc{
+  max-width:900px;
+  margin:0 auto 40px;
+  padding:16px 20px;
+  background:var(--toc-bg);
+  border:1px solid var(--toc-border);
+  border-radius:6px;
+}
+
+.main-toc strong{
+  display:block;
+  margin-bottom:8px;
+}
+
+.main-toc ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.main-toc li{
+  margin:.35rem 0;
+}
+
+.main-toc a{
+  color:var(--blue-text);
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* ---------- Note Strips ---------- */
+.note-strip{
+  margin:16px auto 24px;
+  padding:12px 16px;
+  border-left-width:6px;
+  border-left-style:solid;
+  background:#ffffff;
+  border-radius:4px;
+}
+
+.note-strip--yellow{
+  background:#fff8e1;
+  border-left-color:#f9a825;
+}
+
+.note-strip p,
+.note-strip ul{
+  margin:0 0 8px 0;
+  line-height:1.5;
+}
+
+.note-strip p:last-child,
+.note-strip ul:last-child{
+  margin-bottom:0;
+}
+
+/* ---------- Tables ---------- */
+.table-wrap{
+  margin:12px 0 32px;
+  overflow-x:auto;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+}
+
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid var(--black);
+}
+
+table,
+th,
+td{
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+}
+
+/* ---------- Code blocks ---------- */
+.code-block{
+  background:#f5f7fa;
+  border:1px solid var(--border);
+  border-radius:4px;
+  padding:12px;
+  font-family:"Courier New", Courier, monospace;
+  font-size:13px;
+  overflow-x:auto;
+  margin:12px 0;
+}
+
+code{
+  font-family:"Courier New", Courier, monospace;
+  background:#f5f7fa;
+  padding:2px 6px;
+  border-radius:3px;
+}
+
+/* ---------- Footer ---------- */
+.footer-note{
+  margin-top:60px;
+  padding-top:20px;
+  border-top:2px solid var(--border);
+  font-size:.82rem;
+  color:var(--text-muted);
+}
+
+.footer-note p{
+  margin:0 0 6px 0;
+  line-height:1.4;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- PDF Viewer -->
+<div class="pdf-viewer">
+  <iframe
+    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/0b6e46454d3386b98e2c820aa7d19265cc368238/Datahub_User_Guide/Datahub_user_Guide_EN.pdf"
+    loading="lazy"
+    title="Datahub 2.0 User Guide (PDF)">
+  </iframe>
+</div>
+
+<!-- PDF Download -->
+<div class="pdf-download">
+  📄 You can view the document above or
+  <a
+    href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/0b6e46454d3386b98e2c820aa7d19265cc368238/Datahub_User_Guide/Datahub_user_Guide_EN.pdf"
+    target="_blank"
+    rel="noopener">
+    download the PDF here
+  </a>.
+</div>
+
+<!-- Table of Contents -->
+<nav class="main-toc">
+  <strong>Table of Contents</strong>
+  <ul>
+    <li><a href="#introduction">1. Introduction</a></li>
+    <li><a href="#topic-tree">2. Topic Tree and Permissions</a></li>
+    <li><a href="#examples">3. Examples</a></li>
+  </ul>
+</nav>
+
+<!-- SECTION 1: INTRODUCTION -->
+<h3 id="introduction">1. Introduction</h3>
+
+<p>
+  <strong>Sentinum Datahub 2.0</strong> provides reliable MQTT access to Sentinum sensor telemetry, configuration, and diagnostics. It is the evolution of the legacy broker under data.sentinum.de and is available at broker.sentinum.de.
+</p>
+
+<div class="note-strip note-strip--yellow">
+  <p><strong>Migration notice:</strong> The legacy broker data.sentinum.de is deprecated and will be shut down no later than the end of 2026. Migration to the new broker broker.sentinum.de is strongly recommended.</p>
+</div>
+
+<p><strong>Features</strong></p>
+
+<ul>
+  <li>High reliability and security through a clustered architecture hosted in the European Union.</li>
+  <li>Designed to handle large device fleets.</li>
+  <li>Support for MQTT 3.0, 3.1, and 5.0.</li>
+  <li>Strict ACL rules so sensors and device data are only accessible to authorized owners.</li>
+  <li>Shadow-based device parameterization for simple integration with external applications.</li>
+  <li>Customer-specific interface and protocol adaptations, including transformations, direct database writes, and bridging.</li>
+  <li>Public TLS certificate handling without service interruptions during certificate renewal.</li>
+  <li>Client monitoring for improved security and malfunction detection.</li>
+</ul>
+
+<p><strong>Backward Compatibility</strong></p>
+
+<ul>
+  <li>A read-only mirror of the legacy topic tree is available under <code>devices/#</code> to support step-by-step migration.</li>
+  <li>Existing client credentials were migrated to broker.sentinum.de.</li>
+  <li>MQTT 3.0 and 3.1 clients remain supported.</li>
+</ul>
+
+<p><strong>Limitations</strong></p>
+
+<ul>
+  <li>The broker requires MQTTS with TLS on port 8883, or secure WebSockets on port 8084.</li>
+  <li>Plain MQTT on port 1883 is no longer available.</li>
+  <li>ACL rules are stricter than before. Clients can publish only to explicitly permitted topics.</li>
+  <li>Shadow management and device info are available for cellular-based sensors with major version 2 or above.</li>
+</ul>
+
+<p><strong>Credentials</strong></p>
+
+<p>
+  Each client authenticates with a username and password issued by Sentinum on request. These credentials are independent of my.sentinum.de user accounts.
+</p>
+
+<p>
+  The same username and password can be used by multiple clients. Each client should still use a unique MQTT Client ID.
+</p>
+
+<!-- SECTION 2: TOPIC TREE AND PERMISSIONS -->
+<h3 id="topic-tree">2. Topic Tree and Permissions</h3>
+
+<p>
+  Datahub 2.0 uses a structured topic tree that combines telemetry, configuration management, and device status.
+</p>
+
+<p><strong>Base Topic</strong></p>
+
+<p>
+  All device-specific topics use this base topic:
+</p>
+
+<div class="code-block">
+datahub/&lt;customerName&gt;/&lt;deviceBaseType&gt;/&lt;deviceSubType&gt;/&lt;deviceId&gt;
+</div>
+
+<p><strong>Placeholders:</strong></p>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Placeholder</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>&lt;customerName&gt;</strong></td>
+        <td>Customer name as used in my.sentinum.de, lowercased and with spaces replaced by underscores.</td>
+      </tr>
+      <tr>
+        <td><strong>&lt;deviceBaseType&gt;</strong></td>
+        <td>Sensor series, for example apollon, febris, juno, or helios.</td>
+      </tr>
+      <tr>
+        <td><strong>&lt;deviceSubType&gt;</strong></td>
+        <td>Sub-series name. This is reserved for special use cases, customization, and future updates. It is safe to mirror &lt;deviceBaseType&gt; here.</td>
+      </tr>
+      <tr>
+        <td><strong>&lt;deviceId&gt;</strong></td>
+        <td>Unique device ID in the shape &lt;series&gt;_&lt;transport&gt;_&lt;identifier&gt;, for example apollon_mioty_FCA84A01000036C7, apollon_cellular_355025930266075, or febris_lora_FCA84A0900000134.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+  The following sections use <code>&lt;baseTopic&gt;</code> as shorthand for the full base topic.
+</p>
+
+<p><strong>Read-only Topics</strong></p>
+
+<p>
+  Clients can subscribe to these topics. Publishing to them is denied and can cause the client to be disconnected.
+</p>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Topic</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>&lt;baseTopic&gt;/up</strong></td>
+        <td>Real-time telemetry. The device publishes sensor data periodically or when events occur, depending on its configuration.</td>
+      </tr>
+      <tr>
+        <td><strong>&lt;baseTopic&gt;/reported_shadow</strong></td>
+        <td>Full configuration currently applied on the device. If a desired shadow delta exists, the new configuration appears here after the device receives it and confirms that it was applied successfully.</td>
+      </tr>
+      <tr>
+        <td><strong>&lt;baseTopic&gt;/desired_shadow</strong></td>
+        <td>Configuration scheduled for downlink but not yet confirmed by the device. New configurations can be created through MQTT, REST, my.sentinum.de, or the Sentinum registry UI. After successful application by the sensor, this value returns to an empty object: {}.</td>
+      </tr>
+      <tr>
+        <td><strong>&lt;baseTopic&gt;/device_info</strong></td>
+        <td>Additional device information that is too large for telemetry metadata, including deeper FOTA and connectivity/network information.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p><strong>Write-only Topics</strong></p>
+
+<p>
+  Clients can publish to these topics. They cannot subscribe to them. Subscription attempts are denied and can cause the client to be disconnected.
+</p>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Topic</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>&lt;baseTopic&gt;/update_shadow</strong></td>
+        <td>Publishes a new configuration that should be applied to the device. Valid configuration items appear in desired_shadow until the sensor applies them. After successful application, reported_shadow is updated. Use reported_shadow to infer the schema required for an update_shadow message.</td>
+      </tr>
+      <tr>
+        <td><strong>&lt;baseTopic&gt;/get_shadow</strong></td>
+        <td>Triggers Datahub to publish the current reported_shadow, desired_shadow, and device_info again. The request payload is ignored and may be empty.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+  Shadow payloads use the base form <code>{"config": {}, "cmd": {}}</code>. Use <code>config</code> for configuration values and <code>cmd</code> for commands. Both sections are grouped by Sentos modules.
+</p>
+
+<!-- SECTION 3: EXAMPLES -->
+<h3 id="examples">3. Examples</h3>
+
+<p><strong>Subscribe to Telemetry and Device State</strong></p>
+
+<div class="code-block">
+datahub/acme_corp/apollon/apollon/apollon_cellular_012345678901236/up<br>
+datahub/acme_corp/apollon/apollon/apollon_cellular_012345678901236/reported_shadow<br>
+datahub/acme_corp/apollon/apollon/apollon_cellular_012345678901236/desired_shadow<br>
+datahub/acme_corp/apollon/apollon/apollon_cellular_012345678901236/device_info
+</div>
+
+<p><strong>Trigger a Shadow Refresh</strong></p>
+
+<p>
+  Publish any payload to:
+</p>
+
+<div class="code-block">
+datahub/acme_corp/apollon/apollon/apollon_cellular_012345678901236/get_shadow
+</div>
+
+<p><strong>Example payload:</strong></p>
+
+<div class="code-block">
+{<br>
+&nbsp;&nbsp;"config": {},<br>
+&nbsp;&nbsp;"cmd": {}<br>
+}
+</div>
+
+<p>
+  Datahub then publishes the current <code>reported_shadow</code>, <code>desired_shadow</code>, and <code>device_info</code> on their respective read-only topics.
+</p>
+
+<p><strong>Update a Device Configuration</strong></p>
+
+<p>
+  Publish the desired configuration delta to:
+</p>
+
+<div class="code-block">
+datahub/acme_corp/apollon/apollon/apollon_cellular_012345678901236/update_shadow
+</div>
+
+<p><strong>Example payload:</strong></p>
+
+<div class="code-block">
+{<br>
+&nbsp;&nbsp;"config": {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"apollon": {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"period": 60<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;"cmd": {}<br>
+}
+</div>
+
+<p>
+  The change appears in <code>desired_shadow</code> until the device has received and applied it. After confirmation, <code>reported_shadow</code> contains the active value and <code>desired_shadow</code> returns to {}.
+</p>
+
+<!-- FOOTER -->
+<div class="footer-note">
+  <p>© Sentinum GmbH – All rights reserved.</p>
+  <p>All contents of this document, including text, tables and images, are protected by copyright and are the property of Sentinum GmbH.</p>
+  <p>All images are subject to copyright of Sentinum GmbH unless otherwise stated.</p>
+  <p>Reproduction, distribution or use – even in excerpts – is not permitted without prior written consent.</p>
+  <p style="padding-left:14px;font-style:italic;">
+    Specifications subject to change. All information provided without guarantee.
+  </p>
+</div>
+
+</div>
+
+</body>
+</html>
