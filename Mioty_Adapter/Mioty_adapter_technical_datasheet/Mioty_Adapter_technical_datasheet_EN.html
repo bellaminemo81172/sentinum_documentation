@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Mioty Adapter – Technical Datasheet</title>
-
 <style>
 /* ============================================================
    SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
@@ -12,32 +6,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
 
 :root{
-  --black:#000000;
-  --text-main:#111827;
-  --text-muted:#6b7280;
-
   --border:#d0d7de;
   --table-header:#f5f7fa;
-
-  --blue-bg:#f0f8ff;
-  --blue-border:#a0c4ff;
+  --blue-bg:#f7fbff;
+  --blue-border:#d6e4fa;
   --blue-text:#1a3e8c;
-
-  --toc-bg:#f7fbff;
-  --toc-border:#d6e4fa;
+  --text-main:#111827;
+  --text-muted:#6b7280;
 }
 
-*{ box-sizing:border-box; }
 
+
+/* Base */
 body{
-  margin:0;
   font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
   color:var(--text-main);
   line-height:1.65;
-  background:#ffffff;
 }
 
 .container{ width:100%; }
+
+p{ margin:8px 0 12px; }
 
 /* ---------- Headings ---------- */
 
@@ -47,8 +36,6 @@ h1{
   font-family:"Montserrat",Arial,sans-serif;
   font-size:42px;
   font-weight:700;
-  line-height:1.25;
-  color:#000;
   border-bottom:2px solid var(--border);
 }
 
@@ -60,94 +47,144 @@ h2{
 }
 
 h3{
-  margin:24px 0 8px;
+  margin:32px 0 12px;
   padding-bottom:6px;
   font-family:"Montserrat",Arial,sans-serif;
   font-size:18px;
   font-weight:600;
-  color:#000;
   border-bottom:1.5px solid var(--border);
-  scroll-margin-top:100px;
+  scroll-margin-top:120px;
 }
+
+
+p{
+  margin:8px 0 12px;
+}
+
+/* NOTE STRIPS */
+.note-strip{
+  padding:14px 16px;
+  margin:18px 0;
+  border-radius:6px;
+  border-left-width:6px;
+  border-left-style:solid;
+}
+.note-strip--red{background:#fdecea;border-left-color:#d32f2f;}
+.note-strip--yellow{background:#fff8e1;border-left-color:#f9a825;}
+.note-strip--green{background:#e8f5e9;border-left-color:#2e7d32;}
+.note-strip ul{margin:0;padding-left:20px;}
+.note-strip li{margin:4px 0;}
+
 
 /* ---------- PDF ---------- */
 
 .pdf-viewer{
+   width:100%;
   max-width:900px;
   height:600px;
-  margin:0 auto 20px;
+  margin:24px auto 12px;
   border:1px solid #ccc;
   border-radius:6px;
+  overflow:hidden;
 }
 
 .pdf-viewer iframe{ width:100%; height:100%; border:none; }
 
 .pdf-download{
-  max-width:900px;
-  margin:0 auto 36px;
-  padding:14px 18px;
-  background:var(--blue-bg);
-  border:1px solid var(--blue-border);
+ 
+ max-width:900px;
+  margin:8px auto 32px;
+  padding:10px 14px;
+  background:#f8fbff;
+  border:1px solid #b6d4fe;
   border-radius:6px;
   text-align:center;
 }
 
-.pdf-download a{
+.pdf-download a,
+.pdf-download a:link,
+.pdf-download a:visited,
+.pdf-download a:hover,
+.pdf-download a:active{
   color:var(--blue-text);
   font-weight:600;
+  text-decoration:none !important;
 }
 
 /* ---------- TOC ---------- */
 
 .main-toc{
   max-width:900px;
-  margin:0 auto 40px;
-  padding:16px 20px;
-  background:var(--toc-bg);
-  border:1px solid var(--toc-border);
+  margin:24px auto 40px;
+  padding:20px 24px;
+  background:#f7fbff;
+  border:1px solid #d6e4fa;
   border-radius:6px;
 }
 
-.main-toc ul{ list-style:none; padding:0; margin:0; }
-.main-toc li{ margin:.3rem 0; }
-.main-toc a{
-  color:var(--blue-text);
-  font-weight:600;
-  text-decoration:none;
+/* Überschrift */
+.main-toc strong{display:block;margin-bottom:8px;}
+
+
+/* Nummerierung */
+.main-toc ol{
+  margin:0;
+  padding-left:28px;
+  color:#0f3d91;
+  font-weight:700;
 }
 
+/* Abstand identisch zur Referenz */
+.main-toc li{
+  margin:8px 0;
+  line-height:1.45;
+}
+
+/* Links */
+.main-toc a,
+.main-toc a:link,
+.main-toc a:visited,
+.main-toc a:hover,
+.main-toc a:active{
+  color:#1a3e8c !important;
+  font-weight:700 !important;
+  text-decoration:none !important;
+  border:none !important;
+  box-shadow:none !important;
+}
 /* ---------- Tables ---------- */
 
 .table-wrap{ margin:8px 0 24px; }
 
+/* Tables */
 table{
   width:100%;
   border-collapse:collapse;
   font-size:14px;
+  table-layout:fixed;
 }
-
 th,td{
   border:1px solid var(--border);
   padding:8px 12px;
   vertical-align:top;
 }
-
 th{
   background:var(--table-header);
   font-weight:700;
-  border-bottom:2px solid var(--black);
+  border-bottom:2px solid #000;
 }
-
 /* ---------- Unified table column widths ---------- */
 
 table{
-  table-layout: fixed;
-  width:100%;
+  table-layout: auto; /* Forces consistent column sizing */
 }
 
 table th:nth-child(1),
 table td:nth-child(1){
-  width:30%;
+  white-space: normal;
+  word-break: normal;        /* 🔑 verhindert Buchstaben-Zerhacken */
+  overflow-wrap: break-word; /* ✅ bricht nur bei langen technischen Tokens */
+  hyphens: none;
 }
 
 table th:nth-child(2),
@@ -162,161 +199,364 @@ table td:nth-child(3){
 
 /* ---------- Figures ---------- */
 
-.figure{ margin:32px auto; text-align:center; }
-.figure img{ max-width:100%; }
+.figure{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin:24px auto;
+}
+
+.figure img{
+    display:block;
+    max-width:100%;
+    height:auto;
+}
+
 .figure figcaption{
-  margin-top:8px;
-  font-size:.85rem;
-  color:var(--text-muted);
-  font-style:italic;
+    margin-top:6px;
+    font-size:0.875rem;
+    color:var(--text-muted);
+    font-style:italic;
+    text-align:center;
 }
 
 /* ---------- Footer ---------- */
 
 .footer-note{
-  margin-top:40px;
-  padding-top:16px;
-  border-top:1px solid var(--border);
+  margin-top:60px;
+  padding-top:20px;
+  border-top:2px solid #d0d7de;
   font-size:.82rem;
-  color:var(--text-muted);
+  color:#6b7280;
 }
 
-.footer-note p{ margin:0; }
+.footer-note p{
+  margin:0 0 6px 0;
+  line-height:1.4;
+}
+
+.logo-block{
+    margin-top:32px;
+}
+
+.logo-block img{
+    display:block;
+    margin:0;
+}
+
+/* Inline-Code für Berechnungen & Beispiele */
+.inline-code{
+  background-color:#f3f4f6;
+  border:1px solid #d0d7de;
+  border-radius:4px;
+  padding:3px 6px;
+  font-family:SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;
+  font-size:0.9em;
+  color:#111827;
+  display:inline-block;}
+ 
+
 </style>
 
 
 
-<div class="container">
+    <div class="container">
 
 
 
-<!-- PDF -->
-<div class="pdf-viewer">
-  <iframe src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/bd12645dd27acf7c72c7eb7fa72032e2d6c3373d/Mioty_Adapter/Mioty_adapter_technical_datasheet/Aion_IO-Link_mioty_Adapter_TD_EN.pdf"></iframe>
+        <!-- PDF -->
+        <div class="pdf-viewer">
+            <iframe src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/bd12645dd27acf7c72c7eb7fa72032e2d6c3373d/Mioty_Adapter/Mioty_adapter_technical_datasheet/Aion_IO-Link_mioty_Adapter_TD_EN.pdf"></iframe>
+        </div>
+
+        <div class="pdf-download">
+            📄 You can view the PDF above or
+            <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/bd12645dd27acf7c72c7eb7fa72032e2d6c3373d/Mioty_Adapter/Mioty_adapter_technical_datasheet/Aion_IO-Link_mioty_Adapter_TD_EN.pdf" target="_blank"><strong>download it here</strong></a>.
+        </div>
+
+        <!-- TOC -->
+        <nav class="main-toc">
+            <strong>Table of Contents</strong>
+            <ol>
+                <li><a href="#versions">Versions</a></li>
+                <li><a href="#general">General Properties</a></li>
+                <li><a href="#electrical">Electrical Data</a></li>
+                <li><a href="#connectivity">Connectivity and RF Specification</a></li>
+                <li><a href="#operating-mode">Operating Mode</a></li>
+                <li><a href="#technical-drawing">Technical Drawing</a></li>
+                <li><a href="#electrical-connections">Electrical Connections</a></li>
+            </ol>
+        </nav>
+
+        <!-- VERSIONS -->
+        <h3 id="versions">1. Versions</h3>
+        <div class="table-wrap">
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Article Code</th>
+                        <th>Features</th>
+                    </tr>
+                    <tr>
+                        <td>S-AION-MIOTY</td>
+                        <td>Aion IO-Link mioty Adapter</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- GENERAL PROPERTIES -->
+        <h3 id="general">2. General Properties</h3>
+        <div class="table-wrap">
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Value</th>
+                        <th>Unit</th>
+                    </tr>
+                    <tr>
+                        <td>Dimensions (l×b×h)</td>
+                        <td>63 × 24 × 32</td>
+                        <td>mm</td>
+                    </tr>
+                    <tr>
+                        <td>Weight</td>
+                        <td>90</td>
+                        <td>g</td>
+                    </tr>
+                    <tr>
+                        <td>Operating temperature</td>
+                        <td>−25 to +60</td>
+                        <td>°C</td>
+                    </tr>
+                    <tr>
+                        <td>Maximum operating temperature device</td>
+                        <td>60</td>
+                        <td>°C</td>
+                    </tr>
+                    <tr>
+                        <td>Storage temperature (recommended)</td>
+                        <td>−25 to +60</td>
+                        <td>°C</td>
+                    </tr>
+                    <tr>
+                        <td>Rel. humidity during operation</td>
+                        <td>5 to 99</td>
+                        <td>%RH</td>
+                    </tr>
+                    <tr>
+                        <td>IP Rating</td>
+                        <td>IP69k</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Suitable for outdoor use</td>
+                        <td>No</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>IK Rating</td>
+                        <td>–</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Sensors</td>
+                        <td>–</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Optical display</td>
+                        <td>Yes (LEDs: Status LED red, Operation LED green)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Acoustic output</td>
+                        <td>No</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Provisioning</td>
+                        <td>–</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Materials</td>
+                        <td>PA, 1.4404 (stainless steel/316L), brass (2.0401), PBT, FKM; seal: FKM</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>NFC antenna</td>
+                        <td>–</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>RF antenna</td>
+                        <td>Integrated</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Accelerometer</td>
+                        <td>–</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Batteries</td>
+                        <td>–</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Primary cell type</td>
+                        <td>–</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Energy supply</td>
+                        <td>External supply</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Housing color</td>
+                        <td>Black</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>RF interfaces</td>
+                        <td>mioty®</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Communication interfaces</td>
+                        <td>IO-LINK</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ELECTRICAL DATA -->
+        <h3 id="electrical">3. Electrical Data</h3>
+        <div class="table-wrap">
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Characteristic</th>
+                        <th>Value</th>
+                        <th>Unit</th>
+                    </tr>
+                    <tr>
+                        <td>Operating voltage</td>
+                        <td>18 to 30</td>
+                        <td>V DC</td>
+                    </tr>
+                    <tr>
+                        <td>Nominal voltage</td>
+                        <td>24</td>
+                        <td>V DC</td>
+                    </tr>
+                    <tr>
+                        <td>Power consumption</td>
+                        <td>100</td>
+                        <td>mA</td>
+                    </tr>
+                    <tr>
+                        <td>Protection class</td>
+                        <td>III</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Reverse polarity protection</td>
+                        <td>Yes</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- CONNECTIVITY AND RF SPECIFICATION -->
+        <h3 id="connectivity">4. Connectivity and RF Specification</h3>
+        <div class="table-wrap">
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Characteristic</th>
+                        <th>Value</th>
+                        <th>Unit</th>
+                    </tr>
+                    <tr>
+                        <td>RF Standards</td>
+                        <td>mioty®</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Frequency mioty® EU</td>
+                        <td>868</td>
+                        <td>MHz</td>
+                    </tr>
+                    <tr>
+                        <td>Transmission power mioty® EU</td>
+                        <td>14</td>
+                        <td>dBm</td>
+                    </tr>
+                    <tr>
+                        <td>Further communication interfaces</td>
+                        <td>IO-LINK</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- OPERATING MODE -->
+        <h3 id="operating-mode">5. Operating Mode</h3>
+
+        <figure class="figure">
+            <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/bd12645dd27acf7c72c7eb7fa72032e2d6c3373d/Mioty_Adapter/Mioty_Betriebsanleitung/pic/Mioty_Adapter_pic1_Betriebsmodus.png" alt="Mioty Adapter operating mode">
+            <figcaption>Figure 1: Mioty Adapter – Operating Mode</figcaption>
+        </figure>
+
+        <!-- TECHNICAL DRAWING -->
+        <h3 id="technical-drawing">6. Technical Drawing</h3>
+
+        <figure class="figure">
+            <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/bd12645dd27acf7c72c7eb7fa72032e2d6c3373d/Mioty_Adapter/Mioty_Betriebsanleitung/pic/Mioty_Adapter_pic5_Technische%20Zeichnung.png" alt="Mioty Adapter technical drawing">
+            <figcaption>Figure 2: Mioty Adapter – Technical Drawing</figcaption>
+        </figure>
+
+        <!-- ELECTRICAL CONNECTIONS -->
+        <h3 id="electrical-connections">7. Electrical Connections</h3>
+
+        <figure class="figure">
+            <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/bd12645dd27acf7c72c7eb7fa72032e2d6c3373d/Mioty_Adapter/Mioty_Betriebsanleitung/pic/Mioty_Adapter_pic3_ElektrischerAnschluss.png" alt="Mioty Adapter electrical connections">
+            <figcaption>Figure 3: Mioty Adapter – Electrical Connections</figcaption>
+        </figure>
+
+      <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/6a81a51d242b89f62f6fc737f7a066015f21d2b9/logo/mioty.png"
+    alt="JUNO BSX Logo"
+    style="max-width:auto; height:auto;"
+    loading="lazy"
+  >
+</div>
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
+    alt="JUNO BSX Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
 </div>
 
-<div class="pdf-download">
-  📄 You can view the PDF above or
-  <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/bd12645dd27acf7c72c7eb7fa72032e2d6c3373d/Mioty_Adapter/Mioty_adapter_technical_datasheet/Aion_IO-Link_mioty_Adapter_TD_EN.pdf" target="_blank">download it here</a>.
-</div>
+        <!-- DISCLAIMER -->
+        <div class="footer-note">
+            <p>© Sentinum GmbH – All rights reserved.</p>
+            <p>All contents of this document, including text, tables, and images, are protected by copyright and are the property of Sentinum GmbH.</p>
+            <p>All images are subject to the copyright of Sentinum GmbH unless otherwise stated.</p>
+            <p>Reproduction, distribution, or use — even in part — is not permitted without explicit written permission.</p>
+            <p style="padding-left:14px; font-style:italic;">
+                Specifications are subject to change without notice. All information is provided without guarantee.
+            </p>
+        </div>
 
-<!-- TOC -->
-<nav class="main-toc">
-<h4>Table of Contents</h4>
-<ul>
-<li><a href="#versions">1. Versions</a></li>
-<li><a href="#general">2. General Properties</a></li>
-<li><a href="#electrical">3. Electrical Data</a></li>
-<li><a href="#connectivity">4. Connectivity and RF Specification</a></li>
-<li><a href="#operating-mode">5. Operating Mode</a></li>
-<li><a href="#technical-drawing">6. Technical Drawing</a></li>
-<li><a href="#electrical-connections">7. Electrical Connections</a></li>
-</ul>
-</nav>
-
-<!-- VERSIONS -->
-<h3 id="versions">1. Versions</h3>
-<div class="table-wrap">
-<table>
-<tbody><tr><th>Article Code</th><th>Features</th></tr>
-<tr>
-<td>S-AION-MIOTY</td>
-<td>Aion IO-Link mioty Adapter</td>
-</tr>
-</tbody></table>
-</div>
-
-<!-- GENERAL PROPERTIES -->
-<h3 id="general">2. General Properties</h3>
-<div class="table-wrap">
-<table>
-<tbody><tr><th>Feature</th><th>Value</th><th>Unit</th></tr>
-<tr><td>Dimensions (l×b×h)</td><td>63 × 24 × 32</td><td>mm</td></tr>
-<tr><td>Weight</td><td>90</td><td>g</td></tr>
-<tr><td>Operating temperature</td><td>−25 to +60</td><td>°C</td></tr>
-<tr><td>Maximum operating temperature device</td><td>60</td><td>°C</td></tr>
-<tr><td>Storage temperature (recommended)</td><td>−25 to +60</td><td>°C</td></tr>
-<tr><td>Rel. humidity during operation</td><td>5 to 99</td><td>%RH</td></tr>
-<tr><td>IP Rating</td><td>IP69k</td><td></td></tr>
-<tr><td>Suitable for outdoor use</td><td>No</td><td></td></tr>
-<tr><td>IK Rating</td><td>–</td><td></td></tr>
-<tr><td>Sensors</td><td>–</td><td></td></tr>
-<tr><td>Optical display</td><td>Yes (LEDs: Status LED red, Operation LED green)</td><td></td></tr>
-<tr><td>Acoustic output</td><td>No</td><td></td></tr>
-<tr><td>Provisioning</td><td>–</td><td></td></tr>
-<tr><td>Materials</td><td>PA, 1.4404 (stainless steel/316L), brass (2.0401), PBT, FKM; seal: FKM</td><td></td></tr>
-<tr><td>NFC antenna</td><td>–</td><td></td></tr>
-<tr><td>RF antenna</td><td>Integrated</td><td></td></tr>
-<tr><td>Accelerometer</td><td>–</td><td></td></tr>
-<tr><td>Batteries</td><td>–</td><td></td></tr>
-<tr><td>Primary cell type</td><td>–</td><td></td></tr>
-<tr><td>Energy supply</td><td>External supply</td><td></td></tr>
-<tr><td>Housing color</td><td>Black</td><td></td></tr>
-<tr><td>RF interfaces</td><td>mioty®</td><td></td></tr>
-<tr><td>Communication interfaces</td><td>IO-LINK</td><td></td></tr>
-</tbody></table>
-</div>
-
-<!-- ELECTRICAL DATA -->
-<h3 id="electrical">3. Electrical Data</h3>
-<div class="table-wrap">
-<table>
-<tbody><tr><th>Characteristic</th><th>Value</th><th>Unit</th></tr>
-<tr><td>Operating voltage</td><td>18 to 30</td><td>V DC</td></tr>
-<tr><td>Nominal voltage</td><td>24</td><td>V DC</td></tr>
-<tr><td>Power consumption</td><td>100</td><td>mA</td></tr>
-<tr><td>Protection class</td><td>III</td><td></td></tr>
-<tr><td>Reverse polarity protection</td><td>Yes</td><td></td></tr>
-</tbody></table>
-</div>
-
-<!-- CONNECTIVITY AND RF SPECIFICATION -->
-<h3 id="connectivity">4. Connectivity and RF Specification</h3>
-<div class="table-wrap">
-<table>
-<tbody><tr><th>Characteristic</th><th>Value</th><th>Unit</th></tr>
-<tr><td>RF Standards</td><td>mioty®</td><td></td></tr>
-<tr><td>Frequency mioty® EU</td><td>868</td><td>MHz</td></tr>
-<tr><td>Transmission power mioty® EU</td><td>14</td><td>dBm</td></tr>
-<tr><td>Further communication interfaces</td><td>IO-LINK</td><td></td></tr>
-</tbody></table>
-</div>
-
-<!-- OPERATING MODE -->
-<h3 id="operating-mode">5. Operating Mode</h3>
-
-<figure class="figure">
-  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/bd12645dd27acf7c72c7eb7fa72032e2d6c3373d/Mioty_Adapter/Mioty_Betriebsanleitung/pic/Mioty_Adapter_pic1_Betriebsmodus.png" alt="Mioty Adapter operating mode">
-  <figcaption>Figure 1: Mioty Adapter – Operating Mode</figcaption>
-</figure>
-
-<!-- TECHNICAL DRAWING -->
-<h3 id="technical-drawing">6. Technical Drawing</h3>
-
-<figure class="figure">
-  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/bd12645dd27acf7c72c7eb7fa72032e2d6c3373d/Mioty_Adapter/Mioty_Betriebsanleitung/pic/Mioty_Adapter_pic5_Technische%20Zeichnung.png" alt="Mioty Adapter technical drawing">
-  <figcaption>Figure 2: Mioty Adapter – Technical Drawing</figcaption>
-</figure>
-
-<!-- ELECTRICAL CONNECTIONS -->
-<h3 id="electrical-connections">7. Electrical Connections</h3>
-
-<figure class="figure">
-  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/bd12645dd27acf7c72c7eb7fa72032e2d6c3373d/Mioty_Adapter/Mioty_Betriebsanleitung/pic/Mioty_Adapter_pic3_ElektrischerAnschluss.png" alt="Mioty Adapter electrical connections">
-  <figcaption>Figure 3: Mioty Adapter – Electrical Connections</figcaption>
-</figure>
-
-<img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/1f38539e00ab947e1dbf47f57e833065b3ab7bbe/Mioty_Adapter/Mioty_Betriebsanleitung/pic/Logo.png" alt="Logo" style="max-width: 260px; opacity: 0.9; display: block; margin: 32px 0; height: auto;">
-
-<!-- DISCLAIMER -->
-<div class="footer-note">
-  <p>© Sentinum GmbH – All rights reserved.</p>
-  <p>All contents of this document, including text, tables, and images, are protected by copyright and are the property of Sentinum GmbH.</p>
-  <p>All images are subject to the copyright of Sentinum GmbH unless otherwise stated.</p>
-  <p>Reproduction, distribution, or use — even in part — is not permitted without explicit written permission.</p>
-  <p style="padding-left:14px; font-style:italic;">
-    Specifications are subject to change without notice. All information is provided without guarantee.
-  </p>
-</div>
-
-</div>
+    </div>
