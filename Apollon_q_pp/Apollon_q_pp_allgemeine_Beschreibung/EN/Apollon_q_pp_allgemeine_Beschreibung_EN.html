@@ -1,11 +1,8 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-
-<title>Apollon Q – NFC and Downlink Description</title>
-
 <style>
+/* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
 
 :root{
@@ -18,10 +15,35 @@
   --text-muted:#6b7280;
 }
 
+
+
+/* Base */
 body{
   font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
   color:var(--text-main);
   line-height:1.65;
+}
+
+.container{ width:100%; }
+
+p{ margin:8px 0 12px; }
+
+/* ---------- Headings ---------- */
+
+h1{
+  margin:48px 0 16px;
+  padding-bottom:12px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:42px;
+  font-weight:700;
+  border-bottom:2px solid var(--border);
+}
+
+h2{
+  margin:14px 0 36px;
+  font-size:24px;
+  font-weight:500;
+  color:var(--text-muted);
 }
 
 h3{
@@ -31,115 +53,227 @@ h3{
   font-size:18px;
   font-weight:600;
   border-bottom:1.5px solid var(--border);
+  scroll-margin-top:120px;
 }
 
-p{margin:8px 0 12px}
 
+p{
+  margin:8px 0 12px;
+}
+/* NOTE STRIPS */
+.note-strip{
+  padding:14px 16px;
+  margin:18px 0;
+  border-radius:6px;
+  border-left-width:6px;
+  border-left-style:solid;
+}
+.note-strip--red{background:#fdecea;border-left-color:#d32f2f;}
+.note-strip--yellow{background:#fff8e1;border-left-color:#f9a825;}
+.note-strip--green{background:#e8f5e9;border-left-color:#2e7d32;}
+.note-strip ul{margin:0;padding-left:20px;}
+.note-strip li{margin:4px 0;}
+
+/* ---------- PDF ---------- */
+
+.pdf-viewer{
+   width:100%;
+  max-width:900px;
+  height:600px;
+  margin:24px auto 12px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  overflow:hidden;
+}
+
+.pdf-viewer iframe{ width:100%; height:100%; border:none; }
+
+.pdf-download{
+ max-width:900px;
+  margin:8px auto 32px;
+  padding:10px 14px;
+  background:#f8fbff;
+  border:1px solid #b6d4fe;
+  border-radius:6px;
+  text-align:center;
+}
+
+.pdf-download a,
+.pdf-download a:link,
+.pdf-download a:visited,
+.pdf-download a:hover,
+.pdf-download a:active{
+  color:var(--blue-text);
+  font-weight:600;
+  text-decoration:none !important;
+}
+
+/* ---------- TOC ---------- */
+
+.main-toc{
+  max-width:900px;
+  margin:24px auto 40px;
+  padding:20px 24px;
+  background:#f7fbff;
+  border:1px solid #d6e4fa;
+  border-radius:6px;
+}
+
+/* Überschrift */
+.main-toc strong{display:block;margin-bottom:8px;}
+
+
+/* Nummerierung */
+.main-toc ol{
+  margin:0;
+  padding-left:28px;
+  color:#0f3d91;
+  font-weight:700;
+}
+
+/* Abstand identisch zur Referenz */
+.main-toc li{
+  margin:8px 0;
+  line-height:1.45;
+}
+
+/* Links */
+.main-toc a,
+.main-toc a:link,
+.main-toc a:visited,
+.main-toc a:hover,
+.main-toc a:active{
+  color:#1a3e8c !important;
+  font-weight:700 !important;
+  text-decoration:none !important;
+  border:none !important;
+  box-shadow:none !important;
+}
+
+/* ---------- Tables ---------- */
+
+.table-wrap{ margin:8px 0 24px; }
+
+/* Tables */
 table{
   width:100%;
   border-collapse:collapse;
   font-size:14px;
+  table-layout:fixed;
 }
-
 th,td{
   border:1px solid var(--border);
   padding:8px 12px;
   vertical-align:top;
 }
-
 th{
   background:var(--table-header);
   font-weight:700;
   border-bottom:2px solid #000;
 }
+/* ---------- Unified table column widths ---------- */
 
-.main-toc{
-  max-width:900px;
-  margin:24px auto 40px;
-  padding:16px 20px;
-  background:var(--blue-bg);
-  border:1px solid var(--blue-border);
-  border-radius:6px;
-}
+.table-wrap{ margin:8px 0 24px; }
 
-.main-toc strong{display:block;margin-bottom:8px;}
-.main-toc ul{list-style:none;margin:0;padding:0;}
-.main-toc li{margin:.35rem 0;}
-.main-toc a{color:var(--blue-text);font-weight:600;text-decoration:none;}
-
-.pdf-viewer{
-  max-width:900px;
-  height:600px;
-  margin:0 auto 20px;
-  border:1px solid #ccc;
-  border-radius:6px;
-  overflow:hidden;
-}
-.pdf-viewer iframe{
+/* Tables */
+table{
   width:100%;
-  height:100%;
-  border:none;
+  border-collapse:collapse;
+  font-size:14px;
+  table-layout:fixed;
+}
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid #000;
+}
+/* ---------- Unified table column widths ---------- */
+
+table{
+  table-layout: auto; /* Forces consistent column sizing */
 }
 
-.pdf-download{
-  max-width:900px;
-  margin:0 auto 36px;
-  padding:14px 18px;
-  background:var(--blue-bg);
-  border:1px solid var(--blue-border);
-  border-radius:6px;
-  text-align:center;
-}
-.pdf-download a{
-  color:var(--blue-text);
-  font-weight:600;
+table th:nth-child(1),
+table td:nth-child(1){
+  white-space: normal;
+  word-break: normal;        /* 🔑 verhindert Buchstaben-Zerhacken */
+  overflow-wrap: break-word; /* ✅ bricht nur bei langen technischen Tokens */
+  hyphens: none;
 }
 
-table.auto-layout{
-  table-layout:auto;
+table th:nth-child(2),
+table td:nth-child(2){
+  width:50%;
 }
-/* Inline code badge (e.g. 0x00) */
-.code-inline{
-  display:inline-block;
-  font-family:"Courier New", Courier, monospace;
-  font-size:0.8rem;
-  line-height:1.2;
-  padding:2px 6px;
-  background-color:#f5f7fa;
-  border:1px solid #d0d7de;
-  border-radius:4px;
-  color:#111827;
-  white-space:nowrap;
+
+table th:nth-child(3),
+table td:nth-child(3){
+  width:20%;
 }
 /* ---------- Figures ---------- */
+
 .figure{
-  max-width:900px;
-  margin:24px auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin:24px auto;
 }
 
 .figure img{
-  display:block;
-  max-width:100%;
-  height:auto;
+    display:block;
+    max-width:100%;
+    height:auto;
 }
 
 .figure figcaption{
-  margin-top:6px;
-  color:var(--text-muted);
-  font-size:0.875rem;
-  text-align:center;
+    margin-top:6px;
+    font-size:0.875rem;
+    color:var(--text-muted);
+    font-style:italic;
+    text-align:center;
 }
-/* ---------- Footer / Disclaimer ---------- */
+
+/* ---------- Footer ---------- */
+
 .footer-note{
   margin-top:60px;
   padding-top:20px;
-  border-top:2px solid var(--border);
+  border-top:2px solid #d0d7de;
   font-size:.82rem;
-  color:var(--text-muted);
+  color:#6b7280;
 }
 
-.footer-note p{ margin:0 0 6px 0; line-height:1.4; }
-  </style>
+.footer-note p{
+  margin:0 0 6px 0;
+  line-height:1.4;
+}
+
+.logo-block{
+    margin-top:32px;
+}
+
+.logo-block img{
+    display:block;
+    margin:0;
+}
+
+/* Inline-Code für Berechnungen & Beispiele */
+.inline-code{
+  background-color:#f3f4f6;
+  border:1px solid #d0d7de;
+  border-radius:4px;
+  padding:3px 6px;
+  font-family:SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;
+  font-size:0.9em;
+  color:#111827;
+  display:inline-block;}
+ 
+</style>
 </head>
 <body>
 <div class="container">
@@ -158,24 +292,24 @@ table.auto-layout{
 
 <!-- PDF Download -->
 <div class="pdf-download">
-  📄 You can view the document above or
+  📄 You can view the PDF above or
   <a
     href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/40371017662bb073171eb6cdb56b922db0434920/Apollon_q_pp/Apollon_q_pp_allgemeine_Beschreibung/EN/Apollon-Q_PP_General%20description_EN.pdf"
     target="_blank"
     rel="noopener">
-    download the PDF here
+    <strong>download it here</strong>
   </a>.
 </div>
 
 <section class="main-toc">
-  <strong>Contents</strong>
-  <ul>
-    <li><a href="#overview">1. General Description</a></li>
-    <li><a href="#about-series">2. About the Apollon‑Q Series</a></li>
-    <li><a href="#features">3. Features</a></li>
-    <li><a href="#applications">4. Fields of Application</a></li>
-    <li><a href="#article-tree">5. Article Tree Code</a></li>
-  </ul>
+  <strong>Table of Contents</strong>
+  <ol>
+    <li><a href="#overview">General Description</a></li>
+    <li><a href="#about-series">About the Apollon‑Q Series</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#applications">Fields of Application</a></li>
+    <li><a href="#article-tree">Article Tree Code</a></li>
+  </ol>
 </section>
 
 <section id="overview">
@@ -206,8 +340,8 @@ doors and flaps. The sensor combines an
 optimized range with short 
 measurement and transmission intervals, 
 offers extensive configuration options, 
-and supports MIOTY®, NB-IoT, 
-LoRaWAN®, and LTE-CAT-M1. </p>
+and supports <strong>MIOTY®</strong>, <strong>NB-IoT</strong>, 
+<strong>LoRaWAN®</strong>, and <strong>LTE-CAT-M1.</strong> </p>
   
 </section>
 
@@ -328,11 +462,18 @@ control, and efficiency optimization.
 
 <br><br>
 
-<div style="display:flex;flex-direction:column;gap:24px;align-items:center;">
-  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png" style="max-width:620px;height:auto;" alt="Supported radio technologies">
-  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/CE_Trash_seals.png" style="max-width:320px;height:auto;" alt="CE marking and disposal symbols">
+ <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png"  alt="Supported radio technologies"  style="max-width:750px; height:auto;"
+    loading="lazy">
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
+    alt="trash bin Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
 </div>
-
 
 
 <!-- FOOTER -->
