@@ -1,0 +1,652 @@
+
+<style>
+/* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+  --blue-bg:#f7fbff;
+  --blue-border:#d6e4fa;
+  --blue-text:#1a3e8c;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+}
+
+
+
+/* Base */
+body{
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+}
+
+.container{ width:100%; }
+
+p{ margin:8px 0 12px; }
+
+/* ---------- Headings ---------- */
+
+h1{
+  margin:48px 0 16px;
+  padding-bottom:12px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:42px;
+  font-weight:700;
+  border-bottom:2px solid var(--border);
+}
+
+h2{
+  margin:14px 0 36px;
+  font-size:24px;
+  font-weight:500;
+  color:var(--text-muted);
+}
+
+h3{
+  margin:32px 0 12px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:120px;
+}
+
+
+p{
+  margin:8px 0 12px;
+}
+
+/* NOTE STRIPS */
+.note-strip{
+  padding:14px 16px;
+  margin:18px 0;
+  border-radius:6px;
+  border-left-width:6px;
+  border-left-style:solid;
+}
+.note-strip--red{background:#fdecea;border-left-color:#d32f2f;}
+.note-strip--yellow{background:#fff8e1;border-left-color:#f9a825;}
+.note-strip--green{background:#e8f5e9;border-left-color:#2e7d32;}
+.note-strip ul{margin:0;padding-left:20px;}
+.note-strip li{margin:4px 0;}
+
+
+/* ---------- PDF ---------- */
+
+.pdf-viewer{
+   width:100%;
+  max-width:900px;
+  height:600px;
+  margin:24px auto 12px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  overflow:hidden;
+}
+
+.pdf-viewer iframe{ width:100%; height:100%; border:none; }
+
+.pdf-download{
+ 
+ max-width:900px;
+  margin:8px auto 32px;
+  padding:10px 14px;
+  background:#f8fbff;
+  border:1px solid #b6d4fe;
+  border-radius:6px;
+  text-align:center;
+}
+
+.pdf-download a,
+.pdf-download a:link,
+.pdf-download a:visited,
+.pdf-download a:hover,
+.pdf-download a:active{
+  color:var(--blue-text);
+  font-weight:600;
+  text-decoration:none !important;
+}
+
+/* ---------- TOC ---------- */
+
+.main-toc{
+  max-width:900px;
+  margin:24px auto 40px;
+  padding:20px 24px;
+  background:#f7fbff;
+  border:1px solid #d6e4fa;
+  border-radius:6px;
+}
+
+/* Überschrift */
+.main-toc strong{display:block;margin-bottom:8px;}
+
+
+/* Nummerierung */
+.main-toc ol{
+  margin:0;
+  padding-left:28px;
+  color:#0f3d91;
+  font-weight:700;
+}
+
+/* Abstand identisch zur Referenz */
+.main-toc li{
+  margin:8px 0;
+  line-height:1.45;
+}
+
+/* Links */
+.main-toc a,
+.main-toc a:link,
+.main-toc a:visited,
+.main-toc a:hover,
+.main-toc a:active{
+  color:#1a3e8c !important;
+  font-weight:700 !important;
+  text-decoration:none !important;
+  border:none !important;
+  box-shadow:none !important;
+}
+/* ---------- Tables ---------- */
+
+.table-wrap{ margin:8px 0 24px; }
+
+/* Tables */
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+  table-layout:fixed;
+}
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid #000;
+}
+/* ---------- Unified table column widths ---------- */
+
+table{
+  table-layout: auto; /* Forces consistent column sizing */
+}
+
+table th:nth-child(1),
+table td:nth-child(1){
+  white-space: normal;
+  word-break: normal;        /* 🔑 verhindert Buchstaben-Zerhacken */
+  overflow-wrap: break-word; /* ✅ bricht nur bei langen technischen Tokens */
+  hyphens: none;
+}
+
+table th:nth-child(2),
+table td:nth-child(2){
+  width:50%;
+}
+
+table th:nth-child(3),
+table td:nth-child(3){
+  width:20%;
+}
+
+/* ---------- Figures ---------- */
+
+.figure{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin:24px auto;
+}
+
+.figure img{
+    display:block;
+    max-width:100%;
+    height:auto;
+}
+
+.figure figcaption{
+    margin-top:6px;
+    font-size:0.875rem;
+    color:var(--text-muted);
+    font-style:italic;
+    text-align:center;
+}
+
+/* ---------- Footer ---------- */
+
+.footer-note{
+  margin-top:60px;
+  padding-top:20px;
+  border-top:2px solid #d0d7de;
+  font-size:.82rem;
+  color:#6b7280;
+}
+
+.footer-note p{
+  margin:0 0 6px 0;
+  line-height:1.4;
+}
+
+.logo-block{
+    margin-top:32px;
+}
+
+.logo-block img{
+    display:block;
+    margin:0;
+}
+
+/* Inline-Code für Berechnungen & Beispiele */
+.inline-code{
+  background-color:#f3f4f6;
+  border:1px solid #d0d7de;
+  border-radius:4px;
+  padding:3px 6px;
+  font-family:SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;
+  font-size:0.9em;
+  color:#111827;
+  display:inline-block;}
+ 
+
+</style>
+<div class="row-fluid-wrapper row-depth-1 row-number-5 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_kb-article-module-5" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  <div id="hs_cos_wrapper_kb-article-module-5_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_richtext_field" style="" data-hs-cos-general-type="widget" data-hs-cos-type="inline_richtext_field"><div class="hs-embed-wrapper" style="
+ position: relative;
+       overflow: hidden;
+       width: 100%;
+       height: auto;
+       padding: 0;
+       max-width: none;
+       display: block;
+       margin: 0;" data-responsive="true"><div class="hs-embed-content-wrapper"><!-- ============================= -->
+<!-- Apollon Q mioty Blueprint -->
+<!-- JSON Viewer (DE) -->
+<!-- ============================= -->
+
+<div style="
+  width:100%;
+  height:700px;
+  overflow:hidden;
+  border:1px solid #d0d7de;
+  border-radius:6px;
+  background:#fafafa;
+  margin-bottom:15px;
+">
+    <iframe
+        src="https://docs.sentinum.de/hubfs/blueprint%20test%202026/Apollon_Q_mioty_blueprint_V2.json"
+        style="
+            width:100%;
+            height:100%;
+            border:none;
+            display:block;
+        "
+        title="Apollon Q mioty Blueprint JSON">
+    </iframe>
+</div>
+
+ <div class="pdf-download">
+    <span class="icon">📄</span>
+    
+<span>
+  Blueprint as a JSON file
+  <a href="https://docs.sentinum.de/hubfs/blueprint%20test%202026/Apollon_Q_mioty_blueprint_V2.json?hsLang=de" target="_blank" rel="noopener">
+    <strong>Download here</strong>
+ </a>.
+    
+</span>
+</div>
+
+<!-- ============================= -->
+<!-- Readable blueprint excerpt -->
+<!-- ============================= -->
+
+<p>
+  The following JSON defines the mioty blueprint for the
+  <strong>Apollon Q</strong> sensor. It describes the structure of the uplink payloads,
+  the data types, conditional fields, and the scaling and decoding logic
+  for radar, TOF, acceleration, and alarm data.
+</p>
+
+
+<pre style="
+  background: #f7f7f7;
+  border: 1px solid #ddd;
+  padding: 15px;
+  overflow-x: auto;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 4px;
+  margin-bottom: 40px;
+">{
+    "component": {
+        "alarm": {
+            "littleEndian": false,
+            "size": 8,
+            "type": "uint",
+            "unit": ""
+        },
+        "amplitude": {
+            "littleEndian": false,
+            "size": 16,
+            "type": "int"
+        },
+        "bat_voltage": {
+            "func": "$ / 1000",
+            "littleEndian": false,
+            "size": 16,
+            "type": "uint",
+            "unit": "V"
+        },
+        "distance": {
+            "littleEndian": false,
+            "size": 16,
+            "type": "uint",
+            "unit": "mm"
+        },
+        "int16_t": {
+            "littleEndian": false,
+            "size": 16,
+            "type": "int"
+        },
+        "int8_t": {
+            "littleEndian": false,
+            "size": 8,
+            "type": "int"
+        },
+        "status": {
+            "littleEndian": false,
+            "size": 8,
+            "type": "uint"
+        },
+        "temperature": {
+            "func": "$  - 128",
+            "littleEndian": false,
+            "size": 8,
+            "type": "uint",
+            "unit": "°C"
+        },
+        "uint16_t": {
+            "littleEndian": false,
+            "size": 16,
+            "type": "uint"
+        },
+        "uint8_t": {
+            "littleEndian": false,
+            "size": 8,
+            "type": "uint"
+        },
+        "uplink_counter": {
+            "littleEndian": false,
+            "size": 8,
+            "type": "uint",
+            "unit": ""
+        },
+        "version": {
+            "littleEndian": false,
+            "size": 4,
+            "type": "uint",
+            "unit": ""
+        }
+    },
+    "meta": {
+        "firmwareVersion": "1.0",
+        "hardwareVersion": "1.0",
+        "name": "Apollon",
+        "vendor": "Sentinum"
+    },
+    "typeEui": "FCA84A0100000000",
+    "uplink": [
+        {
+            "id": 0,
+            "payload": [
+                {
+                    "component": "version",
+                    "name": "Modulecode"
+                },
+                {
+                    "component": "version",
+                    "name": "Major_Version"
+                },
+                {
+                    "component": "version",
+                    "name": "Minor_Version"
+                },
+                {
+                    "component": "version",
+                    "name": "Product_Version"
+                },
+                {
+                    "component": "uplink_counter",
+                    "name": "Uplink_Counter"
+                },
+                {
+                    "component": "bat_voltage",
+                    "name": "Battery_Voltage"
+                },
+                {
+                    "component": "temperature",
+                    "name": "Temperature"
+                },
+                {
+                    "component": "alarm",
+                    "name": "Alarm"
+                },
+                {
+                    "component": "distance",
+                    "name": "Master_value"
+                },
+                {
+                    "component": "uint8_t",
+                    "condition": "($Product_Version &amp; 0x01) == 0x01",
+                    "name": "TOF_Status"
+                },
+                {
+                    "component": "distance",
+                    "condition": "($Product_Version &amp; 0x01) == 0x01",
+                    "name": "Tof_Distance"
+                },
+                {
+                    "component": "uint8_t",
+                    "condition": "($Product_Version &amp; 0x01) == 0x01",
+                    "name": "TOF_Index"
+                },
+                {
+                    "component": "uint8_t",
+                    "condition": "($Product_Version &amp; 0x02) == 0x02",
+                    "name": "Radar_Status"
+                },
+                {
+                    "component": "uint8_t",
+                    "condition": "($Product_Version &amp; 0x02) == 0x02",
+                    "name": "Radar_No_peaks"
+                },
+                {
+                    "component": "distance",
+                    "condition": "($Product_Version &amp; 0x02) == 0x02",
+                    "name": "Radar_Distance_1"
+                },
+                {
+                    "component": "int16_t",
+                    "condition": "($Product_Version &amp; 0x02) == 0x02",
+                    "name": "Radar_Amplitude_1"
+                },
+                {
+                    "component": "distance",
+                    "condition": "($Product_Version &amp; 0x02) == 0x02",
+                    "name": "Radar_Distance_2"
+                },
+                {
+                    "component": "int16_t",
+                    "condition": "($Product_Version &amp; 0x02) == 0x02",
+                    "name": "Radar_Amplitude_2"
+                },
+                {
+                    "component": "distance",
+                    "condition": "($Product_Version &amp; 0x02) == 0x02",
+                    "name": "Radar_Distance_3"
+                },
+                {
+                    "component": "int16_t",
+                    "condition": "($Product_Version &amp; 0x02) == 0x02",
+                    "name": "Radar_Amplitude_3"
+                },
+                {
+                    "component": "uint8_t",
+                    "condition": "($Product_Version &amp; 0x04) == 0x04",
+                    "name": "ACC_Status"
+                },
+                {
+                    "component": "uint8_t",
+                    "condition": "($Product_Version &amp; 0x04) == 0x04",
+                    "name": "ACC_Orientation"
+                },
+                {
+                    "component": "uint8_t",
+                    "condition": "($Product_Version &amp; 0x04) == 0x04",
+                    "name": "ACC_open"
+                },
+                {
+                    "component": "uint16_t",
+                    "condition": "($Product_Version &amp; 0x04) == 0x04",
+                    "name": "ACC_open_cnt"
+                },
+                {
+                    "component": "uint8_t",
+                    "condition": "($Product_Version &amp; 0x04) == 0x04",
+                    "name": "ACC_Impact"
+                },
+                {
+                    "component": "uint8_t",
+                    "condition": "($Product_Version &amp; 0x08) == 0x08",
+                    "name": "Hall_open"
+                },
+                {
+                    "component": "uint16_t",
+                    "condition": "($Product_Version &amp; 0x08) == 0x08",
+                    "name": "Hall_open_cnt"
+                },
+                {
+                    "component": "uint8_t",
+                    "condition": "($Product_Version &amp; 0x01) == 0x01 &amp;&amp; ($Minor_Version) &gt;= 2",
+                    "name": "Histo_Type"
+                },
+                {
+                    "component": "uint8_t",
+                    "condition": "($Histo_Type) == 0x00",
+                    "name": "TOF_Hist_Status"
+                },
+                {
+                    "component": "distance",
+                    "condition": "($Histo_Type) == 0x00",
+                    "name": "Tof_Hist_Distance"
+                },
+                {
+                    "component": "uint8_t",
+                    "condition": "($Histo_Type) == 0x00",
+                    "name": "TOF_Peaks_Idx"
+                },
+                {
+                    "component": "uint8_t",
+                    "condition": "($Histo_Type) == 0x00",
+                    "name": "Tof_Peaks_Num"
+                },
+                {
+                    "component": "uint8_t",
+                    "condition": "($Histo_Type) == 0x01",
+                    "name": "TOF_NoHist_Status"
+                },
+                {
+                    "component": "uint16_t",
+                    "condition": "($Histo_Type) == 0x01",
+                    "name": "Tof_NoHist_Distance"
+                },
+                {
+                    "component": "uint8_t",
+                    "condition": "($Histo_Type) == 0x01",
+                    "name": "TOF_Hist_Status"
+                },
+                {
+                    "component": "distance",
+                    "condition": "($Histo_Type) == 0x01",
+                    "name": "Tof_Hist_Distance"
+                },
+                {
+                    "component": "uint8_t",
+                    "condition": "($Histo_Type) == 0x01",
+                    "name": "TOF_Peaks_Idx"
+                },
+                {
+                    "component": "uint8_t",
+                    "condition": "($Histo_Type) == 0x01",
+                    "name": "Tof_Peaks_Num"
+                }
+            ]
+        }
+    ],
+    "version": "2.0"
+}
+</pre>
+
+
+<!-- ============================= -->
+<!-- Text Blueprint Download -->
+<!-- ============================= -->
+
+
+
+                    
+                     <div class="pdf-download">
+    <span class="icon">📄</span>
+    <span>
+         Would you prefer a plain text version?
+        
+<a href="https://docs.sentinum.de/hubfs/blueprint%20test%202026/Apollon_Q_mioty_blueprint_V2.txt?hsLang=de" target="_blank" rel="noopener">
+            <strong>Download Blueprint as a TXT document</strong>
+        </a>.
+    </span>
+</div>
+        <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/6a81a51d242b89f62f6fc737f7a066015f21d2b9/logo/mioty.png"
+    alt="JUNO BSX Logo"
+    style="max-width:auto; height:auto;"
+    loading="lazy"
+  >
+</div>
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
+    alt="JUNO BSX Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
+</div>
+
+
+
+    <div class="footer-note">
+        <p>© Sentinum GmbH – All rights reserved.</p>
+        <p>All contents of this document, including text, tables, and images, are protected by copyright and are the property of Sentinum GmbH.</p>
+        <p>All images are subject to the copyright of Sentinum GmbH unless otherwise stated.</p>
+        <p>Reproduction, distribution, or use — even in excerpts — is not permitted without explicit written permission.</p>
+        <p style="padding-left:14px; font-style:italic;">Specifications are subject to change without notice. All information is provided without warranty.</p>
+    </div>
+</div>
+
+</div> <!-- END CONTAINER -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</body></html>
