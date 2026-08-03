@@ -1,0 +1,548 @@
+
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* ---------- Tables ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+    /* Inline-Code für Berechnungen & Beispiele */
+    .inline-code {
+        background-color: #f3f4f6;
+        border: 1px solid #d0d7de;
+        border-radius: 4px;
+        padding: 3px 6px;
+        font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 0.9em;
+        color: #111827;
+        display: inline-block;
+    }
+</style>
+   
+<!-- PDF Viewer -->
+<div class="pdf-viewer">
+  <iframe src="https://docs.sentinum.de/hubfs/Apollon-Q/Apollon%20Q.T.TR%20doku/Apollon_Q_allgemeine_Beschreibung_DE.pdf" loading="lazy" title="Apollon‑Q PP – Allgemeine Beschreibung (PDF)">
+  </iframe>
+</div>
+
+<!-- PDF Download -->
+<div class="pdf-download">
+  📄 You can view the PDF above or
+  <a href="https://docs.sentinum.de/hubfs/Apollon-Q/Apollon%20Q.T.TR%20doku/Apollon_Q_allgemeine_Beschreibung_DE.pdf" target="_blank" rel="noopener">
+   <strong>download it here</strong>
+  </a>.
+</div>
+
+<!-- Inhaltsverzeichnis -->
+
+<div class="main-toc">
+    <strong>Table of Contents</strong>
+
+    <ol>
+        <li>
+            Overview
+        </li>
+
+        <li>
+            Features
+
+            <ol>
+                <li>
+                    Scope of Delivery
+                </li>
+                <li>
+                    Apollon-Q Product Tree
+                    </li>
+                <li>
+                    Innovative and robust ToF 3D measurement
+                </li>
+            </ol>
+        </li>
+
+        <li>
+            Application Examples
+        </li>
+   
+     <li>
+          Mounting Options
+        </li>
+        </ol>
+</div>
+
+                                                                                 
+      <div style="text-align:center; margin:24px 0;"><img alt="Apollon-Q 2.0 (1)" class="hs-image-align-none" height="377" style="height: auto; width: 670px;" src="https://docs.sentinum.de/hs-fs/hubfs/Apollon-Q%202.0%20(1).png?width=670&amp;height=377&amp;name=Apollon-Q%202.0%20(1).png" width="670" loading="lazy" srcset="https://docs.sentinum.de/hs-fs/hubfs/Apollon-Q%202.0%20(1).png?width=335&amp;height=189&amp;name=Apollon-Q%202.0%20(1).png 335w, https://docs.sentinum.de/hs-fs/hubfs/Apollon-Q%202.0%20(1).png?width=670&amp;height=377&amp;name=Apollon-Q%202.0%20(1).png 670w, https://docs.sentinum.de/hs-fs/hubfs/Apollon-Q%202.0%20(1).png?width=1005&amp;height=566&amp;name=Apollon-Q%202.0%20(1).png 1005w, https://docs.sentinum.de/hs-fs/hubfs/Apollon-Q%202.0%20(1).png?width=1340&amp;height=754&amp;name=Apollon-Q%202.0%20(1).png 1340w, https://docs.sentinum.de/hs-fs/hubfs/Apollon-Q%202.0%20(1).png?width=1675&amp;height=943&amp;name=Apollon-Q%202.0%20(1).png 1675w, https://docs.sentinum.de/hs-fs/hubfs/Apollon-Q%202.0%20(1).png?width=2010&amp;height=1131&amp;name=Apollon-Q%202.0%20(1).png 2010w" sizes="(max-width: 670px) 100vw, 670px" /></div>
+             
+              <h3>1. Apollon-Q Overview</h3>
+              
+               <p>The Apollon-Q series consists of wireless IoT level sensors that deliver high-quality measurement results thanks to a unique, complementary measurement principle. The sensor combines optical measurement with radar and can be used to measure levels up to 2.50 meters. Whether for discrete solids, liquids, or bulk materials—the devices in the Apollon-Q series deliver precise results and are suitable for various applications in level measurement, such as in containers, shafts, channels, or in the smart waste sector. The sensor also provides reliable data even in small containers like wastebaskets. In addition to an optimized range and short measurement and transmission intervals, the product offers numerous advanced features and supports the most common communication standards such as MIOTY®, NB-IoT, LoRaWAN®, LTE-CAT-M1, and, most recently, Bluetooth Low Energy (BLE).<!--<!- - notionvc: 66970bc5-0e18-494f-a713-e6f33f4395ca - ->--></p>
+         
+         <h3>2. Features</h3>
+            <ul>
+          <li>Robust measurement principle based on radar and/or ToF measurement</li>
+           <li>Available with mioty®, LoRaWAN®, NB-IoT, LTE-M1</li>
+           <li>Durable and robust housing</li>
+         <li>Replaceable batteries</li>
+      <li>Tamper and vandalism detection available</li>
+         <li>Provisioning via NFC and downlinks available</li>
+       <li>Cellular communication via CoAP over Sentinum Datahub available (generic LWM2M coming soon)</li>
+        <li>Integrated GPS for container tracking</li>
+         <li>Example applications: Level monitoring for smart waste, glass containers, used clothing containers, IBCs, industrial waste, and C-parts monitoring
+         </li>
+</ul>
+        <div style="text-align:center; margin:24px 0;">
+    <img alt="Untitled" class="hs-image-align-none" src="https://docs.sentinum.de/hs-fs/hubfs/Untitled.png?width=670&height=73&name=Untitled.png" width="670" loading="lazy" style="max-width:100%; height:auto; display:block; margin:0 auto;" srcset=",,,,," sizes="(max-width: 670px) 100vw, 670px" />
+            https://docs.sentinum.de/hs-fs/hubfs/Untitled.png?width=335&height=37&name=Untitled.png 335w
+            https://docs.sentinum.de/hs-fs/hubfs/Untitled.png?width=670&height=73&name=Untitled.png 670w
+            https://docs.sentinum.de/hs-fs/hubfs/Untitled.png?width=1005&height=110&name=Untitled.png 1005w
+            https://docs.sentinum.de/hs-fs/hubfs/Untitled.png?width=1340&height=146&name=Untitled.png 1340w
+            https://docs.sentinum.de/hs-fs/hubfs/Untitled.png?width=1675&height=183&name=Untitled.png 1675w
+            https://docs.sentinum.de/hs-fs/hubfs/Untitled.png?width=2010&height=219&name=Untitled.png 2010w
+        
+</div>
+
+         
+ <h3>2.1 Package Contents</h3>
+         
+   <ul>
+    <li>
+        <strong>2 batteries (already installed)</strong>
+
+        <ul>
+            <li>
+                <strong>For LoRaWAN® and mioty® sensors</strong>
+                <ul>
+                    <li>Energizer® Ultimate Lithium AA</li>
+                    <li>VARTA ULTRA LITHIUM Mignon AA</li>
+                </ul>
+            </li>
+
+            <li>
+                <strong>For cellular sensors (NB-IoT and LTE-CAT-M1)</strong>
+                <ul>
+                    <li>VARTA-CR-AH-R</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+
+    <li>
+       <strong>Apollon sensor</strong> in the ordered configuration
+    </li>
+</ul>
+                                                                              
+      <h3>2.2 Apollon-Q Product Tree</h3>
+    <table class="auto-layout">
+    <thead>
+        <tr>
+            <th>Prefix</th>
+            <th>Code Product Series</th>
+            <th>Communication</th>
+            <th>Sensors</th>
+            <th>Additional Sensors</th>
+            <th>Sample Item Code</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td><code>S</code></td>
+            <td><code>APOQ</code></td>
+            <td>LOEU, MIOTY, NB, NBM1</td>
+            <td>1T, TR</td>
+            <td>RACC, ACC-HALL</td>
+            <td><code>S-APOQ-LOEU-ACC</code></td>
+        </tr>
+    </tbody>
+</table>
+<br /><br />
+                  
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:0px; margin:0px 0;">
+
+     <img src="https://docs.sentinum.de/hs-fs/hubfs/Apollon-Q%208.2.png?width=306&amp;height=172&amp;name=Apollon-Q%208.2.png" alt="Apollon-Q 8.2" width="306" loading="lazy" style="max-width:100%; height:auto;" />
+
+     <img src="https://docs.sentinum.de/hs-fs/hubfs/Apollon-Q%208.0.png?width=306&amp;height=172&amp;name=Apollon-Q%208.0.png" alt="Apollon-Q 8.0" width="306" loading="lazy" style="max-width:100%; height:auto;" />
+
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/Apollon-Q%204.png?width=306&amp;height=172&amp;name=Apollon-Q%204.png" alt="Apollon-Q 4" width="306" loading="lazy" style="max-width:100%; height:auto;" />
+
+     <img src="https://docs.sentinum.de/hs-fs/hubfs/Apollon-Q%201.0.png?width=306&amp;height=172&amp;name=Apollon-Q%201.0.png" alt="Apollon-Q 1.0" width="306" loading="lazy" style="max-width:100%; height:auto;" />
+       </div>
+       
+    
+       
+        <h3>2.3 Innovative and Robust ToF 3D Measurement</h3>
+               <p>We use high-performance, power-optimized laser technology in the Apollon-Q. This allows us to capture many small measurement points and combine them into a low-resolution 3D image. As a result, even highly inhomogeneous surfaces—such as those found on piece goods—can be captured more accurately than with conventional methods. Additionally, specific sections of an image can be examined more closely or ignored. </p>
+               
+               
+<div style="display:flex; justify-content:center; align-items:center; gap:20px; margin:24px 0;">
+
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(2).png?width=306&height=182&name=Untitled%20(2).png" alt=";" />
+
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(1).png?width=306&height=180&name=Untitled%20(1).pngle=" loading="lazy" style="max-width:100%; height:auto;" />
+
+</div>
+        
+        
+            <p><span style="font-size: 1rem;">This filters out interference or objects in the sensor’s field of view. For extremely small containers, such as KLT boxes or wastebaskets, the field of view can be reduced. In this way, the field of view can be narrowed, and the measurement window can be individually adjusted to fit the specific container.</span></p>
+            
+     <h3>3. Application Examples</h3>
+   
+<div style="
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:24px;
+    margin:24px 0;
+">
+
+    <img alt="Untitled (9)" src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(9).png?width=306&amp;height=172&amp;name=Untitled%20(9).png%22" style="height:auto; width:306px; display:block; margin:0 auto; max-width:100%; height:auto;" />
+
+    <img alt="Untitled (10)" class="hs-image-align-none" width="306" loading="lazy" src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(10).png?width=306&height=172&name=Untitled%20(10).png" style="height:auto; width:306px; display:block; margin:0 auto;" />
+
+    <img alt="Untitled (10)" class="hs-image-align-none" width="306" loading="lazy" src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(4).png?width=918&amp;height=516&amp;name=Untitled%20(4).png" style="height:auto; width:306px; display:block; margin:0 auto;" />
+
+    <img alt="Untitled (10)" class="hs-image-align-none" width="306" loading="lazy" src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(11).png?width=306&amp;height=173&amp;name=Untitled%20(11).png" style="height:auto; width:306px; display:block; margin:0 auto;" />
+
+    <img alt="Untitled (10)" class="hs-image-align-none" width="306" loading="lazy" src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(5).png?width=306&amp;height=172&amp;name=Untitled%20(5).png" style="height:auto; width:306px; display:block; margin:0 auto;" />
+
+    <img alt="Untitled (10)" class="hs-image-align-none" width="306" loading="lazy" src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(3).png?width=306&amp;height=172&amp;name=Untitled%20(3).png" style="height:auto; width:306px; display:block; margin:0 auto;" />
+</div>
+        
+   
+    
+    
+     <h3>4. Mounting Options</h3>
+     
+   <div style="text-align:center; margin:24px 0;">
+    <img alt="Untitled (12)-1" src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(12)-1.png?width=670&height670" loading="lazy" style="display:block; margin:0 auto; max-width:100%; height:auto;" />
+</div>
+                                                                             
+<br /><br />
+
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png" alt="Supported radio technologies" style="max-width:750px; height:auto;" loading="lazy" />
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png" alt="trash bin Logo" style="max-width:340px; height:auto;" loading="lazy" />
+</div>
+     
+<!-- FOOTER -->
+
+<div>
+    </div>
+<div class="footer-note">
+  <p>© Sentinum GmbH – All rights reserved.</p>
+  <p>All content in this document, including text, tables, and images, is protected by copyright and is the property of Sentinum GmbH.</p>
+  <p>All images are subject to the copyright of Sentinum GmbH, unless otherwise noted.</p>
+  <p>Reproduction, distribution, or use—even in part—is not permitted without express written permission.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Specifications are subject to change. All information is provided without warranty.
+  </p>
+</div>
+
+
+</div>
