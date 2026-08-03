@@ -1,0 +1,1243 @@
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* ---------- Tables ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+    /* Inline-Code für Berechnungen & Beispiele */
+    .inline-code {
+        background-color: #f3f4f6;
+        border: 1px solid #d0d7de;
+        border-radius: 4px;
+        padding: 3px 6px;
+        font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 0.9em;
+        color: #111827;
+        display: inline-block;
+    }
+    table code,
+.inline-code {
+    background-color: #f3f4f6;
+    border: 1px solid #d0d7de;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9em;
+    color: #111827;
+    display: inline-block;
+}
+.note-strip {
+    padding: 14px 16px;
+    margin: 18px 0;
+    border-radius: 6px;
+    border-left-width: 6px;
+    border-left-style: solid;
+    font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.note-strip--blue {
+    background: #f7fbff;
+    border-left-color: #1976d2;
+}
+
+.note-strip ul {
+    margin: 8px 0 0;
+    padding-left: 20px;
+}
+
+</style>
+   <!-- PDF Viewer -->
+<div class="pdf-viewer">
+  <iframe
+    src="https://docs.sentinum.de/hubfs/Apollon-Q/Apollon%20Q.T.TR%20doku/Apollon_Q_TR_NFC_und_Downlinkbeschreibung_DE.pdf"
+    loading="lazy"
+    title="Apollon‑Q PP – Allgemeine Beschreibung (PDF)">
+  </iframe>
+</div>
+
+<!-- PDF Download -->
+<div class="pdf-download">
+  📄  Sie können das PDF oben ansehen oder
+  <a
+    href="https://docs.sentinum.de/hubfs/Apollon-Q/Apollon%20Q.T.TR%20doku/Apollon_Q_TR_NFC_und_Downlinkbeschreibung_DE.pdf?hsLang=de"
+    target="_blank"
+    rel="noopener">
+   <strong>hier herunterladen</strong> 
+  </a>.
+</div>
+   
+  
+        
+           <div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Modul</th>
+                <th>Modulschlüssel</th>
+                <th>Gruppe</th>
+                <th>Gruppen ID</th>
+                <th>Beschreibung</th>
+                <th style="text-align:center;">T</th>
+                <th style="text-align:center;">R</th>
+                <th style="text-align:center;">TR</th>
+                <th style="text-align:center;">SW</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>Apollon</td>
+                <td><code>0x1XXX</code></td>
+                <td>Timings &amp; Alarms</td>
+                <td><code>0x00</code></td>
+                <td>Definiert Parameter für Messungen und Übertragungsverhalten</td>
+                <td style="text-align:center;">✓</td>
+                <td style="text-align:center;">✓</td>
+                <td style="text-align:center;">✓</td>
+                <td style="text-align:center;">✓</td>
+            </tr>
+
+            <tr>
+                <td>Apollon</td>
+                <td><code>0x1XXX</code></td>
+                <td>ToF</td>
+                <td><code>0x01</code></td>
+                <td>Einstellungen zum ToF Sensor</td>
+                <td style="text-align:center;">✓</td>
+                <td style="text-align:center;"></td>
+                <td style="text-align:center;">✓</td>
+                <td style="text-align:center;">✓</td>
+            </tr>
+
+            <tr>
+                <td>Apollon</td>
+                <td><code>0x1XXX</code></td>
+                <td>Radar</td>
+                <td><code>0x02</code></td>
+                <td>Einstellungen zum Radar Sensor</td>
+                <td style="text-align:center;"></td>
+                <td style="text-align:center;">✓</td>
+                <td style="text-align:center;">✓</td>
+                <td style="text-align:center;">✓</td>
+            </tr>
+
+            <tr>
+                <td>Apollon</td>
+                <td><code>0x1XXX</code></td>
+                <td>Klappenöffnungsdetektion</td>
+                <td><code>0x03</code></td>
+                <td>Einstellungen zum Accelerometer</td>
+                <td style="text-align:center;">✓</td>
+                <td style="text-align:center;">✓</td>
+                <td style="text-align:center;">✓</td>
+                <td style="text-align:center;">✓</td>
+            </tr>
+
+            <tr>
+                <td>Apollon</td>
+                <td><code>0x1XXX</code></td>
+                <td>Bewegung und Vibrationserkennung</td>
+                <td><code>0x04</code></td>
+                <td>Einstellungen für Tracking in Bewegung und Vibrationsmustererkennung</td>
+                <td style="text-align:center;">✓</td>
+                <td style="text-align:center;">✓</td>
+                <td style="text-align:center;">✓</td>
+                <td style="text-align:center;">✓</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+         
+
+<div style="
+    display:flex;
+    align-items:flex-start;
+    margin:18px 0;
+    font-family:'Nunito','Segoe UI',Helvetica,Arial,sans-serif;
+    font-size:16px;
+    line-height:1.7;
+    color:#111827;
+    background:#f7fbff;
+    border-left:6px solid #1976d2;
+    padding:14px 16px;
+    border-radius:6px;
+">
+
+
+    <strong>Hinweis:</strong>
+
+    <ul>
+        <li><strong>Radar-Voreinstellung bei Inbetriebnahme:</strong></li>
+        <li><em>Liquid</em> (für Flüssigkeitsmessungen): <code>tmod = 2</code> – Beispiel: <code>S-XXXX-TR-ACC</code></li>
+        <li><em>Solid</em> (für Feststoffe): <code>tmod = 0</code> – Beispiel: <code>S-XXXX-SW-TR-ACC</code></li>
+        <li>Bei Messung von Gewässern muss sichergestellt werden, dass sich Wasser im Fluss befindet.</li>
+        <li>Auf der letzten Seite befinden sich FAQs.</li>
+    </ul>
+</div><div style="font-family:'Nunito','Segoe UI',Helvetica,Arial,sans-serif;">
+
+    <p>
+        Tabellen für produktübergreifende Module wie LoRaWAN, mioty und Cellular finden Sie in der
+        <a href="https://docs.sentinum.de/generische-nfc-und-downlink-dokumentation?hsLang=de">
+            Generischen NFC- und Downlink-Dokumentation
+        </a>.
+    </p>
+
+    <p>
+        Weitere Informationen zur Konfiguration der Sensor-Kommunikation finden Sie je nach Version in der jeweiligen generischen
+        <a href="https://docs.sentinum.de/generische-lorawan?hsLang=de">LoRaWAN®</a>,
+        ://docs.sentinum.de/generische-mioty?hsLang=de">mioty®</a>
+        oder
+        <a href="https://docs.sentinum.de/generische-cellular-dokumentation?hsLang=de">Cellular</a>
+        Dokumentation.
+    </p>
+
+</div>
+        <h3 id="gruppe-00">
+    APOLLON: Gruppe Timings &amp; Alarm 0x00 (T, R, TR, SW)
+</h3>
+
+          <div class="table-wrap">
+
+<table>
+    <thead>
+        <tr>
+            <th>Ressource</th>
+            <th>Ressourcen ID</th>
+            <th>Schlüssel (NFC/BLE)</th>
+            <th>Min</th>
+            <th>Max</th>
+            <th>Werkseinstellung</th>
+            <th>Einheit</th>
+            <th>Modulschlüssel</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+      <tr>
+    <td><strong>Messperiode</strong></td>
+    <td><code>0x00</code></td>
+    <td><code>period</code></td>
+    <td>1</td>
+    <td>660</td>
+    <td>60</td>
+    <td>min</td>
+    <td><code>XXX1</code></td>
+</tr>
+
+<tr>
+    <td colspan="8">
+        Gibt die Periode an, in der die Messwerte erfasst werden. 60 Minuten heißt, dass immer nach 60 Minuten eine Messung durch den Sensor durchgeführt wird.
+    </td>
+</tr>
+<!-- Row 2 -->
+<tr>
+    <td><strong>Änderung Füllstand Absolut</strong></td>
+    <td><code>0x01</code></td>
+    <td><code>delta</code></td>
+    <td>30</td>
+    <td>2000</td>
+    <td>200</td>
+    <td>mm</td>
+    <td><code>XXX1</code></td>
+</tr>
+
+<tr>
+    <td colspan="8">
+        Gibt an, um wie viel sich der Füllstand im Vergleich zur letzten Sendung absolut ändern muss, damit eine Alarm-Sendung ausgelöst wird. Diese Sendung wird unabhängig vom normalen Sendeintervall durchgeführt. Bezieht sich immer auf den Hauptmesswert.
+    </td>
+</tr>
+
+<!-- Row 3 -->
+<tr>
+    <td><strong>Reguläres Sendeintervall</strong></td>
+    <td><code>0x02</code></td>
+    <td><code>every / pause</code></td>
+    <td>1</td>
+    <td>24</td>
+    <td>6</td>
+    <td></td>
+    <td><code>XXX1</code></td>
+</tr>
+
+<tr>
+    <td colspan="8">
+        Anzahl der bis zur Übertragung durchgeführten Messungen.
+    </td>
+</tr>
+
+<!-- Row 4 -->
+<tr>
+    <td><strong>Master Value Ressource</strong></td>
+    <td><code>0x03</code></td>
+    <td><code>mval</code></td>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+    <td></td>
+    <td><code>XXX1</code></td>
+</tr>
+
+<tr>
+    <td colspan="8">
+        • 0: ToF entspricht der ToF Algo Ressource<br>
+        • 1: Radar
+    </td>
+</tr>
+
+<!-- Row 5 -->
+<tr>
+    <td><strong>Temperatur high</strong></td>
+    <td><code>0x04</code></td>
+    <td><code>thi</code></td>
+    <td>0</td>
+    <td>100</td>
+    <td>70</td>
+    <td>°C</td>
+    <td><code>XXX1</code></td>
+</tr>
+
+<tr>
+    <td colspan="8">
+        Gibt die Temperatur an, ab der ein Temperaturalarm ausgelöst wird.
+    </td>
+</tr>
+
+</tbody>
+</table>
+
+
+  <h3 id="gruppe-01">
+    APOLLON: Gruppe TOF Einstellungen 0x01 (T, TR, SW)
+</h3>
+
+<div class="table-wrap">
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Ressource</th>
+                <th>Ressourcen ID</th>
+                <th>Schlüssel (NFC/BLE)</th>
+                <th>Min</th>
+                <th>Max</th>
+                <th>Werkseinstellung</th>
+                <th>Einheit</th>
+                <th>Modulschlüssel</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td><strong>TOF algo Ressource</strong></td>
+                <td><code>0x02</code></td>
+                <td><code>algo</code></td>
+                <td>0</td>
+                <td>2</td>
+                <td>2</td>
+                <td></td>
+                <td><code>XXX1</code></td>
+            </tr>
+
+            <tr>
+                <td colspan="8">
+                    Primärer ToF-Algorithmus:<br>
+                    • 0: Kein Histogramm-Modus<br>
+                    • 1: Mit Histogramm-Modus<br>
+                    • 2: Advanced Feature
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div><h3 id="gruppe-02">
+    Apollon: Gruppe Radar Einstellungen 0x02 (R, TR, SW)
+</h3>
+
+<div class="table-wrap">
+
+<table>
+
+    <thead>
+        <tr>
+            <th>Ressource</th>
+            <th>Ressourcen ID</th>
+            <th>Schlüssel (NFC/BLE)</th>
+            <th>Min</th>
+            <th>Max</th>
+            <th>Werkseinstellung</th>
+            <th>Einheit</th>
+            <th>Modulschlüssel</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td><strong>Minimale Messdistanz Radar</strong></td>
+            <td><code>0x00</code></td>
+            <td><code>rsta</code></td>
+            <td>50</td>
+            <td>3000</td>
+            <td>150</td>
+            <td>mm</td>
+            <td><code>XXX1</code></td>
+        </tr>
+
+        <tr>
+            <td colspan="8">
+                Beschreibt die minimale erforderliche Distanz, ab der eine Messung durchgeführt wird.
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Maximale Messdistanz Radar</strong></td>
+            <td><code>0x01</code></td>
+            <td><code>rend</code></td>
+            <td>50</td>
+            <td>10000</td>
+            <td>5000</td>
+            <td>mm</td>
+            <td><code>XXX1</code></td>
+        </tr>
+
+        <tr>
+            <td colspan="8">
+                Beschreibt die maximale Distanz, bis zu der gemessen wird.
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Grenzwert Radar</strong></td>
+            <td><code>0x02</code></td>
+            <td><code>rtre</code></td>
+            <td>400</td>
+            <td>10000</td>
+            <td>2000</td>
+            <td></td>
+            <td><code>XXX1</code></td>
+        </tr>
+
+        <tr>
+            <td colspan="8">
+                Gibt den Grenzwert an, über dem die Signal-Peaks des Sensors liegen müssen, um erkannt zu werden (nur für <code>tmod=2</code>).
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Radar Sort Mode</strong></td>
+            <td><code>0x03</code></td>
+            <td><code>rsor</code></td>
+            <td>0</td>
+            <td>2</td>
+            <td>0</td>
+            <td></td>
+            <td><code>XXX1</code></td>
+        </tr>
+
+        <tr>
+            <td colspan="8">
+                Legt die Sortierlogik der detektierten Ziele fest:<br>
+                • 0: Stärkstes Echo zuerst<br>
+                • 1: Kürzeste Distanz zuerst<br>
+                • 2: Weiteste Distanz zuerst
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Radar Wavelet Length</strong></td>
+            <td><code>0x04</code></td>
+            <td><code>wav</code></td>
+            <td>1</td>
+            <td>5</td>
+            <td>2</td>
+            <td></td>
+            <td><code>XXX1</code></td>
+        </tr>
+
+        <tr>
+            <td colspan="8">
+                ADVANCED: Pulslänge (Radar Pulse Duration), wie lange das Signal ausgesendet wird; wird automatisch vom Sensor ausgewählt.
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Radar Range Threshold Mode</strong></td>
+            <td><code>0x05</code></td>
+            <td><code>tmod</code></td>
+            <td>0</td>
+            <td>2</td>
+            <td>2: wenn Liquid voreingestellt<br>0: sonst</td>
+            <td></td>
+            <td><code>XXX1</code></td>
+        </tr>
+
+        <tr>
+            <td colspan="8">
+                Modus zur Schwellwertanpassung der Werte:<br>
+                • 0: Phase Variance Modus für Stückgüter und Smart Waste<br>
+                • 1: Static Threshold Mode<br>
+                • 2: Dynamic Threshold Algorithm CFAR
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Radar RCS Threshold</strong></td>
+            <td><code>0x06</code></td>
+            <td><code>rcdt</code></td>
+            <td>-10</td>
+            <td>40</td>
+            <td>0</td>
+            <td></td>
+            <td><code>XXX1</code></td>
+        </tr>
+
+        <tr>
+            <td colspan="8">
+                Grenzwert für Static Threshold Mode.
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Radar Signal Quality</strong></td>
+            <td><code>0x07</code></td>
+            <td><code>sq</code></td>
+            <td>-10</td>
+            <td>30</td>
+            <td>10</td>
+            <td></td>
+            <td><code>XXX1</code></td>
+        </tr>
+
+        <tr>
+            <td colspan="8">
+                Verstärkung: Je höher <code>sq</code>, desto größere Distanzen können empfangen werden. Gleichzeitig steigt der Stromverbrauch.
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Radar CFAR Sensitivity</strong></td>
+            <td><code>0x08</code></td>
+            <td><code>cfsn</code></td>
+            <td>0</td>
+            <td>100</td>
+            <td>50</td>
+            <td></td>
+            <td><code>XXX1</code></td>
+        </tr>
+
+        <tr>
+            <td colspan="8">
+                Sensitivität des CFAR Algorithmus:<br>
+                • Höhere Sensitivität → mehr Ziele erkannt, aber mehr Fehlalarme<br>
+                • Niedrigere Sensitivität → weniger Fehlalarme
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Radar CFAR Norm</strong></td>
+            <td><code>0x0F</code></td>
+            <td><code>cfnr</code></td>
+            <td>0</td>
+            <td>2</td>
+            <td>2</td>
+            <td></td>
+            <td><code>XXX1</code></td>
+        </tr>
+
+        <tr>
+            <td colspan="8">
+                ADVANCED: Korrektur der RCS-Werte bei Doppelreflexionen.<br>
+                • 0: Keine Korrektur<br>
+                • 1: Schwache Korrektur (Flächen)<br>
+                • 2: Starke Korrektur
+            </td>
+        </tr>
+
+    </tbody>
+
+</table>
+
+</div>
+                                                                              <h3 id="gruppe-03">
+    Apollon: Gruppe Accelerometer 0x03 (T, R, TR, SW)
+</h3>
+
+<div class="table-wrap">
+
+<table>
+
+    <thead>
+        <tr>
+            <th>Ressource</th>
+            <th>Ressourcen ID</th>
+            <th>Schlüssel (NFC/BLE)</th>
+            <th>Min</th>
+            <th>Max</th>
+            <th>Werkseinstellung</th>
+            <th>Einheit</th>
+            <th>Modulschlüssel</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td><strong>Abklingzeit</strong></td>
+            <td><code>0x00</code></td>
+            <td><code>ocool</code></td>
+            <td>1</td>
+            <td>600</td>
+            <td>120</td>
+            <td>sec</td>
+            <td><code>XXX1</code></td>
+        </tr>
+
+        <tr>
+            <td colspan="8">
+                Gibt eine Zeitspanne in Sekunden an, in der nach dem Auslösen einer Öffnung eine weitere Öffnung nicht erneut ausgelöst werden kann (Entprellung). Als Referenzwert dient die letzte gezählte Öffnung.
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Alarm nac</strong>h</td>
+            <td><code>0x01</code></td>
+            <td><code>oaaf</code></td>
+            <td>60</td>
+            <td>3600</td>
+            <td>900</td>
+            <td>sec</td>
+            <td><code>XXX1</code></td>
+        </tr>
+
+        <tr>
+            <td colspan="8">
+                Gibt an, wie lange der Deckel in Sekunden geöffnet sein muss, bis ein Alarm ausgelöst wird.
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Alarm Öffnungsdetektion</strong></td>
+            <td><code>0x02</code></td>
+            <td><code>osrc</code></td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td></td>
+            <td><code>XXX1</code></td>
+        </tr>
+
+        <tr>
+            <td colspan="8">
+                Aktiviert oder deaktiviert den Öffnungsalarm:<br>
+                • 0: deaktiviert<br>
+                • 1: aktiviert
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Alarm offenstehende Klappe</strong></td>
+            <td><code>0x04</code></td>
+            <td><code>oaen</code></td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td></td>
+            <td><code>XXX1</code></td>
+        </tr>
+
+        <tr>
+            <td colspan="8">
+                Gibt an, ob bei offen stehendem Container nach der Zeit „Alarm nach“ ein Alarm ausgelöst wird:<br>
+                • 0: Alarm nicht aktiv<br>
+                • 1: Alarm aktiv
+            </td>
+        </tr>
+
+    </tbody>
+
+</table>
+
+</div>
+<div class="note-strip note-strip--blue">
+
+    <strong>Hinweis:</strong>
+
+    <ul>
+        <li>
+            Entweder <code>Apollon Gruppe 0x03</code> oder
+            <code>Apollon Gruppe 0x04</code> kann verwendet werden.
+            Beide Gruppen aktivieren sich gegenseitig und können nicht gleichzeitig verwendet werden.
+        </li>
+    </ul>
+
+</div>
+  <h3 id="gruppe-04">
+    Apollon: Bewegung und Vibrationserkennung 0x04
+</h3>
+
+<div class="table-wrap">
+
+<table>
+
+    <thead>
+        <tr>
+            <th>Ressource</th>
+            <th>Ressourcen ID</th>
+            <th>Schlüssel (NFC/BLE)</th>
+            <th>Min</th>
+            <th>Max</th>
+            <th>Werkseinstellung</th>
+            <th>Einheit</th>
+            <th>Modulschlüssel</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <!-- Move Mode -->
+        <tr>
+            <td><strong>Move Mode</strong></td>
+            <td><code>0x00</code></td>
+            <td><code>lmode</code></td>
+            <td>0</td>
+            <td>8</td>
+            <td>0</td>
+            <td></td>
+            <td><code>1111</code></td>
+        </tr>
+
+        <tr>
+            <td colspan="8">
+                Gibt an, welcher Modus (Tracking on Activity Modus oder Vibrationserkennung) aktiviert ist:<br>
+                • <code>0</code>: Kein Tracking on Activity Feature aktiv<br>
+                • <code>1</code>: Tracking on Start – Bei Detektion einer Aktivität wird die Lokalisierung durchgeführt.<br>
+                • <code>2</code>: Tracking on Ongoing – Während einer bereits laufenden Aktivität wird die Lokalisierung durchgeführt.<br>
+                • <code>3</code>: Tracking on Start and Ongoing – Bei Detektion einer Aktivität und während einer bereits laufenden Aktivität wird die Lokalisierung durchgeführt.<br>
+                • <code>4</code>: Tracking on Inactivity – Wenn eine Aktivität beendet ist, wird die Lokalisierung durchgeführt.<br>
+                • <code>5</code>: Tracking on Start and Inactivity – Bei Detektion einer Aktivität und bei Beendigung einer Aktivität wird die Lokalisierung durchgeführt.<br>
+                • <code>6</code>: Tracking on Inactivity and Ongoing – Die Lokalisierung erfolgt, wenn die Aktivität im Gange ist und die Aktivität beendet wurde.<br>
+                • <code>7</code>: Tracking on Start, Inactivity and Ongoing – Die Lokalisierung erfolgt, wenn die Aktivität startet, im Gange ist und die Aktivität beendet wurde.<br>
+                • <code>8</code>: Vandalismusdetektion und Vibrationsmusterkennung.
+            </td>
+        </tr>
+
+        <!-- Move Activity Threshold -->
+        <tr>
+            <td><strong>Move Activity Threshold</strong></td>
+            <td><code>0x01</code></td>
+            <td><code>moat</code></td>
+            <td>100</td>
+            <td>2000</td>
+            <td>400</td>
+            <td>mg</td>
+            <td><code>1111</code></td>
+        </tr>
+
+        <tr>
+            <td colspan="8">
+                Beschreibt, ab welcher Beschleunigung eine Aktivität als Aktivität gezählt und aufgezeichnet wird.<br>
+                Für die Vandalismuserkennung (<code>Move Mode = 8</code>) ist das die Schwelle für einen Stoß.
+            </td>
+        </tr>
+
+        <!-- Move Ongoing Time -->
+        <tr>
+            <td><strong>Move Ongoing Time</strong></td>
+            <td><code>0x02</code></td>
+            <td><code>mont</code></td>
+            <td>1</td>
+            <td>1440</td>
+            <td>10</td>
+            <td>min</td>
+            <td><code>1111</code></td>
+        </tr>
+
+        <tr>
+            <td colspan="8">
+                Gibt die Zeit an, die zwischen zwei Übertragungen und Lokalisierungen vergeht, während eine Aktivität andauert.
+            </td>
+        </tr>
+
+        <!-- Move Inactivity Time -->
+        <tr>
+            <td><strong>Move Inactivity Time</strong></td>
+            <td><code>0x03</code></td>
+            <td><code>moit</code></td>
+            <td>1</td>
+            <td>1440</td>
+            <td>5</td>
+            <td>min</td>
+            <td><code>1111</code></td>
+        </tr>
+
+        <tr>
+            <td colspan="8">
+                Beschreibt die Zeit zwischen dem Zeitpunkt, ab dem eine Aktivität endet, und dem Lokalisieren/Übertragen der Daten.
+            </td>
+        </tr>
+
+        <!-- Move Impact Max -->
+        <tr>
+            <td><strong>Move Impact Max</strong></td>
+            <td><code>0x04</code></td>
+            <td><code>miom</code></td>
+            <td>1</td>
+            <td>1440</td>
+            <td>4</td>
+            <td></td>
+            <td><code>1111</code></td>
+        </tr>
+
+        <tr>
+            <td colspan="8">
+                Gibt die Anzahl der Schläge oder Stöße an. Wird diese Anzahl erreicht, ohne dass die
+                <code>Move Inactivity Time</code> zwischen den Schlägen abläuft, wird ein Vandalismus-Alarm ausgelöst.
+            </td>
+        </tr>
+
+    </tbody>
+
+</table>
+
+</div>
+                                                                             <h3 id="faq">
+    FAQ
+</h3>
+                                                                                        <div style="
+    font-family:'Nunito','Segoe UI',Helvetica,Arial,sans-serif;
+    font-size:16px;
+    line-height:1.7;
+    color:#111827;
+">
+
+    <p><strong>1.&nbsp;„Der Sensor gibt nur ein einziges und keine weiteren Echos zurück. rd_2, ra_2, rd_3, ra_3 sind 0."</strong></p>
+      <p>
+       Dieses Verhalten ist keine Fehlfunktion, sondern je nach Anwendung oder Umgebungsbedingungen völlig normal – und in vielen Fällen sogar erwünscht.
+       Der Sensor hat in diesem Fall ein klares, dominantes Ziel erkannt, das stark genug reflektiert, um alle anderen möglichen Echos zu unterdrücken oder als irrelevant einzustufen.
+      </p>
+       <p><strong>Ein einzelnes, stabiles Echo bedeutet:</strong></p>
+       <ul style="margin-top: 4px; margin-bottom: 8px;">
+     <li>Hohe Messsicherheit bei klarer Oberfläche oder homogener Füllhöhe</li>
+       <li>Geringe Störreflexionen durch Behälterwände, Einbauten oder Oberflächenstrukturen</li>
+        <li>Optimale Bedingungen für eine zuverlässige Füllstand- oder Abstandsmessung</li>
+       </ul>
+        <p>
+         Nur wenn mehrere relevante Echos erwartet werden (z. B. bei komplexen Tankgeometrien oder überhängenden Strukturen) und dauerhaft fehlen,
+         kann eine Überprüfung der Sensorausrichtung, Radarparameter oder Umgebung sinnvoll sein.<br>
+       Für die Einstellung „Smart Waste" (<code>tmod = 0</code>) ist immer nur ein Echo verfügbar, da das erste detektierte Objekt erfasst wird.
+         </p>
+
+ <p><strong>2.&nbsp;Ich möchte den Sensor gerne vom Smart Waste Profil auf das Liquid Profil und zurück einstellen. Wie geht das?</strong></p>
+        <ul style="margin-top: 4px; margin-bottom: 8px;">
+       <li>„Smart Waste" oder Stückgüter Profil: <code>tmod = 0</code></li>
+      <li>Liquid Profil: <code>tmod = 2</code></li>
+     </ul>
+ <p><strong>3.&nbsp;Der Sensor misst zu viele Doppelreflexionen</strong></p>
+  <p>
+   Doppelreflexionen beim Radar (auch Mehrwege-Echos oder Multipath-Reflexionen genannt) entstehen,
+      wenn das Radarsignal nicht direkt vom Ziel zurückkehrt, sondern über Umwege reflektiert wird,
+      z. B. über Wände, Böden, Behälterstrukturen oder Einbauten.
+   </p>
+      <ul style="margin-top: 4px; margin-bottom: 8px;">
+      <li><code>cfnr = 1</code></li>
+      <li><code>cfnr = 2</code> (bei vielen Doppelreflexionen)</li>
+         </ul>
+   <p><strong>4.&nbsp;Der Sensor hat keine oder „0"-Werte</strong></p>
+   <ul style="margin-top: 4px; margin-bottom: 8px;">
+    <li><strong><code>cfsn</code> erhöhen</strong></li>
+    <li><strong><code>sq</code> erhöhen</strong></li>
+     </ul>
+  <p>
+    Wenn der Sensor dauerhaft keine Messwerte liefert oder konstant 0 anzeigt, kann das verschiedene Ursachen haben.
+      Dieses Verhalten ist nicht zwangsläufig ein Defekt, sondern häufig auf konfigurations- oder umgebungsbedingte Faktoren zurückzuführen:
+        </p>
+         <ul style="margin-top: 4px; margin-bottom: 8px;">
+            <li><strong>Kein Ziel im Sichtfeld</strong><br>
+                                                                                                    → Prüfen, ob sich innerhalb der konfigurierten Reichweite ein reflektierendes Objekt befindet.<br>
+                                                                                                    → Bei sehr großen Entfernungen oder schlecht reflektierenden Oberflächen (z. B. Schaum, offenes Gitter) kann die Radarrückstreuung zu schwach sein.
+                                                                                                </li>
+          <li><strong>Falsche Ausrichtung des Sensors</strong><br>
+                                                                                                    → Sensor ggf. nicht korrekt auf die Zieloberfläche ausgerichtet (z. B. zu stark geneigt oder abgewinkelt).<br>
+                                                                                                    → Die Hauptstrahlrichtung sollte möglichst senkrecht zur Zieloberfläche stehen.
+                                                                                                </li>
+      <li><strong>Ungeeignete Radarparameter</strong><br>
+                                                                                                    → Prüfen Sie die Einstellungen wie: Radarfiltertyp (z. B. für Flüssigkeit oder Feststoff), Empfindlichkeit/Gain, minimale und maximale Reichweite (<code>r_min</code>, <code>r_max</code>)
+                                                                                                </li>
+          <li><strong>Störende Reflexionen oder Abschattung</strong><br>
+                                                                                                    → Metalleinbauten, Abdeckungen, Gitter oder Wandnähe können das direkte Echo blockieren.<br>
+                                                                                                    → In diesem Fall wird eventuell kein gültiger Messwert erkannt.
+                                                                                                </li>
+         <li><strong>Datenformat oder Kommunikationsfehler</strong><br>
+                                                                                                    → Stellen Sie sicher, dass die Messdaten korrekt ausgelesen und interpretiert werden.<br>
+                                                                                                    → Ein Wert von „0" kann auch bedeuten: kein gültiger Messwert empfangen (abhängig vom Protokoll oder Datenparser).
+                                                                                                </li>
+                                                                                            </ul>
+
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <p>&nbsp;</p>
+                                                                               
+        
+                                                  
+<div class="logo-block" style="margin-top:32px; display:flex; gap:20px; align-items:center; flex-wrap:wrap;">
+
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-17-2025-10-45-42-2770-AM.png"
+        alt=""
+        style="max-width:115px; height:auto;"
+        loading="lazy">
+
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-17-2025-10-45-49-3256-AM.png"
+        alt=""
+        style="max-width:115px; height:auto;"
+        loading="lazy">
+
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-17-2025-10-45-56-1539-AM.png"
+        alt=""
+        style="max-width:115px; height:auto;"
+        loading="lazy">
+
+</div>
+    
+ <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
+    alt="trash bin Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
+</div>
+
+<!-- FOOTER -->
+
+<div>
+    </div>
+<div class="footer-note">
+  <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+  <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
+  </p>
+</div>
+</body>
+
+</html>
