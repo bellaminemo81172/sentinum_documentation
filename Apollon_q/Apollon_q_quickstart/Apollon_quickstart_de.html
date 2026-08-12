@@ -1,0 +1,558 @@
+
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* ---------- Tables ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+  code,
+.inline-code {
+    background-color: #f3f4f6;
+    border: 1px solid #d0d7de;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9em;
+    color: #111827;
+    display: inline-block;
+}
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+    .pre {
+    background: #1e293b;
+    color: #f8fafc;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    line-height: 1.5;
+    margin: 1rem 0 2rem;
+}
+
+.code {
+    font-family: Consolas, Monaco, monospace;
+    font-size: 0.9rem;
+}
+</style>
+
+
+
+<!-- PDF Viewer -->
+<div class="pdf-viewer">
+  <iframe src="https://docs.sentinum.de/hubfs/Apollon-Q/Apollon%20Q.T.TR%20doku/Apollon_Q_Quick_Start_Guide_DE.pdf" loading="lazy" title="Apollon-Q PDF" width="100%" height="800">
+  </iframe>
+</div>
+
+<!-- PDF Download -->
+<div class="pdf-download">
+  📄  Sie können das PDF oben ansehen oder
+  <a href="https://docs.sentinum.de/hubfs/Apollon-Q/Apollon%20Q.T.TR%20doku/Apollon_Q_Quick_Start_Guide_DE.pdf?hsLang=de" target="_blank" rel="noopener">
+   <strong>hier herunterladen</strong> 
+  </a>.
+</div>
+
+<div class="main-toc">
+    <strong>Inhaltsverzeichnis</strong>
+    <ol>
+        <li>NFC Inbetriebnahme und Lage des NFC-Tags</li>
+        <li>Montagearten</li>
+        <li>Payload Decoder Apollon-Q Serie</li>
+    </ol>
+</div>
+
+<h3 id="nfc-inbetriebnahme-und-lage-des-nfc-tags">
+1. NFC Inbetriebnahme und Lage des NFC-Tags
+</h3>
+<ol>
+<li>
+Die Aktivierung erfolgt über die NFC-App. Hierfür wird ein Smartphone benötigt.
+Die App kann im jeweiligen App Store heruntergeladen werden. Suchen Sie nach
+<strong>Sentinum LinQs</strong> und installieren Sie die Anwendung.
+</li>
+</ol>
+<figure class="figure">
+<img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(24).png?width=670&amp;height=322&amp;name=Untitled%20(24).png">
+<figcaption>
+Abbildung 1: Sentinum LinQs App.
+</figcaption>
+</figure>
+<ol start="2">
+<li>
+Lokalisieren Sie zunächst den NFC-Tag auf dem Sensor und anschließend den
+NFC-Reader Ihres Smartphones. Die Position des NFC-Tags ist in den folgenden
+Abbildungen dargestellt.
+</li>
+</ol>
+<figure class="figure">
+<img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(25).png?width=670&amp;height=376&amp;name=Untitled%20(25).png" 
+alt="Position des NFC-Tags"
+loading="lazy">
+<figcaption>
+Abbildung 2: Position des NFC-Tags auf dem Sensor.
+</figcaption>
+</figure>
+<ol start="3">
+<li>
+Öffnen Sie die App und aktivieren Sie den Sensor. Wählen Sie im Startmenü
+die Schaltfläche <strong>Activate Sensor</strong> und halten Sie Ihr
+Smartphone an die NFC-Markierung des Sensors.
+</li>
+</ol>
+<figure class="figure">
+<img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(26).png?width=670&amp;height=268&amp;name=Untitled%20(26).png" loading="lazy"> 
+<figcaption>
+Abbildung 3: Aktivierung des Sensors über NFC.
+</figcaption>
+</figure>
+<div class="info-box">
+<strong>Hinweis:</strong><br>
+Wird der Sensor aktiviert, sehen Sie <em>“Sensor Updated!”</em>. Danach können Sie mit der Aktivierung von weiteren Sensoren fortsetzen.
+</div>​‌
+
+<h3 id="montagearten">
+    2. Montagearten
+</h3>
+
+<figure class="figure">
+    <img
+      src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(28).png?width=670&amp;height=186&amp;name=Untitled%20(28).png"
+        alt="Montagearten" loading="lazy">
+    <figcaption>
+        Abbildung 4: Übersicht der verfügbaren Montagearten für den Apollon-Q Sensor.
+    </figcaption>
+</figure>​‌
+
+<h3 id="payload-decoder-apollon-q-serie">
+    3. Payload Decoder Apollon-Q Serie
+</h3>
+
+<pre><code class="language-javascript">
+// Up to Date Apollon decoder
+function Decoder(bytes, port) {
+
+    // Conversion of signed integers
+    function uncomplement(val, bitwidth) {
+        var isnegative = val & (1 << (bitwidth - 1));
+        var boundary = (1 << bitwidth);
+        var minval = -boundary;
+        var mask = boundary - 1;
+        return isnegative ? minval + (val & mask) : val;
+    }
+
+    var decoded = {};
+
+    if (port === 1) {
+
+        // Attributes
+        decoded.base_id = bytes[0] >> 4;
+        decoded.major_version = bytes[0] & 0x0F;
+        decoded.minor_version = bytes[1] >> 4;
+        decoded.product_version = bytes[1] & 0x0F;
+
+        // Telemetry
+        decoded.up_cnt = bytes[2];
+        decoded.battery_voltage = ((bytes[3] << 8) | bytes[4]) / 1000.0;
+        decoded.internal_temperature = bytes[5] - 128;
+        decoded.alarm = bytes[6] ? "ALARM" : "NO ALARM";
+        decoded.master_value = ((bytes[7] << 8) | bytes[8]);
+
+        var byte_cnt = 9;
+
+        // ToF onboard
+        if (bytes[1] & 0x01) {
+            decoded.tof_status = bytes[byte_cnt++];
+            decoded.tof_distance = ((bytes[byte_cnt++] << 8) | bytes[byte_cnt++]);
+            decoded.tof_index = bytes[byte_cnt++];
+        }
+
+        // Radar onboard
+        if (bytes[1] & 0x02) {
+            decoded.radar_status = bytes[byte_cnt++];
+            decoded.radar_no_peaks = bytes[byte_cnt++];
+            decoded.radar_distance_1 = ((bytes[byte_cnt++] << 8) | bytes[byte_cnt++]);      
+            decoded.radar_amplitude_1 = uncomplement(
+                (bytes[byte_cnt++] << 8) | bytes[byte_cnt++], 16
+            );
+
+            decoded.radar_distance_2 = ((bytes[byte_cnt++] << 8) | bytes[byte_cnt++]);  
+            decoded.radar_amplitude_2 = uncomplement(
+                (bytes[byte_cnt++] << 8) | bytes[byte_cnt++], 16
+            );
+
+            decoded.radar_distance_3 = ((bytes[byte_cnt++] << 8) | bytes[byte_cnt++]);  
+            decoded.radar_amplitude_3 = uncomplement(
+                (bytes[byte_cnt++] << 8) | bytes[byte_cnt++], 16
+            );
+        }
+
+        // ACC onboard
+        if (bytes[1] & 0x04) {
+            decoded.acc_status = bytes[byte_cnt++] ? "Fehler" : "OK";
+            decoded.acc_orientation = bytes[byte_cnt++];
+            decoded.acc_open = bytes[byte_cnt++];
+            decoded.acc_open_cnt = ((bytes[byte_cnt++] << 8) | bytes[byte_cnt++]);
+            decoded.acc_impact = bytes[byte_cnt++] ? "Vandalismus" : "OK";
+        }
+
+        // Hall onboard
+        if (bytes[1] & 0x08) {
+            decoded.hall_open = bytes[byte_cnt++];
+            decoded.hall_open_cnt = ((bytes[byte_cnt++] << 8) | bytes[byte_cnt++]);
+        }
+    }
+
+    return decoded;
+}
+</code></pre>
+<br><br>
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png"  alt="Supported radio technologies"  style="max-width:750px; height:auto;"
+    loading="lazy">
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
+    alt="trash bin Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
+</div>
+
+<!-- FOOTER -->
+
+<div>
+    </div>
+<div class="footer-note">
+  <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+  <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
+  </p>
+</div>
+
+  
+</body></html>
