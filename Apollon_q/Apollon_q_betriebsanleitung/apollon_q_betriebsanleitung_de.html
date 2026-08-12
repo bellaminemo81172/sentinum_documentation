@@ -1,0 +1,1813 @@
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* ---------- Tables ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+  code,
+.inline-code {
+    background-color: #f3f4f6;
+    border: 1px solid #d0d7de;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9em;
+    color: #111827;
+    display: inline-block;
+}
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+</style>
+
+
+
+<!-- PDF Viewer -->
+<div class="pdf-viewer">
+  <iframe src="https://docs.sentinum.de/hubfs/Apollon-Q/Apollon%20Q.T.TR%20doku/Apollon_Q_TR_Betriebsanleitung_DE.pdf?hsLang=de" loading="lazy" title="Apollon-Q PDF" width="100%" height="800">
+  </iframe>
+</div>
+
+<!-- PDF Download -->
+<div class="pdf-download">
+  📄  Sie können das PDF oben ansehen oder
+  <a href="https://docs.sentinum.de/hubfs/Apollon-Q/Apollon%20Q.T.TR%20doku/Apollon_Q_TR_Betriebsanleitung_DE.pdf?hsLang=de" target="_blank" rel="noopener">
+   <strong>hier herunterladen</strong> 
+  </a>.
+</div>
+
+     <div class="main-toc">
+    <strong>Inhaltsverzeichnis</strong>
+    <ol>
+        <li><a href="#symbole-und-erklaerungen">Symbole und Erklärungen</a></li>
+        <li>Sicherheitshinweise</li>
+        <li>Technische Zeichnung</li>
+        <li>Empfohlene Befestigungsmethoden</li>
+        <li>Montage und Vorbereitung</li>
+        <li>Allgemeine Installationsanweisungen</li>
+        <li>Rückwandmontage mit Schrauben</li>
+        <li>Vorderwandbefestigung mit Schrauben</li>
+        <li>Rückwandmontage mit Magneten</li>
+        <li>Vorderwandmontage mit Magneten</li>
+        <li><a href="#lieferumfang-fuer-die-montage-mit-blindnieten-oder-blindnietmuttern">Lieferumfang für die Montage mit  oder Blindnietmuttern</a></li>
+        <li>Einnietmuttern</li>
+        <li>Allgemeine Informationen zur Vorwandmontage mit Blindnietmuttern</li>
+        <li>Vorderwandmontage mit Blindnietmuttern</li>
+        <li><a href="#rueckwandmontage-mit-blindnietmuttern">Rückwandmontage mit Blindnietmuttern</a></li> 
+        <li>Allgemeine Informationen zur Blindnietmontage</li>
+        <li>Rückwandmontage mit Blindnieten</li>
+        <li><a href="#vorderwandmontage-mit-blindnieten">Vorderwandmontage mit Blindnieten</a></li>
+        <li><a href="#hall-switch-magnetschalter-montageanleitung">Hall-Switch Magnetschalter Montageanleitung</a></li>
+        <li>NFC-Inbetriebnahme und Ortung des NFC-Tags</li>
+        <li><a href="#austausch-der-batterie">Austausch der Batterie</a></li>
+        <li>Technische Funktionen</li>
+        <li>Maximale Anzahl von Messobjekten Radarmessung</li>
+        <li>Funktion: Delta-Merkmale</li>
+        <li>Funktion: Vandalismus-Erkennung</li>
+        </ol></div>
+
+<figure class="figure">
+    <img
+      src="https://docs.sentinum.de/hs-fs/hubfs/Apollon-Q%208.2.png?width=670&amp;height=377&amp;name=Apollon-Q%208.2.png" width="670" loading="lazy">
+         <figcaption>Abbildung 1: Apollon Q</figcaption>
+</figure>
+    
+<h3>1. Symbole und Erklärungen</h3>
+
+
+<div class="note-strip note-strip--yellow">
+    <p><strong>Warnhinweise und wichtige Informationen über mögliche Gefahren oder Schäden</strong></p>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <p><strong>Wichtige Informationen, die für den reibungslosen Betrieb der Geräte erforderlich sind</strong></p>
+</div>
+<h3 id="sicherheitshinweise">2. Sicherheitshinweise</h3>
+<div class="note-strip note-strip--red">
+    <p><strong>Bitte beachten:</strong></p>
+    <ul>
+        <li>Beachten Sie die Sicherheitshinweise und Installationsanweisungen im Handbuch und in der Installationsliste.</li>
+        <li>Stellen Sie sicher, dass die Installationsumgebung den vorgeschriebenen Richtlinien für den Einsatzbereich entspricht. Halten Sie die Temperatur- und sonstigen Grenzwerte jederzeit ein.</li>
+        <li>Das Gerät darf nur in den Bereichen eingesetzt werden, die in den technischen Daten angegeben sind.</li>
+        <li>Das Gerät darf nur für den beschriebenen Verwendungszweck eingesetzt werden.</li>
+        <li>Bei Änderungen oder Erweiterungen des Gerätes sind Sicherheit und Funktion nicht mehr gewährleistet.</li>
+    </ul>
+</div>
+
+<div class="note-strip note-strip--red">
+    <p><strong>Wenn das Gerät nicht richtig installiert ist:</strong></p>
+    <ul>
+        <li>Es könnte nicht richtig funktionieren.</li>
+        <li>Es kann dauerhaft beschädigt werden.</li>
+        <li>Es könnte ein Verletzungsrisiko darstellen.</li>
+    </ul>
+</div>
+
+<div class="note-strip note-strip--red">
+    <p><strong>Bitte beachten:</strong></p>
+    <ul>
+        <li>Unsachgemäße Handhabung wie z. B. unsachgemäße mechanische Beanspruchung, beispielsweise durch Fallenlassen des Gerätes, kann zu Schäden führen.</li>
+    </ul>
+</div>
+
+<h3 id="technische-zeichnung">3. Technische Zeichnung</h3>
+
+<figure class="figure">
+    <img
+      src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(37).png?width=670&amp;height=396&amp;name=Untitled%20(37).png" width="670" loading="lazy">
+    <figcaption>
+        Abbildung 2: Technische Zeichnung des Geräts
+    </figcaption>
+</figure>
+
+<div class="note-strip note-strip--blue">
+    <p>
+        <strong> Bitte beachten Sie die weitere Beschreibung:</strong><br>
+        Die Vorderseite ist die Seite, auf der sich das Logo und die zentrale Öffnung für den Sensor befinden.
+        Die Rückseite ist die Seite, auf der die Beschriftung (Firmenadresse etc.) zu sehen ist.
+    </p>
+</div>
+
+<h3 id="empfohlene-befestigungsmethoden">4. Empfohlene Befestigungsmethoden</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Typ</th>
+                <th>Empfohlenes Zubehör</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Schrauben (Wand)</td>
+                <td>
+                    DIN 912 Zylinderkopfschrauben oder Holzschrauben mit Dübel,
+                    abhängig vom Untergrund.<br><br>
+
+                    Zulässige Größen:
+                    <ul>
+                        <li>DIN-Schrauben M4 oder M5</li>
+                        <li>Holzschrauben 4 mm bis 5 mm</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Magnet</td>
+                <td>Neodym-Magnet mit M4-Innengewinde</td>
+            </tr>
+            <tr>
+                <td>Kleber</td>
+                <td>Doppelseitiges Klebeband</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="montagezubehoer">5. Montagezubehör</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Art.-Nr.</th>
+                <th>Empfohlenes Zubehör</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>Z-APOQ-MAG-NEO</code></td>
+                <td>Magnet-Set APOQ Neodym</td>
+            </tr>
+            <tr>
+                <td><code>Z-APOQ-MAG-FER</code></td>
+                <td>Magnet-Set APOQ Ferrit</td>
+            </tr>
+            <tr>
+                <td><code>Z-APOQ-RWM-BN</code></td>
+                <td>Rückwandmontage-Set mit Blindnieten</td>
+            </tr>
+            <tr>
+                <td><code>Z-APOQ-RWM-NM</code></td>
+                <td>Rückwandbefestigungsset mit Nietmuttern M4</td>
+            </tr>
+            <tr>
+                <td><code>Z-APOQ-VWM-BN</code></td>
+                <td>Vorderwandbefestigungsset mit Blindnieten</td>
+            </tr>
+            <tr>
+                <td><code>Z-APOQ-VWM-NM</code></td>
+                <td>Vorderwandmontageset mit Nietmuttern M4</td>
+            </tr>
+            <tr>
+                <td><code>Z-APOQ-AP</code></td>
+                <td>Abstandsplatte PA</td>
+            </tr>
+            <tr>
+                <td><code>Z-APOQ-KLEBER</code></td>
+                <td>Montage-Klebstoffe</td>
+            </tr>
+            <tr>
+                <td><code>Z-APOQ-SCHRAUBEN</code></td>
+                <td>Maschinenschrauben DIN 912 mit Muttern M4</td>
+            </tr>
+            <tr>
+                <td><code>Z-APOQ-SPX</code></td>
+                <td>Holzschrauben</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="montage-und-vorbereitung">6. Montage und Vorbereitung</h3>
+
+<div class="note-strip note-strip--blue">
+    <p>
+        <strong>Bitte beachten:</strong><br>
+        Wenn der Sensor nach dem Einbau leicht zugänglich ist, installieren Sie den Sensor zuerst und aktivieren Sie ihn nach dem Einbau.<br><br>
+        Wenn der Sensor nach der Installation nicht mehr zugänglich ist, aktivieren Sie den Sensor zuerst und installieren Sie ihn nach der Aktivierung.
+    </p>
+</div>
+
+<div class="note-strip note-strip--red">
+    <p>
+        <strong>Bitte beachten:</strong><br>
+        Vergewissern Sie sich vor dieser Art der Montage, dass die Oberfläche, auf die der Sensor geschraubt werden soll, eben ist, da sonst das Gehäuse beschädigt werden kann.
+    </p>
+</div>
+
+<div class="note-strip note-strip--red">
+    <p>
+        <strong>Bitte beachten:</strong><br>
+        Das Anzugsdrehmoment der Schrauben beträgt maximal den vom Schraubenhersteller spezifizierten Wert und darf nicht überschritten werden.
+    </p>
+</div>
+
+<ol>
+    <li>
+        Wenn Sie ein Gerät mit einer externen Antenne bestellt haben, die an dem goldenen RP-SMA-Stecker zu erkennen ist, installieren Sie zunächst die im Lieferumfang enthaltene Antenne.
+    </li>
+
+    <li>
+       Der Sensor sollte mit der langen Seite an einem Behälter montiert werden. Dies bedeutet, dass die lange Seite des Sensors und die lange Seite des Behälters parallel verlaufen sollten.
+    </li>
+</ol>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(38).png?width=476&amp;height=586&amp;name=Untitled%20(38).png" 
+         loading="lazy">
+    <figcaption>
+        Abbildung 3: Empfohlene Ausrichtung des Sensors am Behälter
+    </figcaption>
+</figure>
+
+<ol start="3">
+    <li>
+      Achten Sie darauf, dass der Sensor ein möglichst freies Sichtfeld hat. Der Öffnungswinkel kann mit einem Kegel von 40° beschrieben werden.
+    </li>
+</ol>
+
+<figure class="figure">
+   <img src="https://docs.sentinum.de/hs-fs/hubfs/Montage_Container_2021-Jun-04_07-45-16AM-000_CustomizedView9062892456%20(1).png?width=670&amp;height=327&amp;name=Montage_Container_2021-Jun-04_07-45-16AM-000_CustomizedView9062892456%20(1).png" 
+         loading="lazy">
+    <figcaption>
+        Abbildung 4: Sichtfeld und Öffnungswinkel des Sensors
+    </figcaption>
+</figure>
+
+<ol start="4">
+    <li>
+      Abstandsplatte: Die Distanzplatte kann auch für die Vorder- oder Rückwandmontage verwendet werden. Die Abstandsplatte sorgt dafür, dass eine flache Installation möglich ist und gewährleistet den Mindestabstand zwischen Sensor und Behälter. Auf diese Weise wird die Antennenleistung nicht beeinträchtigt. Falls erforderlich, kann die Distanzplatte auch für die Rückwandmontage verwendet werden.
+    </li>
+</ol>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(39).png?width=670&amp;height=547&amp;name=Untitled%20(39).png"
+         alt="Verwendung ption"><figcaption>
+        Abbildung 5: Montage mit Abstandsplatte
+    </figcaption>
+</figure>
+
+<div class="note-strip note-strip--blue">
+    <p>
+        <strong> Hinweise zur Antennenmontage:</strong><br>
+        <strong>Externe Antenne:</strong>
+        Bitte beachten Sie, dass die Antenne stets senkrecht montiert werden sollte und die Antennenspitze möglichst nach oben zeigt, sofern die Anwendung dies zulässt. Die Antenne sollte einen Mindestabstand von 2 cm zu Metalloberflächen einhalten. Stellen Sie außerdem sicher, dass die Antenne nicht durch umgebende Metallteile abgeschirmt wird, soweit die Einbausituation dies zulässt.
+        <br><br>
+        <strong>Interne Antenne:</strong>
+        Verfügt Ihr Gerät über eine interne Antenne (keine sichtbare externe Antenne), sollte der Sensor mit der langen Gehäuseseite senkrecht montiert werden, um die maximale Signalstärke zu erreichen. Die Antenne befindet sich auf der Oberseite des Gehäuses (Logo-Seite) und sollte ebenfalls einen Mindestabstand von 2 cm zu Metalloberflächen aufweisen. Vermeiden Sie nach Möglichkeit eine Abschirmung durch umliegende Metallteile.
+    </p>
+</div>
+
+<div class="note-strip note-strip--red">
+    <p>
+        <strong> Warnung:</strong><br>
+        Wenn Ihr Gerät mit einer externen Antenne ausgestattet ist, darf es niemals ohne montierte Antenne betrieben werden. Der Betrieb ohne Antenne kann zu irreparablen Schäden am Funkmodul und damit zum Ausfall des Sensors führen.
+    </p>
+</div>
+
+<h3 id="allgemeine-installationsanweisungen">8. Allgemeine Installationsanweisungen</h3>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(40).png"
+         alt="Parsors"
+         loading="lazy">
+    <figcaption>
+        Abbildung 6: Empfohlene parallele Ausrichtung des Sensors zum Messobjekt
+    </figcaption>
+</figure>
+
+<p>
+    Der Sensor misst den Abstand zum Objekt optimal, wenn er parallel zu diesem
+    ausgerichtet ist. Bei stückigem oder schüttfähigem Material sollte der Sensor
+    parallel zum Boden des Behälters montiert werden. Idealerweise trifft der
+    Sensorstrahl das zu messende Objekt in einem Winkel von 90°.
+</p>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(41).png?width=306&amp;height=283&amp;name=Untitled%20(41).png"         alt="Nicht ideale Sensorausrichtung"
+         loading="lazy">
+    <figcaption>
+        Abbildung 7: Beispiel einer nicht optimalen Sensorausrichtung
+    </figcaption>
+</figure>
+
+<p>
+    Wird der Sensor nicht parallel zum Messobjekt montiert, kann die
+    Messgenauigkeit beeinträchtigt werden. Ist der Sensor nicht waagerecht
+    ausgerichtet, muss die prozentuale Berechnung des Füllstandes entsprechend
+    angepasst werden.
+</p>
+
+<h3 id="rueckwandmontage-mit-schrauben">9. Rückwandmontage mit Schrauben</h3>
+
+<figure class="figure">
+   <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(42).png?width=306&amp;height=187&amp;name=Untitled%20(42).png" 
+         alt="Rückwandmontage mit Schrauben"
+         loading="lazy">
+    <figcaption>
+        Abbildung 8: Rückwandmontage mit Schrauben
+    </figcaption>
+</figure>
+
+<p>
+   Diese Art der Befestigung wird in der Regel verwendet, um den Sensor in einem Behälter zu befestigen. setzen Sie die entsprechenden Schrauben in die vorgesehenen Löcher ein. Alternativ können auch geeignete Holz- oder Kunststoffschrauben verwendet werden, wenn der Sensor an den jeweiligen Materialien befestigt werden soll. Verwenden Sie dazu die mitgelieferte Zweipunkthalterung.
+</p>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(43).png?width=306&amp;height=260&amp;name=Untitled%20(43).png"         alt="Montagebeispiel Rückwand"
+         loading="lazy">
+    <figcaption>
+        Abbildung 9: Beispiel einer Rückwandmontage mit Schrauben
+    </figcaption>
+</figure>
+
+<figure class="figure">
+   <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(44).png?width=306&amp;height=261&amp;name=Untitled%20(44).png" 
+         alt="Ausrichtung des Sensors"
+         loading="lazy">
+    <figcaption>
+        Abbildung 10: Korrekte Ausrichtung des Sensors nach der Montage
+    </figcaption>
+</figure>
+
+<p>
+   Wenn der Sensor nicht parallel zum Messobjekt montiert ist, kann die Messleistung beeinträchtigt werden. Bei nicht-horizontaler Ausrichtung ist darauf zu achten, dass die prozentuale Berechnung des Pegels angepasst wird.
+</p>
+
+<h3 id="vorderwandbefestigung-mit-schrauben">10. Vorderwandbefestigung mit Schrauben</h3>
+
+<p>
+    Diese Art der Montage erfolgt analog zur beschriebenen
+    Rückwandmontage mit Schrauben.
+</p>
+
+<div class="note-strip note-strip--red">
+    <p>
+        <strong>Bitte beachten:</strong><br>
+        Verwenden Sie bei dieser Art der Montage stets die Abstandsplatte,
+        um den erforderlichen Abstand zwischen Antenne und Montagefläche
+        sicherzustellen. Nur so kann eine optimale Funkleistung gewährleistet
+        werden.
+    </p>
+</div>
+
+<h3 id="rueckwandmontage-mit-magneten">11. Rückwandmontage mit Magneten</h3>
+<p>
+Die unten abgebildeten Magnete sind Neodym-Magnete. Andere Ausführungen können abweichen.
+</p>
+<figure class="figure">
+<img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(45).png?width=306&amp;height=273&amp;name=Untitled%20(45).png" 
+alt="Neodym-Magnete"
+loading="lazy">
+<figcaption>
+Abbildung 11: Neodym-Magnete für die Rückwandmontage
+</figcaption>
+</figure>
+<p>
+Setzen Sie die entsprechenden Magnete in die vorgesehenen Löcher ein.
+Die hier gezeigten Magnete sind Neodym-Magnete. Alternativ können
+Ferrit-Magnete auf die gleiche Weise montiert werden.
+</p>
+<figure class="figure">
+ <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(46).png?width=306&amp;height=218&amp;name=Untitled%20(46).png" 
+alt="Montage der Magnete"
+loading="lazy">
+<figcaption>
+Abbildung 12: Montage der Magnete mit den mitgelieferten Schrauben
+</figcaption>
+</figure>
+<p>
+Setzen Sie die im Set enthaltenen Schrauben in die Löcher auf der
+gegenüberliegenden Seite ein und ziehen Sie die Magnete fest.
+</p>
+<div class="note-strip note-strip--red">
+<p>
+<strong> Bitte beachten:</strong><br>
+Neodym-Magnete bieten zwar eine höhere Haltekraft pro Fläche,
+sind jedoch nur bedingt für den Außeneinsatz geeignet.
+Bitte lassen Sie sich bei Bedarf von uns beraten.
+</p>
+</div>
+<div class="note-strip note-strip--blue">
+<p>
+<strong> Optional:</strong><br>
+Ziehen Sie die Anti-Rutsch-Abdeckungen über die Magnete.
+<br><br>
+Die Anti-Rutsch-Abdeckung verhindert, dass der Magnet verrutscht,
+wenn das Objekt vibriert oder seine Position verändert.
+</p>
+</div>
+<h3 id="vorderwandmontage-mit-magneten">12. Vorderwandmontage mit Magneten</h3>
+<p>
+Bitte befolgen Sie die Anweisungen unter "Rückwandmontage mit Magneten", um die Magnete und Schrauben in entgegengesetzter Richtung zu montieren. Die Magnete werden in die Löcher auf der Vorderseite des Gehäuses (Logoseite) eingesetzt, die Schrauben werden von hinten eingesetzt.
+</p>
+
+<h3 id="lieferumfang-fuer-die-montage-mit-blindnieten-oder-blindnietmuttern">
+   13. Lieferumfang für die Montage mit Blindnieten oder Blindnietmuttern
+</h3>
+
+<h3 id="einnietmuttern"> 14. Einnietmuttern</h3>
+
+<div class="note-strip note-strip--blue">
+    <p>
+        <strong> Was ist eine Blindnietmutter?</strong><br>
+        Eine Blindnietmutter ist eine Art von Befestigungselement, das zum
+        Einbringen von Gewinden in dünne Materialien wie Bleche, Kunststoff
+        oder Holz verwendet wird. Sie besteht aus einer Hülse mit einem
+        Gewinde auf der Innenseite und einem Niet auf der Außenseite.
+        Der Niet wird mit einem Spezialwerkzeug in das Material eingeführt
+        und drückt die Hülse zusammen, wodurch das Gewinde in das Material
+        eingebettet wird.
+        <br><br>
+        Die Blindnietmutter wird häufig verwendet, wenn es nicht möglich ist,
+        eine Mutter auf der Rückseite des Materials anzubringen, da die
+        Nietmutter von einer Seite des Materials eingesetzt wird und das
+        Gewinde auf der anderen Seite zum Einschrauben einer Schraube oder
+        eines Bolzens zur Verfügung steht.
+        <br><br>
+        Für die Montage wird ein spezielles Werkzeug benötigt, eine sogenannte
+        Blindnietzange.
+    </p>
+</div>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(48).png?width=670&amp;height=493&amp;name=Untitled%20(48).png"
+         alt="Distanz" loading="lazy">
+    <figcaption>
+        Abbildung 13: Distanzhülse für Blindnieten zum Einsetzen in die Gehäuserückseite für die Frontplattenmontage
+    </figcaption>
+</figure>
+
+<figure class="figure">
+<img  src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(47).png?width=670&amp;height=523&amp;name=Untitled%20(47).png"
+         alt="Distanzhülse für Blindnieten"
+         loading="lazy">
+    <figcaption>
+        Abbildung 14: Distanzhülse für Blindnieten zum Einsetzen in die Gehäuserückseite für die Frontplattenmontage
+    </figcaption>
+</figure>
+
+<figure class="figure">
+    <img  src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(50).png?width=670&amp;height=237&amp;name=Untitled%20(50).png"
+         alt="Blindnieten" loading="lazy"><figcaption>
+        Abbildung 15: Blindnieten 4 × 40
+    </figcaption>
+</figure>
+
+<figure class="figure">
+  <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(51).png?width=670&amp;height=384&amp;name=Untitled%20(51).png"
+         alt="Blindnietmutter mit Senkkopf"
+         loading="lazy">
+    <figcaption>
+        Abbildung 16: Blindnietmutter (Variante mit Senkkopf)
+    </figcaption>
+</figure>
+
+<figure class="figure">
+ <img  src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(49).png?width=670&amp;height=465&amp;name=Untitled%20(49).png"
+         alt="DIN912 Zylinderkopfschrauben"
+         loading="lazy">
+    <figcaption>
+        Abbildung 17: DIN 912 Zylinderkopfschraube M4 × 40 für die Vorderwandmontage mit Blindnietmuttern sowie DIN 912 Zylinderkopfschraube M4 × 30 für die Rückwandmontage mit Blindnietmuttern
+    </figcaption>
+</figure>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/Bohrschablone_englisch.png?width=670&amp;height=577&amp;name=Bohrschablone_englisch.png"
+         alt="Bohrschablone"
+         loading="lazy"><figcaption>Abbildung 18: Bohrschablone</figcaption>
+</figure>
+
+<h3 id="allgemeine-informationen-zur-vorwandmontage-mit-blindnietmuttern">
+   15. Allgemeine Informationen zur Vorwandmontage mit Blindnietmuttern
+</h3>
+
+<p><strong>Schritt 1: Material und Werkzeug vorbereiten</strong></p>
+
+<p>
+    Stellen Sie sicher, dass Sie alle notwendigen Materialien und Werkzeuge zur Hand haben.
+    Sie benötigen eine Blindnietmutter, eine Einnietzange, eine Bohrmaschine,
+    einen Bohrer, ein Messgerät sowie einen Schraubenschlüssel oder eine Zange.
+</p>
+
+<p><strong>Schritt 2: Bohren Sie das Loch</strong></p>
+
+<p>
+    Bohren Sie ein Loch in das Material, in das die Blindnietmutter eingesetzt
+    werden soll. Der Durchmesser des Lochs sollte 0,1 mm größer sein als der
+    Außendurchmesser der Blindnietmutter.
+</p>
+
+<p><strong>Schritt 3: Einsetzen der Blindnietmutter</strong></p>
+
+<p>
+    Setzen Sie die Blindnietmutter in die Bohrung ein, indem Sie sie durch
+    die Bohrung schieben.
+</p>
+
+<p><strong>Schritt 4: Befestigen der Blindnietmutter</strong></p>
+
+<p>
+    Setzen Sie die Einnietzange auf die Blindnietmutter und ziehen Sie die
+    Zange an, um die Blindnietmutter zu fixieren.
+</p>
+
+<p><strong>Schritt 5: Verwendung der Einnietzange</strong></p>
+
+<p>
+    Verwenden Sie die Nietzange, um die Blindnietmutter in das Material zu setzen.
+    Ziehen Sie die Zange an, bis die Blindnietmutter vollständig eingebettet ist
+    und eine feste Verbindung bildet.
+</p>
+
+<p><strong>Schritt 6: Inspektion</strong></p>
+
+<p>
+    Überprüfen Sie die Blindnietmutter, um sicherzustellen, dass sie
+    ordnungsgemäß installiert wurde und eine feste Verbindung bildet.
+    Ziehen Sie sie gegebenenfalls mit einem Schraubenschlüssel oder einer
+    Zange nach, um sicherzustellen, dass sie sicher befestigt ist.
+</p>
+
+<figure class="figure">
+<img  src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(53).png?width=592&amp;height=465&amp;name=Untitled%20(53).png"
+         alt="Blindnietmutter"
+         loading="lazy">
+    <figcaption>
+        Abbildung 19: Blindnietmutter
+    </figcaption>
+</figure>
+
+<p class="footer-note">
+    Quelle:
+    <a href="https://www.schraubenbude.de/blindnietmuttern/blindnietmuttern-edelstahl/blindnietmuttern-edelstahl-flachrundkopf/"
+       target="_blank"
+       rel="noopener noreferrer">
+        Schraubenbude – Blindnietmutter Edelstahl Flachrundkopf
+    </a>
+</p>
+
+<h3 id="vorderwandmontage-mit-blindnietmuttern">
+  16.  Vorderwandmontage mit Blindnietmuttern
+</h3>
+
+<div class="note-strip note-strip--red">
+    <p>
+        <strong> Bitte beachten:</strong><br>
+        Verwenden Sie bei dieser Art der Installation immer die Abstandsplatte,
+        um den Abstand der Antenne zur Wand zu gewährleisten.
+    </p>
+</div>
+
+<p>
+    Die Vorderwandmontage wird verwendet, wenn Sie die Vorderseite des
+    Apollon-Q-Sensors an der Wand des Objekts befestigen möchten, an dem der
+    Sensor angebracht werden soll. Die Vorderseite ist die Seite mit der
+    Öffnung in der Mitte, auf der auch das Logo sichtbar ist.
+</p>
+
+<p>
+    Diese Montageart ist die bevorzugte Option, da sie einen einfachen
+    Batterie- oder SIM-Kartenwechsel durch einfaches Lösen der Schrauben
+    ermöglicht (im Gegensatz zur Vorderwandmontage mit Blindnieten).
+</p>
+
+<div class="note-strip note-strip--red">
+    <p>
+        <strong> Bitte beachten:</strong><br>
+        Aktivieren Sie den Sensor vor Beginn der Installation.
+    </p>
+</div>
+
+<p>
+    <strong>Schritt 1:</strong> Bohren Sie je nach Sensortyp (nur Radar und ToF)
+    die entsprechenden Löcher in die Wand, an denen Sie den Sensor befestigen
+    möchten. Verwenden Sie dazu die Bohrschablone. Die Löcher für die
+    Blindnietmuttern sollten einen Durchmesser von 6,1 mm haben.
+</p>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(55)-1.png?width=670&amp;height=386&amp;name=Untitled%20(55)-1.png"
+         alt="Bohrbild Vorderwandmontageetmuttern"
+         loading="lazy">
+    <figcaption>
+        Abbildung 20: Bohrbild für die Vorderwandmontage mit Blindnietmuttern
+    </figcaption>
+</figure>
+
+   <figure class="figure">
+ <img src="https://docs.sentinum.de/hs-fs/hubfs/Bohrschablone_englisch.png?width=670&amp;height=577&amp;name=Bohrschablone_englisch.png"
+         alt="Bohrschablone"
+         loading="lazy">
+    <figcaption>
+        Abbildung 21: Bohrschablone für die Vorderwandmontage mit Blindnietmuttern
+    </figcaption>
+</figure>
+
+<p>
+    <strong>Schritt 2:</strong> Befestigen Sie nun die Blindnietmuttern mit einem
+    geeigneten Werkzeug. Verwenden Sie die Distanzplatte und setzen Sie die
+    Schrauben, wie in der Abbildung beschrieben, in die Laschen ein.
+    Ziehen Sie die Schrauben mit einem maximalen Drehmoment von 2 Nm an.
+    Wenn im Betrieb mit ständigen Vibrationen zu rechnen ist, empfehlen wir
+    die Verwendung von Schraubensicherung.
+</p>
+
+<figure class="figure">
+<img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(57)-1.png?width=670&amp;height=518&amp;name=Untitled%20(57)-1.png"
+         alt="Vorderwandmontage mit Blindnietmuttern"
+         loading="lazy">
+    <figcaption>
+        Abbildung 22: Montage der Distanzplatte und Befestigung des Sensors mit Blindnietmuttern
+    </figcaption>
+</figure>
+
+<figure class="figure">
+   <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(58).png?width=670&amp;height=502&amp;name=Untitled%20(58).png"
+         alt="Ansicht der Behälterwand von unten"
+         loading="lazy">
+    <figcaption>
+        Abbildung 23: Ansicht der Behälterwand von unten mit dem von oben montierten Sensor (Vorderwandmontage)
+    </figcaption>
+</figure>
+
+<p>
+    Linke Bohrung für den optischen Sensor, rechte Bohrung für den Radarsensor.
+</p>
+
+<p>
+    <strong>Schritt 3:</strong> Jetzt wird der Sensor montiert.
+</p>
+
+<figure class="figure">
+  <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(59).png?width=670&amp;height=414&amp;name=Untitled%20(59).png"
+         alt="Montage des Sensors Schritt 3"
+         loading="lazy">
+    <figcaption>
+        Abbildung 24: Montage des Sensors an der Vorderwand
+    </figcaption>
+</figure>
+
+<figure class="figure">
+ <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(60).png?width=670&amp;height=386&amp;name=Untitled%20(60).png" 
+         alt="Montage des Sensors Detailansicht"
+         loading="lazy">
+    <figcaption>
+        Abbildung 25: Detailansicht der Sensorbefestigung
+    </figcaption>
+</figure>
+
+<figure class="figure">
+  <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(61).png?width=670&amp;height=467&amp;name=Untitled%20(61).png" 
+         alt="Montierter Sensor"
+         loading="lazy">
+    <figcaption>
+        Abbildung 26: Sensor nach abgeschlossener Befestigung
+    </figcaption>
+</figure>
+
+<figure class="figure">
+ <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(62).png?width=670&amp;height=286&amp;name=Untitled%20(62).png"  
+         alt="Fertig montierter Sensor"
+         loading="lazy">
+    <figcaption>
+        Abbildung 27: Fertig montierter Sensor in der Vorderwandmontage
+    </figcaption>
+</figure>
+
+
+<h3 id="rueckwandmontage-mit-blindnietmuttern">
+  17. Rückwandmontage mit Blindnietmuttern
+</h3>
+
+<p>
+    Die Rückwandmontage funktioniert analog zur Frontplattenmontage mit
+    Blindnietmuttern. In diesem Fall liegt die Rückseite des Sensors an der Wand an.
+</p>
+
+<p>
+    Für diese Montageart werden M4x30 Schrauben verwendet. Die Montage erfolgt
+    ohne Abstandsplatte.
+</p>
+
+<h3 id="allgemeine-informationen-zur-blindnietmontage">
+   18. Allgemeine Informationen zur Blindnietmontage
+</h3>
+
+<p>
+    <strong>Schritt 1: Material und Werkzeug vorbereiten</strong>
+</p>
+
+<p>
+    Stellen Sie sicher, dass Sie alle notwendigen Materialien und Werkzeuge zur
+    Hand haben. Sie benötigen einen Blindniet, eine Nietpistole sowie
+    gegebenenfalls eine Bohrmaschine und einen Bohrer.
+</p>
+
+<p>
+    <strong>Schritt 2: Bohren Sie ein Loch (optional)</strong>
+</p>
+
+<p>
+    Wenn kein Loch vorhanden ist, bohren Sie ein Loch in das Material, in dem
+    die Blindniete angebracht werden soll. Der Durchmesser des Lochs sollte
+    0,1 mm größer sein als der Durchmesser der Blindniete.
+</p>
+
+<p>
+    <strong>Schritt 3: Einsetzen der Blindniete</strong>
+</p>
+
+<p>
+    Setzen Sie die Blindniete in die Nietpistole ein und schieben Sie sie durch
+    das Loch im Material.
+</p>
+
+<p>
+    <strong>Schritt 4: Nietpistole verwenden</strong>
+</p>
+
+<p>
+    Setzen Sie die Nietpistole auf den Kopf des Blindniets und ziehen Sie die
+    Pistole an, um den Niet zu spannen.
+</p>
+
+<p>
+    <strong>Schritt 5: Setzen der Niete</strong>
+</p>
+
+<p>
+    Verwenden Sie die Nietpistole, um die Blindniete zu setzen. Ziehen Sie die
+    Pistole an, bis der Niet vollständig eingebettet ist und eine sichere
+    Verbindung bildet.
+</p>
+
+<p>
+    <strong>Schritt 6: Überprüfung</strong>
+</p>
+
+<p>
+    Überprüfen Sie den Blindniet, um sicherzustellen, dass er korrekt gesetzt
+    wurde und eine sichere Verbindung bildet. Ziehen Sie ihn gegebenenfalls
+    mit einem Schraubenschlüssel oder einer Zange weiter an, um sicherzustellen,
+    dass er sicher befestigt ist.
+</p>
+
+<h3 id="rueckwandmontage-mit-blindnieten">
+    19. Rückwandmontage mit Blindnieten
+</h3>
+
+<p>
+    Die Rückwandmontage funktioniert analog zur Frontplattenmontage mit
+    Blindnietmuttern. In diesem Fall liegt die Rückseite des Sensors an der Wand an.
+</p>
+
+<p>
+    Für diese Montageart werden 4×40 Blindnieten verwendet. Die Montage erfolgt
+    ohne Abstandsplatte.
+</p>
+
+<p>
+    Der Klemmbereich beträgt 3 mm bis 6 mm.
+</p>
+
+<p>
+    Die Bohrungen für die Blindnieten haben einen Durchmesser von 4,1 mm.
+</p>
+
+<p>
+    <strong>Schritt 1:</strong> Je nach Sensortyp (nur Radar und ToF) bohren Sie
+    die entsprechenden Löcher in die Wand, an der Sie den Sensor montieren wollen.
+    Verwenden Sie dazu die Bohrschablone. Die Löcher für die Blindnieten sollten
+    einen Durchmesser von 4,1 mm haben.
+</p>
+
+<p>
+    <strong>Schritt 2:</strong> Stecken Sie die Nieten durch die vorgesehenen
+    Laschen. Verwenden Sie dazu die mitgelieferten Abstandshalter (die längere
+    Version). Führen Sie die Blindniete zuerst durch die Abstandshalter und
+    anschließend durch die Laschen am Sensor. Vernieten Sie die Blindnieten
+    anschließend mit einem geeigneten Werkzeug.
+</p>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(63).png?width=670&amp;height=510&amp;name=Untitled%20(63).png"
+         loading="lazy">
+    <figcaption>
+        Abbildung 28: Vorbereitung der Blindnietmontage mit Abstandshaltern
+    </figcaption>
+</figure>
+
+<figure class="figure">
+   <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(64).png?width=670&amp;height=486&amp;name=Untitled%20(64).png"
+         alt="Blindnietmontage Detailansicht"
+         loading="lazy">
+    <figcaption>
+        Abbildung 29: Blindniete und Abstandshalter vor der Montage
+    </figcaption>
+</figure>
+
+<p>
+    <strong>Schritt 3:</strong> Der Sensor ist nun montiert.
+</p>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(65).png?width=670&amp;height=390&amp;name=Untitled%20(65).png"
+         alt="Montierter Sensor"
+         loading="lazy">
+    <figcaption>
+        Abbildung 30: Sensor nach abgeschlossener Blindnietmontage
+    </figcaption>
+</figure>
+
+<figure class="figure">
+   <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(66).png?width=670&amp;height=370&amp;name=Untitled%20(66).png"
+         alt="Fertige Rückwandmontage"
+         loading="lazy">
+    <figcaption>
+        Abbildung 31: Fertig montierter Sensor bei Rückwandmontage mit Blindnieten
+    </figcaption>
+</figure>
+
+
+<h3 id="vorderwandmontage-mit-blindnieten">
+   20. Vorderwandmontage mit Blindnieten
+</h3>
+
+<div class="note-strip note-strip--red">
+    <p>
+        <strong>Bitte beachten:</strong><br>
+        Verwenden Sie bei dieser Art der Montage immer die Abstandsplatte,
+        um den Abstand der Antenne zur Wand zu gewährleisten.
+    </p>
+</div>
+
+<p>
+    Die Vorderwandmontage wird verwendet, wenn Sie die Vorderseite des
+    Apollon-Q-Sensors an der Wand des Objekts montieren möchten, in dem
+    der Sensor installiert werden soll. Die Vorderseite ist die Seite mit
+    der Öffnung in der Mitte, auf der auch das Logo sichtbar ist.
+</p>
+
+<div class="note-strip note-strip--red">
+    <p>
+        <strong> Bitte beachten:</strong><br>
+        Aktivieren Sie den Sensor, bevor Sie mit der Installation beginnen.
+        <br><br>
+        Für diese Art der Installation werden 4×40 Blindnieten verwendet.
+        Die Montage erfolgt mit einer Distanzplatte.
+    </p>
+</div>
+
+<p>
+    Der Klemmbereich beträgt 3 mm bis 6 mm.
+</p>
+
+<p>
+    Die Löcher für die Blindnieten haben einen Durchmesser von 4,1 mm.
+</p>
+
+<p>
+    <strong>Schritt 1:</strong> Bohren Sie je nach Sensortyp (nur Radar und ToF)
+    die entsprechenden Löcher in die Wand, in die Sie den Sensor einbauen wollen.
+    Verwenden Sie dazu die Bohrschablone. Die Löcher für die Blindnieten sollten
+    einen Durchmesser von 4,1 mm haben.
+</p>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(67).png?width=670&amp;height=577&amp;name=Untitled%20(67).png"
+         loading="lazy">
+    <figcaption>
+        Abbildung 32: Bohrschablone für die Vorderwandmontage mit Blindnieten
+    </figcaption>
+</figure>
+
+<p>
+    <strong>Schritt 2:</strong> Stecken Sie die Nieten durch die vorgesehenen
+    Laschen. Verwenden Sie dazu die mitgelieferten Abstandshalter
+    (die kürzeren). Stecken Sie die Blindniete zuerst durch die
+    Abstandshalter, dann durch die Laschen am Sensor und schließlich durch
+    die Abstandsplatte. Vernieten Sie nun die Blindnieten mit einem
+    geeigneten Werkzeug.
+</p>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(68).png?width=670&amp;height=505&amp;name=Untitled%20(68).png"
+         alt="Montage mit Abstandshaltern"
+         loading="lazy">
+    <figcaption>
+        Abbildung 33: Montage der Blindnieten mit Abstandshaltern und Abstandsplatte
+    </figcaption>
+</figure>
+
+<figure class="figure">
+<img  src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(69)-png.png?width=670&amp;height=367&amp;name=Untitled%20(69)-png.png"
+         alt="Montage Detailansicht"
+         loading="lazy">
+    <figcaption>
+        Abbildung 34: Detailansicht der Blindnietmontage
+    </figcaption>
+</figure>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(70).png?width=670&amp;height=246&amp;name=Untitled%20(70).png"         alt="Montageng" loading="lazy">
+    <figcaption>
+        Abbildung 35: Sensor während der Montage
+    </figcaption>
+</figure>
+
+<p>
+    <strong>Schritt 3:</strong> Jetzt wird der Sensor montiert.
+</p>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(71).png?width=670&amp;height=342&amp;name=Untitled%20(71).png"
+         loading="lazy">
+    <figcaption>
+        Abbildung 36: Fertig montierter Sensor bei Vorderwandmontage mit Blindnieten
+    </figcaption>
+</figure>
+
+<h3 id="hall-switch-magnetschalter-montageanleitung">
+ 21. Hall-Switch Magnetschalter Montageanleitung
+</h3>
+<div class="note-strip note-strip--blue">
+<p>
+<strong> Bitte beachten:</strong><br>
+Auf dem Sensor befinden sich zwei Hallsensoren (Magnetfeldschalter).
+Die folgende Grafik zeigt die Lage der Hallsensoren und die empfohlene
+Platzierung der Magnete.
+</p>
+</div>
+<figure class="figure">
+<img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(72).png?width=506&amp;height=351&amp;name=Untitled%20(72).png" 
+alt="Position der Hallsensoren"
+loading="lazy">
+<figcaption>
+Abbildung 37: Position der Hallsensoren und empfohlene Magnetplatzierung
+</figcaption>
+</figure>
+<ol>
+<li>
+Beide Magnetfeldschalter sind aktiv. Es können entweder einer oder beide
+Sensoren verwendet werden.
+</li>
+<li>
+Als Magnete werden große Neodym-Magnete empfohlen. Diese sollten so nah
+wie möglich am Sensor angebracht werden. Ein empfohlener Abstand zwischen
+dem Magneten und dem Sensor kann aufgrund der variablen Größe des Magneten
+nicht universell angegeben werden. Es wird ein maximaler Abstand von 1 cm
+zwischen Magnet und Gehäuse empfohlen.
+</li>
+<li>
+Zum Vergleich: Mit einem Neodym-Scheibenmagneten mit d = 20 mm und h = 5 mm
+werden zuverlässige Werte bei Abständen unter 1 cm erreicht.
+</li>
+<li>
+Die Magnetfeldschalter können in drei verschiedenen Modi betrieben werden:
+</li>
+</ol>
+<ul>
+<li>Behälter ist geschlossen, wenn der Magnet angelegt ist.</li>
+<li>Der Behälter ist offen, wenn der Magnet angelegt wird.</li>
+<li>Der Sensor zählt eine Öffnung, wenn der Magnet zweimal durchläuft.</li>
+</ul>
+<h3 id="nfc-inbetriebnahme-und-ortung-des-nfc-tags">
+22. NFC-Inbetriebnahme und Ortung des NFC-Tags
+</h3>
+<p>
+Die Aktivierung erfolgt über eine NFC-App.
+</p>
+<ol>
+<li>
+Die Aktivierung erfolgt über eine NFC-App. Hierfür wird ein Smartphone
+benötigt. Die App kann in den jeweiligen App-Stores heruntergeladen
+werden. Suchen Sie einfach nach „Sentinum LinQs“ und laden Sie die
+LinQs-App herunter.
+</li>
+</ol>
+<figure class="figure">
+<img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(29).png?width=670&amp;height=322&amp;name=Untitled%20(29).png" 
+alt="LinQs App Installation"
+loading="lazy">
+<figcaption>
+Abbildung 38: Installation der Sentinum LinQs App
+</figcaption>
+</figure>
+<ol start="2">
+<li>
+Legen Sie zuerst das Etikett auf den Sensor und dann das Lesegerät auf
+Ihr Gerät. Die Position des NFC-Tags finden Sie in den folgenden
+Abbildungen.
+</li>
+</ol>
+<figure class="figure">
+<img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(74).png?width=670&amp;height=376&amp;name=Untitled%20(74).png" 
+alt="Position NFC Tag"
+loading="lazy">
+<figcaption>
+Abbildung 39: Position des NFC-Tags auf dem Sensor
+</figcaption>
+</figure>
+<ol start="3">
+<li>
+Öffnen Sie die App und aktivieren Sie den Sensor. Um den Sensor in den
+Grundeinstellungen zu starten, klicken Sie im Startmenü der App auf die
+Schaltfläche „Sensor aktivieren“. Legen Sie nun Ihr Gerät auf die
+NFC-Markierung des Sensors.
+</li>
+</ol>
+<figure class="figure">
+<img  src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(26).png?width=670&amp;height=268&amp;name=Untitled%20(26).png" 
+alt="Sensor aktivieren"
+loading="lazy">
+<figcaption>
+Abbildung 40: Aktivierung des Sensors mit der LinQs App
+</figcaption>
+</figure>
+<ol start="4">
+<li>
+Wenn der Sensor aktiviert ist, wird „Sensor aktualisiert!“ angezeigt.
+Danach können Sie mit der Aktivierung der anderen Sensoren fortfahren.
+</li>
+</ol>
+
+<h3 id="austausch-der-batterie">23. Austausch der Batterie</h3>
+
+<ol>
+    <li>
+        Öffnen Sie das Gehäuse mit einem speziellen Torx-Schraubendreher.
+        Entfernen Sie vorsichtig den Deckel und vergewissern Sie sich,
+        dass die Dichtung nicht beschädigt ist.
+    </li>
+</ol>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(75).png?width=670&amp;height=494&amp;name=Untitled%20(75).png"
+         alt="Öffnen des Gehäuses"
+         loading="lazy">
+    <figcaption>
+        Abbildung 41: Öffnen des Gehäuses zum Batteriewechsel
+    </figcaption>
+</figure>
+
+<ol start="2">
+    <li>
+        Entfernen Sie nun vorsichtig die Zellen aus dem vorgesehenen Halter
+        und setzen Sie die neuen Zellen ein.
+        <br><br>
+
+        Um die in den Datenblättern angegebenen Laufzeiten und Leistungen zu
+        erreichen, sind die folgenden Primärzellen zulässig:
+        <br><br>
+
+        <strong>a. Für LoRaWAN®- und mioty®-Sensoren</strong>
+        <ul>
+            <li>Energizer® Ultimate Lithium-Batterien AA</li>
+            <li>VARTA ULTRA LITHIUM Mignon AA</li>
+        </ul>
+
+        <strong>b. Für zellulare Sensoren (NB-IoT und LTE-CAT-M1)</strong>
+        <ul>
+            <li>VARTA-CR-AH-R</li>
+        </ul>
+
+        Jeder Sensor benötigt 2 Zellen.
+    </li>
+</ol>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(76).png?width=670&amp;height=510&amp;name=Untitled%20(76).png" alt="Einsetzen neuer Batteriezellen"
+         loading="lazy">
+    <figcaption>
+        Abbildung 42: Entnehmen und Einsetzen der Batteriezellen
+    </figcaption>
+</figure>
+
+<ol start="3">
+    <li>
+        Wenn der Austausch abgeschlossen ist, entsorgen Sie bitte die alten
+        Zellen ordnungsgemäß. Verschließen Sie anschließend das Gehäuse wieder.
+        Vergewissern Sie sich, dass die ursprüngliche Position der Dichtung
+        nicht verändert wurde.
+    </li>
+</ol>
+
+<div class="note-strip note-strip--red">
+    <p>
+        <strong> Bitte beachten:</strong><br>
+        Wenn andere als die empfohlenen Zellen verwendet werden, können
+        Leistung und Produktsicherheit beeinträchtigt werden.
+    </p>
+</div>
+
+<h3 id="technische-funktionen">24. Technische Funktionen</h3>
+
+<h4>Verarbeitung der Radarmessung</h4>
+
+<p>
+    Mit dem Neptun-Füllstandssensor erweitert Sentinum sein Sensorportfolio
+    um einen robusten Tank- und Füllstandssensor. Das Haupteinsatzgebiet ist
+    die Messung von Wasser- und Flusspegeln für den Hochwasserschutz.
+</p>
+
+<p>
+    Grundsätzlich ermöglicht ein Radar die Erkennung eines Messobjekts,
+    das durch andere Materialien verdeckt ist. So kann der Neptun auch
+    außen auf Kunststofftanks montiert werden und den Füllstand von
+    Flüssigkeiten im Tank bestimmen.
+</p>
+
+<p>
+    Generell eignet sich das Radar sehr gut zur Messung von Flüssigkeiten,
+    Metallen, feuchten Schüttgütern sowie Objekten mit glatten Oberflächen.
+    Im Gegensatz zu anderen Technologien können störende Objekte in
+    Tiefenrichtung ignoriert werden.
+</p>
+
+<p>
+    Dieser Effekt zeigt sich beispielsweise beim Einsatz als
+    Füllstandssensor an Brücken, wobei leichte Verschmutzungen im
+    Sichtfeld des Sensors ignoriert werden können.
+</p>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(77).png?width=670&amp;height=387&amp;name=Untitled%20(77).png"
+         loading="lazy">
+    <figcaption>
+        Abbildung 43: Prinzip der Radarmessung
+    </figcaption>
+</figure>
+
+<h3 id="maximale-anzahl-von-messobjekten-radarmessung">
+    Maximale Anzahl von Messobjekten Radarmessung
+</h3>
+
+<p>
+    Im Gegensatz zum Apollon-Q kann der Neptun-Sensor maximal
+    6 Messobjekte erfassen.
+</p>
+
+<p>
+    Für jedes Messobjekt wird ein Abstand sowie eine zugehörige
+    Amplitude ermittelt und in der Nutzlast ausgegeben.
+</p>
+
+<p>
+    Je nach gewählter Sortierfunktion werden die Werte in der Payload
+    entweder nach dem nächsten Objekt oder nach dem Messobjekt mit der
+    größten Amplitude sortiert.
+</p>
+
+<h3 id="funktion-delta-merkmale">Funktion: Delta-Merkmale</h3>
+
+<p>
+    Angenommen, der Sensor misst und sendet um 12:00 Uhr und befindet
+    sich in den Standardeinstellungen
+    <code>_property_meas_period = 30</code> und
+    <code>_property_alarm_pause = 6</code>.
+</p>
+
+<p>
+    Um 12:10 Uhr ändert sich der Pegel um 100 mm
+    (<code>&gt; _property_alarm_delta</code>).
+    Der Sensor sendet den neuen Pegel um 12:30 Uhr.
+</p>
+
+<p>
+    Wenn sich nach 12:30 Uhr den restlichen Tag nichts ändert,
+    sendet der Sensor nach 12:30 Uhr in Abständen von drei Stunden
+    (<code>_property_alarm_pause × _property_meas_period</code>).
+</p>
+
+<p>
+    Unabhängig davon werden weiterhin alle 30 Minuten Messungen durchgeführt
+    (<code>_property_meas_period</code>).
+</p>
+
+<h3 id="funktion-vandalismus-erkennung"> 25. Funktion: Vandalismus-Erkennung</h3>
+
+<p>Die folgenden Parameter können eingestellt werden.</p>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Schlüssel</th>
+                <th>Beschreibung</th>
+                <th>Einheit</th>
+                <th>r/w</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>vdetect</code></td>
+                <td>
+                    Aktiviert die Vandalismuserkennung.<br>
+                    0 = Vandalismuserkennung aus<br>
+                    1 = Vandalismuserkennung ein
+                </td>
+                <td>-</td>
+                <td>rw</td>
+            </tr>
+
+            <tr>
+                <td><code>vdelta</code></td>
+                <td>
+                    Maximale Zeit, die zwischen zwei Einschlägen vergehen darf,
+                    damit nach Erreichen der definierten Anzahl von Einschlägen
+                    ein Vandalismusalarm ausgelöst wird.
+                </td>
+                <td>sec</td>
+                <td>rw</td>
+            </tr>
+
+            <tr>
+                <td><code>vlimit</code></td>
+                <td>
+                    Anzahl der Einschläge, von denen maximal zwei innerhalb
+                    der Entfernung von Impact Delta liegen dürfen, damit der
+                    Vandalismusalarm ausgelöst wird.
+                </td>
+                <td>-</td>
+                <td>rw</td>
+            </tr>
+
+            <tr>
+                <td><code>vstren</code></td>
+                <td>
+                    Sobald die Beschleunigung größer als der eingestellte
+                    <code>vstren</code>-Wert ist, wird ein Aufprall gezählt.
+                </td>
+                <td>mG</td>
+                <td>rw</td>
+            </tr>
+
+            <tr>
+                <td><code>vcool</code></td>
+                <td>
+                    Legt eine Zeitspanne fest, in der kein weiterer
+                    Vandalismusalarm ausgelöst werden kann, nachdem bereits
+                    ein Vandalismusalarm ausgelöst wurde.
+                </td>
+                <td>-</td>
+                <td>rw</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="funktion-oeffnungserkennung">
+    26. Funktion: Öffnungserkennung
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Schlüssel</th>
+                <th>Beschreibung</th>
+                <th>Einheit</th>
+                <th>r/w</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>opening_cooldown</code></td>
+                <td>
+                    Gibt einen Zeitraum an, in dem nach einer ausgelösten
+                    Öffnung keine weitere Öffnung erneut ausgelöst werden kann
+                    (Entprellung der Öffnungserkennung). Die zuletzt gezählte
+                    Öffnung dient als Referenzwert.
+                </td>
+                <td>sec</td>
+                <td>rw</td>
+            </tr>
+
+            <tr>
+                <td><code>alarm_after_opening</code></td>
+                <td>
+                    Gibt an, wie lange die Abdeckung geöffnet sein muss,
+                    bevor ein Alarm ausgelöst wird.
+                </td>
+                <td>sec</td>
+                <td>rw</td>
+            </tr>
+
+            <tr>
+                <td><code>opening_source</code></td>
+                <td>
+                    Gibt an, welche Methode zur Erkennung von Öffnungen
+                    verwendet wird:
+                    <ul>
+                        <li>0 = Keine (Öffnungsalarm deaktiviert)</li>
+                        <li>1 = Beschleunigungssensor</li>
+                        <li>2 = Hall-Sensor</li>
+                    </ul>
+                </td>
+                <td>-</td>
+                <td>rw</td>
+            </tr>
+
+            <tr>
+                <td><code>magnetic_field_behavior</code></td>
+                <td>
+                    Gibt den Betriebsmodus des Hall-Sensors an:
+                    <ul>
+                        <li>0 = Behälter ist geschlossen</li>
+                        <li>1 = Behälter ist offen</li>
+                        <li>2 = Sensor zählt eine Öffnung, wenn der Magnet zweimal passiert wird</li>
+                    </ul>
+                </td>
+                <td>-</td>
+                <td>rw</td>
+            </tr>
+
+            <tr>
+                <td><code>opening_alarm_enable</code></td>
+                <td>
+                    Aktiviert oder deaktiviert den Öffnungsalarm:
+                    <ul>
+                        <li>0 = Deaktiviert</li>
+                        <li>1 = Aktiviert</li>
+                    </ul>
+                </td>
+                <td>-</td>
+                <td>rw</td>
+            </tr>
+
+            <tr>
+                <td><code>property_opening_alarm_enable</code></td>
+                <td>
+                    Gibt an, ob ein Alarm nach Ablauf der Zeit
+                    „Alarm nach Öffnung“ ausgelöst wird, wenn der
+                    Behälter geöffnet ist.
+                    <ul>
+                        <li>0 = Alarm nicht aktiv</li>
+                        <li>1 = Alarm aktiv</li>
+                    </ul>
+                </td>
+                <td>-</td>
+                <td>rw</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<figure class="figure">
+  <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(78).png"
+         alt="Zeitlicher Verlauf der Öffnungserkennung"
+         loading="lazy">
+    <figcaption>
+        Abbildung 44: Beispielhafter Ablauf der Öffnungserkennung mit Abkühlzeit
+    </figcaption>
+</figure>
+
+<div class="note-strip note-strip--red">
+    <p>
+        <strong>Bitte beachten:</strong><br>
+        Nach dem Beitritt oder der Registrierung wartet der Sensor die in der
+        Eigenschaft Öffnungsabkühlung konfigurierte Zeit ab,
+        bevor die Öffnungszähler aktiv werden. Standardmäßig beträgt diese
+        Wartezeit zwei Minuten.
+    </p>
+</div>
+
+<h3 id="apollon-q-ventiloeffnungserkennung">
+   27. Apollon-Q Ventilöffnungserkennung
+</h3>
+
+<figure class="figure">
+ <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(79).png?width=573&amp;height=413&amp;name=Untitled%20(79).png"
+         alt="Ventilöffnungserkennung Achsenausrichtung"
+         loading="lazy">
+    <figcaption>
+        Abbildung 45: Ausrichtung des Sensors für die Ventilöffnungserkennung
+    </figcaption>
+</figure>
+
+<p>
+    Die Ventilöffnungserkennung erfolgt über eine Drehung um die X-Achse.
+    Der Sensor muss hierzu wie dargestellt an der Klappe montiert werden.
+</p>
+
+<figure class="figure">
+  <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(80).png?width=566&amp;height=352&amp;name=Untitled%20(80).png"
+         alt="Montage am Ventil"
+         loading="lazy">
+    <figcaption>
+        Abbildung 46: Empfohlene Montageposition des Sensors an der Klappe
+    </figcaption>
+</figure>
+
+<p>
+    Eine Klappenöffnung wird durch das Öffnen der Klappe erkannt,
+    wie in der folgenden Abbildung dargestellt.
+</p>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(81).png?width=527&amp;height=626&amp;name=Untitled%20(81).png"
+         alt="Klappenöffnungserkennung"
+         loading="lazy">
+    <figcaption>
+        Abbildung 47: Erkennung einer geöffneten Klappe
+    </figcaption>
+</figure>
+<br><br>
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png"  alt="Supported radio technologies"  style="max-width:750px; height:auto;"
+    loading="lazy">
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
+    alt="trash bin Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
+</div>
+
+<!-- FOOTER -->
+
+<div>
+    </div>
+<div class="footer-note">
+  <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+  <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
+  </p>
+</div>
+
+
+
+
+
+
+</body>
+
+</html>
