@@ -1,0 +1,732 @@
+
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* ---------- Tables ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+  code,
+.inline-code {
+    background-color: #f3f4f6;
+    border: 1px solid #d0d7de;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9em;
+    color: #111827;
+    display: inline-block;
+}
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+</style>
+
+
+
+<div class="pdf-viewer">
+  <iframe src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/mioty_blueprint_Sensoren_Einbindung_ifm_Gateway_DE.pdf" allowfullscreen title="Blueprint Sensoren Einbindung PDF">
+  </iframe>
+</div>
+
+<div class="pdf-download">
+  📄 Sie können das PDF oben ansehen oder
+  <a href="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/mioty_blueprint_Sensoren_Einbindung_ifm_Gateway_DE.pdf" target="_blank" rel="noopener noreferrer">
+   <strong>hier herunterladen</strong> 
+  </a>.
+</div>
+
+
+<pre><code class="language-javascript">
+function Decoder(bytes, port) {
+
+    // Conversion of signed integers
+    function uncomplement(val, bitwidth) {
+        var isnegative = val & (1 << (bitwidth - 1));
+        var boundary   = (1 << bitwidth);
+        var minval     = -boundary;
+        var mask       = boundary - 1;
+        return isnegative ? minval + (val & mask) : val;
+    }
+
+    var decoded = {};
+
+    if (port === 1) {
+
+        // Attributes
+        decoded.base_id         = bytes[0] >> 4;
+        decoded.major_version   = bytes[0] & 0x0F;
+        decoded.minor_version   = bytes[1] >> 4;
+        decoded.product_version = bytes[1] & 0x0F;
+
+        // Telemetry
+        decoded.up_cnt               = bytes[2];
+        decoded.battery_voltage      = ((bytes[3] << 8) | bytes[4]) / 1000.0;              
+        decoded.internal_temperature = bytes[5] - 128;
+
+        var idx = 6;
+
+        if (decoded.product_version & 0x01) {
+            decoded.operating_seconds =
+                (bytes[idx++] << 24) |
+                (bytes[idx++] << 16) |
+                (bytes[idx++] << 8) |
+                bytes[idx++];
+
+            decoded.cycles =
+                (bytes[idx++] << 24) |
+                (bytes[idx++] << 16) |
+                (bytes[idx++] << 8) |
+                bytes[idx++];
+
+            decoded.utilization_rate =
+                ((bytes[idx++] << 8) | bytes[idx++]) / 100.0;
+
+            decoded.is_active = bytes[idx++];
+        }
+
+        if (decoded.product_version & 0x08) {
+            decoded.temperature =
+                ((bytes[idx++] << 8) | bytes[idx++]) / 10 - 100;
+
+            decoded.humidity = bytes[idx++];
+        }
+
+    } else if (port == 197) {
+
+        var format = bytes[0];
+        var offset = 1;
+        var results = [];
+
+        if (format === 0) {
+
+            var count = Math.floor((bytes.length - offset) / 6);
+
+            for (var i = 0; i < count; i++) {
+
+                var macBytes = bytes.slice(
+                    offset + i * 6,
+                    offset + i * 6 + 6
+                );
+
+                var mac = macBytes.map(function(b) {
+                    return (b < 16 ? "0" : "") +
+                        b.toString(16).toUpperCase();
+                }).join(":");
+
+                results.push({ mac: mac });
+            }
+
+        } else if (format === 1) {
+
+            var count = Math.floor((bytes.length - offset) / 7);
+
+            for (var i = 0; i < count; i++) {
+
+                var rssiRaw = bytes[offset + i * 7];
+                var rssi = rssiRaw > 127
+                    ? rssiRaw - 256
+                    : rssiRaw;
+
+                var macBytes = bytes.slice(
+                    offset + i * 7 + 1,
+                    offset + i * 7 + 7
+                );
+
+                var mac = macBytes.map(function(b) {
+                    return (b < 16 ? "0" : "") +
+                        b.toString(16).toUpperCase();
+                }).join(":");
+
+                results.push({
+                    mac: mac,
+                    rssi: rssi
+                });
+            }
+
+        } else {
+            return {
+                errors: ["Unknown payload format: " + format]
+            };
+        }
+
+        decoded.format = format;
+        decoded.access_points = results;
+    }
+
+    return decoded;
+}
+</code></pre>
+
+<div class="pdf-download">
+<svg xmlns="http://www.w3.org/2000/svg"
+width="18"
+height="18"
+viewBox="0 0 64 64"
+aria-hidden="true"
+style="vertical-align:-3px; margin-right:6px;">
+<path fill="#607D8B"
+d="M12 4h30l10 10v42a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4z"/>
+<path fill="#34495E"
+d="M42 4v10h10z"/>
+<path fill="#B2D8E5"
+d="M18 20l-6 6 6 6 3-3-3-3 3-3zm28 0l6 6-6 6-3-3 3-3-3-3z"/>
+<path fill="#B2D8E5"
+d="M31 18h4l-6 16h-4z"/>
+<rect x="12" y="37" width="6" height="3" rx="1.5" fill="#FF7B7B"/>
+<rect x="21" y="37" width="18" height="3" rx="1.5" fill="#B2D8E5"/>
+<rect x="12" y="45" width="6" height="3" rx="1.5" fill="#FF7B7B"/>
+<rect x="21" y="45" width="26" height="3" rx="1.5" fill="#F1C40F"/>
+<rect x="12" y="53" width="6" height="3" rx="1.5" fill="#FF7B7B"/>
+<rect x="21" y="53" width="12" height="3" rx="1.5" fill="#B2D8E5"/>
+</svg> Sie können den Blueprint JSON Code oben ansehen oder
+    <a
+        href="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/1e1f8c5918a0132a56d2ca23b88f39c69cc191a2/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Juno%20TH%20TILT%20Mioty%20blueprint.json"
+        download="Juno_TH_TILT_Mioty_blueprint.json"
+        target="_blank"
+        rel="noopener noreferrer">
+        <strong>hier herunterladen</strong>
+    </a>.
+</div>
+
+
+<nav class="main-toc">
+    <strong>Inhaltsverzeichnis</strong>
+
+    <ol>
+        <li>
+         Versionshistorie
+        </li>
+        <li>
+          Einbindung von Blueprint Sensoren in das ifm mioty Gateway
+            </a>
+        </li>
+    </ol>
+</nav>
+
+<h3 id="history">1. Versionshistorie</h3>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Version</th>
+        <th>Datum</th>
+        <th>Überarbeitung</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1.0.0</td>
+        <td>30. April 2026</td>
+        <td>Erstellt</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 id="integration">2. Einbindung von Blueprint Sensoren in das ifm mioty Gateway</h3>
+
+<div class="step">
+  <h4>Schritt 1</h4>
+  <p>Nehmen Sie das Gateway in Betrieb. Halten Sie sich dabei an die von ifm bereitgestellten Dokumente. Im Folgenden sollten Sie folgenden Bildschirmausschnitt sehen.</p>
+  <figure class="figure">
+    <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/first%20pic.png" alt="Gateway Startansicht" style="height: auto;">
+    <figcaption>Abbildung 1: Gateway Startansicht</figcaption>
+  </figure>
+</div>
+
+<div class="separator">&nbsp;</div>
+
+<div class="step">
+  <h4>Schritt 2</h4>
+  <p>Navigieren Sie zum Reiter „Data Interpretation“ und hier zum Reiter „Blueprint“.</p>
+  <figure class="figure">
+       <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(4).png" alt="Blueprint speichern" style="height: auto;">
+       <figcaption>Abbildung 2. Navigation zu Blueprint und Data Interpretation</figcaption>
+  
+  </figure>
+</div>
+
+<div class="step">
+  <h4>Schritt 3</h4>
+  <p>Laden Sie sich den Blueprint für Ihren ausgewählten Sensor herunter. Navigieren Sie dazu auf die Seite <a href="https://docs.sentinum.de" target="_blank" rel="noopener noreferrer">
+    docs.sentinum.de
+</a> und suchen Sie nach Ihrem Sensor und dem entsprechenden Blueprint. In diesem Fall legen wir einen Juno Temperatur- und rel. Luftfeuchtigkeitssensor an.</p>
+  <figure class="figure">
+       <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(5).png" alt="Add New im Blueprint Reiter" style="height: auto;">
+       <figcaption>Abbildung 3. Blueprint für ausgewählten Sensor herunterladen</figcaption>
+  </figure>
+</div>
+
+<div class="separator">&nbsp;</div>
+
+<div class="step">
+  <h4>Schritt 4</h4>
+  <p>Klicken Sie auf den Eintrag und dann auf die Schaltfläche JSON-Datei. Alternativ kann weiter unten auch eine TXT-Datei heruntergeladen werden.</p>
+  <figure class="figure">
+       <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(7).png" alt="Blueprint mit zugewiesener EUI" style="height: auto;">
+       <figcaption>
+    Abbildung 4. JSON-Datei oder alternativ .txt-Datei herunterladen.
+</figcaption>
+       
+  
+  </figure>
+</div>
+
+<div class="step">
+  <h4>Schritt 5</h4>
+  <p>Jetzt sollte sich der Blueprint öffnen. Speichern Sie diese Datei mit einem Rechtsklick und „Speichern unter…“ in einem Ordner ab.</p>
+  <figure class="figure">
+       <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(9).png" alt="Anhangfenster mit Blueprint Auswahl" style="height: auto;">
+    <figcaption>Abbildung 5. Geöffnete Blueprint-Datei speichern</figcaption>
+  </figure>
+</div>
+
+<div class="separator">&nbsp;</div>
+
+<div class="step">
+  <h4>Schritt 6</h4>
+  <p>Springen Sie jetzt wieder zurück in die Oberfläche des Gateways. Klicken Sie im Reiter „Data Interpretation“ und im Reiter „Blueprint“ auf die Schaltfläche „+ Add New…“. Laden Sie jetzt die gespeicherte Blueprint-Datei als .json hoch.</p>
+  <div class="image-grid">
+    <figure class="figure">
+        <figure class="figure">
+      <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(10).png" alt="Blueprint EUI eingeben" style="height: auto;">
+      <figcaption>Abbildung 6. Neuen Blueprint anlegen</figcaption>
+    </figure>
+   
+    </figure>
+  </div>
+</div> 
+
+<div class="step">
+  <h4>Schritt 7</h4>
+  <p>Jetzt sollten Sie einen neu angelegten Blueprint sehen, in diesem Fall Juno. Dem Blueprint wird automatisch eine EUI zugewiesen. Kopieren oder speichern Sie diese EUI, da sie später nochmals benötigt wird.</p>
+  <figure class="figure">
+        <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(11).png" alt="Sensor erfolgreich hinzugefuegt" style="height: auto;">
+    <figcaption>Abbildung 7. Angelegter Blueprint mit Blueprint EUI</figcaption>
+  </figure>
+</div>
+
+<div class="separator">&nbsp;</div>
+
+<div class="step">
+  <h4>Schritt 8</h4>
+  <p>Binden wir jetzt den Sensor ein. Navigieren Sie dazu in den Reiter mioty auf der Gateway-Oberfläche und klicken Sie auf „+ Attach New“.</p>
+  <figure class="figure">
+        <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(1).png" alt="Data Interpretation und Blueprint" style="height: auto;">
+    <figcaption>Abbildung 8. Auf "+Attach New" klicken</figcaption>
+    
+  </figure>
+</div>
+
+<div class="step">
+  <h4>Schritt 9</h4>
+  <p>Jetzt erscheint folgendes Fenster. Klicken Sie oben in der Checkbox auf Blueprint, sodass Sie unten das Eingabefeld Blueprint EUI sehen. Geben Sie hier die nötigen Informationen ein und klicken Sie dann auf „OK“. Diese finden Sie in der Verpackung als QR-Code oder Sie fordern diese bequem als CSV-Datei bei<a href="mailto:info@sentinum.de">info@sentinum.de</a> an. Wichtig: Bei diesem Schritt benötigen Sie die Blueprint EUI wieder.</p>
+
+    <figure class="figure">
+         <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(16).png" alt="Graphansicht der Sensorwerte" style="height: auto;">
+    
+    <figcaption>Abbildung 9. Auswahl des passenden Blueprints</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="separator">&nbsp;</div>
+
+<div class="step">
+  <h4>Schritt 10</h4>
+  <p>Jetzt haben Sie den Sensor erfolgreich hinzugefügt.</p>
+  <figure class="figure">
+       <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(12).png" alt="Sensoruebersicht mit Informationen" style="height: auto;">
+    <figcaption>Abbildung 10. Sensor mit allen relevanten Informationen</figcaption>
+  </figure>
+</div>
+
+<div class="step">
+  <h4>Schritt 11</h4>
+  <p>Sie sollten jetzt den Sensor mit allen nötigen Informationen sehen.</p>
+  <figure class="figure">
+      <figure class="figure">
+      <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(13).png" alt="Sensorwerte nach Refresh 1" style="height: auto;">
+      <figcaption>Abbildung 11. Erste aktualisierte Sensorwerte</figcaption>
+    </figure>
+</div>
+
+<div class="separator">&nbsp;</div>
+
+<div class="step">
+  <h4>Schritt 11</h4>
+  <p>Aktivieren Sie den Sensor jetzt mit Magnet oder NFC. Warten Sie danach eine kurze Zeit und betätigen Sie die Schaltfläche „Refresh“. Dann sollten Sie folgende Werte sehen können.</p>
+  <div class="image-grid">
+  
+    <figure class="figure">
+      <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(14).png" alt="Sensorwerte nach Refresh 2" style="height: auto;">
+      <figcaption>Abbildung 12. Weitere aktualisierte Sensorwerte</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="step">
+  <h4>Schritt 12</h4>
+  <p>Mit einem Klick auf den Graph rechts in der Aktionsspalte können Sie die Sensorwerte einsehen.</p>
+  <figure class="figure">
+   <figure class="figure">
+      <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/42094a80ac7266eb310565d3f991e8b2127ebc51/Ifm%20documentation/Juno%20Ifm%20TH%20TILT%20mioty/blueprint/Gateway%20Screenshots/Bild%20(15).png" alt="Sensorwerte nach Refresh 3" style="height: auto;">
+      <figcaption>Abbildung 13. Vollständige Werte nach Refresh</figcaption>
+  </figure>
+</div>
+
+
+<div class="footer-note">
+  <p>© Sentinum GmbH - Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Texte, Tabellen und Bilder, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Sofern nicht anders angegeben, unterliegen alle Bilder dem Urheberrecht der Sentinum GmbH.</p>
+  <p>Eine Vervielfältigung, Verbreitung oder Nutzung, auch auszugsweise, ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">Technische Änderungen vorbehalten. Alle Angaben erfolgen ohne Gewähr.</p>
+</div>
+
+
+
+
+</div></div>
+
+<p>&nbsp;</p></div>
+</div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div>
+</div>
+</div>
+
+  
+</body></html>
