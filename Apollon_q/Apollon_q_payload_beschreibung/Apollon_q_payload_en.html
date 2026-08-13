@@ -1,0 +1,1351 @@
+
+
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* ---------- Tables ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+  code,
+.inline-code {
+    background-color: #f3f4f6;
+    border: 1px solid #d0d7de;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9em;
+    color: #111827;
+    display: inline-block;
+}
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+</style>
+
+
+
+<!-- PDF Viewer -->
+<div class="pdf-viewer">
+  <iframe
+    src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Apollon-Q/Apollon%20Q.T.TR%20doku/Apollon_Q_TR_Payload_Description_en-US.pdf"
+    loading="lazy"
+    title="Apollon Q TR Payload Description"
+    width="100%"
+    height="800">
+  </iframe>
+</div>
+
+<!-- PDF Download -->
+<div class="pdf-download">
+  📄 You can view the PDF above or
+  <a
+    href="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Apollon-Q/Apollon%20Q.T.TR%20doku/Apollon_Q_TR_Payload_Description_en-US.pdf"
+    target="_blank"
+    rel="noopener noreferrer">
+    <strong>download it here</strong>
+  </a>.
+</div>
+
+<div class="main-toc">
+    <strong>Table of Contents</strong>
+    <ol>
+        <li><a href="#payload-beschreibung">Payload Description</a></li>
+        <li>Example of a Wi-Fi SSID scan payload</li>
+         <li>Apollon Q T/R/TR/SW Payload Description</li>
+           <li>Apollon Q T Version Payload Description (without radar)</li>
+        <li>Apollon Q R Version Payload Description (without ToF)</li>
+        <li>Apollon Q TR / SW Version Payload Description (with Radar and ToF)</li>
+        <li>Apollon Q Appended Bytes (ACC / HALL)</li>
+        <li><a href="#payload-histogramm">Apollon Q Bytes (Histogram Debug Data)</a></li>
+        <li>Decoding Examples</li>
+    </ol>
+</div>
+
+<h3 id="payload-beschreibung">
+   1. Payload Description
+</h3>
+
+<p>
+    This chapter describes the structure of the telemetry data.
+    The number of bytes within the payload depends on the specific
+    sensor configuration. The data structure is determined by
+    which sensors and functions are present in the product.
+</p>
+
+<p>
+    Each payload begins with a header. This header contains information
+    on the hardware and software versions, the current device status, and
+    a master measurement value. The master measurement value can generally be interpreted as
+    the sensor’s current primary measurement value.
+</p>
+
+<p>
+    Depending on the sensor configuration, the header is followed by additional
+    payload sections. These contain additional information on the
+    measurement principles, position data, or functions for opening and
+    event detection. Not every product variant includes all
+    additional payload sections.
+</p>
+
+<h4>Payload Field Description</h4>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Term</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Byte No.</td>
+                <td>Byte number starting at 1</td>
+            </tr>
+            <tr>
+                <td>Alias</td>
+                <td>Human-readable name of the variable</td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td>Description of the variable</td>
+            </tr>
+            <tr>
+                <td>Label</td>
+                <td>Label in the data converter or payload decoder</td>
+            </tr>
+            <tr>
+                <td>Unit</td>
+                <td>Unit of the variable</td>
+            </tr>
+            <tr>
+                <td>Datahub .json key</td>
+                <td>Key in the JSON object when using the Datahub</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 id="modulschluessel-struktur">
+    Structure of the Module Key
+</h4>
+
+<div class="table-wrap">
+    <table>
+        <tbody>
+            <tr>
+                <th colspan="2">Byte 1</th>
+                <th colspan="2">Byte 2</th>
+            </tr>
+            <tr>
+                <th>Bits 7–4</th>
+                <th>Bits 3–0</th>
+                <th>Bits 7–4</th>
+                <th>Bits 3–0</th>
+            </tr>
+            <tr>
+                <td>Module base ID (e.g., Sentiface, Senticom, Sentivisor)</td>
+                <td>Major Version (Software/Hardware Version)</td>
+                <td>Minor version (software/hardware version)</td>
+                <td>Product version (e.g., TH, THL, ACC, Radar)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p>
+    The module key for the Apollon-Q module can be derived from the first two bytes
+    of each uplink. The module key is required, among other things, for
+    interpreting the payload and for downlink commands.
+</p>
+<p>
+    The module key for the SENTIFACE module can be extracted from the first two bytes
+    of each uplink. The module key is required for the correct
+    interpretation of the payload as well as for downlink commands.
+</p>
+
+<h4 id="portbelegung">
+    Port Assignment for WiFi SSID Scan, GNSS Scan, and Standard Payload
+</h4>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>LoRaWAN port</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>GNSS Scan Payload</td>
+                <td>192</td>
+                <td>
+                    Raw data such as satellite IDs, time information, and other
+                    GNSS measurements are transmitted to the geolocation backend.
+                </td>
+            </tr>
+            <tr>
+                <td>Wi-Fi SSID Scan Payload</td>
+                <td>197</td>
+                <td>
+                    Detected MAC addresses and RSSI values are transmitted for
+                    position determination.
+                </td>
+            </tr>
+            <tr>
+                <td>Regular Telemetry Data</td>
+                <td>1</td>
+                <td>
+                    Standard payload containing sensor data such as distance values,
+                    temperature, battery status, lid detection, or
+                    location information.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>
+2. Example of a Wi-Fi SSID scan payload
+</h3>
+<figure class="figure">
+<img src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Oct-19-2025-08-08-31-9205-PM.png?width=363&amp;height=446&amp;name=image-png-Oct-19-2025-08-08-31-9205-PM.png" alt="Beispiel einer WiFi-SSID-Scan-Payload" loading="lazy" />
+<figcaption>
+Figure 1. Example of a Wi-Fi SSID scan payload.
+</figcaption>
+</figure>
+<h3 id="payload-apollon-q-tr-sw">
+3. Apollon Q T/R/TR/SW Payload Description
+</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Byte Number</th>
+<th>Alias Name</th>
+<th>Unit</th>
+<th>Description in the Decoder</th>
+<th>Module Key</th>
+<th>Datahub .json Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1 – 2</strong></td>
+<td><strong>Module key</strong></td>
+<td>–</td>
+<td><code>module_key</code></td>
+<td><code>XXX1</code></td>
+<td><code>module_key</code></td>
+</tr>
+<tr>
+<td colspan="6">
+<strong>Description:</strong><br>
+Byte 1:<br>
+• Module code (bits 7–4)<br>
+• Major version (bits 3–0)<br><br>
+Byte 2:<br>
+• Minor version (bits 7–4)<br>
+• Product version (bits 3–0)
+</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td><strong>Uplink counter</strong></td>
+<td>–</td>
+<td><code>uplink_counter</code></td>
+<td><code>XXX1</code></td>
+<td><code>uplink_counter</code></td>
+</tr>
+<tr>
+<td colspan="6">
+<strong>Description:</strong><br>
+Protocol-independent uplink counter (0–255).
+</td>
+</tr>
+<tr>
+<td><strong>4 – 5</strong></td>
+<td><strong>Battery voltage</strong></td>
+<td>mV</td>
+<td><code>battery_voltage</code></td>
+<td><code>XXX1</code></td>
+<td><code>battery_voltage</code></td>
+</tr>
+<tr>
+<td colspan="6">
+<strong>Description:</strong><br>
+Current battery voltage in millivolts.
+</td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td><strong>Internal Temperature</strong></td>
+<td>°C</td>
+<td><code>internal_temperature</code></td>
+<td><code>XXX1</code></td>
+<td><code>internal_temperature</code></td>
+</tr>
+<tr>
+<td colspan="6">
+<strong>Description:</strong><br>
+Internal sensor temperature.
+</td>
+</tr>
+<tr>
+<td><strong>7</strong></td>
+<td><strong>Alarm</strong></td>
+<td>–</td>
+<td><code>alarm</code></td>
+<td><code>XXX1</code></td>
+<td><code>alarm</code></td>
+</tr>
+<tr>
+<td colspan="6">
+<strong>Description:</strong><br>
+Indicates whether an alarm has been triggered.
+</td>
+</tr>
+<tr>
+<td><strong>8 – 9</strong></td>
+<td><strong>Master reading</strong></td>
+<td>mm</td>
+<td><code>master_value</code></td>
+<td><code>XXX1</code></td>
+<td><code>master_value</code></td>
+</tr>
+<tr>
+<td colspan="6">
+<strong>Description:</strong><br>
+Main measured value of the sensor.
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="note-strip note-strip--blue">
+<strong>Note:</strong><br>
+For the subsequent bytes, please note the respective hardware version
+of the sensor (T, R, TR, or SW), as the payload structure may vary.
+</div>
+
+<h3 id="payload-apollon-q-t">
+  4.  Apollon Q T Version Payload Description (without radar)
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Byte Number</th>
+                <th>Alias Name</th>
+                <th>Unit</th>
+                <th>Name in the Payload Decoder</th>
+                <th>Module Key</th>
+                <th>Datahub .json Key</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td><strong>10</strong></td>
+                <td><strong>ToF Sensor Status</strong></td>
+                <td>–</td>
+                <td><code>tof_status</code></td>
+<td><code>XXX1</code></td>
+<td><code>tof_status</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    Sensor status based on the last measured value.<br>
+                    • 0: Valid range<br>
+                    • 2 / 4: Out of bounds<br>
+                    • 5: Hardware failure<br>
+                    • 7: Target wrapped<br>
+                    • 8: Algorithm failure<br>
+                    • 14: Invalid range<br>
+                    • 99: More than one valid target detected
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>11–12</strong></td>
+                <td><strong>Distance</strong></td>
+                <td><strong>mm</strong></td>
+                <td><code>tof_distance</code></td>
+<td><code>XXX1</code></td>
+<td><code>tof_distance</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    Currently measured distance by the ToF sensor in mm.<br>
+                    (Compare with <em>Master Value</em> if the measurement source is identical.)
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>13</strong></td>
+                <td><strong>ToF Mode (Index)</strong></td>
+                <td>–</td>
+               <td><code>tof_index</code></td>
+<td><code>XXX1</code></td>
+<td><code>tof_index</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    The mode in which the sensor recorded the last value.<br>
+                    • 0: Short (up to 1.3 m)<br>
+                    • 1: Medium (up to 3 m)<br>
+                    • 2: Long (up to 4 m)
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+           
+              <h3 id="payload-apollon-q-r">
+   5. Apollon Q R Version Payload Description (without ToF)
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Byte Number</th>
+                <th>Alias Name</th>
+                <th>Unit</th>
+                <th>Description in Payload Decoder</th>
+                <th>Module Key</th>
+                <th>Datahub .json Key</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td><strong>10</strong></td>
+                <td><strong>Radar Status</strong></td>
+                <td>–</td>
+              <td><code>radar_status</code></td>
+<td><code>XXX1</code></td>
+<td><code>radar_status</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    • 0: Error<br>
+                    • 1: Success
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>11</strong></td>
+                <td><strong>Number of peaks</strong></td>
+                <td>–</td>
+                <td><code>radar_no_peaks</code></td>
+                <td><code>XXX1</code></td>
+                <td><code>radar_no_peaks</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    Number of detected peaks.
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>12–13</strong></td>
+                <td><strong>Distance 1</strong></td>
+                <td><strong>mm</strong></td>
+               <td><code>radar_distance_1</code></td>
+<td><code>XXX1</code></td>
+<td><code>radar_distance_1</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    Distance at maximum peak in mm.
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>14–15</strong></td>
+                <td><strong>Peak 1</strong></td>
+                <td><strong>dBsm</strong></td>
+              <td><code>radar_ra_1</code></td>
+<td><code>XXX1</code></td>
+<td><code>radar_ra_1</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    Distance at maximum peak in dBsm.
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>16–17</strong></td>
+                <td><strong>Distance 2</strong></td>
+                <td><strong>mm</strong></td>
+               <td><code>radar_distance_2</code></td>
+<td><code>XXX1</code></td>
+<td><code>radar_distance_2</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    Distance with the second-highest peak in mm.
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>18–19</strong></td>
+                <td><strong>Peak 2</strong></td>
+                <td><strong>dBsm</strong></td>
+              <td><code>radar_ra_2</code></td>
+<td><code>XXX1</code></td>
+<td><code>radar_ra_2</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    Distance with the second-highest peak in dBsm.
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>20–21</strong></td>
+                <td><strong>Distance 3</strong></td>
+                <td><strong>mm</strong></td>
+               <td><code>radar_distance_3</code></td>
+<td><code>XXX1</code></td>
+<td><code>radar_distance_3</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    Distance with the third-highest peak in mm.
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>22–23</strong></td>
+                <td><strong>Peak 3</strong></td>
+                <td><strong>dBsm</strong></td>
+               <td><code>radar_ra_3</code></td>
+<td><code>XXX1</code></td>
+<td><code>radar_ra_3</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    Distance with the third-highest peak in dBsm.
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+           
+
+<h3 id="payload-apollon-q-tr">
+    6. Apollon Q TR / SW Version Payload Description (with Radar and ToF)
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Byte Number</th>
+                <th>Alias Name</th>
+                <th>Unit</th>
+                <th>Designation in the Payload Decoder</th>
+                <th>Module Key</th>
+                <th>Datahub .json Key</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td><strong>10</strong></td>
+                <td><strong>ToF Sensor Status</strong></td>
+                <td>–</td>
+                <td><code>tof_status</code></td>
+                <td><code>XXX1</code></td>
+                <td><code>tof_status</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    • 0 – Valid range<br>
+                    • 2 / 4 – Out of bounds<br>
+                    • 5 – Hardware failure<br>
+                    • 7 – Wrapped target<br>
+                    • 8 – Algorithm failure<br>
+                    • 14 – Invalid range<br>
+                    • 99 – More than one valid target detected
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>11 – 12</strong></td>
+                <td><strong>Distance (see Master Value)</strong></td>
+                <td><strong>mm</strong></td>
+                <td><code>tof_distance</code></td>
+                <td><code>XXX1</code></td>
+                <td><code>tof_distance</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    Current measured distance from the ToF sensor in mm.
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>13</strong></td>
+                <td><strong>ToF Mode (Index)</strong></td>
+                <td>–</td>
+                <td><code>tof_index</code></td>
+                <td><code>XXX1</code></td>
+                <td><code>tof_index</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    • 0 – Short (up to 1.3 m)<br>
+                    • 1 – Medium (up to 3 m)<br>
+                    • 2 – Long (up to 4 m)
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>14</strong></td>
+                <td><strong>Radar Status</strong></td>
+                <td>–</td>
+                <td><code>radar_status</code></td>
+                <td><code>XXX1</code></td>
+                <td><code>radar_status</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    • 0 – Error<br>
+                    • 1 – Success
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>15</strong></td>
+                <td><strong>Number of peaks</strong></td>
+                <td>–</td>
+                <td><code>radar_no_peaks</code></td>
+                <td><code>XXX1</code></td>
+                <td><code>radar_no_peaks</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    Number of detected peaks.
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>16–17</strong></td>
+                <td><strong>Distance 1</strong></td>
+                <td><strong>mm</strong></td>
+                <td><code>radar_distance_1</code></td>
+                <td><code>XXX1</code></td>
+                <td><code>radar_distance_1</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    Distance at maximum peak in mm.
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>18–19</strong></td>
+                <td><strong>Peak 1</strong></td>
+                <td><strong>dBsm</strong></td>
+                <td><code>radar_ra_1</code></td>
+                <td><code>XXX1</code></td>
+                <td><code>radar_ra_1</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    Distance at maximum peak in dBsm.
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>20–21</strong></td>
+                <td><strong>Distance 2</strong></td>
+                <td><strong>mm</strong></td>
+                <td><code>radar_distance_2</code></td>
+                <td><code>XXX1</code></td>
+                <td><code>radar_distance_2</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    Distance with the second-highest peak in mm.
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>22–23</strong></td>
+                <td><strong>Peak 2</strong></td>
+                <td><strong>dBsm</strong></td>
+                <td><code>radar_ra_2</code></td>
+                <td><code>XXX1</code></td>
+                <td><code>radar_ra_2</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    Distance with the second-highest peak in dBsm.
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>24–25</strong></td>
+                <td><strong>Distance 3</strong></td>
+                <td><strong>mm</strong></td>
+                <td><code>radar_distance_3</code></td>
+                <td><code>XXX1</code></td>
+                <td><code>radar_distance_3</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    Distance with the third-highest peak in mm.</td></tr>
+                   <tr>
+    <td><strong>26–27</strong></td>
+    <td><strong>Peak 3</strong></td>
+    <td><strong>dBsm</strong></td>
+    <td><code>radar_ra_3</code></td>
+    <td><code>XXX1</code></td>
+    <td><code>radar_ra_3</code></td>
+</tr>
+<tr>
+    <td colspan="6">
+       <strong>Description:</strong><br>
+        Distance with the third-highest peak in dBsm.
+    </td>
+</tr>
+
+</tbody>
+</table>
+</div> 
+                   
+                    
+                    
+<h3 id="payload-acc-hall">
+    7. Apollon Q – Appended Bytes (ACC / HALL)
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Appended bytes</th>
+                <th>Alias Name</th>
+                <th>Unit</th>
+                <th>Designation in the Payload Decoder</th>
+                <th>Module key</th>
+                <th>Datahub .json Key</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td><strong>1</strong></td>
+                <td><strong>Sensor Status (ACC)</strong></td>
+                <td>–</td>
+                <td><code>acc_status</code></td>
+                <td><code>XXX1</code></td>
+                <td><code>acc_status</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    Returns the status of the accelerometer:<br>
+                    • 0: OK<br>
+                    • Other values: Error
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>1</strong></td>
+                <td><strong>Orientation (ACC)</strong></td>
+                <td>–</td>
+                <td><code>acc_orientation</code></td>
+                <td><code>XXX1</code></td>
+                <td><code>acc_orientation</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    Displays the sensor's orientation:<br>
+                    • 0: Vertical (lying on its side)<br>
+                    • 1: Face Up (lens facing the ceiling)<br>
+                    • 2: Face Down (lens facing the floor)<br>
+                    • 3: Error
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>1</strong></td>
+                <td><strong>Flap Opening (ACC)</strong></td>
+                <td>–</td>
+                <td><code>acc_open</code></td>
+                <td><code>XXX1</code></td>
+                <td><code>acc_open</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    Indicates whether the lid is still open after a defined time interval.
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>1</strong></td>
+                <td><strong>Openings Lifetime Counter (ACC)</strong></td>
+                <td>–</td>
+                <td><code>acc_open_cnt</code></td>
+                <td><code>XXX1</code></td>
+                <td><code>acc_open_cnt</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    Total number of openings over the entire lifecycle.
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>1</strong></td>
+                <td><strong>Vandalism Alarm (ACC)</strong></td>
+                <td>–</td>
+                <td><code>acc_impact</code></td>
+                <td><code>XXX1</code></td>
+                <td><code>acc_impact</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    Indicates whether a vandalism event is active:<br>
+                    • 0: No vandalism event<br>
+                    • 1: Vandalism event
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>1</strong></td>
+                <td><strong>Flap Opening (HALL)</strong></td>
+                <td>–</td>
+                <td><code>hall_open</code></td>
+                <td><code>XXX1</code></td>
+                <td><code>hall_open</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    Indicates whether a flap (with a sensor attached) is open:<br>
+                    • 1: Open<br>
+                    • 0: Closed
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>1</strong></td>
+                <td><strong>Openings Lifetime (HALL)</strong></td>
+                <td>–</td>
+                <td><code>hall_open_cnt</code></td>
+                <td><code>XXX1</code></td>
+                <td><code>hall_open_cnt</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    Total number of openings over the entire life cycle (Hall sensor).
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<h3 id="payload-histogramm">
+    8. Apollon Q – Appended Bytes (Histogram Debug Data, ToF Version = 2)
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Appended Bytes</th>
+                <th>Alias Name</th>
+                <th>Unit</th>
+                <th>Designation in the Payload Decoder</th>
+                <th>Module key</th>
+                <th>Datahub .json key</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td><strong>1 byte appended</strong></td>
+                <td><strong>Histogram Type/Version</strong></td>
+                <td>–</td>
+                <td><code>histo_type</code></td>
+                <td><code>XXX1</code></td>
+                <td><code>histo_type</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    Specifies whether only values from the histogram function are transmitted
+                    or whether values from the averaging algorithm are also transmitted.<br>
+                    • 0: Histogram values only (<code>master_value</code> or
+ <code>                   tof_distance</code>)<br>
+                    • 1: Histogram values and values from the averaging algorithm
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>1 byte appended</strong></td>
+                <td><strong>Histogram Status</strong></td>
+                <td>–</td>
+                <td><code>tof_hist_stat</code></td>
+                <td><code>XXX1</code></td>
+                <td><code>tof_hist_stat</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    For more detailed information, please contact the manufacturer.<br>
+                    Applies to variants with histogram type/version = 0
+                    (identified by the payload length plus 5 bytes).
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>2 bytes appended</strong></td>
+                <td><strong>Histogram distance</strong></td>
+                <td><strong>mm</strong></td>
+                <td><code>tof_hist_dist</code></td>
+                <td><code>XXX1</code></td>
+                <td><code>tof_hist_dist</code></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                   <strong>Description:</strong><br>
+                    Distance in mm calculated using the histogram feature algorithm.
+                    In normal operation, these values should deviate only
+                    slightly from the usual distance values and can
+                    compensate for heavy contamination on the lens.
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<h3 id="payload-beispiele">
+   9. Decoding Examples (Febris)
+</h3>
+
+<div class="note-strip note-strip--blue">
+    <strong>Payload:</strong><br>
+    <code>11 11 CE 14 8E 07 EE 1D 00 02 03 D6 01 D1 00</code>
+</div>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Bytes</th>
+                <th>HEX</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td><code>11</code></td><td>Module Key</td></tr>
+            <tr><td>2</td><td><code>11</code></td><td>Module key</td></tr>
+            <tr><td>3</td><td><code>CE</code></td><td>Uplink Counter</td></tr>
+            <tr><td>4</td><td><code>14</code></td><td>Battery Voltage</td></tr>
+            <tr><td>5</td><td><code>8E</code></td><td>Battery Voltage</td></tr>
+            <tr><td>6</td><td><code>07</code></td><td>Internal Temperature</td></tr>
+            <tr><td>7</td><td><code>EE</code></td><td>Internal temperature</td></tr>
+            <tr><td>8</td><td><code>1D</code></td><td>Relative humidity</td></tr>
+            <tr><td>9</td><td><code>00</code></td><td>Dew point</td></tr>
+            <tr><td>10</td><td><code>02</code></td><td>Dew point</td></tr>
+            <tr><td>11</td><td><code>03</code></td><td>Air Pressure</td></tr>
+            <tr><td>12</td><td><code>D6</code></td><td>Air Pressure</td></tr>
+            <tr><td>13</td><td><code>01</code></td><td>CO₂</td></tr>
+            <tr><td>14</td><td><code>D1</code></td><td>CO₂</td></tr>
+            <tr><td>15</td><td><code>00</code></td><td>Alarm</td></tr>
+        </tbody>
+    </table>
+</div>
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Oct-19-2025-08-51-59-6938-PM.png" alt="Beispiel Dekodierung" loading="lazy" />
+<figcaption>Figure 2. Decoding example</figcaption>
+</figure>
+
+
+<br /><br />
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png" alt="Supported radio technologies" style="max-width:750px; height:auto;" loading="lazy" />
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png" alt="trash bin Logo" style="max-width:340px; height:auto;" loading="lazy" />
+</div>
+
+<!-- FOOTER --> 
+
+<div>
+    </div>
+<div class="footer-note">
+  <p>© Sentinum GmbH – All rights reserved.</p>
+  <p>All content in this document, including text, tables, and images, is protected by copyright and is the property of Sentinum GmbH.</p>
+  <p>All images are subject to the copyright of Sentinum GmbH, unless otherwise stated.</p>
+  <p>Reproduction, distribution, or use—even in part—is not permitted without express written permission.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Specifications are subject to change. All information is provided without warranty.
+  </p>
+</div>
+  
+</div>
