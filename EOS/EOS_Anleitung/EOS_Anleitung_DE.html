@@ -182,32 +182,6 @@
         box-shadow: none !important;
     }
 
-    /* ---------- Tables ---------- */
-
-    .table-wrap {
-        margin: 8px 0 24px;
-    }
-
-    /* Tables */
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 14px;
-        table-layout: fixed;
-    }
-
-    th,
-    td {
-        border: 1px solid var(--border);
-        padding: 8px 12px;
-        vertical-align: top;
-    }
-
-    th {
-        background: var(--table-header);
-        font-weight: 700;
-        border-bottom: 2px solid #000;
-    }
 
     /* ---------- Unified table column widths ---------- */
 
@@ -345,8 +319,7 @@
 
 
 <div class="pdf-viewer">
-<iframe
-src="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/86af54a02a80551d8c93879f009e8976a1be44d0/EOS/EOS_Anleitung/Betriebsanleitung_DE_EOS.pdf"
+<iframe src="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/86af54a02a80551d8c93879f009e8976a1be44d0/EOS/EOS_Anleitung/Betriebsanleitung_DE_EOS.pdf"
 allowfullscreen
 title="Blueprint Sensor Integration PDF">
 </iframe>
@@ -361,9 +334,12 @@ title="Blueprint Sensor Integration PDF">
 </div>
 
 <figure class="figure">
-   <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/6a85c762abf53b1bfb8a0c4274c61a307da6bdc9/EOS/EOS_Anleitung/schr%C3%A4g.png"
-         alt="EOS Radar Füllstandssensor"
-         loading="lazy">
+    <img
+        src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/6a85c762abf53b1bfb8a0c4274c61a307da6bdc9/EOS/EOS_Anleitung/schr%C3%A4g.png"
+        alt="EOS Radar Füllstandssensor"
+        loading="lazy"
+        style="max-width:500px; width:100%; height:auto;"
+    >
     <figcaption>
         Abbildung 1: EOS Radar Füllstandssensor
     </figcaption>
@@ -559,15 +535,16 @@ title="Blueprint Sensor Integration PDF">
     </a>.
     Die Senticom- und Sentivisor-Tabellen sind in der
     <a href="https://docs.sentinum.de/generische-nfc-und-downlink-dokumentation">
-erischen NFC- und Downlink-Dokumentation
+generischen NFC- und Downlink-Dokumentation
     </a>
     zu finden. Die Sonderfunktionen zur
     <a href="https://docs.sentinum.de/vandalismusdetektion">
         Vandalismusdetektion
     </a>
     und
-    <a href="https://docs.sentinum.de/oetektion
-    sind ebenfalls generisch dokumentiert.
+    <a href="https://docs.sentinum.de/klappenoeffnungsdetektion">
+    Klappenöffnungsdetektion sind ebenfalls generisch dokumentiert.
+</a>
 </p>
 
 <p>
@@ -580,7 +557,7 @@ erischen NFC- und Downlink-Dokumentation
         Mioty®
     </a>
     oder
-    <a href="https://docs.sentinum.de/cellular"NB-IoT und LTE-M1">
+    <a href="https://docs.sentinum.de/cellular">
         Cellular (NB-IoT und LTE-M1)
     </a>
     Dokumentation.
