@@ -1,0 +1,2545 @@
+
+
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* ---------- Tables ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+  code,
+.inline-code {
+    background-color: #f3f4f6;
+    border: 1px solid #d0d7de;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9em;
+    color: #111827;
+    display: inline-block;
+}
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+</style>
+
+
+<div class="pdf-viewer">
+<iframe src="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/dc7487f4842a0e9fcf20069c8ccfae8aaf38c3da/EOS/EOS_Anleitung/Betriebsanleitung_DE_EOS%20en-US.pdf" allowfullscreen title="Blueprint Sensor Integration PDF">
+</iframe>
+</div>
+
+<div class="pdf-download">
+  📄 You can view the PDF above or
+  <a href="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/dc7487f4842a0e9fcf20069c8ccfae8aaf38c3da/EOS/EOS_Anleitung/Betriebsanleitung_DE_EOS%20en-US.pdf" target="_blank">
+   <strong>download it here</strong> 
+  </a>.
+</div>
+
+<figure class="figure">
+   <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/6a85c762abf53b1bfb8a0c4274c61a307da6bdc9/EOS/EOS_Anleitung/schr%C3%A4g.png" alt="EOS Radar Füllstandssensor" loading="lazy" />
+    <figcaption>
+        Figure 1: EOS Radar Level Sensor
+    </figcaption>
+</figure>
+
+<div class="main-toc">
+    <strong>Table of Contents</strong>
+
+    <ol>
+        <li> General Warnings and Safety Instructions</li>
+        <li>Additional Documentation</li>
+        <li>Intended Use</li>
+        <li>Product Version</li>
+
+       <li>
+    Package Contents and Versions
+    <ol style="list-style:none; padding-left:20px;">
+        <li>5.1 Package Contents and Optional Installation Accessories</li>
+    </ol>
+</li>
+
+        <li>Key Components</li>
+        <li>Tracking and Localization</li>
+        <li>External Antenna</li>
+
+       <li>
+    Mounting and Installation
+
+    <ol style="list-style:none; padding-left:20px;">
+        <li>9.1 Warning and Safety Instructions for Installation</li>
+        <li>9.2 Recommended Mounting Methods</li>
+        <li>9.3 Mounting Accessories</li>
+        <li>9.4 General Installation Instructions</li>
+        <li>9.5 Important Note for Devices with an External Antenna</li>
+        <li>9.6 Wall Mounting with Screws (without SMA and M12)</li>
+        <li>9.7 Mounting the Sensor with a 1.5-Inch Thread</li>
+        <li>9.8 Mounting Using the M4 Threads</li>
+        <li>9.9 Wall Mounting with Magnets</li>
+        <li>9.10 Wall Mounting with Adhesive Strips</li>
+        <li>9.11 Front-panel mounting with blind rivet nuts</li>
+        <li>9.12 Mounting with a flange</li>
+        <li>9.13 Mounting with 90° stainless steel bracket for wall and ceiling mounting</li>
+    </ol>
+</li>
+
+       <li>
+    Commissioning and Configuration
+    <ol style="list-style:none; padding-left:20px;">
+        <li>10.1 Commissioning and Configuration of the Sensor via BLE</li>
+        <li>10.2 Audible Signal and Flashing Pattern</li>
+    </ol>
+</li>
+
+<li>
+    Flap Opening Detection Using Accelerometer and Tilt Sensor
+</li>
+
+<li>
+    Communication with the Interface
+    <ol style="list-style:none; padding-left:20px;">
+        <li>12.1 LoRaWAN Join Behavior</li>
+        <li>12.2 Mioty Join Behavior</li>
+        <li>12.3 Cellular Join Behavior (NB-IoT and LTE-M1)</li>
+    </ol>
+</li>
+
+        
+        <li>Maintenance and Cleaning</li>
+        <li>Battery Replacement and SIM Card Replacement</li>
+        <li>Inserting SIM Cards</li>
+        <li>Marking and Certification</li>
+        <li>Drilling Templates for Installation</li>
+   </ol>
+    </div>
+
+
+<h3 id="allgemeine-warnhinweise">
+1. General Warnings and Safety Instructions
+</h3>
+
+<div class="note-strip note-strip--red">
+   <strong>Danger</strong><br>
+    Immediate danger → highly likely to result in death or
+    serious injury.
+</div>
+<div class="note-strip note-strip--yellow">
+   <strong>Warning</strong><br>
+    Dangerous situation → may cause serious injury.
+</div>
+<div class="note-strip note-strip--yellow">
+   <strong>Caution</strong><br>
+    Risk → usually results in minor injuries or property damage.
+</div>
+<div class="note-strip note-strip--blue">
+   <strong>Note</strong><br>
+    Tips and information.
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+
+    <ul>
+        <li>Follow the safety precautions and installation instructions in the manual and the installation checklist.</li>
+        <li>Ensure that the installation environment complies with the specified operating range guidelines. Always adhere to temperature and other limit values.</li>
+        <li>The device may only be used within the ranges specified in the technical specifications.</li>
+        <li>The device may only be used for the intended purpose and within the specified operating range.</li>
+        <li>Safety and functionality can no longer be guaranteed if the device is modified or expanded.</li>
+        <li>The sensor must not be mounted on ceilings or floors.</li>
+        <li>Operation of the sensor is permitted only up to a maximum altitude of 2,000 m above sea level.</li>
+        <li>Due to human exposure regulations, a minimum distance of 20 cm must be maintained between the device and people.</li>
+        <li>Ensure that the installation environment complies with the prescribed guidelines for the intended application. Adhere to temperature and other limit values at all times.</li>
+        <li>Dispose of the device in accordance with national environmental regulations.</li>
+        <li>Repairs to the device may only be performed by the manufacturer.</li>
+        <li>Follow the specific safety instructions for batteries and lithium primary cells.</li>
+    </ul>
+</div>
+
+<div class="note-strip note-strip--yellow">
+   <strong>Caution</strong><br><br>
+
+    If the device is installed incorrectly:
+
+    <ul>
+        <li>It may not function properly.</li>
+        <li>It could be permanently damaged.</li>
+    </ul>
+</div>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Please note:</strong>
+
+    <ul>
+        <li>Improper handling, such as excessive mechanical stress or dropping the device, can cause damage.</li>
+        <li>Using battery cells other than those recommended may negatively affect performance and product safety.</li>
+    </ul>
+</div>
+
+<div class="note-strip note-strip--yellow">
+   <strong>Caution</strong><br>
+    If the device is installed incorrectly, it could
+    pose a risk of injury.
+</div>
+
+<div class="note-strip note-strip--red">
+    <strong>Warning</strong>
+
+    <p>
+        Improper handling of lithium batteries (e.g., damage,
+        incorrect charging, short circuits, or high temperatures) can result in fire,
+        explosion, or injury.
+    </p>
+
+    <p>
+        Improper handling includes, in particular, mechanical damage,
+        overcharging, deep discharge, short-circuiting, operation outside the
+        specified temperature ranges, as well as improper
+        use or disposal.
+    </p>
+</div>
+
+<div class="note-strip note-strip--red">
+    <strong>Warning</strong>
+
+    <p>
+        Improper handling of lithium batteries can result in fire,
+        explosion, or injury.
+    </p>
+
+    <ul>
+        <li>Battery Damage</li>
+        <li>Improper charging</li>
+        <li>Short circuit</li>
+        <li>High temperatures</li>
+        <li>Mechanical damage</li>
+        <li>Overcharging or deep discharge</li>
+        <li>Operation outside the specified temperature ranges</li>
+        <li>Improper use or disposal</li>
+    </ul>
+</div>
+
+
+<h3 id="weiterfuehrende-dokumentation">2. Additional Documentation</h3>
+
+<p>
+    Please refer to the information and limit values in the technical data sheet.
+</p>
+
+<p>
+    The sensor-specific factory settings (Sentiface), as well as the keys and
+    permissible values for the sensor, can be found in the
+ <a href="https://docs.sentinum.de/nfc-und-downlinkbeschreibung">   
+        NFC and Downlink Description
+    . </a>
+    The Senticom and Sentivisor tables can be found in the <a href="https://docs.sentinum.de/generische-nfc-und-downlink-dokumentation">
+    
+    NFC and Downlink Documentation
+    
+    . </a>The special functions for <a href="https://docs.sentinum.de/vandalismusdetektion">
+    
+        vandalism detection
+    
+ </a>   and <a href="https://docs.sentinum.de/oetektion&#xD;&#xA;    sind ebenfalls generisch dokumentiert.&#xD;&#xA;&lt;/p&gt;&#xD;&#xA;&#xD;&#xA;&lt;p&gt;&#xD;&#xA;    Die Möglichkeit zur Konfiguration der Sensor-Kommunikation finden Sie&#xD;&#xA;    je nach Version in der jeweiligen generischen&#xD;&#xA;    &lt;a href=" https_x003a_="" docs.sentinum.de="" lorawan_x0022_="">
+    
+        LoRaWAN®
+    , </a>
+ <a href="https://docs.sentinum.de/mioty">   
+        Mioty®
+    
+ </a>   or <a href="https://docs.sentinum.de/cellular" nb-iot="" und="" lte-m1_x0022_="">
+    
+        Cellular (NB-IoT and LTE-M1)
+    
+ </a>   documentation.
+</p>
+<p>
+All documents related to the generic documentation can be found at<a href="https://docs.sentinum.de/wichtig-produktübergreifende-dokumentation-für-sensoren" target="_blank" rel="noopener noreferrer">
+
+https://docs.sentinum.de/wichtig-produktübergreifende-dokumentation-für-sensoren
+</a>.
+
+</p>
+
+
+
+<h3 id="vorgesehene-verwendung">3. Intended Use</h3>
+
+<p>
+    The sensors of the EOS Radar series are designed for non-contact
+    level measurement of liquids, bulk materials, and solid goods
+    using radar technology. They are intended for industrial applications,
+    particularly in the field of tank and inventory monitoring
+    (e.g., IBC containers).
+</p>
+
+<p>
+    The devices are designed for use in indoor and outdoor applications
+    and must only be used within the specified environmental and
+    operating conditions.
+</p>
+
+<p>
+    Installation is performed using suitable mechanical interfaces
+    (e.g., 1.5" threads) or, alternatively, using screws,
+    adhesive bonds, magnetic mounts, or suitable brackets, in
+    accordance with the respective installation instructions.
+</p>
+
+<p>
+    Data is transmitted wirelessly via the supported
+    IoT communication standards for connection to higher-level systems,
+    platforms, or cloud services. Depending on the device model,
+    additional integrated location functions (GPS) may be used for
+    position determination.
+</p>
+
+<p>
+    Intended use exclusively encompasses operation
+    in accordance with the technical specifications, the permissible operating and
+    environmental conditions, and the manufacturer’s installation, configuration, and
+    operating instructions.
+</p>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Caution</strong>
+    <p>
+        Use outside the described application ranges or
+        contrary to the manufacturer’s instructions may result in malfunctions,
+        measurement errors, property damage, or the loss of warranty
+        and liability claims.
+    </p>
+</div>
+<h3 id="produktversionen">4. Product Versions</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Item Code</th>
+                <th>Battery</th>
+                <th>Model</th>
+                <th>Available</th>
+                <th>Configuration</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>S-EOS-LOEU-R-F</strong></td><td>3xAA</td><td>Flat</td>
+            <td style="color:#00a651; font-weight:700;">✔</td>
+            <td>BLE</td></tr>
+            <tr><td><strong>S-EOS-MIOTY-R-F</strong></td><td>3xAA</td><td>Flat</td>
+            <td style="color:#00a651; font-weight:700;">✔</td>
+            <td>BLE</td></tr>
+            <tr><td><strong>S-EOS-NBM1-R-F</strong></td><td>3xAA</td><td>Flat</td>
+            <td style="color:#00a651; font-weight:700;">✔</td>
+            <td>BLE</td></tr>
+
+            <tr><td><strong>S-EOS-LOEU-R-F-SMA</strong></td><td>3xAA</td><td>Flat</td>
+            <td style="color:#00a651; font-weight:700;">✔</td>
+            <td>BLE</td></tr>
+            <tr><td><strong>S-EOS-MIOTY-R-F-SMA</strong></td><td>3xAA</td><td>Flat</td>
+            <td style="color:#00a651; font-weight:700;">✔</td>
+            <td>BLE</td></tr>
+            <tr><td><strong>S-EOS-NBM1-R-F-SMA</strong></td><td>3xAA</td><td>Flat</td>
+           <td style="color:#00a651; font-weight:700;">✔</td>
+            <td>BLE</td></tr>
+
+            <tr><td><strong>S-EOS-LOEU-R-F-SMA-M12</strong></td><td>3xAA</td><td>Flat</td>
+            <td style="color:#ff0000; font-weight:700;">X</td>
+            <td>BLE</td></tr>
+            <tr><td><strong>S-EOS-MIOTY-R-F-SMA-M12</strong></td><td>3xAA</td><td>Flat</td>
+            <td style="color:#ff0000; font-weight:700;">X</td>
+            <td>BLE</td></tr>
+            <tr><td><strong>S-EOS-NBM1-R-F-SMA-M12</strong></td><td>3xAA</td><td>Flat</td>
+            <td style="color:#ff0000; font-weight:700;">X</td>
+            <td>BLE</td></tr>
+
+            <tr><td><strong>S-EOS-LOEU-R-T</strong></td><td>3xAA</td><td>1.5-inch thread</td>
+          <td style="color:#ff0000; font-weight:700;">X</td>
+            <td>BLE</td></tr>
+            <tr><td><strong>S-EOS-MIOTY-R-T</strong></td><td>3xAA</td><td>1.5-inch thread</td>
+            <td style="color:#00a651; font-weight:700;">✔</td>
+            <td>BLE</td></tr>
+            <tr><td><strong>S-EOS-NBM1-R-T</strong></td><td>3xAA</td><td>1.5-inch thread</td>
+            <td style="color:#00a651; font-weight:700;">✔</td>
+            <td>BLE</td></tr>
+
+            <tr><td><strong>S-EOS-LOEU-R-T-SMA</strong></td><td>3xAA</td><td>1.5-inch thread</td>
+           <td style="color:#00a651; font-weight:700;">✔</td>
+            <td>BLE</td></tr>
+            <tr><td><strong>S-EOS-MIOTY-R-T-SMA</strong></td><td>3xAA</td><td>1.5-inch thread</td>
+            <td style="color:#00a651; font-weight:700;">✔</td>
+            <td>BLE</td></tr>
+            <tr><td><strong>S-EOS-NBM1-R-T-SMA</strong></td><td>3xAA</td><td>1.5-inch thread</td>
+            <td style="color:#00a651; font-weight:700;">✔</td>
+            <td>BLE</td></tr>
+
+            <tr><td><strong>S-EOS-LOEU-R-T-SMA-M12</strong></td><td>3xAA</td><td>1.5-inch thread</td>
+             <td style="color:#ff0000; font-weight:700;">X</td>
+            <td>BLE</td></tr>
+            <tr><td><strong>S-EOS-MIOTY-R-T-SMA-M12</strong></td><td>3xAA</td><td>1.5-inch thread</td>
+           <td style="color:#ff0000; font-weight:700;">X</td>
+            <td>BLE</td></tr>
+            <tr><td><strong>S-EOS-NBM1-R-T-SMA-M12</strong></td><td>3xAA</td><td>1.5-inch thread</td>
+           <td style="color:#ff0000; font-weight:700;">X</td>
+            <td>BLE</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="note-strip note-strip--blue">
+<strong>Note</strong>
+
+ <div style="color:#ff0000; font-weight:700;">X = Available upon request</div>
+
+</div>
+<br aria-hidden="true" />
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Item Code</th>
+                <th>Battery</th>
+                <th>Model</th>
+                <th>Available</th>
+                <th>Configuration</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>S-EOS2C-LOEU-R-F</strong></td><td>2xC</td><td>Flat</td>
+           <td style="color:#ff0000; font-weight:700;">X</td>
+            <td>BLE</td></tr>
+            <tr><td><strong>S-EOS2C-MIOTY-R-F</strong></td><td>2xC</td><td>Flat</td>
+           <td style="color:#ff0000; font-weight:700;">X</td>
+            <td>BLE</td></tr>
+            <tr><td><strong>S-EOS2C-NBM1-R-F</strong></td><td>2xC</td><td>Flat</td>
+              <td style="color:#ff0000; font-weight:700;">X</td>
+              <td>BLE</td></tr>
+
+            <tr><td><strong>S-EOS2C-LOEU-R-F-SMA</strong></td><td>2xC</td><td>Flat</td>
+            <td style="color:#ff0000; font-weight:700;">X</td>
+            <td>BLE</td></tr>
+            <tr><td><strong>S-EOS2C-MIOTY-R-F-SMA</strong></td><td>2xC</td><td>Flat</td>
+            <td style="color:#ff0000; font-weight:700;">X</td>
+            <td>BLE</td></tr>
+            <tr><td><strong>S-EOS2C-NBM1-R-F-SMA</strong></td><td>2xC</td><td>Flat</td>
+           <td style="color:#ff0000; font-weight:700;">X</td>
+            <td>BLE</td></tr>
+
+            <tr><td><strong>S-EOS2C-LOEU-R-F-SMA-M12</strong></td><td>2xC</td><td>Flat</td>
+            <td style="color:#ff0000; font-weight:700;">X</td>
+            <td>BLE</td></tr>
+            <tr><td><strong>S-EOS2C-MIOTY-R-F-SMA-M12</strong></td><td>2xC</td><td>Flat</td>
+            <td style="color:#ff0000; font-weight:700;">X</td>
+            <td>BLE</td></tr>
+            <tr><td><strong>S-EOS2C-NBM1-R-F-SMA-M12</strong></td><td>2xC</td><td>Flat</td>
+            <td style="color:#ff0000; font-weight:700;">X</td>
+            <td>BLE</td></tr>
+
+            <tr><td><strong>S-EOS2C-LOEU-R-T</strong></td><td>2xC</td><td>1.5-inch thread</td>
+           <td style="color:#ff0000; font-weight:700;">X</td>
+            <td>BLE</td></tr>
+            <tr><td><strong>S-EOS2C-MIOTY-R-T</strong></td><td>2xC</td><td>1.5-inch thread</td>
+           <td style="color:#ff0000; font-weight:700;">X</td>
+            <td>BLE</td></tr>
+            <tr><td><strong>S-EOS2C-NBM1-R-T</strong></td><td>2xC</td><td>1.5-inch thread</td>
+           <td style="color:#ff0000; font-weight:700;">X</td>
+            <td>BLE</td></tr>
+
+            <tr><td><strong>S-EOS2C-LOEU-R-T-SMA</strong></td><td>2xC</td><td>1.5-inch thread</td>
+            <td style="color:#ff0000; font-weight:700;">X</td>
+            <td>BLE</td></tr>
+            <tr><td><strong>S-EOS2C-MIOTY-R-T-SMA</strong></td><td>2xC</td><td>1.5-inch thread</td>
+            <td style="color:#ff0000; font-weight:700;">X</td>
+            <td>BLE</td></tr>
+            <tr><td><strong>S-EOS2C-NBM1-R-T-SMA</strong></td><td>2xC</td><td>1.5-inch thread</td>
+            <td style="color:#ff0000; font-weight:700;">X</td>
+            <td>BLE</td></tr>
+
+            <tr><td><strong>S-EOS2C-LOEU-R-T-SMA-M12</strong></td><td>2xC</td><td>1.5-inch thread</td>
+            <td style="color:#ff0000; font-weight:700;">X</td>
+            <td>BLE</td></tr>
+            <tr><td><strong>S-EOS2C-MIOTY-R-T-SMA-M12</strong></td><td>2xC</td><td>1.5-inch thread</td>
+           <td style="color:#ff0000; font-weight:700;">X</td>
+            <td>BLE</td></tr>
+            <tr><td><strong>S-EOS2C-NBM1-R-T-SMA-M12</strong></td><td>2xC</td><td>1.5-inch thread</td>
+            <td style="color:#ff0000; font-weight:700;">X</td>
+            <td>BLE</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+    <p style="margin-bottom:0;">
+        <div style="color:#ff0000; font-weight:700;">X = Available upon request</div>
+    
+</div>
+
+<br aria-hidden="true" />
+
+<h3 id="lieferumfang">
+    5. Scope of Delivery and Versions
+</h3>
+
+<h3 id="lieferumfang-zubehoer">
+    5.1 Scope of Delivery and Optional Mounting Accessories
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Part Number</th>
+                <th>Recommended Accessories</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Z-EOS-MAG-NEO</strong></td>
+                <td>APOO Neodymium Magnet Set</td>
+            </tr>
+            <tr>
+                <td><strong>Z-EOS-FLANGE-OI</strong></td>
+                <td>Stainless Steel Flange, 4 mm</td>
+            </tr>
+            <tr>
+                <td><strong>Z-EOS-FLANGE-ROUND</strong></td>
+                <td>Round Stainless Steel Flange, 4 mm</td>
+            </tr>
+            <tr>
+                <td><strong>Z-EOS-GUF-PAD</strong></td>
+                <td>Adhesive pad for EOS-F versions (without threads)</td>
+            </tr>
+            <tr>
+                <td><strong>Z-EOS-DSN</strong></td>
+                <td>Sealing cord</td>
+            </tr>
+            <tr>
+                <td><strong>Z-EOS-BLECH-U</strong></td>
+                <td>U-shaped metal plate for ceiling mounting (SMA exposed)</td>
+            </tr>
+            <tr>
+                <td><strong>Z-EOS-I</strong></td>
+                <td>L-bracket for wall mounting</td>
+            </tr>
+            <tr>
+                <td><strong>Z-EOS-SPX</strong></td>
+                <td>Wood screws</td>
+            </tr>
+            <tr>
+                <td><strong>Z-EOS-DIN912</strong></td>
+                <td>DIN 912 M4 screws</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+    <p style="margin-bottom:0;">
+        You’ll find the drilling templates at the end of the user manual.
+    </p>
+</div>
+
+<p>
+    <strong>Scope of Delivery:</strong>
+</p>
+
+<ul>
+    <li>3 × batteries (already installed)</li>
+    <li>EOS Radar Sensor</li>
+    <li>Instruction Manual (digital)</li>
+</ul>
+
+<br aria-hidden="true" />
+
+<h3 id="wichtige-komponenten">
+    6. Key Components
+</h3>
+
+<figure class="figure">
+    <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/a23ea24d892e33587e045bc3135f3bfdadb90ce1/EOS/EOS_Anleitung/Eos_Positionen%20M1%20M2%20SMA%20M12%20LED-1.jpg" alt="Positionen der Komponentenigsten Komponenten des EOS Sensors" loading="lazy" />
+    <figcaption>Figure 2. Key Components</figcaption>
+</figure>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th style="width:20%;">Designation</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>M1</strong></td>
+                <td>Magnetic Holder 1</td>
+            </tr>
+            <tr>
+                <td><strong>M2</strong></td>
+                <td>Magnetic Holder 2</td>
+            </tr>
+            <tr>
+                <td><strong>SMA</strong></td>
+                <td>SMA connector for external antenna</td>
+            </tr>
+            <tr>
+                <td><strong>LED</strong></td>
+                <td>LED for status indication, visual feedback, and flashing signals</td>
+            </tr>
+            <tr>
+                <td><strong>M12</strong></td>
+                <td>M12 connector on the top of the sensor</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+    <p style="margin-bottom:0;">
+        The components shown may or may not be included, depending on the product version.
+    </p>
+</div>
+<figure class="figure">
+    <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/5fa0bcaca0348a51893cd1b3287bc294de73a288/EOS/EOS_Anleitung/Eos_offen%20von%20oben%20Zeichnung-1.png" alt="Positionen der Komponentenigsten Komponenten des EOS Sensors" loading="lazy" />
+    <figcaption>Figure 3. Locations of the Main Components of the EOS Sensor </figcaption>
+</figure>
+
+
+<h3 id="ortung">
+    7. Positioning and Localization
+</h3>
+
+<p>
+    The EOS Radar Series features integrated GNSS functionality for global
+    positioning. It processes signals from multiple satellite navigation systems
+    such as GPS, GLONASS, Galileo, and BeiDou to enable reliable and
+    precise localization.
+</p>
+
+<p>
+    Positioning is performed via a patch antenna integrated into the device,
+    eliminating the need for an external antenna and ensuring a compact, robust
+    design.
+</p>
+
+<p>
+    This allows for flexible use in mobile and stationary applications,
+    such as tracking the location of containers, tanks, or movable assets,
+    even under demanding environmental conditions.
+</p>
+
+<br aria-hidden="true" />
+
+<h3 id="antenne">
+    8. External Antenna
+</h3>
+
+<p>
+    The sensor features an <strong>SMA connector</strong> and is equipped with an
+    automatic RF switching function.
+</p>
+
+<p>
+    By default, the internal chip antenna is used. When a
+ <strong>   specific external antenna</strong> is connected, the system automatically switches
+    to it, ensuring optimized wireless performance.
+</p>
+
+<p>
+    If no antennas listed in the following table are used,
+    the switch must be made manually via BLE.
+</p>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Manufacturer</th>
+                <th>Part Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Poynting</strong></td>
+                <td>OMNI-85</td>
+            </tr>
+            <tr>
+                <td><strong>Poynting</strong></td>
+                <td>OMNI-280</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+    <p style="margin-bottom:0;">
+        When using approved antenna types, switching
+        between the internal and external antennas occurs automatically. For other
+        antenna models, manual configuration via BLE may be
+        required.
+    </p>
+</div>
+
+<br aria-hidden="true" />
+
+<h3 id="montage">
+9. Assembly and Installation
+</h3>
+<h3 id="montage-warnhinweise">
+    9.1 Warning and Safety Instructions for Assembly
+</h3>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+
+    <p>
+        If the sensor remains easily accessible even after installation,
+        install the sensor first and activate it after installation.
+    </p>
+
+    <p>
+        If the sensor is no longer accessible after installation,
+        activate the sensor first and then install it after activation.
+    </p>
+
+    <p style="margin-bottom:0;">
+        Before proceeding with this type of installation, make sure that the surface
+        to which the sensor is to be screwed is level; otherwise, the
+        housing may be damaged.
+    </p>
+</div>
+
+<p>
+    <strong>Please note:</strong>
+</p>
+
+<ul>
+    <li>Do not insert any objects or body parts into the sensor’s openings.</li>
+    <li>Do not mount the sensor on the ceiling or floor.</li>
+    <li>Do not install the sensor at heights exceeding two meters.</li>
+    <li>Install the sensor only indoors on a wall in a standard room at a height of 1.50 m to 1.80 m.</li>
+</ul>
+
+<p>
+    The standard versions of the EOS sensor are designed for a wide range of industrial
+    and logistics applications and feature robust housings
+    with a high protection rating.
+</p>
+
+<p>
+    The following points must be observed during installation:
+</p>
+
+<ul>
+    <li>
+        Select a mounting location that falls within the specified
+        ambient temperatures and conditions
+        (see technical specifications).
+    </li>
+    <li>
+        Do not cover the housing: Wireless communication
+        (e.g., LoRaWAN, BLE) must not be obstructed by metallic objects,
+        solid enclosures, or structurally shielding materials
+        .
+    </li>
+</ul>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+
+    <p>
+        Ideally, mount the sensor with a clear line of sight
+        to the sky. This ensures smooth operation of the
+        wireless interfaces.
+    </p>
+
+    <p>
+        The antennas are oriented toward the top of the device.
+        For optimal wireless and GNSS performance, the antennas
+        must not be covered. A minimum distance of 1 m from
+        surrounding objects must be maintained.
+    </p>
+
+    <p>
+        Avoid installing the device in enclosed metal housings or in close proximity
+        to large metal structures, as this can
+        significantly impair signal quality.
+    </p>
+
+    <p style="margin-bottom:0;">
+        For the GNSS function, a clear line of sight to the
+        sky is required to ensure reliable position determination
+        .
+    </p>
+</div>
+
+<ul>
+    <li>
+        Secure the sensor firmly, ideally using the provided
+        mounting holes. Low-vibration or solid surfaces are
+        recommended.
+    </li>
+    <li>
+        Orientation: The standard version does not require any special
+        orientation and can therefore be mounted flat, vertically, or horizontally,
+        depending on the application.
+    </li>
+    <li>
+        Do not install in the immediate vicinity of strong electromagnetic sources
+        to avoid signal interference.
+    </li>
+</ul>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+
+    <p style="margin-bottom:0;">
+        Permanent magnets can generate strong magnetic fields that may be
+        dangerous if handled improperly. Therefore, observe
+        the following warnings:
+    </p>
+</div>
+<div class="note-strip note-strip--red">
+    <strong>Warning</strong>
+
+    <ul>
+        <li>
+           <strong>Protect your hands and fingers:</strong>
+            Strong magnets can suddenly attract each other and pinch fingers or skin.
+            This can lead to painful bruises and injuries.
+            Always maintain a safe distance when handling permanent magnets
+            and wear protective gloves if necessary.
+        </li>
+
+        <li>
+           <strong>Keep electronic devices away:</strong>
+            Magnetic fields can damage electronic devices such as computers, smartphones,
+            credit cards, pacemakers, and other sensitive electronics
+            or interfere with their operation. Therefore, always
+            maintain a sufficient distance from such devices.
+        </li>
+
+        <li>
+           <strong>Be aware of the risk of breakage:</strong>
+            Many permanent magnets are made of brittle materials
+            (e.g., neodymium) that can break if subjected to sudden impacts or
+            excessive stress. The shards can be sharp and cause injuries.
+            Therefore, handle the magnets with care and avoid
+            impacts or excessive stress.
+        </li>
+
+        <li>
+           <strong>Health Risks:</strong>
+            People with pacemakers or other implanted
+            medical devices should avoid contact with strong magnets,
+            as the magnetic fields can interfere with or deactivate
+            these devices. Consult a doctor before use if necessary.
+        </li>
+
+        <li>
+           <strong>Store magnets safely:</strong>
+            Keep magnets at a safe distance from each other and from
+            other metallic objects. Sudden attraction can
+            lead to damage, injury, or objects flying around uncontrollably
+            .
+        </li>
+
+        <li>
+           <strong>Danger to Children:</strong>
+            Permanent magnets are not toys. Small magnets in particular can be
+            life-threatening if swallowed or inhaled and can cause serious
+            internal injuries. Therefore, always keep magnets
+            out of the reach of children.
+        </li>
+
+        <li>
+           <strong>Avoid overheating:</strong>
+           Permanent magnets permanently lose their magnetic strength at temperatures above their maximum operating temperature (between 80 and 200 °C, depending on the material). Therefore, do not expose magnets to direct heat or open flames.
+        </li>
+    </ul>
+</div>
+<h3 id="befestigungsmethoden">
+    9.2 Recommended Mounting Methods
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Mounting Type</th>
+                <th>Description</th>
+                <th>Recommended Accessories</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Screw connection</strong></td>
+                <td>2 M4 or M5 screws</td>
+                <td>2× suitable countersunk screws, or wood screws 4 mm – 5 mm if necessary</td>
+            </tr>
+            <tr>
+                <td><strong>Magnets</strong></td>
+                <td>2 M4 neodymium pot magnets, female thread</td>
+                <td>2× neodymium magnets (indoor use), combined lifting capacity of 16–32 kg</td>
+            </tr>
+            <tr>
+                <td><strong>Adhesives</strong></td>
+                <td>Double-sided tape or mounting adhesive</td>
+                <td>Double-sided tape or mounting adhesive</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="montagezubehoer">
+    9.3 Mounting Accessories
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Installation method</th>
+                <th>Recommended accessories</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Screw fastening</strong></td>
+                <td>DIN 912 machine screws with M4 nuts or wood screws</td>
+            </tr>
+            <tr>
+                <td><strong>Magnets</strong></td>
+                <td>2 × neodymium pot magnets, holding force 16–32 kg, including 2 screws</td>
+            </tr>
+            <tr>
+                <td><strong>Adhesives</strong></td>
+                <td>Double-sided adhesive tape</td>
+            </tr>
+            <tr>
+                <td><strong>Rivets</strong></td>
+                <td>For rear panel mounting with M4 rivet nuts or front panel mounting with blind rivets</td>
+            </tr>
+            <tr>
+                <td><strong>Spacer</strong></td>
+                <td>See technical drawing for dimensions</td>
+            </tr>
+            <tr>
+                <td><strong>Drilling templates</strong></td>
+                <td>See the end of the operating instructions</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+    <p style="margin-bottom:0;">
+        The selection of the appropriate fastening method depends on the installation situation,
+        the substrate, and the environmental conditions of the application.
+    </p>
+</div>
+
+<h3 id="installationsanweisungen">
+    9.4 General Installation Instructions
+</h3>
+
+
+
+<div style="
+display:grid;
+grid-template-columns: 50% 50%;
+gap:32px;
+align-items:start;
+margin:24px 0;
+">
+    <div>
+        <figure class="figure">
+            <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/395decb8193ce9390dbf05446ae42c7af1588811/EOS/EOS_Anleitung/Eos_Winkelpostionierung%20Radar-1.png" alt="Optimale Ausrichtung des Sensors" loading="lazy" />
+  <figcaption>Figure 4. Optimal alignment of the EOS sensor</figcaption>
+        </figure>
+    </div>
+<div>
+   <p>
+            The sensor measures the distance to the object most accurately when it
+            is aligned parallel to the object.
+        </p>
+
+        <p>
+            For lumpy or free-flowing materials, the sensor should be
+            mounted parallel to the bottom of the container.
+        </p>
+
+        <p>
+            Ideally, the sensor beam should strike the object being measured
+            at a 90° angle.
+        </p>
+    </div>
+
+</div>
+
+
+
+<div style="
+display:grid;
+grid-template-columns: 50% 50%;
+gap:32px;
+align-items:start;
+margin:24px 0;
+">
+    <div>
+        <figure class="figure">
+            <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/1fd1f18742f5e01872e0a6421a70609572c30e14/EOS/EOS_Anleitung/Eos_Winkelpostionierung%20Radar-2.png" alt="Schräge Ausrichtung des Sensors" loading="lazy" />
+            <figcaption>
+                Figure 5. EOS sensor mounted at an angle
+            </figcaption>
+        </figure>
+    </div>
+
+  <div>
+        <p>
+            If the sensor is not mounted parallel to the object being measured,
+            measurement performance may be impaired.
+        </p>
+
+        <p>
+            If the sensor is not aligned horizontally, care must be taken
+            to adjust the percentage calculation of the fill level.
+            
+        </p>
+    </div>
+
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+    <p style="margin-bottom:0;">
+        For optimal measurement accuracy, the sensor should be aligned as
+        perpendicularly (90°) as possible to the surface being measured
+        .
+    </p>
+</div>
+
+<h3 id="hinweis-externe-antenne">
+    9.5 Important Note for Devices with an External Antenna
+</h3>
+
+<p>
+    If you have ordered a device with an external antenna, which can be identified by the
+    gold <strong>SMA connector</strong>, install
+    the antenna first.
+</p>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+
+    <p>
+       <strong>External antenna:</strong> Please note that the antenna
+        should always be mounted vertically and that the tip should point toward the sky
+        if the application permits.
+    </p>
+
+    <p>
+        The antenna should be at least 2 cm away from metal surfaces.
+        Make sure that the antenna is not shielded by surrounding metal parts,
+        provided the application allows it.
+    </p>
+
+    <p>
+       <strong>Internal antenna:</strong> If your device has an internal
+        antenna (no external antenna visible), the sensor
+        should always be mounted with its long side vertical, as this ensures
+        maximum signal strength for the device.
+    </p>
+
+    <p style="margin-bottom:0;">
+        The antenna is located on the top (logo side) of the housing
+        and should be at least 2 cm away from metal surfaces.
+        Make sure that the antenna is not shielded by surrounding metal parts,
+        as long as the application allows.
+    </p>
+</div>
+
+<h3 id="wandmontage-schrauben">
+    9.6 Wall Mounting with Screws (without SMA and M12)
+</h3>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+
+    <p style="margin-bottom:0;">
+        This mounting method only works with versions without an SMA or
+        M12 connector.
+    </p>
+</div>
+
+<p>
+    A drilling template can be found at the end of the operating instructions.
+    This type of mounting is typically used to attach the sensor
+    to the ceiling.
+</p>
+
+<p>
+    Insert the appropriate screws into the designated holes on the
+    front panel.
+</p>
+
+<p>
+    Alternatively, suitable wood or plastic screws can also
+    be used if the sensor is to be mounted on those materials.
+    To do this, use the included two-point mount.
+</p>
+
+<p>
+    Use the included two-point mounting bracket for this purpose.
+</p>
+
+<figure class="figure">
+    <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/206795268efe4a5e50949a9ce61455f37fbda354/EOS/EOS_Anleitung/Eos_oG_ohne%20Connectoren_Anbringung%20Schrauben_Zeichnung-1.png" alt="Montage des EOS Sensors mit Schrauben" loading="lazy" />
+
+    <figcaption>
+       Figure 6. Use standard M4 screws and suitable
+    mounting hardware according to the specific installation situation.
+</figcaption>
+</figure>
+<div class="note-strip note-strip--yellow">
+    <strong>Caution</strong>
+
+    <p style="margin-bottom:0;">
+        If the sensor is not mounted parallel to the object being measured,
+        measurement accuracy may be compromised. In the case of a non-horizontal
+        alignment, the level calculation must be adjusted
+        accordingly.
+    </p>
+</div>
+
+<h3 id="anbringung-15-zoll-gewinde">
+    9.7 Mounting the Sensor with a 1.5-Inch Thread
+</h3>
+
+<p>
+    The sensor has a 1.5-inch external thread and is designed for installation
+    in corresponding 1.5-inch internal threads.
+</p>
+
+<p>
+    To ensure a secure seal, use suitable sealing materials such as
+    sealing cord or PTFE tape (Teflon tape). When
+    screwing in the sensor, make sure it is positioned straight
+    and mounted without any tilting.
+</p>
+
+<p>
+    Excessive resistance when screwing in the sensor indicates improper installation
+    and can lead to damage to the thread. In this case,
+    stop the installation process and check the installation.
+</p>
+
+<p>
+    If the thread sizes differ, use suitable and approved adapters
+    . Installation must be performed in accordance with the instructions in the
+    user manual.
+</p>
+
+<p>
+    Improper installation of the sensor can lead to leaks,
+    medium leakage, and damage to the thread. This can
+    cause malfunctions or hazards during operation.
+</p>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Caution</strong>
+    <p style="margin-bottom:0;">
+        The sensor must be screwed into the thread only when de-energized and without
+        any twisting. Excessive force can
+        permanently damage the housing or the thread.
+    </p>
+</div>
+
+<figure class="figure">
+   <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/4bdccb57b5167e1eda6dab9ffbf9e936ee9346f5/EOS/EOS_Anleitung/Eos_G_ohne%20Connectoren_Tank%20Anbringung_Zeichnung-1.png" alt="Montage des EOS Sensors mit 1,5-Zoll-Gewinde" loading="lazy" />
+    <figcaption>
+        Figure 7. Mounting the EOS sensor using the 1.5-inch thread.
+    </figcaption>
+</figure>
+
+<h3 id="m4-gewinde">
+    9.8 Mounting with M4 Threads
+</h3>
+
+<p>
+The sensor has four integrated M4 threaded inserts for mechanical
+fastening. Use standard M4 screws and suitable
+fasteners for installation.
+</p>
+<p>
+The maximum permissible screw-in depth is 7.7 mm. Exceeding this
+screw-in depth can result in damage to the threaded inserts or internal
+components.
+</p>
+<p>
+Installation must be performed evenly across all four mounting points to
+prevent stress in the housing. Screws must be tightened to the specified torque;
+over-tightening must be avoided. Ensure that the
+mounting surface is level and sufficiently load-bearing. If necessary, use suitable
+washers or mounting adapters. Installation must be performed in accordance with the
+instructions in the user manual.
+</p>
+
+
+
+<figure class="figure">
+    <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/63f71a2cc9c56d5529c9065eca0f5a91e616bff7/EOS/EOS_Anleitung/Eos_oG_ohne%20Connectoren_Anbringung%20Inserts_Zeichnung-1.png" alt="Montage über M4-Gewindeeinsätze" loading="lazy" style="max-width:850px; width:100%; height:auto;" />
+
+    <figcaption>
+        Figure 8. Installation using the integrated M4 threaded inserts
+    </figcaption>
+</figure>
+
+<div class="note-strip note-strip--blue">
+<strong>Note</strong>
+<p style="margin-bottom:0;">
+The maximum torque with spacers is 2 Nm.
+Without suitable spacer sleeves, the
+torque is reduced to 0.8 Nm.
+</p>
+</div>
+
+
+<h3 id="wandmontage-magneten">
+    9.9 Wall Mounting with Magnets
+</h3>
+
+<p>
+    A drilling template can be found at the end of the operating instructions.
+    The magnets shown below are neodymium magnets. Other
+    versions may differ.
+</p>
+
+<p>
+    Although neodymium magnets offer greater holding force on metallic
+    surfaces, they are only suitable for long-term outdoor use
+    to a limited extent. Please contact us for advice if needed.
+</p>
+
+<p>
+    Insert the appropriate magnets into the designated holes
+    on the back of the sensor. The magnets shown here are
+    neodymium magnets. Alternatively, ferrite
+    magnets can also be used for this step.
+</p>
+
+<p>
+    Insert the screws from the opposite side into the
+    designated holes and securely fasten the magnets to
+    the sensor housing.
+</p>
+
+<p>
+    Optionally, anti-slip covers can be placed over the magnets
+    . The anti-slip cover prevents the magnet
+    from slipping if the mounting object is exposed to vibrations or
+    if its position is changed.
+</p>
+
+<p>
+    In addition to the rear-panel mounting shown,
+    front-panel mounting is also possible. To do this, swap the positions of the magnet
+    and screw. The magnets are mounted on the front
+    and the screws on the back.
+</p>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Caution</strong>
+    <p style="margin-bottom:0;">
+        Before installation, ensure that the load-bearing capacity of the
+        mounting surface is sufficient. Severe shocks, vibrations,
+        or unsuitable surfaces can reduce the holding force of the magnets
+        and cause the sensor to fall.
+    </p>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+    <p style="margin-bottom:0;">
+        For outdoor use, the use of suitable,
+        corrosion-protected magnetic mounts is recommended.
+    </p>
+</div>
+
+<figure class="figure">
+    <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/97304da3970f858bff82fcc67cba31ae141dc81f/EOS/EOS_Anleitung/Eos_G_Montage%20Magnet_Zeichnung-1.png" alt="Montage des EOS Sensors mit Magneten" loading="lazy" />
+    <figcaption>
+        Figure 9. Wall mounting of the EOS sensor with a magnetic mount.
+   </figcaption>
+   </figure>
+   
+   <h3 id="wandmontage-klebestreifen">
+    9.10 Wall Mounting with Adhesive Strips
+</h3>
+
+<p>
+    Before using this mounting method, ensure that the surface is clean,
+    dry, smooth, and suitable for adhesion, as an uneven or dusty surface
+    can impair the adhesive strips’ hold.
+</p>
+
+<p>
+    Avoid mounting on rough, porous, or damp
+    surfaces, as this can reduce the adhesive strength and cause the
+    mount to come loose.
+</p>
+
+<p>
+    After applying the adhesive strips, press the mount firmly for a few seconds
+    to ensure optimal adhesion between the adhesive strips and the surface
+    .
+</p>
+
+<p>
+    Apply the double-sided adhesive tape to the area shown
+    on the back of the sensor. The tape should be large enough
+    to ensure a secure hold.
+</p>
+
+<p>
+    When mounting with adhesive strips, make sure that the adhesive strips
+    adhere completely and that no corners come loose.
+</p>
+
+<p>
+    This mounting option can be used for both the threaded T-variant and
+    the F-variant (“flat variant”).
+</p>
+
+<figure class="figure">
+    <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/5e17ffb2e8ff508509aab349aae127da67e34a4f/EOS/EOS_Anleitung/Eos_G_Montage%20Klebepad_Zeichnung-1.png
+" alt="Montage mit Klebestreifen" loading="lazy" style="max-width:850px; width:100%; height:auto;" />
+
+    <figcaption>
+        Figure 10. Positioning the adhesive pad on the back of the housing
+    </figcaption>
+</figure>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Caution</strong>
+    <p style="margin-bottom:0;">
+        The adhesion of the adhesive strips may be impaired by dust, moisture,
+        grease, rough surfaces, or insufficient contact pressure
+        .
+    </p>
+</div>
+
+<h3 id="vorderwandmontage-blindnietmuttern">
+    9.11 Front-wall mounting with blind rivet nuts
+</h3>
+
+<p>
+    A drilling template can be found at the end of the operating instructions.
+ <strong>   Front-panel mounting</strong> is used when you want to attach the
+    front of the ApolloN-O sensor to the wall of the object
+    on which the sensor is to be installed.
+</p>
+
+<p>
+    The front side is the side with the opening in the center, on which
+    the logo is also visible.
+</p>
+
+<p>
+    This mounting method is the <strong>preferred option</strong> because it
+    allows for easy battery or SIM card replacement by simply
+    loosening the screws (unlike front-panel mounting
+    with blind rivets).
+</p>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+    <p style="margin-bottom:0;">
+        Activate the sensor before beginning installation.
+    </p>
+</div>
+
+<p>
+   <strong>Step 1:</strong>
+    Depending on the sensor type (radar and ToF only), drill the appropriate
+    holes in the wall where you want to mount the sensor.
+    Use the drilling template for this.
+</p>
+
+<p>
+    The holes for the blind rivet nuts should have a diameter
+    of 6.1 mm.
+</p>
+
+<p>
+   <strong>Step 2:</strong>
+    Now secure the blind rivet nuts using a suitable tool.
+    Use the spacer plate and insert the screws into the tabs as
+    shown in the illustration.
+</p>
+
+<p>
+    Tighten the screws to a maximum torque of 2 Nm.
+</p>
+
+<p>
+    If continuous vibration is expected during operation,
+    we recommend using threadlocker.
+</p>
+
+<h3 id="montage-flansch">
+    9.12 Installation with Flange
+</h3>
+
+<p>
+    Use standard M4 screws for fastening.
+    When screwing in the screws, be sure not to exceed the
+    maximum screw-in depth of 7.7 mm into the thread.
+    Screwing in too deeply can damage the housing
+</p>
+
+<p>
+    Screwing the screws in too deeply can damage the housing
+    or the internal components.
+</p>
+
+<p>
+    Select the screw length according to the installation conditions
+    .
+</p>
+
+<figure class="figure">
+    <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/7a6db212419e957532fc7277ccaa375ad10573d7/EOS/EOS_Anleitung/Eos_G_Montage%20Edelstahlhalter_Zeichnung-1.png" alt="Montage mit Flansch" loading="lazy" style="max-width:850px; width:100%; height:auto;" />
+
+    <figcaption>
+        Figure 11. Mounting the sensor with a flange
+    </figcaption>
+</figure>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Caution</strong>
+    <p style="margin-bottom:0;">
+        Do not exceed the maximum screw-in depth of 7.7 mm
+        . Otherwise, the housing, threaded inserts, or internal
+        components may be damaged.
+    </p>
+</div>
+
+<h3 id="montage-edelstahlhalter-90">
+    9.13 Installation with 90° Stainless Steel Bracket for Wall and Ceiling Mounting
+</h3>
+
+<p>
+    The optional 90° stainless steel bracket enables secure wall
+    or ceiling mounting of the EOS sensor. The sensor is secured
+    to the mounting adapter using four M4x10 screws.
+</p>
+
+<p>
+    The mounting adapter is attached to the threaded holes provided for this purpose
+    on the back of the sensor. Ensure
+    that all screws are tightened evenly to ensure a
+    stress-free installation.
+</p>
+
+<p>
+    The stainless steel bracket can then be secured to the
+    desired mounting surface using suitable
+    M8 screws and appropriate fastening materials. The selection of
+    fastening materials depends on the nature of the
+    wall or ceiling structure.
+</p>
+
+<p>
+    During installation, ensure that the sensor is in the
+    intended measurement position and that the detection range
+    is not obstructed by structural components or other objects
+    .
+</p>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Caution</strong>
+    <p style="margin-bottom:0;">
+        Check the load-bearing capacity of the mounting surface before installation
+        . Insufficient fastening can cause the
+        sensor to fall, resulting in property damage or injury.
+    </p>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+    <p style="margin-bottom:0;">
+        Standard
+        M8 screws and mounting hardware suitable for the respective surface
+        are recommended for securing the stainless steel bracket.
+    </p>
+</div>
+
+<figure class="figure">
+    <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/813a08a8f2f59c6805090e419d01fcf160b481be/EOS/EOS_Anleitung/Eos_G_Montage%20Edelstahlhalter%2090%C2%B0%20Zeichnung-1.png" alt="Montage des EOS Sensors mit Edelstahlhalter 90 Grad" loading="lazy" />
+    <figcaption>
+        Figure 12. Mounting the EOS Sensor with a Stainless Steel Bracket
+        </figcaption>
+        </figure>
+
+<h3 id="inbetriebnahme">
+    10. Commissioning and Configuration
+</h3>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+
+    <p style="margin-bottom:0;">
+        Please note that using knives or other
+        sharp objects may damage the housing or electronics
+        . There are two Hall sensors
+        (magnetic field switches) on the sensor. The following diagram shows the location of the
+        Hall sensors and the recommended placement of the magnets.
+    </p>
+</div>
+
+<figure class="figure">
+   <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/813a08a8f2f59c6805090e419d01fcf160b481be/EOS/EOS_Anleitung/Eos_Positionen%20M1%20M2%20SMA%20M12%20LED-1.jpg" alt="Positionen M1 M2 SMA M12 LED" loading="lazy" style="max-width:850px; width:100%; height:auto;" />
+
+    <figcaption>
+        Figure 13. Positions of M1, M2, SMA, M12, and LED
+    </figcaption>
+</figure>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th style="width:10%;">Position</th>
+                <th style="width:25%;">Description</th>
+                <th>Function</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>M1</strong></td>
+                <td>Magnetic switch 1</td>
+                <td>
+                    <ul>
+                        <li>When the sensor is turned off, placing the magnet on it for 2 to 8 seconds will activate the sensor and trigger BLE advertising</li>
+                        <li>If the sensor is turned on, the following functions are active:</li>
+                        <li>Magnet is in contact for 0–2 seconds: BLE advertising</li>
+                        <li>Magnet is applied for 2–8 seconds: Data transmission is triggered, and</li>
+                        <li>Magnet is applied for &gt;8 seconds: Device reboots</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>M2</strong></td>
+                <td>Magnetic switch 2</td>
+                <td>Custom functions can be implemented</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="inbetriebnahme-ble">
+    10.1 Commissioning and Configuration of the Sensor via BLE
+</h3>
+
+<ol>
+    <li>
+        All Eos variants can be activated via BLE using a smartphone.
+        To do so, simply use our LinOs app from Sentinum GmbH,
+        which you can find in the
+ <a href="https://apps.apple.com" target="_blank">       App Store</a> or <a href="https://play.google.com/store" target="_blank"> Google Play Store
+        
+        . </a>
+    </li>
+
+    <li>
+        Activate the sensor by briefly triggering the lower-left Hall sensor (M1)
+        with a magnet for at least 2 seconds.
+        The sensor should now emit a series of beeps.
+        Advertising mode will then start automatically.
+    </li>
+
+    <li>
+        You can now conveniently control the sensor via BLE from your device.
+        Make sure that Bluetooth is turned on on your phone
+        and that you are within range of the sensor
+        to be able to connect to and control it.
+    </li>
+</ol>
+
+<div style="display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap; margin:24px 0;">
+
+  <div style="flex:1; min-width:220px; text-align:center;">
+    <p><strong>Enable BLE Advertising</strong></p>
+
+    <figure style="margin:0;">
+      <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_screen12.webp" alt="BLE Advertising aktivieren" style="max-width:220px; width:100%; height:auto;" loading="lazy" />   </figure>
+        <p>BLE Advertising mode can be activated using the magnets or after activating the sensor.</p>
+  </div>
+
+  <div style="flex:1; min-width:220px; text-align:center;">
+    <p><strong>Search for a BLE Device</strong></p>
+
+    <figure style="margin:0;">
+      <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_screen13.webp" alt="BLE Gerät suchen" style="max-width:220px; width:100%; height:auto;" loading="lazy" />
+    </figure>
+    <p>Use the “Search” button to search for the sensor via BLE.</p>
+    </div>
+
+    <p>
+<div style="flex:1; min-width:220px; text-align:center;">
+    <p><strong>Connect to the sensor via BLE</strong></p>
+
+    <figure style="margin:0;">
+     <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/image-png-Jun-20-2025-11-57-38-6991-AM.png" alt="Mit Sensor verbinden" style="max-width:220px; width:100%; height:auto;" loading="lazy" />
+    </figure>
+
+    <p>
+      Select the correct sensor and confirm by
+      clicking “Eos.”
+    </p>
+  </div>
+
+</div>
+
+<div style="display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap; margin:24px 0;">
+
+  <div style="flex:1; min-width:220px; text-align:center;">
+    <p><strong>Connect to the sensor via BLE</strong></p>
+
+    <figure style="margin:0;">
+      <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/image-png-Jun-20-2025-11-57-56-2740-AM.png" alt="BLE Advertising aktivieren" style="max-width:220px; width:100%; height:auto;" loading="lazy" />   </figure>
+        <p>Click the “Connect” button</p>
+  </div>
+
+  <div style="flex:1; min-width:220px; text-align:center;">
+    <p><strong>Configure the sensor via BLE</strong></p>
+
+    <figure style="margin:0;">
+      <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/image-png-Jun-20-2025-11-58-03-2352-AM.png" alt="BLE Gerät suchen" style="max-width:220px; width:100%; height:auto;" loading="lazy" />
+    </figure>
+    <p>Now use the “Configure” button to set parameters.</p>
+    </div>
+
+    <p>
+<div style="flex:1; min-width:220px; text-align:center;">
+    <p><strong>Configure the sensor via BLE</strong></p>
+
+    <figure style="margin:0;">
+     <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/image-png-Jun-20-2025-11-58-10-2211-AM.png" alt="Mit Sensor verbinden" style="max-width:220px; width:100%; height:auto;" loading="lazy" />
+    </figure>
+
+    <p>
+     You can trigger a transmission using the “Trigger Send” button. Tap the desired table entry and change the values. Confirm by clicking the “Update &amp; Reboot” or “Update” button at the bottom. “Update &amp; Reboot” forces a reboot in addition to applying the changes; “Update” takes effect during the next measurement or transmission.
+    </p>
+  </div>
+
+</div>
+
+<h3 id="akustisches-signal-und-blinkmuster">
+    10.2 Audible Signal and Flashing Pattern
+</h3>
+
+<ul>
+    <li>
+        When the device is turned on, an audible signal sounds,
+        consisting of several rising tones. This sequence of tones
+        indicates that the sensor has been successfully activated.
+    </li>
+
+    <li>
+        When the device is turned off, several descending tones are played,
+        which acoustically confirm that the device is shutting down.
+    </li>
+
+    <li>
+        When establishing or disconnecting a Bluetooth (BLE) connection,
+        the sensor also emits an audible signal that confirms the
+        connection status.
+    </li>
+
+    <li>
+        There are also flashing codes described in the following table
+        .
+    </li>
+</ul>
+
+
+
+<h3 id="klappenoeffnung">
+    11. Flap Opening Detection with Accelerometer and Tilt Detection
+</h3>
+
+<p>
+    The Apollon sensor is equipped with an integrated 3-axis accelerometer of the type used for the reliable detection of changes in motion and orientation. One of the key functions of this sensor is the detection of the opening of flaps, lids, or housings, as typically found in industrial applications.
+</p>
+
+<ol>
+    <li>
+        Position Detection in Standby Mode:
+        <ul>
+            <li>When the flap is closed, the sensor is in a defined, stable position.</li>
+            <li>The LIS2DTW12 continuously measures acceleration along the X, Y, and Z axes.</li>
+            <li>The so-called static acceleration (caused primarily by Earth’s gravity) allows the absolute position of the flap to be uniquely determined.</li>
+        </ul>
+    </li>
+
+    <li>
+        Change in tilt or movement:
+        <ul>
+            <li>When the flap is opened or moved, the sensor’s orientation in space changes.</li>
+            <li>The sensor detects this change through a significant deviation in the measured acceleration values on at least one axis.</li>
+            <li>This change is interpreted as a trigger event.</li>
+        </ul>
+    </li>
+
+    <li>
+        Threshold-based detection:
+        <ul>
+            <li>In the Apollon’s firmware setup, a tilt angle or motion threshold can be defined (e.g., a change of 15, not ultra-low power mode)</li>
+            <li>As soon as the measured values exceed this threshold, a flap opening event is registered.</li>
+        </ul>
+    </li>
+</ol>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+
+    <p style="margin-bottom:0;">
+        Of course, the sensor can continue to operate very energy-efficiently by setting the angle measurement frequency to a correspondingly high value, e.g., 5 minutes. In this case, the measurement is negligible compared to the rest of the power consumption.
+    </p>
+</div>
+
+<ol start="4">
+    <li>
+        Optional: Interrupt-controlled operation:
+        <ul>
+            <li>The sensor supports low-power modes triggered by interrupts.</li>
+            <li>This means that the sensor remains in a power-saving state and only triggers an interrupt to the microcontroller when motion is detected—ideal for extending battery life.</li>
+            <li><strong>Disadvantage: The angle cannot be adjusted and is fixed at 65°.</strong></li>
+        </ul>
+    </li>
+</ol>
+
+<ol start="5">
+    <li>
+   Event processing and data transmission:
+   <ul>
+<li>After an opening is detected, the event is logged in the internal memory.</li>
+<li>Depending on the configuration, a data packet can be sent immediately via LoRaWAN, BLE, or another network protocol to report the event.</li></ul>
+    </li>
+</ol>
+
+<h4 style="margin-top:24px; margin-bottom:12px; font-family:'Montserrat', Arial, sans-serif; font-weight:600;">
+    Advantages of this method
+</h4>
+
+<ul>
+    <li>
+        No mechanical components required (compared to reed
+        or magnetic switches)
+    </li>
+    <li>
+        Insensitive to magnetic field interference
+    </li>
+    <li>
+        Easy retrofitting or customization via software parameters
+    </li>
+</ul>
+
+<div class="note-strip note-strip--green">
+    <strong>Advantage</strong>
+    <p style="margin-bottom:0;">
+        Flap-opening detection is performed entirely via sensors using
+        acceleration and tilt data. This eliminates the need for any additional
+        external switches or magnetic contacts.
+    </p>
+</div>
+
+
+
+<h3 id="kommunikation">
+    12. Communication with the Interface
+</h3>
+
+<p>
+    Detailed information on configuring sensor communication,
+    including join behavior, can be found—depending on the version—in the respective
+    generic
+ <a href="https://docs.sentinum.de/lorawan" target="_blank" rel="noopener noreferrer">   
+        LoRaWAN®
+    , </a>
+ <a href="https://docs.sentinum.de/mioty" target="_blank" rel="noopener noreferrer">    Mioty® 
+    or
+ </a><a href="https://docs.sentinum.de/cellular" target="_blank" rel="noopener noreferrer">   
+        Cellular (NB-IoT and LTE-M1)
+    
+ </a>   documentation.
+</p>
+
+<p>
+    Furthermore, you can find all documents related to the generic documentation at
+ <a href="https://docs.sentinum.de/wichtig-produktübergreifende-dokumentation-für-sensoren" target="_blank" rel="noopener noreferrer">   
+        https://docs.sentinum.de/wichtig-produktübergreifende-dokumentation-für-sensoren
+    . </a>
+</p>
+
+<h3 id="lorawan-join-verhalten">
+    12.1 LoRaWAN Join Behavior
+</h3>
+
+<p>
+    Before telemetry data can be sent via LoRaWAN, the device must
+    establish a connection to the network. To do this, the device sends
+    join requests until a join accept is successfully received.
+</p>
+
+<p>
+    As a compromise between power consumption and a rapid join, the
+    transmission intervals for the join requests gradually increase. In addition, the
+    data rate is varied (initially a high data rate or small spreading factor,
+    then a lower data rate or larger spreading factor).
+</p>
+
+<p>
+    The join behavior strictly adheres to the requirements and recommendations of the LoRa Alliance
+    specification. Sentinum sensors implement these requirements through
+    so-called join bursts, the intervals between which increase.
+</p>
+
+<p>
+    A join burst consists of a maximum of 6 join requests with a decreasing
+    data rate (DR5–DR0) or increasing spread factor (SF7–SF12).
+</p>
+
+<p>
+    The intervals between requests increase quadratically to ensure compliance with the
+    LoRa Alliance’s specific duty cycle guidelines.
+</p>
+
+<p>
+    The LoRa Alliance mandates a decreasing duty cycle for
+    join requests according to the following table:
+</p>
+
+<p>
+    Time Duty Cycle &lt;1h 1% &lt;11h 0.1%
+</p>
+
+<p>
+    This means that in the first phase (&lt;1h), exactly as much
+    transmission budget is available as in the second phase (&lt;11h),
+    even though only one-tenth of the time is available.
+</p>
+
+<p>
+    To make maximum use of the budget, the intervals between
+    join bursts (consisting of a maximum of 6 join requests) are initially short
+    and then become longer.
+</p>
+
+<p>
+    Specifically, 2 bursts are performed in Phase 1. In Phase 2,
+    2 additional bursts are performed; starting in Phase 3, 1 burst per day
+    is performed.
+</p>
+
+<p>
+    The duration of the bursts increases from approximately 10 minutes in Phase 1,
+    to approximately 100 in Phase 2, up to 16 hours in Phase 3.
+</p>
+
+<h3 id="mioty-join-verhalten">
+    12.2 Mioty Join Behavior
+</h3>
+
+<p>
+    Before telemetry data can be sent via mioty, the device must
+    establish an initial communication link with the base station.
+</p>
+
+<p>
+    An explicit join process, as required by LoRaWAN, is not necessary.
+    Instead, the device immediately begins transmitting so-called telegrams,
+    which consist of 512-bit data packets that are in turn fragmented into up to
+    12 subpackets and distributed across different frequencies
+    and time slots (telegram splitting).
+</p>
+
+<p>
+    The first successful delivery of a telegram with a valid device ID
+    is interpreted by the backend as joining the network.
+</p>
+
+<p>
+    The device’s configuration (e.g., Device ID, Application Key) is defined in advance
+    and must match the backend’s settings.
+</p>
+
+<p>
+    If no confirmation is registered in the backend (e.g., due to missing
+    reception timestamps or missing evaluation results), the device
+    begins retrying the transmission.
+</p>
+
+<p>
+    These retries occur in so-called mioty transmission cycles.
+    The cycle duration increases progressively from an initial 5 minutes
+    (after the first attempt), through 30 minutes, up to 12 hours,
+    to comply with duty cycle specifications (&lt;1%) while simultaneously
+    minimizing energy consumption.
+</p>
+
+<p>
+    The transmission frequencies (868.0–868.6 MHz in Europe) and channels are
+    cyclically switched to avoid multiple collisions.
+</p>
+
+<p>
+    The device does not actively change the data rate, as this is
+    specified by the protocol (15.625 kbit/s for the uplink, optionally
+    4.882 kbit/s for the downlink).
+</p>
+
+<p>
+    The telegrams are resistant to interference because, upon reception, only
+    3 out of 12 subpackets need to be received correctly
+    (Forward Error Correction).
+</p>
+
+<p>
+    A complete transmission attempt consists of a telegram with
+    12 subpackets lasting approximately 1.2 seconds
+    (including guard time).
+</p>
+
+<p>
+    Upon successful registration, the device switches to a regular
+    operating mode with fixed transmission intervals.
+</p>
+
+<p>
+    If no reception occurs after several transmission cycles (typically 10–12),
+    the device pauses for 24 hours before a new
+    initialization attempt is initiated.
+</p>
+
+<h3 id="cellular-join-verhalten">
+    12.3 Cellular Join Behavior (NB-IoT and LTE-M1)
+</h3>
+
+<p>
+    Before telemetry data can be transmitted via cellular (NB-IoT or LTE-M1), the device must perform the standardized network join procedure according to 3GPP (Release 13 and later).
+</p>
+
+<p>
+    To do this, the device first scans the LTE frequency range (e.g., Band 8 or Band 20 for Europe) and searches for available cells.
+</p>
+
+<p>
+    After successful synchronization (PSS/SSS) and decoding of the System Information Block (SIB), the device initiates the attach process.
+</p>
+
+<p>
+    This process includes an RRC Connection Request, NAS Authentication, Security Setup, and the establishment of a PDP or PDU context (APN, IP address).
+</p>
+
+<p>
+    If the initial network attachment fails (e.g., due to no reception, rejected authentication, or no PDU context), a retry cycle begins.
+</p>
+
+<p>
+    The retry cycles are subject to an exponential backoff: After the first failure, the next attempt occurs after approximately 15 seconds, followed by 60 seconds, 5 minutes, and up to 6 hours.
+</p>
+
+<p>
+    The maximum number of join attempts per day is limited by the carrier, e.g., to 6 or 8 attempts.
+</p>
+
+<p>
+    The cellular modems strictly adhere to the 3GPP and GSMA guidelines for network access control (Access Control Mechanism).
+</p>
+
+<p>
+    Both NB-IoT and LTE-M1 use Coverage Enhancement Levels (CE Levels 0–2) to ensure successful connection even in areas with poor reception.
+</p>
+
+<p>
+    At CE Level 2, a message can be transmitted with up to 2,048 retransmissions.
+</p>
+
+<p>
+    Data rates vary significantly: NB-IoT typically operates at up to 250 kbit/s in the uplink and 26 kbps in the downlink, while LTE-M1 achieves uplink rates of up to 1 Mbit/s.
+</p>
+
+<p>
+    The connection duration depends on the network status and, in the worst-case scenario (CE Level 2 + backoff), can last several hours.
+</p>
+
+<p>
+    To reduce energy consumption, cellular devices employ power-saving mechanisms after a successful join:
+</p>
+
+<ul>
+    <li>
+        PSM (Power Saving Mode): The device remains in power-saving sleep mode for several hours or days and only registers itself again at the time of the next scheduled transmission.
+    </li>
+
+    <li>
+        eDRX (Extended Discontinuous Reception): The device checks for downlink messages only at specified intervals (e.g., every 20 minutes to 3 hours).
+    </li>
+    
+</ul>
+<p>If no network is found, the device stops its search after 60 minutes at the latest and enters a deep sleep state for several hours. Only then does a new network search and join cycle begin. This behavior is optimized by the manufacturer and is based on recommendations from network operators as well as requirements for high energy efficiency in mass IoT deployment.</p>
+
+
+
+<h3 id="pflege">
+    13. Maintenance and Cleaning
+</h3>
+
+<p>
+    To ensure that the sensor functions reliably and has a long service life,
+    it should be maintained regularly. Please observe the following instructions:
+</p>
+
+<ul>
+    <li>
+        Clean the housing, especially the sensor’s ventilation slots, with
+        a dry or slightly damp microfiber cloth. Make sure
+        that no moisture enters the device.
+    </li>
+
+    <li>
+        Clean the device regularly, especially in dusty or
+        pollen-rich environments, to ensure the sensor’s long-term
+        functionality.
+    </li>
+
+    <li>
+        Do not use cleaning agents containing alcohol or solvents,
+        as these can damage the sensor’s surface.
+    </li>
+
+    <li>
+        Do not use compressed air or other aggressive cleaning methods,
+        as these can damage sensitive sensor components.
+    </li>
+
+    <li>
+        Hard deposits (e.g., limescale, oil, or grease) can impair measurement accuracy.
+        If necessary, clean the sensor promptly using a soft, damp cloth and a mild
+        cleaning agent.
+    </li>
+
+    <li>
+        For optical or radar-based sensors, the lenses or
+        antenna surfaces should be checked regularly for dirt or scratches.
+    </li>
+
+    <li>
+        Regularly check that the sensor and its mounting are securely fastened.
+    </li>
+</ul>
+
+
+
+<h3 id="batteriewechsel">
+    14. Battery Replacement and SIM Card Replacement
+</h3>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+
+    <p style="margin-bottom:0;">
+        Please familiarize yourself with the general safety regulations
+        regarding the lithium batteries used. These
+        can be found at
+ <a href="https://docs.sentinum.de/sensoren-und-produktreihen" target="_blank" rel="noopener noreferrer">        https://docs.sentinum.de/sensoren-und-produktreihen      
+        . </a>
+    </p>
+</div>
+
+<div class="note-strip note-strip--red">
+    <strong>Warning</strong>
+
+    <p style="margin-bottom:0;">
+        Improper handling of lithium batteries (e.g., damage,
+        incorrect charging, short circuits, or high temperatures) can lead to fire,
+        explosion, or injury. Improper handling includes,
+        in particular, mechanical damage, overcharging, deep discharge,
+        short-circuiting, operation outside the specified temperature ranges,
+        and use or disposal not in accordance with the intended purpose.
+    </p>
+</div>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Communication standard</th>
+                <th>Approved batteries</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>LoRaWAN® and mioty®</strong></td>
+                <td>
+                    <ul>
+                        <li>AA LiSOCl₂ cell (see SAFT LS14500)</li>
+                        <li>Energizer® Ultimate Lithium Batteries – AA</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>S-EOS2C-XXX</strong></td>
+                <td>
+                    <ul>
+                        <li>C LiSOCl₂ spiral cell</li>
+                        <li>C LiMnO₂ spiral cell (see SAFT LM26500)</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Parameters</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Torque</td>
+                <td>1.5 Nm maximum</td>
+            </tr>
+            <tr>
+                <td>SIM Card Format</td>
+                <td>Nano SIM 4FF</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+
+    <p>
+        Lithium batteries must not be disposed of with household waste.
+        They contain valuable raw materials as well as potentially hazardous
+        substances and are therefore subject to legal take-back obligations.
+    </p>
+
+    <ul>
+        <li>
+            Dispose of used or defective batteries exclusively at
+            appropriate collection points (e.g., recycling centers or retailers).
+        </li>
+        <li>
+            Be sure to protect the battery from
+            short circuits before disposal (e.g., by covering the terminals with tape).
+        </li>
+        <li>
+            Damaged, swollen, or leaked batteries must be
+            handled with special care and disposed of separately.
+        </li>
+        <li>
+            Do not throw batteries into a fire and avoid
+            mechanical damage.
+        </li>
+    </ul>
+
+    <p style="margin-bottom:0;">
+        Proper disposal helps protect the environment and
+        human health.
+    </p>
+</div>
+<figure class="figure">
+    <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/7b6c69ac68b160cc5e1ed39fe58aca3cde292336/EOS/EOS_Anleitung/Eos_G_AA%20Batteriewechsel%20Zeichnung-1.png" alt="Batteriewechsel EOS Sensor" loading="lazy" style="max-width:850px; width:100%; height:auto;" />
+
+    <figcaption>
+        Figure 13. Replacing the Battery</figcaption></figure>
+
+<h3 id="simkarte">
+15. Inserting SIM Cards
+</h3>
+<figure class="figure">
+    <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/ba55641e43c77ddefd978ac8d7894777766e6a0f/EOS/EOS_Anleitung/EOS_simKarte.png" alt="SIM-Kartenhalter EOS Sensor" loading="lazy" style="max-width:850px; width:100%; height:auto;" />
+
+    <figcaption>
+        Figure 14. Inserting the SIM card</figcaption></figure>
+
+<h3 id="zertifizierung">
+16. Marking and Certification
+</h3>
+<br /><br />
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png" alt="Supported radio technologies" style="max-width:750px; height:auto;" loading="lazy" />
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png" alt="trash bin Logo" style="max-width:340px; height:auto;" loading="lazy" />
+</div>
+
+<h3 id="bohrschablonen">
+    17. Drilling templates for installation
+</h3>
+
+<figure class="figure">
+    <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/08aca93f042bc5f889be41b2832e63ff967e168e/EOS/EOS_Anleitung/Eos_Bohrschablone%20Zeichnung-1.jpg" alt="Bohrschablone EOS Sensor" loading="lazy" style="max-width:900px; width:100%; height:auto;" />
+
+    <figcaption>
+        Figure 15. Drilling template for installing the EOS sensor
+    </figcaption>
+</figure>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+    <p style="margin-bottom:0;">
+        Use the drilling template shown to precisely position
+        the mounting holes during sensor installation.
+    </p>
+</div>
+
+<br aria-hidden="true" />
+
+
+
+<div class="footer-note">
+  <p>© Sentinum GmbH - All rights reserved.</p>
+  <p>All content in this document, including text, tables, and images, is protected by copyright and is the property of Sentinum GmbH.</p>
+  <p>Unless otherwise stated, all images are subject to the copyright of Sentinum GmbH.</p>
+  <p>Reproduction, distribution, or use, even in part, is not permitted without express written permission.</p>
+  <p style="padding-left:14px; font-style:italic;">Subject to technical changes. All information is provided without warranty.</p>
+</div>
+
+</div>
