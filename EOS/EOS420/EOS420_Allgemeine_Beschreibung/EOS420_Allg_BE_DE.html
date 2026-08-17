@@ -1,0 +1,908 @@
+
+
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* ---------- Tables ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+  code,
+.inline-code {
+    background-color: #f3f4f6;
+    border: 1px solid #d0d7de;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9em;
+    color: #111827;
+    display: inline-block;
+}
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+</style>
+
+
+<div class="pdf-viewer">
+<iframe src="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/4615ebe69dcc14c40d0c3876a985bd578611018d/EOS/EOS420/EOS420_Allgemeine_Beschreibung/EOS420_Allgemeine_Beschreibung_DE.pdf" allowfullscreen title="Blueprint Sensor Integration PDF">
+</iframe>
+</div>
+
+<div class="pdf-download">
+  📄 Sie können das PDF oben ansehen oder
+  <a href="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/4615ebe69dcc14c40d0c3876a985bd578611018d/EOS/EOS420/EOS420_Allgemeine_Beschreibung/EOS420_Allgemeine_Beschreibung_DE.pdf"
+   target="_blank">
+   <strong>hier herunterladen</strong> 
+  </a>.
+</div>
+
+
+<div class="main-toc">
+    <strong>Inhaltsverzeichnis</strong>
+
+    <ol>
+        <li>Funktionen</li>
+        <li>Anwendungsbeispiele</li>
+        <li>Allgemeine Beschreibung</li>
+        <li>Versionen</li>
+    </ol>
+</div>
+
+<h3 id="eos-radarsensor-telemetrie">
+ EOS Radarsensor Telemetrie-Ressourcen
+</h3>
+
+<p>
+Die EOS Radar Serie ermöglicht eine leistungsstarke und drahtlose
+IoT-Füllstandsüberwachung auf Basis moderner Radartechnologie.
+Die Telemetrie-Ressourcen stellen sämtliche gemessenen Sensorwerte,
+Statusinformationen sowie Alarmzustände in strukturierter Form zur
+Weiterverarbeitung bereit.
+</p>
+
+<p>
+Neben den Radar-Messwerten werden Informationen zur Batteriekapazität,
+Batteriespannung, Sensortemperatur sowie Lage- und Statusdaten des
+Sensors bereitgestellt. Dadurch können Anwendungen zur
+Füllstandsüberwachung, Asset-Verfolgung und Zustandsüberwachung
+effizient umgesetzt werden.
+</p>
+
+<p>
+Die Telemetrie-Ressourcen können je nach Kommunikationsvariante über
+die unterstützten IoT-Technologien übertragen und innerhalb von
+Plattformen, Dashboards oder Backend-Systemen ausgewertet werden.
+</p>
+
+<p>
+Zusätzlich stehen Alarm- und Ereignisinformationen zur Verfügung,
+beispielsweise für Radaralarme, Öffnungserkennung,
+Vandalismusereignisse sowie Benutzeraktionen.
+</p>
+
+<p>
+Dieses Dokument beschreibt sämtliche Telemetrie-Ressourcen der
+EOS Radar Serie einschließlich Schlüssel, Datentypen,
+Wertebereiche und Bedeutungen der einzelnen Felder.
+</p>
+
+<h3 id="funktionen">
+1. Funktionen
+</h3>
+
+<ul>
+    <li>Drahtlose IoT-Füllstandsüberwachung über externe 4-20-mA-Sensoren</li>
+
+    <li>
+        Kompatibel mit hydrostatischen Füllstandssonden und industriellen
+        4-20-mA-Sensoren
+    </li>
+
+    <li>
+        Kontinuierliche Füllstandsüberwachung in Tanks, Behältern und Schächten
+    </li>
+
+    <li>
+        Aktivitätserfassung und Erschütterungserkennung über integrierten
+        Beschleunigungssensor
+    </li>
+
+    <li>
+        M12-Stecker für die sichere Integration externer Sensoren
+    </li>
+
+    <li>
+        Erhältlich mit mioty®, LoRaWAN®, NB-IoT und LTE-CAT-M1
+    </li>
+
+    <li>
+        Ortungsoptionen je nach Kommunikationsversion:
+        <ul>
+            <li>
+                mioty®: GNSS mit GPS, Galileo, GLONASS, BeiDou
+            </li>
+            <li>
+                LoRaWAN®: GNSS-Scan mit GPS und BeiDou, WLAN-SSID-Scan
+            </li>
+            <li>
+                Mobilfunk: GNSS mit GPS, Galileo, GLONASS, BeiDou und Cell Locate
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        Gehäuse mit Schutzart IP69K für raue Industrieumgebungen
+    </li>
+
+    <li>
+        Betriebstemperatur: −20 °C bis +80 °C
+    </li>
+
+    <li>
+        Austauschbare Batterien:
+        <ul>
+            <li>EOS-Version: 3 × AA-LiSOCl₂-Zellen</li>
+            <li>EOS2C-Version: 2 × C-LiMnO₂-Zellen</li>
+        </ul>
+    </li>
+
+    <li>
+        Provisionierung und Konfiguration über BLE
+    </li>
+
+    <li>
+        SMA-Versionen für den Anschluss einer externen Antenne erhältlich
+    </li>
+
+    <li>
+        Integrierter Beschleunigungssensor zur Stoßerkennung und Aktivitätserfassung
+    </li>
+
+    <li>
+        Erhältlich als flache Ausführung oder mit 1,5-Zoll-Gewinde
+    </li>
+</ul>
+
+<h3 id="anwendungsbeispiele">
+2. Anwendungsbeispiele
+</h3>
+
+<ul>
+    <li>
+        Kontinuierliche Füllstandsüberwachung in Tanks, Behältern und
+        Schächten mithilfe externer 4-20-mA-Sensoren
+    </li>
+
+    <li>
+        Füllstandsmessung mit hydrostatischen Sonden in industriellen
+        und kommunalen Anwendungen
+    </li>
+
+    <li>
+        Überwachung unterirdischer Infrastruktur wie Schächte,
+        Kammern, Rückhaltebecken und unterirdische Tanks
+    </li>
+
+    <li>
+        Füllstandsüberwachung von Wasser und Abwasser in
+        Versorgungsbetrieben, Kläranlagen und abgelegenen Außenanlagen
+    </li>
+
+    <li>
+        Intelligente Tanküberwachung für Industrieflüssigkeiten,
+        Prozessmedien, Chemikalien und Additive
+    </li>
+</ul>
+
+<h3 id="allgemeine-beschreibung">
+3. EOS420 Allgemeine Beschreibung
+</h3>
+
+<ul>
+    <li>
+        Nachrüstung bestehender 4-20-mA-Füllstandssonden in drahtlose
+        IoT-Infrastrukturen
+    </li>
+
+    <li>
+        Fernüberwachung von verteilten Lagertanks und dezentralen
+        Industriestandorten
+    </li>
+
+    <li>
+        Überwachung von Nachfüllmengen, Füllständen und Beständen bei
+        flüssigen Medien
+    </li>
+
+    <li>
+        Überwachung im Außenbereich und in rauen Umgebungen,
+        in denen keine kabelgebundene Kommunikation verfügbar ist
+    </li>
+
+    <li>
+        Mobile Tank- und Containerüberwachung mit GNSS-basierter Ortung
+    </li>
+</ul>
+
+<h3 id="versionen">
+4. Versionen
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Artikelnummer</th>
+                <th>Batterie</th>
+                <th>Modell</th>
+                <th>Verfügbar</th>
+                <th>Konfiguration</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td><strong>S-EOS-LOEU-420-F</strong></td>
+                <td>3xAA</td>
+                <td>Flach</td>
+                <td style="color:#00a651; font-weight:700;">✔</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-MIOTY-420-F</strong></td>
+                <td>3xAA</td>
+                <td>Flach</td>
+                <td style="color:#00a651; font-weight:700;">✔</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-NBM1-420-F</strong></td>
+                <td>3xAA</td>
+                <td>Flach</td>
+                <td style="color:#00a651; font-weight:700;">✔</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-LOEU-420-F-SMA</strong></td>
+                <td>3xAA</td>
+                <td>Flach</td>
+                <td style="color:#00a651; font-weight:700;">✔</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-MIOTY-420-F-SMA</strong></td>
+                <td>3xAA</td>
+                <td>Flach</td>
+                <td style="color:#00a651; font-weight:700;">✔</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-NBM1-420-F-SMA</strong></td>
+                <td>3xAA</td>
+                <td>Flach</td>
+                <td style="color:#00a651; font-weight:700;">✔</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-LOEU-420-F-SMA-M12</strong></td>
+                <td>3xAA</td>
+                <td>Flach</td>
+                <td style="color:#ff0000; font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-MIOTY-420-F-SMA-M12</strong></td>
+                <td>3xAA</td>
+                <td>Flach</td>
+                <td style="color:#ff0000; font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-NBM1-420-F-SMA-M12</strong></td>
+                <td>3xAA</td>
+                <td>Flach</td>
+                <td style="color:#ff0000; font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-LOEU-420-T</strong></td>
+                <td>3xAA</td>
+                <td>1,5-Zoll-Gewinde</td>
+                <td style="color:#00a651; font-weight:700;">✔</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-MIOTY-420-T</strong></td>
+                <td>3xAA</td>
+                <td>1,5-Zoll-Gewinde</td>
+                <td style="color:#00a651; font-weight:700;">✔</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-NBM1-420-T</strong></td>
+                <td>3xAA</td>
+                <td>1,5-Zoll-Gewinde</td>
+                <td style="color:#00a651; font-weight:700;">✔</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-LOEU-420-T-SMA</strong></td>
+                <td>3xAA</td>
+                <td>1,5-Zoll-Gewinde</td>
+                <td style="color:#00a651; font-weight:700;">✔</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-MIOTY-420-T-SMA</strong></td>
+                <td>3xAA</td>
+                <td>1,5-Zoll-Gewinde</td>
+                <td style="color:#00a651; font-weight:700;">✔</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-NBM1-420-T-SMA</strong></td>
+                <td>3xAA</td>
+                <td>1,5-Zoll-Gewinde</td>
+                <td style="color:#00a651; font-weight:700;">✔</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-LOEU-420-T-SMA-M12</strong></td>
+                <td>3xAA</td>
+                <td>1,5-Zoll-Gewinde</td>
+                <td style="color:#ff0000; font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-MIOTY-420-T-SMA-M12</strong></td>
+                <td>3xAA</td>
+                <td>1,5-Zoll-Gewinde</td>
+                <td style="color:#ff0000; font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-NBM1-420-T-SMA-M12</strong></td>
+                <td>3xAA</td>
+                <td>1,5-Zoll-Gewinde</td>
+                <td style="color:#ff0000; font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+    <div style="color:#ff0000; font-weight:700;">
+        X = Auf Anfrage
+    </div>
+</div>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Artikelnummer</th>
+                <th>Batterie</th>
+                <th>Modell</th>
+                <th>Verfügbar</th>
+                <th>Konfiguration</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td><strong>S-EOS2C-LOEU-420-F</strong></td>
+                <td>2xC</td>
+                <td>Flach</td>
+                <td style="color:#ff0000; font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-MIOTY-420-F</strong></td>
+                <td>2xC</td>
+                <td>Flach</td>
+                <td style="color:#ff0000; font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-NBM1-420-F</strong></td>
+                <td>2xC</td>
+                <td>Flach</td>
+                <td style="color:#ff0000; font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-LOEU-420-F-SMA</strong></td>
+                <td>2xC</td>
+                <td>Flach</td>
+                <td style="color:#ff0000; font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-MIOTY-420-F-SMA</strong></td>
+                <td>2xC</td>
+                <td>Flach</td>
+                <td style="color:#ff0000; font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-NBM1-420-F-SMA</strong></td>
+                <td>2xC</td>
+                <td>Flach</td>
+                <td style="color:#ff0000; font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-LOEU-420-F-SMA-M12</strong></td>
+                <td>2xC</td>
+                <td>Flach</td>
+                <td style="color:#ff0000; font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-MIOTY-420-F-SMA-M12</strong></td>
+                <td>2xC</td>
+                <td>Flach</td>
+                <td style="color:#ff0000; font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-NBM1-420-F-SMA-M12</strong></td>
+                <td>2xC</td>
+                <td>Flach</td>
+                <td style="color:#ff0000; font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-LOEU-420-T</strong></td>
+                <td>2xC</td>
+                <td>1,5-Zoll-Gewinde</td>
+                <td style="color:#ff0000; font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-MIOTY-420-T</strong></td>
+                <td>2xC</td>
+                <td>1,5-Zoll-Gewinde</td>
+                <td style="color:#ff0000; font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-NBM1-420-T</strong></td>
+                <td>2xC</td>
+                <td>1,5-Zoll-Gewinde</td>
+                <td style="color:#ff0000; font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-LOEU-420-T-SMA</strong></td>
+                <td>2xC</td>
+                <td>1,5-Zoll-Gewinde</td>
+                <td style="color:#ff0000; font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-MIOTY-420-T-SMA</strong></td>
+                <td>2xC</td>
+                <td>1,5-Zoll-Gewinde</td>
+                <td style="color:#ff0000; font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-NBM1-420-T-SMA</strong></td>
+                <td>2xC</td>
+                <td>1,5-Zoll-Gewinde</td>
+                <td style="color:#ff0000; font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-LOEU-420-T-SMA-M12</strong></td>
+                <td>2xC</td>
+                <td>1,5-Zoll-Gewinde</td>
+                <td style="color:#ff0000; font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-MIOTY-420-T-SMA-M12</strong></td>
+                <td>2xC</td>
+                <td>1,5-Zoll-Gewinde</td>
+                <td style="color:#ff0000; font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-NBM1-420-T-SMA-M12</strong></td>
+                <td>2xC</td>
+                <td>1,5-Zoll-Gewinde</td>
+                <td style="color:#ff0000; font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+    <div style="color:#ff0000; font-weight:700;">
+        X = Auf Anfrage
+    </div>
+</div>
+
+<br /><br />
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png" alt="Supported radio technologies" style="max-width:750px; height:auto;" loading="lazy" />
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png" alt="trash bin Logo" style="max-width:340px; height:auto;" loading="lazy" />
+</div>
+
+
+
+<div class="footer-note">
+  <p>© Sentinum GmbH - Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Texte, Tabellen und Bilder, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Sofern nicht anders angegeben, unterliegen alle Bilder dem Urheberrecht der Sentinum GmbH.</p>
+  <p>Eine Vervielfältigung, Verbreitung oder Nutzung, auch auszugsweise, ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">Technische Änderungen vorbehalten. Alle Angaben erfolgen ohne Gewähr.</p>
+</div>
+</div>
