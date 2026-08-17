@@ -1,0 +1,1141 @@
+
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+  code,
+.inline-code {
+    background-color: #f3f4f6;
+    border: 1px solid #d0d7de;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9em;
+    color: #111827;
+    display: inline-block;
+}
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+</style>
+
+
+<div class="pdf-viewer">
+<iframe src="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/6f7099dfa6e1d8d0b85d3d9c803d812d3fd94103/EOS/EOS_Konfiguration/EOS_Radarsensor_Konfigurationsparameter_DE.pdf"
+allowfullscreen
+title="Blueprint Sensor Integration PDF">
+</iframe>
+</div>
+
+<div class="pdf-download">
+  📄 Sie können das PDF oben ansehen oder
+  <a href="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/6f7099dfa6e1d8d0b85d3d9c803d812d3fd94103/EOS/EOS_Konfiguration/EOS_Radarsensor_Konfigurationsparameter_DE.pdf"
+   target="_blank">
+   <strong>hier herunterladen</strong> 
+  </a>.
+</div>
+
+
+<div class="main-toc">
+    <strong>Inhaltsverzeichnis</strong>
+
+    <ol>
+        <li>Timing und Alarm
+            <ol style="list-style:none; padding-left:20px;">
+                <li>1.1 Alarmmodus aact</li>
+            </ol>
+        </li>
+
+        <li>Radar
+            <ol style="list-style:none; padding-left:20px;">
+                <li>2.1 Zusätzliche Compile-Time Radar-Einstellung</li>
+            </ol>
+        </li>
+
+        <li>LED
+            <ol style="list-style:none; padding-left:20px;">
+                <li>3.1 LED-Anzeigen</li>
+            </ol>
+        </li>
+
+        <li>Öffnung / Neigung
+            <ol style="list-style:none; padding-left:20px;">
+                <li>4.1 Öffnungsmodus</li>
+            </ol>
+        </li>
+
+        <li>Vandalismus</li>
+
+        <li>Trigger</li>
+
+        <li>Beispiel-Kommandos</li>
+    </ol>
+</div>
+
+<h3 id="ressourcen-gruppen">
+EOS Ressourcen-Gruppen
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Modul</th>
+                <th>Gruppe</th>
+                <th>Gruppen-ID</th>
+                <th>Beschreibung</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>EOS</td>
+                <td>Timing und Alarm</td>
+                <td><code>0x00</code></td>
+                <td>Messintervall und Radar-Füllstandsalarm-Schwellen</td>
+            </tr>
+
+            <tr>
+                <td>EOS</td>
+                <td>Telemetrie</td>
+                <td><code>0x01</code></td>
+                <td>Schreibgeschützte Werte nach einer Messung</td>
+            </tr>
+
+            <tr>
+                <td>EOS</td>
+                <td>Radar</td>
+                <td><code>0x02</code></td>
+                <td>Radaraufnahme und Filtereinstellungen</td>
+            </tr>
+
+            <tr>
+                <td>EOS</td>
+                <td>LED</td>
+                <td><code>0x03</code></td>
+                <td>Einstellung der LED-Anzeige</td>
+            </tr>
+
+            <tr>
+                <td>EOS</td>
+                <td>Öffnung / Neigung</td>
+                <td><code>0x04</code></td>
+                <td>Konfiguration für Öffnungs- und Neigungsalarm</td>
+            </tr>
+
+            <tr>
+                <td>EOS</td>
+                <td>Vandalismus</td>
+                <td><code>0x05</code></td>
+                <td>Stoßbasierte Vandalismus-Erkennung</td>
+            </tr>
+
+            <tr>
+                <td>EOS</td>
+                <td>Trigger</td>
+                <td><code>0x08</code></td>
+                <td>Manuelle Messauslösung</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="timing-alarm-gruppe-0x00">
+1. Timing und Alarm - Gruppe 0x00
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Ressource</th>
+                <th>ID</th>
+                <th>Beschreibung</th>
+                <th>Schlüssel</th>
+                <th>Min</th>
+                <th>Max</th>
+                <th>Werkseinstellung</th>
+                <th>Einheit</th>
+                <th>Modulschlüssel</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Messperiode</td>
+                <td><code>0x00</code></td>
+                <td>Gibt die Periode an, in der die Messwerte erfasst werden.</td>
+                <td><code>period</code></td>
+                <td>1</td>
+                <td>660</td>
+                <td>60</td>
+                <td>min</td>
+                <td><code>XXX1</code></td>
+            </tr>
+
+            <tr>
+                <td>Delta Alarm</td>
+                <td><code>0x01</code></td>
+                <td>Änderung des gemessenen Abstandes/Füllstandes zur letzten Sendung.</td>
+                <td><code>delta</code></td>
+                <td>0,03</td>
+                <td>10,0</td>
+                <td>3,0</td>
+                <td>m</td>
+                <td><code>XXX1</code></td>
+            </tr>
+
+            <tr>
+                <td>Reguläres Sendeintervall</td>
+                <td><code>0x02</code></td>
+                <td>Anzahl der Messungen bis zur regulären Übertragung.</td>
+                <td><code>every</code></td>
+                <td>1</td>
+                <td>24</td>
+                <td>1</td>
+                <td>Messungen</td>
+                <td><code>XXX1</code></td>
+            </tr>
+
+            <tr>
+                <td>Voll-Schwele</td>
+                <td><code>0x04</code></td>
+                <td>Untere Distanzschwelle für die Voll-/Minimum-Erkennung.</td>
+                <td><code>full</code></td>
+                <td>0,0</td>
+                <td>10,0</td>
+                <td>0,2</td>
+                <td>m</td>
+                <td><code>XXX1</code></td>
+            </tr>
+
+            <tr>
+                <td>Leer-Schwelle</td>
+                <td><code>0x05</code></td>
+                <td>Obere Distanzschwelle für die Leer-/Maximum-Erkennung.</td>
+                <td><code>empty</code></td>
+                <td>0,05</td>
+                <td>23,0</td>
+                <td>10,0</td>
+                <td>m</td>
+                <td><code>XXX1</code></td>
+            </tr>
+
+            <tr>
+                <td>Distanz Hysterese</td>
+                <td><code>0x06</code></td>
+                <td>Hysterese für Distanzalarme.</td>
+                <td><code>hyst</code></td>
+                <td>0,0</td>
+                <td>1,0</td>
+                <td>0,5</td>
+                <td>m</td>
+                <td><code>XXX1</code></td>
+            </tr>
+
+            <tr>
+                <td>Aktiver Radar Alarm</td>
+                <td><code>0x07</code></td>
+                <td>Bitfeld zur Aktivierung der Radalarme.</td>
+                <td><code>aact</code></td>
+                <td>0</td>
+                <td>7</td>
+                <td>0</td>
+                <td>Bitfeld</td>
+                <td><code>XXX1</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<h3 id="alarmmodus-aact">
+1.1 Alarmmodus aact - Gruppe 0x00
+</h3>
+
+<p>
+Bit 0 aktiviert Delta-Alarm, Bit 1 aktiviert Min/Voll-Alarm und
+Bit 2 aktiviert Max/Leer-Alarm.
+</p>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>aact Wert</th>
+<th>Delta-Alarm</th>
+<th>Min/Voll-Alarm</th>
+<th>Max/Leer-Alarm</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>0</td>
+<td>aus</td>
+<td>aus</td>
+<td>aus</td>
+<td>Kein Radar-Füllstandsalarm</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>ein</td>
+<td>aus</td>
+<td>aus</td>
+<td>Nur Delta-Alarm</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>aus</td>
+<td>ein</td>
+<td>aus</td>
+<td>Nur Min/Voll-Alarm</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>ein</td>
+<td>ein</td>
+<td>aus</td>
+<td>Delta- und Min/Voll-Alarme</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>aus</td>
+<td>aus</td>
+<td>ein</td>
+<td>Nur Max/Leer-Alarm</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>ein</td>
+<td>aus</td>
+<td>ein</td>
+<td>Delta- und Max/Leer-Alarme</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>aus</td>
+<td>ein</td>
+<td>ein</td>
+<td>Min/Voll- und Max/Leer-Alarme</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>ein</td>
+<td>ein</td>
+<td>ein</td>
+<td>Delta-, Min/Voll- und Max/Leer-Alarme</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h3 id="radar-gruppe">
+2. Radar - Gruppe 0x02
+</h3>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Ressource</th>
+<th>ID</th>
+<th>Beschreibung</th>
+<th>Schlüssel</th>
+<th>Min</th>
+<th>Max</th>
+<th>Werkseinstellung</th>
+<th>Einheit</th>
+<th>Modulschlüssel</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td><code>RADAR MODE</code></td>
+<td>0x00</td>
+<td>Radar-Modus: 0 = Smart Waste, 2 = Liquid. Bei Liquid-Voreinstellung ist der Default 2, sonst 0.</td>
+<td><code>tmod</code></td>
+<td>0</td>
+<td>2</td>
+<td>2 / 0</td>
+<td>enum</td>
+<td>XXX1</td>
+</tr>
+
+<tr>
+<td><code>RADAR EFFORT</code></td>
+<td>0x01</td>
+<td>Aufwand der Radaraufnahme: 1 = niedrig, 2 = mittel, 3 = hoch. Höhere Werte können die Messqualität verbessern.</td>
+<td><code>effr</code></td>
+<td>1</td>
+<td>3</td>
+<td>2</td>
+<td>enum</td>
+<td>XXX1</td>
+</tr>
+
+<tr>
+<td><code>MINIMALE MESSDISTANZ RADAR</code></td>
+<td>0x02</td>
+<td>Start des Radar-Scanbereichs für Liquid-Anwendungen.</td>
+<td><code>rsta</code></td>
+<td>0,05</td>
+<td>3,0</td>
+<td>0,15</td>
+<td>m</td>
+<td>XXX1</td>
+</tr>
+
+<tr>
+<td><code>MAXIMALE MESSDISTANZ RADAR</code></td>
+<td>0x03</td>
+<td>Ende des Radar-Scanbereichs für Liquid-Anwendungen.</td>
+<td><code>rend</code></td>
+<td>0,05</td>
+<td>23,0</td>
+<td>10,0 / 3,0</td>
+<td>m</td>
+<td>XXX1</td>
+</tr>
+
+<tr>
+<td><code>RADAR PROFIL</code></td>
+<td>0x04</td>
+<td>Maximales A121 Radarprofil für Liquid-Anwendungen.</td>
+<td><code>prof</code></td>
+<td>1</td>
+<td>5</td>
+<td>2</td>
+<td>enum</td>
+<td>XXX1</td>
+</tr>
+
+<tr>
+<td><code>RADAR FILTER TYPE</code></td>
+<td>0x05</td>
+<td>Slow-Filter für den Messwert: 0 = aus, 1 = IIR, 2 = gleitender Mittelwert, 3 = adaptive EMA.</td>
+<td><code>rsft</code></td>
+<td>0</td>
+<td>3</td>
+<td>2</td>
+<td>enum</td>
+<td>XXX1</td>
+</tr>
+
+<tr>
+<td><code>RADAR FILTERTIEFE</code></td>
+<td>0x06</td>
+<td>Anzahl der historischen Werte, die für den Slow-Filter verwendet werden.</td>
+<td><code>rsfd</code></td>
+<td>0</td>
+<td>24</td>
+<td>3</td>
+<td>Samples</td>
+<td>XXX1</td>
+</tr>
+
+<tr>
+<td><code>SMART WASTE PRESET</code></td>
+<td>0x07</td>
+<td>Preset-Index für Smart-Waste-Anwendungen.</td>
+<td><code>wpre</code></td>
+<td>0</td>
+<td>4</td>
+<td>3</td>
+<td>enum</td>
+<td>XXX1</td>
+</tr>
+
+<tr>
+<td><code>RADAR CONFIG BLOB</code></td>
+<td>0x08</td>
+<td>Binäre Radar-Konfiguration. Bytes 0..2 entsprechen Smart-Waste seq_len, med_len und threshold.</td>
+<td><code>rcfg</code></td>
+<td>0</td>
+<td>24</td>
+<td>leer</td>
+<td>Bytes</td>
+<td>XXX1</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<h3 id="compile-time-radar">
+2.1 Zusätzliche Compile-Time Radar-Einstellung - Gruppe 0x02
+</h3>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Kconfig Symbol</th>
+<th>Werkseinstellung</th>
+<th>Min</th>
+<th>Max</th>
+<th>Einheit</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>CONFIG_SENTOS_EOS_RADAR_FILT_MAX_DEPTH</code></td>
+<td>12</td>
+<td>6</td>
+<td>24</td>
+<td>Samples</td>
+<td>Template-Kapazität des Radar-Signalfilters</td>
+</tr>
+</tbody>
+
+</table>
+</div>
+
+<h3 id="led-gruppe">
+3. LED - Gruppe 0x03
+</h3>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Ressource</th>
+<th>ID</th>
+<th>Beschreibung</th>
+<th>Schlüssel</th>
+<th>Min</th>
+<th>Max</th>
+<th>Werkseinstellung</th>
+<th>Einheit</th>
+<th>Modulschlüssel</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>LED MODUS</code></td>
+<td>0x00</td>
+<td>Legt den Umfang der LED-Anzeigen fest: 0 = aus, 1 = alle Anzeigen, 2 = nur verpflichtende Anzeigen.</td>
+<td><code>led</code></td>
+<td>0</td>
+<td>2</td>
+<td>2</td>
+<td>enum</td>
+<td>XXX1</td>
+</tr>
+</tbody>
+
+</table>
+</div>
+
+<h3 id="led-anzeigen">
+3.1 LED-Anzeigen - Gruppe 0x03
+</h3>
+
+<p>
+Verpflichtende Anzeigen: Power on, Power off, BLE Advertising,
+BLE Connected und Alarm.
+Optionale Anzeigen: Network Joined, Measurement Flash und
+Always-on Status Color.
+</p>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Wert</th>
+<th>Modus</th>
+<th>Verpflichtende Anzeigen</th>
+<th>Optionale Anzeigen</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>0</td>
+<td>Aus</td>
+<td>Deaktiviert</td>
+<td>Deaktiviert</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Alle</td>
+<td>Aktiviert</td>
+<td>Aktiviert</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Nur verpflichtend</td>
+<td>Aktiviert</td>
+<td>Deaktiviert</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<h3 id="oeffnung-neigung">
+4. Öffnung / Neigung - Gruppe 0x04
+</h3>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Ressource</th>
+<th>ID</th>
+<th>Beschreibung</th>
+<th>Schlüssel</th>
+<th>Min</th>
+<th>Max</th>
+<th>Werkseinstellung</th>
+<th>Einheit</th>
+<th>Modulschlüssel</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td><code>Öffnungserkennung Mode</code></td>
+<td>0x00</td>
+<td>Modus der Öffnungserkennung: 0 = aus, 1 = Face down, 2 = Face up, 3 = vertikal.</td>
+<td><code>opmo</code></td>
+<td>0</td>
+<td>3</td>
+<td>1</td>
+<td>enum</td>
+<td>XXX1</td>
+</tr>
+
+<tr>
+<td><code>ALARM NACH</code></td>
+<td>0x01</td>
+<td>Zeit, nach der ein Alarm für dauerhaft offenstehenden Zustand ausgelöst wird.</td>
+<td><code>oaaf</code></td>
+<td>0</td>
+<td>43200</td>
+<td>300</td>
+<td>s</td>
+<td>XXX1</td>
+</tr>
+
+<tr>
+<td><code>NEIGUNGS-GRENZWERT</code></td>
+<td>0x02</td>
+<td>Neigungswinkel, ab dem die Tilt-Erkennung auslöst.</td>
+<td><code>ttle</code></td>
+<td>5</td>
+<td>180</td>
+<td>20</td>
+<td>deg</td>
+<td>XXX1</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<h3 id="oeffnungsmodus">
+4.1 Öffnungsmodus - Gruppe 0x04
+</h3>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Wert</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>0</td>
+<td>Aus</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Face down</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Face up</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Vertikal</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<h3 id="vandalismus">
+5. Vandalismus - Gruppe 0x05
+</h3>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Ressource</th>
+<th>ID</th>
+<th>Beschreibung</th>
+<th>Schlüssel</th>
+<th>Min</th>
+<th>Max</th>
+<th>Werkseinstellung</th>
+<th>Einheit</th>
+<th>Modulschlüssel</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td><code>VANDALISMUS ANZAHL</code></td>
+<td>0x00</td>
+<td>
+Anzahl der erforderlichen Stöße innerhalb des Zählfensters.
+0 deaktiviert die Vandalismus-Erkennung.
+</td>
+<td><code>vacn</code></td>
+<td>0</td>
+<td>100</td>
+<td>1</td>
+<td>Impacts</td>
+<td>XXX1</td>
+</tr>
+
+<tr>
+<td><code>VANDALISMUS SCHWELLE</code></td>
+<td>0x01</td>
+<td>
+Beschleunigungsgrenzwert für die Stoßerkennung.
+</td>
+<td><code>vagt</code></td>
+<td>500</td>
+<td>4000</td>
+<td>2000</td>
+<td>mg</td>
+<td>XXX1</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<h3 id="trigger">
+6. Trigger - Gruppe 0x08
+</h3>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Ressource</th>
+<th>ID</th>
+<th>Beschreibung</th>
+<th>Schlüssel</th>
+<th>Werkseinstellung</th>
+<th>Input</th>
+<th>Modulschlüssel</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td><code>MESSUNG AUSLÖSEN</code></td>
+<td>0x01</td>
+<td>
+Löst eine außerplanmäßige Messung aus.
+0x0001 aktiviert eine Uplink-Sendung;
+jeder andere Wert führt eine lokale
+benutzerausgelöste Messung aus.
+</td>
+<td><code>measure</code></td>
+<td>n/a</td>
+<td>2 Byte Big-Endian Command Value</td>
+<td>XXX1</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<h3 id="beispiel-kommandos">
+7. Beispiel-Kommandos
+</h3>
+
+<p>
+Die folgenden Beispiele zeigen typische Konfigurationswerte.
+</p>
+
+<pre><code>Messintervall auf 15 Minuten setzen
+
+Schlüssel: period
+Wert: 15
+</code></pre>
+
+<pre><code>Delta-Alarm auf 1 Meter setzen
+
+Schlüssel: delta
+Wert: 1.0
+</code></pre>
+
+<pre><code>LED-Anzeigen vollständig aktivieren
+
+Schlüssel: led
+Wert: 1
+</code></pre>
+
+<pre><code>Radar-Filtertyp auf gleitenden Mittelwert setzen
+
+Schlüssel: rsft
+Wert: 2
+</code></pre>
+
+<pre><code>Öffnungserkennung auf Face Up konfigurieren
+
+Schlüssel: opmo
+Wert: 2
+</code></pre>
+
+<pre><code>Manuelle Messung auslösen
+
+Schlüssel: measure
+Wert: 0x0001
+</code></pre>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+    <p style="margin-bottom:0;">
+        Die tatsächlich verfügbaren Parameter sind abhängig von
+        Firmware-Version, Produktvariante und Modulschlüssel.
+    </p>
+</div>
+
+<div class="footer-note">
+  <p>© Sentinum GmbH - Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Texte, Tabellen und Bilder, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Sofern nicht anders angegeben, unterliegen alle Bilder dem Urheberrecht der Sentinum GmbH.</p>
+  <p>Eine Vervielfältigung, Verbreitung oder Nutzung, auch auszugsweise, ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">Technische Änderungen vorbehalten. Alle Angaben erfolgen ohne Gewähr.</p>
+</div>
+
