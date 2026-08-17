@@ -1,0 +1,566 @@
+
+
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+  code,
+.inline-code {
+    background-color: #f3f4f6;
+    border: 1px solid #d0d7de;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9em;
+    color: #111827;
+    display: inline-block;
+}
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+</style>
+
+
+<div class="pdf-viewer">
+<iframe src="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/bb56d53e70ed652caec150fc12f34ae8d5917c1e/Aion420/Aion420_Allg._Be/Aion_420_A_General_description_EN.pdf
+" allowfullscreen title="Blueprint Sensor Integration PDF">
+</iframe>
+</div>
+
+<div class="pdf-download">
+  📄 You can view the PDF above or
+  <a href="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/bb56d53e70ed652caec150fc12f34ae8d5917c1e/Aion420/Aion420_Allg._Be/Aion_420_A_General_description_EN.pdf" target="_blank">
+   <strong>download it here</strong> 
+  </a>.
+</div>
+
+<figure class="figure">
+    <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/ff3032dadb44233517834d6ba27891290e362a97/Aion420/Aion420_Allg._Be/Screenshot%202026-08-17%20143625.png" alt="AION420 4-20 mA LPWAN Gateway" loading="lazy" style="max-width:200px; width:100%; height:auto;" />
+    <figcaption>
+        Figure 1. AION420 4–20 mA LPWAN Bridge
+    </figcaption></figure>
+    
+    <div class="main-toc">
+    <strong>Table of Contents</strong>
+
+    <ol>
+        <li>General Description</li>
+        <li>Features</li>
+        <li>Application Examples</li>
+        <li>Versions</li>
+    </ol>
+</div>
+
+   <h3 id="merkmale">
+1. General Description
+</h3> 
+<p>
+The AION420 is a compact industrial LPWAN bridge designed to
+digitize existing 4–20 mA sensor signals. It converts
+analog current-loop measurements into wireless LoRaWAN® or
+mioty® data, enabling the seamless integration
+of existing sensor installations into modern IoT and
+IIoT infrastructures.
+</p>
+
+<p>
+Existing sensors, PLCs, and control systems can remain in place,
+making the AION420 ideal for
+efficient retrofit and remote monitoring applications.
+There is no need to replace the existing infrastructure,
+which significantly reduces integration effort and investment costs.
+</p>
+
+<p>
+The AION420 supports both 2-wire and
+3-wire 4–20 mA sensors and enables wireless transmission
+of measured values via LoRaWAN® or mioty®. Thanks to the integrated
+loop-through function, the analog signal can continue to be used in parallel
+for existing control and automation systems.
+</p>
+
+<p>
+With freely configurable signal mappings, limit value monitoring,
+and alarm functions, the AION420 is suitable for a wide range of
+industrial, utility, and environmental applications. Data can be
+transmitted cyclically or on an event-driven basis and remotely configured
+via downlink.
+</p>
+
+<p>
+With its compact industrial housing, high measurement accuracy,
+and support for modern LPWAN technologies, the
+AION420 enables reliable digitization of analog measurement points and
+efficient integration into existing IoT and cloud platforms.
+</p>
+
+<h3 id="merkmale">
+2. Features
+</h3>
+
+<ul>
+    <li>
+        LoRaWAN® or mioty®
+    </li>
+
+    <li>
+        Adapter for connecting 4–20 mA sensors with wireless data transmission
+    </li>
+
+    <li>
+        Seamless integration into existing 4–20 mA sensor installations
+    </li>
+
+    <li>
+        Available in 2-wire and 3-wire versions
+    </li>
+
+    <li>
+        4–20 mA input signal, Vin = 24 V
+    </li>
+
+    <li>
+        Measurement accuracy ±0.5%
+    </li>
+
+    <li>
+        Loop-through function for parallel use of the analog current signal
+    </li>
+
+    <li>
+        Freely configurable signal mapping to physical values
+    </li>
+
+    <li>
+        Configurable limit values and alarm forwarding
+    </li>
+
+    <li>
+        Cyclic or event-driven data transmission
+    </li>
+
+    <li>
+        Remote configuration via downlink
+    </li>
+
+    <li>
+        Compact industrial design
+    </li>
+</ul>
+
+<h3 id="anwendungsbeispiele">
+3. Application Examples
+</h3>
+
+<ul>
+    <li>
+        Smart Factory Automation: Wireless integration of existing analog
+        process signals into industrial IoT applications
+    </li>
+
+    <li>
+        Predictive maintenance: Monitoring of machine, plant,
+        and process conditions based on existing 4–20 mA data
+    </li>
+
+    <li>
+        Remote monitoring: Transmission of sensor data from hard-to-reach
+        or distributed facilities
+    </li>
+
+    <li>
+        Retrofitting: Digitization of existing plants, brownfield facilities,
+        and outdated sensor infrastructure
+    </li>
+
+    <li>
+        Process Industry: Wireless acquisition of analog process values,
+        especially in harsh or remote areas
+    </li>
+
+    <li>
+        Water and Energy Infrastructure: Monitoring of decentralized facilities,
+        utility networks, and technical installations
+    </li>
+
+    <li>
+        Smart building automation: Integration of existing analog
+        measurement points into modern building management systems
+    </li>
+
+    <li>
+        Smart City: Integration of industrial 4–20 mA sensors into smart
+        infrastructure and municipal IoT projects
+    </li>
+</ul>
+
+<h3 id="versionen">
+4. Versions
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Item Code</th>
+                <th>Class</th>
+                <th>Version</th>
+                <th>Configuration</th>
+                <th>Interface</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td><strong>S-AION-LOEU-420</strong></td>
+                <td>LoRaWAN Class A</td>
+                <td>Terminated</td>
+                <td>BLE</td>
+                <td>4–20 mA (2 channels)</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-AION-MIOTY-420</strong></td>
+                <td>mioty Class A</td>
+                <td>Terminated</td>
+                <td>BLE</td>
+                <td>4–20 mA (2 channels)</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-AION-LOEU-420-3L</strong></td>
+                <td>LoRaWAN Class A</td>
+                <td>Loop-through connection</td>
+                <td>BLE</td>
+                <td>4–20 mA (2 channels)</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-AION-MIOTY-420-3L</strong></td>
+                <td>mioty Class A</td>
+                <td>Loop-through connection</td>
+                <td>BLE</td>
+                <td>4–20 mA (2 channels)</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<br /><br />
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/bb56d53e70ed652caec150fc12f34ae8d5917c1e/logo/mioty_lora.png" alt="Supported radio technologies" style="max-width:750px; height:auto;" loading="lazy" />
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png" alt="trash bin Logo" style="max-width:340px; height:auto;" loading="lazy" />
+</div>
+
+
+<div class="footer-note">
+  <p>© Sentinum GmbH - All rights reserved.</p>
+  <p>All content in this document, including text, tables, and images, is protected by copyright and is the property of Sentinum GmbH.</p>
+  <p>Unless otherwise stated, all images are subject to the copyright of Sentinum GmbH.</p>
+  <p>Reproduction, distribution, or use—even in part—is not permitted without express written permission.</p>
+  <p style="padding-left:14px; font-style:italic;">Subject to technical changes. All information is provided without warranty.</p>
+</div>
+
+</div>
