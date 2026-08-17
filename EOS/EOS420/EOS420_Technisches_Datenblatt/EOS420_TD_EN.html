@@ -1,0 +1,1342 @@
+
+
+
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* ---------- Tables ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+  code,
+.inline-code {
+    background-color: #f3f4f6;
+    border: 1px solid #d0d7de;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9em;
+    color: #111827;
+    display: inline-block;
+}
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+</style>
+
+
+<div class="pdf-viewer">
+<iframe src="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/89c90cd388c81ab6ba1974bbdd7bc5283338fc89/EOS/EOS420/EOS420_Technisches_Datenblatt/EOS420_Technisches_Datenblatt_DE%20en-US.pdf" allowfullscreen title="Blueprint Sensor Integration PDF">
+</iframe>
+</div>
+
+<div class="pdf-download">
+  📄 You can view the PDF above or
+  <a href="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/89c90cd388c81ab6ba1974bbdd7bc5283338fc89/EOS/EOS420/EOS420_Technisches_Datenblatt/EOS420_Technisches_Datenblatt_DE%20en-US.pdf" target="_blank">
+   <strong>download it here</strong> 
+  </a>.
+</div>
+
+
+
+<figure class="figure">
+    <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/896de6fca4eca8f733ed6534ab00568678445003/EOS/EOS_Allg_BE/Ansicht1.png" alt="EOS420 Ansicht" loading="lazy" style="max-width:500px; width:100%; height:auto;" />
+        <figcaption>Figure 1. EOS 420 View</figcaption>
+       </figure>
+
+<div class="main-toc">
+    <strong>Table of Contents</strong>
+
+    <ol>
+        <li>EOS420 General Description</li>
+        <li>Versions</li>
+        <li>Part Number Explanation</li>
+        <li>General Characteristics</li>
+        <li>Connectivity and RF Specifications</li>
+        <li>Localization of LoRaWAN Sensors</li>
+        <li>Localization of Cellular Sensors</li>
+        <li>Localization of Mioty Sensors</li>
+        <li>Temperature Sensor Specifications for -ACC Sensors</li>
+        <li>Temperature Sensor Specifications for Non-ACC Sensors</li>
+        <li>Technical Drawing “Flat” (Flat Design)</li>
+        <li>Technical Drawing “Thread” with 1.5-inch Thread</li>
+    </ol>
+</div>
+
+<h3 id="eos420-uebersicht">
+EOS420 General Description
+</h3>
+
+<p>
+The EOS420 series offers high-performance, wireless
+IoT level measurement based on external 4–20 mA sensors,
+such as hydrostatic level probes. It enables
+reliable measurements of liquids, even under
+demanding conditions, and is ideal for
+continuous level monitoring in tanks, containers,
+and shafts.
+</p>
+
+<p>
+The robust M12 connector allows for the simple and secure integration of a wide variety
+of industrial 4–20 mA sensors.
+</p>
+
+<p>
+Thanks to its flat design, the system is ideally suited for use
+on IBC tanks. The optional integrated
+1.5-inch thread enables quick and easy
+installation without additional adapters.
+</p>
+
+<p>
+In addition to level detection, the EOS420 series offers
+integrated location tracking via GPS.
+In combination with high-performance antenna technology,
+it enables exceptionally stable and long-range
+wireless communication.
+</p>
+
+<p>
+The rugged housing is IP69K-rated and thus
+optimally designed for harsh industrial and outdoor applications.
+For maximum flexibility, the device features an
+in-mold SMA connector as well as an M12 connector
+for connecting external sensors.
+</p>
+
+<p>
+With support for mioty®, NB-IoT, LoRaWAN®, and LTE-CAT-M1,
+as well as flexibly configurable measurement and transmission intervals,
+the EOS Series is the ideal solution for smart tank monitoring,
+industrial applications, and digital inventory monitoring.
+</p>
+
+<h3 id="versionen">
+1. Versions
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Item Code</th>
+                <th>Battery</th>
+                <th>Model</th>
+                <th>Available</th>
+                <th>Configuration</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td><strong>S-EOS-LOEU-420-F</strong></td>
+                <td>3xAA</td>
+                <td>Flat</td>
+                <td style="color:#00a651;font-weight:700;">✔</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-MIOTY-420-F</strong></td>
+                <td>3xAA</td>
+                <td>Flat</td>
+                <td style="color:#00a651;font-weight:700;">✔</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-NBM1-420-F</strong></td>
+                <td>3xAA</td>
+                <td>Flat</td>
+                <td style="color:#00a651;font-weight:700;">✔</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-LOEU-420-F-SMA</strong></td>
+                <td>3xAA</td>
+                <td>Flat</td>
+                <td style="color:#00a651;font-weight:700;">✔</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-MIOTY-420-F-SMA</strong></td>
+                <td>3xAA</td>
+                <td>Flat</td>
+                <td style="color:#00a651;font-weight:700;">✔</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-NBM1-420-F-SMA</strong></td>
+                <td>3xAA</td>
+                <td>Flat</td>
+                <td style="color:#00a651;font-weight:700;">✔</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-LOEU-420-F-SMA-M12</strong></td>
+                <td>3xAA</td>
+                <td>Flat</td>
+                <td style="color:#ff0000;font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-MIOTY-420-F-SMA-M12</strong></td>
+                <td>3xAA</td>
+                <td>Flat</td>
+                <td style="color:#ff0000;font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-NBM1-420-F-SMA-M12</strong></td>
+                <td>3xAA</td>
+                <td>Flat</td>
+                <td style="color:#ff0000;font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-LOEU-420-T</strong></td>
+                <td>3xAA</td>
+                <td>1.5-inch thread</td>
+                <td style="color:#00a651;font-weight:700;">✔</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-MIOTY-420-T</strong></td>
+                <td>3xAA</td>
+                <td>1.5-inch thread</td>
+                <td style="color:#00a651;font-weight:700;">✔</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-NBM1-420-T</strong></td>
+                <td>3xAA</td>
+                <td>1.5-inch thread</td>
+                <td style="color:#00a651;font-weight:700;">✔</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-LOEU-420-T-SMA</strong></td>
+                <td>3xAA</td>
+                <td>1.5-inch thread</td>
+                <td style="color:#00a651;font-weight:700;">✔</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-MIOTY-420-T-SMA</strong></td>
+                <td>3xAA</td>
+                <td>1.5-inch thread</td>
+                <td style="color:#00a651;font-weight:700;">✔</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-NBM1-420-T-SMA</strong></td>
+                <td>3xAA</td>
+                <td>1.5-inch thread</td>
+                <td style="color:#00a651;font-weight:700;">✔</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-LOEU-420-T-SMA-M12</strong></td>
+                <td>3xAA</td>
+                <td>1.5-inch thread</td>
+                <td style="color:#ff0000;font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-MIOTY-420-T-SMA-M12</strong></td>
+                <td>3xAA</td>
+                <td>1.5-inch thread</td>
+                <td style="color:#ff0000;font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS-NBM1-420-T-SMA-M12</strong></td>
+                <td>3xAA</td>
+                <td>1.5-inch thread</td>
+                <td style="color:#ff0000;font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+    <div style="color:#ff0000;font-weight:700;">
+        X = Available upon request
+    </div>
+</div>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Item Code</th>
+                <th>Battery</th>
+                <th>Model</th>
+                <th>Available</th>
+                <th>Configuration</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td><strong>S-EOS2C-LOEU-420-F</strong></td>
+                <td>2xC</td>
+                <td>Flat</td>
+                <td style="color:#ff0000;font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-MIOTY-420-F</strong></td>
+                <td>2xC</td>
+                <td>Flat</td>
+                <td style="color:#ff0000;font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-NBM1-420-F</strong></td>
+                <td>2xC</td>
+                <td>Flat</td>
+                <td style="color:#ff0000;font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-LOEU-420-F-SMA</strong></td>
+                <td>2xC</td>
+                <td>Flat</td>
+                <td style="color:#ff0000;font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-MIOTY-420-F-SMA</strong></td>
+                <td>2xC</td>
+                <td>Flat</td>
+                <td style="color:#ff0000;font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-NBM1-420-F-SMA</strong></td>
+                <td>2xC</td>
+                <td>Flat</td>
+                <td style="color:#ff0000;font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-LOEU-420-F-SMA-M12</strong></td>
+                <td>2xC</td>
+                <td>Flat</td>
+                <td style="color:#ff0000;font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-MIOTY-420-F-SMA-M12</strong></td>
+                <td>2xC</td>
+                <td>Flat</td>
+                <td style="color:#ff0000;font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-NBM1-420-F-SMA-M12</strong></td>
+                <td>2xC</td>
+                <td>Flat</td>
+                <td style="color:#ff0000;font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-LOEU-420-T</strong></td>
+                <td>2xC</td>
+                <td>1.5-inch thread</td>
+                <td style="color:#ff0000;font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-MIOTY-420-T</strong></td>
+                <td>2xC</td>
+                <td>1.5-inch thread</td>
+                <td style="color:#ff0000;font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-NBM1-420-T</strong></td>
+                <td>2xC</td>
+                <td>1.5-inch thread</td>
+                <td style="color:#ff0000;font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-LOEU-420-T-SMA</strong></td>
+                <td>2xC</td>
+                <td>1.5-inch thread</td>
+                <td style="color:#ff0000;font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-MIOTY-420-T-SMA</strong></td>
+                <td>2xC</td>
+                <td>1.5-inch thread</td>
+                <td style="color:#ff0000;font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-NBM1-420-T-SMA</strong></td>
+                <td>2xC</td>
+                <td>1.5-inch thread</td>
+                <td style="color:#ff0000;font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-LOEU-420-T-SMA-M12</strong></td>
+                <td>2xC</td>
+                <td>1.5-inch thread</td>
+                <td style="color:#ff0000;font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-MIOTY-420-T-SMA-M12</strong></td>
+                <td>2xC</td>
+                <td>1.5-inch thread</td>
+                <td style="color:#ff0000;font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-EOS2C-NBM1-420-T-SMA-M12</strong></td>
+                <td>2xC</td>
+                <td>1.5-inch thread</td>
+                <td style="color:#ff0000;font-weight:700;">X</td>
+                <td>BLE</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+    <div style="color:#ff0000;font-weight:700;">
+        X = Available upon request
+    </div>
+</div>
+
+<h3 id="artikelcode-erklaerung">
+2. Item Code Explanation
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Designation</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td><strong>LOEU</strong></td>
+                <td>LoRaWAN EU</td>
+            </tr>
+
+            <tr>
+                <td><strong>MIOTY</strong></td>
+                <td>mioty EU</td>
+            </tr>
+
+            <tr>
+                <td><strong>NBM1</strong></td>
+                <td>NB-IoT, LTE-CAT-M1</td>
+            </tr>
+
+            <tr>
+                <td><strong>420</strong></td>
+                <td>4–20 mA</td>
+            </tr>
+
+            <tr>
+                <td><strong>SMA</strong></td>
+                <td>Subminiature Version A</td>
+            </tr>
+
+            <tr>
+                <td><strong>M12</strong></td>
+                <td>M12 connector</td>
+            </tr>
+
+            <tr>
+                <td><strong>T</strong></td>
+                <td>
+                    Thread, 1.5-inch male thread, cylindrical
+                    (not tapered), Version B
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>F</strong></td>
+                <td>Flat design, without thread</td>
+            </tr>
+
+            <tr>
+                <td><strong>EOS2C</strong></td>
+                <td>Version with two C batteries</td>
+            </tr>
+
+            <tr>
+                <td><strong>EOS</strong></td>
+                <td>Version with three AA LiSOCL2 cells</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<h3 id="allgemeine-eigenschaften">
+3. General Features
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Value</th>
+                <th>Unit</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>Dimensions (D x H)</td>
+                <td>128x57 (internal antenna with thread)</td>
+                <td>mm</td>
+            </tr>
+
+            <tr>
+                <td>Weight</td>
+                <td>160</td>
+                <td>g</td>
+            </tr>
+
+            <tr>
+                <td>Operating temperature</td>
+                <td>-20 to 80</td>
+                <td>°C</td>
+            </tr>
+
+            <tr>
+                <td>Storage temperature (recommended)</td>
+                <td>15 to 25</td>
+                <td>°C</td>
+            </tr>
+
+            <tr>
+                <td>Relative humidity during operation</td>
+                <td>5 to 99</td>
+                <td>%</td>
+            </tr>
+
+            <tr>
+                <td>IP Rating</td>
+                <td>IP69K</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Sensor range</td>
+                <td>4–20</td>
+                <td>mA</td>
+            </tr>
+
+            <tr>
+                <td>Traffic Light Function / Visual Feedback</td>
+                <td>LED</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Acoustic Alarm Function</td>
+                <td>-</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Provisioning and configuration</td>
+                <td>BLE</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Material</td>
+                <td>POCAN4225B PBT-GF-20</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>BLE Antenna</td>
+                <td>Integrated</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>RF Antenna</td>
+                <td>
+                    <ul>
+                        <li>Integrated for all versions</li>
+                        <li>External with SMA connector for SMA versions</li>
+                        <li>Auto Antenna Selector, depending on the connected configuration</li>
+                    </ul>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Accelerometer</td>
+                <td>Shock Detection and Activity Tracking</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Batteries</td>
+                <td>Replaceable</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Primary cell type</td>
+                <td>
+                    <ul>
+                        <li>S-EOS-XXXX: 3 x AA LiSOCL2, see LS14500 from SAFT</li>
+                        <li>S-EOS2C-XXXX: 2 x C LiMnO2, see LM26500 from SAFT</li>
+                    </ul>
+                </td>
+                <td></td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<h3 id="konnektivitaet-rf">
+4. Connectivity and RF Specifications
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Value</th>
+                <th>Unit</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>RF standards</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Frequency LoRaWAN®/mioty® EU</td>
+                <td>868</td>
+                <td>MHz</td>
+            </tr>
+
+            <tr>
+                <td>Cellular frequency</td>
+                <td>Band 8, 20 (900 MHz, 800 MHz)</td>
+                <td>MHz</td>
+            </tr>
+
+            <tr>
+                <td>Transmit power LoRaWAN®/mioty® EU</td>
+                <td>14</td>
+                <td>dBm</td>
+            </tr>
+
+            <tr>
+                <td>Transmit power NB-IoT</td>
+                <td>23</td>
+                <td>dBm</td>
+            </tr>
+
+            <tr>
+                <td>LoRa® MAC Layer Version</td>
+                <td>1.0.4</td>
+                <td></td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<h3 id="lokalisierung-lorawan">
+5. Localization of LoRaWAN Sensors
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Value</th>
+                <th>Unit</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>Wi-Fi SSID Scan</td>
+                <td>Up to 6 MAC addresses on port 199</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Wi-Fi SSID Scan Frequency</td>
+                <td>2.4</td>
+                <td>GHz</td>
+            </tr>
+
+            <tr>
+                <td>Wi-Fi SSID Scan Accuracy</td>
+                <td>6 to 50</td>
+                <td>m</td>
+            </tr>
+
+            <tr>
+                <td>GNSS</td>
+                <td>GNSS scan with GPS and BeiDou</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>GNSS Accuracy</td>
+                <td>10 to 100</td>
+                <td>m</td>
+            </tr>
+
+            <tr>
+                <td>Antenna</td>
+                <td>Integrated</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Chipset</td>
+                <td>LR1110</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Feature for on-premises indoor tracking</td>
+                <td>
+                    Configurable to transmit up to 5 MAC addresses
+                    and RSSI values in the standard uplink payload
+                    
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Tracking in LoRaWAN</td>
+                <td>Network-dependent</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Tracking in Motion</td>
+                <td>Yes</td>
+                <td></td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<h3 id="lokalisierung-cellular">
+6. Location Tracking for Cellular Sensors
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Value</th>
+                <th>Unit</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>GNSS</td>
+                <td>GPS, Galileo, GLONASS, BeiDou</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>GNSS Accuracy</td>
+                <td>5 to 100</td>
+                <td>m</td>
+            </tr>
+
+            <tr>
+                <td>Antenna</td>
+                <td>Integrated, patch antenna</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Cell Locate</td>
+                <td>Supported</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Tracking in Motion</td>
+                <td>Yes</td>
+                <td></td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<h3 id="lokalisierung-mioty">
+7. Localization of mioty Sensors
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Value</th>
+                <th>Unit</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>GNSS</td>
+                <td>GPS, Galileo, GLONASS, BeiDou</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>GNSS Accuracy</td>
+                <td>5 to 100</td>
+                <td>m</td>
+            </tr>
+
+            <tr>
+                <td>Antenna</td>
+                <td>Integrated, patch antenna</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Cell Locate</td>
+                <td>Supported</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Tracking in Motion</td>
+                <td>Yes</td>
+                <td></td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<h3 id="temperatur-acc">
+8. Temperature Sensor Specifications for -ACC Sensors
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Value</th>
+                <th>Unit</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>Temperature Range</td>
+                <td>-40 to +85</td>
+                <td>°C</td>
+            </tr>
+
+            <tr>
+                <td>Accuracy 0°C to 70°C</td>
+                <td>±0.8</td>
+                <td>°C</td>
+            </tr>
+
+            <tr>
+                <td>Accuracy from -40°C to +85°C</td>
+                <td>±1.3</td>
+                <td>°C</td>
+            </tr>
+
+            <tr>
+                <td>Resolution</td>
+                <td>1</td>
+                <td>°C</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<h3 id="temperatur-ohne-acc">
+9. Temperature Sensor Specifications for Non-ACC Sensors
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Value</th>
+                <th>Unit</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>Temperature range</td>
+                <td>-30 to +85</td>
+                <td>°C</td>
+            </tr>
+
+            <tr>
+                <td>Accuracy 0°C to 70°C</td>
+                <td>±2</td>
+                <td>°C</td>
+            </tr>
+
+            <tr>
+                <td>Accuracy from -40°C to +85°C</td>
+                <td>±1.5</td>
+                <td>°C</td>
+            </tr>
+
+            <tr>
+                <td>Resolution</td>
+                <td>1</td>
+                <td>°C</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<h3 id="zeichnung-flat">
+10. Technical Drawing: “Flat” Design
+</h3>
+
+<figure class="figure">
+    <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/75dc9723f0b888bd9db119b35204960e5389b844/EOS/EOS420/EOS420_Technisches_Datenblatt/Herunterladen.png" loading="lazy" style="max-width:900px; width:100%; height:auto;" />
+    <figcaption>
+        Figure 2. Technical drawing “Flat” flat design
+    </figcaption>
+</figure>
+
+<h3 id="zeichnung-thread">
+11. Technical Drawing “Thread” with 1.5-inch Thread
+</h3>
+
+<figure class="figure">
+    <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/75dc9723f0b888bd9db119b35204960e5389b844/EOS/EOS_technisches_Datenblatt/Eos_G_ohne%20Connectoren_optionaler%20M12_Zeichnung%20Doku-1.png" alt="Technische Zeichnung EOS420 Thread mit 1,5 Zoll Gewinde" loading="lazy" style="max-width:900px; width:100%; height:auto;" />
+    <figcaption>
+        Figure 3. Technical drawing of the EOS420 Thread with a 1.5-inch thread </figcaption></figure>
+
+<br /><br />
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png" alt="Supported radio technologies" style="max-width:750px; height:auto;" loading="lazy" />
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png" alt="trash bin Logo" style="max-width:340px; height:auto;" loading="lazy" />
+</div>
+
+
+
+<div class="footer-note">
+  <p>© Sentinum GmbH - All rights reserved.</p>
+  <p>All content in this document, including text, tables, and images, is protected by copyright and is the property of Sentinum GmbH.</p>
+  <p>Unless otherwise stated, all images are subject to the copyright of Sentinum GmbH.</p>
+  <p>Reproduction, distribution, or use—even in part—is not permitted without express written permission.</p>
+  <p style="padding-left:14px; font-style:italic;">Subject to technical changes. All information is provided without warranty.</p>
+</div>
+</div>
