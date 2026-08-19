@@ -1,0 +1,933 @@
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+  code,
+.inline-code {
+    background-color: #f3f4f6;
+    border: 1px solid #d0d7de;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9em;
+    color: #111827;
+    display: inline-block;
+}
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+</style>
+
+
+<div class="pdf-viewer">
+<iframe src="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/ff0c41df17a7b8c9ca37c0dc117c3f7cfa431a70/Aion420/Aion420_Technisches_Datenblatt/AION420_Technical_Datasheet_EN.pdf"
+allowfullscreen
+title="Blueprint Sensor Integration PDF">
+</iframe>
+</div>
+
+<div class="pdf-download">
+    📄 You can view the PDF above or
+  <a href="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/ff0c41df17a7b8c9ca37c0dc117c3f7cfa431a70/Aion420/Aion420_Technisches_Datenblatt/AION420_Technical_Datasheet_EN.pdf"
+   target="_blank">
+   <strong>download it here</strong> 
+  </a>.
+</div>
+
+<figure class="figure">
+    <img
+        src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/99bede552b17abd5fee9d7d7e5c39b10ed9e3405/Aion420/Aion420_Betriebsanleitung/Screenshot%202026-08-18%20121627.png"
+        alt="AION420 4-20 mA LPWAN Gateway"
+        loading="lazy"
+        style="max-width:500px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Figure 1. AION420 4–20 mA LPWAN Bridge
+    </figcaption></figure>
+    
+
+
+<p>
+The AION420 is a compact IoT bridge for wirelessly connecting
+industrial 4–20 mA sensors to LoRaWAN® and mioty® networks.
+The device acquires analog process values and transmits the measured values
+energy-efficiently to existing IoT platforms without requiring additional
+cabling or local infrastructure.
+</p>
+
+<p>
+Since the AION420 is part of the 4–20 mA current loop, the device
+is powered by an external power supply. This makes it
+particularly suitable for applications with an existing power supply and
+provides a reliable connection of existing measurement points to modern
+IoT infrastructures.
+</p>
+
+<p>
+For easy integration into various systems, the AION420 is available both
+as a terminated version for direct connection to a sensor and as
+a loop-through version for integration into existing sensor cabling
+.
+</p>
+
+<p>
+This allows existing 4–20 mA sensors to be digitized quickly and cost-effectively
+.
+</p>
+
+<p>
+Typical applications include the monitoring of levels, pressures,
+flow rates, temperatures, and other process variables in industrial,
+energy, water, and environmental applications.
+</p>
+
+<h3 id="versions">
+1. Versions
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Part Number</th>
+                <th>Class</th>
+                <th>Version</th>
+                <th>Configuration</th>
+                <th>Interface</th>
+            
+</tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td><strong>S-AION-LOEU-420</strong></td>
+                <td>LoRaWAN Class A</td>
+                <td>Terminated</td>
+                <td>BLE</td>
+                <td>4-20 mA (2 channels)</td>
+            
+</tr>
+
+            <tr>
+                <td><strong>S-AION-MIOTY-420</strong></td>
+                <td>mioty Class A</td>
+                <td>Terminated</td>
+                <td>BLE</td>
+                <td>4–20 mA (2 channels)</td>
+            </tr>
+            
+<tr>
+                <td><strong>S-AION-LOEU-420-3L</strong></td>
+                <td>LoRaWAN Class A</td>
+                <td>Loop</td>
+                <td>BLE</td>
+                <td>4–20 mA (2 channels)</td>
+            </tr>
+            
+<tr>
+                <td><strong>S-AION-MIOTY-420-3L</strong></td>
+                <td>mioty Class A</td>
+                <td>Loop</td>
+                <td>BLE</td>
+                <td>4–20 mA (2 channels)</td>
+            </tr>
+        
+</tbody>
+    </table>
+</div>
+<h3 id="general-features">
+2. General Features
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Feature</th>
+                
+<th>Value</th>
+                <th>Unit</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>Dimensions (D x H)</td>
+                <td>99.1 x 50 x 31</td>
+                <td>mm</td>
+            </tr>
+            
+<tr>
+                <td>Weight</td>
+                <td>130</td>
+                <td>g</td>
+            </tr>
+
+            <tr>
+                <td>Operating temperature</td>
+                <td>-20 to 80</td>
+                <td>°C</td>
+            </tr>
+            
+<tr>
+                <td>Storage temperature (recommended)</td>
+                <td>15 to 25</td>
+                <td>°C</td>
+            </tr>
+
+            <tr>
+                <td>Relative humidity during operation</td>
+                <td>10 to 90</td>
+                
+<td>%</td>
+            </tr>
+
+            <tr>
+                <td>IP Rating</td>
+                <td>IP67/IP65</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                
+<td>Traffic light function / Visual feedback</td>
+                <td>LED</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Acoustic alarm function</td>
+                <td>Buzzer</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                
+<td>Provisioning and Configuration</td>
+                <td>BLE</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Material</td>
+                <td>
+                    Housing: PA; Cover: PA;
+                    Cover gasket: TPE;
+                    M12 gasket: FKM
+                
+</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>BLE antenna</td>
+                <td>Integrated</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>RF antenna</td>
+                <td>Integrated for all versions</td>
+                
+<td></td>
+            </tr>
+
+            <tr>
+                <td>Accelerometer</td>
+                <td>Optional</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Batteries</td>
+                <td>None</td>
+                <td></td>
+            </tr>
+            
+<tr>
+                <td>Primary cell type</td>
+                <td>-</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Outdoor use</td>
+                <td>No</td>
+                <td></td>
+            </tr>
+
+        </tbody>
+    
+</table>
+</div>
+
+<h3 id="konnektivitaet-rf">
+3. Connectivity and RF Specifications
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Value</th>
+                
+<th>Unit</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>RF standards</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Frequency LoRaWAN® / mioty® EU</td>
+                
+<td>868</td>
+                <td>MHz</td>
+            </tr>
+
+            <tr>
+                <td>Transmit Power LoRaWAN® / mioty® EU</td>
+                <td>14</td>
+                <td>dBm</td>
+            </tr>
+
+            <tr>
+                
+<td>LoRa® MAC Layer Version</td>
+                <td>1.0.4</td>
+                <td></td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<h3 id="sensorspezifikation-420ma">
+4. Sensor Specifications: 4–20 mA Interface
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Characteristic</th>
+                <th>Value</th>
+                <th>Unit</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            
+<tr>
+                <td>Type Accuracy</td>
+                <td>
+                    Absolute Error 0.05 mA +
+                    Relative Error 0.25%
+                </td>
+                <td></td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<h3 id="temperature-specification">
+Temperature Specifications
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Characteristic</th>
+                <th>Value</th>
+                <th>Unit</th>
+            </tr>
+        
+</thead>
+
+        <tbody>
+            <tr>
+                <td>Temperature Range</td>
+                <td>-30 to +85</td>
+                <td>°C</td>
+            </tr>
+
+            <tr>
+                <td>Accuracy 0°C to 70°C</td>
+                <td>±2</td>
+                
+<td>°C</td>
+            </tr>
+
+            <tr>
+                <td>Accuracy from -40°C to +85°C</td>
+                <td>±1.5</td>
+                <td>°C</td>
+            </tr>
+            
+<tr>
+                <td>Resolution</td>
+                <td>1</td>
+                <td>°C</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="anschluesse">
+Connections
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Characteristic</th>
+                <th>Value</th>
+                <th>Unit</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                
+<td>Sensor side</td>
+                <td>A-coded, female with cap nut</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Supply side</td>
+                <td>
+                    A-coded, male
+                    <ul>
+                        <li>Terminated version: 2-pin, VCC and GND</li>
+                        
+<li>Looped-through version: 4-pin, VCC, GND, Isense 1, Isense 2</li>
+                    </ul>
+                </td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="electrical-parameters">
+Electrical Parameters
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Characteristic</th>
+                <th>Value</th>
+                <th>Unit</th>
+            </tr>
+        </thead>
+        
+<tbody>
+            <tr>
+                <td>Operating voltage</td>
+                <td>9 to 26</td>
+                <td>V</td>
+            </tr>
+
+            <tr>
+                <td>Rated voltage</td>
+                <td>24</td>
+                <td>V</td>
+            </tr>
+
+            <tr>
+                
+<td>Max. Current Consumption</td>
+                <td>0.2</td>
+                <td>A</td>
+            </tr>
+
+            <tr>
+                <td>Max. Current Carrying Capacity</td>
+                <td>0.3</td>
+                <td>A</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="important-elements">
+6.1 Installation, Assembly, and Wiring
+</h3>
+
+<figure class="figure">
+    <img
+        src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/6cf6bdb8c04d423884c97cf0e04ee609021bc3b0/Aion420/Aion420_Technisches_Datenblatt/Aion_aufbau_skizze.png"
+        alt="AION420 Wichtige Elemente"
+        loading="lazy"
+        style="max-width:500px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Figure 2. Aion 420 Sketch Showing Key Components
+        </figcaption></figure>
+                
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Component</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>M1</td>
+                <td>Magnetic Switch 1</td>
+            
+</tr>
+
+            <tr>
+                <td>M12 Sup</td>
+                <td>M12 connection, supply side</td>
+            </tr>
+
+            <tr>
+                <td>LED</td>
+                <td>LED – visual feedback and flashing signal</td>
+            </tr>
+
+            <tr>
+                
+<td>M12 Sens</td>
+                <td>M12 Sensor-Side Connection</td>
+            </tr>
+
+            <tr>
+                <td>L1</td>
+                <td>Labeled</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="connection-diagram-sensor-side">
+6.2. Wiring Diagram and Pin Assignment (Sensor Side)
+</h3>
+
+<div style="display:flex; flex-wrap:wrap; gap:40px; justify-content:center; align-items:flex-start; margin:20px 0;">
+
+ <figure class="figure" style="margin:0;">
+        <img
+            src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/9c89912d051b67cc41e2b31b1116b61f9dca774d/Aion420/Aion420_Betriebsanleitung/Anschluss_aion420.png"
+            alt="Anschlussschema Sensorseite"
+            loading="lazy"
+            style="max-width:500px; width:100%; height:auto;">
+            <figcaption> Figure 3. Connection Diagram and Pin Assignment for the Sensor Side of the AION420</figcaption>
+    </figure>
+            
+<h3>6.3. Connection Diagram and Pin Assignment for the Supply Side of the Terminated Version
+</h3>
+
+<div style="display:flex; flex-wrap:wrap; gap:40px; justify-content:center; align-items:flex-start; margin:20px 0;">
+    
+        <figure class="figure" style="margin:0;">
+        <img
+            src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/9c89912d051b67cc41e2b31b1116b61f9dca774d/Aion420/Aion420_Betriebsanleitung/Anschluss_aion420_2.png"
+            alt="Anschlussschema Supply Seite"
+            loading="lazy"
+            style="max-width:500px; width:100%; height:auto;">
+
+            <figcaption>Figure 4. Connection diagram and pin assignment for the supply side of the terminated version </figcaption>
+    </figure>
+
+    <div style="min-width:180px;">
+        
+<p>Pin configuration for direct connection of a
+4–20 mA sensor. The device is powered via the supply connection by an external
+power supply and forms the end point of the measurement chain.
+</p>
+
+<p>
+This version is not designed to pass on the 4–20 mA signal
+. The terminated version is particularly suitable for
+new installations or applications in which the sensor is detected exclusively
+by the AION420.
+</p>
+
+<h3 id="connection-schematic-supply-looped">
+6.4. Connection Schematic and Pin Assignment (Supply Side) for the Looped Version
+</h3>
+
+<figure class="figure">
+    <img
+        src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/9d36b8736981b445b04d043ea107cad7a1e19f0a/Aion420/Aion420_Betriebsanleitung/Anschluss_Aion420_3.png"
+        alt="Anschlussschema und Pinbelegung der Supply-Seite für die geschleifte AION420 Version"
+        loading="lazy"
+        style="max-width:500px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Figure 5. Connection diagram and pin assignment of the supply side for the looped version
+    </figcaption>
+</figure>
+
+<p>
+In addition to providing power, the looped-through version of the AION420 also allows the 4–20 mA signal to pass through. This enables the AION420 to be integrated into existing measurement circuits without interfering with the existing signal processing.
+</p>
+
+<p>
+The measurement signal is acquired by the device and simultaneously
+forwarded to downstream systems, such as PLCs, data loggers, or process control systems.
+</p>
+
+<p>
+This design is particularly suitable for retrofits and
+applications where the existing infrastructure is to continue
+to be used.
+</p>
+
+<figure class="figure">
+    
+<img
+        src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/ff0c41df17a7b8c9ca37c0dc117c3f7cfa431a70/Aion420/Aion420_Technisches_Datenblatt/Bild.png"
+        
+alt=“AION420 Technical Drawing”
+        loading="lazy"
+        style="max-width:900px; width:100%; height:auto;"
+    >
+    </figure>
+
+
+   
+
+<br><br>
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/bb56d53e70ed652caec150fc12f34ae8d5917c1e/logo/mioty_lora.png" alt=“Supported radio technologies” style="max-width:750px; height:auto;"
+    loading="lazy">
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
+    alt="trash bin Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
+</div>
+
+
+
+<div class="footer-note">
+  <p>© Sentinum GmbH - All rights reserved.</p>
+  <p>All content in this document, including text, tables, and images, is protected by copyright and is the property of Sentinum GmbH.</p>
+  
+<p>Unless otherwise stated, all images are subject to the copyright of Sentinum GmbH.</p>
+  <p>Reproduction, distribution, or use, even in part, is not permitted without express written permission.</p>
+  
+<p style="padding-left:14px; font-style:italic;">Subject to technical changes. All information is provided without guarantee.</p>
+</div>
