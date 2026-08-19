@@ -1,136 +1,321 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-
-<title>Apollon Q – NFC and Downlink Description</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
 
-:root{
-  --border:#d0d7de;
-  --table-header:#f5f7fa;
-  --blue-bg:#f7fbff;
-  --blue-border:#d6e4fa;
-  --blue-text:#1a3e8c;
-  --text-main:#111827;
-  --text-muted:#6b7280;
-}
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
 
-body{
-  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
-  color:var(--text-main);
-  line-height:1.65;
-}
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
 
-h3{
-  margin:32px 0 12px;
-  padding-bottom:6px;
-  font-family:"Montserrat",Arial,sans-serif;
-  font-size:18px;
-  font-weight:600;
-  border-bottom:1.5px solid var(--border);
-}
 
-p{margin:8px 0 12px}
 
-table{
-  width:100%;
-  border-collapse:collapse;
-  font-size:14px;
-}
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
 
-th,td{
-  border:1px solid var(--border);
-  padding:8px 12px;
-  vertical-align:top;
-}
+    .container {
+        width: 100%;
+    }
 
-th{
-  background:var(--table-header);
-  font-weight:700;
-  border-bottom:2px solid #000;
-}
+    p {
+        margin: 8px 0 12px;
+    }
 
-.main-toc{
-  max-width:900px;
-  margin:24px auto 40px;
-  padding:16px 20px;
-  background:var(--blue-bg);
-  border:1px solid var(--blue-border);
-  border-radius:6px;
-}
+    /* ---------- Headings ---------- */
 
-.main-toc strong{display:block;margin-bottom:8px;}
-.main-toc ul{list-style:none;margin:0;padding:0;}
-.main-toc li{margin:.35rem 0;}
-.main-toc a{color:var(--blue-text);font-weight:600;text-decoration:none;}
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
 
-.pdf-viewer{
-  max-width:900px;
-  height:600px;
-  margin:0 auto 20px;
-  border:1px solid #ccc;
-  border-radius:6px;
-  overflow:hidden;
-}
-.pdf-viewer iframe{
-  width:100%;
-  height:100%;
-  border:none;
-}
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
 
-.pdf-download{
-  max-width:900px;
-  margin:0 auto 36px;
-  padding:14px 18px;
-  background:var(--blue-bg);
-  border:1px solid var(--blue-border);
-  border-radius:6px;
-  text-align:center;
-}
-.pdf-download a{
-  color:var(--blue-text);
-  font-weight:600;
-}
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
 
-table.auto-layout{
-  table-layout:auto;
-}
-/* Inline code badge (e.g. 0x00) */
-.code-inline{
-  display:inline-block;
-  font-family:"Courier New", Courier, monospace;
-  font-size:0.8rem;
-  line-height:1.2;
-  padding:2px 6px;
-  background-color:#f5f7fa;
-  border:1px solid #d0d7de;
-  border-radius:4px;
-  color:#111827;
-  white-space:nowrap;
-}
-/* ---------- Footer / Disclaimer ---------- */
-.footer-note{
-  margin-top:60px;
-  padding-top:20px;
-  border-top:2px solid var(--border);
-  font-size:.82rem;
-  color:var(--text-muted);
-}
-.figure figcaption{
-  margin-top:6px;
-  color:var(--text-muted);
-  font-size:0.875rem;
-  text-align:center;   /* ← DAS ist die Lösung */
-}
-.footer-note p{ margin:0 0 6px 0; line-height:1.4; }
-  </style>
-</head>
-<body>
-<div class="container">
 
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+  code,
+.inline-code {
+    background-color: #f3f4f6;
+    border: 1px solid #d0d7de;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9em;
+    color: #111827;
+    display: inline-block;
+}
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+    
 </style>
 </head>
 
@@ -148,23 +333,23 @@ table.auto-layout{
 
 <!-- PDF Download -->
 <div class="pdf-download">
-  📄 You can view the document above or
+  📄 You can view the PDF above or
   <a
     href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/e0a639a98388d7d7b9d9a71546b402308127fc10/Apollon_q/Apollon_q_downlink/EN/Apollon_Q_PP_NFC_and_Downlink_Description_EN.pdf"
     target="_blank"
     rel="noopener">
-    download the PDF here
+    <strong>download it here</strong>
   </a>.
 </div>
 
 <!-- Contents -->
 <section class="main-toc">
-  <strong>Contents</strong>
-  <ul>
-    <li><a href="#module">1. Module overview</a></li>
-    <li><a href="#measurements">2. Measurements (0x00)</a></li>
-    <li><a href="#levels">3. Levels (0x01)</a></li>
-  </ul>
+  <strong>Table of Contents</strong>
+  <ol>
+    <li><a href="#module">Module overview</a></li>
+    <li><a href="#measurements">Measurements (0x00)</a></li>
+    <li><a href="#levels">Levels (0x01)</a></li>
+  </ol>
 </section>
 
 <!-- Module overview -->
@@ -183,17 +368,17 @@ table.auto-layout{
 <thead>
 <tr>
   <td><strong>Sentiface</strong></td>
-  <td><span class="code-inline">0x1XXX</span></td>
+  <td><code>0x1XXX</code></td>
   <td>Measurement</td>
-  <td><span class="code-inline">0x00</span></td>
+  <td><code>0x00</code></td>
   <td>Settings such as sensor behavior, accuracy of detection rates and fine tuning</td>
 </tr>
 
 <tr>
   <td><strong>Sentiface</strong></td>
-  <td><span class="code-inline">0x1XXX</span></td>
+  <td><code>0x1XXX</code></td>
   <td>Level</td>
-  <td><span class="code-inline">0x01</span></td>
+  <td><code>0x01</code></td>
   <td>Number and distance of levels and hysteresis</td>
 </tr>
 
@@ -239,98 +424,98 @@ table.auto-layout{
   <tbody>
     <tr>
       <td><strong>Measurement period</strong></td>
-      <td><span class="code-inline">0x01</span></td>
+      <td><code>0x01</code></td>
       <td>Specifies the period in which the measured values are recorded. 5000 ms means that a measurement is taken every 5 seconds.</td>
-      <td><span class="code-inline">mper</span></td>
+      <td><code>mper</code></td>
       <td>20</td>
       <td>60000</td>
       <td>5000</td>
       <td>ms</td>
-      <td><span class="code-inline">1111</span></td>
+      <td><code>1111</code></td>
     </tr>
 
     <tr>
       <td><strong>Samples</strong></td>
-      <td><span class="code-inline">0x02</span></td>
+      <td><code>0x02</code></td>
       <td>Advanced: Sensor performance setting. Higher values increase robustness and range at the cost of higher power consumption.</td>
-      <td><span class="code-inline">samples</span></td>
+      <td><code>samples</code></td>
       <td>1</td>
       <td>255</td>
       <td>100</td>
       <td></td>
-      <td><span class="code-inline">1111</span></td>
+      <td><code>1111</code></td>
     </tr>
 
     <tr>
       <td><strong>Sigma</strong></td>
-      <td><span class="code-inline">0x03</span></td>
+      <td><code>0x03</code></td>
       <td>Advanced: Minimum variance and standard deviation for target detection.</td>
-      <td><span class="code-inline">sigma</span></td>
+      <td><code>sigma</code></td>
       <td>1</td>
       <td>16383</td>
       <td>1500</td>
       <td></td>
-      <td><span class="code-inline">1111</span></td>
+      <td><code>1111</code></td>
     </tr>
 
     <tr>
       <td><strong>Signal</strong></td>
-      <td><span class="code-inline">0x04</span></td>
+      <td><code>0x04</code></td>
       <td>Advanced: Minimum number of photons / reflectivity required to detect a target.</td>
-      <td><span class="code-inline">signal</span></td>
+      <td><code>signal</code></td>
       <td>1</td>
       <td>16383</td>
       <td>50</td>
       <td></td>
-      <td><span class="code-inline">1111</span></td>
+      <td><code>1111</code></td>
     </tr>
 
     <tr>
       <td><strong>Buzzer</strong></td>
-      <td><span class="code-inline">0x05</span></td>
+      <td><code>0x05</code></td>
       <td>Indicates whether the buzzer is enabled:<br>0: Off<br>1: On</td>
-      <td><span class="code-inline">buzz</span></td>
+      <td><code>buzz</code></td>
       <td>0</td>
       <td>1</td>
       <td>1</td>
       <td></td>
-      <td><span class="code-inline">1111</span></td>
+      <td><code>1111</code></td>
     </tr>
 
     <tr>
       <td><strong>Stable</strong></td>
-      <td><span class="code-inline">0x06</span></td>
+      <td><code>0x06</code></td>
       <td>Defines how many measurements must be taken on one level to be recognized as valid.</td>
-      <td><span class="code-inline">stabl</span></td>
+      <td><code>stabl</code></td>
       <td>1</td>
       <td>8</td>
       <td>2</td>
       <td></td>
-      <td><span class="code-inline">1111</span></td>
+      <td><code>1111</code></td>
     </tr>
 
     <tr>
       <td><strong>Region of interest</strong></td>
-      <td><span class="code-inline">0x07</span></td>
+      <td><code>0x07</code></td>
       <td>Advanced: Region of Interest.</td>
-      <td><span class="code-inline">roi</span></td>
+      <td><code>roi</code></td>
       <td>4</td>
       <td>16</td>
       <td>16</td>
       <td></td>
-      <td><span class="code-inline">1111</span></td>
+      <td><code>1111</code></td>
     </tr>
 
     <tr>
       <td><strong>Status period, heartbeat</strong></td>
-      <td><span class="code-inline">0x08</span></td>
+      <td><code>0x08</code></td>
       <td>Status period in minutes. An uplink is sent after each expiration.</td>
-      <td><span class="code-inline">sper</span></td>
+      <td><code>sper</code></td>
       <td>10</td>
       <td>10080</td>
       <td>60</td>
       <td>min</td>
-      <td><span class="code-inline">1111</span></td>
+      <td><code>1111</code></td>
     </tr>
   </tbody>
 </table>
@@ -358,7 +543,7 @@ table.auto-layout{
   <tbody>
     <tr>
       <td><strong>Number of levels</strong></td>
-      <td><span class="code-inline">0x01</span></td>
+      <td><code>0x01</code></td>
       <td>
         Number of levels that can be defined:<br>
         1: 1 level<br>
@@ -366,100 +551,106 @@ table.auto-layout{
         3: 3 levels<br>
         4: 4 levels
       </td>
-      <td><span class="code-inline">lvls</span></td>
+      <td><code>lvls</code></td>
       <td>1</td>
       <td>4</td>
       <td>2</td>
       <td></td>
-      <td><span class="code-inline">1111</span></td>
+      <td><code>1111</code></td>
     </tr>
 
     <tr>
       <td><strong>Dynamic level</strong></td>
-      <td><span class="code-inline">0x02</span></td>
+      <td><code>0x02</code></td>
       <td>
         Defines whether alarms are sent when switching between levels:<br>
         1: Yes<br>
         0: Only when changing or exceeding distance level 1
       </td>
-      <td><span class="code-inline">dynlvl</span></td>
+      <td><code>dynlvl</code></td>
       <td>0</td>
       <td>1</td>
       <td>0</td>
       <td></td>
-      <td><span class="code-inline">1111</span></td>
+      <td><code>1111</code></td>
     </tr>
 
     <tr>
       <td><strong>Distance level 1</strong></td>
-      <td><span class="code-inline">0x03</span></td>
+      <td><code>0x03</code></td>
       <td>Distance to trigger level‑1 state change.</td>
-      <td><span class="code-inline">l1d</span></td>
+      <td><code>l1d</code></td>
       <td>50</td>
       <td>2000</td>
       <td>400</td>
       <td>mm</td>
-      <td><span class="code-inline">1111</span></td>
+      <td><code>1111</code></td>
     </tr>
 
     <tr>
       <td><strong>Distance level 2</strong></td>
-      <td><span class="code-inline">0x04</span></td>
+      <td><code>0x04</code></td>
       <td>Distance to trigger level‑2 state change.</td>
-      <td><span class="code-inline">l2d</span></td>
+      <td><code>l2d</code></td>
       <td>50</td>
       <td>2000</td>
       <td>50</td>
       <td>mm</td>
-      <td><span class="code-inline">1111</span></td>
+      <td><code>1111</code></td>
     </tr>
 
     <tr>
       <td><strong>Distance level 3</strong></td>
-      <td><span class="code-inline">0x05</span></td>
+      <td><code>0x05</code></td>
       <td>Distance to trigger level‑3 state change.</td>
-      <td><span class="code-inline">l3d</span></td>
+      <td><code>l3d</code></td>
       <td>50</td>
       <td>2000</td>
       <td>400</td>
       <td>mm</td>
-      <td><span class="code-inline">1111</span></td>
+      <td><code>1111</code></td>
     </tr>
 
     <tr>
       <td><strong>Distance level 4</strong></td>
-      <td><span class="code-inline">0x06</span></td>
+      <td><code>0x06</code></td>
       <td>Distance to trigger level‑4 state change.</td>
-      <td><span class="code-inline">l4d</span></td>
+      <td><code>l4d</code></td>
       <td>50</td>
       <td>2000</td>
       <td>100</td>
       <td>mm</td>
-      <td><span class="code-inline">1111</span></td>
+      <td><code>1111</code></td>
     </tr>
 
     <tr>
       <td><strong>Hysteresis</strong></td>
-      <td><span class="code-inline">0x07</span></td>
+      <td><code>0x07</code></td>
       <td>Hysteresis around threshold values to prevent oscillation.</td>
-      <td><span class="code-inline">lhyst</span></td>
+      <td><code>lhyst</code></td>
       <td>10</td>
       <td>500</td>
       <td>20</td>
       <td></td>
-      <td><span class="code-inline">1111</span></td>
+      <td><code>1111</code></td>
     </tr>
   </tbody>
 </table>
 </section>
 
 <br><br>
-
-<div style="display:flex;flex-direction:column;gap:24px;align-items:center;">
-  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png" style="max-width:620px;height:auto;" alt="Supported radio technologies">
-  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/CE_Trash_seals.png" style="max-width:320px;height:auto;" alt="CE marking and disposal symbols">
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png"  alt="Supported radio technologies"  style="max-width:750px; height:auto;"
+    loading="lazy">
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
+    alt="trash bin Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
 </div>
-
 <!-- FOOTER -->
 
 <div class="footer-note">
