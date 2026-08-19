@@ -1,233 +1,349 @@
-<!doctype html>
-<html lang="de">
-<head>
-<meta charset="utf-8">
 
-<!-- ✅ CSS – UNVERÄNDERT -->
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
 
-:root{
-  --border:#d0d7de;
-  --table-header:#f5f7fa;
-  --blue-bg:#f7fbff;
-  --blue-border:#d6e4fa;
-  --blue-text:#1a3e8c;
-  --text-main:#111827;
-  --text-muted:#6b7280;
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+  code,
+.inline-code {
+    background-color: #f3f4f6;
+    border: 1px solid #d0d7de;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9em;
+    color: #111827;
+    display: inline-block;
 }
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
 
-/* Base */
-body{
-  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
-  color:var(--text-main);
-  line-height:1.65;
-}
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
 
-/* Headings */
-h1{
-  margin:48px 0 16px;
-  padding-bottom:12px;
-  font-family:"Montserrat",Arial,sans-serif;
-  font-size:42px;
-  font-weight:700;
-  border-bottom:2px solid var(--border);
-}
-
-h3{
-  margin:32px 0 12px;
-  padding-bottom:6px;
-  font-family:"Montserrat",Arial,sans-serif;
-  font-size:18px;
-  font-weight:600;
-  border-bottom:1.5px solid var(--border);
-  scroll-margin-top:120px;
-}
-
-p{margin:8px 0 12px}
-
-/* Tables */
-table{
-  width:100%;
-  border-collapse:collapse;
-  font-size:14px;
-  table-layout:fixed;
-}
-th,td{
-  border:1px solid var(--border);
-  padding:8px 12px;
-  vertical-align:top;
-}
-th{
-  background:var(--table-header);
-  font-weight:700;
-  border-bottom:2px solid #000;
-}
-
-/* TOC */
-.main-toc{
-  max-width:900px;
-  margin:24px auto 40px;
-  padding:16px 20px;
-  background:var(--blue-bg);
-  border:1px solid var(--blue-border);
-  border-radius:6px;
-}
-.main-toc strong{display:block;margin-bottom:8px;}
-.main-toc ul{list-style:none;padding:0;margin:0;}
-.main-toc li{margin:.35rem 0;}
-.main-toc a{color:var(--blue-text);font-weight:600;text-decoration:none;}
-.main-toc a:hover{text-decoration:underline;}
-
-/*/* ---------- PDF ---------- */
-        .pdf-viewer{
-          max-width:900px;
-          height:600px;
-          margin:0 auto 20px;
-          border:1px solid #ccc;
-          border-radius:6px;
-          overflow:hidden;
-        }
-        
-        .pdf-viewer iframe{
-          width:100%;
-          height:100%;
-          border:none;
-        }
-        
-        .pdf-download{
-          max-width:900px;
-          margin:0 auto 36px;
-          padding:14px 18px;
-          background:var(--blue-bg);
-          border:1px solid var(--blue-border);
-          border-radius:6px;
-          text-align:center;
-        }
-        
-        .pdf-download a{
-          color:var(--blue-text);
-          font-weight:600;
-        }
-
-
-/* ---------- Figures ---------- */
-.figure{
-  max-width:900px;
-  margin:24px auto;
-}
-
-.figure img{
-  display:block;
-  max-width:100%;
-  height:auto;
-}
-
-.figure figcaption{
-  margin-top:6px;
-  color:var(--text-muted);
-  font-size:0.875rem;
-  text-align:center;
-}
-  .note-strip{
-    padding:14px 16px;
-    margin:18px 0;
-    border-radius:6px;
-    border-left-width:6px;
-    border-left-style:solid;
-  }
-
-  .note-strip--red{
-    background:#fdecea;
-    border-left-color:#d32f2f;
-  }
-
-  .note-strip--yellow{
-    background:#fff8e1;
-    border-left-color:#f9a825;
-  }
-
-  .note-strip--green{
-    background:#e8f5e9;
-    border-left-color:#2e7d32;
-  }
-  .note-strip p,
-  .note-strip ul{
-    margin:0;
-  }
-  /* ---------- Tabelle mit automatischer Spaltenbreite ---------- */
-table.auto-layout{
-  table-layout: auto;
-}
-
-table.auto-layout th,
-table.auto-layout td{
-  width: auto;          /* überschreibt nth-child Breiten */
-}
-/* Inline-Code-Badge wie im Screenshot (z.B. 0x00) */
-.code-inline{
-  display: inline-block;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 0.8rem;
-  line-height: 1.2;
-  padding: 2px 6px;
-  background-color: #f5f7fa;
-  border: 1px solid #d0d7de;
-  border-radius: 4px;
-  color: #111827;
-  white-space: nowrap;
-}
-/* ---------- Footer / Disclaimer ---------- */
-.footer-note{
-  margin-top:60px;
-  padding-top:20px;
-  border-top:2px solid var(--border);
-  font-size:.82rem;
-  color:var(--text-muted);
-}
-
-.footer-note p{ margin:0 0 6px 0; line-height:1.4; }
-  </style>
-</head>
-<body>
-<div class="container">
-
-
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+    
 </style>
-</head>
 
-<body>
-    <main>
-        
-     <!-- PDF Viewer -->
+
 <div class="pdf-viewer">
-  <iframe
-    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d1b84bc54f63ce98bc821b1579ed1df20e8f6bf3/Apollon_q_pp/Apollon_q_pp_payload/DE/Apollon_Q_PP_Payload_Beschreibung_DE.pdf"
-    loading="lazy"
-    title="Apollon Q – NFC und Downlink Beschreibung (PDF)">
-  </iframe>
+<iframe src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d1b84bc54f63ce98bc821b1579ed1df20e8f6bf3/Apollon_q_pp/Apollon_q_pp_payload/DE/Apollon_Q_PP_Payload_Beschreibung_DE.pdf"
+allowfullscreen
+title="Blueprint Sensor Integration PDF">
+</iframe>
 </div>
 
-<!-- PDF Download -->
 <div class="pdf-download">
-  📄 Sie können das Dokument oben ansehen oder
-  <a
-    href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d1b84bc54f63ce98bc821b1579ed1df20e8f6bf3/Apollon_q_pp/Apollon_q_pp_payload/DE/Apollon_Q_PP_Payload_Beschreibung_DE.pdf"
-    target="_blank"
-    rel="noopener">
-    hier als PDF herunterladen
+  📄 Sie können das PDF oben ansehen oder
+  <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d1b84bc54f63ce98bc821b1579ed1df20e8f6bf3/Apollon_q_pp/Apollon_q_pp_payload/DE/Apollon_Q_PP_Payload_Beschreibung_DE.pdf"
+   target="_blank">
+   <strong>hier herunterladen</strong> 
   </a>.
-</div>   
+</div>
+
         
     <section class="main-toc">
   <strong>Inhalt</strong>
-  <ul>
-    <li><a href="#module">1. Payload Beschreibung</a></li>
-    <li><a href="#measurements">2. Struktur des Modulschlüssels</a></li>
-    <li><a href="#levels">3. Uplink Beispiel</a></li>
-    <li><a href="#payload">4. Apollon Q PP Payload Beschreibung</a></li>
-      <li><a href="#payload1">5. Beispiele Dekodierung (Febris)</a></li>
-  </ul>
+  <ol>
+    <li><a href="#module"> Payload Beschreibung</a></li>
+    <li><a href="#measurements"> Struktur des Modulschlüssels</a></li>
+    <li><a href="#levels"> Uplink Beispiel</a></li>
+    <li><a href="#payload"> Apollon Q PP Payload Beschreibung</a></li>
+      <li><a href="#payload1"> Beispiele Dekodierung (Febris)</a></li>
+  </ol>
 </section>    
         
     <section id="module">
@@ -357,7 +473,7 @@ table.auto-layout td{
   </p>
 
   <p>
-    <span class="code-inline">11 11 FE 1A D5 95 06 03 00 23 BE</span>
+    <code>11 11 FE 1A D5 95 06 03 00 23 BE</code>
   </p>
   
   <table class="auto-layout">
@@ -380,17 +496,17 @@ table.auto-layout td{
   <tbody>
     <tr>
       <td><strong>HEX</strong></td>
-      <td><span class="code-inline">11</span></td>
-      <td><span class="code-inline">11</span></td>
-      <td><span class="code-inline">FE</span></td>
-      <td><span class="code-inline">1A</span></td>
-      <td><span class="code-inline">D5</span></td>
-      <td><span class="code-inline">95</span></td>
-      <td><span class="code-inline">06</span></td>
-      <td><span class="code-inline">03</span></td>
-      <td><span class="code-inline">00</span></td>
-      <td><span class="code-inline">23</span></td>
-      <td><span class="code-inline">BE</span></td>
+      <td><code>11</code></td>
+      <td><code>11</code></td>
+      <td><code>FE</code></td>
+      <td><code>1A</code></td>
+      <td><code>D5</code></td>
+      <td><code>95</code></td>
+      <td><code>06</code></td>
+      <td><code>03</span></td>
+      <td><code>00</code></td>
+      <td><code>23</code></td>
+      <td><code>BE</code></td>
     </tr>
     <tr>
       <td><strong>Beschreibung</strong></td>
@@ -435,7 +551,7 @@ table.auto-layout td{
         <strong>Byte 1</strong><br>
         • 4 Bit MSB: Modulcode.
         Bei Mioty ausschließlich <em>Sentiface</em> Telemetrie‑Modul,
-        d.&nbsp;h. stets <span class="code-inline">0x1</span>.<br>
+        d.&nbsp;h. stets <code>0x1</code>.<br>
         • 4 Bit LSB: Major Version.
         FW der gleichen Major‑Version aber größerer Minor‑Version bleiben
         mit älteren Dekodern kompatibel.
@@ -450,9 +566,9 @@ table.auto-layout td{
         angeschlossener Sensorik.
       </td>
       <td></td>
-      <td><span class="code-inline">module_key</span></td>
-      <td><span class="code-inline">XXX1</span></td>
-      <td><span class="code-inline">module_key</span></td>
+      <td><code>module_key</code></td>
+      <td><code>XXX1</code></td>
+      <td><code>module_key</code></td>
     </tr>
 
     <tr>
@@ -465,9 +581,9 @@ table.auto-layout td{
         0.
       </td>
       <td></td>
-      <td><span class="code-inline">uplink_counter</span></td>
-      <td><span class="code-inline">XXX1</span></td>
-      <td><span class="code-inline">uplink_counter</span></td>
+      <td><code>uplink_counter</code></td>
+      <td><code>XXX1</code></td>
+      <td><code>uplink_counter</code></td>
     </tr>
 
     <tr>
@@ -480,9 +596,9 @@ table.auto-layout td{
         </span>
       </td>
       <td>mV</td>
-      <td><span class="code-inline">battery_voltage</span></td>
-      <td><span class="code-inline">XXX1</span></td>
-      <td><span class="code-inline">battery_voltage</span></td>
+      <td><code>battery_voltage</code></td>
+      <td><code>XXX1</code></td>
+      <td><code>battery_voltage</code></td>
     </tr>
 
     <tr>
@@ -495,9 +611,9 @@ table.auto-layout td{
         </span>
       </td>
       <td>°C</td>
-      <td><span class="code-inline">internal_temperature</span></td>
-      <td><span class="code-inline">XXX1</span></td>
-      <td><span class="code-inline">internal_temperature</span></td>
+      <td><code>internal_temperature</code></td>
+      <td><code>XXX1</code></td>
+      <td><code>internal_temperature</code></td>
     </tr>
 
     <tr>
@@ -511,9 +627,9 @@ table.auto-layout td{
         die gemessen wurden.
       </td>
       <td></td>
-      <td><span class="code-inline">alarm</span></td>
-      <td><span class="code-inline">XXX1</span></td>
-      <td><span class="code-inline">alarm</span></td>
+      <td><code>alarm</code></td>
+      <td><code>XXX1</code></td>
+      <td><code>alarm</code></td>
     </tr>
 
     <tr>
@@ -521,18 +637,18 @@ table.auto-layout td{
       <td>Objekt Status / Status ToF Sensor</td>
       <td>
         Status des Sensors bezogen auf den letzten Messwert<br>
-        • <span class="code-inline">0</span>: Valid range<br>
-        • <span class="code-inline">2 / 4</span>: Out of bounds<br>
-        • <span class="code-inline">5</span>: Hardware fail<br>
-        • <span class="code-inline">7</span>: Wrapped target<br>
-        • <span class="code-inline">8</span>: Algorithm fail<br>
-        • <span class="code-inline">14</span>: Invalid range<br>
-        • <span class="code-inline">99</span>: More than one valid target detected
+        • <code>0</code>: Valid range<br>
+        • <code>2 / 4</code>: Out of bounds<br>
+        • <code>5</code>: Hardware fail<br>
+        • <code>7</code>: Wrapped target<br>
+        • <code>8</code>: Algorithm fail<br>
+        • <code>14</code>: Invalid range<br>
+        • <code>99</code>: More than one valid target detected
       </td>
       <td></td>
-      <td><span class="code-inline">object_status</span></td>
-      <td><span class="code-inline">XXX1</span></td>
-      <td><span class="code-inline">object_status</span></td>
+      <td><code>object_status</code></td>
+      <td><code>XXX1</code></td>
+      <td><code>object_status</code></td>
     </tr>
 
     <tr>
@@ -540,9 +656,9 @@ table.auto-layout td{
       <td>Distanz</td>
       <td>Distanz zum aktuellen Objekt in Millimeter</td>
       <td>mm</td>
-      <td><span class="code-inline">object_distance</span></td>
-      <td><span class="code-inline">XXX1</span></td>
-      <td><span class="code-inline">object_distance</span></td>
+      <td><code>object_distance</code></td>
+      <td><code>XXX1</code></td>
+      <td><code>object_distance</code></td>
     </tr>
 
     <tr>
@@ -554,9 +670,9 @@ table.auto-layout td{
         steigt die Wahrscheinlichkeit für Fehldetektionen.
       </td>
       <td></td>
-      <td><span class="code-inline">object_sigma</span></td>
-      <td><span class="code-inline">XXX1</span></td>
-      <td><span class="code-inline">object_sigma</span></td>
+      <td><code>object_sigma</code></td>
+      <td><code>XXX1</code></td>
+      <td><code>object_sigma</code></td>
     </tr>
 
     <tr>
@@ -567,9 +683,9 @@ table.auto-layout td{
         die vom Ziel zurückkommen muss, um als Ziel erkannt zu werden
       </td>
       <td></td>
-      <td><span class="code-inline">object_signal</span></td>
-      <td><span class="code-inline">XXX1</span></td>
-      <td><span class="code-inline">object_signal</span></td>
+      <td><code>object_signal</code></td>
+      <td><code>XXX1</code></td>
+      <td><code>object_signal</code></td>
     </tr>
 
     <tr>
@@ -579,9 +695,9 @@ table.auto-layout td{
         Ambient Light des Ziels, nicht qualitativ
       </td>
       <td></td>
-      <td><span class="code-inline">object_ambient</span></td>
-      <td><span class="code-inline">XXX1</span></td>
-      <td><span class="code-inline">object_ambient</span></td>
+      <td><code>object_ambient</code></td>
+      <td><code>XXX1</code></td>
+      <td><code>object_ambient</code></td>
     </tr>
   </tbody>
 </table>
@@ -590,7 +706,7 @@ table.auto-layout td{
 
   <p>
     Payload:
-    <span class="code-inline">11 11 CE 14 8E 07 EE 1D 00 02 03 D6 01 D1 00</span>
+    <code>11 11 CE 14 8E 07 EE 1D 00 02 03 D6 01 D1 00</code>
   </p>
 </section>
 
@@ -614,17 +730,17 @@ table.auto-layout td{
   <tbody>
     <tr>
       <td><strong>HEX</strong></td>
-      <td><span class="code-inline">11</span></td>
-      <td><span class="code-inline">11</span></td>
-      <td><span class="code-inline">CE</span></td>
-      <td><span class="code-inline">14</span></td>
-      <td><span class="code-inline">8E</span></td>
-      <td><span class="code-inline">07</span></td>
-      <td><span class="code-inline">EE</span></td>
-      <td><span class="code-inline">1D</span></td>
-      <td><span class="code-inline">00</span></td>
-      <td><span class="code-inline">02</span></td>
-      <td><span class="code-inline">03</span></td>
+      <td><code>11</code></td>
+      <td><code>11</code></td>
+      <td><code>CE</code></td>
+      <td><code>14</code></td>
+      <td><code>8E</code></td>
+      <td><code>07</code></td>
+      <td><code>EE</code></td>
+      <td><code>1D</code></td>
+      <td><code>00</code></td>
+      <td><code>02</code></td>
+      <td><code>03</code></td>
     </tr>
     <tr>
       <td><strong>Beschreibung</strong></td>
@@ -656,10 +772,10 @@ table.auto-layout td{
   <tbody>
     <tr>
       <td><strong>HEX</strong></td>
-      <td><span class="code-inline">D6</span></td>
-      <td><span class="code-inline">01</span></td>
-      <td><span class="code-inline">D1</span></td>
-      <td><span class="code-inline">00</span></td>
+      <td><code>D6</code></td>
+      <td><code>01</code></td>
+      <td><code>D1</code></td>
+      <td><code>00</code></td>
     </tr>
     <tr>
       <td><strong>Beschreibung</strong></td>
@@ -681,25 +797,29 @@ table.auto-layout td{
   </figcaption>
 </figure>
 </section>
-<br><br>
 
-<div style="display:flex;flex-direction:column;gap:24px;align-items:center;">
-  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png" style="max-width:620px;height:auto;" alt="Supported radio technologies">
-  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/CE_Trash_seals.png" style="max-width:320px;height:auto;" alt="CE marking and disposal symbols">
+
+<br><br>
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png"  alt="Supported radio technologies"  style="max-width:750px; height:auto;"
+    loading="lazy">
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
+    alt="trash bin Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
 </div>
-     
-<!-- FOOTER -->
+
+
 
 <div class="footer-note">
-  <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
-  <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
-  <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
-  <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
-  <p style="padding-left:14px; font-style:italic;">
-    Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
-  </p>
+  <p>© Sentinum GmbH - Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Texte, Tabellen und Bilder, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Sofern nicht anders angegeben, unterliegen alle Bilder dem Urheberrecht der Sentinum GmbH.</p>
+  <p>Eine Vervielfältigung, Verbreitung oder Nutzung, auch auszugsweise, ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">Technische Änderungen vorbehalten. Alle Angaben erfolgen ohne Gewähr.</p>
 </div>
-     
-        
-    </main>
-</body> </html>
+

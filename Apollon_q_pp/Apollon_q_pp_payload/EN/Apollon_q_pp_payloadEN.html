@@ -1,151 +1,326 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-
-<title>Apollon Q – NFC and Downlink Description</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
 
-:root{
-  --border:#d0d7de;
-  --table-header:#f5f7fa;
-  --blue-bg:#f7fbff;
-  --blue-border:#d6e4fa;
-  --blue-text:#1a3e8c;
-  --text-main:#111827;
-  --text-muted:#6b7280;
-}
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
 
-body{
-  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
-  color:var(--text-main);
-  line-height:1.65;
-}
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
 
-h3{
-  margin:32px 0 12px;
-  padding-bottom:6px;
-  font-family:"Montserrat",Arial,sans-serif;
-  font-size:18px;
-  font-weight:600;
-  border-bottom:1.5px solid var(--border);
-}
 
-p{margin:8px 0 12px}
 
-table{
-  width:100%;
-  border-collapse:collapse;
-  font-size:14px;
-}
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
 
-th,td{
-  border:1px solid var(--border);
-  padding:8px 12px;
-  vertical-align:top;
-}
+    .container {
+        width: 100%;
+    }
 
-th{
-  background:var(--table-header);
-  font-weight:700;
-  border-bottom:2px solid #000;
-}
+    p {
+        margin: 8px 0 12px;
+    }
 
-.main-toc{
-  max-width:900px;
-  margin:24px auto 40px;
-  padding:16px 20px;
-  background:var(--blue-bg);
-  border:1px solid var(--blue-border);
-  border-radius:6px;
-}
+    /* ---------- Headings ---------- */
 
-.main-toc strong{display:block;margin-bottom:8px;}
-.main-toc ul{list-style:none;margin:0;padding:0;}
-.main-toc li{margin:.35rem 0;}
-.main-toc a{color:var(--blue-text);font-weight:600;text-decoration:none;}
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
 
-.pdf-viewer{
-  max-width:900px;
-  height:600px;
-  margin:0 auto 20px;
-  border:1px solid #ccc;
-  border-radius:6px;
-  overflow:hidden;
-}
-.pdf-viewer iframe{
-  width:100%;
-  height:100%;
-  border:none;
-}
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
 
-.pdf-download{
-  max-width:900px;
-  margin:0 auto 36px;
-  padding:14px 18px;
-  background:var(--blue-bg);
-  border:1px solid var(--blue-border);
-  border-radius:6px;
-  text-align:center;
-}
-.pdf-download a{
-  color:var(--blue-text);
-  font-weight:600;
-}
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
 
-table.auto-layout{
-  table-layout:auto;
-}
-/* Inline code badge (e.g. 0x00) */
-.code-inline{
-  display:inline-block;
-  font-family:"Courier New", Courier, monospace;
-  font-size:0.8rem;
-  line-height:1.2;
-  padding:2px 6px;
-  background-color:#f5f7fa;
-  border:1px solid #d0d7de;
-  border-radius:4px;
-  color:#111827;
-  white-space:nowrap;
-}
-/* ---------- Figures ---------- */
-.figure{
-  max-width:900px;
-  margin:24px auto;
-}
 
-.figure img{
-  display:block;
-  max-width:100%;
-  height:auto;
-}
+    p {
+        margin: 8px 0 12px;
+    }
 
-.figure figcaption{
-  margin-top:6px;
-  color:var(--text-muted);
-  font-size:0.875rem;
-  text-align:center;
-}
-/* ---------- Footer / Disclaimer ---------- */
-.footer-note{
-  margin-top:60px;
-  padding-top:20px;
-  border-top:2px solid var(--border);
-  font-size:.82rem;
-  color:var(--text-muted);
-}
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
 
-.footer-note p{ margin:0 0 6px 0; line-height:1.4; }
-  </style>
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+  code,
+.inline-code {
+    background-color: #f3f4f6;
+    border: 1px solid #d0d7de;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9em;
+    color: #111827;
+    display: inline-block;
+}
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+    
+</style>
 </head>
 <body>
 <div class="container">
 
-</style>
-</head>
 
 
 <!-- PDF Viewer -->
@@ -159,23 +334,23 @@ table.auto-layout{
 
 <!-- PDF Download -->
 <div class="pdf-download">
-  📄 You can view the document above or
+  📄 You can view the PDF above or
   <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d1b84bc54f63ce98bc821b1579ed1df20e8f6bf3/Apollon_q_pp/Apollon_q_pp_payload/EN/Apollon_Q_PP_Payload_Description_EN.pdf"
      target="_blank" rel="noopener">
-    download the PDF here
+    <strong>download it here</strong>
   </a>.
 </div>
 
 <!-- TOC -->
 <section class="main-toc">
 <strong>Contents</strong>
-<ul>
-  <li><a href="#module">1. Payload description</a></li>
-  <li><a href="#measurements">2. Structure of the module key</a></li>
-  <li><a href="#levels">3. Uplink example</a></li>
-  <li><a href="#payload">4. Apollon Q PP payload description</a></li>
-  <li><a href="#payload1">5. Decoding examples (Febris)</a></li>
-</ul>
+<ol>
+  <li><a href="#module"> Payload description</a></li>
+  <li><a href="#measurements"> Structure of the module key</a></li>
+  <li><a href="#levels"> Uplink example</a></li>
+  <li><a href="#payload"> Apollon Q PP payload description</a></li>
+  <li><a href="#payload1"> Decoding examples (Febris)</a></li>
+</ol>
 </section>
 
 <!-- 1 -->
@@ -264,7 +439,7 @@ The module key is required for the downlink.
 </figure>
 
 <p>The following payload example is given for the Helios pressure sensor:</p>
-<p><span class="code-inline">11 11 FE 1A D5 95 06 03 00 23 BE</span></p>
+<p><code>11 11 FE 1A D5 95 06 03 00 23 BE</code></p>
 
 <table class="auto-layout">
   <thead>
@@ -284,19 +459,19 @@ The module key is required for the downlink.
     </tr>
   </thead>
   <tbody>
-    <tr>
+      <tr>
       <td><strong>HEX</strong></td>
-      <td><span class="code-inline">11</span></td>
-      <td><span class="code-inline">11</span></td>
-      <td><span class="code-inline">FE</span></td>
-      <td><span class="code-inline">1A</span></td>
-      <td><span class="code-inline">D5</span></td>
-      <td><span class="code-inline">95</span></td>
-      <td><span class="code-inline">06</span></td>
-      <td><span class="code-inline">03</span></td>
-      <td><span class="code-inline">00</span></td>
-      <td><span class="code-inline">23</span></td>
-      <td><span class="code-inline">BE</span></td>
+      <td><code>11</code></td>
+      <td><code>11</code></td>
+      <td><code>FE</code></td>
+      <td><code>1A</code></td>
+      <td><code>D5</code></td>
+      <td><code>95</code></td>
+      <td><code>06</code></td>
+      <td><code>03</span></td>
+      <td><code>00</code></td>
+      <td><code>23</code></td>
+      <td><code>BE</code></td>
     </tr>
     <tr>
       <td><strong>Beschreibung</strong></td>
@@ -356,9 +531,9 @@ The module key is required for the downlink.
         configuration of connected sensors.
       </td>
       <td></td>
-      <td><span class="code-inline">module_key</span></td>
-      <td><span class="code-inline">XXX1</span></td>
-      <td><span class="code-inline">module_key</span></td>
+  <td><code>module_key</code></td>
+      <td><code>XXX1</code></td>
+      <td><code>module_key</code></td>
     </tr>
 
     <tr>
@@ -370,9 +545,9 @@ The module key is required for the downlink.
        0.
       </td>
       <td></td>
-      <td><span class="code-inline">uplink_counter</span></td>
-      <td><span class="code-inline">XXX1</span></td>
-      <td><span class="code-inline">uplink_counter</span></td>
+   <td><code>uplink_counter</code></td>
+      <td><code>XXX1</code></td>
+      <td><code>uplink_counter</code></td>
     </tr>
 
     <tr>
@@ -385,9 +560,9 @@ The module key is required for the downlink.
         </span>
       </td>
       <td>mV</td>
-      <td><span class="code-inline">battery_voltage</span></td>
-      <td><span class="code-inline">XXX1</span></td>
-      <td><span class="code-inline">battery_voltage</span></td>
+       <td><code>battery_voltage</code></td>
+      <td><code>XXX1</code></td>
+      <td><code>battery_voltage</code></td>
     </tr>
 
     <tr>
@@ -400,9 +575,9 @@ The module key is required for the downlink.
         </span>
       </td>
       <td>°C</td>
-      <td><span class="code-inline">internal_temperature</span></td>
-      <td><span class="code-inline">XXX1</span></td>
-      <td><span class="code-inline">internal_temperature</span></td>
+   <td><code>internal_temperature</code></td>
+      <td><code>XXX1</code></td>
+      <td><code>internal_temperature</code></td>
     </tr>
 
     <tr>
@@ -415,9 +590,9 @@ The module key is required for the downlink.
         For all values &lt; 16, measured levels are transmitted.
       </td>
       <td></td>
-      <td><span class="code-inline">alarm</span></td>
-      <td><span class="code-inline">XXX1</span></td>
-      <td><span class="code-inline">alarm</span></td>
+       <td><code>alarm</code></td>
+      <td><code>XXX1</code></td>
+      <td><code>alarm</code></td>
     </tr>
 
     <tr>
@@ -425,18 +600,18 @@ The module key is required for the downlink.
       <td>Status object / ToF sensor status</td>
       <td>
         Status of the sensor in relation to the last measured value<br>
-        • <span class="code-inline">0</span>: Valid range<br>
-        • <span class="code-inline">2 / 4</span>: Out of bounds<br>
-        • <span class="code-inline">5</span>: Hardware fail<br>
-        • <span class="code-inline">7</span>: Wrapped target<br>
-        • <span class="code-inline">8</span>: Algorithm fail<br>
-        • <span class="code-inline">14</span>: Invalid range<br>
-        • <span class="code-inline">99</span>: More than one valid target detected
+          • <code>0</code>: Valid range<br>
+        • <code>2 / 4</code>: Out of bounds<br>
+        • <code>5</code>: Hardware fail<br>
+        • <code>7</code>: Wrapped target<br>
+        • <code>8</code>: Algorithm fail<br>
+        • <code>14</code>: Invalid range<br>
+        • <code>99</code>: More than one valid target detected
       </td>
       <td></td>
-      <td><span class="code-inline">object_status</span></td>
-      <td><span class="code-inline">XXX1</span></td>
-      <td><span class="code-inline">object_status</span></td>
+      <td><code>object_status</code></td>
+      <td><code>XXX1</code></td>
+      <td><code>object_status</code></td>
     </tr>
 
     <tr>
@@ -444,9 +619,9 @@ The module key is required for the downlink.
       <td>Distance</td>
       <td>Distance to the current object in millimeters</td>
       <td>mm</td>
-      <td><span class="code-inline">object_distance</span></td>
-      <td><span class="code-inline">XXX1</span></td>
-      <td><span class="code-inline">object_distance</span></td>
+       <td><code>object_distance</code></td>
+      <td><code>XXX1</code></td>
+      <td><code>object_distance</code></td>
     </tr>
 
     <tr>
@@ -458,9 +633,9 @@ The module key is required for the downlink.
         increases.
       </td>
       <td></td>
-      <td><span class="code-inline">object_sigma</span></td>
-      <td><span class="code-inline">XXX1</span></td>
-      <td><span class="code-inline">object_sigma</span></td>
+     <td><code>object_sigma</code></td>
+      <td><code>XXX1</code></td>
+      <td><code>object_sigma</code></td>
     </tr>
 
     <tr>
@@ -471,9 +646,9 @@ The module key is required for the downlink.
         from the target to be recognized as a target.
       </td>
       <td></td>
-      <td><span class="code-inline">object_signal</span></td>
-      <td><span class="code-inline">XXX1</span></td>
-      <td><span class="code-inline">object_signal</span></td>
+    <td><code>object_signal</code></td>
+      <td><code>XXX1</code></td>
+      <td><code>object_signal</code></td>
     </tr>
 
     <tr>
@@ -481,9 +656,9 @@ The module key is required for the downlink.
       <td>Object ambient</td>
       <td>Ambient light of the target, not qualitative</td>
       <td></td>
-      <td><span class="code-inline">object_ambient</span></td>
-      <td><span class="code-inline">XXX1</span></td>
-      <td><span class="code-inline">object_ambient</span></td>
+      <td><code>object_ambient</code></td>
+      <td><code>XXX1</code></td>
+      <td><code>object_ambient</code></td>
     </tr>
   </tbody>
 </table>
@@ -495,7 +670,7 @@ The module key is required for the downlink.
 <h3>5. Decoding examples (Febris)</h3>
 <p>
 Payload:
-<span class="code-inline">11 11 CE 14 8E 07 EE 1D 00 02 03 D6 01 D1 00</span>
+  <code>11 11 CE 14 8E 07 EE 1D 00 02 03 D6 01 D1 00</code>
 </p>
 
 <table class="auto-layout">
@@ -518,17 +693,17 @@ Payload:
   <tbody>
     <tr>
       <td><strong>HEX</strong></td>
-      <td><span class="code-inline">11</span></td>
-      <td><span class="code-inline">11</span></td>
-      <td><span class="code-inline">CE</span></td>
-      <td><span class="code-inline">14</span></td>
-      <td><span class="code-inline">8E</span></td>
-      <td><span class="code-inline">07</span></td>
-      <td><span class="code-inline">EE</span></td>
-      <td><span class="code-inline">1D</span></td>
-      <td><span class="code-inline">00</span></td>
-      <td><span class="code-inline">02</span></td>
-      <td><span class="code-inline">03</span></td>
+      <td><code>11</code></td>
+      <td><code>11</code></td>
+      <td><code>CE</code></td>
+      <td><code>14</code></td>
+      <td><code>8E</code></td>
+      <td><code>07</code></td>
+      <td><code>EE</code></td>
+      <td><code>1D</code></td>
+      <td><code>00</code></td>
+      <td><code>02</code></td>
+      <td><code>03</code></td>
     </tr>
     <tr>
       <td><strong>Module description</strong></td>
@@ -559,11 +734,11 @@ Payload:
   </thead>
   <tbody>
     <tr>
-      <td><strong>HEX</strong></td>
-      <td><span class="code-inline">D6</span></td>
-      <td><span class="code-inline">01</span></td>
-      <td><span class="code-inline">D1</span></td>
-      <td><span class="code-inline">00</span></td>
+       <td><strong>HEX</strong></td>
+      <td><code>D6</code></td>
+      <td><code>01</code></td>
+      <td><code>D1</code></td>
+      <td><code>00</code></td>
     </tr>
     <tr>
       <td><strong>Description</strong></td>
@@ -581,7 +756,7 @@ Payload:
   alt="Apollon Q PP Payload Code"
 />
   <figcaption>
-    Abbildung&nbsp;2: Apollon Q PP Payload Code – schematische Darstellung der Byte‑ und Feldzuordnung
+    Abbildung&nbsp;2: Apollon Q PP Payload Code – Schematic Representation of Byte and Field Mapping
   </figcaption>
 </figure>
 </section>
