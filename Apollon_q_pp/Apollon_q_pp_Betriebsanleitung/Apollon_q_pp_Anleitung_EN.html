@@ -1,0 +1,1858 @@
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+    
+@import url(‘https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap’);
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+    
+/* Base */
+    body {
+        font-family: “Nunito”, “Segoe UI”, Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+    
+.container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings --------- - */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: “Montserrat”, Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+    
+h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+    
+h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: “Montserrat”, Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        
+scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        
+margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    
+}
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        
+background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+    
+.note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        
+text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    
+.pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Heading */
+    .main-toc strong {
+        display: block;
+        
+margin-bottom: 8px;
+    }
+
+
+    /* Numbering */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+    
+/* Spacing identical to the reference */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    
+.main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+/* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+    
+th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+    
+/* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        
+word-break: normal;
+        /* 🔑 prevents hyphenation */
+        overflow-wrap: break-word;
+        /* ✅ breaks only on long technical tokens */
+        
+hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    
+}
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    
+}
+
+    .figure figcaption {
+        margin-top: 6px;
+        
+font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    
+}
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+    
+code,
+    .inline-code {
+        background-color: #f3f4f6;
+        border: 1px solid #d0d7de;
+        border-radius: 4px;
+        padding: 2px 6px;
+        font-family: SFMono-Regular, Consolas, “Liberation Mono”, Menlo, monospace;
+        font-size: 0.9em;
+        
+color: #111827;
+        display: inline-block;
+    }
+
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: " Nunito“, ”Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+    
+.note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+</style>
+<!--
+<div class="pdf-viewer">
+<iframe src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d1b84bc54f63ce98bc821b1579ed1df20e8f6bf3/Apollon_q_pp/ Apollon_q_pp_payload/DE/Apollon_Q_PP_Payload_Description_DE.pdf“
+allowfullscreen
+title=”Blueprint Sensor Integration PDF">
+</iframe>
+</div>
+
+<div class="pdf-download">
+  📄 You can view the PDF above or
+  <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/d1b84bc54f63ce98bc821b1579ed1df20e8f6bf3/Apollon_q_pp/ Apollon_q_pp_payload/DE/Apollon_Q_PP_Payload_Description_DE.pdf"
+   target="_blank">
+   <strong>download it here</strong>
+  </a>.
+</div>
+-->
+ 
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Apollon-Q%208.2.png?width=688&height=387&amp;name=Apollon-Q%208.2.png"
+        alt="Apollon-Q PP Shelving Example"
+        
+loading=“lazy”
+        style="max-width:688px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Figure 1. Apollon Q PP Sensor
+    
+</figcaption></figure>
+
+<h3>Symbols and Explanations</h3>
+
+<div class="note-strip note-strip--red">
+    <strong>Warning</strong>
+    <p style="margin-bottom:0;">
+        Important warnings and information about potential hazards,
+        malfunctions, or damage.
+    
+</p>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+    <p style="margin-bottom:0;">
+        Important information for proper operation,
+        
+configuration, and installation of the device.
+    </p>
+  
+</div>
+  <div class="note-strip note-strip--yellow">
+        <strong>Caution</strong>
+    <p style="margin-bottom:0;">
+        Important information regarding preventive safety measures.
+    </p>
+  
+</div>
+
+<h3>1. Safety Instructions</h3>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Caution</strong>
+
+    <ul>
+        <li>
+            Follow the safety instructions and
+            installation instructions in the manual and in the
+            installation documentation.
+        </li>
+        
+<li>
+            Ensure that the installation environment complies with the
+            prescribed guidelines for the respective
+            application. Adhere to temperature and
+            other limit values at all times.
+        </li>
+        
+<li>
+            The device may only be operated within the
+            ranges specified in the technical data.
+        </li>
+
+        <li>
+            The device may only be used for the intended
+            purpose described.
+        </li>
+
+        <li>
+            Modifications or additions to the device may
+            
+safety, functionality, and approval can no longer
+            be guaranteed.
+        </li>
+    </ul>
+</div>
+
+<div class="note-strip note-strip--yellow">
+    <strong>2. Caution</strong>
+
+    <ul>
+        <li>
+            
+Improper installation may cause the device to malfunction
+            .
+        </li>
+
+        <li>
+            Improper installation can cause permanent damage
+            to the device.
+        </li>
+
+        <li>
+            Improper assembly may pose a risk of injury.
+        </li>
+    </ul>
+</div>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Caution</strong>
+
+    <ul>
+        <li>
+            Improper handling, such as subjecting the device to heavy
+            mechanical stress or dropping it,
+            can cause damage and malfunctions.
+        </li>
+    </ul>
+</div>
+
+
+<h3 id="technical-drawing">
+3. Technical Drawing
+</h3>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(37).png?width=688&amp;height=407&amp;name=Untitled%20 (37).png" alt="Technical Drawing Apollon-Q PP"
+        loading="lazy"
+        style="max-width:900px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Figure 2. Technical Drawing of the Apollon-Q PP
+    </figcaption>
+</figure>
+
+
+<div class="note-strip note-strip--blue">
+    
+<strong>Note</strong>
+
+    <p style="margin-bottom:0;">
+        The front side is the side where the logo and the
+        central opening for the sensor are located. The back side is the
+        side where the labeling (e.g., company address) is affixed.
+    </p>
+</div>
+
+<h3 id="funktionsweise">
+4. General Operation of the Apollon-Q PP
+</h3>
+
+<p>
+The Apollon-Q PP is a sensor for detecting the presence of objects
+and goods. The sensor can be used, for example, to detect packages or
+pallets on shelves.
+</p>
+
+<p>
+In this example, a shelf with four stacked items is used.
+</p>
+<figure  class="figure">
+<img
+        src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Sep-03-2024-07-46-55-4153-AM.png?width=899&amp;height=801&amp;name=image-png-Sep-03-2024-07-46-55-4153-AM.png"
+        alt="Apollon-Q PP Regalbeispiel"
+        loading="lazy"
+        style="max-width:900px; width:100%; height:auto;"
+    >
+    <figcaption> Figure 3. Example shelving configuration with four packages</figcaption>
+    </figure>
+
+
+
+                  <p>Depending on the set measurement frequency, the sensor detects the presence of the packages using optical time-of-flight distance measurement. The measurement frequency can be set using the “Measurement Period” parameter (<code>mper</code>). The default value is 5000 ms.&nbsp; </p>
+                    <p>For reliable detection of the packages, the distances should always be set to approximately half the height of the packages, as shown in the figure. <code>l4d </code>should therefore be the distance from the sensor to Package 4 plus half the height of Package 4. If the measured distance from the sensor is less than the set distance <code>l4d ,&nbsp;</code>the sensor has detected an object in the area of Level 4.</p>
+                    
+<p>If Package 4 is on the shelf, the sensor returns the following values in the payload:</p>
+                    
+                    
+                    <pre>...<br><code>object_present: true,</code><br><code>object_level: 4</code>,<br><code>object_distance: [Distance to the object]</code>,<br>.. .</pre>
+                    
+                    
+                    <p>If Package 4 is removed from the shelf, a beep sounds and the sensor sends a message due to the change in state. The distance is then measured and compared to the set levels. In this case, the measured distance is less than the set distance <code>l3d&nbsp;</code>and the sensor has detected an object at Level 3. Here, the sensor returns the following data in the payload:</p>
+                    
+                     <pre>...<br><code>object_present: true,</code><br><code>object_level: 3</code>,<br><code>object_distance: [Distance to the object]</code>,<br>...</pre>
+                    
+                    
+                    <p>This behavior can be applied analogously to the removal of packages 1 through 3.</p>
+                    <p>If a distance outside the defined limits is measured, the sensor changes its state from Level 1 to “no object detected” and adjusts the payload as follows:</p>
+                    
+                    <pre>.. .<br><code>object_present: false</code>,<br><code>object_level: 0</code>,<br><code>object_distance: [Distance to object]</code>, <br>...</pre>
+                    
+                    
+                    <p>This state occurs when a distance greater than <code>l1d </code> is detected. Thus, if there is no package on the shelf, this is acknowledged with <code>object_present: false </code>.& nbsp;</p>
+                    <div>
+                        <p>The sensor transmits the data no later than the defined measurement interval whenever a state change occurs. Additionally, a handshake can be configured.</p>
+                    </div>
+                    <p>In general, up to 4 different levels can be defined in the sensor. The values can be configured via NFC or downlinks:</p>
+                      
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>.json key</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Distance Level 1</td>
+                
+<td>Distance to trigger a Level 1 state change</td>
+                <td><code>l1d</code></td>
+            </tr>
+
+            <tr>
+                <td>Distance Level 2</td>
+                <td>Distance to trigger a Level 2 state change</td>
+                <td><code>l2d</code></td>
+            
+</tr>
+
+            <tr>
+                <td>Distance Level 3</td>
+                <td>Distance to trigger a Level 3 state change</td>
+                <td><code>l3d</code></td>
+            </tr>
+            
+<tr>
+                <td>Distance Level 4</td>
+                <td>Distance to trigger a Level 4 state change</td>
+                <td><code>l4d</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+                     <p>l1d always represents the greatest distance here—that is, the distance to the object farthest from the sensor.</p>
+   
+<p>l4d always represents the smallest distance here—that is, the distance to the object closest to the sensor.</p>
+   
+   <div>
+                        <p>Not all distances need to be defined. If you only need to distinguish between two objects, you can use the parameter <code>lvls</code> to set the number of active levels/ levels. The levels are then activated in ascending order. If the parameter <code>lvls = 2</code>, then the distance for Level 1 (<code>l1d</code>) and the distance for Level 2 (<code>l2d</code>) can be set.</p>
+                    
+</div>
+                    <p>The <code>dyn </code>parameter can be used to specify whether the sensor can distinguish between current levels or not. If <code>dyn=1,&nbsp;</code>the sensor returns the current level, distance, and <code>object_present</code>; if <code>dyn=0</code>, the sensor returns only <code>object_present:true</code> or <code>object_present:false</code>.</p>
+                    <p>Considering this specific case, the number of levels can be set to <code>lvls=2</code> to meet the application requirements. In this case, the maximum capacity of the shelf is two packages.</p>
+                    
+                      
+     <figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Sep-03-2024-08-49-02-9993-AM.png?width=688&amp; height=664&amp;name=image-png-Sep-03-2024-08-49-02-9993-AM.png"
+          
+alt=“Apollon-Q PP Shelving Example”
+        loading="lazy"
+        style="max-width:900px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Figure 4. Example shelf layout with two packages
+    </figcaption></figure>
+    
+  
+    <h3>5. Additional Use Cases</h3>
+    <p>Depending on the sensor’s configuration, various use cases can be implemented. The following scenarios were implemented as examples:</p>
+  <ol>
+    
+<li>Detection and presence of vehicles (industrial trucks, cars, trucks, etc.)</li>
+    <li>Detection of open doors or hatches</li>
+    <li>Detection of packages in shipping boxes</li>
+</ol>
+
+
+<h3 id="recommended-accessories">
+6. Recommended Accessories
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Recommended Accessories</th>
+                <th>Sentinum Part Number</th>
+                
+<th>Manufacturer</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Screws (Wall)</td>
+                <td>
+                    DIN912 cylinder head screws or wood screws with anchors
+                    appropriate for the wall material.
+                    <br><br>
+                    
+Acceptable sizes:
+                    <ul>
+                        <li>DIN screws M4 or M5</li>
+                        <li>Wood screws 4 mm to 5 mm</li>
+                    </ul>
+                </td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            
+<tr>
+                <td>Magnet</td>
+                <td>Neodymium magnet with M4 internal thread</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Adhesive</td>
+                <td>Mounting adhesive</td>
+                
+<td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Adhesive stickers</td>
+                <td>Double-sided tape</td>
+                <td>-</td>
+                <td>-</td>
+            
+</tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="montagezubehoer">
+7. Mounting Accessories
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Part Number</th>
+                
+<th>Recommended Accessories</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            
+<tr>
+                <td><strong>Z-APOQ-MAG-NEO</strong></td>
+                <td>APOQ Neodymium Magnet Set</td>
+            </tr>
+
+            <tr>
+                <td><strong>Z-APOQ-MAG-FER</strong></td>
+                <td>APOQ Ferrite Magnet Set</td>
+            
+</tr>
+
+            <tr>
+                
+<td><strong>Z-APOQ-RWM-BN</strong></td>
+                <td>Rear Panel Mounting Kit with Blind Rivets</td>
+            </tr>
+
+            <tr>
+                <td><strong>Z-APOQ-RWM-NM</strong></td>
+                <td>Rear Panel Mounting Kit with M4 Rivet Nuts</td>
+            
+</tr>
+
+            <tr>
+                <td><strong>Z-APOQ-VWM-BN</strong></td>
+                <td>Front Panel Mounting Kit with Blind Rivets</td>
+            </tr>
+            
+<tr>
+                <td><strong>Z-APOQ-VWM-NM</strong></td>
+                <td>Front panel mounting kit with M4 rivet nuts</td>
+            </tr>
+
+            <tr>
+                <td><strong>Z-APOQ-AP</strong></td>
+                
+<td>PA Spacer Plate</td>
+            </tr>
+
+            <tr>
+                <td><strong>Z-APOQ ADHESIVE</strong></td>
+                <td>Assembly Adhesives</td>
+            </tr>
+            
+<tr>
+                <td><strong>Z-APOQ-SCREWS</strong></td>
+                <td>DIN 912 machine screws with M4 nuts</td>
+            </tr>
+
+            <tr>
+                <td><strong>Z-APOQ-SPX</strong></td>
+                <td>Wood screws</td>
+            </tr>
+
+            <tr>
+                <td><strong>Z-APOQ-DKLB</strong></td>
+                <td>Double-sided adhesive tape</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="montage-vorbereitung">
+8. Installation and Preparation
+</h3>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+
+    <p>
+        If the sensor is easily accessible after installation,
+        install the sensor first and do not activate it
+        
+after mounting it.
+    </p>
+
+    <p style="margin-bottom:0;">
+        If the sensor is no longer accessible after installation,
+        activate the sensor first and mount it
+        only afterward.
+    </p>
+</div>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Caution</strong>
+
+    <p style="margin-bottom:0;">
+        Before performing this type of installation, make sure that the
+        installation surface is level. Uneven surfaces can cause
+        
+stress in the housing and consequently cause damage.
+    </p>
+</div>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Caution</strong>
+
+    <p style="margin-bottom:0;">
+        Observe the specified tightening torque for the screws.
+    
+</p>
+</div>
+
+<ol>
+    <li>
+        If you have ordered a device with an external antenna—identifiable
+        by the gold-colored RP-SMA connector—first install the
+        antenna included in the package.
+    
+</li>
+
+    <li>
+        The sensor should be mounted with its long side against a container
+        . The long side of the sensor and the long side
+        of the container should be parallel.
+
+        <figure class="figure">
+            <img
+                src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(38).png?width=476&height=586&name=Untitled%20(38).png" loading="lazy"
+               style="max-width:688px; width:100%; height:auto;" >
+            <figcaption>
+                
+Figure 5. Recommended sensor orientation on the container
+            </figcaption>
+        </figure>
+    </li>
+
+    <li>
+        Make sure the sensor has as unobstructed a field of view
+        as possible. The detection range can be described by an opening angle
+        of approximately 40°.
+
+        <figure class="figure">
+            <img
+                src="https://docs.sentinum.de/hs-fs/hubfs/Montage_Container_2021-Jun-04_07-45-16AM-000_CustomizedView9062892456%20(1).png?width=688&height=336&name=Montage_Container_2021-Jun-04_07-45-16AM-000_CustomizedView9062892456%20(1).png"
+ 
+loading=“lazy”
+               style="max-width:688px; width:100%; height:auto;">
+                <figcaption>
+                Figure 6. Sensor field of view and detection range
+            </figcaption>
+        </figure>
+    
+</li>
+
+    <li>
+        Spacer Plate: The spacer plate can be used for front-panel or
+        rear-panel mounting. It ensures the required
+        
+minimum distance between the sensor and the container and prevents
+        any impairment of antenna performance.
+
+        <figure class="figure">
+            <img
+                src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(39).png?width=688& amp;height=562&amp;name=Untitled%20(39).png" loading="lazy"
+                style="max-width:688px; width:100%; height:auto;"
+            >
+            <figcaption>
+                Figure 7. Use of the spacer plate during installation
+            
+</figcaption>
+        </figure>
+    </li>
+</ol>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+
+    <p>
+        External antenna: The antenna should be mounted as vertically as possible
+        
+. If the application allows, the tip of the antenna should
+        point upward.
+    </p>
+
+    <p>
+        Maintain a minimum distance of 2 cm from metal surfaces
+        and avoid shielding by surrounding metal parts.
+    </p>
+
+    <p style="margin-bottom:0; ">
+        Devices with an internal antenna should, if possible, be mounted vertically with the long
+        side of the housing facing upward to achieve maximum
+        radio performance.
+    </p>
+</div>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Caution</strong>
+
+    <p style="margin-bottom:0;">
+        Devices with an external antenna must never be operated without the
+        antenna connected. This can cause permanent damage to the
+        radio hardware.
+    
+</p>
+</div>
+
+<h3 id="general-installation-instructions">
+9. General Installation Instructions
+</h3>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(40).png?width=306&amp;height=230&amp;name=Untitled%20(40).png"
+        alt="Optimal sensor alignment:auto;" loading="lazy"
+                style="max-width:688px; width:100%; height:auto;"
+    >
+    <figcaption>
+        
+Figure 8. Optimal alignment of the sensor with the target object
+    </figcaption>
+</figure>
+
+<p>
+    The sensor measures the distance to the object with maximum accuracy
+    when it is aligned parallel to the target surface.
+</p>
+
+<p>
+    For discrete or bulk materials, the sensor should
+    be mounted as parallel as possible to the bottom of the container.
+</p>
+
+<p>
+    Ideally, the sensor beam should strike the target object at an angle
+    of 90°.
+</p>
+
+
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(41).png?width=306&amp;height=283&amp;name=Untitled%20(41).png" loading="lazy"
+        style="max-width: 306px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Figure 9. Effect of sensor orientation on measurement accuracy
+    </figcaption>
+</figure>
+
+<p>
+    If the sensor is not mounted parallel to the object being measured, the
+    measurement quality may be compromised.
+</p>
+
+<p>
+    
+If the sensor is not aligned horizontally, the percentage-based
+    calculation of the fill level must be adjusted accordingly.
+</p>
+
+
+
+<h3 id="rear-panel-mounting-screws">
+10. Rear-Panel Mounting with Screws
+</h3>
+
+<figure class="figure">
+    <img
+        
+src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(42).png?width=306&amp;height=187&amp;name=Untitled%20(42).png"
+        loading="lazy"
+        style="max-width:306px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Figure 10. Back-panel mounting of the sensor with screw connection
+    </figcaption>
+</figure>
+
+<p>
+    
+This mounting method is typically used to install the sensor
+    inside a container.
+</p>
+
+<p>
+    Insert the provided screws into the designated
+    mounting holes. Alternatively, suitable
+    wood or plastic screws can be used, provided the sensor
+    is mounted on the appropriate materials.
+</p>
+
+<p>
+    Use the included two-point mount for this.
+</p>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(43).png?width=306&amp;height=260&amp;name=Untitled%20(43).png"
+        alt="Two-Point Mount"
+        loading="lazy"
+        style="max-width:306px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Figure 11. Two-point mount for attaching the sensor
+    </figcaption>
+</figure>
+
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(44).png?width=306&amp;height=261&amp;name=Untitled%20(44).png"
+        alt="Suboptimal sensor alignment:auto;"
+    
+>
+    <figcaption>
+        Figure 12. Effects of non-parallel sensor alignment
+    </figcaption>
+</figure>
+
+<p>
+    If the sensor is not mounted parallel to the object being measured, the
+    measurement quality may be compromised.
+</p>
+
+<p>
+    
+If the sensor is not aligned horizontally, ensure 
+    that the percentage calculation of the fill level is adjusted accordingly
+    .
+</p>
+
+<h3 id="front-panel-mounting-screws">
+11. Front-Panel Mounting with Screws
+</h3>
+
+<p>
+    This mounting method generally corresponds to the
+    <strong>rear-wall mounting with screws</strong>.
+</p>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Caution</strong>
+    
+<p style="margin-bottom:0;">
+        Always use the spacer plate with this mounting method
+        to ensure the required distance between the antenna and the wall
+        . Otherwise, the sensor’s
+        radio performance may be impaired.
+    </p>
+</div>
+
+
+
+<h3 id="back-panel-mount-magnets">
+12. Back-Panel Mounting with Magnets
+</h3>
+
+<p>
+The magnets shown below are neodymium magnets.
+Other versions may vary.
+</p>
+
+<figure class="figure">
+    
+<img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(45).png?width=306&amp;height=273&amp;name=Untitled%20(45).png"
+        
+loading=“lazy”
+        style="max-width:500px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Figure 13. Inserting the magnets
+    </figcaption>
+</figure>
+
+<p>
+Insert the corresponding magnets into the designated holes.
+The magnets shown here are neodymium magnets. You can
+alternatively perform this step in the same way for ferrite magnets.
+</p>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(46).png?width=306&amp;height=218&amp;name=Untitled%20(46). png"
+        alt loading="lazy"
+        style="max-width:500px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Figure 14. Screwing the magnets in place
+    </figcaption>
+</figure>
+
+<p>
+Insert the screws included in the kit into the holes on the
+opposite side and tighten the magnets.
+</p>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Warning</strong>
+    
+<p style="margin-bottom:0;">
+        Although neodymium magnets offer higher strength per unit area,
+        they are only suitable for outdoor use to a limited extent.
+        Please contact us for advice if needed.
+    </p>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+
+    <p >
+        Optional: Slide the anti-slip covers over the magnets.
+    </p>
+
+    <p style="margin-bottom:0;">
+        The anti-slip cover prevents the magnet from slipping
+        if the object vibrates or changes position.
+    
+</p>
+</div>
+
+<h3 id="front-panel-mounting-magnets">
+13. Front-Panel Mounting with Magnets
+</h3>
+
+<p>
+Please follow the instructions under
+“Rear Panel Mounting with Magnets” to install the magnets and screws
+in the opposite direction.
+</p>
+
+<p>
+The magnets are inserted into the holes on the front of the enclosure
+(logo side), and the screws are inserted from the back.
+</p>
+
+<h3 id="scope-of-delivery-blind-rivet-nuts">
+14. Components included for installation with blind rivets or blind rivet nuts
+</h3>
+
+<h3 id="einnietmuttern">
+14.1 Blind rivet nuts
+</h3>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+    
+<p>
+        A blind rivet nut is a fastener used to create
+        
+a load-bearing thread in thin materials such as sheet metal,
+        plastic, or wood.
+    </p>
+
+    <p>
+        It consists of a sleeve with an internal thread and a
+        deformable rivet body. When set with
+        blind rivet pliers, the sleeve is crimped on the back side,
+        creating a secure threaded connection.
+    
+</p>
+
+    <p style="margin-bottom:0;">
+        Blind rivet nuts are used in particular
+        when the back side of a component is inaccessible.
+        A suitable blind rivet set is required for installation.
+    </p>
+</div>
+
+<figure class="figure">
+    
+<img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(48).png?width=688&amp;height=506&amp;name=Untitled%20(48).png"
+        alt="Spacer sleeve for blind rivets" loading="lazy"
+        
+style="max-width:688px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Figure 15. Spacer sleeve for blind rivets to be inserted into the rear of the enclosure for front panel mounting
+    </figcaption>
+</figure>
+
+<figure class="figure">
+    
+<img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(47).png?width=688&amp;height=537&amp;name=Untitled%20(47).png"
+        alt="Spacer sleeve (rear)" loading="lazy" style="max-width:688px; width:100%; height:auto;">
+    <figcaption>
+        Figure 16. Spacer sleeve for blind rivets to be inserted into the rear of the housing for front panel mounting
+    </figcaption>
+</figure>
+
+<figure class="figure">
+    
+<img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(50).png?width=688&amp;height=243&amp;name=Untitled%20(50).png"
+        alt="Blind Rivets" loading="lazy"
+           
+style="max-width:688px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Figure 17. 4 × 40 blind rivets
+    </figcaption>
+</figure>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(51).png?width=688&amp;height=394&amp;name=Untitled%20(51) .png" alt="Blind Rivet Nut"
+        loading="lazy"
+        style="max-width:688px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Figure 18. Blind Rivet Nut (Countersunk Head Version)
+    </figcaption>
+</figure>
+
+<figure class="figure">
+    <img
+        
+src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(49).png?width=688&amp;height=478&amp;name=Untitled%20(49).png"
+        alt="DIN 912 screws"
+        
+loading=“lazy” style="max-width:688px; width:100%; height:auto;"
+    >
+    <figcaption>
+        
+Figure 19. DIN 912 M4x40 cylinder head screw for front panel mounting with blind rivet nuts, and DIN 912 M4x30 cylinder head screw for rear panel mounting with blind rivet nuts
+    </figcaption>
+</figure>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Bohrschablone_englisch.png? width=688&amp;height=592&amp;name=Drilling_Template_English.png"
+        alt="DIN 912 screws"
+        loading="lazy" style="max-width:688px; width:100%; height:auto;"
+    
+>
+    <figcaption>
+        Figure 20. Drilling template
+    </figcaption>
+</figure>
+
+
+<h3 id="blind-rivet-nuts">
+15. General Information on Pre-wall Installation with Blind Rivet Nuts
+</h3>
+
+<p>Step 1: Prepare Materials and Tools</p>
+
+<p>
+Make sure you have all the necessary materials and tools
+on hand. You will need a blind rivet nut, a riveting tool,
+a drill, a drill bit, a measuring tool, and a
+wrench or pliers.
+</p>
+
+<p>Step 2: Drill the hole</p>
+
+<p>
+Drill a hole in the material where the blind rivet nut
+is to be inserted. The diameter of the hole should be 0.1 mm larger
+than the outer diameter of the blind rivet nut.
+</p>
+
+<p>Step 3: Inserting the blind rivet nut</p>
+
+<p>
+Insert the blind rivet nut into the hole by pushing it through
+the hole.
+</p>
+
+<p>Step 4: Securing the blind rivet nut</p>
+
+<p>
+Place the riveting pliers over the blind rivet nut and tighten the
+pliers to secure the blind rivet nut.
+</p>
+
+<p>Step 5: Using the riveting pliers</p>
+
+<p>
+Use the riveting pliers to set the blind rivet nut into the material
+. Tighten the pliers until the blind rivet nut is fully
+embedded and forms a secure connection.
+</p>
+
+<p>Step 6: Inspection</p>
+
+<p>
+Inspect the blind rivet nut to ensure that it
+has been installed properly and forms a secure connection.
+If necessary, tighten it with a wrench or pliers
+to ensure that it is securely fastened.
+</p>
+
+
+
+<div>
+   
+    <figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(53).png?width=592&amp;height=465&amp;name=Untitled%20(53) .png"
+        alt="Example of a blind rivet nut" loading="lazy"
+        style="max-width:688px; width:100%; height:auto;"
+    >
+    <figcaption>
+        
+Figure 21. Example of a blind rivet nut
+    </figcaption>
+</figure>
+
+<p>
+    Source:
+    <a href="https://www.schraubenbude.de/blindnietmuttern/blindnietmuttern-edelstahl/blindnietmuttern-edelstahl-flachrundkopf/"
+       target="_blank" rel=“noopener noreferrer”>
+       https://www.schraubenbude.de/blindnietmuttern/blindnietmuttern-edelstahl/blindnietmuttern-edelstahl-flachrundkopf
+    </a>
+</p>
+
+<h3 id="front-panel-mounting-blind-rivet-nuts">
+16. Front-Panel Mounting with Blind Rivet Nuts
+</h3>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Caution</strong>
+
+    <p style="margin-bottom:0;">
+        For this type of installation, always use the
+        spacer plate to ensure the required distance between
+        the antenna and the wall.
+    </p>
+</div>
+
+<p>
+    
+Front-wall mounting is used when you want to attach the front of the
+    Apollon-Q sensor to the wall of the structure where
+    the sensor is to be installed. The front is the side with
+    the opening in the center, where the logo is also visible.
+</p>
+
+<p>
+    This mounting method is the preferred option because it allows for easy
+    
+battery or SIM card replacement by simply loosening the screws
+    (unlike front-panel mounting with blind rivets).
+</p>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Caution</strong>
+    
+<p style="margin-bottom:0;">
+        Activate the sensor before beginning installation.
+    </p>
+</div>
+
+<p>
+    Step 1: Depending on the sensor type (radar and ToF only), drill the
+    appropriate holes in the wall where you want to mount the sensor
+    . Use the drilling template for this.
+    The holes for the blind rivet nuts should have a diameter
+    of 6.1 mm.
+</p>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(55)-1.png? width=688&amp;height=396&amp;name=Untitled%20(55)-1.png"
+        alt="Apollon-Q drilling template"
+        loading="lazy"
+        style="max-width:688px; width:100%; height:auto;">
+    <figcaption>
+        Figure 22. Drilling template for installation with blind rivet nuts
+    </figcaption>
+</figure>
+
+    
+    <figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Bohrschablone_englisch.png?width=688&height=592& amp;name=Drilling_Template_English.png"
+        alt="Drilling template for installation"
+        loading="lazy"
+        style="max-width:688px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Figure 23. Drilling template for assembly
+    </figcaption></figure>
+    
+    
+    
+ <p>
+Step 2: Now secure the blind rivet nuts using a suitable
+tool. Use the spacer plate and insert the screws,
+as shown in the figure, into the brackets. Tighten the
+screws to a maximum torque of 2 Nm. If
+constant vibrations are expected during operation, we recommend using
+threadlocker.
+</p>
+
+<figure class="figure">
+<img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(57)-1.png?width=688&height=532&name=Untitled%20(57)-1.png" loading="lazy"
+        style= "max-width:688px; width:100%; height:auto;"
+    >
+<figcaption>
+Figure 24. Installation of the spacer plate and fastening with blind rivet nuts
+</figcaption>
+</figure>
+
+<figure class="figure">
+<img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(58).png?width=688&amp;height=515&amp;name=Untitled%20(58).png" loading="lazy"
+        style="max-width:688px; width:100%; height:auto; "
+    >
+<figcaption>
+Figure 25. Container wall with holes for sensor installation
+</figcaption>
+</figure>
+
+<p>
+View of the container wall from below with the sensor mounted from above
+(front wall mounting). Left hole for the optical sensor, right
+hole for the radar sensor.
+</p>
+
+<figure class="figure">
+<img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(59).png?width=688&amp;height=425&amp;name=Untitled%20(59). png" loading="lazy"
+        style="max-width:688px; width:100%; height:auto;"
+>
+<figcaption>
+Figure 26. Container wall with holes for optical sensor and radar sensor
+</figcaption>
+</figure>
+
+<figure class="figure">
+<img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(60).png?width=688&amp;height=396&amp;name=Untitled%20(60).png" loading="lazy"
+        
+style="max-width:688px; width:100%; height:auto;"
+>
+
+<figcaption>
+Figure 27. Step 3: Mounting the sensor
+</figcaption>
+</figure>
+
+<p>
+Step 3: Now install the sensor.
+</p>
+
+<figure class="figure">
+<img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(61).png?width=688&amp;height=480&amp;name=Untitled%20(61).png " loading="lazy"
+        style="max-width:688px; width:100%; height:auto;"
+>
+
+<figcaption>
+Figure 28. Mounting the sensor on the prepared tank wall
+</figcaption>
+</figure>
+
+<figure class="figure">
+<img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(62).png?width=688&amp;height=294&amp;name=Untitled%20(62).png" loading="lazy"
+        
+style="max-width:688px; width:100%; height:auto;"
+>
+
+<figcaption>
+Figure 29. Fully mounted sensor in front-panel mounting
+</figcaption>
+</figure>
+
+
+
+
+
+<h3 id="rear-panel-mounting-blind-rivet-nuts">
+17. Rear-Panel Mounting with Blind Rivet Nuts
+</h3>
+
+<p>
+    Rear-panel mounting works in the same way as front-panel mounting using
+    blind rivet nuts. In this case, the back of the sensor rests against
+    the wall.
+</p>
+
+<p>
+    M4x30 screws are used for this type of installation. The installation
+    is performed without a spacer plate.
+</p>
+
+<h3 id="blind-rivet-installation">
+18. General Information on Blind Rivet Installation
+</h3>
+
+<p>
+    Step 1: Prepare Materials and Tools Make sure
+    you have all the necessary materials and tools on hand.
+    You will need a blind rivet, a rivet gun, and, if necessary, a
+    drill and a drill bit.
+</p>
+
+<p>
+    Step 2: Drill a Hole (Optional) If there is no hole
+    already, drill a hole in the material where the blind rivets
+    are to be installed. The diameter of the hole should be 0.1 mm
+    larger than the diameter of the blind rivets.
+</p>
+
+<p>
+    Step 3: Inserting the blind rivets Insert the blind rivets into
+    the rivet gun and push them through the hole in the material.
+</p>
+
+<p>
+    Step 4: Use the rivet gun Place the rivet gun on the
+    head of the blind rivet and pull the trigger to
+    cock the rivet.
+</p>
+
+<p>
+    Step 5: Setting the Rivet Use the rivet gun to set the
+    blind rivets. Squeeze the trigger until the rivet
+    is fully seated and forms a secure connection.
+</p>
+
+<p>
+    
+Step 6: Inspection Inspect the blind rivet to
+    ensure that it has been set correctly and forms a secure
+    connection. If necessary, tighten it further with a
+    wrench or pliers to ensure
+    that it is securely fastened.
+</p>
+
+<h3 id="rear-panel-mounting-blind-rivets">
+19. Back-Wall Mounting with Blind Rivets
+</h3>
+
+<p>
+    Back-wall mounting works the same way as front-panel mounting with blind rivet nuts.
+    In this case, the back of the sensor rests against the wall.
+</p>
+
+<p>
+    
+For this mounting method, 4x40 blind rivets are used.
+    Mounting is performed without a spacer plate.
+</p>
+
+<p>
+    The clamping range is 3 mm to 6 mm.
+</p>
+
+<p>
+    The holes for the blind rivets have a diameter of 4.1 mm.
+</p>
+
+<p>
+    Step 1: Depending on the sensor type (radar and ToF only), drill the
+    appropriate holes in the wall where you want to mount the sensor
+    . Use the drilling template for this. The holes for the
+    
+blind rivets should have a diameter of 4.1 mm.
+</p>
+
+<p>
+    Step 2: Insert the rivets through the designated tabs.
+    Use the included spacers (the longer
+    version) for this. First, thread the blind rivets through the spacers
+    and then through the tabs on the sensor. Now rivet the
+    
+blind rivets with a suitable tool.
+</p>
+
+<figure class="figure">
+   <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(63).png?width=688&height=524&name=Untitled%20(63).png" loading="lazy"
+        style="max-width:688px; width:100%; height:auto;"
+>
+    <figcaption>
+        Figure 30. Installation of the spacers and blind rivets
+    </figcaption>
+</figure>
+
+<figure class="figure">
+     <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(64).png?width=688&height=499&name=Untitled%20(64) .png" loading="lazy"
+        style="max-width:688px; width:100%; height:auto;"
+>
+    <figcaption>
+        Figure 31. Back panel assembly with blind rivets
+    
+</figcaption>
+</figure>
+
+<figure class="figure">
+     <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(65).png?width=688&height=400&name=Untitled%20(65).png" loading="lazy"
+        style="max-width:688px; width:100%; height:auto;"
+>
+    
+<figcaption>
+        Figure 32. Step 3: The sensor is now installed
+    </figcaption>
+</figure>
+
+<p>
+    Step 3: The sensor is now installed.
+</p>
+
+<figure class="figure">
+     <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(66).png?width=688&height=380&name=Untitled%20(66).png" loading="lazy"
+        style="max-width:688px; width:100%; height:auto;"
+>
+    <figcaption>
+        Figure 33. Fully installed sensor
+    </figcaption>
+</figure>
+
+<h3 id="front-panel-mounting-blind-rivets">
+20. Front-panel mounting with blind rivets
+</h3>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Caution</strong>
+
+    <p style="margin-bottom:0;">
+        For this type of installation, always use the
+        spacer plate to ensure the correct distance between the antenna and the wall
+        .
+    </p>
+</div>
+
+<p>
+    Front-wall mounting is used when you want to mount the front of the
+    Apollon-Q sensor on the wall of the building where
+    the sensor is to be installed. The front side
+    is the side with the opening in the center, where the logo
+    is also visible.
+</p>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Caution</strong>
+
+    <p>
+        Activate the sensor before beginning installation.
+    </p>
+
+    <p style="margin-bottom:0;">
+        For this type of installation, 4x40 blind rivets are used.
+        Installation is performed using a spacer plate.
+    
+</p>
+</div>
+
+<p>
+The clamping range is 3 mm to 6 mm.
+</p>
+
+<p>
+The holes for the blind rivets have a diameter of 4.1 mm.
+</p>
+
+<p>
+Step 1: Depending on the sensor type (radar and ToF only)
+, drill the appropriate holes in the wall where you
+want to install the sensor. Use the drilling template for this.
+The holes for the blind rivets should have a diameter
+of 4.1 mm.
+</p>
+
+<figure class="figure">
+    <img
+       src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(67).png?width=688&amp;height=592&amp;name=Untitled%20(67). png"
+        loading="lazy"
+        style="max-width:688px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Figure 34. Drilling template and preparation for assembly
+    </figcaption>
+</figure>
+
+<p>
+Step 2: Insert the blind rivets through the designated
+tabs. Use the supplied spacers
+(the shorter ones) for this.
+</p>
+
+<p>
+First insert the blind rivets through the spacers,
+then through the tabs on the sensor, and finally through the
+spacer plate.
+</p>
+
+<p>
+Then rivet the blind rivets in place using a suitable
+tool.
+</p>
+
+
+<figure class="figure">
+<img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(68).png?width=688&amp;height=519&amp;name=Untitled%20 (68).png" loading="lazy"
+        style="max-width:688px; width:100%; height:auto;"> <figcaption>
+        Figure 35. Front panel mounting with blind rivets and spacer plate
+    </figcaption>
+</figure>
+
+<figure class="figure">
+   <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(69)-png.png?width=688&amp;height=377&amp;name=Untitled%20(69)-png.png" loading="lazy"
+        style="max-width:688px; width:100%; height:auto;">
+    <figcaption>
+        Figure 36. Preparing for front panel mounting
+    </figcaption></figure>
+    <figure class="figure">  
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(70).png? width=688&amp;height=253&amp;name=Untitled%20(70).png" loading="lazy"        style="max-width:688px; width:100%; height:auto;">    <figcaption>        Figure 37. Positioning the blind rivets and spacer plate    </figcaption></figure>
+    <p>    Step 3: Now install the sensor.</p>
+    <figure class="figure">   
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(71).png?width=688&amp;height=351&amp;name=Untitled%20(71). png" loading="lazy"        style="max-width:688px; width:100%; height:auto;">  
+    <figcaption>        Figure 38. Fully assembled sensor mounted on the front panel    </figcaption></figure>
+    <h3 id="hall-switch">21. Hall Switch Magnetic Switch Installation Instructions</h3>
+    <div class="note-strip note-strip--blue">    <strong>Note</strong>   
+    <p style="margin-bottom:0;">        The sensor features two Hall sensors        (magnetic field switches). The following diagram shows the location of the        Hall sensors and the recommended placement of the magnets.    </p></div><figure class="figure">
+        <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(72) .png?width=506&amp;height=351&amp;name=Untitled%20(72).png" loading="lazy"        style="max-width:688px; width:100%; height:auto;" >    <figcaption>        Figure 39. Position of the Hall sensors and recommended magnet placement    </figcaption></figure>
+        <ol>    <li>        Both magnetic field switches are active. Either one        or both sensors can be used.    </li>    <li>        Large neodymium magnets are recommended. These should        be mounted as close as possible to the sensor. A recommended        distance between the magnet and the sensor cannot be universally specified due to the        variable size of the magnet.        A maximum distance of 1 cm between the magnet and        the housing is recommended.    </li>    <li>        For comparison: With a neodymium disc magnet with        d = 20 mm and h = 5 mm, reliable readings are achieved at        distances under 1 cm.    </li>    <li>        The magnetic field switches can be operated in three different modes        :    </li>
+</ol>
+
+<ul>
+    <li>The container is closed when the magnet is in contact.</li>
+
+    <li>The container is open when the magnet comes into contact.</li>
+
+    <li>The sensor counts an opening when the magnet passes through twice.</li>
+</ul>
+
+<h3>22. NFC Setup and Location of the NFC Tag Activation is performed via an NFC app.</h3>
+
+<ol>
+<li>
+Activation is performed via an NFC app. This requires a
+smartphone. The app can be downloaded from the respective app stores
+. Simply search for
+“Sentinum LinQs” and download the LinQs app.
+
+<figure class="figure">
+<img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(29).png?width=688&height=331&name=Untitled%20(29).png" loading="lazy"
+        style="max-width:688px; width:100%; height:auto;" >
+<figcaption>
+Figure 40. Downloading the Sentinum LinQs app
+</figcaption>
+</figure>
+</li>
+
+<li>
+First, place the tag on the sensor, and then place the
+reader on your device. You can find the position of the NFC tag
+in the following figures.
+
+<figure class="figure">
+<img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(74).png?width=688&height=386&name=Untitled%20(74).png" loading="lazy"
+        style="max-width:688px; width:100%; height:auto;" >
+<figcaption>
+Figure 41. Position of the NFC tag on the sensor
+</figcaption>
+</figure>
+</li>
+
+<li>
+Open the app and activate the sensor. To start the sensor
+in the basic settings, click the
+button “Activate Sensor” button. Now place 
+your device on the sensor’s NFC tag.
+
+<figure class="figure">
+<img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(26).png?width=688&amp;height=275&amp;name=Untitled%20(26).png" loading=“lazy”
+        style="max-width:688px; width:100%; height:auto;" >
+<figcaption>
+Figure 42. Activating the sensor via the LinQs app
+</figcaption>
+</figure>
+</li>
+
+<li>
+When the sensor is activated, “Sensor updated!”
+is displayed. You can then proceed to activate the other
+sensors.
+</li>
+</ol>
+
+
+
+
+<h3 id="batteriewechsel">
+23. Replacing the Battery
+</h3>
+
+<ol>
+    <li>
+        Open the housing using a special Torx screwdriver.
+        Carefully remove the cover and make sure
+        that the seal is not damaged.
+
+        <figure class="figure">
+      <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(75).png?width=688&amp;height=507&amp;name=Untitled%20(75).png" loading="lazy"
+        style="max-width:688px; width:100%; height:auto;" >
+            <figcaption>
+                Figure 43. Opening the housing to replace the battery
+            </figcaption>
+        
+</figure>
+    </li>
+
+    <li>
+        Now carefully remove the cells from the designated
+        holder and insert the new cells. To achieve the
+        runtimes and performance specified in the
+        data sheets, the following primary cells are permitted:
+
+        <br><br>
+        
+a. For LoRaWAN® and mioty® sensors
+
+        <br>
+
+        - Energizer® Ultimate Lithium batteries - AA
+
+        <br>
+
+        - VARTA ULTRA LITHIUM Mignon AA
+
+        <br><br>
+
+        b. For cellular sensors (NB-IoT and LTE-CAT-M1)
+        
+<br>
+
+        - VARTA-CR-AH-R
+
+        <br>
+
+        Each sensor requires 2 cells.
+
+        <figure class="figure">
+     <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(76).png?width=688&amp;height=524&amp;name=Untitled%20(76).png" loading="lazy"
+        style="max-width:688px; width:100%; height:auto;" >
+            <figcaption>
+                Figure 44. Replacing the battery cells
+            </figcaption>
+        
+</figure>
+    </li>
+    
+<li>
+        Once the replacement is complete, please dispose of the
+        old cells properly. Then screw the housing back together.
+        Make sure that the original position of the
+        gasket has not been altered.
+    </li>
+</ol>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Caution</strong>
+
+    <p style="margin-bottom:0;">        If cells other than those recommended are used,       
+         performance and product safety may be compromised.    </p></div>
+       <br><br>
+
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png"  alt="Supported radio technologies"  style="max-width:750px; height:auto;"
+    loading="lazy">
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
+    alt="trash bin Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
+</div>    <!-- FOOTER -->
+</div><div class="footer-note"> 
+                 <p>© Sentinum GmbH – All rights reserved.</p>  
+                 <p>All content in this document, including text, tables, and images, is protected by copyright and is the property of Sentinum GmbH.</p>  
+                 <p>All images are subject to the copyright of Sentinum GmbH, unless otherwise stated.</p>  
+                 <p>Reproduction, distribution, or use—even in part—is not permitted without express written permission .</p> 
+                  <p style="padding-left:14px; font-style:italic;">   
+         Specifications are subject to change. All information is provided without warranty.  </p></div>
