@@ -1,0 +1,1667 @@
+
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+  code,
+.inline-code {
+    background-color: #f3f4f6;
+    border: 1px solid #d0d7de;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9em;
+    color: #111827;
+    display: inline-block;
+}
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+</style>
+
+
+<div class="pdf-viewer">
+<iframe src="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/8b7f097d299d6698b5cfa566f6c85fef1b6078d5/EOS/EOS_technisches_Datenblatt/EOS_Technisches_Datenblatt_DE.pdf"
+allowfullscreen
+title="Blueprint Sensor Integration PDF">
+</iframe>
+</div>
+
+<div class="pdf-download">
+  📄 Sie können das PDF oben ansehen oder
+  <a href="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/273e537339a8bdfdd065d21b80a4a36495654c8c/Aion420/Aion420_Betriebsanleitung/AION420_Betriebsanleitung_DE.pdf"
+   target="_blank">
+   <strong>hier herunterladen</strong> 
+  </a>.
+</div>
+
+<figure class="figure">
+    <img
+        src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/273e537339a8bdfdd065d21b80a4a36495654c8c/Aion420/Aion420_Betriebsanleitung/AION420_Betriebsanleitung_DE.pdf"
+        alt="AION420 4-20 mA LPWAN Gateway"
+        loading="lazy"
+        style="max-width:500px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Abbildung 1. AION420 4-20 mA LPWAN Bridge
+    </figcaption></figure>
+    
+   <p>
+Vielen Dank, dass Sie sich für den AION420 Sensor von Sentinum entschieden haben.
+Bitte lesen Sie die folgende Betriebsanleitung aufmerksam durch, um Schäden am
+Sensor, an Ihnen und der Umwelt abzuwenden.
+</p>
+
+<div class="main-toc">
+    <strong>Inhaltsverzeichnis</strong>
+
+    <ol>
+        <li>Allgemeine Warn- und Sicherheitshinweise</li>
+        <li>Weiterführende Dokumentation</li>
+        <li>Vorgesehene Verwendung</li>
+        <li>Produktversionen</li>
+        <li>Lieferumfang und Montagezubehör</li>
+        <li>
+    Installation, Montage und Konfektionierung
+
+    <ol style="list-style:none; padding-left:20px;">
+        <li>6.1 Wichtige Elemente</li>
+        <li>6.2 Anschlussschema und Pinbelegung Sensorseite</li>
+        <li>6.3 Anschlussschema und Pinbelegung Supply Seite</li>
+        <li>6.4 Warn- und Sicherheitshinweise zur Montage</li>
+        <li>6.5 Empfohlene Befestigungsmethoden</li>
+        <li>6.6 Montagezubehör</li>
+        <li>6.7 Allgemeine Installationsanweisungen</li>
+        <li>6.8 Verdrahtung und Konfektionierung</li>
+        <li>6.9 Hängende Montage</li>
+        <li>6.10 Montage mit Montageclip</li>
+    </ol>
+</li>
+
+<li>
+Inbetriebnahme und Konfiguration
+<ol style="list-style:none; padding-left:20px;">
+<li>7.1 Inbetriebnahme und Konfiguration des Sensors über BLE</li>
+<li>7.2 Akustisches Signal und Blinkmuster</li>
+</ol>
+</li>
+<li>
+Kommunikation mit der Schnittstelle
+<ol style="list-style:none; padding-left:20px;">
+<li>8.1 LoRaWAN Join Verhalten</li>
+<li>8.2 mioty Join-Verhalten</li>
+</ol>
+</li>
+<li>Pflege und Reinigung</li>
+<li>Kennzeichnung und Zertifizierung</li>
+</ol>
+</div>
+
+<div class="note-strip note-strip--red">
+    <strong>Gefahr</strong>
+    <p style="margin-bottom:0;">
+        Unmittelbare Gefahr. Führt <strong>mit hoher Wahrscheinlichkeitmit hoher Wahrscheinlichkeit</strong> zu Tod
+        oder schwerer Verletzung.
+    </p>
+</div>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Warnung</strong>
+    <p style="margin-bottom:0;">
+        Gefährliche Situation. <strong>Kann</strong> schwere Verletzungen verursachen.
+    </p>
+</div>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Vorsicht</strong>
+    <p style="margin-bottom:0;">
+        Risiko. Kann zu <strong>leichteren Verletzungen oder Sachschäden</strong> führen.
+    </p>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+    <p style="margin-bottom:0;">
+        Tipps und zusätzliche Informationen.
+    </p>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <ul>
+        <li>
+            Beachten Sie die Sicherheitshinweise und
+            Installationsanweisungen in der Anleitung und der Montageliste.
+        </li>
+
+        <li>
+            Beachten Sie, dass die Installationsumgebung den
+            vorgeschriebenen Einsatzbereichsrichtlinien entspricht.
+            Halten Sie die Temperatur und andere Grenzwerte jederzeit ein.
+        </li>
+
+        <li>
+            Das Gerät darf nur in den in den technischen
+            Spezifikationen vorgegebenen Bereichen eingesetzt werden.
+        </li>
+
+        <li>
+            Das Gerät darf nur für den beschriebenen Einsatzzweck
+            und die beschriebenen Bereiche verwendet werden.
+        </li>
+
+        <li>
+            Die Sicherheit und Funktionsfähigkeit kann nicht mehr
+            garantiert werden, wenn das Gerät modifiziert oder
+            erweitert wird.
+        </li>
+
+        <li>
+            Der Sensor darf nicht an Decken oder Böden montiert werden.
+        </li>
+
+        <li>
+            Der Betrieb des Sensors ist nur bis maximal
+            2000 Meter über Normal Null zugelassen.
+        </li>
+
+        <li>
+            Aufgrund der Human-Exposure-Vorschrift ist ein
+            Mindestabstand zwischen Gerät und Personen von
+            20 cm einzuhalten.
+        </li>
+
+        <li>
+            Stellen Sie sicher, dass die Installationsumgebung den
+            vorgeschriebenen Richtlinien für den Einsatzbereich
+            entspricht. Halten Sie die Temperatur- und sonstigen
+            Grenzwerte jederzeit ein.
+        </li>
+        <li>
+Stellen Sie sicher, dass die Installationsumgebung den
+vorgeschriebenen Richtlinien für den Einsatzbereich entspricht.
+Halten Sie die Temperatur- und sonstigen Grenzwerte jederzeit ein.
+</li>
+<li>
+Das Gerät gemäß den nationalen Umweltvorschriften entsorgen.
+</li>
+<li>
+Die Instandsetzung des Gerätes darf nur durch den Hersteller erfolgen.
+</li>
+<li>
+Beachten Sie die spezifischen Sicherheitshinweise zu Batterien und
+Lithium-Primärzellen.
+</li>
+</ul>
+<p><strong>Falls das Gerät inkorrekt installiert wird:</strong></p>
+<ul>
+<li>Könnte es nicht ordnungsgemäß funktionieren.</li>
+<li>Könnte es permanent beschädigt werden.</li>
+</ul>
+<p><strong>Bitte beachten:</strong></p>
+<ul>
+<li>
+Eine unsachgemäße Handhabung wie z.B. unsachgemäße mechanische
+Belastung, wie z.B. beim Fallenlassen des Gerätes, kann zu
+Beschädigungen kommen.
+</li>
+<li>
+Werden andere als die empfohlenen Batteriezellen verwendet,
+so kann die Performance und Produktsicherheit negativ
+beeinflusst werden.
+</li>
+    </ul>
+</div>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Vorsicht</strong>
+
+    <p style="margin-bottom:0;">
+        Falls das Gerät inkorrekt installiert wird, könnte es eine
+        Verletzungsgefahr darstellen.
+    </p>
+</div>
+
+<div class="note-strip note-strip--red">
+    <strong>Warnung</strong>
+
+    <p style="margin-bottom:0;">
+        Unsachgemäßer Umgang mit Lithium-Batterien (z. B.
+        Beschädigung, falsches Laden, Kurzschluss oder hohe
+        Temperaturen) kann zu Brand, Explosion oder Verletzungen
+        führen. Unsachgemäßer Umgang umfasst insbesondere
+        mechanische Beschädigung, Überladung, Tiefentladung,
+        Kurzschluss, Betrieb außerhalb der spezifizierten
+        Temperaturbereiche sowie nicht bestimmungsgemäße Nutzung
+        oder Entsorgung.
+    </p>
+</div>
+
+<h3 id="weiterfuehrende-dokumentation">
+2. Weiterführende Dokumentation
+</h3>
+
+<p>
+Bitte beachten Sie die Informationen und Grenzwerte im technischen Datenblatt.
+</p>
+
+<p>
+Die sensorspezifischen Werkseinstellungen (Sentiface) sowie die Schlüssel
+und zulässigen Werte des Sensors finden Sie in der
+<a href="https://docs.sentinum.de/nfc-und-downlinkbeschreibung"
+target="_blank">
+NFC und Downlinkbeschreibung
+</a>.
+</p>
+
+<p>
+Die Senticom- und Sentivisor-Tabellen finden Sie in der
+<a href="https://docs.sentinum.de/generische-nfc-und-downlink-dokumentation"
+target="_blank">
+Generischen NFC und Downlink Dokumentation
+</a>.
+zu finden.
+</p>
+
+<p>
+Die Sonderfunktionen zur
+<a href="https://docs.sentinum.de/vandalismusdetektion"
+target="_blank">
+Vandalismusdetektion
+</a>
+und
+<a href="https://docs.sentinum.de/oeffnungsdetektion"
+target="_blank">
+    Öffnungsdetektion
+</a>
+sind ebenfalls generisch.
+</p>
+
+<p>
+Die Möglichkeit zur Konfiguration der Sensor-Kommunikation finden Sie je nach
+Version in der jeweiligen generischen
+<a href="https://docs.sentinum.de/lorawan"
+target="_blank">
+LoRaWAN®
+</a>,
+<a href="https://docs.sentinum.de/mioty"
+target="_blank">
+Mioty®
+</a>
+oder
+<a href="https://docs.sentinum-m1"
+target="_blank">
+Cellular (NB-IoT und LTE-M1)
+</a>
+Dokumentation.
+</p>
+
+<p>
+Alle Dokumente zur generischen Dokumentation finden Sie unter
+<a href="https://docs.sentinum.de/wichtige-produktfende-dokumentation-fuer-sensoren" target="_blank">
+https://docs.sentinum.de/wichtige-produktuebergreifende-dokumentation-fuer-sensoren
+</a>.
+</p>
+
+<h3 id="vorgesehene-verwendung">
+3. Vorgesehene Verwendung
+</h3>
+
+<p>
+Die AION420 ist eine industrielle 4-20-mA-Bridge zur Erfassung,
+Digitalisierung und drahtlosen Übertragung von Messwerten bestehender
+analoger 4-20-mA-Sensoren. Das Gerät ermöglicht die Anbindung von
+Industrie-, Gebäudeautomations-, Energie- und Wasserwirtschaftssensoren
+an LPWAN-Funknetze wie LoRaWAN® oder mioty®, ohne dass bestehende
+Sensoren oder Steuerungen ausgetauscht werden müssen.
+</p>
+
+<p>
+Die AION420 ist für den Einsatz mit passiven 2-Leiter- sowie aktiven
+3-Leiter-Sensoren vorgesehen und kann Messgrößen wie Füllstand, Druck,
+Durchfluss, Temperatur, Feuchte, pH-Wert, Leitfähigkeit und weitere
+über ein 4-20-mA-Signal bereitgestellte Prozesswerte erfassen.
+</p>
+
+<p>
+Das Gerät dient ausschließlich der Erfassung und Übertragung von
+Sensorsignalen innerhalb industrieller und gewerblicher Anwendungen.
+Das analoge 4-20-mA-Signal kann dabei weiterhin parallel von SPS-,
+SCADA- oder Prozessleitsystemen genutzt werden.
+</p>
+
+<p>
+Die AION420 ist ausschließlich für die Installation in geschützten
+Innenbereichen vorgesehen. Die Montage erfolgt typischerweise in
+Schaltschränken, Verteilerschränken oder vergleichbaren geschützten
+elektrischen Betriebsmitteln. Das Gerät ist nicht für die direkte,
+dauerhafte Installation im ungeschützten Außenbereich bestimmt.
+</p>
+
+<p>
+Die Verwendung ist ausschließlich innerhalb der in den technischen
+Daten angegebenen elektrischen, mechanischen und umgebungsbezogenen
+Grenzwerte zulässig. Jede darüber hinausgehende Verwendung gilt als
+nicht bestimmungsgemäß. Insbesondere darf das Gerät nicht in
+sicherheitsrelevanten Anwendungen eingesetzt werden, bei denen eine
+Fehlfunktion zu Personen-, Umwelt- oder Sachschäden führen kann.
+</p>
+
+
+<h3 id="produktversionen">
+4. Produktversionen
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Artikel Code</th>
+                <th>Klasse</th>
+                <th>Ausführung</th>
+                <th>Konfiguration</th>
+                <th>Interface</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><strong>S-AION-LOEU-420</strong></td>
+                <td>LoRaWAN Class A</td>
+                <td><strong>Terminiert</strong></td>
+                <td>BLE</td>
+                <td>4-20mA (2 Kanäle)</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-AION-MIOTY-420</strong></td>
+                <td>mioty Class A</td>
+                <td><strong>Terminiert</strong></td>
+                <td>BLE</td>
+                <td>4-20mA (2 Kanäle)</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-AION-LOEU-420-3L</strong></td>
+                <td>LoRaWAN Class A</td>
+                <td><strong>Schleife</strong></td>
+                <td>BLE</td>
+                <td>4-20mA (2 Kanäle)</td>
+            </tr>
+
+            <tr>
+                <td><strong>S-AION-MIOTY-420-3L</strong></td>
+                <td>mioty Class A</td>
+                <td><strong>Schleife</strong></td>
+                <td>BLE</td>
+                <td>4-20mA (2 Kanäle)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="lieferumfang">
+5. Lieferumfang und Montagezubehör
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Art. Nummer</th>
+                <th>Empfohlenes Zubehör</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><strong>Z-AION420-CLIP</strong></td>
+                <td>Montageclip für das AION 420 Gehäuse</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="installation">
+6. Installation, Montage und Konfektionierung
+</h3>
+
+<h3 id="wichtige-elemente">
+6.1 Wichtige Elemente
+</h3>
+
+
+<figure class="figure">
+    <img
+        src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/58b2af962337bf1bb8f4a51e876828dcfd9f2aff/Aion420/Aion420_Betriebsanleitung/Screenshot%202026-08-18%20134640.png"
+        alt="AION420 wichtige Elemente"
+        loading="lazy"
+        style="max-width:500px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Abbildung 2. Wichtige Komponenten des Aion 420 </figcaption></figure>
+
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Bezeichnung</th>
+                <th>Beschreibung</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td><strong>M1</strong></td>
+                <td>Magnetschalter 1</td>
+            </tr>
+
+            <tr>
+                <td><strong>M12 Sup</strong></td>
+                <td>M12 Anschluss Supply Seite</td>
+            </tr>
+
+            <tr>
+                <td><strong>LED</strong></td>
+                <td>LED - optisches Feedback und Blinksignal</td>
+            </tr>
+
+            <tr>
+                <td><strong>M12 Sens</strong></td>
+                <td>M12 Anschluss Sensorseite</td>
+            </tr>
+
+            <tr>
+                <td><strong>L1</strong></td>
+                <td>Label beschriftet</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+
+
+<h3 id="anschlussschema-sensorseite">
+6.2. Anschlussschema und Pinbelegung Sensorseite
+</h3>
+
+<div style="display:flex; flex-wrap:wrap; gap:40px; justify-content:center; align-items:flex-start; margin:20px 0;">
+
+    <figure class="figure" style="margin:0;">
+        <img
+            src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/9c89912d051b67cc41e2b31b1116b61f9dca774d/Aion420/Aion420_Betriebsanleitung/Anschluss_aion420.png"
+            alt="Anschlussschema Sensorseite"
+            loading="lazy"
+            style="max-width:500px; width:100%; height:auto;">
+            <figcaption> Abbildung 3. Anschlussbild und Pinbelegung der Sensorseite des AION420</figcaption>
+    </figure>
+
+    
+
+        <h3>6.3. Anschlussschema und Pinbelegung Supply Seite für die terminierte Version
+</h3>
+
+<div style="display:flex; flex-wrap:wrap; gap:40px; justify-content:center; align-items:flex-start; margin:20px 0;">
+
+    <figure class="figure" style="margin:0;">
+        <img
+            src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/9c89912d051b67cc41e2b31b1116b61f9dca774d/Aion420/Aion420_Betriebsanleitung/Anschluss_aion420_2.png"
+            alt="Anschlussschema Supply Seite"
+            loading="lazy"
+            style="max-width:500px; width:100%; height:auto;">
+            <figcaption>Abbildung 4. Anschlussbild und Pinbelegung der Supply-Seite der terminierten Version </figcaption>
+    </figure>
+
+    <div style="min-width:180px;">
+        <p>Pinbedirekten Anbindung eines
+4-20-mA-Sensors. Das Gerät wird über den Supply-Anschluss mit einer externen
+Spannungsversorgung versorgt und bildet den Endpunkt der Messkette.
+</p>
+
+<p>
+Eine Weiterführung des 4-20-mA-Signals ist bei dieser Ausführung nicht
+vorgesehen. Die terminierte Variante eignet sich insbesondere für
+Neuinstallationen oder Anwendungen, bei denen der Sensor ausschließlich
+durch den AION420 erfasst wird.
+</p>
+
+<h3 id="anschlussschema-supply-geschleift">
+6.4. Anschlussschema und Pinbelegung Supply Seite für die geschleifte Version
+</h3>
+
+<figure class="figure">
+    <img
+        src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/9d36b8736981b445b04d043ea107cad7a1e19f0a/Aion420/Aion420_Betriebsanleitung/Anschluss_Aion420_3.png"
+        alt="Anschlussschema und Pinbelegung der Supply-Seite für die geschleifte AION420 Version"
+        loading="lazy"
+        style="max-width:500px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Abbildung 5. Anschlussschema und Pinbelegung der Supply-Seite für die geschleifte Version
+    </figcaption>
+</figure>
+
+<p>
+Die durchgeschleifte Variante des AION420 ermöglicht neben der Spannungsversorgung auch die Durchleitung des 4-20 mA Signals. Dadurch kann der AION420 in bestehende Messkreise integriert werden, ohne die vorhandene Signalverarbeitung zu beeinträchtigen.
+</p>
+
+<p>
+Das Messsignal wird vom Gerät erfasst und gleichzeitig an
+nachgelagerte Systeme, wie SPS, Datenlogger oder Prozessleitsysteme,
+weitergeführt.
+</p>
+
+<p>
+Diese Ausführung eignet sich besonders für Nachrüstungen und
+Anwendungen, bei denen die bestehende Infrastruktur weiterhin
+genutzt werden soll.
+</p>
+
+<h3 id="warn-und-sicherheitshinweise-montage">
+6.5. Warn- und Sicherheitshinweise zur Montage
+</h3>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p>
+        Falls der Sensor auch nach der Montage gut zugänglich ist,
+        montieren Sie erst den Sensor und aktivieren diesen nach der Montage.
+    </p>
+
+    <p style="margin-bottom:0;">
+        Falls der Sensor nach der Montage nicht mehr zugänglich ist,
+        aktivieren Sie erst den Sensor und montieren diesen nach der Aktivierung.
+        Vergewissern Sie sich vor dieser Art der Montage, dass die Oberfläche,
+        auf die der Sensor geschraubt werden soll, eben ist, da sonst das
+        Gehäuse beschädigt werden kann.
+    </p>
+</div>
+
+<p><strong>Bitte beachten:</strong></p>
+
+<ul>
+    <li>
+        Führen Sie keine Gegenstände oder Körperteile in die Öffnungen
+        des Sensors ein.
+    </li>
+
+    <li>
+        Montieren Sie den Sensor nicht an der Decke oder am Boden.
+    </li>
+
+    <li>
+        Montieren Sie den Sensor nicht in Höhen über zwei Meter.
+    </li>
+
+    <li>
+        Montieren Sie den Sensor nur in Innenräumen an einer Wand in
+        einem gewöhnlichen Raum bei einer Höhe von 1,50 m bis 1,80 m.
+    </li>
+</ul>
+
+<p>
+Die Standardversionen des AION-Sensors sind für eine Vielzahl
+industrieller und logistischer Anwendungen ausgelegt und verfügen
+über robuste Gehäuse mit hoher Schutzart. Bei der Installation
+sind folgende Punkte zu beachten:
+</p>
+
+<ul>
+    <li>
+        Montageort wählen, der innerhalb der spezifizierten
+        Umgebungstemperaturen und -bedingungen liegt
+        (siehe technische Daten).
+    </li>
+
+    <li>
+        Gehäuse nicht verdecken: Die Funkkommunikation
+        (z. B. LoRaWAN, BLE) darf nicht durch metallische
+        Objekte, dichte Gehäuse oder strukturabschirmende
+        Materialien behindert werden.
+    </li>
+
+    <li>
+        Sensor stabil befestigen, idealerweise über die
+        vorgesehenen Montagelöcher. Vibrationsarme oder feste
+        Untergründe werden empfohlen.
+    </li>
+
+    <li>
+        Ausrichtung: Die Standardversion benötigt keine spezielle
+        Ausrichtung, kann also flach, vertikal oder horizontal
+        montiert werden, je nach Anwendungsfall.
+    </li>
+
+    <li>
+        Nicht in unmittelbarer Nähe von starken elektromagnetischen
+        Quellen montieren, um Signalstörungen zu vermeiden.
+    </li>
+</ul>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Dauermagnete können starke Magnetfelder erzeugen, die bei
+        unsachgemäßer Handhabung gefährlich sein können. Beachten
+        Sie daher folgende Warnhinweise:
+    </p>
+</div>
+
+<div class="note-strip note-strip--red">
+    <strong>Warnung</strong>
+
+    <ul>
+        <li>
+            Hände und Finger schützen: Starke Magnete können sich
+            schlagartig anziehen und Finger oder Haut einklemmen.
+            Dies kann zu schmerzhaften Quetschungen und Verletzungen
+            führen. Halten Sie beim Umgang mit Dauermagneten immer
+            ausreichend Abstand und tragen Sie bei Bedarf
+            Schutzhandschuhe.
+        </li>
+
+        <li>
+            Elektronische Geräte fernhalten: Magnetfelder können
+            elektronische Geräte wie Computer, Smartphones,
+            Kreditkarten, Herzschrittmacher und andere empfindliche
+            Elektronik beschädigen oder ihre Funktion beeinträchtigen.
+            Halten Sie daher immer ausreichend Abstand zu solchen
+            Geräten.
+        </li>
+
+        <li>
+            Bruchgefahr beachten: Viele Dauermagnete bestehen aus
+            spröden Materialien (z. B. Neodym), die bei plötzlichen
+            Stößen oder hoher Belastung brechen können. Die Splitter
+            können scharf sein und Verletzungen verursachen.
+            Verwenden Sie die Magnete daher vorsichtig und vermeiden
+            Sie Schläge oder zu hohe Belastungen.
+        </li>
+
+        <li>
+            Gesundheitliche Risiken: Menschen mit
+            Herzschrittmachern oder anderen implantierten
+            medizinischen Geräten sollten den Kontakt mit starken
+            Magneten vermeiden, da die Magnetfelder diese Geräte
+            stören oder deaktivieren können. Konsultieren Sie vor der
+            Nutzung gegebenenfalls einen Arzt.
+        </li>
+
+        <li>
+            Magnete sicher lagern: Bewahren Sie Magnete in einem
+            sicheren Abstand voneinander und von anderen metallischen
+            Gegenständen auf. Ein plötzliches Anziehen kann zu
+            Beschädigungen, Verletzungen oder unkontrollierbarem
+            Herumfliegen der Gegenstände führen.
+        </li>
+
+        <li>
+            Gefahr für Kinder: Dauermagnete sind kein Spielzeug.
+            Besonders kleine Magnete können beim Verschlucken oder
+            Einatmen lebensgefährlich sein und zu schweren inneren
+            Verletzungen führen. Bewahren Sie Magnete daher stets
+            außerhalb der Reichweite von Kindern auf.
+        </li>
+
+        <li>
+            Erwärmung vermeiden: Dauermagnete verlieren bei
+            Temperaturen über ihrer maximalen Betriebstemperatur
+            (je nach Material zwischen 80 und 200 °C) dauerhaft ihre
+            Magnetkraft. Setzen Sie Magnete daher keiner direkten
+            Hitze oder offenen Flammen aus.
+        </li>
+    </ul>
+</div>
+
+<h3 id="befestigungsmethoden">
+6.6. Empfohlene Befestigungsmethoden
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Montageart</th>
+                <th>Beschreibung</th>
+                <th>Empfohlenes Zubehör</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Montageclip</td>
+                <td>Montageclip Aluminium</td>
+                <td>E89209, Z-AION420-CLIP</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="montagezubehoer">
+6.7. Montagezubehör
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Montageart</th>
+                <th>Empfohlenes Zubehör</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Schraube für Montageclip</td>
+                <td>M5 oder M6 Schraube für Montageclip</td>
+            </tr>
+
+            <tr>
+                <td>Montageclip</td>
+                <td>Montageclip Aluminium, Z-AION420-CLIP</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="installationsanweisungen">
+6.8. Allgemeine Installationsanweisungen
+</h3>
+
+<p>
+Vor der Installation ist sicherzustellen, dass der vorgesehene
+Montageort für die Umgebungsbedingungen des Geräts geeignet ist.
+Das Gehäuse muss so montiert werden, dass es vor mechanischer
+Beschädigung, starker Verschmutzung sowie dauerhaftem Kontakt mit
+Wasser oder aggressiven Medien geschützt ist.
+</p>
+
+<p>
+Vor dem elektrischen Anschluss sind sämtliche Leitungen
+spannungsfrei zu schalten. Der Anschluss des AION420 hat
+ausschließlich gemäß dem vorgesehenen Anschlussschema zu erfolgen.
+Dabei sind die korrekte Polung der Versorgungsspannung sowie die
+richtige Verdrahtung des 4-20-mA-Signals zu beachten. Falsch
+angeschlossene Leitungen oder vertauschte Polaritäten können zu
+Fehlfunktionen oder zur Beschädigung des Geräts und
+angeschlossener Komponenten führen.
+</p>
+
+<p>
+Die Anschlussleitungen sind zugentlastet zu verlegen und vor
+mechanischen Belastungen zu schützen. Kabel sind so zu führen,
+dass sie nicht geknickt, gequetscht oder übermäßig gebogen werden.
+Nicht verwendete Kabeldurchführungen oder Anschlüsse sind
+entsprechend abzudichten.
+</p>
+
+<p>
+Für eine optimale Funkverbindung sollte der Sensor möglichst mit
+ausreichendem Abstand zu größeren Metallflächen, Schaltschränken,
+Rohrleitungen oder anderen funkabschirmenden Objekten installiert
+werden. Die Antenne darf nicht verdeckt, geknickt oder verändert
+werden. Bei Geräten mit externer Antenne sind die entsprechenden
+Montagehinweise zur Antennenpositionierung zu beachten.
+</p>
+
+<p>
+Nach Abschluss der Installation sind sämtliche Anschlüsse auf
+festen Sitz, korrekte Verdrahtung und Dichtheit zu überprüfen.
+Vor der Inbetriebnahme sollte eine Funktionsprüfung einschließlich
+der Überprüfung des Sensorsignals sowie der Funkverbindung
+durchgeführt werden.
+</p>
+
+<p>
+Der Hersteller empfiehlt, Wartungs- und Servicearbeiten
+ausschließlich durch qualifiziertes Fachpersonal durchführen zu
+lassen. Veränderungen oder Modifikationen am Gerät, die nicht
+ausdrücklich vom Hersteller freigegeben wurden, können zum Verlust
+von Gewährleistungs- und Zulassungsansprüchen führen.
+</p>
+
+<h3 id="verdrahtung-konfektionierung">
+6.9. Verdrahtung und Konfektionierung
+</h3>
+
+<p>
+Für die Verdrahtung des AION420 können auf der Sensorseite sowie
+auf der Spannungsversorgungsseite handelsübliche konfektionierbare
+M12-Steckverbinder verwendet werden. Diese ermöglichen eine einfache
+und flexible Installation sowie den schnellen Austausch
+angeschlossener Komponenten.
+</p>
+
+<p>
+Alternativ können auch vorkonfektionierte M12-Anschlussleitungen mit
+offenem Kabelende eingesetzt werden. Die offenen Leitungsenden können
+entsprechend dem Anschlussplan direkt mit der Spannungsversorgung
+oder dem anzuschließenden 4-20-mA-Sensor verdrahtet werden. Dabei sind
+die jeweiligen Aderbelegungen sowie die korrekte Polung gemäß
+Anschlussdiagramm zu beachten.
+</p>
+
+<p>
+Es wird empfohlen, ausschließlich für industrielle Anwendungen
+geeignete Steckverbinder und Anschlussleitungen zu verwenden sowie
+auf eine fachgerechte Montage und Dichtigkeit der Verbindungselemente
+zu achten. Dadurch wird ein zuverlässiger Betrieb des Systems auch
+unter anspruchsvollen Umgebungsbedingungen sichergestellt.
+</p>
+
+<h3 id="haengende-montage">
+6.10. Hängende Montage
+</h3>
+
+<p>
+Der AION420 kann aufgrund seiner kompakten Bauform direkt zwischen
+zwei M12-Anschlussleitungen installiert werden. Hierzu wird das Gerät
+auf der einen Seite mit der Spannungsversorgung und auf der anderen
+Seite mit dem anzuschließenden 4-20-mA-Sensor verbunden. In vielen
+Anwendungen ist eine hängende Montage ausreichend, wobei das Gerät
+ausschließlich durch die angeschlossenen Leitungen gehalten wird.
+</p>
+
+<p>
+Sofern die Umgebungsbedingungen oder die Installation dies erfordern,
+kann der Sensor zusätzlich mit geeigneten Befestigungsmitteln gegen
+Bewegung, Vibration oder Zugbelastung gesichert werden. Hierzu eignen
+sich beispielsweise Kabelbinder, Klebebänder, Montageclips oder
+vergleichbare Befestigungselemente. Dabei ist darauf zu achten, dass
+das Gehäuse, die Anschlussleitungen und gegebenenfalls die Antenne
+nicht beschädigt oder in ihrer Funktion beeinträchtigt werden.
+</p>
+
+<p>
+Die Anschlussleitungen sind so zu verlegen, dass keine übermäßigen
+Zug-, Druck- oder Biegekräfte auf die Steckverbindungen wirken.
+Eine ausreichende Zugentlastung erhöht die Betriebssicherheit und
+sorgt für eine dauerhaft zuverlässige Verbindung.
+</p>
+
+<h3 id="montage-mit-montageclip">
+6.11. Montage mit Montageclip
+</h3>
+
+<p>
+Der AION420 kann mithilfe eines geeigneten Montageclips an festen
+Untergründen wie Wänden, Maschinengehäusen, Schaltschränken oder
+Montagetafeln befestigt werden. Hierzu wird der Montageclip über die
+vorhandenen Befestigungsbohrungen mittels einer Schraube am gewünschten
+Montageort montiert. Anschließend wird der Sensor in den Clip
+eingedrückt, bis er sicher gehalten wird.
+</p>
+
+<p>
+Die Montage mit einem Clip bietet eine einfache und platzsparende
+Möglichkeit, den Sensor dauerhaft zu befestigen und gleichzeitig vor
+Bewegungen oder Zugbelastungen der Anschlussleitungen zu schützen.
+Für eine optimale Zugänglichkeit sollten die M12-Anschlüsse und
+gegebenenfalls die Antenne auch nach der Montage frei zugänglich bleiben.
+</p>
+
+<p>
+Die Anschlussleitungen sind so zu verlegen, dass keine dauerhaften
+Zug-, Druck- oder Biegekräfte auf die Steckverbindungen wirken.
+Gegebenenfalls ist eine zusätzliche Zugentlastung der Leitungen
+vorzusehen.
+</p>
+
+<p>
+Nach der Montage ist zu prüfen, dass der Sensor sicher im Montageclip
+sitzt und sich nicht unbeabsichtigt lösen kann. Die Befestigung muss
+so ausgeführt werden, dass auch bei Vibrationen oder normalen
+mechanischen Belastungen ein zuverlässiger Betrieb gewährleistet bleibt.
+</p>
+
+<figure class="figure">
+    <img
+        src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/373d00a2714a3e2221b3c3a59a07ba037ea01fa1/Aion420/Aion420_Betriebsanleitung/Aion420_gehause.png"
+        alt="AION420 Gehäuse und Montageclip"
+        loading="lazy"
+        style="max-width:600px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Abbildung 6. AION420 mit Montageclip zur Befestigung
+        </figcaption></figure>
+
+<h3 id="inbetriebnahme-konfiguration">
+7. Inbetriebnahme und Konfiguration
+</h3>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Bitte beachten Sie, dass es bei der Nutzung von Messern oder
+        anderen spitzen Gegenständen zur Beschädigung des Gehäuses oder
+        der Elektronik kommen kann. Auf dem Sensor befinden sich zwei
+        Hallsensoren (Magnetschalter). Die folgende Grafik zeigt die Lage
+        der Hallsensoren und die empfohlene Platzierung der Magnete.
+    </p>
+</div>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Bezeichnung</th>
+                <th>Beschreibung</th>
+                <th>Funktion</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td><strong>M1</strong></td>
+                <td>Magnetschalter 1</td>
+                <td>
+                    <ul>
+                        <li>
+                            Wenn der Sensor ausgeschaltet ist, dann bewirkt
+                            ein Auflegen des Magnetes zwischen 2 und 8 Sekunden
+                            einen Start des Sensors und ein BLE Advertising.
+                        </li>
+
+                        <li>
+                            Ist der Sensor eingeschaltet, dann sind folgende
+                            Funktionen aktiv:
+                        </li>
+
+                        <li>
+                            Magnet liegt an für 0-2 Sek.: BLE Advertising
+                        </li>
+
+                        <li>
+                            Magnet liegt an für 2-8 Sek.:
+                            Übertragung wird getriggert
+                        </li>
+
+                        <li>
+                            Magnet liegt an für &gt; 8 Sek.:
+                            Reboot Device
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>M2</strong></td>
+                <td>Magnetschalter 2</td>
+                <td>Custom Funktionen umsetzbar</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<h3 id="inbetriebnahme-ble">
+    7.1 Inbetriebnahme und Konfiguration des Sensors über BLE
+</h3>
+
+<ol>
+    <li>
+        Alle Eos Varianten können per BLE mit dem Handy aktiviert werden.
+        Verwenden Sie dazu einfach unsere LinOs APP von Sentinum GmbH,
+        die Sie im
+        <a href="https://apps.apple.com" target="_blank"> App Store</a> oder <a href="https://play.google.com/store" target="_blank">  Google Play Store
+        </a>
+        finden.
+    </li>
+
+    <li>
+        Aktivieren Sie den Sensor, indem Sie den linken unteren Hallsensor (M1)
+        kurz, mind. 2 Sekunden mit einem Magneten auslösen.
+        Der Sensor sollte nun eine akustische Tonfolge zurückgeben.
+        Der Advertising-Modus wird anschließend automatisch gestartet.
+    </li>
+
+    <li>
+        Nun können Sie den Sensor bequem per BLE von Ihrem Endgerät aus
+        ansteuern. Achten Sie darauf, dass Bluetooth auf Ihrem Handy
+        eingeschaltet ist, und Sie sich in Reichweite des Sensors befinden,
+        um diesen erreichen und ansteuern zu können.
+    </li>
+</ol>
+
+<div style="display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap; margin:24px 0;">
+
+  <div style="flex:1; min-width:220px; text-align:center;">
+    <p><strong>BLE Advertising aktivieren</strong></p>
+
+    <figure style="margin:0;">
+      <img
+        src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_screen12.webp"
+        alt="BLE Advertising aktivieren"
+        style="max-width:220px; width:100%; height:auto;"
+        loading="lazy">   </figure>
+        <p>Der BLE Advertising Modus lässt sich mit den Magneten oder nach Aktivierung des Sensors aktivieren.</p>
+  </div>
+
+  <div style="flex:1; min-width:220px; text-align:center;">
+    <p><strong>BLE Gerät suchen</strong></p>
+
+    <figure style="margin:0;">
+      <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/91ddf5f5cebe86defb093299fe20326b25af9d73/Juno_TILT/Juno_TILT_Betriebsanleitung/Pic/Juno_TILT_screen13.webp"
+        alt="BLE Gerät suchen"
+        style="max-width:220px; width:100%; height:auto;"
+        loading="lazy">
+    </figure>
+    <p>Nutze die Schaltfläche „Search“, um den Sensor über BLE zu suchen.</p>
+    </div>
+
+    <p>
+<div style="flex:1; min-width:220px; text-align:center;">
+    <p><strong>Mit dem Sensor über BLE verbinden</strong></p>
+
+    <figure style="margin:0;">
+     <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/image-png-Jun-20-2025-11-57-38-6991-AM.png"
+        alt="Mit Sensor verbinden"
+        style="max-width:220px; width:100%; height:auto;"
+        loading="lazy">
+    </figure>
+
+    <p>
+      Wähle den richtigen Sensor aus und bestätige mit
+      einem Klick auf „Eos“.
+    </p>
+  </div>
+
+</div>
+
+<div style="display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap; margin:24px 0;">
+
+  <div style="flex:1; min-width:220px; text-align:center;">
+    <p><strong>Mit dem Sensor über BLE verbinden</strong></p>
+
+    <figure style="margin:0;">
+      <img
+        src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/image-png-Jun-20-2025-11-57-56-2740-AM.png"
+        alt="BLE Advertising aktivieren"
+        style="max-width:220px; width:100%; height:auto;"
+        loading="lazy">   </figure>
+        <p>Klicke auf die Schaltfläche „Connect“</p>
+  </div>
+
+  <div style="flex:1; min-width:220px; text-align:center;">
+    <p><strong>Mit dem Sensor über BLE konfigurieren</strong></p>
+
+    <figure style="margin:0;">
+      <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/image-png-Jun-20-2025-11-58-03-2352-AM.png"
+        alt="BLE Gerät suchen"
+        style="max-width:220px; width:100%; height:auto;"
+        loading="lazy">
+    </figure>
+    <p>Nutze jetzt die Schaltfläche „Configure“, um Parameter einzustellen.</p>
+    </div>
+
+    <p>
+<div style="flex:1; min-width:220px; text-align:center;">
+    <p><strong>Mit dem Sensor über BLE konfigurieren</strong></p>
+
+    <figure style="margin:0;">
+     <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/image-png-Jun-20-2025-11-58-10-2211-AM.png"
+        alt="Mit Sensor verbinden"
+        style="max-width:220px; width:100%; height:auto;"
+        loading="lazy">
+    </figure>
+
+    <p>
+     Mit der Schaltfläche „Trigger Send“ kann eine Übertragung ausgelöst werden. Tippe in den gewünschten Tabelleneintrag und ändere die Werte. Bestätige mit der Schaltfläche unten „Update & Reboot“ oder „Update“. Update und Reboot erzwingt zusätzlich zur Änderung einen Reboot, Update wird bei der nächsten Messung oder Übertragung angewendet.
+    </p>
+  </div>
+
+</div>
+
+<h3 id="akustisches-signal">
+7.2. Akustisches Signal und Blinkmuster
+</h3>
+
+<ul>
+    <li>
+        Beim Einschalten des Geräts ertönt ein akustisches Signal,
+        das aus mehreren aufsteigenden Tönen besteht. Diese Tonfolge
+        signalisiert das erfolgreiche Aktivieren des Sensors.
+    </li>
+
+    <li>
+        Beim Ausschalten werden mehrere abfallende Töne abgespielt,
+        die das Herunterfahren des Geräts akustisch bestätigen.
+    </li>
+
+    <li>
+        Beim Herstellen oder Trennen einer Bluetooth-Verbindung (BLE)
+        gibt der Sensor ebenfalls ein akustisches Signal aus, das den
+        Verbindungsstatus bestätigt.
+    </li>
+
+    <li>
+        Weiterhin gibt es Blinkcodes, die in der folgenden Tabelle
+        beschrieben sind.
+    </li>
+</ul>
+
+<h3 id="kommunikation-schnittstelle">
+8. Kommunikation mit der Schnittstelle
+</h3>
+
+<p>
+Die detaillierte Möglichkeit zur Konfiguration der
+Sensor-Kommunikation und dem Join-Verhalten finden Sie je nach
+Version in der jeweiligen generischen
+<a href="https://docs.sentinum.de/lorawan" target="_blank">
+LoRaWAN®
+</a>,
+<a href="https://docs.sentinum.de/mioty" target="_blank">
+mioty®
+</a>
+oder
+<a href="https://docs.sentinum.de/cellular-nb-iot-und-lte-m1" target="_blank">Cellular (NB-IoT und LTE-M1)
+</a>Dokumentation.
+</p>
+
+<p>
+Des Weiteren finden Sie alle Dokumente zur generischen
+Dokumentation unter
+<a href="https://docs.sentinum.de/wichtige-produktuebergreifende-dokumentation-fur-sensoren"target="_blank">
+"https://docs.sentinum.de/wichtige-produktuebergreifende-dokumentation-fur-sensoren
+</a>.
+</p>
+
+<h3 id="lorawan-join-verhalten">
+8.1. LoRaWAN Join Verhalten
+</h3>
+
+<p>
+Bevor Telemetriedaten via LoRaWAN versendet werden können, muss das
+Gerät eine Verbindung mit dem Netzwerk herstellen. Dazu versendet das
+Gerät so lange Join-Requests, bis erfolgreich ein Join-Accept empfangen
+wurde. Als Kompromiss zwischen Energieverbrauch und zügigem Join werden
+die Sendeabstände der Join-Requests immer größer. Außerdem wird auch die
+Datarate variiert (zunächst große Datarate bzw. kleiner Spreizfaktor,
+dann kleinere Datarate bzw. größerer Spreizfaktor). Das Join-Verhalten
+hält die Vorgaben und Empfehlungen der LoRa-Alliance Spezifikation strikt
+ein. Sentinum Sensoren setzen die Vorgaben durch sogenannte Join-Bursts,
+deren Abstand zueinander wächst.
+</p>
+
+<p>
+Ein Join-Burst besteht aus maximal 6 Join-Requests mit abnehmender
+Datarate (DR5-DR0) bzw. zunehmendem Spreizfaktor (SF7-SF12). Die
+Abstände zwischen den Requests nehmen quadratisch zu, um die
+LoRa-Alliance spezifischen Duty-Cycle Richtlinien nicht zu verletzen.
+Die LoRa-Alliance schreibt einen abnehmenden Duty-Cycle für
+Join-Requests gemäß folgender Tabelle vor:
+Zeit Duty-Cycle &lt;1h 1% ~1h 0.1%
+</p>
+
+<p>
+Das bedeutet, dass in der ersten Phase (&lt;1h) genau so viel
+Sendebudget zur Verfügung steht, wie in der zweiten (&gt;1h),
+obwohl nur ein Zehntel der Zeit zur Verfügung steht.
+Um das Budget maximal auszunutzen, sind die Abstände zwischen den
+Join-Bursts (bestehend aus max. 6 Join-Requests) zunächst klein
+und werden dann größer. Konkret werden in Phase 1 zwei Bursts
+durchgeführt. In Phase 2 werden zwei weitere Bursts durchgeführt,
+ab Phase 3 wird ein Burst pro Tag durchgeführt. Die Länge der Bursts
+wächst von ca. 10 Minuten in Phase 1 über ca. 100 Minuten in Phase 2
+auf bis zu 16 Stunden in Phase 3 an.
+</p>
+
+<h3 id="mioty-join-verhalten">
+8.2. mioty Join-Verhalten
+</h3>
+
+<p>
+Bevor Telemetriedaten via mioty versendet werden können, muss das
+Gerät eine initiale Kommunikationsstrecke mit der Basisstation
+aufbauen. Ein expliziter Join-Prozess wie bei LoRaWAN ist nicht
+erforderlich.
+</p>
+
+<p>
+Stattdessen beginnt das Gerät direkt mit der Aussendung sogenannter
+Telegramme, die aus 512 Bit großen Datenpaketen bestehen, welche
+wiederum in bis zu 12 Subpakete (Sub-Packets) fragmentiert und
+über verschiedene Frequenzen sowie Zeitpunkte verteilt werden
+(Telegram Splitting).
+</p>
+
+<p>
+Die erste erfolgreiche Zustellung eines Telegramms mit gültiger
+Geräte-ID wird vom Backend als Netzbeitritt interpretiert.
+Die Konfiguration des Geräts (z. B. Device ID, Application Key)
+ist vorab festgelegt und muss mit dem Backend übereinstimmen.
+</p>
+
+<p>
+Wird keine Bestätigung im Backend registriert (z. B. durch fehlende
+Empfangs-Timestamps oder fehlende Auswertungsergebnisse), beginnt das
+Gerät mit erneuten Übertragungsversuchen. Diese Wiederholungen erfolgen
+in sogenannten mioty-Sendezyklen. Die Zyklusdauer wächst progressiv
+von anfänglich 5 Minuten (nach dem ersten Versuch), über 30 Minuten, aus bis zu 12 Stunden an, um die Duty-Cycle-Vorgaben (< 1%) einzuhalten und gleichzeitig den Energieverbrauch zu minimieren.
+</p>
+
+<p>
+Die Sendefrequenzen (868,0-868,6 MHz in Europa) und Kanäle werden
+zyklisch gewechselt, um Mehrfachkollisionen zu vermeiden. Das Gerät
+verändert die Datarate nicht aktiv, da diese durch das Protokoll
+festgelegt ist (15.625 kbit/s für Uplink, optional 4.882 kbit/s für
+Downlink). Die Telegramme sind robust gegenüber Interferenzen, da bei
+Empfang nur 3 von 12 Subpaketen korrekt empfangen werden müssen
+(Forward Error Correction).
+</p>
+
+<p>
+Ein vollständiger Sendeversuch besteht aus einem Telegramm mit
+12 Subpaketen über eine Dauer von ca. 1,2 Sekunden
+(inkl. Guard Time). Bei erfolgreicher Registrierung wechselt das
+Gerät in einen regulären Betriebsmodus mit fixen Sendeintervallen.
+Falls nach mehreren Sendezyklen (typisch 10-12) kein Empfang erfolgt,
+pausiert das Gerät für 24 Stunden, bevor ein neuer
+Initialisierungsversuch gestartet wird.
+</p>
+
+<h3 id="pflege-reinigung">
+9. Pflege und Reinigung
+</h3>
+
+<p>
+Damit der Sensor zuverlässig funktioniert und eine lange
+Lebensdauer gewährleistet ist, sollte er regelmäßig gepflegt werden.
+Beachten Sie dabei die folgenden Hinweise:
+</p>
+
+<ul>
+    <li>
+        Reinigen Sie das Gehäuse, insbesondere die Lüftungsschlitze
+        des Sensors mit einem trockenen oder leicht angefeuchteten
+        Mikrofasertuch. Achten Sie darauf, dass keine Feuchtigkeit
+        in das Gerät eindringt.
+    </li>
+
+    <li>
+        Führen Sie die Reinigung regelmäßig durch, insbesondere in
+        staubigen oder pollenreichen Umgebungen, um die
+        Funktionalität des Sensors langfristig sicherzustellen.
+    </li>
+
+    <li>
+        Verzichten Sie auf alkohol- oder lösungsmittelhaltige
+        Reinigungsmittel, da diese die Oberfläche des Sensors
+        beschädigen können.
+    </li>
+
+    <li>
+        Verwenden Sie keine Druckluft oder andere intensive
+        Reinigungsmethoden, da diese empfindliche Sensorbauteile
+        beschädigen können.
+    </li>
+
+    <li>
+        Harte Ablagerungen (z. B. Kalk, Öl oder Fett) können die
+        Messgenauigkeit beeinträchtigen. Falls notwendig, mit einem
+        weichen, feuchten Tuch und mildem Reinigungsmittel
+        frühzeitig reinigen.
+    </li>
+
+    <li>
+        Bei optischen oder radarbasierten Sensoren sollten die
+        Linsen bzw. Antennenflächen regelmäßig auf Verschmutzung
+        oder Kratzer überprüft werden.
+    </li>
+
+    <li>
+        Kontrollieren Sie regelmäßig den festen Sitz des Sensors
+        sowie der Halterung.
+    </li>
+</ul>
+
+
+
+
+
+
+
+<h3>Kennzeichnung und Zertifizierung</h3>
+
+<br><br>
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/bb56d53e70ed652caec150fc12f34ae8d5917c1e/logo/mioty_lora.png"  alt="Supported radio technologies"  style="max-width:750px; height:auto;"
+    loading="lazy">
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
+    alt="trash bin Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
+</div>
+<h3> </h3>
+<figure class="figure">
+    <img
+        src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/273e537339a8bdfdd065d21b80a4a36495654c8c/Aion420/Aion420_Betriebsanleitung/aion420_plan.png"
+        alt="AION420 Gehäuseplan und Montagezeichnung"
+        loading="lazy"
+        style="max-width:900px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Abbildung 7. Gehäuseabbildung vom Aion 420
+        </figcaption></figure>
+
+
+
+<div class="footer-note">
+  <p>© Sentinum GmbH - Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Texte, Tabellen und Bilder, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Sofern nicht anders angegeben, unterliegen alle Bilder dem Urheberrecht der Sentinum GmbH.</p>
+  <p>Eine Vervielfältigung, Verbreitung oder Nutzung, auch auszugsweise, ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">Technische Änderungen vorbehalten. Alle Angaben erfolgen ohne Gewähr.</p>
+</div>
+
