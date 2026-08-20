@@ -1,0 +1,891 @@
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+    code,
+    .inline-code {
+        background-color: #f3f4f6;
+        border: 1px solid #d0d7de;
+        border-radius: 4px;
+        padding: 2px 6px;
+        font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 0.9em;
+        color: #111827;
+        display: inline-block;
+    }
+
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+</style>
+
+
+
+<h3>Febris CO2 NFC- und Downlink-Tabelle</h3>
+
+
+<div class="pdf-download">
+    <span class="icon">📄</span>
+    <span>
+        Hier finden Sie die Tabelle für eine übersichtliche Darstellung: <br>
+        <a href="https://sentinum.notion.site/419b60f77dbe4037805f429fbcabc8f4?v=2ed097b071bf4fd49d46111518b47bb0&pvs=143"
+           target="_blank"
+           rel="noopener">
+            <strong>Febris CO2 NFC- und Downlink-Tabelle</strong>
+        </a>
+    </span>
+</div>
+
+
+<h3>Gruppe Timings &amp; Alarms</h3>
+
+<p>
+    <strong>Name:</strong> Messperiode<br>
+    <strong>Kommunikationsprotokoll:</strong> Alle<br>
+    <strong>Beschreibung:</strong> Gibt die Periode an, in der die Messwerte erfasst werden. Eine Einstellung von 10 Minuten bedeutet, dass alle 10 Minuten eine Messung durchgeführt wird.<br>
+    <strong>Schlüssel (NFC Parameter):</strong> <span class="inline-code">period</span><br>
+    <strong>Modul:</strong> Sentiface<br>
+    <strong>Modulschlüssel:</strong> <span class="inline-code">0x1111</span><br>
+    <strong>Gruppe:</strong> <span class="inline-code">0x00</span><br>
+    <strong>Property ID:</strong> <span class="inline-code">0x00</span><br>
+    <strong>Voreingestellter Wert:</strong> 5<br>
+    <strong>Minimal einstellbarer Wert:</strong> 1<br>
+    <strong>Maximal einstellbarer Wert:</strong> 60<br>
+    <strong>Einheit:</strong> min<br>
+    <strong>Read/Write:</strong> rw
+</p>
+
+<hr>
+
+<p>
+    <strong>Name:</strong> Reguläres Sendeintervall<br>
+    <strong>Kommunikationsprotokoll:</strong> Alle<br>
+    <strong>Beschreibung:</strong> Anzahl an Messungen, nach denen der Sensor auch ohne aktive Alarmbedingung einen regulären Uplink sendet.<br>
+    <strong>Modul:</strong> Sentiface<br>
+    <strong>Modulschlüssel:</strong> <span class="inline-code">0x1111</span><br>
+    <strong>Gruppe:</strong> <span class="inline-code">0x00</span><br>
+    <strong>Property ID:</strong> <span class="inline-code">0x01</span><br>
+    <strong>Voreingestellter Wert:</strong> 6<br>
+    <strong>Minimal einstellbarer Wert:</strong> 1<br>
+    <strong>Maximal einstellbarer Wert:</strong> 64<br>
+    <strong>Einheit:</strong> Anzahl<br>
+    <strong>Read/Write:</strong> rw
+</p>
+
+<hr>
+
+<p>
+    <strong>Name:</strong> Werte speichern und übertragen
+    (Feature nur nach Rücksprache verwenden)<br>
+    <strong>Kommunikationsprotokoll:</strong> Alle<br>
+    <strong>Beschreibung:</strong> Legt fest, ob vergangene Messwerte zusätzlich gespeichert und mit übertragen werden. Verfügbar ab Minor Version 1.2.
+</p>
+
+<ul>
+    <li><strong>0</strong>: Aus</li>
+    <li><strong>1</strong>: An</li>
+</ul>
+
+
+
+<h3>Messwerthistorie aktivieren</h3>
+
+<p>
+    <strong>Modul:</strong> Sentiface<br>
+    <strong>Modulschlüssel:</strong> 0x1121<br>
+    <strong>Gruppe:</strong> 0x00<br>
+    <strong>Property ID:</strong> 0x02<br>
+    <strong>Voreingestellter Wert:</strong> 0<br>
+    <strong>Minimal einstellbarer Wert:</strong> 0<br>
+    <strong>Maximal einstellbarer Wert:</strong> 1<br>
+    <strong>Einheit:</strong> –<br>
+    <strong>read/write:</strong> rw
+</p>
+
+<h3>Anzahl der gespeicherten Werte</h3>
+
+<p>
+    <strong>Name:</strong> Anzahl der gespeicherten Werte
+    (Feature nur nach Rücksprache verwenden)<br>
+    <strong>Kommunikationsprotokoll:</strong> Alle<br>
+    <strong>Beschreibung:</strong> Maximale Anzahl vergangener Messwerte,
+    die bei einer Sendung mit übertragen werden. Die tatsächlich mögliche
+    Anzahl hängt von der verwendeten Kommunikationstechnologie ab
+    (ab Minor-Version 1.2).<br>
+    <strong>Schlüssel (NFC Parameter):</strong> pastnum<br>
+    <strong>Modul:</strong> Sentiface<br>
+    <strong>Modulschlüssel:</strong> 0x1121<br>
+    <strong>Gruppe:</strong> 0x00<br>
+    <strong>Property ID:</strong> 0x02<br>
+    <strong>Voreingestellter Wert:</strong> Max (30 / 6)<br>
+    <strong>Minimal einstellbarer Wert:</strong> 1<br>
+    <strong>Maximal einstellbarer Wert:</strong> 30 (NB‑IoT) / 6 (LoRaWAN)<br>
+    <strong>Einheit:</strong> –<br>
+    <strong>read/write:</strong> rw
+</p>
+
+<div class="note-strip note-strip--blue">
+    <strong>Gruppe Alarm Settings</strong>
+</div>
+
+<h3>Delta Wert</h3>
+
+<p>
+    <strong>Name:</strong> Delta Wert<br>
+    <strong>Kommunikationsprotokoll:</strong> Alle<br>
+    <strong>Beschreibung:</strong>
+    Gibt an, um wie viel sich der CO₂-Wert im Vergleich zur letzten
+    Sendung absolut ändern muss, damit eine Alarm-Sendung ausgelöst wird.
+    Diese Sendung erfolgt unabhängig vom regulären Sendeintervall.<br>
+    <strong>Schlüssel (NFC Parameter):</strong> delta<br>
+    <strong>Modul:</strong> Sentiface<br>
+    <strong>Modulschlüssel:</strong> 0x1111<br>
+    <strong>Gruppe:</strong> 0x01<br>
+    <strong>Property ID:</strong> 0x00<br>
+    <strong>Voreingestellter Wert:</strong> 300<br>
+    <strong>Minimal einstellbarer Wert:</strong> 300<br>
+    <strong>Maximal einstellbarer Wert:</strong> 2000<br>
+    <strong>Einheit:</strong> ppm<br>
+    <strong>read/write:</strong> rw
+</p>
+
+<p>
+    <strong>Name:</strong> Schwellenwert für gelben Alarm<br>
+    <strong>Kommunikationsprotokoll:</strong> Alle<br>
+    <strong>Beschreibung:</strong> Gibt die CO₂-Schwelle in ppm an, die überschritten werden muss, damit der Sensor in den gelben Zustand wechselt (gelbe LED leuchtet).<br>
+    <strong>Schlüssel (NFC Parameter):</strong> <span class="inline-code">yellow</span><br>
+    <strong>Modul:</strong> Sentiface<br>
+    <strong>Modulschlüssel:</strong> <span class="inline-code">0x1111</span><br>
+    <strong>Gruppe:</strong> <span class="inline-code">0x01</span><br>
+    <strong>Property ID:</strong> <span class="inline-code">0x01</span><br>
+    <strong>Voreingestellter Wert:</strong> 1000<br>
+    <strong>Minimal einstellbarer Wert:</strong> 500<br>
+    <strong>Maximal einstellbarer Wert:</strong> 3000<br>
+    <strong>Einheit:</strong> ppm<br>
+    <strong>Read/Write:</strong> rw
+</p>
+
+<hr>
+
+<p>
+    <strong>Name:</strong> Schwellenwert für roten Alarm<br>
+    <strong>Kommunikationsprotokoll:</strong> Alle<br>
+    <strong>Beschreibung:</strong> Gibt die CO₂-Schwelle in ppm an, die überschritten werden muss, damit der Sensor in den roten Zustand wechselt (rote LED leuchtet).<br>
+    <strong>Schlüssel (NFC Parameter):</strong> <span class="inline-code">red</span><br>
+    <strong>Modul:</strong> Sentiface<br>
+    <strong>Modulschlüssel:</strong> <span class="inline-code">0x1111</span><br>
+    <strong>Gruppe:</strong> <span class="inline-code">0x01</span><br>
+    <strong>Property ID:</strong> <span class="inline-code">0x02</span><br>
+    <strong>Voreingestellter Wert:</strong> 2000<br>
+    <strong>Minimal einstellbarer Wert:</strong> 500<br>
+    <strong>Maximal einstellbarer Wert:</strong> 3000<br>
+    <strong>Einheit:</strong> ppm<br>
+    <strong>Read/Write:</strong> rw
+</p>
+
+<hr>
+
+<p>
+    <strong>Name:</strong> Hysterese<br>
+    <strong>Kommunikationsprotokoll:</strong> Alle<br>
+    <strong>Beschreibung:</strong> Bestimmt die absolute Hysterese in ppm bei Zustandswechseln. Wenn die CO₂-Konzentration einen Schwellwert abzüglich Hysterese unterschreitet, wird von einem höheren in einen niedrigeren Alarmzustand gewechselt.<br>
+    <strong>Schlüssel (NFC Parameter):</strong> <span class="inline-code">hyst</span><br>
+    <strong>Modul:</strong> Sentiface<br>
+    <strong>Modulschlüssel:</strong> <span class="inline-code">0x1111</span><br>
+    <strong>Gruppe:</strong> <span class="inline-code">0x01</span><br>
+    <strong>Property ID:</strong> <span class="inline-code">0x03</span><br>
+    <strong>Voreingestellter Wert:</strong> 5<br>
+    <strong>Minimal einstellbarer Wert:</strong> 0<br>
+    <strong>Maximal einstellbarer Wert:</strong> 300<br>
+    <strong>Einheit:</strong> ppm<br>
+    <strong>Read/Write:</strong> rw
+</p>
+
+<h3>Gruppe Buzzer Settings</h3>
+
+<p>
+    <strong>Name:</strong> Buzzer Einstellungen<br>
+    <strong>Kommunikationsprotokoll:</strong> Alle<br>
+    <strong>Beschreibung:</strong> Gibt das Verhalten des Buzzers an.
+</p>
+
+<ul>
+    <li><strong>0:</strong> Buzzer aus</li>
+    <li><strong>1:</strong> Buzzer bei Alarm-Leveländerungen über die definierten Schwellenwerte</li>
+    <li><strong>2:</strong> Dauerhafte Signalisierung im Alarmfall. Bei gelbem oder rotem Zustand meldet der Buzzer den Status bei jeder Messung.</li>
+    <li><strong>3:</strong> Buzzer meldet ausschließlich den Wechsel in den roten Zustand.</li>
+    <li><strong>4:</strong> Buzzer meldet dauerhaft, solange der rote Zustand aktiv ist.</li>
+</ul>
+
+<p>
+    <strong>Schlüssel (NFC Parameter):</strong> <span class="inline-code">buzz</span><br>
+    <strong>Modul:</strong> Sentiface<br>
+    <strong>Modulschlüssel:</strong> <span class="inline-code">0x1111</span><br>
+    <strong>Gruppe:</strong> <span class="inline-code">0x02</span><br>
+    <strong>Property ID:</strong> <span class="inline-code">0x00</span><br>
+    <strong>Voreingestellter Wert:</strong> 1<br>
+    <strong>Minimal einstellbarer Wert:</strong> 0<br>
+    <strong>Maximal einstellbarer Wert:</strong> 4<br>
+    <strong>Read/Write:</strong> rw
+</p>
+
+<h3>Gruppe Tap Settings (optional)</h3>
+
+
+<h3>Tap Detect Enable</h3>
+
+<p>
+    <strong>Name:</strong> Tap Detect Enable<br>
+    <strong>Kommunikationsprotokoll:</strong> Alle
+</p>
+
+<p>
+    <strong>Beschreibung:</strong> Aktiviert die Double-Tap-Funktion (Knock-Knock).
+</p>
+
+<ul>
+    <li>0: Double Tap deaktiviert</li>
+    <li>1: Double Tap aktiviert</li>
+</ul>
+
+<p>
+    <strong>Schlüssel (NFC Parameter):</strong> tapen<br>
+    <strong>Modul:</strong> Sentiface<br>
+    <strong>Modulschlüssel:</strong> 0x1111<br>
+    <strong>Gruppe:</strong> 0x03<br>
+    <strong>Property ID:</strong> 0x00<br>
+    <strong>Voreingestellter Wert:</strong> 1<br>
+    <strong>Minimal einstellbarer Wert:</strong> 0<br>
+    <strong>Maximal einstellbarer Wert:</strong> 1<br>
+    <strong>Einheit:</strong> –<br>
+    <strong>read/write:</strong> rw
+</p>
+
+<h3>Double Tap Max Delta</h3>
+
+<p>
+    <strong>Name:</strong> Double Tap Max Delta<br>
+    <strong>Kommunikationsprotokoll:</strong> Alle
+</p>
+
+<p>
+    <strong>Beschreibung:</strong>
+    Zeitspanne, die maximal zwischen zwei Tap-Ereignissen liegen darf,
+    damit eine Messung ausgelöst und der Double Tap erfolgreich erkannt wird.
+</p>
+
+<p>
+    <strong>Schlüssel (NFC Parameter):</strong> tapdelt<br>
+    <strong>Modul:</strong> Sentiface<br>
+    <strong>Modulschlüssel:</strong> 0x1111<br>
+    <strong>Gruppe:</strong> 0x03<br>
+    <strong>Property ID:</strong> 0x01<br>
+    <strong>Voreingestellter Wert:</strong> 800<br>
+    <strong>Minimal einstellbarer Wert:</strong> 100<br>
+    <strong>Maximal einstellbarer Wert:</strong> 2000<br>
+    <strong>Einheit:</strong> sec<br>
+    <strong>read/write:</strong> rw
+</p>
+
+<h3>Tap Count Alarm</h3>
+
+<p>
+    <strong>Name:</strong> Tap Count Alarm<br>
+    <strong>Kommunikationsprotokoll:</strong> Alle
+</p>
+
+<p>
+    <strong>Beschreibung:</strong>
+    Gibt an, wie viele einzelne Tap-Ereignisse benötigt werden,
+    um eine Messung auszulösen.
+</p>
+
+<ul>
+    <li>2: Double Tap</li>
+    <li>3: Triple Tap</li>
+    <li>4: Quadro Tap</li>
+</ul>
+
+<p>
+    <strong>Schlüssel (NFC Parameter):</strong> tapcnt<br>
+    <strong>Modul:</strong> Sentiface<br>
+    <strong>Modulschlüssel:</strong> 0x1111<br>
+    <strong>Gruppe:</strong> 0x03<br>
+    <strong>Property ID:</strong> 0x02<br>
+    <strong>Voreingestellter Wert:</strong> 2<br>
+    <strong>Minimal einstellbarer Wert:</strong> 2<br>
+    <strong>Maximal einstellbarer Wert:</strong> 4<br>
+    <strong>Einheit:</strong> –<br>
+    <strong>read/write:</strong> rw
+</p>
+
+<h3>Tap Impact Strength</h3>
+
+<p>
+    <strong>Name:</strong> Tap Impact Strength<br>
+    <strong>Kommunikationsprotokoll:</strong> Alle
+</p>
+
+<p>
+    <strong>Beschreibung:</strong>
+    Sobald die gemessene Beschleunigung größer als der konfigurierte
+    Wert <span class="inline-code">tap_impact_strength</span> ist,
+    wird eine Messung durch das Double-Tap-Ereignis ausgelöst.
+</p>
+
+<p>
+    <strong>Schlüssel (NFC Parameter):</strong> tapstr<br>
+    <strong>Modul:</strong> Sentiface<br>
+    <strong>Modulschlüssel:</strong> 0x1111<br>
+    <strong>Gruppe:</strong> 0x03<br>
+    <strong>Property ID:</strong> 0x03<br>
+    <strong>Voreingestellter Wert:</strong> 400<br>
+    <strong>Minimal einstellbarer Wert:</strong> 200<br>
+    <strong>Maximal einstellbarer Wert:</strong> 2000<br>
+    <strong>Einheit:</strong> mg<br>
+    <strong>read/write:</strong> rw
+</p>
+
+<h3>Double Tap Cooldown</h3>
+
+<p>
+    <strong>Name:</strong> Double Tap Cooldown<br>
+    <strong>Kommunikationsprotokoll:</strong> Alle
+</p>
+
+<p>
+    <strong>Beschreibung:</strong>
+    Definiert die Zeitspanne, in der nach einer ausgelösten
+    Double-Tap-Messung keine weitere Messung gestartet werden kann.
+</p>
+
+<p>
+    <strong>Schlüssel (NFC Parameter):</strong> tapcool<br>
+    <strong>Modul:</strong> Sentiface<br>
+    <strong>Modulschlüssel:</strong> 0x1111<br>
+    <strong>Gruppe:</strong> 0x03<br>
+    <strong>Property ID:</strong> 0x04<br>
+    <strong>Voreingestellter Wert:</strong> 30<br>
+    <strong>Minimal einstellbarer Wert:</strong> 10<br>
+    <strong>Maximal einstellbarer Wert:</strong> 300<br>
+    <strong>Einheit:</strong> sec<br>
+    <strong>read/write:</strong> rw
+</p>
+
+<div class="note-strip note-strip--blue">
+    <strong>Gruppe LED Settings</strong>
+</div>
+
+<h3>LED Settings</h3>
+
+<p>
+    <strong>Name:</strong> LED Settings<br>
+    <strong>Kommunikationsprotokoll:</strong> Alle
+</p>
+
+<p>
+    <strong>Beschreibung:</strong>
+    Gibt das Verhalten der LEDs an:
+</p>
+
+
+
+<h3>LED Settings</h3>
+
+<p>
+    <strong>Beschreibung:</strong> Gibt das Verhalten der LEDs an.
+</p>
+
+<ul>
+    <li>0: Alle LEDs an</li>
+    <li>1: Alle LEDs aus</li>
+</ul>
+
+<p>
+    <strong>Schlüssel (NFC Parameter):</strong> leds<br>
+    <strong>Modul:</strong> Sentiface<br>
+    <strong>Modulschlüssel:</strong> 0x1111<br>
+    <strong>Gruppe:</strong> 0x04<br>
+    <strong>Property ID:</strong> 0x00<br>
+    <strong>Voreingestellter Wert:</strong> 1<br>
+    <strong>Minimal einstellbarer Wert:</strong> 0<br>
+    <strong>Maximal einstellbarer Wert:</strong> 1<br>
+    <strong>Einheit:</strong> –<br>
+    <strong>read/write:</strong> rw
+</p>
+
+<div class="note-strip note-strip--blue">
+    <strong>Gruppe Alarm Datenquelle und Luftfeuchtigkeitsalarm</strong>
+</div>
+
+<h3>Alarm Datenquelle</h3>
+
+<p>
+    <strong>Name:</strong> Alarm Datenquelle<br>
+    <strong>Kommunikationsprotokoll:</strong> Alle
+</p>
+
+<p>
+    <strong>Beschreibung:</strong>
+    Quelle, auf die der Alarm ausgelöst wird, beispielsweise CO₂ oder
+    relative Luftfeuchtigkeit.
+</p>
+
+<ul>
+    <li>0: CO₂-Sensor</li>
+    <li>1: Sensor für relative Luftfeuchtigkeit</li>
+</ul>
+
+<p>
+    <strong>Schlüssel (NFC Parameter):</strong> ads<br>
+    <strong>Modul:</strong> Sentiface<br>
+    <strong>Modulschlüssel:</strong> 0x1111<br>
+    <strong>Gruppe:</strong> 0x05<br>
+    <strong>Property ID:</strong> 0x00<br>
+    <strong>Voreingestellter Wert:</strong> 0<br>
+    <strong>Minimal einstellbarer Wert:</strong> 0<br>
+    <strong>Maximal einstellbarer Wert:</strong> 2<br>
+    <strong>Einheit:</strong> –<br>
+    <strong>read/write:</strong> rw
+</p>
+
+<h3>Relative Luftfeuchtigkeit Delta</h3>
+
+<p>
+    <strong>Name:</strong> Rel. Luftfeuchtigkeit Delta<br>
+    <strong>Kommunikationsprotokoll:</strong> Alle
+</p>
+
+<p>
+    <strong>Beschreibung:</strong>
+    Gibt an, um wie viel sich die relative Luftfeuchtigkeit gegenüber
+    der letzten Sendung absolut ändern muss, damit eine Alarm-Sendung
+    ausgelöst wird. Diese Sendung erfolgt unabhängig vom regulären
+    Sendeintervall.
+</p>
+
+<p>
+    <strong>Schlüssel (NFC Parameter):</strong> hdt<br>
+    <strong>Modul:</strong> Sentiface<br>
+    <strong>Modulschlüssel:</strong> 0x1111<br>
+    <strong>Gruppe:</strong> 0x05<br>
+    <strong>Property ID:</strong> 0x01<br>
+    <strong>Voreingestellter Wert:</strong> 20<br>
+    <strong>Minimal einstellbarer Wert:</strong> 5<br>
+    <strong>Maximal einstellbarer Wert:</strong> 100<br>
+    <strong>Einheit:</strong> %<br>
+    <strong>read/write:</strong> rw
+</p>
+
+<h3>Rel. Luftfeuchtigkeit Gelber Alarm</h3>
+
+<p>
+    <strong>Name:</strong> Rel. Luftfeuchtigkeit Gelber Alarm<br>
+    <strong>Kommunikationsprotokoll:</strong> Alle
+</p>
+
+<p>
+    <strong>Beschreibung:</strong>
+    Gibt die Schwelle der relativen Luftfeuchtigkeit an, die überschritten
+    werden muss, damit der Sensor in den gelben Alarmzustand wechselt
+    (gelbe LED leuchtet).
+</p>
+
+<p>
+    <strong>Schlüssel (NFC Parameter):</strong> hyt<br>
+    <strong>Modul:</strong> Sentiface<br>
+    <strong>Modulschlüssel:</strong> 0x1111<br>
+    <strong>Gruppe:</strong> 0x05<br>
+    <strong>Property ID:</strong> 0x02<br>
+    <strong>Voreingestellter Wert:</strong> 20<br>
+    <strong>Minimal einstellbarer Wert:</strong> 50<br>
+    <strong>Maximal einstellbarer Wert:</strong> 100<br>
+    <strong>Einheit:</strong> %<br>
+    <strong>read/write:</strong> rw
+</p>
+
+<h3>Rel. Luftfeuchtigkeit Roter Alarm</h3>
+
+<p>
+    <strong>Name:</strong> Rel. Luftfeuchtigkeit Roter Alarm<br>
+    <strong>Kommunikationsprotokoll:</strong> Alle
+</p>
+
+<p>
+    <strong>Beschreibung:</strong>
+    Gibt die Schwelle der relativen Luftfeuchtigkeit an, die überschritten
+    werden muss, damit der Sensor in den roten Alarmzustand wechselt
+    (rote LED leuchtet).
+</p>
+
+<p>
+    <strong>Schlüssel (NFC Parameter):</strong> hrt<br>
+    <strong>Modul:</strong> Sentiface<br>
+    <strong>Modulschlüssel:</strong> 0x1111<br>
+    <strong>Gruppe:</strong> 0x05<br>
+    <strong>Property ID:</strong> 0x03<br>
+    <strong>Voreingestellter Wert:</strong> 80<br>
+    <strong>Minimal einstellbarer Wert:</strong> 10<br>
+    <strong>Maximal einstellbarer Wert:</strong> 100<br>
+    <strong>Einheit:</strong> %<br>
+    <strong>read/write:</strong> rw
+</p>
+
+<h3>Rel. Luftfeuchtigkeit Hysterese</h3>
+
+<p>
+    <strong>Name:</strong> Rel. Luftfeuchtigkeit Hysterese<br>
+    <strong>Kommunikationsprotokoll:</strong> Alle
+</p>
+
+<p>
+    <strong>Beschreibung:</strong>
+    Bestimmt die absolute Hysterese bei Zustandswechseln. Sinkt die
+    relative Luftfeuchtigkeit unter einen Schwellwert abzüglich der
+    definierten Hysterese, erfolgt der Wechsel von einem höheren in
+    einen niedrigeren Alarmzustand.
+</p>
+
+<p>
+    <strong>Schlüssel (NFC Parameter):</strong> hlh<br>
+    <strong>Modul:</strong> Sentiface<br>
+    <strong>Modulschlüssel:</strong> 0x1111<br>
+    <strong>Gruppe:</strong> 0x05<br>
+    <strong>Property ID:</strong> 0x04<br>
+    <strong>Voreingestellter Wert:</strong> 5<br>
+    <strong>Minimal einstellbarer Wert:</strong> 0<br>
+    <strong>Maximal einstellbarer Wert:</strong> 300<br>
+    <strong>Einheit:</strong> %<br>
+    <strong>read/write:</strong> rw <br>
+    <strong>Modulschlüssel:</strong>1111<br>
+</p>
+
+
+<div class="pdf-download">
+    <span class="icon">📄</span>
+    <span>
+        Laden Sie die NFC- und Downlink-Beschreibung für den Febris CO2 Sensor herunter:
+        <a href="https://docs.sentinum.de/hubfs/Febris%20Dokumentation/Febris_NFC_und_Downlinkbeschreibung_DE.pdf?hsLang=de"
+           target="_blank"
+           rel="noopener">
+            <strong>Febris CO2 NFC- und Downlink-Beschreibung</strong>
+        </a>
+    </span>
+</div>
+
+
+
+
+<!-- FOOTER -->
+
+</div>
+<div class="footer-note">
+  <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+  <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
+  </p>
+</div>
+
+  
+</body></html>
