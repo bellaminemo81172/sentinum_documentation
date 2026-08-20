@@ -316,177 +316,102 @@
         padding-left: 20px;
     }
 </style>
-<div class="pdf-viewer">
-<iframe src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/60a29717c0191c60ceb923e18c99f1df3184abb3/Febris/Febris_Co2/Febris_Co2_Datenconverter/febris_co2_datakonverter.pdf"
-allowfullscreen
-title=“Blueprint Sensor Integration PDF”>
-</iframe>
-</div>
-<div class="pdf-download">
-  
-📄 You can view the PDF above or
-  <a href="https://sentinum.notion.site/Febris-CO2-TH-SCW-Dataconverter-DE-51b4d8975d874ce19eb182c169774566?pvs=4"
-   target="_blank">
-   
-<strong>download it here</strong>
-  </a>.
-</div>
-<figure class="figure">
-    <img
-        src="https://docs.sentinum.de/hs-fs/hubfs/Febris_1.png?width=688&height=387&amp;name=Febris_1.png"
-       
-alt=“Febris CO2 Sensor”
-        loading="lazy">
-    <figcaption>
-        Figure 1: Febris CO2 Air Quality Sensor</figcaption></figure>
 
 
-
-<h3>Febris CO2/TH/SCW Payload Decoder LoRaWAN®</h3>
-<p>
-    
-The following JavaScript decoder can be used in LoRaWAN® network servers such as
-    The Things Stack (TTN) to convert the payloads transmitted by the Febris CO2/TH/SCW
-    sensor into readable measurement values.
-</p>
-<pre style="
-  background:#f7f7f7;
-  border:1px solid #ddd;
-  
-padding:15px;
-  overflow-x:auto;
-  font-family:monospace;
-  font-size:14px;
-  line-height:1.5;
-  border-radius:4px;
-  margin-bottom:40px;
-">function decodeUplink(input) {
-    var decoded = {};
-    var bytes = input.bytes;
-    
-if (input.fPort == 1) {//TELEMETRY
-        //decode header
-        decoded.base_id = bytes[0] >> 4;
-        decoded.major_version = bytes[0] & 0x0F;
-        decoded.minor_version = bytes[1] >> 4;
-        decoded.product_version = bytes [1] & 0x0F;
-        decoded.up_cnt = bytes[2];
-        decoded.battery_voltage = ((bytes[3] << 8) | bytes[4]) / 1000.0;
-        decoded.internal_temperature = ((bytes[5] << 8) | bytes[6]) / 10 - 100;
-        
-decoded.networkBaseType = ‘lorawan’;
-        decoded.networkSubType = ‘tti’;
-       
-        var it = 7;
-       
-        if (decoded.minor_version >= 3) {
-            it = 7;
-       
-            // Humidity is included in all variants
-            decoded.humidity = bytes[it++];
-               
-if (decoded.product_version & 0x01) { // CO2 and pressure are included if subversion bit 0 = 1, otherwise 0
-                decoded.pressure = (bytes[it++] << 8 | bytes [it++]);
-                decoded.co2_ppm = (bytes[it++] << 8 | bytes[it++]);
-            } else {
-                it += 4; // Values are 0 for compatibility reasons, so skip them
-            }
-               
-decoded.alarm = bytes[it++];//Alarm level, corresponds to green, yellow, red
-   
-            //Discard FIFO values (1-byte FIFO size, 1-byte period, 7 bytes per FIFO entry)
-            it += 2 + bytes[it] * 7;
-               
-decoded.dew_point = ((bytes[it++] << 8) | bytes[it++]) / 10 - 100;
-           
-            // Wall temperature and humidity are included if subversion bit 2 = 1
-            if (decoded.product_version & 0x04) {
-                
-decoded.wall_temperature = ((bytes[it++] << 8) | bytes[it++]) / 10 - 100;
-                decoded.therm_temperature = ((bytes[it++] << 8) | bytes[it++]) / 10 - 100;
-                decoded.wall_humidity = bytes[it++];
-            }
-           
-}else{
-            it = 7;
-       
-            //Humidity is included in all variants
-            decoded.humidity = bytes[it++];
-               
-if (decoded.product_version & 0x01) { // CO2 and pressure are included if subversion bit 0 = 1, otherwise 0
-                decoded.pressure = (bytes[it++] << 8 | bytes[it++]);
-                decoded.co2_ppm = (bytes[it++] << 8 | bytes[it++]);
-            
-} else {
-                it += 4; // Values are 0 for compatibility reasons, so skip
-            }
-               
-decoded.alarm = bytes[it++];//Alarm level, corresponds to green, yellow, red
-   
-            //Discard FIFO values (1-byte FIFO size, 1-byte period, 7 bytes per FIFO entry)
-            
-it += 2 + bytes[it] * 7;
-   
-            //Dew point included in all variants since minor version 2 (exception: earlier versions of subversion 2, so check the byte)
-            if (decoded.minor_version >= 2 && bytes[it] ) {
-             
-                decoded.dew_point = bytes[it++] - 100;
-            
-}
-           
-            // Wall temperature and humidity included if subversion bit 2 = 1
-            if (decoded.product_version & 0x04) {
-                decoded.wall_temperature = bytes[it++] - 100;
-                decoded.therm_temperature = bytes[it++] - 100;
-                
-decoded.wall_humidity = bytes[it++];
-   
-            }
-   
-   
-        }
-    }
-    return {
-        data: decoded,
-        warnings: [],
-        errors: []
-    };
-}
-}</pre>
 <div class="note-strip note-strip--blue">
-    <strong>Note</strong>
-    <ul>
-        <li>The decoder supports Febris CO₂, TH, and SCW variants.</li>
-        <li>The decoding process accounts for different firmware and product versions. </li>
-        <li>Depending on the product version, additional measurement values such as CO₂, pressure, dew point, or wall moisture are processed.</li>
-        <li>The code is intended for use in LoRaWAN® applications and network servers.</li>
-    </ul>
+    <strong>Hinweis</strong>
+    <p>Hier finden Sie die Tabelle für eine übersichtliche Darstellung.</p>
 </div>
-<br><br>
-<div class="logo-block" style="margin-top:32px; text-align:left;">
-  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png"  alt="Supported radio technologies"  style="max-width:750px; height:auto;"
-    loading="lazy">
-    
-  <div class="logo-block" style="margin-top:32px; text-align:left;">
-  <img
-    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
-    alt="trash bin Logo"
-    style="max-width:340px; height:auto;"
-    loading="lazy"
-  >
+
+<h3>Modulschlüssel (module_key)</h3>
+
+<p>
+    <strong>Byte:</strong> 1-2<br>
+    <strong>Alias:</strong> Modulschlüssel<br>
+    <strong>Bezeichnung:</strong> module_key<br>
+    <strong>Gültig für Versionen:</strong> Alle, Basispayload, gültig und verfügbar für alle Sensoren der Febris‑Reihe
+</p>
+
+<p>
+    <strong>Beschreibung:</strong>
+</p>
+
+<p><strong>Byte 1</strong></p>
+
+<ul>
+    <li>
+        4 Bit MSB: Modulcode. Bei mioty nur Telemetriemodul „Sentiface“,
+        d. h. immer <span class="inline-code">0x1</span>.
+    </li>
+    <li>
+        4 Bit LSB: Hauptversion. Firmware mit gleicher Major-Version,
+        aber größerer Minor-Version bleiben mit älteren Decodern kompatibel.
+        Die Anzahl der Bytes kann sich jedoch ändern.
+    </li>
+</ul>
+
+<p><strong>Byte 2</strong></p>
+
+<ul>
+    <li>
+        4 Bit MSB: Nebenversion. Neue Softwareversionen können schrittweise
+        neue Telemetrie in das Datenpaket einfügen.
+    </li>
+    <li>
+        4 Bit LSB: Unter-/Produktversion. In Helios kodieren diese Bits die
+        spezifische Konfiguration der angeschlossenen Sensoren.
+    </li>
+</ul>
+
+<h3>Uplink Counter (uplink_counter)</h3>
+
+<p>
+    <strong>Byte:</strong> 3<br>
+    <strong>Alias:</strong> Uplink Counter<br>
+    <strong>Bezeichnung:</strong> uplink_counter<br>
+    <strong>Gültig für Versionen:</strong> Alle, Basispayload, gültig und verfügbar für alle Sensoren der Febris‑Reihe
+</p>
+
+<p>
+    <strong>Beschreibung:</strong>
+    Protokollunabhängiger Uplink-Zähler mit einem Maximalwert von
+    <span class="inline-code">255</span>. Anschließend beginnt der Zähler wieder bei
+    <span class="inline-code">0</span>.
+</p>
+
+<hr>
+<p><strong>Byte:</strong>&nbsp;4-5<br><strong>Alias:</strong>&nbsp;Battery Voltage<br><strong>Bezeichnung:</strong> &nbsp;battery_voltage<br><strong>Gültig für Versionen:</strong> Alle - Basispayload, gültig und verfügbar für alle Sensoren der Febris Reihe<br><strong>Beschreibung: </strong>Aktuelle Batteriespannung in Millivolt<br>//Spannung in Volt battery_voltage: (dataBytes[3] &lt;&lt; 8 | dataBytes[4])/1000.0,</p>
+<hr>
+<p><strong>Byte:</strong> 6-7<br><strong>Alias: </strong>Interne Temperatur<br><strong>Bezeichnung:</strong> &nbsp;internal_tempeterature<br><strong>Gültig für Versionen:</strong> Alle - Basispayload, gültig und verfügbar für alle Sensoren der Febris Reihe<br><strong>Beschreibung: </strong>Temperatur des Sensors: Internal_temperature = ((bytes[5] &lt;&lt; 8) | bytes[6]) / 10 - 100;</p>
+<hr>
+<p><strong>Byte:</strong> 8<br><strong>Alias:</strong> Rel. Luftfeuchtigkeit<br><strong>Bezeichnung:</strong> &nbsp;humidity<br><strong>Gültig für Versionen:</strong> Alle - Basispayload, gültig und verfügbar für alle Sensoren der Febris Reihe<br><strong>Beschreibung: </strong>Rel. Luftfeuchtigkeit in %</p>
+<hr>
+<p><strong>Byte:</strong> 9-10<br><strong>Alias:</strong> Taupunkt<br><strong>Bezeichnung:</strong> &nbsp;dewpoint<br><strong>Gültig für Versionen:</strong> Alle - Basispayload, gültig und verfügbar für alle Sensoren der Reihe Febris<br><strong>Beschreibung: </strong>Taupunkt in °C</p>
+<hr>
+<div class="hs-callout-type-note" data-hs-callout-type="note">
+<p><strong>Für Versionen: S-FEBR-XXXX-CO2-XXX</strong></p>
 </div>
+<hr>
+<p><strong>Byte: </strong>11-12<br><strong>Alias:</strong> Luftdruck<br><strong>Bezeichnung:</strong> &nbsp;pressure<br><strong>Gültig für Versionen:</strong> S-FEBR-XXXX-CO2-XXX<br><strong>Beschreibung: </strong>Luftdruck in hPa</p>
+<hr>
+<p><strong>Byte:</strong> 13-14<br><strong>Alias:</strong> CO2<br><strong>Bezeichnung: </strong>co2_ppm<br><strong>Gültig für Versionen:</strong> S-FEBR-XXXX-CO2-XXX<br><strong>Beschreibung: </strong>CO2 Wert in pp<strong><br></strong></p>
+<hr>
+<p><strong>Byte:</strong>&nbsp;15<br><strong>Alias:</strong> Alarm<br><strong>Bezeichnung:</strong> alarm<br><strong>Gültig für Versionen:</strong> S-FEBR-XXXX-CO2-XXX<br><strong>Beschreibung: </strong>Alarm Variable:<br>• 0: 0-1000ppm (grün)<br>• 1: 1000 - 2000ppm (gelb)<br>• 2: 2000 - 5000ppm (rot)<br>Analog zur Ampel, Grenzen einstellbar</p>
+<hr>
+<h3>&nbsp;</h3>
+
 <!-- FOOTER -->
+
 </div>
 <div class="footer-note">
-  
-<p>© Sentinum GmbH – All rights reserved.</p>
-  <p>All content in this document, including text, tables, and images, is protected by copyright and is the property of Sentinum GmbH.</p>
-  <p>All images are subject to the copyright of Sentinum GmbH, unless otherwise stated.</p>
-  
-<p>Reproduction, distribution, or use—even in part—is not permitted without express written permission.</p>
+  <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+  <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
   <p style="padding-left:14px; font-style:italic;">
-    Specifications are subject to change. All information is provided without warranty.
+    Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
   </p>
 </div>
- 
+
+  
 </body></html>
