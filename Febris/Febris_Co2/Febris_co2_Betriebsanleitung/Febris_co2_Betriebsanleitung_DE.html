@@ -1,0 +1,971 @@
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+    code,
+    .inline-code {
+        background-color: #f3f4f6;
+        border: 1px solid #d0d7de;
+        border-radius: 4px;
+        padding: 2px 6px;
+        font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 0.9em;
+        color: #111827;
+        display: inline-block;
+    }
+
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+</style>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Febris_2-2.png?width=688&height=387&name=Febris_2-2.png"
+        alt="Febris Symbole und Erklärungen"
+        loading="lazy">
+    <figcaption>
+        Abbildung 1. Febris Co2 Sensor </figcaption></figure>
+        
+        
+    <div class="main-toc">
+    <strong>Inhaltsverzeichnis</strong>
+
+    <ol>
+        <li>Sicherheitshinweise</li>     
+        <li>Weiterführende Dokumente</li>
+        <li>Verwendungszweck</li>
+        <li>Technische Zeichnung</li>
+        <li>Empfohlene Montagearten</li>
+        <li>Voreinstellungen und Grenzwerte</li>
+        <li>Montage und Vorbereitung</li>
+        <li>Wandmontage mit Schrauben</li>
+        <li>Magnetmontage</li>
+        <li>Inbetriebnahme des Sensors</li>
+        <li><a href="#nfc">NFC-Parametrisierung und Lage des NFC-Tags</a></li>
+        <li>Batterietausch</li>
+        <li><a href="#zertifizierung">Kennzeichnungizierung</a></li>
+    </ol>
+</div>
+    
+        
+
+<div class="note-strip note-strip--red">
+    <strong>Warnung</strong>
+    <p>
+        Warnungen und wichtige Informationen über potenzielle Gefahren,
+        Fehlfunktionen oder mögliche Beschädigungen.
+    </p>
+</div>
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+    <p>
+        Wichtige Informationen für den ordnungsgemäßen Betrieb,
+        die Konfiguration und die Installation des Geräts.
+    </p>
+</div>
+<div class="note-strip note-strip--yellow">
+    <strong>Vorischt</strong>
+    <p>
+        Wichtige Hinweise für einen sicheren und reibungslosen Betrieb
+        der Geräte.
+    </p>
+</div>
+
+
+
+
+<h3>1. Sicherheitshinweise</h3>
+
+<div class="note-strip note-strip--red">
+    <span class="note-strip-title"><strong>Warnung</strong></span>
+
+    <ul>
+        <li>Beachten Sie die Sicherheitshinweise und Installationsanweisungen in der Anleitung und der Montageliste.</li>
+        <li>Beachten Sie, dass die Installationsumgebung den vorgeschriebenen Einsatzbereichsrichtlinien entspricht. Halten Sie Temperatur- und andere Grenzwerte jederzeit ein.</li>
+        <li>Das Gerät darf nur in den in den technischen Spezifikationen vorgegebenen Bereichen eingesetzt werden.</li>
+        <li>Das Gerät darf nur für den beschriebenen Einsatzzweck verwendet werden.</li>
+        <li>Die Sicherheit und Funktionsfähigkeit kann nicht mehr garantiert werden, wenn das Gerät modifiziert oder erweitert wird.</li>
+        <li>
+            Der Zweck des Sensors ist das Monitoring der Luftqualität in Innenräumen.
+            <ul>
+                <li><strong>Benutzen Sie den Sensor nicht in sicherheitskritischen Anwendungen.</strong></li>
+                <li><strong>Der Sensor ist ausdrücklich nicht zur Überwachung von Kohlenstoffmonoxid (CO) geeignet.</strong></li>
+                <li><strong>Der Sensor ist kein Rauchmelder.</strong></li>
+            </ul>
+        </li>
+        <li>Der Sensor darf nicht an Decken oder Böden montiert werden.</li>
+        <li>Der Betrieb des Sensors ist nur bis maximal 2000 m über Normalnull zugelassen.</li>
+        <li>Aufgrund der Human-Exposure-Vorschrift ist ein Mindestabstand von 20 cm zwischen Gerät und Personen einzuhalten.</li>
+    </ul>
+</div>
+
+<div class="note-strip note-strip--red">
+    <span class="note-strip-title"><strong>Warnung</strong></span>
+
+    <p>Falls das Gerät inkorrekt installiert wird:</p>
+
+    <ul>
+        <li>kann es nicht ordnungsgemäß funktionieren.</li>
+        <li>kann es dauerhaft beschädigt werden.</li>
+        <li>kann eine Verletzungsgefahr entstehen.</li>
+    </ul>
+</div>
+
+<div class="note-strip note-strip--red">
+    <span class="note-strip-title"><strong>Warnung</strong></span>
+
+    <ul>
+        <li>
+            Eine unsachgemäße Handhabung, beispielsweise durch starke
+            mechanische Belastung oder das Fallenlassen des Geräts,
+            kann zu Beschädigungen führen.
+        </li>
+    </ul>
+</div>
+
+<div class="note-strip note-strip--red">
+    <span class="note-strip-title"><strong>Warnung CO₂-Sensor</strong></span>
+
+    <ul>
+        <li>
+            Das CO₂-Messmodul ist besonders empfindlich gegenüber mechanischer
+            Belastung. Ein Fall, auch aus geringer Höhe, sowie Stöße und
+            Schläge können das Gerät beschädigen und zu Fehlmessungen führen.
+        </li>
+    </ul>
+</div>
+
+<h3>2. Weiterführende Dokumentation</h3>
+
+<p>
+    Bitte beachten Sie die Informationen und Grenzwerte im
+    <a href="https://docs.sentinum.de/febris-co2-technisches-datenblatt?hsLang=de"
+       target="_blank"
+       rel="noopener">
+        technischen Datenblatt
+    </a>.
+</p>
+
+<h3>3. Verwendungszweck</h3>
+
+<p>
+    Der Febris <strong>IoT Indoor-Luftqualitäts-CO₂-Sensor</strong> ist ideal für die Überwachung der Luftqualität in Innenräumen wie Büros, Konferenzräumen, Geschäften oder öffentlichen Einrichtungen. Er misst den CO₂-Gehalt und liefert so wichtige Daten über die Luftqualität und das Raumklima. Diese Informationen können genutzt werden, um:
+</p>
+
+
+
+<ol>
+<li>
+<p><strong>Gesunde Raumluft sicherzustellen</strong>: Ein zu hoher CO₂-Wert kann zu Müdigkeit, Konzentrationsschwierigkeiten und Unwohlsein führen. Der Sensor ermöglicht die Überwachung der CO₂-Konzentration und zeigt, wann gelüftet oder die Klimaanlage eingeschaltet werden sollte, um eine gute Luftqualität sicherzustellen.</p>
+</li>
+<li>
+<p><strong>Energieeffizienz zu verbessern</strong>: Durch die Daten des Sensors kann die Lüftung bedarfsgerecht gesteuert werden. Anstatt eine konstante Frischluftzufuhr zu gewährleisten (die Energie verbraucht), kann eine Lüftung nur dann aktiviert werden, wenn sie wirklich notwendig ist. Das spart Energie und senkt die Kosten.</p>
+</li>
+<li>
+<p><strong>Bedingungen für hohe Produktivität zu schaffen</strong>: Eine gute Luftqualität ist entscheidend für die Konzentration und das Wohlbefinden. Der Sensor hilft, optimale Bedingungen zu gewährleisten, was in Umgebungen wie Büros oder Klassenzimmern die Produktivität und das allgemeine Wohlbefinden fördert.</p>
+</li>
+<li>
+<p><strong>Regulatorische Anforderungen zu erfüllen</strong>: In einigen Ländern gibt es Vorschriften oder Empfehlungen zur maximalen CO₂-Belastung in öffentlichen Gebäuden oder Arbeitsräumen. Ein CO₂-Sensor unterstützt die Einhaltung dieser Standards und zeigt transparent, dass Maßnahmen zum Schutz der Gesundheit und des Komforts der Anwesenden ergriffen werden.</p>
+</li>
+<li>
+<p><strong>Benachrichtigungen in Echtzeit zu ermöglichen</strong>: Mit dem Ferbis CO2 Sensor lassen sich Messwerte auch über weite Strecken hinweg auslesen. So kann das Gebäudemanagement sofort benachrichtigt werden, wenn kritische CO₂-Werte erreicht werden, und bei Bedarf eingreifen.</p>
+</li>
+</ol>
+
+<h3>4. Technische Zeichnung</h3>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(1)-1.png?width=688&amp;height=487&amp;name=Untitled%20(1)-1.png" alt="Technische Zeichnung Febris CO₂"
+        loading="lazy">
+
+    <figcaption>
+        Abbildung 2. Technische Zeichnung des Febris CO₂ Sensors.
+    </figcaption>
+</figure>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(2)-1.png?width=688&amp;height=390&amp;name=Untitled%20(2)-1.png"
+        loading="lazy">
+
+    <figcaption>
+        Abbildung 3. Febris CO₂ Sensors beschrifteter Aufbau.
+    </figcaption>
+</figure>
+
+
+
+<h3>5. Empfohlene Montagearten</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Art</th>
+                <th>Empfohlenes Zubehör</th>
+                <th>Artikelnummer Sentinum</th>
+                <th>Hersteller</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Schrauben (Wand)</td>
+                <td>Dübel 3er, SPAX 3 mm</td>
+                <td><span class="inline-code">Z-FEBR-SPAX</span></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Magnete</td>
+                <td>Neodym-Magnete mit M4-Innengewinde</td>
+                <td><span class="inline-code">Z-FEBR-MAG-NEO</span></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Kleben</td>
+                <td>Doppelseitiges Klebeband</td>
+                <td><span class="inline-code">Z-FEBR-STRIPE</span></td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>6. Voreinstellungen und Grenzwerte</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Grenzwerte</th>
+                <th>Verhalten LED</th>
+                <th>Verhalten Buzzer bei Grenzwertübertritt</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0 bis 1000 ppm</td>
+                <td>LED grün (Green)</td>
+                <td>
+                    Zwei Töne, erster hoch, zweiter niedrig. Der Signalton ertönt,
+                    wenn in den grünen Zustand gewechselt wird, beispielsweise von
+                    1200 ppm auf 800 ppm.
+                </td>
+            </tr>
+            <tr>
+                <td>1000 bis 2000 ppm</td>
+                <td>LED orange (Amber)</td>
+                <td>
+                    Zwei Töne, erster niedrig, zweiter hoch. Der Signalton ertönt,
+                    wenn in den orangenen Zustand gewechselt wird, beispielsweise von
+                    800 ppm auf 1200 ppm oder von 2200 ppm auf 1800 ppm.
+                </td>
+            </tr>
+            <tr>
+                <td>&gt; 2000 ppm</td>
+                <td>LED rot (Red)</td>
+                <td>
+                    Sirenenartiger Doppeltriller. Das Signal ertönt beim Wechsel in
+                    den roten Zustand, beispielsweise von 1800 ppm auf 2200 ppm.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>7. Montage und Vorbereitung</h3>
+
+<div class="note-strip note-strip--blue">
+    <span class="note-strip-title">Hinweis</span>
+
+    <p>
+        Falls der Sensor auch nach der Montage gut zugänglich ist,
+        montieren Sie zuerst den Sensor und aktivieren Sie ihn anschließend.
+    </p>
+
+    <p>
+        Falls der Sensor nach der Montage nicht mehr zugänglich ist,
+        aktivieren Sie zuerst den Sensor und montieren Sie ihn anschließend.
+    </p>
+</div>
+
+<div class="note-strip note-strip--yellow">
+    <span class="note-strip-title">Vorsicht</span>
+
+    <ul>
+        <li>
+            Stellen Sie vor der Montage sicher, dass die Oberfläche, auf der der
+            Sensor montiert werden soll, eben ist, da es andernfalls zu einer
+            Beschädigung des Gehäuses kommen kann.
+        </li>
+        <li>
+            Führen Sie keine Gegenstände oder Körperteile in die
+            Lüftungsschlitze des Sensors ein.
+        </li>
+        <li>
+            Montieren Sie den Sensor nicht an der Decke oder am Boden.
+        </li>
+        <li>
+            Montieren Sie den Sensor nicht in Höhen über zwei Metern.
+        </li>
+    </ul>
+</div>
+
+<p>
+    Der vorgesehene Montageort für den Sensor befindet sich in gewöhnlichen
+    Innenräumen an einer Wand in einer Höhe von 1,50 m bis 1,80 m.
+    Verwenden Sie den Sensor ausschließlich in Innenräumen und nicht im
+    Außenbereich. Achten Sie bei der Montage darauf, dass sich die LEDs auf
+    der rechten unteren Seite befinden.
+</p>
+
+<h3>8. Wandmontage mit Schrauben</h3>
+
+
+
+<ol>
+    <li>
+        Öffnen Sie das Gehäuse am Schnappverschluss (siehe Pfeil) und nehmen
+        Sie die Oberseite ab. In der Oberseite ist die PCB verschraubt.
+    </li>
+
+
+    <li>
+        In Schritt zwei sehen Sie die Unterseite des Sensors. Für die
+        Wandmontage bohren Sie Löcher in die Wand und befestigen geeignete
+        Dübel. Empfohlen werden M3,5-Schrauben nach DIN 7997.
+
+       <li>Falls Sie den Sensor auf Holz befestigen, können die Schrauben direkt
+        in das Holz geschraubt werden. Nachdem die Dübel befestigt wurden,
+        führen Sie die Schrauben durch die vorgesehenen Öffnungen der
+        Gehäuserückwand. Alternativ können die beiden äußeren Befestigungsösen</li> 
+        verwendet werden.
+
+       <li> Befestigen Sie anschließend die Unterseite des Gehäuses am gewünschten
+        Montageort. Bei anderen Befestigungsarten können auch DIN-7991-Schrauben
+        verwendet werden.
+    </li>
+</ol>
+
+<figure class="figure">
+   <img scr="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(3)-1.png?width=381&amp;height=313&amp;name=Untitled%20(3)-1.png" loading="lazy"  style="max-width:500px; width:100%; height:auto;">
+    <figcaption>
+        Schritt 1: Öffnen des Gehäuses am Schnappverschluss.
+    </figcaption>
+</figure>
+
+<figure class="figure">
+  <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(4)-1.png?width=415&amp;height=578&amp;name=Untitled%20(4)-1.png" loading="lazy"  style="max-width:500px; width:100%; height:auto;">
+
+    <figcaption>
+        Schritt 2: Montage der Gehäuserückwand.
+    </figcaption>
+</figure>
+
+<ol start="3">
+    <li>
+        Setzen Sie die Oberseite des Sensors auf die befestigte Unterseite.
+        Achten Sie darauf, dass der Schnappverschluss hörbar einrastet und die
+        korrekte Montagerichtung eingehalten wird.
+    </li>
+</ol>
+
+
+<h3>9. Magnetmontage</h3>
+<div class="note-strip note-strip--red">
+<span class="note-strip-title"><strong>Warnung</strong></span>
+<p>Dauermagnete können starke Magnetfelder erzeugen, die bei unsachgemäßer Handhabung gefährlich sein können. Beachten Sie daher folgende Warnhinweise:</p>
+<ol>
+<li>
+<p><strong>Hände und Finger schützen</strong>: Starke Magnete können sich schlagartig anziehen und Finger oder Haut einklemmen. Dies kann zu schmerzhaften Quetschungen und Verletzungen führen. Halten Sie beim Umgang mit Dauermagneten immer ausreichend Abstand und tragen Sie bei Bedarf Schutzhandschuhe.</p>
+</li>
+<li>
+<p><strong>Elektronische Geräte fernhalten</strong>: Magnetfelder können elektronische Geräte wie Computer, Smartphones, Kreditkarten, Herzschrittmacher und andere empfindliche Elektronik beschädigen oder ihre Funktion beeinträchtigen. Halten Sie daher immer ausreichend Abstand zu solchen Geräten.</p>
+</li>
+<li>
+<p><strong>Bruchgefahr beachten</strong>: Viele Dauermagnete bestehen aus spröden Materialien (z. B. Neodym), die bei plötzlichen Stößen oder hoher Belastung brechen können. Die Splitter können scharf sein und Verletzungen verursachen. Verwenden Sie die Magnete daher vorsichtig und vermeiden Sie Schläge oder zu hohe Belastungen.</p>
+</li>
+<li>
+<p><strong>Gesundheitliche Risiken</strong>: Menschen mit Herzschrittmachern oder anderen implantierten medizinischen Geräten sollten den Kontakt mit starken Magneten vermeiden, da die Magnetfelder diese Geräte stören oder deaktivieren können. Konsultieren Sie vor der Nutzung gegebenenfalls einen Arzt.</p>
+</li>
+<li>
+<p><strong>Magnete sicher lagern</strong>: Bewahren Sie Magnete in einem sicheren Abstand voneinander und von anderen metallischen Gegenständen auf. Ein plötzliches Anziehen kann zu Beschädigungen, Verletzungen oder unkontrollierbarem Herumfliegen der Gegenstände führen.</p>
+</li>
+<li>
+<p><strong>Gefahr für Kinder</strong>: Dauermagnete sind kein Spielzeug! Besonders kleine Magnete können beim Verschlucken oder Einatmen lebensgefährlich sein und zu schweren inneren Verletzungen führen. Bewahren Sie Magnete daher stets außerhalb der Reichweite von Kindern auf.</p>
+</li>
+<li>
+<p><strong>Erwärmung vermeiden</strong>: Dauermagnete verlieren bei Temperaturen über ihrer maximalen Betriebstemperatur (je nach Material zwischen 80 und 200 °C) dauerhaft ihre Magnetkraft. Setzen Sie Magnete daher keiner direkten Hitze oder offenen Flammen aus.</p>
+</li>
+</ol>
+</div>
+
+
+
+
+<figure class="figure">
+   <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/c339d75609eb22c9cdfa2b456c1e0dffd66ae307/Febris/Febris_Co2/Febris_co2_Betriebsanleitung/Untitled%20(5)-1.webp" loading="lazy"  style="max-width:500px; width:100%; height:auto;">
+    <figcaption>
+        Schritt 3: Vorgesehene Schrauben mit den Magneten verbinden.
+    </figcaption>
+</figure>
+
+
+<figure class="figure">
+   <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/c339d75609eb22c9cdfa2b456c1e0dffd66ae307/Febris/Febris_Co2/Febris_co2_Betriebsanleitung/Untitled%20(6).webp" loading="lazy"  style="max-width:500px; width:100%; height:auto;">
+    <figcaption>
+        Schritt 4: Oberseite des Sensors auf die befestigte Unterseite setzen.
+    </figcaption>
+</figure>
+
+<ol>
+<li>Öffnen Sie das Gehäuse am Schnappverschluss (siehe Pfeil) und nehmen Sie die Oberseite ab. In der Oberseite ist die PCB verschraubt.</li>
+<li>Führen Sie die dafür vorgesehenen Schrauben in die Löcher ein und verbinden diese mit den Magneten.</li>
+
+
+
+
+<li>Setzen Sie die Oberseite des Sensors auf die befestigte Unterseite. Achten Sie darauf, dass der Schnappverschluss einrastet. Achten Sie auf die korrekte Montagerichtung.</li></ol>
+
+
+<h3>10. Inbetriebnahme des Sensors</h3>
+
+<div class="note-strip note-strip--red">
+    <strong>Warnung</strong>
+    <p>
+         Bitte beachten Sie, dass bei der Nutzung von Messern oder anderen
+        spitzen Gegenständen das Gehäuse oder die Elektronik beschädigt werden kann.
+    </p>
+</div>
+
+<ol>
+    <li>
+        Öffnen Sie den Sensor an der dafür vorgesehenen Lasche
+        (siehe Abbildung an der Unterseite). Verwenden Sie bei Bedarf vorsichtig
+        einen stumpfen Gegenstand.
+    </li>
+</ol>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(16).png?width=688&height=771&name=Untitled%20(16).png" loading="lazy"  style="max-width:500px; width:100%; height:auto;"
+        >   <figcaption>
+        Schritt 1: Sensor vorsichtig an der vorgesehenen Lasche öffnen.
+    </figcaption>
+</figure>
+
+<ol start="2">
+    <li>
+        Legen Sie anschließend die Batterien ein. Um die angegebenen
+        Laufzeiten und die spezifizierte Performance zu erreichen,
+        dürfen ausschließlich die folgenden Primärzellen verwendet werden.
+    </li>
+</ol>
+
+<h4>LoRaWAN®- und mioty®-Varianten</h4>
+
+<ul>
+    <li><strong>Energizer® Ultimate Lithium AA</strong></li>
+    <li><strong>VARTA ULTRA LITHIUM Mignon AA</strong></li>
+</ul>
+
+<h4>Cellular-Varianten (NB-IoT)</h4>
+
+<ul>
+    <li><strong>Energizer® Ultimate Lithium AA</strong></li>
+    <li><strong>VARTA ULTRA LITHIUM Mignon AA</strong></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+<p>
+    Es werden jeweils 4 Batteriezellen pro Sensor benötigt.
+</p>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(17).png?width=688&amp;height=451&amp;name=Untitled%20(17).png"
+         loading="lazy">
+
+    <figcaption>
+        Schritt 2: Einsetzen der Batteriezellen.
+    </figcaption>
+</figure>
+
+<ol start="3">
+    <li>
+        Jetzt ist der Sensor geöffnet. Falls Sie einen NB-IoT Sensor besitzen und Sie eine eigene SIM Karte einlegen wollen, legen Sie jetzt die SIM Karte ein.
+    </li>
+</ol>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(18).png?width=688&amp;height=298&amp;name=Untitled%20(18).png" loading="lazy">
+
+    <figcaption>
+        Schritt 3: Position des SIM-Karten-Slots.
+    </figcaption>
+</figure>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(20).png?width=688&amp;height=414&amp;name=Untitled%20(20).png"
+         alt="Einsetzen der SIM-Karte"
+         loading="lazy">
+
+    <figcaption>
+        Schritt 4: Einsetzen der SIM-Karte.
+    </figcaption>
+</figure>
+
+<ol start="4">
+    <li>
+       Ist der Sensor jetzt geöffnet, betätigen Sie den Schalter, um das Gerät in Betrieb zu nehmen. Nach Umlegen des Schalters startet der Sensor, die 3 LEDs auf der Vorderseite blinken auf und es ist eine Tonfolge zu hören. Danach führt der Sensor eine Messung durch. Die LED Ampel zeigt Ihnen das Ergebnis.
+    </li>
+</ol>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(21).png?width=688&amp;height=290&amp;name=Untitled%20(21).png"
+         alt="Aktivierung des Sensors"
+         loading="lazy">
+
+    <figcaption>
+        Schritt 5: Aktivierung des Sensors über den Geräteschalter.
+    </figcaption>
+</figure>
+
+
+
+
+
+
+
+<h3>11. NFC-Parametrisierung und Lage des NFC-Tags</h3>
+
+<ol>
+    <li>
+        Die Aktivierung erfolgt über die Sentinum LinQs App. Dazu wird ein
+        NFC-fähiges Smartphone benötigt. Suchen Sie im jeweiligen App Store
+        nach <strong>„Sentinum LinQs“</strong> und installieren Sie die App.
+    </li>
+</ol>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(73).png?width=688&amp;height=331&amp;name=Untitled%20(73).png"
+alt="LinQs App"
+        loading="lazy">
+    <figcaption>
+        Schritt 1: Sentinum LinQs App installieren.
+    </figcaption>
+</figure>
+
+<ol start="2">
+    <li>
+        Lokalisieren Sie zuerst den Tag auf dem Sensor und dann den Reader an Ihrem Endgerät. Die Lage des NFC Tags finden Sie den folgenden beispielhaften Bildern.
+    </li>
+</ol>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(23).png?width=489&amp;height=484&amp;name=Untitled%20(23).png"
+        alt="Position des NFC-t 2: Lage des NFC-Tags am Sensor.">
+    <figcaption>Schritt 2: Scannen und der Anleitung folgen.</figcaption>
+</figure>
+<h3>12. Batterietausch</h3>
+
+<div class="note-strip note-strip--yellow">
+    <span class="note-strip-title">Vorsicht</span>
+
+    <p>
+        Bitte beachten Sie, dass bei der Verwendung von Messern oder anderen
+        spitzen Gegenständen Beschädigungen am Gehäuse oder an der Elektronik
+        entstehen können.
+    </p>
+</div>
+
+<ol>
+    <li>
+        Öffnen Sie den Sensor an der dafür vorgesehenen Lasche an der
+        Gehäuseunterkante. Verwenden Sie bei Bedarf vorsichtig einen stumpfen
+        Gegenstand.
+ 
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(16).png?width=306&amp;height=343&amp;name=Untitled%20(16).png"
+        alt="Position des NFC-t 2: Lage des NFC-Tags am Sensor.">
+    <figcaption>Abbildung 4. Batteriewechsel an der Febrisrückseite</figcaption>
+</figure>
+
+
+
+
+<li>
+    Nehmen Sie die Batterien vorsichtig aus dem dafür vorgesehenen Halter und
+    setzen Sie die neuen Batterien ein. Um die angegebenen Laufzeiten sowie die
+    spezifizierte Performance zu erreichen, dürfen ausschließlich die folgenden
+    Primärzellen verwendet werden:
+
+    <strong>Für LoRaWAN®- und mioty®-Sensoren:</strong>
+
+    <ul>
+        <li><strong>Energizer® Ultimate Lithium AA</strong></li>
+        <li><strong>VARTA ULTRA LITHIUM Mignon AA</strong></li>
+    </ul>
+</li></ol>
+
+
+
+<li>
+    Es werden jeweils vier Batterien pro Sensor benötigt.
+</li>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(17).png?width=688&amp;height=451&amp;name=Untitled%20(17).png"
+        alt="Einsetzen der Batterienazy">
+    <figcaption>
+        Abbildung 5. Vier Batterien gemäß der vorgegebenen Polarität einsetzen.
+    </figcaption>
+</figure>
+
+<div class="note-strip note-strip--red">
+    <p>
+         Werden andere als die empfohlenen Batterien verwendet, können
+        Leistung, Laufzeit und Produktsicherheit negativ beeinflusst werden.
+    </p>
+</div>
+
+<h3>13. Kennzeichnung und Zertifizierung</h3>
+<br><br>
+
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png"  alt="Supported radio technologies"  style="max-width:750px; height:auto;"
+    loading="lazy">
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
+    alt="trash bin Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
+</div>
+     
+<!-- FOOTER -->
+
+</div>
+<div class="footer-note">
+  <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+  <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
+  </p>
+</div>
+  
+</body></html>
