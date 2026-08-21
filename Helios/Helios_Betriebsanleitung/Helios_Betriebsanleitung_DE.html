@@ -1,0 +1,803 @@
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+    code,
+    .inline-code {
+        background-color: #f3f4f6;
+        border: 1px solid #d0d7de;
+        border-radius: 4px;
+        padding: 2px 6px;
+        font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 0.9em;
+        color: #111827;
+        display: inline-block;
+    }
+
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+</style>
+
+
+
+
+<div class="main-toc">
+    <strong>Inhaltsverzeichnis</strong>
+
+    <ol>
+        <li>Symbole und Erklärungen</li>
+        <li>Sicherheitshinweise</li>
+        <li>Technische Zeichnung</li>
+        <li>Montage und Vorbereitung</li>
+        <li>Montagezubehör</li>
+        <li>Empfohlene Montagearten</li>
+        <li>NFC Inbetriebnahme und Lage des NFC-Tags</li>
+        <li>Inbetriebnahme ohne mobiles Endgerät</li>
+        <li>Batterietausch</li>
+    </ol>
+</div>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Helios_5-1.png?width=688&height=387&name=Helios_5-1.png"
+        alt="Helios-P Drucksensor"
+        loading="lazy"
+        style="max-width:688px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Abbildung 1. Helios-P Frontansicht</figcaption></figure>
+        
+        
+<h3>
+1. Symbole und Erklärungen
+</h3>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Warnung</strong>
+
+    <p style="margin-bottom:0;">
+        Warnungen und wichtige Informationen über potenzielle Gefahren
+        oder mögliche Beschädigungen.
+    </p>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Wichtige Hinweise, die für den reibungslosen Betrieb der Geräte
+        erforderlich sind.
+    </p>
+</div>
+
+<h3>
+2. Sicherheitshinweise
+</h3>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Bitte beachten</strong>
+
+    <ul>
+        <li>Beachten Sie die Sicherheitshinweise und Installationsanweisungen in der Anleitung und der Montageliste.</li>
+        <li>Beachten Sie, dass die Installationsumgebung den vorgeschriebenen Einsatzbereichsrichtlinien entspricht. Halten Sie Temperatur- und andere Grenzwerte jederzeit ein.</li>
+        <li>Das Gerät darf nur in den durch die technischen Spezifikationen vorgegebenen Bereichen eingesetzt werden.</li>
+        <li>Das Gerät darf nur für den beschriebenen Einsatzzweck verwendet werden.</li>
+        <li>Die Sicherheit und Funktionsfähigkeit kann nicht mehr garantiert werden, wenn das Gerät modifiziert oder erweitert wird.</li>
+    </ul>
+</div>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Falls das Gerät inkorrekt installiert wird</strong>
+
+    <ul>
+        <li>Könnte es nicht ordnungsgemäß funktionieren.</li>
+        <li>Könnte es permanent beschädigt werden.</li>
+        <li>Könnte es eine Verletzungsgefahr darstellen.</li>
+    </ul>
+</div>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Bitte beachten</strong>
+
+    <ul>
+        <li>Eine unsachgemäße Handhabung, beispielsweise durch unsachgemäße mechanische Belastung oder durch Fallenlassen des Geräts, kann zu Beschädigungen führen.</li>
+    </ul>
+</div>
+
+<li>Je nach Ausführung des Sensors und jeweiliger Variante kann die Antenne und die Ausgänge für die Sensoren entweder auf der langen oder kurzen Seite liegen.</li>
+
+
+<h3>3. Technische Zeichnung</h3>
+
+<figure class="figure">
+    <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/fd29623d1eb4b35107b2f9a939e0be36bf6a1329/Helios/Helios_Betriebsanleitung/Helios_120.80.45_Blank_Zeichnung_Betriebsanleitung_d%C3%BCnn-1.png" alt="Technische Zeichnung Helios" loading="lazy"
+style="max-width:688px; width:100%; height:auto;">
+<figcaption>
+Abbildung 2. Technische Zeichnung Helios
+</figcaption>
+</figure>
+
+
+<h3>4. Montage und Vorbereitung</h3>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p>
+        Falls der Sensor auch nach der Montage gut zugänglich ist,
+        montieren Sie zunächst den Sensor und aktivieren Sie ihn
+        erst nach der Montage.
+    </p>
+
+    <p style="margin-bottom:0;">
+        Falls der Sensor nach der Montage nicht mehr zugänglich ist,
+        aktivieren Sie zunächst den Sensor und montieren Sie ihn
+        anschließend.
+    </p>
+</div>
+
+<ol>
+    <li>
+        Falls Sie ein Gerät mit externer Antenne bestellt haben,
+        das am goldfarbenen RP-SMA-Anschluss zu erkennen ist,
+        montieren Sie zunächst die im Lieferumfang enthaltene Antenne.
+    </li>
+
+    <li>
+        Der Sensor kann sowohl horizontal als auch vertikal montiert
+        werden. Nutzen Sie zur Wand- oder Magnetmontage die dafür
+        vorgesehenen Befestigungslöcher in den seitlichen Laschen
+        des Gehäuses.
+
+        <figure class="figure">
+            <img
+                src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(32).png?width=688&amp;height=384&amp;name=Untitled%20(32).png"
+                loading="lazy"
+                style="max-width:688px; width:100%; height:auto;"
+            >
+            <figcaption>
+                Abbildung 3. Mögliche Montagepositionen des Sensors
+            </figcaption>
+        </figure>
+    </li>
+
+    <li>
+        Je nach Sensorausführung und Variante können sich Antenne
+        sowie Sensoranschlüsse auf der langen oder kurzen Seite
+        des Gehäuses befinden.
+    </li>
+</ol>
+
+
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Externe Antenne: Bitte beachten Sie, dass die Antenne stets
+        vertikal angebracht sein muss und die Spitze in Richtung der
+        Decke zeigt. Kippen Sie die Antenne am Gelenk so, dass sie
+        immer senkrecht ausgerichtet ist. Die externe Antenne befindet
+        sich in der Regel auf der langen Seite des Gehäuses.
+        Die Antenne sollte einen Mindestabstand von 2 cm zu
+        Metallflächen einhalten. Achten Sie darauf, dass die Antenne
+        nicht von umliegenden Metallteilen abgeschirmt wird, soweit die
+        Anwendung dies zulässt.
+    </p>
+
+    <p style="margin-bottom:0;">
+        Interne Antenne: Sollte Ihr Gerät über eine interne Antenne
+        verfügen (keine externe Antenne sichtbar), ist der Helios
+        Sensor immer mit der langen Seite vertikal anzubringen, da so
+        die maximale Signalstärke erreicht werden kann. Die Antenne
+        befindet sich an der Unterseite (gegenüber der Logoseite) des
+        Gehäuses und sollte ebenfalls einen Mindestabstand von 2 cm zu
+        Metallflächen haben. Achten Sie darauf, dass die Antenne nicht
+        von umliegenden Metallteilen abgeschirmt wird, soweit dies die
+        Anwendung zulässt.
+    </p>
+</div>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Wichtig</strong>
+
+    <p style="margin-bottom:0;">
+        Sollten Sie ein Gerät mit externer Antenne besitzen, darf das
+        Gerät niemals ohne angeschlossene Antenne betrieben werden.
+        Andernfalls kann der Sensor irreparabel beschädigt werden.
+    </p>
+</div>
+
+<h3>
+5. Montagezubehör
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Art. Nummer</th>
+                <th>Empfohlenes Zubehör</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Z-MAG-NEO-M4</td>
+                <td>2 Mal Neodymtopfmagnet, Haftkraft 32 kg inkl. 2 Schrauben</td>
+            </tr>
+
+            <tr>
+                <td>Z-HS-4</td>
+                <td>Paar 4 mm Holzschrauben mit Dübel</td>
+            </tr>
+
+            <tr>
+                <td>Z-HS-5</td>
+                <td>Paar 5 mm Holzschrauben mit Dübel</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h3>
+6. Empfohlene Montagearten
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Art</th>
+                <th>Empfohlenes Zubehör</th>
+                <th>Artikelnummer Sentinum</th>
+                <th>Hersteller</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Schrauben (Wand)</td>
+                <td>
+                    DIN912 Zylinderkopfschrauben oder Holzschrauben je
+                    nach Material mit Dübel.
+
+                    Zulässige Größen:
+                    <ul>
+                        <li>DIN Schrauben M4 oder M5</li>
+                        <li>Holzschrauben 4 mm bis 5 mm</li>
+                    </ul>
+                </td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Magnete</td>
+                <td>Nedoym Magnete M4 Innengewinde</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Kleben</td>
+                <td>Doppelseitiges Klebeband</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+<h3>7. NFC Inbetriebnahme und Lage des NFC-Tags</h3>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Zum Einstellen von Parametern kann die NFC-App LinQs genutzt
+        werden. Bitte stellen Sie sicher, dass Sie wissen, wo sich der
+        NFC-Reader Ihres Mobilgeräts befindet. Je nach Hersteller und
+        Modell kann sich dieser im oberen, mittleren oder unteren Bereich
+        der Geräte­rückseite befinden. Um den NFC-Tag zu lokalisieren,
+        wählen Sie in der App beispielsweise „Read“ und bewegen Sie das
+        Smartphone langsam entlang des Sensors.
+    </p>
+</div>
+
+<ol>
+    <li>
+        Die Aktivierung erfolgt über eine NFC-App. Dazu wird ein
+        Smartphone benötigt. Die App kann in den jeweiligen App Stores
+        heruntergeladen werden. Suchen Sie dazu einfach nach
+        <strong>Sentinum LinQs</strong> und laden Sie die App herunter.</li>
+
+        <figure class="figure">
+            <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(24).png?width=2064&height=993&name=Untitled%20(24).png"
+                alt="Sentinum LinQs App"
+                loading="lazy"
+                style="max-width:688px; width:100%; height:auto;"
+            >
+            <figcaption>
+                Abbildung 4. Download der Sentinum LinQs App
+            </figcaption>
+        </figure>
+    
+
+    <li>
+        Lokalisieren Sie zuerst den NFC-Tag auf dem Sensor und
+        anschließend den NFC-Reader auf Ihrem Endgerät. Die Position
+        des NFC-Tags ist in der folgenden Abbildung dargestellt.
+
+        <figure class="figure">
+            <img
+                src="https://docs.sentinum.de/hs-fs/hubfs/Helios%206%20(1).png?width=688&amp;height=387&amp;name=Helios%206%20(1).png"  alt="Sentinum LinQs App"
+                loading="lazy"
+                style="max-width:688px; width:100%; height:auto;"
+            >
+            <figcaption>
+                Abbildung 5. Position des NFC-Tags am Helios-P Sensor
+            </figcaption>
+        </figure>
+    </li>
+
+    <li>
+        Öffnen Sie die App und aktivieren Sie den Sensor. Um den Sensor
+        mit den Grundeinstellungen zu starten, wählen Sie im Startmenü
+        der App die Schaltfläche <code>Activate Sensor</code>. Legen Sie
+        anschließend Ihr Endgerät auf die NFC-Markierung des Sensors.
+
+        <figure class="figure">
+            <img
+                src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(26).png?width=688&amp;height=275&amp;name=Untitled%20(26).png"
+                  alt="Sentinum LinQs App"
+                loading="lazy"
+                style="max-width:688px; width:100%; height:auto;"
+            >
+            <figcaption>
+                Abbildung 6. Aktivierung des Sensors über die LinQs App
+            </figcaption>
+        </figure>
+
+        <p>
+            Wird der Sensor erfolgreich aktiviert, erscheint die Meldung
+            <code>Sensor Updated!</code>. Anschließend können weitere
+            Sensoren aktiviert werden.
+        </p>
+    </li>
+</ol>
+
+
+
+
+
+
+
+<h3>8. Inbetriebnahme ohne mobiles Endgerät</h3>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Falls Sie kein Smartphone zur Hand haben, können Sie den Sensor
+        auch direkt am Gerät neu starten. Schieben Sie dazu den markierten
+        Schalter in die Stellung <code>Off</code>, warten Sie mindestens
+        10 Sekunden und schieben Sie ihn anschließend zurück in die
+        Stellung <code>On</code>. Der Sensor startet daraufhin neu und
+        nimmt den normalen Betrieb wieder auf, beispielsweise die
+        Join-Prozedur bei LoRaWAN®.
+    </p>
+</div>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(33).png?width=688&height=392&name=Untitledazy"
+        style="max-width:688px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Abbildung 7. Ein-/Aus-Schalter des Sensors
+    </figcaption>
+</figure>
+
+<h3> 9. Batterietausch</h3>
+
+<ol>
+    <li>
+        Öffnen Sie das Gehäuse mit einem geeigneten
+        Kreuzschlitzschraubendreher. Entfernen Sie den Deckel vorsichtig
+        und achten Sie darauf, dass die Dichtung nicht beschädigt wird.
+
+        <figure class="figure">
+           <img src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(34).png?width=688&height=512&name=Untitled%20(34).png"
+                style="max-width:688px; width:100%; height:auto;"
+            >
+            <figcaption>
+                Abbildung 8. Öffnen des Sensorgehäuses
+            </figcaption>
+        </figure>
+    </li>
+
+    <li>
+        Schalten Sie den Sensor vor dem Batteriewechsel durch Umlegen
+        des Schalters in die Stellung <code>Off</code> aus.
+
+        <figure class="figure">
+            <img
+                src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(33).png?width=688&height=392&name=Untitled"
+                style="max-width:688px; width:100%; height:auto;"
+            >
+            <figcaption>
+                Abbildung 9. Sensor vor dem Batteriewechsel ausschalten
+            </figcaption>
+        </figure>
+
+        <p>
+            Entnehmen Sie anschließend die Batterien vorsichtig aus dem
+            vorgesehenen Halter und setzen Sie neue Batterien ein.
+        </p>
+
+        <p>
+            Um die angegebenen Laufzeiten und die spezifizierte
+            Performance zu erreichen, sind folgende Primärzellen
+            freigegeben:
+        </p>
+
+        <ul>
+            <li><strong>Energizer® Ultimate Lithium AA</strong></li>
+            <li><strong>VARTA ULTRA LITHIUM Mignon AA</strong></li>
+        </ul>
+    </li>
+
+    <li>
+        Entsorgen Sie die alten Batterien nach dem Austausch
+        ordnungsgemäß. Verschließen Sie anschließend das Gehäuse wieder
+        und achten Sie darauf, dass die Dichtung korrekt in ihrer
+        ursprünglichen Position sitzt.
+    </li>
+</ol>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Vorsicht</strong>
+
+    <p style="margin-bottom:0;">
+        Werden andere als die empfohlenen Batterietypen verwendet,
+        können Leistung, Laufzeit und Produktsicherheit beeinträchtigt
+        werden.
+    </p>
+</div>
+
+
+<br><br>
+
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png"  alt="Supported radio technologies"  style="max-width:750px; height:auto;"
+    loading="lazy">
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
+    alt="trash bin Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
+</div>
+     
+<!-- FOOTER -->
+
+</div>
+<div class="footer-note">
+  <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+  <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
+  </p>
+</div>
+  
+</body></html>
+
+  
+</body></html>
