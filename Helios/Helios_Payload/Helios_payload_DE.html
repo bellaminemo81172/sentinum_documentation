@@ -1,0 +1,490 @@
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+    code,
+    .inline-code {
+        background-color: #f3f4f6;
+        border: 1px solid #d0d7de;
+        border-radius: 4px;
+        padding: 2px 6px;
+        font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 0.9em;
+        color: #111827;
+        display: inline-block;
+    }
+
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+</style>
+
+
+
+<h3>
+Payloadbeschreibung
+</h3>
+
+<p>
+    <strong>Byte:</strong> 1-2<br>
+    <strong>Alias:</strong> Modulschlüssel<br>
+    <strong>Bezeichnung:</strong> module_key<br>
+    <strong>Gültig für Versionen:</strong> Alle - Basispayload, gültig und verfügbar für alle Sensoren der Febris Reihe
+</p>
+
+<p>
+    <strong>Beschreibung:</strong>
+</p>
+
+<p>
+    Byte 1
+</p>
+
+<ul>
+    <li>4 Bit MSB: Modulcode. Bei Mioty nur Telemetriemodul "Sentiface", d. h. immer 0x1.</li>
+    <li>4 Bit LSB: Hauptversion. FW mit gleicher Major-Version, aber größerer Minor-Version bleiben mit älteren Decodern kompatibel. Die Anzahl der Bytes kann sich jedoch ändern.</li>
+</ul>
+
+<p>
+    Byte 2
+</p>
+
+<ul>
+    <li>4 Bit MSB: Nebenversion. Neue SW-Versionen können schrittweise neue Telemetrie in das Datenpaket einfügen.</li>
+    <li>4 Bit LSB: Unter-/Produktversion. In Helios kodieren diese Bits die spezifische Konfiguration der angeschlossenen Sensoren.</li>
+</ul>
+
+<hr>
+
+<p>
+    <strong>Byte:</strong> 3<br>
+    <strong>Alias:</strong> Uplink Counter<br>
+    <strong>Bezeichnung:</strong> uplink_counter<br>
+    <strong>Gültig für Versionen:</strong> Alle - Basispayload, gültig und verfügbar für alle Sensoren der Febris Reihe<br>
+    <strong>Beschreibung:</strong> Protokoll unabhängiger Uplink-Zähler, das einen Höchstwert von 255 erreicht. Danach beginnt der Zähler wieder bei 0.
+</p>
+
+<hr>
+
+<p>
+    <strong>Byte:</strong> 4-5<br>
+    <strong>Alias:</strong> Battery Voltage<br>
+    <strong>Bezeichnung:</strong> internal_temperature<br>
+    <strong>Gültig für Versionen:</strong> Alle - Basispayload, gültig und verfügbar für alle Sensoren der Febris Reihe<br>
+    <strong>Beschreibung:</strong> Aktuelle Batteriespannung in Millivolt
+</p>
+
+<code><pre>
+battery_voltage = (dataBytes[3] << 8 | dataBytes[4]) / 1000.0
+</pre></code>
+
+<hr>
+
+<p>
+    <strong>Byte:</strong> 6<br>
+    <strong>Alias:</strong> Interne Temperatur<br>
+    <strong>Bezeichnung:</strong> battery_voltage<br>
+    <strong>Gültig für Versionen:</strong> Alle - Basispayload, gültig und verfügbar für alle Sensoren der Febris Reihe<br>
+    <strong>Beschreibung:</strong> Innentemperatur des Sensors + 128
+</p>
+
+<code><pre>
+interne_temperatur = dataBytes[5] - 128
+</pre></code>
+
+<hr>
+
+<p>
+    <strong>Byte:</strong> 7<br>
+    <strong>Alias:</strong> Rel. Luftfeuchtigkeit<br>
+    <strong>Bezeichnung:</strong> humidity<br>
+    <strong>Gültig für Versionen:</strong> Alle - Basispayload, gültig und verfügbar für alle Sensoren der Febris Reihe<br>
+    <strong>Beschreibung:</strong> Rel. Luftfeuchtigkeit in %
+</p>
+
+<hr>
+
+<p>
+    <strong>Byte:</strong> 9-10<br>
+    <strong>Alias:</strong> Taupunkt<br>
+    <strong>Bezeichnung:</strong> dewpoint<br>
+    <strong>Gültig für Versionen:</strong> Alle - Basispayload, gültig und verfügbar für alle Sensoren der Febris Reihe<br>
+    <strong>Beschreibung:</strong> Taupunkt in °C
+</p>
+
+<hr>
+
+<div class="note-strip note-strip--blue">
+    <strong>Für Versionen: S-FEBR-XXXX-CO2-XXX</strong>
+</div>
+
+<hr>
+
+<p>
+    <strong>Byte:</strong> 11-12<br>
+    <strong>Alias:</strong> Luftdruck<br>
+    <strong>Bezeichnung:</strong> pressure<br>
+    <strong>Gültig für Versionen:</strong> S-FEBR-XXXX-CO2-XXX<br>
+    <strong>Beschreibung:</strong> Atmosphärischer Druck in hPa
+</p>
+
+<hr>
+
+<p>
+    <strong>Byte:</strong> 13-14<br>
+    <strong>Alias:</strong> CO2<br>
+    <strong>Bezeichnung:</strong> co2_ppm<br>
+    <strong>Gültig für Versionen:</strong> S-FEBR-XXXX-CO2-XXX<br>
+    <strong>Beschreibung:</strong> CO2 value in ppm
+</p>
+
+<hr>
+
+<p>
+    <strong>Byte:</strong> 15<br>
+    <strong>Alias:</strong> Alarm<br>
+    <strong>Bezeichnung:</strong> alarm<br>
+    <strong>Gültig für Versionen:</strong> S-FEBR-XXXX-CO2-XXX
+</p>
+
+<p>
+    <strong>Beschreibung:</strong>
+</p>
+
+<ul>
+    <li>0: 0-1000 ppm (grün)</li>
+    <li>1: 1000-2000 ppm (gelb)</li>
+    <li>2: 2000-5000 ppm (rot)</li>
+</ul>
+
+<p>
+    Analog zu Ampeln, Grenzwerte einstellbar.
+</p>
+  
+<br><br>
+
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png"  alt="Supported radio technologies"  style="max-width:750px; height:auto;"
+    loading="lazy">
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
+    alt="trash bin Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
+</div>
+     
+<!-- FOOTER -->
+
+</div>
+<div class="footer-note">
+  <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+  <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
+  </p>
+</div>
+  
+</body></html>
