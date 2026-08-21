@@ -1,0 +1,1155 @@
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+    code,
+    .inline-code {
+        background-color: #f3f4f6;
+        border: 1px solid #d0d7de;
+        border-radius: 4px;
+        padding: 2px 6px;
+        font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 0.9em;
+        color: #111827;
+        display: inline-block;
+    }
+
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+</style>
+
+<div class="pdf-viewer">
+<iframe src="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/32ec8cc49d0c0478b29b95df5bfdb7e4c00d2aa2/Febris/Febris_Co2/Febris_co2_TD/Febris_technical_Datasheet.pdf"
+allowfullscreen
+title=“Blueprint Sensor Integration PDF”>
+</iframe>
+</div>
+
+<div class="pdf-download">
+  📄 You can view the PDF above or
+  <a href="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/32ec8cc49d0c0478b29b95df5bfdb7e4c00d2aa2/Febris/Febris_Co2/Febris_co2_TD/Febris_technical_Datasheet.pdf"
+   
+target=“_blank”>
+   <strong>download here</strong>
+  </a>.
+</div>
+
+<div class="main-toc">
+    <strong>Table of Contents</strong>
+
+    <ol>
+        <li>Febris Code</li>
+        <li>Febris TH Part Numbers</li>
+        <li>Febris SCW Part Numbers</li>
+        
+<li>Febris CO₂ Order Code Tree</li>
+        <li>Febris TH Order Code Tree</li>
+        <li>Febris SCW Order Code Tree</li>
+        <li>Product Features and Applications</li>
+        <li>Connectivity and RF Specifications</li>
+        
+<li>CO₂ Sensor Specifications</li>
+        <li>Temperature Sensor Specifications</li>
+        <li>Relative Humidity Sensor Specifications</li>
+        <li>Pressure Sensor Specifications</li>
+        
+<li>Mounting Types</li>
+        <li>Technical Drawing</li>
+        <li>Marking and Certification</li>
+    </ol>
+</div>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Febris%202.png?width=688&height=387&name=Febris%202.png"
+        alt="Febris CO₂ Sensor"
+        loading="lazy"
+        style="max-width:688px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Figure 1. Febris CO₂ Sensor </figcaption></figure>
+        
+        <h3>1. Febris CO₂</h3>
+       <div>
+    <table>
+        <thead>
+        <tr>
+                <th>Item Code</th>
+                <th>Sensor Technology</th>
+                
+<th>Additional Description</th>
+                <th>Communication</th>
+                <th>Power Supply</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                
+<td>S-FEBR-LOEU-CO2</td>
+                <td>
+                    Accelerometer, CO₂ ppm, air pressure,
+                    relative humidity, temperature
+                </td>
+                <td>
+                    The accelerometer is provided as an option and upon request
+                    because, due to supply bottlenecks,
+                    a sufficient supply could not be guaranteed
+                    .
+                </td>
+                
+<td>LoRaWAN®</td>
+                <td>Battery</td>
+                <td>In production</td>
+            </tr>
+
+            <tr>
+                <td>S-FEBR-MIOTY-CO2</td>
+                <td>
+                    Accelerometer, CO₂ ppm, atmospheric pressure,
+                    relative humidity, temperature
+                </td>
+                
+<td>
+                    The accelerometer is provided as an option and upon request
+                    because, due to supply shortages,
+                    a sufficient supply could not be guaranteed
+                    .
+                </td>
+                <td>mioty®</td>
+                <td>Battery</td>
+                <td>In production</td>
+            </tr>
+
+            <tr>
+                
+<td>S-FEBR-NB-CO2</td>
+                <td>
+                    Accelerometer, CO₂ ppm, atmospheric pressure,
+                    relative humidity, temperature
+                </td>
+                <td>
+                    The accelerometer is provided as an option and upon request
+                    because, due to supply shortages,
+                    a sufficient supply could not be guaranteed
+                    .
+                
+</td>
+                <td>NB-IoT</td>
+                <td>Battery</td>
+                <td>In production</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h3>
+2. Febris TH Part Numbers
+</h3>
+
+<div class="table-wrap">
+    
+<table>
+        <thead>
+            <tr>
+                <th>Part number</th>
+                <th>Sensors</th>
+                <th>Additional description</th>
+                <th>Communication</th>
+                <th>Power supply</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        
+<tbody>
+            <tr>
+                <td>S-FEBR-LOEU-TH</td>
+                <td>
+                    Relative humidity, temperature
+                </td>
+                <td>
+                    The accelerometer is provided as an option upon request
+                    since, due to supply shortages,
+                    a sufficient supply could not be guaranteed.
+                </td>
+                
+<td>LoRaWAN®</td>
+                <td>Battery</td>
+                <td>In production</td>
+            </tr>
+
+            <tr>
+                <td>S-FEBR-MIOTY-TH</td>
+                <td>
+                    Relative humidity, temperature
+                </td>
+                <td>
+                    The accelerometer is provided as an option and upon request
+                    
+as a result of supply shortages
+                    that prevented us from ensuring an adequate supply.
+                </td>
+                <td>mioty®</td>
+                <td>Battery</td>
+                <td>In production</td>
+            </tr>
+
+            <tr>
+                <td>S-FEBR-NB-TH</td>
+                
+<td>
+                    Relative humidity, temperature
+                </td>
+                <td>
+                    The accelerometer is provided as an option and upon request
+                    since, due to supply shortages,
+                    a sufficient supply could not be guaranteed.
+                </td>
+                <td>NB-IoT</td>
+                <td>Battery</td>
+                <td>In production</td>
+            
+</tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>
+3. Febris SCW Part Numbers
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Part Number</th>
+                <th>Sensors</th>
+                
+<th>Additional Description</th>
+                <th>Communication</th>
+                <th>Power Supply</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>S-FEBR-LOEU-SCW</td>
+                
+<td>
+                    Relative humidity, temperature,
+                    wall surface temperature
+                </td>
+                <td>
+                    The accelerometer is provided as an option and upon request
+                    since, due to supply shortages,
+                    an adequate supply could not be guaranteed.
+                </td>
+                <td>LoRaWAN®</td>
+                <td>Battery</td>
+                
+<td>In production</td>
+            </tr>
+
+            <tr>
+                <td>S-FEBR-MIOTY-SCW</td>
+                <td>
+                    Relative humidity, temperature,
+                    wall surface temperature
+                </td>
+                <td>
+                    The accelerometer is provided as an option and upon request
+                    
+as a result of supply chain issues
+                    that prevented us from ensuring an adequate supply.
+                </td>
+                <td>mioty®</td>
+                <td>Battery</td>
+                <td>In production</td>
+            </tr>
+
+            <tr>
+                <td>S-FEBR-NB-SCW</td>
+                <td>
+                    
+Relative humidity, temperature,
+                    wall surface temperature
+                </td>
+                <td>
+                    The accelerometer is provided as an option and upon request
+                    because, due to supply bottlenecks,
+                    a sufficient supply could not be guaranteed.
+                </td>
+                <td>NB-IoT</td>
+                <td>Battery</td>
+                
+<td>In production</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>4. Febris CO₂ Order Code Tree</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Prefix</th>
+                
+<th>Product Series Code</th>
+                <th>Communication</th>
+                <th>Sensor Type</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>S</td>
+                <td>FEBR</td>
+                <td>LOEU, mioty, NB</td>
+                
+<td>CO2</td>
+                <td>S-FEBR-LOEU-CO2</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>
+5. Febris TH Order Code Tree
+</h3>
+
+<div class="table-wrap">
+    <table>
+        
+<thead>
+            <tr>
+                <th>Prefix</th>
+                <th>Product Series Code</th>
+                <th>Communication</th>
+                <th>Sensors</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>S</td>
+                
+<td>FEBR</td>
+                <td>LOEU, mioty, NB</td>
+                <td>TH</td>
+                <td>S-FEBR-LOEU-TH</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>
+6. Febris SCW Order Code Tree
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Prefix</th>
+                <th>Product Series Code</th>
+                <th>Communication</th>
+                <th>Sensors</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        
+<tbody>
+            <tr>
+                <td>S</td>
+                <td>FEBR</td>
+                <td>LOEU, mioty, NB</td>
+                <td>SCW</td>
+                <td>S-FEBR-LOEU-SCW</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>7. Product Features and Applications</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Value</th>
+                <th>Unit</th>
+            </tr>
+        </thead>
+        
+<tbody>
+            <tr>
+                <td>Dimensions L × W × H</td>
+                <td>86 × 86 × 25</td>
+                <td>mm</td>
+            </tr>
+
+            <tr>
+                <td>Weight</td>
+                <td>148</td>
+                <td>g</td>
+            </tr>
+            
+<tr>
+                <td>Operating temperature</td>
+                <td>+10 to +50</td>
+                <td>°C</td>
+            </tr>
+
+            <tr>
+                <td>Storage temperature (recommended)</td>
+                <td>+0 to +50</td>
+                <td>°C</td>
+            
+</tr>
+
+            <tr>
+                <td>Relative humidity during operation</td>
+                <td>5 to 80</td>
+                <td>%</td>
+            </tr>
+
+            <tr>
+                <td>IP Rating</td>
+                <td>IP21</td>
+                <td>-</td>
+            
+</tr>
+
+            <tr>
+                <td>Sensors</td>
+                <td>
+                    CO₂, VOC, temperature, relative humidity,
+                    infrared surface thermometer, air pressure
+                </td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Traffic-light function</td>
+                
+<td>Yes, LEDs (green, orange, and red)</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Acoustic alarm function</td>
+                <td>Yes, buzzer</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Provisioning</td>
+                
+<td>NFC</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Material</td>
+                <td>ABS</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>NFC antenna</td>
+                <td>integrated</td>
+                
+<td>-</td>
+            </tr>
+
+            <tr>
+                <td>RF antenna</td>
+                <td>integrated</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Accelerometer</td>
+                <td>optional</td>
+                <td>-</td>
+            </tr>
+            
+<tr>
+                <td>Batteries</td>
+                <td>replaceable</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Primary cell type</td>
+                <td>
+                    4 × 1.5 V (recommended: Energizer Ultimate Lithium)
+                    or 4 × 1.5 V (Alkaline recommended: VARTA Longlife Power)
+                </td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>
+8. Connectivity and RF Specifications
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                
+<th>Feature</th>
+                <th>Value</th>
+                <th>Unit</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>RF Standards</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+<tr>
+                <td>LoRaWAN® / mioty® EU Frequency</td>
+                <td>868</td>
+                <td>MHz</td>
+            </tr>
+
+            <tr>
+                <td>Cellular Frequency</td>
+                <td>Band 8, 20 (900 MHz, 800 MHz)</td>
+                
+<td>MHz</td>
+            </tr>
+
+            <tr>
+                <td>LoRaWAN® / mioty® EU Transmit Power</td>
+                <td>14</td>
+                <td>dBm</td>
+            </tr>
+
+            <tr>
+                <td>NB-IoT Transmit Power</td>
+                <td>23</td>
+                
+<td>dBm</td>
+            </tr>
+
+            <tr>
+                <td>LoRa® MAC Layer Version</td>
+                <td>1.0.2</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h3>
+9. CO₂ Sensor Specifications
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Characteristic</th>
+                <th>Value</th>
+                <th>Unit</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                
+<td>Output Value</td>
+                <td></td>
+                <td>ppm</td>
+            </tr>
+
+            <tr>
+                <td>Resolution</td>
+                <td>1</td>
+                <td>ppm</td>
+            </tr>
+            
+<tr>
+                <td>Measurement Range</td>
+                <td>300 to 5000 (optionally extended to 10,000 ppm)</td>
+                <td></td>
+            </tr>
+            
+<tr>
+                <td>Accuracy</td>
+                <td>50 ppm ±3% of the measured value</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Expected service life</td>
+                <td>15</td>
+                <td>years</td>
+            </tr>
+            
+<tr>
+                <td>Calibration</td>
+                <td>Self-calibration via algorithm</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Technology</td>
+                <td>NDIR, non-dispersive infrared sensor</td>
+                
+<td></td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>
+
+
+<h3>
+10. Sensor Specifications: Temperature Sensor
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Characteristic</th>
+                
+<th>Value</th>
+                <th>Unit</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Measuring range</td>
+                <td>-40 to +125</td>
+                <td>°C</td>
+            </tr>
+
+            <tr>
+                
+<td>Drift (long-term)</td>
+                <td>&lt; 0.02</td>
+                <td>°C/year</td>
+            </tr>
+
+            <tr>
+                <td>Resolution</td>
+                <td>0.1</td>
+                <td>°C</td>
+            </tr>
+
+            <tr>
+                
+<td>Accuracy</td>
+                <td>±0.2</td>
+                <td>°C</td>
+            </tr>
+
+            <tr>
+                <td>Repeatability</td>
+                <td>0.2</td>
+                <td>°C</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>11. Sensor Specifications: Relative Humidity Sensor</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Characteristic</th>
+                <th>Value</th>
+                <th>Unit</th>
+            </tr>
+        
+</thead>
+
+        <tbody>
+            <tr>
+                <td>Measurement Range</td>
+                <td>0 to 100</td>
+                <td>%RH</td>
+            </tr>
+            
+<tr>
+                <td>Drift (long-term)</td>
+                <td>&lt; 0.25</td>
+                <td>%RH/year</td>
+            </tr>
+
+            <tr>
+                <td>Resolution</td>
+                <td>1</td>
+                <td>%RH</td>
+            </tr>
+            
+<tr>
+                <td>Accuracy</td>
+                <td>±2.0</td>
+                <td>%RH</td>
+            </tr>
+
+            <tr>
+                <td>Repeatability</td>
+                <td>0.1</td>
+                <td>%RH</td>
+            </tr>
+        
+</tbody>
+    </table>
+</div>
+
+
+<h3>
+12. Sensor: Pressure Sensor
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Characteristic</th>
+                <th>Value</th>
+                <th>Unit</th>
+            </tr>
+        
+</thead>
+
+        <tbody>
+            <tr>
+                <td>Measurement range</td>
+                <td>300 to 1200</td>
+                <td>mbar</td>
+            </tr>
+
+            <tr>
+                <td>Drift (long-term)</td>
+                <td>±1</td>
+                
+<td>mbar/year</td>
+            </tr>
+
+            <tr>
+                <td>Resolution</td>
+                <td>0.1</td>
+                <td>mbar</td>
+            </tr>
+
+            <tr>
+                <td>Accuracy</td>
+                <td>±1</td>
+                <td>mbar</td>
+            
+</tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h3>
+13. Mounting Types
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Mounting Type</th>
+                <th>Accessories</th>
+            </tr>
+        
+</thead>
+
+        <tbody>
+            <tr>
+                <td>Screw Mounting</td>
+                <td>
+                    Partially Threaded TX Particleboard Screws
+                    3.0 × 25 / 30 / 35 / 40
+                </td>
+            </tr>
+
+            <tr>
+                <td>Magnets</td>
+                
+<td>
+                    2 × neodymium magnets (indoor),
+                    Total holding force: 32 kg
+                </td>
+            </tr>
+
+            <tr>
+                <td>Adhesive</td>
+                <td>
+                    Installation adhesive or adhesive tape
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>14. Technical Drawing</h3>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Untitled%20(1)-1.png?width=688&amp;height=487&amp;name=Untitled%20(1)-1.png"
+        alt="Febris CO₂">
+    <figcaption>
+        Figure 2. Febris CO₂ Sensor Sketch
+    </figcaption>
+</figure>
+
+
+
+<h3>15. Marking and Certification</h3>
+<br><br>
+
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png"  alt="Supported radio technologies"  style="max-width:750px; height:auto;"
+    loading="lazy">
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
+    alt="trash bin Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
+</div>
+     
+<!-- FOOTER -->
+
+</div>
+<div class="footer-note">
+  <p>© Sentinum GmbH – All rights reserved.</p>
+  <p>All content in this document, including text, tables, and images, is protected by copyright and is the property of Sentinum GmbH.</p>
+  <p>All images are subject to the copyright of Sentinum GmbH, unless otherwise stated.</p>
+  
+<p>Reproduction, distribution, or use—even in part—is not permitted without express written permission.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Specifications are subject to change. All information is provided without warranty.
+  </p>
+</div>
+  
+</body></html>
