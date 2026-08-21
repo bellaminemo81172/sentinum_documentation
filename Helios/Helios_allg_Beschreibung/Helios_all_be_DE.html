@@ -1,0 +1,928 @@
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+    code,
+    .inline-code {
+        background-color: #f3f4f6;
+        border: 1px solid #d0d7de;
+        border-radius: 4px;
+        padding: 2px 6px;
+        font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 0.9em;
+        color: #111827;
+        display: inline-block;
+    }
+
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+</style>
+
+
+<div class="pdf-viewer">
+<iframe src="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/93db8fe7181eae26e3e04f72861bf4e5f000e174/Helios/Helios_allg_Beschreibung/Helios-P_Allgemeine_Beschreibung_DE.pdf"
+allowfullscreen
+title="Blueprint Sensor Integration PDF">
+</iframe>
+</div>
+
+<div class="pdf-download">
+  📄 Sie können das PDF oben ansehen oder
+  <a href="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/93db8fe7181eae26e3e04f72861bf4e5f000e174/Helios/Helios_allg_Beschreibung/Helios-P_Allgemeine_Beschreibung_DE.pdf"
+   target="_blank">
+   
+   <strong>hier herunterladen</strong> 
+  </a>.
+</div>
+
+<div class="main-toc">
+    <strong>Inhaltsverzeichnis</strong>
+
+    <ol>
+        <li>Zur Helios Produktreihe</li>
+        <li>Features</li>
+        <li>Helios Subversionen</li>
+        <li>Helios-P</li>
+        <li>Eigenschaften</li>
+        <li>Lieferumfang</li>
+        <li>Helios-P Artikelbaum</li>
+        <li>Helios-P Artikelcodes</li>
+        <li>Anwendungsbeispiele</li>
+    </ol>
+</div>
+
+
+<figure class="figure">
+    <img
+        src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios-1-1%20(1).png"; 
+       style="max-width:606px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Abbildung 1. Helios Produktreihe
+    </figcaption>
+</figure>
+
+<h3>
+1. Zur Helios Produktreihe
+</h3>
+
+<p>
+    Die Helios Produktreihe ist eine drahtlose LPWAN-Mehrzweck-Auslese-
+    und Übertragungseinheit, die in unterschiedlichen Konfigurationen mit
+    verschiedenen Messsonden und Fühlern ausgestattet ist.
+</p>
+
+<p>
+    Helios eignet sich besonders zum Auslesen industrieller
+    Messtransmitter über eine Vielzahl gängiger Schnittstellen wie
+    RS485, I²C, SPI, UART oder 4-20 mA. Zusätzlich verfügen die
+    Helios-Sensoren über digitale sowie analoge Ein- und Ausgänge.
+</p>
+
+<p>
+    Durch ein innovatives Power-Management können Sensoren mit bis zu
+    12 V versorgt werden, selbst wenn lediglich vier handelsübliche
+    AA-Zellen verwendet werden. Darüber hinaus sind spezielle Versionen
+    erhältlich, die den Betrieb mit externer Spannungsversorgung über
+    ein Netzteil ermöglichen.
+</p>
+
+<p>
+    Helios-Produkte sind mit den Kommunikationsstandards mioty®,
+    LoRaWAN®, NB-IoT oder LTE CAT-M1 erhältlich und für den Innen-
+    sowie Außeneinsatz geeignet. Die Produktreihe verfügt über eine
+    externe Antenne und gewährleistet dadurch auch in Kellerräumen,
+    Schächten oder Industriehallen eine sehr gute Funkverbindung.
+</p>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Die Helios-Übertragungseinheit eignet sich nicht zum generischen
+        Anschluss beliebiger Sensoren. Stattdessen sind unterschiedliche
+        Anwendungsfälle in spezifischen Produktvarianten umgesetzt.
+        Messsonden und Fühler sind Bestandteil der jeweiligen Version.
+        Beispielsweise ist die Variante <strong>Helios-P</strong> für die
+        Druckmessung ausgelegt und wird mit einem industriellen
+        Drucktransmitter ausgeliefert.
+    </p>
+</div>
+
+<h3>
+2. Features
+</h3>
+
+<ul>
+    <li>Auslese und Übertragungseinheit für externe Sensorik</li>
+    <li>Unterstützt verschiedene Standards, wie z.B. RS485, I2C, SPI, UART, 4 bis 20mA, PT100/1000 Sensoren, One-Wire Sensorik, digitale und analoge Ein- und Ausgänge, Pulszähler etc.</li>
+    <li>Unterstützt externe Sensoren bis 12V auch mit Batterie</li>
+    <li>Wechselbare Batterien (empfohlene Zellen Varta Ultra Lithium AA oder baugleich)</li>
+    <li>Externe Antenne</li>
+    <li>IP66, 80mm x 152mm x 46mm mit Schraublaschen</li>
+    <li>Wahlweise mit externer Spannungsversorgung bestellbar (nicht IP66)</li>
+    <li>Provisioning via NFC und Downlinks verfügbar</li>
+    <li>Cellular Kommunikation via CoAP über Sentinum Datahub verfügbar (generisches LWM2M upcoming)</li>
+    <li>Beispielanwendungen: Drucksensor, Wetterstation, Pulszähler, Bienenwaage</li>
+</ul>
+
+<h3>
+3. Helios Subversionen
+</h3>
+
+<div class="table-wrap">
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Anwendungen</th>
+            <th>Kommunikation</th>
+            <th>Kurzbeschreibung</th>
+            <th>Produktlink</th>
+            <th>Standardausführung</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>Helios-TPT-100</td>
+            <td>Industrielle Temperaturmessung</td>
+            <td>LoRaWAN®, NB IoT+LTE-CAT-M1, mioty®</td>
+            <td>Temperatursensor mit PT100 Temperaturfühler, zylindrische Ausführung.</td>
+            <td></td>
+            <td>PT100 Temperatursensor mit Kabel</td>
+            <td>Bevorstehend</td>
+        </tr>
+
+        <tr>
+            <td>Helios-TWEA</td>
+            <td>Low-cost Wetterstation für den outdoor Einsatz</td>
+            <td>LoRaWAN®, NB-IoT+LTE-CAT-M1, mioty®</td>
+            <td>Helios low-cost Wetterstation,</td>
+            <td></td>
+            <td>5 in 1 Wetterstation: Regenmenge, Windstärke, Windrichtung, Sonneneinstrahlung, Temperatur, Luftfeuchte</td>
+            <td>In Entwicklung</td>
+        </tr>
+
+        <tr>
+            <td>Helios-TDS-RA</td>
+            <td>Temperaturmessung indoor- und outdoor, Temperaturmessung an runden Gegenständen, Temperaturerfassung von Rohren.</td>
+            <td>LoRaWAN®, NB-IoT+LTE-CAT-M1, mioty®</td>
+            <td>Temperatursensor mit Dallas Temperaturfühler als Rohranlegefühler.</td>
+            <td></td>
+            <td>Dallas Temperatursensor</td>
+            <td>In Produktion</td>
+        </tr>
+
+        <tr>
+            <td>Helios-TPT-1000</td>
+            <td>Industrielle Temperaturmessung</td>
+            <td>LoRaWAN®, NB-IoT+LTE-CAT-M1, mioty®</td>
+            <td>Temperatursensor mit PT1000 Temperaturfühler, zylindrische Ausführung.</td>
+            <td></td>
+            <td>PT1000 Temperatursensor mit Kabel</td>
+            <td>Bevorstehend</td>
+        </tr>
+
+        <tr>
+            <td>Helios-BEE Bienenwaage</td>
+            <td>Gewichtsmessung von Bienenstöcken</td>
+            <td>LoRaWAN®, NB-IoT+LTE-CAT-M1, mioty®</td>
+            <td>Bienenwaage bis 200kg, montiert auf zwei Profilen</td>
+            <td></td>
+            <td>Waage bis 200kg, ausgeliefert auf zwei Profilen</td>
+            <td>In Produktion</td>
+        </tr>
+
+        <tr>
+            <td>Helios-PC-M</td>
+            <td>Erfassung von Umdrehungen für Spindel oder drehende Elemente</td>
+            <td>LoRaWAN®, NB-IoT+LTE-CAT-M1, mioty®</td>
+            <td>Pulszähler mit Magnet</td>
+            <td></td>
+            <td>Pulszähler mit Magnet</td>
+            <td>In Produktion</td>
+        </tr>
+
+        <tr>
+            <td>Helios-TDS-ZY</td>
+            <td>Temperaturmessung indoor- und outdoor, Temperatur-obeflächenmessung</td>
+            <td>LoRaWAN®, NB-IoT+LTE-CAT-M1, mioty®</td>
+            <td>Temperatursensor mit Dallas Temperaturfühler, zylindrische Ausführung.</td>
+            <td></td>
+            <td>Dallas Temperatursensor</td>
+            <td>In Produktion</td>
+        </tr>
+
+        <tr>
+            <td>Helios-PP</td>
+            <td>Bestimmung des Verschmutzungsgrades von Filtern</td>
+            <td>LoRaWAN®, NB-IoT+LTE-CAT-M1, mioty®</td>
+            <td>Industrieller Differenzdrucksensor zur Bestimmung einer Druckdifferenz zwischen zwei Drucktransmittern</td>
+            <td></td>
+            <td>Zwei Drucktransmitter je 10 bar Maximaldruck, 1/4 Zollgewinde</td>
+            <td>Bevorstehend</td>
+        </tr>
+
+        <tr>
+            <td>Helios-P Drucksensor</td>
+            <td>Leitungsdruckmonitoring für Heizungsanlagen, Druckluftsystemen etc.</td>
+            <td>LoRaWAN®, NB-IoT+LTE-CAT-M1, mioty®</td>
+            <td>Industrieller Differenzdrucksensor für Flüssigkeiten und Gase, Messsonden erhältlich mit verschiedenen Maximaldrücken und Prozessgewinden.</td>
+            <td></td>
+            <td>Maximaldruck 10 bar, 1/4 Zoll Gewinde</td>
+            <td>In Produktion</td>
+        </tr>
+
+        <tr>
+            <td>Helios-PC</td>
+            <td>Metering, Submetering, industrieller Einsatz</td>
+            <td>LoRaWAN®, NB-IoT+LTE-CAT-M1, mioty®</td>
+            <td>Pulszähler</td>
+            <td></td>
+            <td>Pulszähler mit Kabel</td>
+            <td>In Produktion</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<h3>
+4. Helios-P
+</h3>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Helios-P%20LoRaWAN.png?width=688&height=387&name=Helios-P%20LoRaWAN.png"
+        alt="Helios-P LoRaWAN"
+        loading="lazy"
+        style="max-width:688px; width:100%; height:auto;">
+          <figcaption>
+        Abbildung 2. Helios Frontansicht
+    </figcaption>
+</figure>
+        
+  <p>Industrieller Drucksensor der, auf der
+    Produktreihe Helios basiert. Der Drucktransmitter ist für
+    unterschiedliche Maximaldrücke erhältlich und wird mit einem
+    1/4 Zoll Prozessgewinde ausgeliefert. Wahlweise können noch
+    Adapter für 1/2 Zoll Gewinde erworben werden.
+</p>
+
+<p>
+    Die Druckdaten werden in regelmäßigen Abständen ausgelesen und
+    wahlweise über mioty®, LoRaWAN®, NB-IoT oder LTE-CAT-M1 versendet.
+    Zusätzlich können über NFC oder Downlink Warnschwellen oder
+    Delta-Werte definiert werden, die bei Überschreitung der Grenzwerte
+    eine außerordentliche Übertragung auslösen.
+</p>
+
+<p>
+    Ein Buzzer bietet zusätzlich die Möglichkeit ein akustisches Signal
+    direkt am Sensor zu erzeugen, um die Bedienung zu erleichtern.
+    Die Helios Serie ist mit einer externen Antenne ausgestattet, was
+    für besten Empfang auch in Kellerräumen oder Industriehallen sorgt.
+</p>
+
+<p>
+    Die Stromversorgung wird durch vier handelsübliche AA Zellen
+    sichergestellt. Der Sensor weist ein IP66 Rating auf und kann mit
+    Abmessungen von 80 mm × 152 mm × 46 mm und zusätzlichen
+    Schraublaschen überall einfach montiert werden.
+    Die Aktivierung erfolgt via NFC.
+</p>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Helios%203%20LoRaWAN.png?width=306&height=172&name=Helios%203%20LoRaWAN.png"
+        alt="Helios Ansicht 1"
+        loading="lazy"
+        style="max-width:306px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Abbildung 3. Helios Seitenansicht
+    </figcaption>
+</figure>
+     
+
+<figure class="figure">
+    <img
+       src="https://docs.sentinum.de/hs-fs/hubfs/Helios-P%20LoRaWAN%20(1).png?width=306&amp;height=172&amp;name=Helios-P%20LoRaWAN%20(1).png"
+        alt="Helios Ansicht 3"
+        loading="lazy"
+        style="max-width:306px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Abbildung 5. Helios Gehäuseansicht
+    </figcaption>
+</figure>
+
+<figure class="figure">
+    <img
+       src="https://docs.sentinum.de/hs-fs/hubfs/Helios%201%20LoRaWAN.png?width=306&amp;height=172&amp;name=Helios%201%20LoRaWAN.png"
+        loading="lazy"
+        style="max-width:306px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Abbildung 6. Helios Detailansicht
+    </figcaption>
+</figure>
+
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Helios%202%20LoRaWAN.png?width=306&amp;height=172&amp;name=Helios%202%20LoRaWAN.png" 
+        loading="lazy"
+        style="max-width:306px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Abbildung 7. Helios Detailansicht
+    </figcaption></figure>
+    
+    
+<h3>
+5. Eigenschaften
+</h3>
+
+<ul>
+    <li>Druckaufnehmer aus Edelstahl bis 10 bar (wahlweise bis 400 bar)</li>
+    <li>Externe Antenne</li>
+    <li>IP66, 80mm x 152mm x 46mm mit Schraublaschen</li>
+    <li>Wahlweise mit externer Spannungsversorgung bestellbar (nicht IP66)</li>
+    <li>Provisioning via NFC und Downlinks verfügbar</li>
+    <li>Cellular Kommunikation via CoAP über Sentinum Datahub verfügbar (generisches LWM2M bevorstehend)</li>
+</ul>
+
+<h3>
+6. Lieferumfang
+</h3>
+
+<ul>
+    <li>Drucktransmitter bis 10 bar (andere Versionen bestellbar) mit 1/4 Zoll Außengewinde</li>
+    <li>Kabel 2m</li>
+    <li>Helios Übertragungsbox</li>
+    <li>Externe Antenne</li>
+    <li>Batterien</li>
+    <li>Netzteil bei -NET Artikeln</li>
+</ul>
+
+<h3>
+7. Helios-P Artikelbaum
+</h3>
+
+
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Präfix</th>
+                <th>Code Produktserie</th>
+                <th>Kommunikation</th>
+                <th>Sensorik</th>
+                <th>Druckbereich (bar)</th>
+                <th>Stromversorgung</th>
+                <th>Beispiel</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>S</td>
+                <td>HELI</td>
+                <td>LOEU, mioty, NB</td>
+                <td>P</td>
+                <td>10, 100, 400, 60</td>
+                <td>BAT, NET</td>
+                <td>S-HELI-LOEU-P-100-BAT</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h3>
+8. Helios-P Artikelcodes
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Artikelcode</th>
+                <th>Sensorik</th>
+                <th>Zusätzliche Beschreibung</th>
+                <th>Maximaldruck (bar)</th>
+                <th>Kommunikation</th>
+                <th>Stromversorgung</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>S-HELI-LOEU-P-10-BAT</td>
+                <td>Drucktransmitter</td>
+                <td></td>
+                <td></td>
+                <td>LoRaWAN®</td>
+                <td>Batterie</td>
+                <td>In Produktion</td>
+            </tr>
+
+            <tr>
+                <td>S-HELI-LOEU-P-60-BAT</td>
+                <td>Drucktransmitter</td>
+                <td></td>
+                <td></td>
+                <td>LoRaWAN®</td>
+                <td>Batterie</td>
+                <td>In Produktion</td>
+            </tr>
+
+            <tr>
+                <td>S-HELI-LOEU-P-100-BAT</td>
+                <td>Drucktransmitter</td>
+                <td></td>
+                <td></td>
+                <td>LoRaWAN®</td>
+                <td>Batterie</td>
+                <td>In Produktion</td>
+            </tr>
+
+            <tr>
+                <td>S-HELI-LOEU-P-450-BAT</td>
+                <td>Drucktransmitter</td>
+                <td></td>
+                <td></td>
+                <td>LoRaWAN®</td>
+                <td>Batterie</td>
+                <td>In Produktion</td>
+            </tr>
+
+            <tr>
+                <td>S-HELI-MIOTY-P-10-BAT</td>
+                <td>Drucktransmitter</td>
+                <td></td>
+                <td></td>
+                <td>mioty®</td>
+                <td>Batterie</td>
+                <td>In Produktion</td>
+            </tr>
+
+            <tr>
+                <td>S-HELI-MIOTY-P-60-BAT</td>
+                <td>Drucktransmitter</td>
+                <td></td>
+                <td></td>
+                <td>mioty®</td>
+                <td>Batterie</td>
+                <td>In Produktion</td>
+            </tr>
+
+            <tr>
+                <td>S-HELI-MIOTY-P-100-BAT</td>
+                <td>Drucktransmitter</td>
+                <td></td>
+                <td></td>
+                <td>mioty®</td>
+                <td>Batterie</td>
+                <td>In Produktion</td>
+            </tr>
+
+            <tr>
+                <td>S-HELI-MIOTY-P-450-BAT</td>
+                <td>Drucktransmitter</td>
+                <td></td>
+                <td></td>
+                <td>mioty®</td>
+                <td>Batterie</td>
+                <td>In Produktion</td>
+            </tr>
+
+            <tr>
+                <td>S-HELI-NB-P-10-BAT</td>
+                <td>Drucktransmitter</td>
+                <td></td>
+                <td></td>
+                <td>NB-IoT+LTE-CAT-M1</td>
+                <td>Batterie</td>
+                <td>In Produktion</td>
+            </tr>
+
+            <tr>
+                <td>S-HELI-NB-P-60-BAT</td>
+                <td>Drucktransmitter</td>
+                <td></td>
+                <td></td>
+                <td>NB-IoT+LTE-CAT-M1</td>
+                <td>Batterie</td>
+                <td>In Produktion</td>
+            </tr>
+
+            <tr>
+                <td>S-HELI-NB-P-100-BAT</td>
+                <td>Drucktransmitter</td>
+                <td></td>
+                <td></td>
+                <td>NB-IoT+LTE-CAT-M1</td>
+                <td>Batterie</td>
+                <td>In Produktion</td>
+            </tr>
+
+            <tr>
+                <td>S-HELI-NB-P-450-BAT</td>
+                <td>Drucktransmitter</td>
+                <td></td>
+                <td></td>
+                <td>NB-IoT+LTE-CAT-M1</td>
+                <td>Batterie</td>
+                <td>In Produktion</td>
+            </tr>
+
+            <tr>
+                <td>Z-ADAP-14-12</td>
+                <td>Zubehör</td>
+                <td>Zubehör, Adapter von 1/4 Zoll auf 1/2 Zoll Außengewinde Edelstahl ohne Dichtung</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>In Produktion</td>
+            </tr>
+
+            <tr>
+                <td>Z-ADAP-14-12</td>
+                <td>Zubehör</td>
+                <td>Zubehör, industrieller Adapter von 1/4 Zoll auf 1/2 Zoll Außengewinde mit Dichtung</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>In Produktion</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+
+
+<h3>
+9. Anwendungsbeispiele
+</h3>
+
+<p>
+    Druckmessung in einem Druckluftsystem
+</p>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/20221216_160402.jpg?width=600&height=277&name=20221216_160402.jpg"
+        alt="Druckmessung in einem Druckluftsystem"
+        loading="lazy"
+        style="max-width:600px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Abbildung 7. Druckmessung in einem Druckluftsystem
+    </figcaption>
+</figure>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/20221216_160357.jpg?width=600&amp;height=277&amp;name=20221216_160357.jpg"         alt="Druckmessung in einem Druckluftsystem"
+        loading="lazy"
+        style="max-width:600px; width:100%; height:auto;"
+    >
+ <figcaption>
+        Abbildung 8. Druckmessung in einem Druckluftsystem
+    </figcaption>
+</figure>
+
+<br><br>
+
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png"  alt="Supported radio technologies"  style="max-width:750px; height:auto;"
+    loading="lazy">
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
+    alt="trash bin Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
+</div>
+     
+<!-- FOOTER -->
+
+</div>
+<div class="footer-note">
+  <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+  <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
+  </p>
+</div>
+  
+</body></html>
