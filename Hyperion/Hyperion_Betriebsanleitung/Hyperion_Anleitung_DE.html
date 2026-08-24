@@ -1,0 +1,5477 @@
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+    code,
+    .inline-code {
+        background-color: #f3f4f6;
+        border: 1px solid #d0d7de;
+        border-radius: 4px;
+        padding: 2px 6px;
+        font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 0.9em;
+        color: #111827;
+        display: inline-block;
+    }
+
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+</style>
+
+
+
+
+    <div class="container">
+
+    <div class="pdf-viewer">
+        <iframe
+            src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Hyperoin%20PDF%20Documents%201.0.1/Hyperion_Betriebsanleitung_1.0.1_DE.pdf"
+            title="Hyperion Betriebsanleitung PDF"
+            loading="lazy">
+        </iframe>
+    </div>
+
+    <div class="pdf-download">
+        📄 Sie können das PDF oben ansehen oder
+        <a href="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Hyperoin%20PDF%20Documents%201.0.1/Hyperion_Betriebsanleitung_1.0.1_DE.pdf?hsLang=de"
+           target="_blank"
+           rel="noopener noreferrer">
+            <strong>hier herunterladen</strong>
+        </a>.
+    </div>
+
+    <figure class="figure">
+        <img
+            src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_0.jpg"
+            alt="Hyperion IoT Energymeter"
+            loading="lazy"
+        >
+        <figcaption>
+            Abbildung 1. Hyperion IoT Energymeter
+        </figcaption>
+    </figure>
+
+</div>
+
+
+       
+    <div class="main-toc">
+    <strong>Inhaltsverzeichnis</strong>
+
+    <ol>
+        <li>Versionshistorie</li>
+        <li>Allgemeine Warn- und Sicherheitshinweise</li>
+
+        <li>
+            Allgemeines
+            <ol>
+                <li>Eigenschaften</li>
+                <li>MID-Zulassung für Abrechnungszwecke</li>
+                <li>Bedienung am Display</li>
+                <li>Genauigkeit bei Photovoltaik-Anlagen</li>
+            </ol>
+        </li>
+
+        <li>
+            Stromwandler
+            <ol>
+                <li>Messwerte auf dem Display</li>
+            </ol>
+        </li>
+
+        <li>
+            Funkkommunikation
+            <ol>
+                <li>LoRaWAN® und mioty® Funkstelle</li>
+                <li>Betrieb von LoRa® und mioty® Netzwerken</li>
+                <li>Technische Features</li>
+            </ol>
+        </li>
+
+        <li>
+            Produktinformationen
+        </li>
+
+        <li>
+            Sicherheitshinweise
+            <ol>
+                <li>Pflichten des Kunden</li>
+                <li>Lieferumfang und Eingangskontrolle</li>
+            </ol>
+        </li>
+
+        <li>
+            Installation und Inbetriebnahme
+            <ol>
+                <li>Messverfahren</li>
+                <li>Bedienkonzept</li>
+                <li>Übersicht Frontansicht Hyperion</li>
+                <li>Übersicht des Hyperion Displays</li>
+                <li>Kompatible Geräte</li>
+            </ol>
+        </li>
+
+        <li>
+            Montage
+            <ol>
+                <li>Sicherheitshinweise</li>
+                <li>Inbetriebnahme / Überprüfung</li>
+                <li>Standardeinstellung ab Werk</li>
+                <li>Anschlussschema Direktanschluss (3 Phasen)</li>
+                <li>Anschlussschema Direktanschluss (1 Phase)</li>
+                <li>Anzugsdrehmoment</li>
+                <li>Federklemmanschlüsse Litzenquerschnitt</li>
+            </ol>
+        </li>
+
+        <li>
+            Bedienung
+            <ol>
+                <li>Hauptmenüseiten</li>
+                <li>Untermenüseiten</li>
+                <li>Leistung und Strombezug</li>
+                <li>Spannung, Leistungsfaktor und Frequenz</li>
+            </ol>
+        </li>
+
+        <li>
+            Konfiguration Einstellungen
+            <ol>
+                <li>Grundeinstellungen</li>
+                <li>Einstellung der Wandlerverhältnisse</li>
+                <li>Weitere Einstellungsmöglichkeiten</li>
+            </ol>
+        </li>
+
+        <li>Anschlussschema M-Bus</li>
+
+        <li>
+            Weitere Konfigurationen, Kommunikation und Diagnose
+            <ol>
+                <li>LoRa® Werkseinstellung</li>
+                <li>mioty® Werkseinstellung</li>
+                <li>Fehlerfall</li>
+            </ol>
+        </li>
+
+        <li>
+            Erweiterte Informationen zum Lastgang nach PTB-A 50.7
+            <ol>
+                <li>Messrichtigkeitshinweise</li>
+                <li>Fehlermeldungen / Uhrzeitverstellungen</li>
+                <li>Spannungsausfall und Neustart</li>
+            </ol>
+        </li>
+    </ol>
+</div>
+
+      <h3>
+1. Versionshistorie
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Version</th>
+                <th>Datum</th>
+                <th>Änderung</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1.0.0</td>
+                <td>09.01.2025</td>
+                <td>Erstellung</td>
+            </tr>
+
+            <tr>
+                <td>1.0.1</td>
+                <td>25.03.2026</td>
+                <td>
+                    <ul>
+                        <li>Formatierungsanpassungen</li>
+                        <li>Einphasiger Betrieb, Änderung Kapitel 8.1, Änderung Kapitel 3 sowie Hinzufügen von Kapitel 9.5</li>
+                        <li>Hinzufügen von Kapitel 13.3 „mioty® Werkseinstellungen“</li>
+                        <li>Hinzufügen eines FAQ-Bereichs</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+           <h3>
+2. Allgemeine Warn- und Sicherheitshinweise
+</h3>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Warnung</strong>
+
+    <p style="margin-bottom:0;">
+        Warnungen und wichtige Informationen über potenzielle Gefahren
+        oder mögliche Beschädigungen.
+    </p>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Wichtige Hinweise, die für den reibungslosen Betrieb der Geräte
+        erforderlich sind.
+    </p>
+</div>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Bitte beachten</strong>
+
+    <ul>
+        <li>Beachten Sie die Sicherheitshinweise und Installationsanweisungen in der Anleitung sowie der Montageliste.</li>
+        <li>Beachten Sie, dass die Installationsumgebung den vorgeschriebenen Einsatzbereichsrichtlinien entspricht. Halten Sie Temperatur- und andere Grenzwerte jederzeit ein.</li>
+        <li>Das Gerät darf nur in den durch die technischen Spezifikationen vorgegebenen Bereichen eingesetzt werden.</li>
+        <li>Das Gerät darf ausschließlich für die beschriebenen Einsatzzwecke verwendet werden.</li>
+        <li>Die Sicherheit und Funktionsfähigkeit können nicht mehr garantiert werden, wenn das Gerät modifiziert oder erweitert wird.</li>
+        <li>Der Sensor darf nicht an Decken oder Böden montiert werden.</li>
+        <li>Der Betrieb des Sensors ist nur bis zu einer Höhe von maximal 2.000 m über Normalnull zulässig.</li>
+        <li>Der Betrieb ist nur in Räumen mit einer maximalen Raumhöhe von 2 m zulässig.</li>
+        <li>Aufgrund der Human-Exposure-Vorschriften ist ein Mindestabstand von 20 cm zwischen Gerät und Personen einzuhalten.</li>
+        <li>Stellen Sie sicher, dass die Installationsumgebung den vorgeschriebenen Richtlinien für den jeweiligen Einsatzbereich entspricht.</li>
+        <li>Halten Sie sämtliche Temperatur-, Feuchtigkeits- und Betriebsgrenzwerte jederzeit ein.</li>
+    </ul>
+</div>
+          <div class="note-strip note-strip--red">
+    <strong>Warnung</strong>
+
+    <p>
+        Falls das Gerät inkorrekt installiert wird:
+    </p>
+
+    <ul>
+        <li>Kann es nicht ordnungsgemäß funktionieren.</li>
+        <li>Kann es permanent beschädigt werden.</li>
+        <li>Kann es eine Verletzungsgefahr darstellen.</li>
+    </ul>
+</div>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Vorsicht</strong>
+
+    <ul>
+        <li>
+            Eine unsachgemäße Handhabung, beispielsweise durch
+            unsachgemäße mechanische Belastung oder das Fallenlassen
+            des Geräts, kann zu Beschädigungen führen.
+        </li>
+
+        <li>
+            Werden andere als die empfohlenen Batteriezellen verwendet,
+            können Leistung, Laufzeit und Produktsicherheit negativ
+            beeinflusst werden.
+        </li>
+
+        <li>
+            Das Gerät darf nur dann installiert und in Betrieb genommen
+            werden, wenn es unbeschädigt aus der Originalverpackung
+            entnommen wurde. Direkt nach der Entnahme ist eine
+            Sichtprüfung auf Beschädigungen durchzuführen. Sollte das
+            Produkt beschädigt sein, ist eine Inbetriebnahme untersagt.
+        </li>
+    </ul>
+</div>
+
+<h3>
+3. Allgemeines
+</h3>
+
+<ul>
+    <li>
+        Der Hyperion ist ein multifunktionaler, nur 90 mm (5 TE) schmaler
+        Zweirichtungs-Energiezähler mit hoher Flexibilität und Genauigkeit.
+    </li>
+
+    <li>
+        Über Direkt- oder Stromwandleranschluss unterstützt er die
+        Analyse und Überwachung unterschiedlichster Parameter in
+        Wohn-, Gewerbe- und Industrieanwendungen.
+    </li>
+
+    <li>
+        Er vereint die Funktionen eines Energiezählers mit denen eines
+        Datenloggers und liefert zusätzliche Messwerte wie Strom,
+        Spannung und Leistung.
+    </li>
+
+    <li>
+        Die Datenübertragung erfolgt je nach Gerätevariante über
+        mioty® oder LoRaWAN®.
+    </li>
+</ul>
+           <h3>
+3.1. Eigenschaften
+</h3>
+
+<ul>
+    <li>Zweirichtungszähler (Lieferung und Bezug)</li>
+    <li>MID B + D Zulassung für Abrechnungszwecke (nur im 3-phasigen Betrieb)</li>
+    <li>Umweltbedingungen mechanisch: M2</li>
+    <li>
+        1- und 5-A-Stromwandleranschluss für bis zu
+        20'000/5 A bzw. 4'000/1 A. Das Wandlerverhältnis kann
+        mehrfach über plombierbare Tasten konfiguriert werden.
+    </li>
+    <li>Direktanschluss bis 100 A</li>
+    <li>2- oder 4-Tarif-Betrieb (am Zähler konfigurierbar)</li>
+    <li>Hochbelastbarer Opto Power MOSFET</li>
+    <li>S0-Impulsausgang, 5 bis 60 V AC/DC</li>
+    <li>Grafisches LC-Display (38 × 28 mm) mit Hintergrundbeleuchtung</li>
+    <li>Dynamische 8-stellige Anzeige mit bis zu drei Nachkommastellen</li>
+    <li>Funkschnittstelle mioty® oder LoRaWAN®</li>
+</ul>
+
+<h3>
+3.2. MID-Zulassung für Abrechnungszwecke
+</h3>
+
+<p>
+    Der Hyperion ist nach MID-Modul B + D
+    (Measurement Instrument Directive, Messgeräterichtlinie 2004/22/EG
+    der Europäischen Kommission) geprüft und zugelassen.
+</p>
+
+<p>
+    Damit verfügt das Gerät über die notwendige
+    Konformitätserklärung. Durch die zusätzliche Zertifizierung
+    nach Modul D für Herstellung und Endprüfung können sämtliche
+    Hyperion Energiezähler ab Werk für Verrechnungszwecke innerhalb
+    der Europäischen Union und des Europäischen Wirtschaftsraums
+    (EWR) eingesetzt werden.
+</p>
+
+<h3>
+3.3. Bedienung am Display
+</h3>
+
+<p>
+    Ein 38 × 28 mm großes grafisches LC-Display mit
+    Hintergrundbeleuchtung ermöglicht das Ablesen von Messwerten
+    und Einstellungen auch bei schwierigen Lichtverhältnissen.
+</p>
+
+<p>
+    Die gewünschte Menüsprache kann über die Bedientasten
+    ausgewählt werden. Die übersichtliche und intuitive Bedienung
+    erleichtert die Inbetriebnahme sowie die tägliche Arbeit mit
+    den Energiezählern.
+</p>
+
+<h3>
+3.4. Genauigkeit bei Photovoltaik-Anlagen
+</h3>
+
+<p>
+    Der Hyperion wurde speziell für den Einsatz mit Wechselrichtern
+    in Photovoltaik-Anlagen geprüft. Die zusätzliche Prüfung
+    gewährleistet exakte Messergebnisse im nicht regulierten
+    Frequenzbereich zwischen 2 kHz und 150 kHz.
+</p>
+
+<p>
+    Renommierte Fachzeitschriften berichten in diesem Zusammenhang
+    von Messfehlern von bis zu 18 % bei ungeeigneten Messgeräten.
+</p>
+
+<h3>
+4. Stromwandler
+</h3>
+
+<p>
+    Das Stromwandlerverhältnis kann beim Hyperion mit
+    MID-Zulassung über die Bedientasten von 5/5 bis 20'000/5 A
+    bzw. von 1/1 bis 4'000/1 A mehrfach konfiguriert werden.
+    Die plombierbare Service-Taste schützt vor Manipulationen.
+    Zusätzlich werden Konfigurationsänderungen protokolliert
+    und archiviert.
+</p>
+
+<h4>
+Highlights
+</h4>
+
+<ul>
+    <li>MID B + D Zulassung</li>
+    <li>Zweirichtungszähler</li>
+    <li>Nachweis für frequenzunabhängiges Messwerk im Bereich von 2 kHz bis 150 kHz</li>
+    <li>Integrierte Manipulationserkennung</li>
+</ul>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_1.png"
+        alt="Hyperion IoT Energymeter Stromwandler"
+        loading="lazy"
+    >
+    <figcaption>
+        Abbildung 2. Hyperion Energiezähler mit Stromwandleranschluss.
+    </figcaption>
+</figure>
+           <div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Messwert</th>
+                <th>Total / 3 Phasen</th>
+                <th>Pro Phase</th>
+                <th>Pro Tarif</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Wirkenergie Bezug (kWh)</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+
+            <tr>
+                <td>Wirkenergie Lieferung (kWh)</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+
+            <tr>
+                <td>Blindenergie Bezug (kvarh)</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+
+            <tr>
+                <td>Blindenergie Lieferung (kvarh)</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+
+            <tr>
+                <td>Wirkleistung (kW)</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Blindleistung (kvar)</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Scheinleistung (kVA)</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Strom (A)</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Spannung (V) L-N</td>
+                <td>-</td>
+                <td>✓</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Spannung (V) L-L</td>
+                <td>-</td>
+                <td>✓</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Leistungsfaktor (Cos Phi)</td>
+                <td>-</td>
+                <td>✓</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Frequenz (Hz)</td>
+                <td>✓</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Anzahl Spannungsausfälle</td>
+                <td>✓</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Lastgangspeicherung</td>
+                <td>-</td>
+                <td>-</td>
+                <td>✓</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+        <h3>
+4.1. Messwerte auf dem Display
+</h3>
+
+<p>
+    Die Tabelle mit den verfügbaren Messwerten ist nicht abschließend.
+    Laufend werden weitere Messwerte integriert und sowohl über das
+    grafische Display als auch über die Ausleseschnittstelle
+    bereitgestellt.
+</p>
+
+<h4>
+Features
+</h4>
+
+<ul>
+    <li>Logbuch für eichrechtsrelevante Ereignisse und Konfigurationsänderungen</li>
+    <li>Änderung von Uhrzeit oder Datum</li>
+    <li>Änderung des Stromwandlerverhältnisses</li>
+    <li>Änderung der Impulsrate und Impulsdauer</li>
+    <li>Änderung des Spannungswandlerverhältnisses</li>
+    <li>Gepufferte interne Uhr</li>
+</ul>
+
+<p>
+    Die interne Uhr wird bei einem Spannungsausfall gepuffert.
+    Der Lastgang wird alle 15 Minuten gespeichert. Die gespeicherten
+    Daten können über die Schnittstelle ausgelesen oder direkt am
+    Display eingesehen werden.
+</p>
+
+<h3>
+5. Funkkommunikation
+</h3>
+
+<h3>
+5.1. LoRaWAN®- und mioty®-Funkschnittstelle
+</h3>
+
+<p>
+    Die LoRaWAN®- bzw. mioty®-Funktechnologie ermöglicht die
+    Kommunikation zwischen Messgeräten, Sensoren und Aktoren über
+    frei nutzbare Funkfrequenzen. Beide Technologien wurden speziell
+    für das Internet of Things (IoT) entwickelt und sind auf große
+    Reichweiten bei gleichzeitig hoher Übertragungssicherheit
+    ausgelegt.
+</p>
+
+<p>
+    Der Hyperion verfügt optional über eine integrierte
+    LoRaWAN®-Funkschnittstelle. Das Gerät ist als Klasse-C-Gerät
+    konzipiert und kann dadurch jederzeit LoRaWAN®-Kommandos
+    empfangen. Die zu übertragenden Messwerte sind frei
+    konfigurierbar und können flexibel an die jeweiligen
+    Anforderungen angepasst werden.
+</p>
+
+<p>
+    Die mioty®-Variante unterstützt aktuell ausschließlich
+    Uplink-Kommunikation und kann keine Downlink-Nachrichten
+    empfangen.
+</p>
+
+<h3>
+5.2. Betrieb von LoRaWAN®- und mioty®-Netzwerken
+</h3>
+
+<p>
+    Der Hyperion Energiezähler kann betrieben werden in:
+</p>
+
+<ul>
+    <li>bestehenden LoRaWAN®- oder mioty®-Netzwerken</li>
+    <li>selbst betriebenen LoRaWAN®- oder mioty®-Netzwerken</li>
+    <li>von DIEHL bereitgestellten mioty®-Netzwerken</li>
+</ul>
+
+<p>
+    Dadurch ist auch der kostengünstige Betrieb eigener
+    LoRaWAN®- oder mioty®-Netzwerke möglich.
+</p>
+
+<h3>
+5.3. Technische Features
+</h3>
+
+<ul>
+    <li>Interne Antenne optimiert für den Frequenzbereich 863 bis 870 MHz</li>
+    <li>Optionales Modell mit SMA-Buchse für externe Antennen</li>
+    <li>Sendeleistung von bis zu 14 dBm</li>
+    <li>Klasse-C-Gerät, alternativ als Klasse-A-Gerät betreibbar</li>
+    <li>Automatische Uhrzeitsynchronisation über das LoRaWAN®-Netzwerk</li>
+    <li>Unterstützung von OTAA und ABP als Join-Verfahren</li>
+    <li>Flexible Konfiguration von Inhalt und Intervall der Uplink-Nachrichten</li>
+    <li>De- und Encoder bereits in The Things Network hinterlegt</li>
+    <li>Freie Verfügbarkeit der De- und Encoder für Drittanwendungen</li>
+    <li>Statusanzeige für LoRaWAN® und mioty® auf dem LC-Display</li>
+</ul>
+
+<h3>
+6. Bestellinformationen und Produktinformationen
+</h3>
+
+<h3>
+6.1. Bestellinformationen
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Ausführung</th>
+                <th>Typ</th>
+                <th>Art.-Nr.</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Hyperion Energy Meter mit Direktmessung bis 100 A</td>
+                <td>LoRaWAN®, interne Antenne</td>
+                <td>S-HYPE-LOEU-D-INT</td>
+            </tr>
+
+            <tr>
+                <td>Hyperion Energy Meter mit Direktmessung bis 100 A</td>
+                <td>LoRaWAN®, externe Antenne</td>
+                <td>S-HYPE-LOEU-D-EXT</td>
+            </tr>
+
+            <tr>
+                <td>Hyperion Energy Meter mit Direktmessung bis 100 A</td>
+                <td>mioty®, interne Antenne</td>
+                <td>S-HYPE-MIOTY-D-INT</td>
+            </tr>
+
+            <tr>
+                <td>Hyperion Energy Meter mit Direktmessung bis 100 A</td>
+                <td>mioty®, externe Antenne</td>
+                <td>S-HYPE-MIOTY-D-EXT</td>
+            </tr>
+
+            <tr>
+                <td>Hyperion Energy Meter mit Stromwandleranschluss</td>
+                <td>LoRaWAN®, interne Antenne</td>
+                <td>S-HYPE-LOEU-W-INT</td>
+            </tr>
+
+            <tr>
+                <td>Hyperion Energy Meter mit Stromwandleranschluss</td>
+                <td>LoRaWAN®, externe Antenne</td>
+                <td>S-HYPE-LOEU-W-EXT</td>
+            </tr>
+
+            <tr>
+                <td>Hyperion Energy Meter mit Stromwandleranschluss</td>
+                <td>mioty®, interne Antenne</td>
+                <td>S-HYPE-MIOTY-W-INT</td>
+            </tr>
+
+            <tr>
+                <td>Hyperion Energy Meter mit Stromwandleranschluss</td>
+                <td>mioty®, externe Antenne</td>
+                <td>S-HYPE-MIOTY-W-EXT</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+           <p>
+    3/100
+</p>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_2.png"
+        alt="Hyperion 3/100"
+        loading="lazy"
+    >
+    <figcaption>
+        Abbildung 3. Hyperion 3/100.
+    </figcaption>
+</figure>
+
+<p>
+    3/5
+</p>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_3.png"
+        alt="Hyperion 3/5"
+        loading="lazy"
+    >
+    <figcaption>
+        Abbildung 4. Hyperion 3/5.
+    </figcaption>
+</figure>
+
+<h3>
+6.2. Produktinformationen
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Merkmal</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Wirkenergie</td>
+                <td>
+                    Klasse B (1 %) nach EN50470-3 Direktanschlusszähler<br>
+                    Klasse B (1 %) nach EN50470-3 Wandlerzähler
+                </td>
+            </tr>
+
+            <tr>
+                <td>Blindenergie</td>
+                <td>Klasse 2 (2 %) nach EN62053</td>
+            </tr>
+
+            <tr>
+                <td>Betriebsspannung</td>
+                <td>
+                    L-L: 400 VAC ±20 %<br>
+                    L-N: 230 VAC ±20 %
+                </td>
+            </tr>
+
+            <tr>
+                <td>Maximalstrom</td>
+                <td>
+                    Direktmessende Zähler: 100 A<br>
+                    Wandlerzähler: 6 A
+                </td>
+            </tr>
+
+            <tr>
+                <td>Anlaufstrom</td>
+                <td>
+                    Direktmessende Zähler: 20 mA bei Leistungsfaktor 1<br>
+                    Wandlerzähler: 1 mA bei Leistungsfaktor 1
+                </td>
+            </tr>
+
+            <tr>
+                <td>Netzfrequenz</td>
+                <td>
+                    Nennfrequenz: 50 Hz, 60 Hz auf Anfrage<br>
+                    Grenzfrequenzen: 40 bis 65 Hz
+                </td>
+            </tr>
+
+            <tr>
+                <td>Eigenverbrauch</td>
+                <td>
+                    Spannungspfad: 0,8 VA / 0,8 W pro Phase<br>
+                    Strompfad Wandlerzähler: 0,075 VA pro Phase
+                </td>
+            </tr>
+
+            <tr>
+                <td>Strom- und Spannungsanschluss</td>
+                <td>
+                    Direktmessende Zähler: 1,5 bis 35 mm², Drehmoment 2 Nm, max. 3 Nm<br>
+                    Wandlerzähler: 1 bis 6 mm², Drehmoment 0,8 Nm, max. 1 Nm
+                </td>
+            </tr>
+
+            <tr>
+                <td>Tarifumschaltung</td>
+                <td>
+                    2- oder 4-Tarif-Betrieb (am Zähler konfigurierbar)<br>
+                    Tarifumschaltung: 230 VAC
+                </td>
+            </tr>
+
+            <tr>
+                <td>Stromwandlerverhältnisse</td>
+                <td>
+                    Beim Hyperion 3/5 ist das Stromwandlerverhältnis mehrfach konfigurierbar.<br>
+                    Stromwandler /5 A: 5/5 A bis 20'000/5 A in 5-A-Schritten<br>
+                    Stromwandler /1 A: 1/1 A bis 4'000/1 A in 1-A-Schritten
+                </td>
+            </tr>
+
+            <tr>
+                <td>Anzeige (LCD)</td>
+                <td>
+                    Dynamische 8-stellige Anzeige mit bis zu drei Nachkommastellen<br>
+                    Grafisches LC-Display mit Hintergrundbeleuchtung<br>
+                    Größe (L × H): 38 × 28 mm
+                </td>
+            </tr>
+
+            <tr>
+                <td>S0-Impulsausgang</td>
+                <td>
+                    Norm EN62053-31<br>
+                    Potenzialfreier Ausgang<br>
+                    Impulsrate pro kWh/kvarh: 1, 10, 100, 1'000 oder 10'000 Impulse<br>
+                    Impulslänge: 2 ms, 10 ms, 30 ms, 40 ms oder 120 ms<br>
+                    Impulsrate und Impulslänge am Zähler einstellbar
+                </td>
+            </tr>
+
+            <tr>
+                <td>Optionale Datenschnittstellen</td>
+                <td>
+                    LoRaWAN® oder mioty®<br>
+                    Optional mit SMA-Buchse für externe Antenne
+                </td>
+            </tr>
+
+            <tr>
+                <td>Optische (IR) D0-Schnittstelle</td>
+                <td>EN 62056-21</td>
+            </tr>
+
+            <tr>
+                <td>Datenerhalt</td>
+                <td>
+                    Speicherung im EEPROM, mindestens 10 Jahre<br>
+                    Optional: IOTA Tangle (Blockchain-Technologie)
+                </td>
+            </tr>
+
+            <tr>
+                <td>Uhr</td>
+                <td>
+                    Gepufferte Uhr (bis zu 18 Tage)<br>
+                    Zeitsynchronisation über Schnittstellen möglich
+                </td>
+            </tr>
+
+            <tr>
+                <td>Montage / Einbau</td>
+                <td>
+                    Lageunabhängig<br>
+                    Auf 35-mm-DIN-Schiene oder mit Fronteinbaurahmen
+                </td>
+            </tr>
+
+            <tr>
+                <td>Gewicht</td>
+                <td>ca. 350 g</td>
+            </tr>
+
+            <tr>
+                <td>Gehäuse</td>
+                <td>
+                    Polycarbonat, halogenfrei, recycelbar<br>
+                    Gehäuseschutzart IP51, Klemmenschutzart IP20<br>
+                    Schutzklasse II
+                </td>
+            </tr>
+
+            <tr>
+                <td>Abmessungen (L × B × T)</td>
+                <td>
+                    90 × 91 × 72 mm<br>
+                    5 Modulbreiten
+                </td>
+            </tr>
+
+            <tr>
+                <td>Zulassungen</td>
+                <td>
+                    CE und MID B + D<br>
+                    PTB-A 20.1<br>
+                    PTB-A 50.7<br>
+                    Geeignet für Energiemanagement nach ISO 50001
+                </td>
+            </tr>
+
+            <tr>
+                <td>Umweltbedingungen</td>
+                <td>
+                    Mechanisch: M2<br>
+                    Elektromagnetisch: E2<br>
+                    Betriebstemperatur: -25 °C bis +70 °C<br>
+                    Lagertemperatur: -30 °C bis +70 °C<br>
+                    Relative Luftfeuchtigkeit: Jahresmittel 75 %, kurzzeitig 90 %, nicht kondensierend
+                </td>
+            </tr>
+
+            <tr>
+                <td>Sicherheitshinweis</td>
+                <td>
+                    Die Stromzähler dürfen ausschließlich durch qualifizierte
+                    Elektrofachkräfte installiert werden. Stromwandler dürfen
+                    nicht im offenen Zustand betrieben werden, da gefährliche
+                    Spannungen auftreten können. Dies kann Personen- und
+                    Sachschäden verursachen.
+                </td>
+            </tr>
+
+            <tr>
+                <td>Geräteauswahl</td>
+                <td>
+                    Um eine möglichst einfache Wartung bzw. einen einfachen
+                    Austausch (z. B. aufgrund der Eichgültigkeit) zu ermöglichen,
+                    sollten die Anforderungen der jeweiligen Anlage bereits bei
+                    der Geräteauswahl berücksichtigt werden.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+           <p>
+    <strong>Disclaimer</strong>
+</p>
+
+<p>
+    Diese Dokumentation kann zukunftsbezogene Aussagen enthalten,
+    die auf den aktuellen Annahmen und Einschätzungen der
+    Unternehmensleitung beruhen. Solche Aussagen werden durch
+    entsprechende Formulierungen als zukunftsgerichtet gekennzeichnet.
+</p>
+
+<p>
+    Zukunftsbezogene Aussagen sind keine Garantien für zukünftige
+    Entwicklungen. Die tatsächliche Geschäftsentwicklung der
+    Sentinum GmbH sowie ihrer verbundenen Unternehmen kann aufgrund
+    verschiedener Risiken, Unsicherheiten und externer Faktoren
+    wesentlich von den dargestellten Erwartungen abweichen.
+</p>
+
+<p>
+    Zu diesen Faktoren zählen insbesondere Veränderungen des
+    wirtschaftlichen Umfelds, das Verhalten von Wettbewerbern,
+    Marktteilnehmern oder Gesetzgebern. Viele dieser Einflüsse
+    liegen außerhalb des direkten Einflussbereichs der
+    Sentinum GmbH und können nicht zuverlässig prognostiziert werden.
+</p>
+
+<p>
+    Eine Aktualisierung der in dieser Dokumentation enthaltenen
+    zukunftsbezogenen Aussagen ist nicht vorgesehen. Die
+    Sentinum GmbH übernimmt hierfür keine gesonderte Verpflichtung.
+</p>
+
+<h3>
+7. Sicherheitshinweise
+</h3>
+
+<p>
+    Bitte lesen Sie diese Betriebsanleitung sowie alle weiteren von
+    der Sentinum GmbH bereitgestellten Dokumente sorgfältig durch.
+</p>
+
+<p>
+    Beachten Sie bei der Verwendung des Hyperion Energiezählers alle
+    Sicherheitsvorschriften und Warnhinweise. Bei Nichtbeachtung
+    können erhebliche Personen- und Sachschäden entstehen.
+</p>
+
+<p>
+    Verwenden Sie den Hyperion ausschließlich innerhalb des
+    spezifizierten Einsatzbereichs. Eine Überschreitung der
+    zulässigen Grenzwerte kann zu Schäden an Personen oder Anlagen
+    führen. Nicht autorisierte Veränderungen am Gerät führen zum
+    Verlust möglicher Gewährleistungsansprüche.
+</p>
+
+<p>
+    Alle geltenden Sicherheits-, Installations- und
+    Werkvorschriften sind einzuhalten. Die Installation des
+    Hyperion Energiezählers darf ausschließlich durch
+    qualifiziertes und entsprechend geschultes Fachpersonal
+    erfolgen.
+</p>
+
+<p>
+    Die nachfolgenden Kennzeichnungen weisen auf unterschiedliche
+    Arten von Hinweisen und Gefahren hin:
+</p>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Diese Kennzeichnung beschreibt wichtige Informationen,
+        Verfahren oder Handhabungen für den ordnungsgemäßen Betrieb
+        des Geräts.
+    </p>
+</div>
+
+<div class="note-strip note-strip--red">
+    <strong>Warnung</strong>
+
+    <p style="margin-bottom:0;">
+        Diese Kennzeichnung weist auf Situationen hin, die zu
+        Sachschäden sowie zu schweren Verletzungen oder zum Tod
+        führen können.
+    </p>
+</div>
+
+            <p>
+    <strong>Wartung</strong>
+</p>
+
+<p>
+    Der Hyperion ist wartungsfrei. Im Schadensfall, beispielsweise
+    durch Falschanschluss oder unsachgemäße Lagerung, dürfen
+    Reparaturen ausschließlich durch Sentinum durchgeführt werden.
+</p>
+
+<p>
+    <strong>Haftungsausschluss</strong>
+</p>
+
+<p>
+    Die Auswahl des geeigneten Zählers sowie die Beurteilung der
+    Eignung für einen bestimmten Verwendungszweck liegen ausschließlich
+    in der Verantwortung des Käufers.
+</p>
+
+<p>
+    Für diese Auswahl wird keine Haftung oder Gewährleistung übernommen.
+    Angaben in Katalogen und Datenblättern stellen keine Zusicherung
+    bestimmter Produkteigenschaften dar, sondern basieren auf
+    Erfahrungswerten und Messungen.
+</p>
+
+<p>
+    Eine Haftung für Schäden, die durch fehlerhafte Bedienung,
+    Projektierung oder Fehlfunktionen des Energiezählers entstehen,
+    ist ausgeschlossen.
+</p>
+
+<p>
+    Der Betreiber bzw. Projektierer hat sicherzustellen, dass
+    Fehlbedienungen, Fehlprojektierungen oder Fehlfunktionen nicht
+    zu weiterführenden Schäden führen können.
+</p>
+
+<p>
+    Für Mängel oder Schäden, die durch unsachgemäßen Einsatz des
+    Hyperion Energiezählers oder durch Nichtbeachtung dieser
+    Betriebsanleitung entstehen, übernimmt die Sentinum GmbH
+    keine Gewährleistung.
+</p>
+
+<h3>
+7.1. Pflichten des Kunden
+</h3>
+
+<p>
+    <strong>Datensicherung und Sicherheitskopien</strong>
+</p>
+
+<p>
+    Der Kunde ist unabhängig von der Art der Installation des
+    Hyperion Energiezählers ausschließlich selbst für die
+    Datensicherung verantwortlich. Die Risiken und Aufwände
+    des Betriebs liegen beim Kunden.
+</p>
+
+<p>
+    Im Rahmen zusätzlicher Dienstleistungen kann Sentinum den Kunden
+    bei der Entwicklung geeigneter Konzepte unterstützen. Der Kunde
+    hat die für einen sicheren Betrieb erforderlichen Datenauslesungen
+    sowie Sicherungskopien zu erstellen und diese sicher aufzubewahren.
+</p>
+
+<p>
+    <strong>Pflicht zur Überwachung</strong>
+</p>
+
+<p>
+    Der Kunde ist verpflichtet, geeignete Überwachungsmaßnahmen
+    einzusetzen, damit ein Ausfall von Messstellen unverzüglich,
+    spätestens jedoch innerhalb von 24 Stunden, erkannt wird.
+</p>
+
+<p>
+    <strong>Zugangsberechtigungen</strong>
+</p>
+
+<p>
+    Der Kunde ist dafür verantwortlich, den Hyperion durch geeignete
+    technische und organisatorische Maßnahmen vor unbefugtem Zugriff
+    zu schützen.
+</p>
+
+<p>
+    <strong>Verantwortung für die IT-Umgebung</strong>
+</p>
+
+<p>
+    Der Kunde ist für seine IT-Umgebung sowie die Sicherstellung
+    des Zugangs verantwortlich. Der Kunde nimmt zur Kenntnis,
+    dass der Hyperion Energiezähler und zukünftige Firmware-Updates
+    bestimmte Systemanforderungen voraussetzen.
+</p>
+
+<p>
+    Der Kunde ist selbst dafür verantwortlich, diese Anforderungen
+    zu erfüllen sowie die notwendige Hardware und ausreichend
+    qualifiziertes Personal bereitzustellen.
+</p>
+
+<p>
+    Der Kunde hat angemessene Maßnahmen für den Fall zu treffen,
+    dass der Hyperion Energiezähler ganz oder teilweise nicht
+    ordnungsgemäß arbeitet. Dazu gehören beispielsweise:
+</p>
+
+<ul>
+    <li>tägliche Datensicherungen,</li>
+    <li>Störungsdiagnosen,</li>
+    <li>regelmäßige Prüfung der Messergebnisse,</li>
+    <li>Notfall- und Wiederanlaufplanung.</li>
+</ul>
+
+<p>
+    Die hierfür notwendige Infrastruktur sowie die technische
+    Leistungsfähigkeit der Arbeitsumgebung liegen vollständig
+    in der Verantwortung des Kunden.
+</p>
+
+<p>
+    Da sich Systemanforderungen durch Firmware-Updates oder den
+    laufenden Betrieb ändern können, ist der Kunde verpflichtet,
+    regelmäßig zu prüfen, ob die Anforderungen weiterhin erfüllt
+    werden.
+</p>
+
+<p>
+    Die Datenloggereinträge des Hyperion sind täglich auszulesen
+    und zu archivieren.
+</p>
+         <h3>
+7.2. Lieferumfang und Eingangskontrolle
+</h3>
+
+<p>
+    <strong>Lieferumfang</strong>
+</p>
+
+<ul>
+    <li>
+        Eine Kurzanleitung mit den wichtigsten Informationen zum
+        Hyperion Energiezähler. Lesen Sie diese sorgfältig durch.
+    </li>
+
+    <li>
+        Ein Hyperion Energiezähler.
+    </li>
+</ul>
+
+<p>
+    Sollte Ihre Lieferung offensichtliche Schäden aufweisen,
+    kontaktieren Sie uns bitte umgehend per E-Mail. Geben Sie dabei
+    für jedes betroffene Gerät die Seriennummer sowie die zugehörige
+    Lieferschein- oder Rechnungsnummer an.
+</p>
+
+<h3>
+8. Weitere Informationen zum Aufbau, Produkt, Messverfahren und Nutzung
+</h3>
+
+<h3>
+8.1. Produktbeschreibung
+</h3>
+
+<p>
+    Der Hyperion ist:
+</p>
+
+<ul>
+    <li>
+        ausschließlich als Dreiphasen-Energiezähler einsetzbar. Die
+        MID-Konformität besteht ausschließlich im dreiphasigen Betrieb.
+    </li>
+
+    <li>
+        für die statische Dreiphasen-Messung der bezogenen und
+        gelieferten Wirkenergie nach EN50470-3:2006 in Wohn-,
+        Gewerbe- und Industrieumgebungen vorgesehen.
+        <ul>
+            <li>Diese Messungen können für Verrechnungszwecke verwendet werden.</li>
+        </ul>
+    </li>
+
+    <li>
+        für die statische Dreiphasen-Messung der bezogenen und
+        gelieferten Blindenergie nach EN62053 in Wohn-, Gewerbe-
+        und Industrieumgebungen vorgesehen.
+        <ul>
+            <li>Diese Messungen können für Verrechnungszwecke verwendet werden.</li>
+        </ul>
+    </li>
+
+    <li>
+        im einphasigen Betrieb nicht MID-konform. Das vorgegebene
+        Anschlussschema ist zwingend einzuhalten.
+    </li>
+
+    <li>
+        für den Einbau in stationären, vor Witterung geschützten
+        Schaltschränken innerhalb von Gebäuden geeignet.
+    </li>
+
+    <li>
+        in Vierleiternetzen sowie TN-Netzen einsetzbar.
+    </li>
+
+    <li>
+        in der Variante 3/100 für Direktstrommessungen bis 100 A
+        geeignet.
+    </li>
+
+    <li>
+        für Messungen in Mittel- und Hochspannungsnetzen ausschließlich
+        in Verbindung mit Strom- und Spannungswandlern geeignet.
+        <ul>
+            <li>
+                Der Einsatz von Spannungswandlern ist nicht zertifiziert,
+                die Messwerte sind nicht eichrechtlich gültig.
+            </li>
+            <li>
+                Spannungswandler können ausschließlich im Verhältnis
+                ../100 eingestellt werden.
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        in der Variante 3/5 für Strommessungen über externe
+        ../1-A- oder ../5-A-Stromwandler vorgesehen.
+    </li>
+
+    <li>
+        für den Einsatz in Wohn-, Gewerbe- und Industrieanwendungen
+        geeignet.
+    </li>
+
+    <li>
+        in der LP-Ausführung für Lastgangmessungen nach
+        PTB-A 20.1 und PTB-A 50.7 zertifiziert.
+    </li>
+</ul>
+
+<p>
+    Die Messdaten können auf dem Display angezeigt und je nach
+    Geräteausführung über die vorhandenen Schnittstellen ausgelesen
+    und weiterverarbeitet werden.
+</p>
+
+<h3>
+8.2. Messverfahren
+</h3>
+
+<p>
+    Die Messung von Strom und Spannung erfolgt kontinuierlich.
+    Der Hyperion misst Strom und Spannung jeweils über einen Zeitraum
+    von einer Sekunde und startet anschließend automatisch einen
+    neuen Messzyklus.
+</p>
+
+<p>
+    Während dieses Messintervalls werden die relevanten elektrischen
+    Messgrößen erfasst und für die weitere Berechnung von Energie-,
+    Leistungs- und Zustandswerten verarbeitet.
+</p>
+            <ul>
+    <li>
+        Der Hyperion erfasst 8192 Messpunkte für Spannung (U) und
+        Strom (I). Diese Messpunkte verfügen über eine Auflösung
+        von 32 Bit.
+    </li>
+
+    <li>
+        Alle Messwerte für Spannung (U) und Strom (I) werden
+        quadriert, aufsummiert und anschließend durch die Anzahl
+        der Messpunkte (8192) dividiert. Aus der Quadratwurzel
+        dieses Ergebnisses wird der jeweilige Effektivwert
+        berechnet.
+    </li>
+</ul>
+
+<p>
+    Der Effektivwert der Spannung ergibt sich aus:
+</p>
+
+<pre>
+Ueff = √((U₁² + U₂² + ... + U₈₁₉₂²) / 8192)
+</pre>
+
+<p>
+    Der Effektivwert des Stroms ergibt sich aus:
+</p>
+
+<pre>
+Ieff = √((I₁² + I₂² + ... + I₈₁₉₂²) / 8192)
+</pre>
+
+<p>
+    Der Leistungsfaktor λ (cos φ) wird berechnet aus:
+</p>
+
+<pre>
+λ = ∫ U × I dt / S
+
+λ = ∫ U × I dt / (Ueff × Ieff)
+</pre>
+
+<p>
+    Die Wirkleistung P wird berechnet aus:
+</p>
+
+<pre>
+P = PF × F
+</pre>
+
+<h3>
+8.3. Bedienkonzept
+</h3>
+
+<p>
+    Im Folgenden werden die Bedienelemente des Hyperion
+    Energiezählers erläutert.
+</p>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_4.jpg"
+        alt="Bedienelemente des Hyperion Energiezählers"
+        loading="lazy"
+    >
+    <figcaption>
+        Abbildung 5. Bedienelemente des Hyperion Energiezählers.
+    </figcaption>
+</figure>
+
+<p>
+    <strong>Tasten</strong>
+</p>
+
+<p>
+    Die Bedienung des Zählers erfolgt über zwei Touch-Buttons
+    sowie eine Service-Taste (SRVC).
+</p>
+
+<h4>
+Pfeil Rechts (Button 1)
+</h4>
+
+<ul>
+    <li>
+        Kurze Betätigung (&lt; 2 s): Wechsel zur nächsten
+        Hauptmenüseite.
+    </li>
+
+    <li>
+        Lange Betätigung (&gt; 2 s): Wechsel zur vorherigen
+        Hauptmenüseite (ab Firmware 1.3.0).
+    </li>
+</ul>
+
+<h4>
+Pfeil Runter (Button 2)
+</h4>
+
+<ul>
+    <li>
+        Kurze Betätigung (&lt; 2 s): Wechsel zwischen den
+        Untermenüseiten des aktuellen Hauptmenüs.
+    </li>
+
+    <li>
+        Lange Betätigung (&gt; 2 s): Ausführen der jeweiligen
+        Sonderfunktion im Untermenü.
+    </li>
+</ul>
+
+<h4>
+Service-Taste (SRVC)
+</h4>
+
+<ul>
+    <li>
+        Die Service-Taste ist versenkt im Gehäuse angebracht
+        und darf nur mit einem dünnen, nicht leitenden Werkzeug
+        betätigt werden.
+    </li>
+
+    <li>
+        Kurze Betätigung (&lt; 2 s): Aktiviert den Editiermodus
+        im Menü „Einstellungen“.
+    </li>
+
+    <li>
+        Zweite kurze Betätigung (&lt; 2 s): Verlassen des
+        Editiermodus ohne Speichern.
+    </li>
+
+    <li>
+        Lange Betätigung (&gt; 2 s): Speichert vorgenommene
+        Änderungen im Menü „Einstellungen“.
+    </li>
+
+    <li>
+        Nach der Installation kann die Service-Taste durch
+        eine Plombierung gegen unbemerkte Änderungen geschützt
+        werden.
+    </li>
+</ul>
+
+<p>
+    Die Abdeckung der Strom- und Spannungsanschlüsse kann
+    ebenfalls plombiert werden.
+</p>
+
+<h3>
+8.4. Übersicht Frontansicht Hyperion
+</h3>
+
+<p>
+    Auf der Frontseite des Hyperion Energiezählers befinden
+    sich die folgenden wesentlichen Bedienelemente und Anzeigen.
+</p>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_5.jpg"
+        alt="Frontansicht Hyperion Energiezähler"
+        loading="lazy"
+    >
+    <figcaption>
+        Abbildung 6. Frontansicht des Hyperion Energiezählers.
+    </figcaption>
+</figure>
+
+           <p>
+    Die Frontplatte verfügt zusätzlich über die folgenden
+    gekennzeichneten Elemente:
+</p>
+
+<ol>
+    <li>Typenbezeichnung</li>
+    <li>Wirkenergie-Zertifizierung</li>
+    <li>D0-Schnittstelle</li>
+    <li>Bedientaste „Pfeil rechts“</li>
+    <li>Bedientaste „Pfeil unten“</li>
+    <li>QR-Code mit Seriennummer und Webadresse</li>
+    <li>Anzahl der Phasen und Leiter</li>
+    <li>Seriennummer</li>
+    <li>Klassenbezeichnung</li>
+    <li>Referenzspannung und Referenzfrequenz</li>
+    <li>Betriebstemperatur</li>
+    <li>Strombereich</li>
+    <li>Firmenlogo</li>
+</ol>
+
+<h3>
+8.5. Übersicht des Hyperion Displays
+</h3>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_6.png">
+    <figcaption>
+        Abbildung 7. Übersicht des Hyperion Displays
+    </figcaption>
+</figure>
+
+<ol>
+    <li>Aktueller Tarif</li>
+
+    <li>
+        Aktive Kommunikationsschnittstelle
+        (modellabhängig)
+    </li>
+
+    <li>Phasenreihenfolge</li>
+
+    <li>
+        Vier-Quadranten-Anzeige für Wirkenergie:
+        <ol>
+            <li><code>&lt;&lt;P</code>: Wirkenergie wird eingespeist.</li>
+            <li><code>P&gt;&gt;</code>: Wirkenergie wird bezogen.</li>
+        </ol>
+    </li>
+
+    <li>
+        Vier-Quadranten-Anzeige für Blindleistung:
+        <ol>
+            <li><code>&lt;&lt;Q</code>: Blindleistung wird eingespeist (induktiv).</li>
+            <li><code>Q&gt;&gt;</code>: Blindleistung wird bezogen (kapazitiv).</li>
+        </ol>
+    </li>
+
+    <li>Messwert / Menüpunkt</li>
+    <li>Untermenüpunkt</li>
+    <li>Aktueller Messwert</li>
+    <li>Einheit des aktuellen Messwerts</li>
+</ol>
+
+<p>
+    Die folgende Tabelle enthält alle Symbole, die auf dem Display
+    angezeigt werden können.
+</p>
+          <div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Beschreibung</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>T1</td>
+                <td>Zeigt die aktuell aktive Tarifstufe an. Die Zahl entspricht dem ausgewählten Tarif.</td>
+            </tr>
+
+            <tr>
+                <td>MODBUS</td>
+                <td>Die Kommunikationsschnittstelle des Zählers ist Modbus.</td>
+            </tr>
+
+            <tr>
+                <td>ETH</td>
+                <td>Die Kommunikationsschnittstelle des Zählers ist TCP/IP.</td>
+            </tr>
+
+            <tr>
+                <td>M-BUS</td>
+                <td>Die Kommunikationsschnittstelle des Zählers ist M-Bus.</td>
+            </tr>
+
+            <tr>
+                <td>LORA</td>
+                <td>Die Kommunikationsschnittstelle des Zählers ist LoRaWAN®.</td>
+            </tr>
+
+            <tr>
+                <td>L123</td>
+                <td>
+                    Alle drei Phasen sind angeschlossen. Werden einzelne Zahlen
+                    durch „-“ ersetzt, sind die entsprechenden Phasen nicht
+                    angeschlossen.
+                </td>
+            </tr>
+
+            <tr>
+                <td>▶▶</td>
+                <td>Der Zähler misst aktuell den Bezug von Wirkenergie.</td>
+            </tr>
+
+            <tr>
+                <td>◀◀</td>
+                <td>Der Zähler misst aktuell die Lieferung von Wirkenergie.</td>
+            </tr>
+
+            <tr>
+                <td>Q+</td>
+                <td>Der Zähler misst aktuell den Bezug von Blindenergie (kapazitiv).</td>
+            </tr>
+
+            <tr>
+                <td>Q−</td>
+                <td>Der Zähler misst aktuell die Lieferung von Blindenergie (induktiv).</td>
+            </tr>
+
+            <tr>
+                <td>OF</td>
+                <td>Ein oder mehrere Energieregister haben einen Überlauf (Overflow) erkannt.</td>
+            </tr>
+
+            <tr>
+                <td>MEM</td>
+                <td>
+                    Der interne Speicher des Zählers ist fehlerhaft.
+                   Erstellen Sie ein Ticket unter 
+                   <a href="https://www.emuag.ch/support/formulare/">https://www.emuag.ch/support/formulare/</a>.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+           <p>
+    Folgende Symbole treten ausschließlich bei der LP-Version
+    des Hyperion Energiezählers auf.
+</p>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Beschreibung</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>TNV</td>
+                <td>
+                    Die Uhrzeit auf dem Zähler ist nicht gültig.
+                    Synchronisieren Sie Datum und Uhrzeit des Geräts.
+                </td>
+            </tr>
+
+            <tr>
+                <td>TNS</td>
+                <td>
+                    Die Uhrzeit auf dem Zähler ist nicht korrekt
+                    synchronisiert.
+                </td>
+            </tr>
+
+            <tr>
+                <td>NTP</td>
+                <td>
+                    Betrifft nur Geräte mit TCP/IP-Schnittstelle.
+                    Der Zähler hat seit mindestens einer Stunde keine
+                    Zeitsynchronisation mehr erhalten.
+                </td>
+            </tr>
+
+            <tr>
+                <td>PTB NV</td>
+                <td>
+                    Der Zähler befindet sich in einem eichrechtlich
+                    ungültigen Zustand. Weitere Messungen dürfen
+                    nicht mehr für Verrechnungszwecke verwendet werden.
+                </td>
+            </tr>
+
+            <tr>
+                <td>MEM</td>
+                <td>
+                    Der interne Speicher des Zählers ist defekt.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+           <h3>
+8.6. Kompatible Geräte
+</h3>
+
+<p>
+    Unterstützte Schnittstellen:
+</p>
+
+<ul>
+    <li>M-Bus</li>
+    <li>TCP/IP, Modbus TCP</li>
+    <li>Modbus RTU</li>
+    <li>LoRaWAN®</li>
+</ul>
+
+<h3>
+9. Montage
+</h3>
+
+<p>
+    Der Hyperion kann lageunabhängig montiert werden. Der Zähler ist
+    für die Montage auf einer DIN-Schiene nach EN 50022 ausgelegt.
+    Alternativ kann der Zähler mit einem Fronteinbaurahmen installiert
+    werden. Um den Zähler von einer DIN-Schiene zu entfernen, ziehen
+    Sie an der federgespannten Verriegelung auf der Vorderseite des
+    Geräts. Die Verkabelung von Wandlerzählern sollte möglichst kurz
+    gehalten werden.
+</p>
+
+<p>
+    Sollten nach der Inbetriebnahme größere Messabweichungen auftreten,
+    beachten Sie bitte die folgenden Hinweise:
+</p>
+
+<ul>
+    <li>
+        Der Einsatz von Rogowski-Spulen wird bei Wandlerzählern aufgrund
+        der mehrfachen Strom- und Spannungswandlung mit externer
+        Verstärkung nicht empfohlen. Jede Wandlungs- und
+        Verstärkungsstufe erhöht den möglichen Messfehler.
+    </li>
+</ul>
+
+<h4>Eigenverbrauch</h4>
+
+<p>
+    Jeder Energiezähler besitzt einen Eigenverbrauch. Ein Hauptzähler
+    misst daher in der Regel mehr Energie als die Summe der
+    nachgeschalteten Unterzähler. Ein Hyperion benötigt abhängig vom
+    Modell bis zu 2 W pro Phase. Daraus ergibt sich ein typischer
+    Eigenverbrauch von etwa 36 kWh pro Jahr beziehungsweise maximal
+    52,5 kWh pro Jahr.
+</p>
+
+<h4>Anlaufstrom</h4>
+
+<ul>
+    <li>
+        Der Hyperion 3/5 beginnt ab einer Phasenstromstärke von 1 mA
+        zu zählen.
+    </li>
+    <li>
+        Der Hyperion 3/100 beginnt ab einer Phasenstromstärke von
+        20 mA zu zählen.
+    </li>
+    <li>
+        Bei Wandlerzählern müssen die verwendeten Stromwandler
+        entsprechend dimensioniert werden.
+    </li>
+</ul>
+
+<h4>Genauigkeit</h4>
+
+<ul>
+    <li>
+        Der Hyperion entspricht gemäß EN 50470 der Genauigkeitsklasse B
+        für Wirkenergie und der Klasse 2 für Blindenergie.
+    </li>
+
+    <li>
+        Dadurch können Messabweichungen von bis zu 1 % bei Wirkenergie
+        und bis zu 2 % bei Blindenergie auftreten.
+    </li>
+
+    <li>
+        Die Gesamtenergie eines Hauptzählers wird nur einmal von diesem
+        Fehler beeinflusst, während sich Messabweichungen bei mehreren
+        Unterzählern addieren können.
+    </li>
+
+    <li>
+        Beispiel: Ein Hauptzähler versorgt 20 Unterzähler. Jeder
+        Unterzähler misst 0,2 % zu wenig Energie, während der
+        Hauptzähler 0,2 % zu viel misst. Bei einem tatsächlichen
+        Energieverbrauch von 100 kWh ergibt sich dadurch eine
+        Energiedifferenz von 4,2 kWh beziehungsweise 4,2 %.
+    </li>
+</ul>
+
+<h4>Energierichtung (Wandlerzähler)</h4>
+
+<ul>
+    <li>
+        Werden ausschließlich positive Ströme erwartet, jedoch ein oder
+        mehrere Ströme mit negativem Vorzeichen angezeigt, ist der
+        jeweilige Stromwandler in umgekehrter Richtung angeschlossen.
+    </li>
+</ul>
+
+<h4>Wandlerfaktor (Wandlerzähler)</h4>
+
+<ul>
+    <li>
+        Die Wandlerfaktoren des Zählers müssen entsprechend den
+        installierten Strom- und Spannungswandlern eingestellt werden.
+    </li>
+</ul>
+
+<h4>Korrekte Phasenzuordnung</h4>
+
+<ul>
+    <li>
+        Strom L1 und Spannung L1 müssen demselben Messsystem zugeordnet
+        sein. Beachten Sie hierzu das jeweilige Anschlussschema für
+        Wandlerzähler.
+    </li>
+</ul>
+
+<p>
+    Das Gewicht eines Hyperion-Zählers beträgt ca. 350 g.
+</p>
+           <h3>
+9.1. Sicherheitshinweise
+</h3>
+
+<div class="note-strip note-strip--red">
+    <strong>Warnung</strong>
+
+    <p style="margin-bottom:0;">
+        Die Stromzähler dürfen ausschließlich durch qualifizierte
+        Elektrofachkräfte installiert werden. Stromwandler dürfen
+        nicht offen betrieben werden, da hierbei gefährliche
+        Spannungen auftreten können. Dies kann zu Personen- und
+        Sachschäden führen.
+    </p>
+</div>
+
+<div class="note-strip note-strip--red">
+    <strong>Gefahr</strong>
+
+    <p style="margin-bottom:0;">
+        Bei Montage, Installation und Austausch des Zählers müssen
+        sämtliche angeschlossenen Leiter spannungsfrei sein.
+        Das Berühren spannungsführender Teile ist lebensgefährlich.
+    </p>
+</div>
+
+<div class="note-strip note-strip--red">
+    <strong>Gefahr</strong>
+
+    <p style="margin-bottom:0;">
+        Der Hyperion 3/5 Wandlerzähler führt Spannung auf dem
+        Strompfad. Stellen Sie sicher, dass auch die Spannungspfade
+        spannungsfrei sind, bevor Stromwandler angeschlossen werden.
+        Das Berühren spannungsführender Teile ist lebensgefährlich.
+    </p>
+</div>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Vorsicht</strong>
+
+    <p style="margin-bottom:0;">
+        Gemäß DIN VDE 0100-557, Abschnitt 5.3.1, dürfen die
+        Sekundärklemmen von Stromwandlern in
+        Niederspannanlagenschaltanlagen nicht geerdet werden.
+    </p>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Für den Anschluss des Zählers dürfen ausschließlich die
+        vorgesehenen Schraub- und Federklemmen verwendet werden.
+        Die Verwendung von Aderendhülsen wird empfohlen.
+    </p>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Die Nichtbeachtung der Montagehinweise kann zu
+        Beschädigungen oder zur Zerstörung des Geräts führen.
+        Halten Sie sich deshalb unbedingt an die beschriebenen
+        Installationsvorgaben.
+    </p>
+</div>
+
+<h3>
+9.2. Inbetriebnahme / Überprüfung
+</h3>
+
+<p>
+    Bei der Inbetriebnahme sind folgende Punkte zwingend zu prüfen:
+</p>
+
+<ul>
+    <li>Drehfeldrichtung</li>
+    <li>Strom pro Phase und Energierichtung</li>
+    <li>Phasenreihenfolge L1 → L2 → L3</li>
+    <li>Stromwandlerverhältnis</li>
+    <li>Spannungswandlerverhältnis</li>
+    <li>Korrektes Anzugsmoment aller Klemmen</li>
+    <li>Bei Nutzung einer Ausleseschnittstelle: korrekte Adressierung</li>
+</ul>
+
+<p>
+    Der Hyperion Energiezähler darf ausschließlich zur Messung
+    elektrischer Energie verwendet werden und nur innerhalb der
+    angegebenen technischen Spezifikationen betrieben werden.
+</p>
+
+<h3>
+9.3. Standardeinstellungen ab Werk
+</h3>
+
+<p>
+    <strong>S0-Ausgang:</strong> Wirkenergie Bezug (Pin 6 + 7)
+</p>
+
+<p>
+    <strong>Wandlerzähler:</strong> 10 Impulse / kWh
+</p>
+
+<p>
+    <strong>Direktanschlusszähler:</strong> 1000 Impulse / kWh
+</p>
+
+<p>
+    <strong>Abmessungen:</strong>
+    Für die Abmessungen konsultieren Sie bitte das Dokument
+    „Massbild Dimensional Drawing Hyperion“ (Doc.Ref. 1420).
+</p>
+
+<h3>
+9.4. Anschlussschema Direktanschluss (3-Phasen-Betrieb)
+</h3>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_7.png"
+        alt="Anschlussschema Hyperion Direktanschluss"
+        loading="lazy"
+    >
+    <figcaption>
+        Abbildung 8. Anschlussschema für den Direktanschluss im 3-Phasen-Betrieb.
+    </figcaption>
+</figure>
+           <p>
+    Beim Direktanschlusszähler wird die Spannung intern abgegriffen.
+    Der Neutralleiter wird an der Klemme <code>N</code> angeschlossen.
+</p>
+
+<p>
+    Beachten Sie beim Anschluss der Stromleitungen die Pfeilmarkierungen
+    an den Anschlussklemmen des Zählers.
+    <code>Lx ↑</code> kennzeichnet den netzseitigen Anschluss,
+    <code>Lx ↓</code> den verbraucher- bzw. erzeugerseitigen Anschluss.
+</p>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Dies gilt auch dann, wenn der Hyperion ausschließlich gelieferte
+        Energie erfassen soll. Der Hyperion misst sowohl Bezugs- als auch
+        Lieferenergie korrekt.
+    </p>
+</div>
+
+<p>
+    Die folgende Tabelle enthält die wichtigsten Kenndaten der Anschlüsse.
+</p>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Ist</th>
+                <th>Imin</th>
+                <th>Itr</th>
+                <th>Iref</th>
+                <th>Imax</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>0.02 A</td>
+                <td>0.15 A</td>
+                <td>0.5 A</td>
+                <td>5 A</td>
+                <td>100 A</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="note-strip note-strip--red">
+    <strong>Gefahr</strong>
+
+    <p style="margin-bottom:0;">
+        Stellen Sie sicher, dass alle angeschlossenen Leitungen
+        spannungsfrei sind, bevor Sie diese prüfen oder verändern.
+        Das Berühren spannungsführender Komponenten kann zu schweren
+        Verletzungen oder zum Tod führen!
+    </p>
+</div>
+           <h3>
+9.5. Anschlussschema Direktanschluss (1-Phasen-Betrieb)
+</h3>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_8.png">
+    <figcaption>
+        Abbildung 9. Anschlussschema Direktanschluss (1-Phasen-Betrieb)
+    </figcaption>
+</figure>
+
+<p>
+    Der Energiezähler ist sowohl für den einphasigen als auch für den
+    dreiphasigen Betrieb geeignet. Die MID-Konformität besteht jedoch
+    ausschließlich im dreiphasigen Betrieb. Im einphasigen Betrieb ist
+    der Zähler nicht MID-konform.
+</p>
+
+<p>
+    Für den einphasigen Betrieb ist das dargestellte Anschlussschema
+    zwingend einzuhalten. Die entsprechenden Klemmen müssen gemäß der
+    Abbildung korrekt belegt werden, insbesondere die Zuordnung von
+    Phase (L) und Neutralleiter (N). Abweichungen vom vorgegebenen
+    Anschlussplan können zu Fehlmessungen oder Funktionsstörungen
+    führen.
+</p>
+
+<p>
+    Für den einphasigen Betrieb wird die Phase L1 über die Klemmen von
+    L3 geführt. Konkret bedeutet dies:
+</p>
+
+<ul>
+    <li>Die Einspeisung (L1) wird auf die L3-Eingangsklemme (↑) gelegt.</li>
+    <li>Der Abgang zur Last wird von der L3-Ausgangsklemme (↓) geführt.</li>
+    <li>Der Neutralleiter (N) wird wie vorgesehen direkt angeschlossen.</li>
+</ul>
+
+<p>
+    Die Klemmen von L1 und L2 bleiben in diesem Fall ungenutzt.
+</p>
+
+<h3>
+9.6. Anschlussschema Wandlerzähler
+</h3>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_8.1.png">
+    <figcaption>
+        Abbildung 10. Anschlussschema Wandlerzähler
+    </figcaption>
+</figure>
+
+<p>
+    Beim Wandlerzähler wird die Spannung extern abgegriffen. Schließen
+    Sie die jeweiligen Phasen an die Klemmen <code>L1</code>,
+    <code>L2</code> und <code>L3</code> an. Der Neutralleiter wird an
+    der Klemme <code>N</code> angeschlossen.
+</p>
+
+<p>
+    Beachten Sie beim Anschluss der Stromwandler die Pfeilrichtungen an
+    den Anschlussklemmen des Zählers.
+</p>
+
+<ul>
+    <li><code>S1 ↑</code> bezeichnet den netzseitigen Anschluss.</li>
+    <li><code>S2 ↓</code> bezeichnet den verbraucher- bzw. erzeugerseitigen Anschluss.</li>
+</ul>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Dies gilt auch dann, wenn der Hyperion ausschließlich gelieferte
+        Energie messen soll. Der Hyperion misst sowohl Energiebezug als
+        auch Energielieferung korrekt.
+    </p>
+</div>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Achtung</strong>
+
+    <p style="margin-bottom:0;">
+        Aufgrund der anliegenden Spannung auf dem Strompfad des
+        Hyperion Energiezählers 3/5 darf der angeschlossene
+        Stromwandler nicht geerdet werden.
+    </p>
+</div>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Gefahr</strong>
+
+    <p style="margin-bottom:0;">
+        Die zwei Anschlüsse zwischen <code>S2 ↓</code> der dritten Phase
+        und dem Neutralleiter sind für Funktionen vorgesehen, die sich
+        derzeit noch in Entwicklung befinden. An diese Anschlüsse darf
+        nichts angeschlossen werden. Falschanschlüsse können zur
+        Beschädigung oder Zerstörung des Zählers führen.
+    </p>
+</div>
+
+<p>
+    Die folgende Tabelle enthält die wichtigsten Kenndaten der beiden
+    Wandleranschlüsse:
+</p>
+           <div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Kenngröße</th>
+                <th>Stromwandler /5 A</th>
+                <th>Stromwandler /1 A</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Ist</td>
+                <td>0.005 A</td>
+                <td>0.001 A</td>
+            </tr>
+
+            <tr>
+                <td>Imin</td>
+                <td>0.05 A</td>
+                <td>0.01 A</td>
+            </tr>
+
+            <tr>
+                <td>Itr</td>
+                <td>0.25 A</td>
+                <td>0.05 A</td>
+            </tr>
+
+            <tr>
+                <td>Iref</td>
+                <td>5 A</td>
+                <td>1 A</td>
+            </tr>
+
+            <tr>
+                <td>Imax</td>
+                <td>6 A</td>
+                <td>1.2 A</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="note-strip note-strip--red">
+    <strong>Gefahr</strong>
+
+    <p style="margin-bottom:0;">
+        Stellen Sie sicher, dass alle angeschlossenen Leitungen
+        spannungsfrei sind, bevor Sie diese überprüfen oder ändern.
+        Das Berühren spannungsführender Komponenten kann schwere
+        Verletzungen bis hin zum Tod verursachen.
+    </p>
+</div>
+
+<h3>
+9.7. Anzugsdrehmoment
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Messkreis / Netz</th>
+                <th>Direktanschluss bis 35 mm² (Litze)</th>
+                <th>Wandleranschluss bis 6 mm² (Litze)</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Zuleitung L1 / L2 / L3</td>
+                <td>2 – 3 Nm</td>
+                <td>0.8 – 1 Nm</td>
+            </tr>
+
+            <tr>
+                <td>Zuleitung N</td>
+                <td>2 – 3 Nm</td>
+                <td>0.8 – 1 Nm</td>
+            </tr>
+        </tbody>
+    </table
+            <div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Es wird empfohlen, Aderendhülsen zu verwenden.
+    </p>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Alle rückseitigen Pins sind mit Federklemmanschlüssen ausgestattet.
+    </p>
+</div>
+
+<h3>
+9.8. Federklemmanschlüsse Litzenquerschnitt
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Anschluss</th>
+                <th>Leiterquerschnitt</th>
+                <th>Abisolierlänge</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>S0-Impulsausgang</td>
+                <td>1,5 mm² Litze</td>
+                <td>12 mm</td>
+            </tr>
+
+            <tr>
+                <td>Tarifansteuerung</td>
+                <td>1,5 mm² Litze</td>
+                <td>12 mm</td>
+            </tr>
+
+            <tr>
+                <td>M-Bus / Modbus</td>
+                <td>1,5 mm² Litze</td>
+                <td>12 mm</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Achten Sie beim Anschluss von Leitungen mit Strömen über
+        65 A auf einen ausreichend dimensionierten Leiterquerschnitt.
+    </p>
+</div>
+
+<h3>
+10. Bedienung
+</h3>
+
+<p>
+    Im Folgenden wird die Navigation durch die verschiedenen
+    Menüs und Untermenüs beschrieben.
+</p>
+
+<h3>
+10.1. Hauptmenüseiten
+</h3>
+
+<p>
+    Nach dem erstmaligen Anlegen der Versorgungsspannung erscheint
+    zunächst das Testbild. Nach etwa zwei Sekunden wird die
+    Hauptmenüseite „Wirkenergie Import“ angezeigt.
+</p>
+
+<p>
+    Mit jedem Drücken der Taste <strong>Pfeil Rechts</strong>
+    wird durch die verschiedenen Hauptmenüseiten navigiert.
+</p>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_9.png"
+        alt="Hauptmenüseiten des Hyperion Energiezählers"
+        loading="lazy"
+    >
+    <figcaption>
+        Abbildung 11. Übersicht der Hauptmenüseiten des Hyperion Energiezählers.
+    </figcaption>
+</figure>
+           <p>
+    Durch längeres Betätigen der Taste <strong>„Pfeil rechts“</strong>
+    (&gt; 2 s) kann das Kreismenü auch rückwärts durchlaufen werden
+    (Firmware-Version 1.3.0 oder neuer).
+</p>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Je nach Zählerkonfiguration können eine oder mehrere
+        Hauptmenüseiten nicht vorhanden sein. Beachten Sie hierzu die
+        oben dargestellte Übersicht.
+    </p>
+</div>
+
+<h3>
+10.2. Untermenüseiten
+</h3>
+
+<p>
+    Im Folgenden werden die verfügbaren Untermenüseiten beschrieben.
+</p>
+
+<h4>
+Energieanzeigen
+</h4>
+
+<p>
+    Die Hauptmenüseiten für Wirkenergie Import/Export und Blindenergie
+    Import/Export zeigen standardmäßig den gesamten Energiebezug bzw.
+    die gesamte Energielieferung an. Standardmäßig wird das folgende
+    Schema für die Untermenüseiten verwendet:
+</p>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_9.1.png">
+    <figcaption>
+        Abbildung 12. Energieanzeigen und Untermenüseiten
+    </figcaption>
+</figure>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Abweichende Anzeigen können konfiguriert werden. Weitere
+        Informationen finden Sie im Kapitel „Einstellungen der Anzeige“.
+    </p>
+</div>
+
+<p>
+    Um eine möglichst genaue Darstellung der Energiewerte zu
+    gewährleisten, verfügt der Hyperion über eine Autorange-Funktion.
+    Wird der darstellbare Bereich überschritten, erscheint auf dem
+    Display die Kennzeichnung <code>OF</code>. Die über die
+    Kommunikationsschnittstellen auslesbaren Register laufen erst bei
+    wesentlich höheren Werten über (ca. 18 Milliarden GWh) als die
+    Anzeige auf dem Display (99 Millionen MWh).
+</p>
+
+<p>
+    Die Energiewerte werden auf dem Display gemäß der folgenden
+    Skalierung dargestellt:
+</p>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Zählerstand (Wh)</th>
+                <th>Divisor (Prescaler)</th>
+                <th>Divisor (Dezimalstelle)</th>
+                <th>Displaybereich Start</th>
+                <th>Displaybereich Ende</th>
+                <th>Einheit</th>
+                <th>Änderung</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>100</td>
+                <td>10</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>kWh</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>10</td>
+                <td>100</td>
+                <td>10</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>kWh</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>100</td>
+                <td>100</td>
+                <td>10</td>
+                <td>0.1</td>
+                <td>0.9</td>
+                <td>kWh</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>1.000</td>
+                <td>100</td>
+                <td>10</td>
+                <td>1.0</td>
+                <td>9.9</td>
+                <td>kWh</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>10.000</td>
+                <td>100</td>
+                <td>10</td>
+                <td>10.0</td>
+                <td>99.9</td>
+                <td>kWh</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>100.000</td>
+                <td>100</td>
+                <td>10</td>
+                <td>100.0</td>
+                <td>999.9</td>
+                <td>kWh</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>1 × 10⁶</td>
+                <td>100</td>
+                <td>10</td>
+                <td>1000.0</td>
+                <td>9999.9</td>
+                <td>kWh</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>10 × 10⁶</td>
+                <td>100</td>
+                <td>10</td>
+                <td>10000.0</td>
+                <td>99999.9</td>
+                <td>kWh</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>100 × 10⁶</td>
+                <td>100</td>
+                <td>10</td>
+                <td>100000.0</td>
+                <td>999999.9</td>
+                <td>kWh</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>1 × 10⁹</td>
+                <td>100</td>
+                <td>10</td>
+                <td>1000000.0</td>
+                <td>9999999.9</td>
+                <td>kWh</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>10 × 10⁹</td>
+                <td>1000</td>
+                <td>1000</td>
+                <td>10000.000</td>
+                <td>99999.999</td>
+                <td>MWh</td>
+                <td>3 Dezimalstellen; Einheit MWh</td>
+            </tr>
+
+            <tr>
+                <td>100 × 10⁹</td>
+                <td>10.000</td>
+                <td>100</td>
+                <td>100000.00</td>
+                <td>999999.99</td>
+                <td>MWh</td>
+                <td>2 Dezimalstellen</td>
+            </tr>
+
+            <tr>
+                <td>1 × 10¹²</td>
+                <td>100.000</td>
+                <td>10</td>
+                <td>1000000.0</td>
+                <td>9999999.9</td>
+                <td>MWh</td>
+                <td>1 Dezimalstelle</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+            <div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Zählerstand (Wh) Bereich</th>
+                <th>Divisor (Prescaler)</th>
+                <th>Divisor (Dezimalstelle)</th>
+                <th>Display Bereichsstart</th>
+                <th>Display Bereichsende</th>
+                <th>Einheit</th>
+                <th>Änderung</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><strong>10 × 10¹²</strong></td>
+                <td>1 000 000</td>
+                <td>1</td>
+                <td>10000000</td>
+                <td>99999999</td>
+                <td>MWh</td>
+                <td>Keine Dezimalstellen</td>
+            </tr>
+
+            <tr>
+                <td><strong>100 × 10¹²</strong></td>
+                <td>-</td>
+                <td>-</td>
+                <td>Display Overflow</td>
+                <td>Display Overflow</td>
+                <td>MWh</td>
+                <td>Display Overflow, Neustart von 0</td>
+            </tr>
+
+            <tr>
+                <td><strong>1 × 10¹⁵</strong></td>
+                <td>-</td>
+                <td>-</td>
+                <td>Display Overflow</td>
+                <td>Display Overflow</td>
+                <td>MWh</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td><strong>10 × 10¹⁵</strong></td>
+                <td>-</td>
+                <td>-</td>
+                <td>Display Overflow</td>
+                <td>Display Overflow</td>
+                <td>MWh</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td><strong>100 × 10¹⁵</strong></td>
+                <td>-</td>
+                <td>-</td>
+                <td>Display Overflow</td>
+                <td>Display Overflow</td>
+                <td>MWh</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td><strong>1 × 10¹⁸</strong></td>
+                <td>-</td>
+                <td>-</td>
+                <td>Display Overflow</td>
+                <td>Display Overflow</td>
+                <td>MWh</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td><strong>10 × 10¹⁸</strong></td>
+                <td>-</td>
+                <td>-</td>
+                <td>Display Overflow</td>
+                <td>Display Overflow</td>
+                <td>MWh</td>
+                <td>Overflow Counter</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+           <p>
+    <strong>Maximaler Energieregisterwert:</strong>
+    18'446'744'073'709'600'000 Wh = 18'446,7 PWh
+</p>
+
+<h3>
+10.3. Leistung und Strombezug
+</h3>
+
+<p>
+    Die Hauptmenüseiten „Wirkleistung“, „Blindleistung“ und
+    „Scheinleistung“ zeigen jeweils die aktuelle Gesamtleistung
+    über alle drei Phasen an.
+</p>
+
+<p>
+    Mit der Taste <strong>Pfeil Runter</strong> kann zwischen
+    den Leistungswerten der einzelnen Phasen umgeschaltet werden.
+</p>
+
+<p>
+    Auf der Hauptmenüseite <strong>Strom</strong> wird standardmäßig
+    der Gesamtstrom aller drei Phasen angezeigt. Über die Taste
+    <strong>Pfeil Runter</strong> können die Stromwerte der einzelnen
+    Phasen aufgerufen werden.
+</p>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_10.png"
+        alt="Leistungs- und Stromanzeige Hyperion"
+        loading="lazy"
+    >
+    <figcaption>
+        Abbildung 13. Anzeige von Leistung und Stromwerten.
+    </figcaption>
+</figure>
+
+<p>
+    Die Vier-Quadranten-Darstellung zeigt den Zusammenhang zwischen
+    positiver und negativer Wirk- und Blindleistung. Bei negativer
+    Wirkleistung wird auch der angezeigte Strom negativ dargestellt.
+    Zusätzlich werden die Energierichtungen (P&gt;&gt;, Q&gt;&gt; usw.)
+    angezeigt.
+</p>
+
+<h4>
+Quadrant I
+</h4>
+
+<ul>
+    <li>Wirkleistung positiv, Wirkenergie-Bezugsregister wird erhöht.</li>
+    <li>Blindleistung positiv, Blindenergie-Bezugsregister wird erhöht.</li>
+</ul>
+
+<h4>
+Quadrant II
+</h4>
+
+<ul>
+    <li>Wirkleistung negativ, Wirkenergie-Lieferregister wird erhöht.</li>
+    <li>Blindleistung positiv, Blindenergie-Bezugsregister wird erhöht.</li>
+</ul>
+
+<h4>
+Quadrant III
+</h4>
+
+<ul>
+    <li>Wirkleistung negativ, Wirkenergie-Lieferregister wird erhöht.</li>
+    <li>Blindleistung negativ, Blindenergie-Lieferregister wird erhöht.</li>
+</ul>
+
+<h4>
+Quadrant IV
+</h4>
+
+<ul>
+    <li>Wirkleistung positiv, Wirkenergie-Bezugsregister wird erhöht.</li>
+    <li>Blindleistung negativ, Blindenergie-Lieferregister wird erhöht.</li>
+</ul>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_11.png"
+        alt="Vier-Quadranten-Diagramm Hyperion"
+        loading="lazy"
+    >
+    <figcaption>
+        Abbildung 14. Vier-Quadranten-Darstellung von Wirk- und Blindleistung.
+    </figcaption>
+</figure>
+
+<h3>
+10.4. Spannung, Leistungsfaktor und Frequenz
+</h3>
+
+<p>
+    Diese Menüseiten zeigen die aktuellen Werte für Spannung,
+    Leistungsfaktor und Frequenz an. Die Aktualisierung erfolgt
+    im Abstand von einer Sekunde.
+</p>
+
+<p>
+    Ist die Funktion <strong>Min/Max-Werte</strong> aktiviert,
+    können durch kurzes Betätigen (&lt; 1 s) der Taste
+    <strong>Pfeil Runter</strong> die maximalen und minimalen
+    Messwerte angezeigt werden.
+</p>
+
+<p>
+    Zusätzlich wird der Zeitstempel des jeweiligen Minimal-
+    beziehungsweise Maximalwerts angezeigt.
+</p>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_12.png"
+        alt="Anzeige von Spannung, Leistungsfaktor und Frequenz"
+        loading="lazy"
+    >
+    <figcaption>
+        Abbildung 15. Anzeige von Spannung, Leistungsfaktor und Frequenz.
+    </figcaption>
+</figure>
+
+<h4>
+Lastgang und Logbuch
+</h4>
+
+<p>
+    Mit einer kurzen Betätigung (&lt; 1 s) der Taste
+    <strong>Pfeil Runter</strong> kann durch die gespeicherten
+    Lastgänge und Logbucheinträge navigiert werden. Die Anzeige
+    beginnt jeweils mit dem neuesten Eintrag.
+</p>
+
+<p>
+    Mit einer längeren Betätigung (&gt; 2 s) der Taste
+    <strong>Pfeil Runter</strong> kann bei Lastgängen zwischen
+    Bezug und Lieferung umgeschaltet werden.
+</p>
+
+<p>
+    Im Logbuch kann zwischen den eigentlichen Änderungen und den
+    zugehörigen Zählerständen zum Zeitpunkt der Änderung
+    umgeschaltet werden.
+</p>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_13.png"
+        alt="Lastgang und Logbuchanzeige Hyperion"
+        loading="lazy"
+    >
+    <figcaption>
+        Abbildung 16. Anzeige von Lastgang- und Logbuchdaten.
+    </figcaption>
+</figure>
+
+<h3>
+11. Konfiguration Einstellungen
+</h3>
+
+<h3>
+11.1. Grundeinstellungen
+</h3>
+
+<h4>
+Sprache | Language
+</h4>
+
+<p>
+    Wechsel zwischen den Sprachen <strong>Deutsch</strong>
+    (Standardeinstellung) und <strong>Englisch</strong>.
+</p>
+
+<ul>
+    <li>Mit „Pfeil Rechts“ zum Menü „Einstellungen“ navigieren.</li>
+    <li>Mit „Pfeil Runter“ den Menüpunkt „Sprache“ auswählen.</li>
+    <li>Service-Taste kurz (&lt; 2 Sekunden) drücken.</li>
+    <li>Mit „Pfeil Runter“ zwischen Deutsch und Englisch wählen.</li>
+    <li>
+        Zum Speichern die Service-Taste länger als 2 Sekunden
+        gedrückt halten, bis das Display blinkt.
+    </li>
+</ul>
+           <h4>
+Tarifumschaltung
+</h4>
+
+<p>
+    Eine Änderung des Tarifs wird unmittelbar übernommen.
+    Der zum jeweiligen Zeitpunkt an den Klemmen 9 bis 11
+    anliegende Tarif ist sofort aktiv.
+</p>
+
+<p>
+    Das Tarifsignal besteht aus einer Wechselspannung von
+    230 VAC, die zwischen NE (Klemme 11) und E2 (Klemme 9)
+    bzw. E1 (Klemme 10) anliegt.
+</p>
+
+<p>
+    Die Tarifumschaltung erfolgt gemäß folgender Wahrheitstabelle.
+    Dabei entspricht:
+</p>
+
+<ul>
+    <li><strong>0</strong> = 0 VAC gegen NE (Klemme 11)</li>
+    <li><strong>1</strong> = 230 VAC gegen NE (Klemme 11)</li>
+</ul>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>E2 (Klemme 9)</th>
+                <th>E1 (Klemme 10)</th>
+                <th>Tarif</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>3</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p>
+    Ab Werk ist Tarif 1 voreingestellt.
+    Die Tarifeingänge sind intern über Optokoppler galvanisch getrennt.
+</p>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Bei der LP-Ausführung des Hyperion Energiezählers wird eine
+        Tarifänderung erst zum Beginn einer neuen Aufzeichnungsperiode
+        übernommen. Der zu diesem Zeitpunkt an den Klemmen 9 bis 11
+        anliegende Tarif bleibt mindestens bis zum Beginn der nächsten
+        Aufzeichnungsperiode aktiv.
+    </p>
+</div>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_14.png"
+        alt="Tarifumschaltung Hyperion Energiezähler"
+        loading="lazy"
+    >
+    <figcaption>
+        Abbildung 17. Tarifumschaltung des Hyperion Energiezählers.
+    </figcaption>
+</figure>
+
+<h4>
+Tarifanzahl einstellen
+</h4>
+
+<p>
+    In den Einstellungen kann die Anzahl der verwendeten Tarife
+    festgelegt werden. Es kann zwischen
+    <strong>Doppeltarif (2)</strong> und
+    <strong>Vierfachtarif (4)</strong>
+    gewählt werden.
+</p>
+           <ul>
+    <li>„Pfeil Rechts“ bis zum Menü <strong>Einstellungen</strong>.</li>
+
+    <li>„Pfeil Runter“ bis zum Menüpunkt <strong>Anzahl Tarife</strong>.</li>
+
+    <li>„Service-Taste“ kurz drücken (&lt; 2 Sekunden).</li>
+
+    <li>Mit „Pfeil Runter“ zwischen <strong>2 Tarifen</strong> und <strong>4 Tarifen</strong> wechseln.</li>
+
+    <li>
+        Speichern: „Service-Taste“ länger als 2 Sekunden drücken,
+        bis das LCD-Display blinkt.
+    </li>
+</ul>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Alle Abbildungen in dieser Dokumentation zeigen den
+        Zweitarifbetrieb. Die Bedienung und Menüführung sind beim
+        Vierfachtarifbetrieb identisch.
+    </p>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Die LP-Variante des Hyperion Energiezählers arbeitet
+        ausschließlich im Zweitarifbetrieb. Diese Einstellung kann
+        nicht verändert werden.
+    </p>
+</div>
+
+<h4>
+Echtzeituhr
+</h4>
+
+<p>
+    Die Echtzeituhr des Hyperion Energiezählers kann direkt am Gerät
+    oder über optionale Schnittstellen konfiguriert werden.
+</p>
+
+<p>
+    Die verfügbaren Schnittstellen (TCP/IP, M-Bus, Modbus und
+    LoRaWAN®) ermöglichen zudem die Synchronisation mit einem
+    Zeitserver, sodass sich der Zähler automatisch aktualisieren kann.
+</p>
+
+<p>
+    Die interne Uhr des Hyperion weist eine typische Abweichung von
+    etwa ±0,4 Sekunden pro Tag auf.
+</p>
+
+<p>
+    Die LP-Version verfügt über zusätzliche Statusmeldungen zur
+    Überwachung der Echtzeituhr. Weitere Informationen hierzu finden
+    Sie im PTB-A-50.7-spezifischen Kapitel dieser Anleitung.
+</p>
+
+<h4>
+Konfiguration am Gerät
+</h4>
+
+<p>
+    Die Echtzeituhr kann direkt am Hyperion Energiezähler eingestellt
+    werden. Die interne Uhr wird durch einen Energiespeicher bei
+    Spannungsausfall für mindestens 18 Tage gepuffert.
+</p>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Der Zähler muss mindestens zwei Stunden in Betrieb gewesen
+        sein, damit der interne Energiespeicher vollständig geladen
+        werden kann.
+    </p>
+</div>
+
+<ul>
+    <li>„Pfeil Rechts“ bis zum Menü <strong>Einstellungen</strong>.</li>
+
+    <li>„Pfeil Runter“ bis zum Menüpunkt <strong>Echtzeituhr</strong>.</li>
+
+    <li>„Service-Taste“ kurz drücken (&lt; 2 Sekunden).</li>
+
+    <li>Mit „Pfeil Rechts“ die gewünschte Ziffer auswählen.</li>
+
+    <li>Mit „Pfeil Runter“ die ausgewählte Ziffer erhöhen.</li>
+
+    <li>
+        Speichern: „Service-Taste“ länger als 2 Sekunden drücken,
+        bis das LCD-Display blinkt.
+    </li>
+</ul>
+           <h4>
+Automatische Zeitsynchronisation
+</h4>
+
+<p>
+    Die Zeitsynchronisation erfolgt über M-Bus mittels eines
+    definierten Kommandos über die jeweilige Schnittstelle des
+    Zählers. Dabei werden Datums- und Zeitinformationen an den
+    Zähler übertragen.
+</p>
+
+<p>
+    Die Synchronisation wird unmittelbar übernommen und vom
+    Zähler mit einer ACK-Meldung bestätigt.
+</p>
+
+<p>
+    Geräte mit TCP/IP- oder LoRaWAN®-Schnittstelle können sich
+    automatisch mit einem konfigurierten Zeitserver
+    synchronisieren.
+</p>
+
+<p>
+    Bis zur ersten erfolgreichen Synchronisation wird alle
+    12 Minuten eine Anfrage an den Zeitserver gesendet.
+    Danach erfolgt die Synchronisation automatisch einmal pro Stunde.
+</p>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Für Projekte mit verpflichtender Lastgangzertifizierung
+        nach PTB-A 50.7 stehen lediglich 2048 Einträge für
+        Zeitänderungen, Wandlerfaktoränderungen,
+        S0-Impulswertigkeitsänderungen oder Änderungen der
+        Impulslänge zur Verfügung. Nach Überschreiten dieser Grenze
+        wechselt der Zähler in einen eichrechtlich ungültigen Zustand.
+        Zeitsynchronisationen dürfen außerdem nur einmal pro
+        Lastgangintervall erfolgen.
+    </p>
+</div>
+
+<h4>
+Lastgangintervall
+</h4>
+
+<p>
+    In den Einstellungen kann das Lastgangintervall festgelegt
+    werden. Verfügbare Intervalle sind:
+</p>
+
+<p>
+    1 Minute, 5 Minuten, 15 Minuten (Standard),
+    30 Minuten, 1 Stunde, 6 Stunden,
+    12 Stunden oder 24 Stunden.
+</p>
+
+<ul>
+    <li>„Pfeil Rechts“ bis zum Menü <strong>Einstellungen</strong>.</li>
+
+    <li>„Pfeil Runter“ bis zum Menüpunkt <strong>Lastgangintervall</strong>.</li>
+
+    <li>„Service-Taste“ kurz drücken (&lt; 2 Sekunden).</li>
+
+    <li>Mit „Pfeil Runter“ das gewünschte Intervall auswählen.</li>
+
+    <li>
+        Speichern: „Service-Taste“ länger als 2 Sekunden drücken,
+        bis das LCD-Display blinkt.
+    </li>
+</ul>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Diese Einstellung ist nur bei Geräten mit aktiviertem
+        Lastgang verfügbar. TCP/IP- und LoRaWAN®-Varianten werden
+        ab Werk mit aktiviertem Lastgang ausgeliefert.
+    </p>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Die LP-Version des Hyperion Energiezählers besitzt
+        ein festes Lastgangintervall von 15 Minuten.
+        Diese Einstellung kann nicht geändert werden.
+    </p>
+</div>
+
+<h3>
+11.2. Einstellung der Wandlerverhältnisse
+</h3>
+
+<p>
+    Das Wandlerverhältnis kann direkt über die Bedientasten
+    des Hyperion Energiezählers konfiguriert werden.
+</p>
+
+<ul>
+    <li>„Pfeil Rechts“ bis zum Menü <strong>Einstellungen</strong>.</li>
+
+    <li>„Pfeil Runter“ bis zum Menüpunkt <strong>CT / VT Ratio</strong>.</li>
+
+    <li>„Service-Taste“ kurz drücken (&lt; 2 Sekunden).</li>
+
+    <li>Mit „Pfeil Rechts“ die gewünschte Ziffer auswählen.</li>
+
+    <li>Mit „Pfeil Runter“ die ausgewählte Ziffer erhöhen.</li>
+
+    <li>
+        Speichern: „Service-Taste“ länger als 2 Sekunden drücken,
+        bis das LCD-Display blinkt.
+    </li>
+</ul>
+
+<p>
+    Das Stromwandlerverhältnis (CT Ratio) kann wie folgt eingestellt werden:
+</p>
+
+<ul>
+    <li>5/5 A bis 20'000/5 A in 5-A-Schritten</li>
+    <li>1/1 A bis 4'000/1 A in 1-A-Schritten</li>
+</ul>
+
+<p>
+    Das Spannungswandlerverhältnis (VT Ratio) kann von
+    100 V / 100 V bis 36'000 V / 100 V
+    in 100-V-Schritten eingestellt werden.
+</p>
+
+<p>
+    Es müssen sowohl Primär- als auch Sekundärstrom des
+    eingesetzten Stromwandlers korrekt eingetragen werden.
+</p>
+
+<p>
+    Ein eingestelltes Verhältnis von <code>100 : 1</code>
+    bedeutet beispielsweise, dass bei einem Primärstrom von
+    100 A ein Sekundärstrom von 1 A fließt.
+</p>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Stellen Sie sicher, dass das eingestellte Wandlerverhältnis
+        dem tatsächlich eingesetzten Strom- bzw. Spannungswandler
+        entspricht. Falsche Einstellungen oder falsch dimensionierte
+        Wandler führen zu fehlerhaften Energie- und Leistungswerten.
+    </p>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Für Projekte mit verpflichtender Lastgangzertifizierung
+        nach PTB-A 50.7 stehen lediglich 2048 Einträge für
+        Wandlerfaktoränderungen, Zeitänderungen,
+        S0-Impulswertigkeitsänderungen oder Änderungen der
+        Impulslänge zur Verfügung. Danach befindet sich der
+        Zähler in einem eichrechtlich ungültigen Zustand.
+        Änderungen des Wandlerverhältnisses dürfen nur einmal
+        pro Lastgangintervall durchgeführt werden.
+    </p>
+</div>
+           <h3>
+11.3. Weitere Einstellungsmöglichkeiten
+</h3>
+
+<h4>
+S0-Impulswertigkeit
+</h4>
+
+<p>
+    In den Einstellungen kann die Impulswertigkeit des S0-Ausgangs
+    festgelegt werden.
+</p>
+
+<ul>
+    <li>Mit „Pfeil rechts“ zum Menü <strong>Einstellungen</strong> wechseln.</li>
+    <li>Mit „Pfeil runter“ bis zum Menüpunkt <strong>S0-Impulswertigkeit</strong> navigieren.</li>
+    <li>Die Service-Taste kurz drücken (&lt; 2 Sekunden).</li>
+    <li>Mit „Pfeil runter“ zwischen 1, 10, 100, 1000 und 10000 Imp/kWh wählen.</li>
+    <li>
+        Zum Speichern die Service-Taste länger als 2 Sekunden gedrückt
+        halten, bis das Display blinkt.
+    </li>
+</ul>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Für Projekte mit obligatorischer Lastgangzertifizierung nach
+        PTB-A 50.7 stehen lediglich 2048 Einträge für Änderungen der
+        Impulswertigkeit, Zeiteinstellungen, Wandlerfaktoren oder der
+        S0-Impulslänge zur Verfügung. Außerdem kann die
+        S0-Impulswertigkeit nur einmal pro Lastgangintervall geändert
+        werden.
+    </p>
+</div>
+
+<h4>
+Einstellung der Energieanzeige
+</h4>
+
+<p>
+    Legen Sie fest, welche Energiewerte auf dem Display angezeigt
+    werden sollen. Folgende Optionen stehen zur Verfügung:
+</p>
+
+<p>
+    <strong>Energie pro Tarif</strong>
+</p>
+
+<ul>
+    <li>
+        <strong>Ein:</strong> Der Hyperion zeigt auf den
+        Hauptmenüseiten „Wirkenergie Import“, „Wirkenergie Export“,
+        „Blindenergie Import“ und „Blindenergie Export“ die bezogene
+        beziehungsweise gelieferte Energie für jeden Tarif separat an.
+    </li>
+
+    <li>
+        <strong>Aus:</strong> Es wird ausschließlich die Gesamtenergie
+        über alle Tarife angezeigt. Die Darstellung richtet sich dann
+        zusätzlich nach der Einstellung „Energie pro Phase“.
+    </li>
+</ul>
+
+<p>
+    <strong>Energie pro Phase</strong>
+</p>
+
+<ul>
+    <li>
+        <strong>Ein:</strong> Der Hyperion zeigt auf den genannten
+        Hauptmenüseiten die bezogene beziehungsweise gelieferte Energie
+        je Phase an.
+    </li>
+
+    <li>
+        <strong>Aus:</strong> Es wird lediglich die Gesamtenergie
+        angezeigt. Die Darstellung richtet sich zusätzlich nach der
+        Einstellung „Energie pro Tarif“.
+    </li>
+</ul>
+
+<p>
+    Je nach gewählter Konfiguration der Energieanzeige ergeben sich
+    unterschiedliche Untermenüstrukturen für Energieimport und
+    Energieexport.
+</p>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_15.png">
+    <figcaption>
+        Abbildung 18. Übersicht der Energieanzeige-Konfiguration
+    </figcaption>
+</figure>
+
+           <p>
+    Es gilt folgende Legende:
+</p>
+
+<ul>
+    <li>
+        <strong>Grün:</strong> Nur die Option
+        „Energie pro Phase“ ist aktiviert.
+    </li>
+
+    <li>
+        <strong>Orange:</strong> Nur die Option
+        „Energie pro Tarif“ ist aktiviert.
+    </li>
+
+    <li>
+        <strong>Rot:</strong> Beide Optionen sind aktiviert.
+    </li>
+</ul>
+
+<h4>
+Konfiguration Schnittstellen
+</h4>
+
+<p>
+    Der Hyperion kann mit unterschiedlichen Schnittstellen
+    ausgestattet werden. Pro Gerät ist jedoch jeweils nur eine
+    Schnittstelle verfügbar.
+</p>
+
+<h4>
+Schnittstellen
+</h4>
+
+<p>
+    Der Hyperion verfügt optional über eine der folgenden
+    Funkschnittstellen:
+</p>
+
+<ul>
+    <li>LoRaWAN®</li>
+    <li>mioty®</li>
+</ul>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Jeder Hyperion Energiezähler besitzt nur eine dieser
+        Schnittstellen. Die Konfiguration erfolgt direkt am Gerät
+        über die berührungssensitiven Bedientasten.
+    </p>
+</div>
+
+<h4>
+M-Bus
+</h4>
+
+<p>
+    Die M-Bus-Schnittstelle entspricht der Norm EN 13757-2/-3
+    (vormals EN 1434-3). Der Hyperion M-Bus kann dadurch mit allen
+    M-Bus-fähigen Geräten kommunizieren.
+</p>
+
+<p>
+    Die M-Bus-Schnittstelle ist im Energiezähler integriert und
+    gegen Verschmutzung sowie Manipulation geschützt.
+</p>
+
+<p>
+    Die Anschlüsse befinden sich auf der Rückseite des Geräts:
+</p>
+
+<ul>
+    <li>Pin 1 [3] = M-Bus (+)</li>
+    <li>Pin 2 [4] = M-Bus (-)</li>
+</ul>
+
+<h4>
+Einstellungen ab Werk
+</h4>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Einstellung</th>
+                <th>Wert</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>
+                    Sekundäradresse<br>
+                    Primäradresse<br>
+                    Baudrate
+                </td>
+                <td>
+                    Seriennummer des Geräts<br>
+                    0<br>
+                    2400
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+           <h3>
+12. Anschlussschema M-Bus
+</h3>
+
+<p>
+    Der Hyperion Energiezähler mit M-Bus-Schnittstelle verfügt über
+    zwei intern parallel geschaltete M-Bus-Klemmen. Dadurch wird die
+    serielle Verdrahtung mehrerer Geräte bei der Installation
+    vereinfacht.
+</p>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Die M-Bus-Schnittstelle ist bei den Modellen Hyperion 3/100
+        M-Bus und Hyperion 3/5 M-Bus identisch ausgeführt.
+    </p>
+</div>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_16.png"
+        alt="Anschlussschema M-Bus"
+        loading="lazy"
+        style="max-width:100%; height:auto;"
+    >
+    <figcaption>
+        Abbildung 19. Anschlussschema M-Bus
+    </figcaption>
+</figure>
+
+<h3>
+13. Weitere Konfigurationen, Kommunikation und Umgang mit Fehlern
+</h3>
+
+<h4>
+13.1. Konfigurationen
+</h4>
+
+<h4>
+Konfiguration der Primäradresse am Gerät
+</h4>
+
+<ul>
+    <li>Mit „Pfeil rechts“ zum Menü <strong>Einstellungen</strong> wechseln.</li>
+    <li>Mit „Pfeil runter“ bis zum Menüpunkt <strong>M-Bus Primäradresse</strong> navigieren.</li>
+    <li>Die Service-Taste kurz drücken (&lt; 2 Sekunden).</li>
+    <li>Mit „Pfeil rechts“ die gewünschte Ziffer auswählen.</li>
+    <li>Mit „Pfeil runter“ die ausgewählte Ziffer erhöhen.</li>
+    <li>Zum Speichern die Service-Taste länger als 2 Sekunden gedrückt halten, bis das Display blinkt.</li>
+</ul>
+
+<h4>
+Konfiguration der Sekundäradresse am Gerät
+</h4>
+
+<ul>
+    <li>Mit „Pfeil rechts“ zum Menü <strong>Einstellungen</strong> wechseln.</li>
+    <li>Mit „Pfeil runter“ bis zum Menüpunkt <strong>M-Bus Sekundäradresse</strong> navigieren.</li>
+    <li>Die Service-Taste kurz drücken (&lt; 2 Sekunden).</li>
+    <li>Mit „Pfeil rechts“ die gewünschte Ziffer auswählen.</li>
+    <li>Mit „Pfeil runter“ die ausgewählte Ziffer erhöhen.</li>
+    <li>Zum Speichern die Service-Taste länger als 2 Sekunden gedrückt halten, bis das Display blinkt.</li>
+</ul>
+
+<h4>
+Konfiguration der Baudrate am Gerät
+</h4>
+
+<ul>
+    <li>Mit „Pfeil rechts“ zum Menü <strong>Einstellungen</strong> wechseln.</li>
+    <li>Mit „Pfeil runter“ bis zum Menüpunkt <strong>M-Bus Baudrate</strong> navigieren.</li>
+    <li>Die Service-Taste kurz drücken (&lt; 2 Sekunden).</li>
+    <li>
+        Mit „Pfeil rechts“ zwischen den Baudraten
+        300, 600, 1.200, 2.400 (Standard),
+        4.800 und 9.600 Baud wählen.
+    </li>
+    <li>Zum Speichern die Service-Taste länger als 2 Sekunden gedrückt halten, bis das Display blinkt.</li>
+</ul>
+
+<h4>
+Konfiguration über MB-Connect
+</h4>
+
+<p>
+    Der Hyperion M-Bus kann zusätzlich mit der hauseigenen Software
+    <strong>MB-Connect</strong> konfiguriert und eingerichtet werden.
+</p>
+
+<h4>
+S0-Impulsausgang
+</h4>
+
+<p>
+    Der S0-Impulsausgang erfüllt die Anforderungen der Norm
+    EN 62053-31 (DIN 43864). Jeder Hyperion verfügt über einen
+    S0-Impulsausgang und kann dadurch mit Geräten kommunizieren,
+    welche S0-Impulse empfangen und auswerten können.
+</p>
+
+<p>
+    Die Schnittstelle befindet sich auf der Rückseite des Zählers an
+    Pin 6 und Pin 7. Als Schaltelement wird ein hochbelastbarer
+    Opto-Power-MOSFET für 5 bis 60 V AC beziehungsweise DC
+    verwendet. Der S0-Ausgang ist potentialfrei ausgeführt.
+</p>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Beim Anschluss des S0-Ausgangs ist auf die korrekte Polung zu
+        achten.
+    </p>
+</div>
+
+<h4>
+Einstellungen ab Werk
+</h4>
+           <div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Anschluss</th>
+                <th>Beschreibung</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Wandlerzähler</td>
+                <td>10 Impulse pro kWh / kvarh bei 120 ms Impulslänge</td>
+            </tr>
+
+            <tr>
+                <td>Direktanschlusszähler</td>
+                <td>1000 Impulse pro kWh / kvarh bei 40 ms Impulslänge</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4>
+Anschlussschema S0-Impulsausgang
+</h4>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Die S0-Schnittstelle ist identisch für den Hyperion 3/100
+        und den Hyperion 3/5.
+    </p>
+</div>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_17.png"
+        alt="S0 Impulsausgang Hyperion"
+        loading="lazy"
+    >
+    <figcaption>
+        Abbildung 20. Anschlussschema des S0-Impulsausgangs.
+    </figcaption>
+</figure>
+
+<h4>
+Konfiguration Auslesetyp
+</h4>
+
+<ul>
+    <li>„Pfeil Rechts“ bis zum Menü <strong>Einstellungen</strong>.</li>
+
+    <li>„Pfeil Runter“ bis zum Menüpunkt <strong>S0 Impulstyp</strong>.</li>
+
+    <li>„Service-Taste“ kurz drücken (&lt; 2 Sekunden).</li>
+
+    <li>Mit „Pfeil Rechts“ zwischen folgenden Ausgabemodi wechseln:</li>
+
+    <li>
+        <strong>Wirkenergie Diff</strong>:
+        Alle Wirkenergien (Bezug und Lieferung) werden gemeinsam ausgegeben.
+    </li>
+
+    <li>
+        <strong>Blindenergie Diff</strong>:
+        Alle Blindenergien (Bezug und Lieferung) werden gemeinsam ausgegeben.
+    </li>
+
+    <li>
+        <strong>Wirkenergie Import</strong>:
+        Es wird ausschließlich bezogene Wirkenergie ausgegeben.
+    </li>
+
+    <li>
+        <strong>Blindenergie Import</strong>:
+        Es wird ausschließlich bezogene Blindenergie ausgegeben.
+    </li>
+
+    <li>
+        <strong>Wirkenergie Export</strong>:
+        Es wird ausschließlich gelieferte Wirkenergie ausgegeben.
+    </li>
+
+    <li>
+        <strong>Blindenergie Export</strong>:
+        Es wird ausschließlich gelieferte Blindenergie ausgegeben.
+    </li>
+
+    <li>
+        Speichern: „Service-Taste“ länger als 2 Sekunden drücken,
+        bis das LCD-Display blinkt.
+    </li>
+</ul>
+
+<h4>
+Konfiguration S0-Impulsrate
+</h4>
+
+<p>
+    In den Einstellungen kann die Impulswertigkeit festgelegt werden.
+</p>
+
+<ul>
+    <li>„Pfeil Rechts“ bis zum Menü <strong>Einstellungen</strong>.</li>
+
+    <li>„Pfeil Runter“ bis zum Menüpunkt <strong>S0 Impulswertigkeit</strong>.</li>
+
+    <li>„Service-Taste“ kurz drücken (&lt; 2 Sekunden).</li>
+
+    <li>
+        Mit „Pfeil Runter“ zwischen
+        1, 10, 100, 1000 und 10000 Imp./kWh wählen.
+    </li>
+
+    <li>
+        Speichern: „Service-Taste“ länger als 2 Sekunden drücken,
+        bis das LCD-Display blinkt.
+    </li>
+</ul>
+
+<h4>
+Konfiguration S0-Impulsbreite
+</h4>
+
+<p>
+    In den Einstellungen kann die Impulsbreite definiert werden.
+</p>
+
+<ul>
+    <li>„Pfeil Rechts“ bis zum Menü <strong>Einstellungen</strong>.</li>
+
+    <li>„Pfeil Runter“ bis zum Menüpunkt <strong>S0 Impulsbreite</strong>.</li>
+
+    <li>„Service-Taste“ kurz drücken (&lt; 2 Sekunden).</li>
+
+    <li>
+        Mit „Pfeil Runter“ zwischen
+        2 ms, 10 ms, 30 ms, 40 ms und 120 ms wählen.
+    </li>
+
+    <li>
+        Speichern: „Service-Taste“ länger als 2 Sekunden drücken,
+        bis das LCD-Display blinkt.
+    </li>
+</ul>
+
+<h4>
+Anschlussschema Modbus
+</h4>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Die Modbus-Schnittstelle ist identisch für den
+        Hyperion 3/100 Modbus und den Hyperion 3/5 Modbus.
+    </p>
+</div>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_18.png"
+        alt="Modbus Anschlussschema Hyperion"
+        loading="lazy"
+    >
+    <figcaption>
+        Abbildung 21. Anschlussschema der Modbus-Schnittstelle.
+    </figcaption>
+</figure>
+
+<h3>
+13.2. LoRaWAN® Werkseinstellung
+</h3>
+
+<p>
+    Der Hyperion unterstützt die Kommunikation über LoRaWAN®.
+</p>
+
+<h4>
+Einstellungen ab Werk
+</h4>
+
+<p>
+    Ab Werk übermittelt der Hyperion alle 15 Minuten folgende Daten:
+</p>
+
+<ul>
+    <li>Zeitstempel</li>
+    <li>Wirkenergie Import Tarif 1 und 2</li>
+    <li>Wirkenergie Export Tarif 1 und 2</li>
+    <li>Fehlercode</li>
+</ul>
+
+<h3>
+13.3. mioty® Werkseinstellung
+</h3>
+
+<p>
+    Der Hyperion unterstützt die Kommunikation über mioty®.
+</p>
+
+<h4>
+Einstellungen ab Werk
+</h4>
+
+<p>
+    Standardmäßig wird Profil 0 verwendet.
+</p>
+
+<p>
+    <strong>Profil 0: Komplettdaten</strong>
+</p>
+
+<p>
+    Umfassende Übertragung von Leistungs-, Strom-, Spannungs-,
+    Energie- und Power-Quality-Werten.
+</p>
+
+<ul>
+    <li>
+        <strong>Leistung (W):</strong>
+        p_l1_a, p_l2_a, p_l3_a, p_l123_a
+    </li>
+
+    <li>
+        <strong>Strom (mA):</strong>
+        i_l1, i_l2, i_l3, i_l123
+    </li>
+
+    <li>
+        <strong>Spannung (V ÷ 10):</strong>
+        u_l1, u_l2, u_l3, u_l12, u_l23, u_l31
+    </li>
+
+    <li>
+        <strong>Energie (Wh):</strong>
+        e_ta_a_i, e_ta_a_e, e_ta_r_i, e_ta_r_e
+    </li>
+
+    <li>
+        <strong>Power Quality:</strong>
+        pf_l1–3 (÷100), f (Hz ÷10)
+    </li>
+
+    <li>
+        <strong>Status:</strong>
+        pwr_fail
+    </li>
+</ul>
+          <p>
+    Weitere Informationen zu den verfügbaren Profilen finden Sie
+    im Dokument <strong>HYPERION MIOTY PROFILE DE</strong>.
+</p>
+
+<p>
+    <strong>Nomenklatur</strong>
+</p>
+
+<ul>
+    <li><strong>Spannung:</strong> u_lX (Phase / Leitung)</li>
+    <li><strong>Strom:</strong> i_lX (Phase / Gesamtstrom)</li>
+    <li><strong>Leistung:</strong> p_lX_a (Wirkleistung pro Phase / Gesamt)</li>
+    <li><strong>Energie:</strong> e_t{a|1|2}_{a|r}_{i|e} (z. B. e_ta_a_i)</li>
+    <li><strong>Power Factor:</strong> pf_lX</li>
+    <li><strong>Frequenz:</strong> f</li>
+    <li><strong>Wandlerverhältnis:</strong> {ct|vt}_{act|old}_{prim|sec}</li>
+</ul>
+
+<h3>
+13.4. Fehlerfall
+</h3>
+
+<p>
+    Falls Sie beim Hyperion einen Fehler feststellen,
+    konsultieren Sie zunächst die folgenden Hinweise zu den
+    häufigsten Fehlerbildern.
+</p>
+
+<h4>
+Unstimmigkeiten bei der Energiemessung des Hyperion Energiezählers
+</h4>
+
+<p>
+    <strong>Ausgangslage:</strong>
+    Einer oder mehrere Phasenströme werden mit negativem Vorzeichen
+    angezeigt.
+</p>
+
+<p>
+    <strong>Lösung:</strong>
+    Prüfen Sie, ob die Anschlüsse
+    <code>S1 ↑</code> und <code>S2 ↓</code>
+    (beim Direktzähler <code>Lx ↑</code> und <code>Lx ↓</code>)
+    korrekt angeschlossen sind.
+</p>
+
+<p>
+    <code>S1 ↑</code> bzw. <code>Lx ↑</code> muss immer netzseitig
+    angeschlossen werden.
+    <code>S2 ↓</code> bzw. <code>Lx ↓</code> muss immer auf der
+    Verbraucher- oder Erzeugerseite angeschlossen werden.
+</p>
+
+<div class="note-strip note-strip--red">
+    <strong>Gefahr</strong>
+
+    <p style="margin-bottom:0;">
+        Vor der Überprüfung oder Änderung von Anschlussleitungen
+        müssen sämtliche angeschlossenen Leiter spannungsfrei sein.
+        Das Berühren spannungsführender Teile ist lebensgefährlich.
+    </p>
+</div>
+
+<h4>
+Der Zähler misst zu viel oder zu wenig Energie
+</h4>
+
+<p>
+    <strong>Lösung 1:</strong>
+    Überprüfen Sie das eingestellte Stromwandler- und
+    Spannungswandlerverhältnis. Die Einstellungen müssen den
+    tatsächlich verwendeten Wandlern entsprechen.
+</p>
+
+<p>
+    <strong>Lösung 2:</strong>
+    Kontrollieren Sie die korrekte Verdrahtung des Zählers.
+    Phasen mit negativem Stromfluss werden dem Exportregister
+    zugeordnet.
+</p>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Wird der Hyperion als Summenzähler eingesetzt,
+        kann die Gesamtenergie von der Summe mehrerer nachgeschalteter
+        Energiezähler abweichen. Die Summenbildung beinhaltet die
+        jeweiligen Einzelmessfehler aller beteiligten Geräte.
+    </p>
+</div>
+
+<h4>
+Falsche Verbrauchsanzeige beim Wandlerzähler
+</h4>
+
+<p>
+    <strong>Ausgangslage:</strong>
+    Der Hyperion zeigt einen deutlich höheren oder niedrigeren
+    Verbrauch als erwartet an.
+</p>
+
+<p>
+    <strong>Lösung:</strong>
+    Stellen Sie sicher, dass das eingestellte
+    Stromwandlerverhältnis mit dem tatsächlich verwendeten
+    Stromwandler übereinstimmt.
+</p>
+
+<p>
+    Das Stromwandlerverhältnis kann direkt über die
+    Bedientasten des Hyperion konfiguriert werden.
+</p>
+
+<ul>
+    <li>5 / 5 A bis 20'000 / 5 A in 5-A-Schritten</li>
+    <li>1 / 1 A bis 4'000 / 1 A in 1-A-Schritten</li>
+</ul>
+
+<h4>
+Falsche Verbrauchsanzeige im einphasigen Betriebsmodus
+</h4>
+
+<p>
+    <strong>Ausgangslage:</strong>
+    Der Hyperion zählt fehlerhaft oder der Energiezählerstand
+    erhöht sich im einphasigen Betrieb nicht.
+</p>
+
+<p>
+    <strong>Lösung:</strong>
+    Überprüfen Sie das Anschlussschema für den einphasigen Betrieb
+    gemäß Kapitel 9.5.
+</p>
+
+<h4>
+Verhalten bei Bezug und Lieferung
+</h4>
+
+<p>
+    Der Hyperion speichert Energiebezug und Energielieferung
+    in getrennten Registern.
+</p>
+
+<p>
+    Die Registerstände werden niemals rückwärts gezählt oder
+    gegeneinander verrechnet.
+</p>
+
+<p>
+    Das Register <strong>Wirkenergie Bezug</strong> enthält die
+    vom Energieversorger bezogene elektrische Energie und bildet
+    die Grundlage für den Energieverbrauch.
+</p>
+
+<p>
+    Das Register <strong>Wirkenergie Lieferung</strong> enthält
+    die in das Netz eingespeiste Energie, beispielsweise aus einer
+    Photovoltaikanlage.
+</p>
+
+<p>
+    <strong>Beispiel:</strong>
+</p>
+
+<p>
+    Aktueller Verbrauch einer Wohnanlage um 13:00 Uhr:
+</p>
+
+<ul>
+    <li>Phase L1: 10 kW</li>
+    <li>Phase L2: 20 kW</li>
+    <li>Phase L3: 30 kW</li>
+</ul>
+
+<p>
+    Gesamtverbrauch: <strong>60 kW</strong>
+</p>
+
+<h4>
+Einspeisung der Photovoltaikanlage um 13:00 Uhr
+</h4>
+
+<ul>
+    <li>Phase L1: 25 kW</li>
+    <li>Phase L2: 25 kW</li>
+    <li>Phase L3: 25 kW</li>
+</ul>
+
+<p>
+    Gesamteinspeisung: <strong>75 kW</strong>
+</p>
+           <p>
+    In diesem Fall werden aktuell 15 kW in das Netz eingespeist.
+</p>
+
+<p>
+    Das Register <strong>Wirkenergie Bezug</strong> bleibt für die
+    Phasen L1 und L2 unverändert, da keine Energie aus dem Netz
+    bezogen wird.
+</p>
+
+<p>
+    Das Register <strong>Wirkenergie Lieferung</strong> wird für
+    die Phasen L1 und L2 erhöht, da dort Energie in das Netz
+    zurückgespeist wird.
+</p>
+
+<p>
+    Auf Phase L3 wird weiterhin Energie bezogen. Daher bleibt
+    das Register <strong>Wirkenergie Lieferung</strong> für L3
+    unverändert, während das Register
+    <strong>Wirkenergie Bezug</strong> weiter erhöht wird.
+</p>
+
+<h4>
+Der Hyperion liefert über den Impulsausgang falsche Werte
+</h4>
+
+<p>
+    Überprüfen Sie, ob die konfigurierte Impulsrate und
+    Impulsdauer des Hyperion Energiezählers mit den Vorgaben
+    Ihres Impulsempfängers übereinstimmen.
+</p>
+
+<p>
+    Die Impulsrate und die Impulsdauer können direkt über die
+    Bedientasten des Hyperion angepasst werden.
+</p>
+
+<p>
+    Verfügbare Einstellungen:
+</p>
+
+<ul>
+    <li>Impulsraten: 1, 10, 100, 1000 oder 10000 Impulse pro kWh / kvarh</li>
+    <li>Impulsbreiten: 2 ms, 10 ms, 30 ms, 40 ms oder 120 ms</li>
+</ul>
+
+<p>
+    Ab Werk sind folgende Werte eingestellt:
+</p>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Anschluss</th>
+                <th>Beschreibung</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Wandlerzähler</td>
+                <td>10 Impulse pro kWh / kvarh bei 120 ms Impulslänge</td>
+            </tr>
+
+            <tr>
+                <td>Direktanschlusszähler</td>
+                <td>1000 Impulse pro kWh / kvarh bei 40 ms Impulslänge</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4>
+Die Tarifumschaltung funktioniert nicht
+</h4>
+
+<p>
+    Ab Werk ist Tarif 1 aktiviert.
+    Prüfen Sie, ob die Tarifumschaltung korrekt angeschlossen wurde.
+</p>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>E2 (Klemme 9)</th>
+                <th>E1 (Klemme 10)</th>
+                <th>Tarif</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>3</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+         <div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Für Lastgänge nach PTB-A 50.7 steht ausschließlich der
+        Zweitarifbetrieb zur Verfügung. Tarifänderungen werden
+        erst zu Beginn des nächsten Aufzeichnungsintervalls
+        übernommen.
+    </p>
+</div>
+
+<div class="note-strip note-strip--red">
+    <strong>Gefahr</strong>
+
+    <p style="margin-bottom:0;">
+        Bei Änderungen der Tarifanschlüsse müssen sämtliche
+        angeschlossenen Leiter spannungsfrei sein. Das Berühren
+        spannungsführender Teile ist lebensgefährlich.
+    </p>
+</div>
+
+<h4>
+Die Kommunikationsschnittstelle LoRaWAN® funktioniert nicht
+</h4>
+
+<ul>
+    <li>
+        Stellen Sie sicher, dass der Zähler auf Ihrem
+        LoRaWAN®-Netzwerkserver registriert ist.
+    </li>
+
+    <li>
+        Prüfen Sie, ob das eingestellte LoRaWAN®-Sendeintervall
+        zur verfügbaren Bandbreite des Netzwerks passt. Eine hohe
+        Anzahl von Endgeräten im selben Netzwerk kann die
+        Kommunikation beeinträchtigen.
+    </li>
+
+    <li>
+        Stellen Sie sicher, dass der Zähler seine Zeit über das
+        LoRaWAN®-Netzwerk synchronisieren kann.
+    </li>
+</ul>
+
+<h3>
+14. Erweiterte Informationen zum Lastgang nach PTB-A 50.7
+</h3>
+
+<h3>
+14.1. Messrichtigkeitshinweise: Auflagen für den Verwender im Sinne des § 23 der Mess- und Eichverordnung
+</h3>
+
+<p>
+    Die Mess- und Eichverordnung verpflichtet alle Verwender von
+    Messgeräten dazu, Messungen und den Betrieb von Messgeräten so
+    durchzuführen, dass die Richtigkeit der Messergebnisse
+    gewährleistet bleibt.
+</p>
+
+<p>
+    Unter Berücksichtigung der Marktrollen nach dem
+    Messstellenbetriebsgesetz wird zwischen folgenden Gruppen
+    unterschieden:
+</p>
+
+<ul>
+    <li>
+        <strong>Messgeräteverwender</strong>
+        <ul>
+            <li>
+                Messgeräteverwender sind Messstellenbetreiber im
+                Sinne des Messstellenbetriebsgesetzes.
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        <strong>Messwertverwender</strong>
+        <ul>
+            <li>
+                Messwertverwender sind Personen oder Organisationen,
+                die Messungen erfassen, Messwerte an berechtigte
+                Dritte weitergeben sowie die Abrechnung von
+                Energielieferung und Netznutzung durchführen.
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<p>
+    Messgeräteverwender sind verpflichtet sicherzustellen, dass
+    Messwertverwender Kenntnis von den nachfolgenden Anforderungen
+    erhalten.
+</p>
+
+<h4>
+Transparenz der Verwendung
+</h4>
+
+<p>
+    Der Messwertverwender muss den Stromkunden nachvollziehbar
+    darstellen können, wie die in Rechnung gestellten Arbeits-
+    und gegebenenfalls Leistungswerte entstehen.
+</p>
+
+<p>
+    Transparenz bedeutet, dass Kunden mithilfe der eichrechtlich
+    relevanten Anzeigen des verwendeten Geräts die Positionen ihrer
+    Stromrechnung nachvollziehen können.
+</p>
+
+<p>
+    Insbesondere ist darüber zu informieren:
+</p>
+
+<ul>
+    <li>
+        Welche angezeigten Messwerte für Verrechnungszwecke
+        verwendet werden dürfen.
+    </li>
+
+    <li>
+        Dass nicht angezeigte Werte nicht für Verrechnungszwecke
+        verwendet werden dürfen.
+    </li>
+
+    <li>
+        Dass angezeigte Werte, die aus nicht eichrechtlich
+        relevanten Funktionen stammen, ausschließlich
+        Informationszwecken dienen und nicht zur Abrechnung
+        herangezogen werden dürfen.
+    </li>
+</ul>
+
+<p>
+    Darüber hinaus müssen die Geräte so eingesetzt werden,
+    dass für Stromkunden sowohl die abrechnungsrelevanten
+    Messwerte als auch mögliche Fehlermeldungen jederzeit
+    eindeutig ablesbar sind.
+</p>
+           <h4>
+Tarifierung
+</h4>
+
+<p>
+    Für die eichrechtskonforme Verwendung der Zählerstandsgänge dürfen
+    ausschließlich die Tarife <strong>T1</strong> und
+    <strong>T2</strong> verwendet werden.
+</p>
+
+<p>
+    Dabei sind die Anforderungen des § 33 MessEG zu beachten.
+</p>
+
+<p>
+    Der Messwertverwender hat sicherzustellen, dass Rechnungen, soweit
+    sie auf Messwerten beruhen, von den Rechnungsempfängern in
+    einfacher Weise nachvollzogen und überprüft werden können. Falls
+    erforderlich, sind hierfür geeignete Hilfsmittel bereitzustellen.
+</p>
+
+<p>
+    Es muss jederzeit sichergestellt werden, dass alle zur Abrechnung
+    verwendeten Register auch auf dem Display des Zählers angezeigt
+    werden.
+</p>
+
+<h3>
+14.2. Fehlermeldungen / Uhrzeitverstellungen
+</h3>
+
+<p>
+    <strong>Fehlermeldungen</strong>
+</p>
+
+<p>
+    In den Begleitdokumenten werden die Gerätefunktionsfehler
+    beschrieben, die von den Zählern selbst erkannt und angezeigt
+    werden können.
+</p>
+
+<p>
+    Tritt eines oder mehrere der als
+    <strong>„eichrechtlich relevante Fehlermeldungen“</strong>
+    bezeichneten Ereignisse auf, ist die eichrechtskonforme Verwendung
+    des Geräts nicht mehr gewährleistet. Die gespeicherten Messwerte
+    sind in diesem Fall als unsicher anzusehen.
+</p>
+
+<p>
+    Die betroffenen Geräte müssen ausgebaut, gegebenenfalls repariert
+    und erneut geeicht werden, sofern sie weiterhin für
+    Abrechnungszwecke verwendet werden sollen.
+</p>
+
+<p>
+    <strong>Uhrzeitverstellung</strong>
+</p>
+
+<p>
+    Bei Zählern mit fernsteuerbarer interner Uhr müssen technische
+    Maßnahmen sicherstellen, dass eine für die Mess- und
+    Abrechnungsrichtigkeit relevante Änderung der Uhrzeit nachvollzogen
+    werden kann.
+</p>
+
+<p>
+    Bei den Hyperion-Zählern wird dies wie folgt umgesetzt:
+</p>
+
+<ul>
+    <li>
+        Jede Änderung der Zähleruhr über eine der verfügbaren
+        Kommunikationsschnittstellen erzeugt einen Eintrag im
+        eichtechnischen Logbuch.
+    </li>
+
+    <li>
+        Die zum Zeitpunkt der Uhrzeitänderung laufende
+        Registrierperiode wird als ungültig gekennzeichnet.
+    </li>
+
+    <li>
+        Die nach der Uhrzeitänderung neu gestartete Registrierperiode
+        endet beim nächsten ganzzahligen Vielfachen der eingestellten
+        Registrierperiodenlänge, beispielsweise zur Minute 00, 15, 30
+        oder 45, bezogen auf die neu eingestellte Uhrzeit.
+    </li>
+</ul>
+
+<h4>
+Verwendung der Kommunikationsschnittstellen
+</h4>
+
+<p>
+    Die Kommunikationsschnittstellen der Zähler sind nicht
+    eichrechtskonform.
+</p>
+
+<p>
+    Über diese Schnittstellen ausgelesene Messwerte dürfen für
+    Verrechnungszwecke nur insoweit verwendet werden, wie sie eine
+    unveränderte Wiederholung der auf dem Display angezeigten
+    Messergebnisse darstellen. Maßgeblich sind hierbei die Vorgaben der
+    Mess- und Eichverordnung, Anlage 2, Abschnitt 8.1.
+</p>
+
+<h4>
+Zeitsynchronisierung
+</h4>
+
+<p>
+    Die genannten Zähler können über die vorhandenen
+    Kommunikationsschnittstellen synchronisiert werden.
+</p>
+
+<p>
+    Für die eichrechtskonforme Verwendung der Zählerstandsgänge muss
+    der Betreiber sicherstellen, dass die interne Uhr des Zählers mit
+    der gesetzlichen Zeit synchronisiert wird.
+</p>
+
+<p>
+    Vor der Übertragung von Datum und Uhrzeit müssen die hierfür
+    festgelegten Voraussetzungen erfüllt sein:
+</p>
+           <ul>
+    <li>Der M-Bus muss für die Kommunikation verfügbar sein.</li>
+    <li>Die Ethernet-Verbindung muss für die Kommunikation verfügbar sein.</li>
+    <li>Als Zeitquelle muss die gesetzliche Zeit verwendet werden.</li>
+</ul>
+
+<p>
+    Können diese Voraussetzungen nicht erfüllt werden, dürfen die
+    Zählerstandsgänge nicht für abrechnungsrelevante Zwecke verwendet
+    werden.
+</p>
+
+<h4>
+Messergebnisse, die nicht für Verrechnungszwecke verwendet werden dürfen
+</h4>
+
+<p>
+    Messwerte anderer als der in der Baumusterprüfbescheinigung
+    aufgeführten Messgrößen dürfen nicht für Verrechnungszwecke
+    verwendet werden.
+</p>
+
+<h4>
+Logbuchfunktion
+</h4>
+
+<p>
+    Die genannten Zähler verfügen über ein eichtechnisches Logbuch.
+    Dieses kann nur durch Umgehung der herstellerseitigen
+    Zugriffssicherung gelöscht werden.
+</p>
+
+<h4>
+Hyperion
+</h4>
+
+<p>
+    Im Folgenden werden die für den Lastgangbetrieb relevanten
+    Menüpunkte des Hyperion Energiezählers beschrieben.
+</p>
+
+<p>
+    Der Lastgang des Hyperion Energiezählers ist nach PTB-A 50.7
+    zertifiziert. Für die LP-Version des Hyperion Energiezählers gelten
+    die folgenden Angaben zu Tarifumstellung, Zeitsynchronisation,
+    Wandlerparametern und dem S0-Impulsausgang.
+</p>
+
+<h4>
+Strom- bzw. Spannungswandlerverhältnis
+</h4>
+
+<p>
+    Die eingestellten Strom- und Spannungswandlerverhältnisse bestimmen
+    den Faktor, der bei der Erfassung der Energiemengen angewendet
+    wird. Die Werte müssen entsprechend den eingesetzten Strom- und
+    Spannungswandlern eingestellt werden.
+</p>
+
+<p>
+    Änderungen der Stromwandler- und Spannungswandlerverhältnisse
+    können ausschließlich über die <code>SRVC</code>-Taste vorgenommen
+    werden. Die SRVC-Taste kann durch eine Plombe gegen unbefugte
+    Eingriffe gesichert werden.
+</p>
+
+<h4>
+Echtzeituhr
+</h4>
+
+<p>
+    Die Echtzeituhr zeigt die aktuell gültige Gerätezeit an.
+</p>
+
+<p>
+    Falls keine automatische Zeitsynchronisation erfolgt, wird die
+    Verwendung der UTC-Zeit empfohlen, da eine automatische
+    Sommer-/Winterzeitumstellung nicht unterstützt wird.
+</p>
+
+<p>
+    Änderungen an der Echtzeituhr können über die
+    <code>SRVC</code>-Taste vorgenommen werden. Die SRVC-Taste kann
+    durch eine Plombe gegen unbefugte Änderungen gesichert werden.
+</p>
+
+<h4>
+S0-Impulsausgang
+</h4>
+
+<p>
+    Der S0-Impulsausgang kann für unterschiedliche Energiearten
+    konfiguriert werden:
+</p>
+
+<ul>
+    <li>
+        <strong>Wirkenergie Diff:</strong>
+        Sämtliche Wirkenergie, unabhängig davon ob Bezug oder Lieferung,
+        wird gemeinsam ausgegeben.
+    </li>
+
+    <li>
+        <strong>Blindenergie Diff:</strong>
+        Sämtliche Blindenergie, unabhängig davon ob Bezug oder
+        Lieferung, wird gemeinsam ausgegeben.
+    </li>
+
+    <li>
+        <strong>Wirkenergie Import:</strong>
+        Ausschließlich bezogene Wirkenergie wird über den
+        S0-Ausgang ausgegeben.
+    </li>
+
+    <li>
+        <strong>Blindenergie Import:</strong>
+        Ausschließlich bezogene Blindenergie wird über den
+        S0-Ausgang ausgegeben.
+    </li>
+
+    <li>
+        <strong>Wirkenergie Export:</strong>
+        Ausschließlich gelieferte Wirkenergie wird über den
+        S0-Ausgang ausgegeben.
+    </li>
+
+    <li>
+        <strong>Blindenergie Export:</strong>
+        Ausschließlich gelieferte Blindenergie wird über den
+        S0-Ausgang ausgegeben.
+    </li>
+</ul>
+
+<p>
+    Der S0-Ausgang erzeugt für die eingestellte Energiemenge einen
+    elektrischen Impuls. Anhand dieser Impulse kann die übertragene
+    Energiemenge berechnet werden.
+</p>
+
+<p>
+    Folgende Parameter können konfiguriert werden:
+</p>
+
+<ul>
+    <li>
+        <strong>Impulswertigkeit:</strong>
+        Anzahl der ausgegebenen Impulse pro Energieeinheit.
+    </li>
+
+    <li>
+        <strong>Impulslänge:</strong>
+        Dauer eines einzelnen Impulses.
+    </li>
+</ul>
+           <p>
+    Das Ändern der Einstellungen des S0-Impulsausgangs ist
+    ausschließlich über die SRVC-Taste möglich.
+</p>
+
+<p>
+    Die SRVC-Taste kann mittels Plombierung gegen unbefugte
+    Änderungen geschützt werden.
+</p>
+
+<h4>
+Verwendung für Verrechnungszwecke
+</h4>
+
+<p>
+    Bei der LP-Version des Hyperion Energiezählers sind ausschließlich
+    die Wirkenergiemessungen für Verrechnungszwecke zugelassen.
+</p>
+
+<p>
+    Diese Messwerte können jederzeit über das Display oder die
+    jeweilige Geräteschnittstelle ausgelesen werden.
+</p>
+
+<p>
+    Alle weiteren auf dem Display dargestellten Messwerte dienen
+    ausschließlich Informationszwecken und dürfen nicht für
+    Verrechnungszwecke verwendet werden.
+</p>
+
+<p>
+    Dies gilt ebenfalls für Messwerte, die ausschließlich über
+    Schnittstellen ausgelesen werden können und nicht auf dem
+    Display angezeigt werden.
+</p>
+
+<h4>
+Beschreibung
+</h4>
+
+<p>
+    Die Lastgangfunktion nach PTB-A 50.7 besteht aus zwei
+    Teilfunktionen:
+</p>
+
+<ul>
+    <li>
+        <strong>Lastgangspeicher</strong><br>
+        Der Lastgangspeicher zeichnet Messwerte auf und ist als
+        Ringspeicher ausgeführt. Nach Erreichen der maximalen
+        Speicherkapazität werden die ältesten Einträge überschrieben.
+        Aus technischen Gründen erfolgt das Überschreiben in Gruppen
+        von jeweils 27 Datensätzen.
+    </li>
+
+    <li>
+        <strong>Logbuchspeicher (eichtechnisches Logbuch)</strong><br>
+        Das Logbuch dokumentiert alle Änderungen an Parametern,
+        die Einfluss auf die Lastgangaufzeichnung haben.
+    </li>
+</ul>
+
+<p>
+    Der Logbuchspeicher kann ohne Beschädigung der vorhandenen
+    Plombierungen nicht manipuliert werden.
+</p>
+
+<p>
+    Folgende Änderungen werden protokolliert:
+</p>
+
+<ul>
+    <li>Änderungen von Datum und Uhrzeit</li>
+    <li>Änderungen des Spannungswandler- oder Stromwandlerfaktors</li>
+    <li>Änderungen der S0-Impulswertigkeit</li>
+    <li>Änderungen der S0-Impulsdauer</li>
+</ul>
+
+<p>
+    Innerhalb eines Lastgangintervalls kann jeder dieser Parameter
+    nur einmal geändert werden. Weitere Änderungen sind erst nach
+    Beginn des nächsten Aufzeichnungsintervalls möglich.
+</p>
+
+<p>
+    Das Logbuch verfügt über maximal 2048 Einträge. Diese Einträge
+    können weder gelöscht noch überschrieben werden.
+</p>
+
+<p>
+    Ist die Speicherkapazität erschöpft und wird anschließend eine
+    weitere Änderung an einem der protokollierten Parameter
+    vorgenommen, wechselt der Zähler in einen eichrechtlich
+    ungültigen Zustand.
+</p>
+            <p>
+    Dies wird durch das Symbol <code>PTB NV</code> auf dem Display
+    angezeigt. Darüber hinaus erhalten alle nachfolgenden
+    Lastgangeinträge den Status <code>NG</code> (nicht gültig).
+</p>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Der Status <code>PTBNV</code> kann aus rechtlichen Gründen nicht
+        zurückgesetzt oder rückgängig gemacht werden.
+    </p>
+</div>
+
+<h4>
+Aufzeichnungsintervall
+</h4>
+
+<p>
+    Das Aufzeichnungsintervall des Lastgangs ist bei den
+    LP-Versionen des Hyperion Energiezählers fest auf
+    15 Minuten eingestellt und kann nicht verändert werden.
+</p>
+
+<h4>
+Zeitsynchronisierung
+</h4>
+
+<p>
+    Die Zeitsynchronisierung erfolgt über ein definiertes Kommando
+    mittels M-Bus- oder TCP/IP-Schnittstelle, über einen
+    eichrechtlich anerkannten Zeitserver mit gesetzlicher Zeit
+    oder direkt über die Bedientasten des Zählers.
+</p>
+
+<p>
+    Dabei werden Datum und Uhrzeit an den Zähler übertragen.
+    Die Synchronisierung wird unmittelbar durchgeführt und bei
+    einer Synchronisierung über die M-Bus-Schnittstelle mit einer
+    <code>ACK</code>-Meldung bestätigt.
+</p>
+
+<p>
+    Pro Aufzeichnungsperiode von 15 Minuten kann die Uhrzeit nur
+    einmal synchronisiert beziehungsweise gestellt werden.
+    Es muss immer die gesetzliche Zeit verwendet werden.
+</p>
+
+<p>
+    Dabei wird zwischen Zeitsynchronisierung und Zeitstellung
+    unterschieden:
+</p>
+
+<ul>
+    <li>
+        <strong>Zeitsynchronisierung:</strong>
+        Jede Zeiteinstellung mit einer Abweichung von weniger als
+        9 Sekunden zur zuvor gültigen Zeit gilt als normale
+        Synchronisierung. In diesem Fall wird kein
+        Logbucheintrag erstellt.
+    </li>
+
+    <li>
+        <strong>Zeitstellung:</strong>
+        Wird die Echtzeituhr erstmals gesetzt oder beträgt die
+        Abweichung mehr als 9 Sekunden zur bisherigen Uhrzeit,
+        wird ein Logbucheintrag erzeugt und der aktuelle Lastgang
+        mit dem Status <code>NG</code> gekennzeichnet.
+    </li>
+</ul>
+
+<p>
+    Der interne Puffer (Gangreserve) zur Aufrechterhaltung der
+    Systemzeit während eines Spannungsausfalls reicht für
+    mindestens 18 Tage, sofern der Zähler zuvor mindestens
+    zwei Stunden in Betrieb war.
+</p>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Der Hyperion LP besitzt interne Zeitstempel, die bei jeder
+        Synchronisierung der Echtzeituhr neu gesetzt werden.
+        Wird der Zähler nach mehr als zwei Wochen ohne Versorgung
+        wieder eingeschaltet, erkennt das System die fehlende
+        vorgeschriebene Synchronisierung und markiert alle
+        nachfolgenden Lastgangeinträge als <code>NG</code>
+        (nicht gültig).
+    </p>
+</div>
+
+<p>
+    Auf dem Display können die Meldungen
+    <code>TNV</code>, <code>TNS</code> oder <code>NTP</code>
+    erscheinen. Die folgende Abbildung zeigt, unter welchen
+    Bedingungen diese Meldungen dargestellt werden und welche
+    Auswirkungen sie auf die Gültigkeit der Messwerte haben.
+</p>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_19.png"
+        alt="Zeitsynchronisierung und Statusmeldungen"
+        loading="lazy"
+        style="max-width:100%; height:auto;"
+    >
+    <figcaption>
+        Abbildung 22. Statusmeldungen bei der Zeitsynchronisierung
+    </figcaption>
+</figure>
+           <div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Gemäß PTB-A 50.7 muss bei Geräten mit einer
+        Kommunikationsschnittstelle mindestens alle 14 Tage eine
+        Zeitsynchronisation durchgeführt werden.
+    </p>
+
+    <p style="margin-bottom:0;">
+        Erfolgt innerhalb dieses Zeitraums keine Synchronisation,
+        werden sämtliche Lastgangeinträge nach Ablauf der 14 Tage
+        mit <code>NG</code> gekennzeichnet, bis erneut eine gültige
+        Synchronisation durchgeführt wird.
+    </p>
+
+    <p style="margin-bottom:0;">
+        Zusätzlich erscheint auf dem Display die Meldung
+        <code>TNS</code>.
+    </p>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Ab Werk ist der Echtzeitpuffer (RTC Buffer) des
+        Hyperion LP ungeladen und wird deshalb zunächst als
+        „länger als 18 Tage spannungslos“ (<code>TNV</code>)
+        behandelt.
+    </p>
+</div>
+
+<h4>
+Tarifumstellung
+</h4>
+
+<p>
+    Bei der LP-Ausführung (PTB-A 50.7 zertifiziert) wird eine
+    Tarifänderung erst mit Beginn einer neuen Aufzeichnungsperiode
+    übernommen.
+</p>
+
+<p>
+    Der zum Startzeitpunkt des Intervalls an den Klemmen
+    9 bis 11 anliegende Tarif bleibt bis mindestens zum Beginn
+    der nächsten Aufzeichnungsperiode gültig.
+</p>
+
+<p>
+    Für die LP-Ausführung steht ausschließlich der
+    Zweitarifbetrieb zur Verfügung.
+</p>
+
+<p>
+    Die Tarifumschaltung erfolgt über die Tarifeingänge
+    auf der Rückseite des Zählers (Klemmen 9 bis 11).
+</p>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Nach einem Spannungsausfall kann während des ersten
+        Aufzeichnungsintervalls vorübergehend ein falscher Tarif
+        angezeigt werden.
+    </p>
+
+    <p style="margin-bottom:0;">
+        Dieses Intervall wird grundsätzlich mit
+        <code>NG</code> gekennzeichnet. Die korrekte
+        Tarifeinstellung wird anschließend aus den
+        Tarifeingängen NE, E1 und E2 übernommen.
+    </p>
+</div>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Für den Lastgang nach PTB-A 50.7 ist ausschließlich
+        der Zweitarifbetrieb verfügbar. Tarifumstellungen werden
+        erst mit dem nächsten Aufzeichnungsintervall wirksam.
+    </p>
+</div>
+
+<h4>
+Externe Schnittstellenauslesung
+</h4>
+
+<p>
+    Die Auslesung über die externe Schnittstelle kann für
+    Verrechnungszwecke verwendet werden.
+</p>
+
+<p>
+    Die Schnittstellen liefern dieselben abrechnungsrelevanten
+    Informationen, die auch auf dem Display des Geräts angezeigt
+    werden.
+</p>
+
+<h4>
+Speicherkapazität
+</h4>
+
+<p>
+    Der interne Speicher bietet folgende Kapazitäten:
+</p>
+
+<ul>
+    <li>
+        Kontinuierliche Lastgangaufzeichnungen:
+        <strong>105378 Einträge</strong>
+    </li>
+</ul>
+
+<p>
+    Bei einem Lastgangintervall von 15 Minuten entspricht dies
+    einem Zeitraum von etwa drei Jahren.
+</p>
+
+<p>
+    Sobald die maximale Speicherkapazität erreicht wird,
+    überschreibt der Zähler die ältesten Einträge gruppenweise.
+    Dabei werden jeweils die ersten 26 Einträge gelöscht und durch
+    neue Datensätze ersetzt.
+</p>
+
+<p>
+    Somit stehen jederzeit die neuesten
+    <strong>105352 Lastgangeinträge</strong> zur Verfügung,
+    während ältere Datensätze verloren gehen.
+</p>
+
+<ul>
+    <li>
+        Logbucheinträge:
+        <strong>2048 Einträge</strong>
+    </li>
+</ul>
+           <p>
+    Jede Änderung des Stromwandlerverhältnisses, des
+    Spannungswandlerverhältnisses, der Echtzeituhr oder der
+    S0-Impulswertigkeit beziehungsweise Impulslänge erzeugt einen
+    Eintrag im eichtechnischen Logbuch.
+</p>
+
+<p>
+    Sind sämtliche verfügbaren Logbucheinträge verbraucht, versetzt
+    jede weitere Änderung einer dieser Parameter den Hyperion gemäß
+    den Anforderungen der PTB-A 50.7 in einen eichtechnisch ungültigen
+    Zustand. Das Gerät darf anschließend nicht mehr für
+    abrechnungsrelevante Anwendungen verwendet werden und muss ersetzt
+    werden.
+</p>
+
+<h3>
+14.3. Spannungsausfall und Neustart
+</h3>
+
+<h4>
+Spannungsausfall
+</h4>
+
+<p>
+    Alle Lastgangwerte werden in einem festen
+    15-Minuten-Raster gespeichert, also jeweils um
+    XX:00, XX:15, XX:30 und XX:45 Uhr. Nach einem Spannungsausfall
+    wird die Aufzeichnung entsprechend fortgesetzt.
+</p>
+
+<p>
+    Beispiel:
+</p>
+
+<ul>
+    <li>Aktuelle Uhrzeit: 07:37 Uhr, letzter gespeicherter Eintrag um 07:30 Uhr.</li>
+    <li>Spannungsausfall bis 08:12 Uhr.</li>
+    <li>Der nächste Eintrag erfolgt um 08:15 Uhr und wird automatisch als <code>NG</code> gekennzeichnet.</li>
+    <li>Die Einträge für 07:45 Uhr und 08:00 Uhr fehlen.</li>
+</ul>
+
+<p>
+    Nach jedem Spannungsausfall wird der erste Lastgangeintrag mit dem
+    Status <code>NG</code> (nicht gültig) markiert.
+</p>
+
+<p>
+    Konnte die interne Gangreserve die Uhrzeit während des Ausfalls
+    aufrechterhalten, werden die nachfolgenden Lastgänge nicht als
+    ungültig gekennzeichnet.
+</p>
+
+<h4>
+Neustart
+</h4>
+
+<p>
+    In seltenen Fällen kann es zu einem internen Neustart des Zählers
+    kommen. In diesem Fall wird der betreffende Lastgangeintrag mit
+    dem Status <code>NG</code> gekennzeichnet.
+</p>
+
+<h4>
+Anzeige Lastgang
+</h4>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_20.png"
+        alt="Anzeige Lastgang"
+        loading="lazy"
+        style="max-width:100%; height:auto;"
+    >
+    <figcaption>
+        Abbildung 23. Anzeige des Lastgangs
+    </figcaption>
+</figure>
+
+<p>
+    Beim Aufruf der Lastganganzeige wird stets der zuletzt gespeicherte
+    Eintrag angezeigt.
+</p>
+
+<p>
+    Sind alle 105.378 verfügbaren Lastgangeinträge belegt, löscht der
+    Hyperion automatisch die ältesten 26 Einträge. Die fortlaufende
+    Nummerierung wird dabei nicht zurückgesetzt.
+</p>
+
+<p>
+    Beispiel:
+</p>
+
+<p>
+    Hat ein Hyperion bereits 200.000 Lastgänge gespeichert, wird beim
+    Öffnen der Anzeige zunächst Eintrag 200.000 dargestellt. Nach dem
+    Zurückblättern um 105.378 Einträge springt die Anzeige wieder auf
+    die neuesten Datensätze. Die ältesten Einträge wurden in diesem
+    Fall bereits überschrieben.
+</p>
+
+<p>
+    Folgende Informationen werden auf dem Display dargestellt:
+</p>
+
+<ul>
+    <li><strong>000003</strong>: Index des angezeigten Eintrags.</li>
+    <li><strong>05.01.2021 10:45:00</strong>: Zeitstempel des gespeicherten Lastgangs.</li>
+    <li><strong>NG</strong>: Kennzeichnung eines ungültigen Lastgangeintrags.</li>
+    <li><strong>T1 / T2</strong>: Zugehöriger Tarif.</li>
+    <li><strong>00000000.0 kWh</strong>: Zählerstand des Wirkenergieregisters zum Zeitpunkt der Aufzeichnung.</li>
+</ul>
+
+<p>
+    Ein Lastgangeintrag wird als <code>NG</code> (nicht gültig)
+    gekennzeichnet, wenn:
+</p>
+
+<ul>
+    <li>eine Manipulation relevanter Geräteparameter erfolgt,</li>
+    <li>es sich um den ersten Lastgang nach einem Neustart oder Spannungsausfall handelt,</li>
+    <li>innerhalb von zwei Wochen keine erneute Zeitsynchronisation durchgeführt wurde.</li>
+</ul>
+
+<p>
+    Gültige Lastgangeinträge werden ohne zusätzliche Kennzeichnung
+    angezeigt.
+</p>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Für Lastgänge nach PTB-A 50.7 steht ausschließlich der
+        Doppeltarifbetrieb zur Verfügung. Tarifänderungen werden erst
+        mit dem nächsten Aufzeichnungsintervall übernommen.
+    </p>
+</div>
+
+<p>
+    <strong>Imp / Exp</strong> bezeichnet die Umschaltung zwischen
+    Bezugs- und Lieferregister.
+</p>
+
+<p>
+    Durch längeres Betätigen der Taste
+    <strong>„Pfeil runter“</strong> (&gt; 2 s) kann zwischen
+    Import- (Bezug) und Exportwerten (Lieferung) umgeschaltet werden.
+</p>
+
+<h4>
+Anzeige Logbuch
+</h4>
+
+<p>
+    Beim Aufruf der Logbuchanzeige wird stets der zuletzt erzeugte
+    Eintrag dargestellt. Das Display zeigt die relevanten
+    Informationen des jeweiligen Logbucheintrags an.
+</p>
+
+<h4>
+Im Falle einer Zeitstellung
+</h4>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_20.1.png"
+        alt="Logbuchanzeige nach Zeitstellung"
+        loading="lazy"
+        style="max-width:100%; height:auto;"
+    >
+    <figcaption>
+        Abbildung 24. Logbucheintrag nach einer Zeitstellung
+    </figcaption>
+</figure>
+
+           <ul>
+    <li>
+        <strong>0003 / 2048:</strong>
+        Index des aktuellen Logbucheintrags. Die Einträge beginnen
+        mit Index 1 und können durch Betätigen der Taste
+        <strong>„Pfeil Runter“</strong> in chronologisch
+        absteigender Reihenfolge durchgeblättert werden.
+    </li>
+
+    <li>
+        <strong>01.01.2021 02:41:04:</strong>
+        Bisher gültige Uhrzeit. Dieser Wert entspricht gleichzeitig
+        dem Zeitpunkt der vorherigen Zeitstellung.
+    </li>
+
+    <li>
+        <strong>01.01.2024 02:40:56:</strong>
+        Neu eingestellte Uhrzeit.
+    </li>
+
+    <li>
+        Mit einer kurzen Betätigung (&lt; 1 s) der Taste
+        <strong>„Pfeil Runter“</strong> kann durch die gespeicherten
+        Logbucheinträge navigiert werden. Die Anzeige beginnt
+        jeweils mit dem neuesten Eintrag.
+    </li>
+
+    <li>
+        Mit einer längeren Betätigung (&gt; 2 s) der Taste
+        <strong>„Pfeil Runter“</strong> kann zwischen den
+        protokollierten Änderungen und den zugehörigen
+        Zählerständen zum Zeitpunkt der Änderung umgeschaltet
+        werden.
+    </li>
+</ul>
+
+<h4>
+Im Falle einer Änderung eines Wandlerfaktors
+</h4>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_21.png"
+        alt="Logbucheintrag Wandlerfaktoränderung"
+        loading="lazy"
+    >
+    <figcaption>
+        Abbildung 25. Beispiel eines Logbucheintrags für eine Wandlerfaktoränderung.
+    </figcaption>
+</figure>
+
+<ul>
+    <li>
+        <strong>0002 / 2048:</strong>
+        Index des aktuellen Logbucheintrags.
+    </li>
+
+    <li>
+        <strong>01.01.2021 02:40:36:</strong>
+        Zeitpunkt der Änderung.
+    </li>
+
+    <li>
+        <strong>VT 100:100 → 1100:100</strong>:
+        Links ist der bisherige, rechts der neu eingestellte
+        Spannungswandlerfaktor dargestellt.
+    </li>
+
+    <li>
+        Mit einer kurzen Betätigung (&lt; 1 s) der Taste
+        <strong>„Pfeil Runter“</strong> kann durch die
+        gespeicherten Logbucheinträge navigiert werden.
+    </li>
+
+    <li>
+        Mit einer längeren Betätigung (&gt; 2 s) der Taste
+        <strong>„Pfeil Runter“</strong> kann zwischen der
+        Änderungsansicht und den Zählerständen zum Zeitpunkt
+        der Änderung umgeschaltet werden.
+    </li>
+</ul>
+
+<h4>
+Im Falle einer Änderung der Impulslänge
+</h4>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_22.png"
+        alt="Logbucheintrag Änderung Impulsdauer"
+        loading="lazy"
+    >
+    <figcaption>
+        Abbildung 26. Beispiel eines Logbucheintrags für eine Änderung der S0-Impulsdauer.
+    </figcaption>
+</figure>
+
+<ul>
+    <li>
+        <strong>0004 / 2048:</strong>
+        Index des aktuellen Logbucheintrags.
+    </li>
+
+    <li>
+        <strong>01.01.2024 02:41:40:</strong>
+        Zeitpunkt der Änderung.
+    </li>
+
+    <li>
+        <strong>S0 I-Dur. 120 → 30:</strong>
+        Links wird die bisherige, rechts die neu eingestellte
+        Impulsdauer in Millisekunden dargestellt.
+    </li>
+
+    <li>
+        Mit einer kurzen Betätigung (&lt; 1 s) der Taste
+        <strong>„Pfeil Runter“</strong> kann durch die
+        gespeicherten Logbucheinträge navigiert werden.
+    </li>
+
+    <li>
+        Mit einer längeren Betätigung (&gt; 2 s) der Taste
+        <strong>„Pfeil Runter“</strong> kann zwischen den
+        Änderungsinformationen und den zum Änderungszeitpunkt
+        gespeicherten Zählerständen umgeschaltet werden.
+    </li>
+</ul>
+           <h4>
+Im Falle einer Änderung der Impulswertigkeit
+</h4>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_23.png"
+        alt="Logbucheintrag Änderung der Impulswertigkeit"
+        loading="lazy"
+    >
+    <figcaption>
+        Abbildung 27. Beispiel eines Logbucheintrags für die Änderung der S0-Impulswertigkeit.
+    </figcaption>
+</figure>
+
+<ul>
+    <li>
+        <strong>0001 / 2048:</strong>
+        Index des aktuellen Logbucheintrags. Die Einträge beginnen
+        mit Index 1 und können durch Betätigen der Taste
+        <strong>„Pfeil Runter“</strong> in chronologisch
+        absteigender Reihenfolge durchgeblättert werden.
+    </li>
+
+    <li>
+        <strong>01.01.2021 01:56:50:</strong>
+        Zeitpunkt der Änderung.
+    </li>
+
+    <li>
+        <strong>S0 I-Rat. 10 → 10000:</strong>
+        Links wird die bisherige, rechts die neu eingestellte
+        Impulswertigkeit in Impulsen pro kWh dargestellt.
+    </li>
+
+    <li>
+        Mit einer kurzen Betätigung (&lt; 1 s) der Taste
+        <strong>„Pfeil Runter“</strong> kann durch die gespeicherten
+        Logbucheinträge navigiert werden. Die Anzeige beginnt
+        jeweils mit dem neuesten Eintrag.
+    </li>
+
+    <li>
+        Mit einer längeren Betätigung (&gt; 2 s) der Taste
+        <strong>„Pfeil Runter“</strong> kann zwischen der
+        Änderungsansicht und den zum Änderungszeitpunkt gespeicherten
+        Zählerständen umgeschaltet werden.
+    </li>
+</ul>
+
+
+
+
+<br><br>
+
+
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/da5b9e96fc814a41b14ac2c0d9753607b94f93c6/logo/mioty_lora.png"  alt="Supported radio technologies"  style="max-width:750px; height:auto;"
+    loading="lazy">
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
+    alt="trash bin Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
+</div>
+     
+<!-- FOOTER -->
+
+</div>
+<div class="footer-note">
+  <p>© Sentinum GmbH – Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bildern, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.</p>
+  <p>Vervielfältigung, Verbreitung oder Nutzung — auch auszugsweise — ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Änderungen der Spezifikationen vorbehalten. Alle Angaben erfolgen ohne Gewähr.
+  </p>
+</div>
+  
+</body></html>
