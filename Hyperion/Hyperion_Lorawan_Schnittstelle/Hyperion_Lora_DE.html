@@ -1,0 +1,2204 @@
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+    code,
+    .inline-code {
+        background-color: #f3f4f6;
+        border: 1px solid #d0d7de;
+        border-radius: 4px;
+        padding: 2px 6px;
+        font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 0.9em;
+        color: #111827;
+        display: inline-block;
+    }
+
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+</style>
+
+
+   <div class="pdf-viewer">
+        <iframe
+            src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Hyperion_LoRaWAN_Interface_DE.pdf"
+            title="Hyperion Betriebsanleitung PDF"
+            loading="lazy">
+        </iframe>
+    </div>
+
+    <div class="pdf-download">
+        📄 Sie können das PDF oben ansehen oder
+        <a href="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Hyperion_LoRaWAN_Interface_DE.pdf"
+           target="_blank"
+           rel="noopener noreferrer">
+            <strong>hier herunterladen</strong>
+        </a>.
+    </div>
+
+
+
+ <figure class="figure">
+        <img
+            src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_0.jpg"
+            alt="Hyperion IoT Energymeter"
+            loading="lazy"
+        >
+        <figcaption>
+            Abbildung 1. Hyperion IoT Energymeter
+        </figcaption>
+    </figure>
+
+<div class="main-toc">
+    <strong>Inhaltsverzeichnis</strong>
+
+    <ol>
+        <li>Generelle Beschreibung der LoRaWAN Schnittstelle</li>
+        <li>Hardwarebeschreibung</li>
+        <li>Installation und Konfiguration</li>
+        <li>LoRaWAN Funktionsübersicht</li>
+        <li>Konfiguration der Messwertübertragung</li>
+        <li>Uplink-Meldung</li>
+        <li>Standard Uplink</li>
+        <li> Messwerte-Register und Statuscodes</li>
+        <li> Status Codes</li>
+    </ol>
+</div>
+
+<h3>
+1. Generelle Beschreibung der LoRaWAN Schnittstelle
+</h3>
+
+<ul>
+    <li>
+        Der <strong>Hyperion LoRa</strong> ist kompatibel zu
+        <strong>LoRaWAN® 1.0.3</strong> (Klasse C).
+    </li>
+
+    <li>
+        Der Hyperion LoRa speichert alle für LoRaWAN® erforderlichen
+        Parameter und deren Konfiguration dauerhaft auf dem
+        LoRa-Modul.
+    </li>
+
+    <li>
+        Eine Neuparametrierung ist ausschließlich über das
+        Messgerätedisplay oder per LoRaWAN®-Downlink-Nachricht
+        möglich.
+    </li>
+
+    <li>
+        Der Hyperion LoRa synchronisiert seine interne Uhr
+        mindestens einmal täglich automatisch über eine
+        regelmäßig geplante <code>DeviceTimeReq</code>.
+    </li>
+
+    <li>
+        Der Hyperion LoRa ermittelt und optimiert seine
+        Sendeparameter selbstständig, beispielsweise Datenrate
+        und Spreading Factor (SF).
+    </li>
+
+    <li>
+        Standardmäßig verfügt das Messgerät über eine interne
+        Antenne. Eine Ausführung mit externer Antenne ist auf
+        Anfrage erhältlich.
+    </li>
+</ul>
+
+<div class="note-strip note-strip--red">
+    <strong>Bitte beachten Sie</strong>
+
+    <ul>
+        <li>
+            Der Betrieb des Hyperion LoRa mit SMA-Anschluss
+            ist nur mit angeschlossener Antenne zulässig.
+        </li>
+
+        <li>
+            Die externe Antenne ist standardmäßig deaktiviert.
+        </li>
+
+        <li>
+            Eine unsachgemäß installierte Antenne kann den
+            Hyperion beschädigen.
+        </li>
+    </ul>
+</div>
+
+<h3>
+2. Hardwarebeschreibung
+</h3>
+
+<p>
+    Die LoRaWAN®-Schnittstelle des Hyperion LoRa basiert auf dem
+    LoRa-Funkstandard. Dadurch können Messdaten auch über große
+    Entfernungen zuverlässig übertragen werden, selbst in
+    Umgebungen ohne permanente Kommunikationsverbindung.
+</p>
+
+<p>
+    Für eine stabile und leistungsfähige Verbindung zum
+    LoRaWAN®-Gateway passt das Messgerät seine Sende- und
+    Empfangsparameter kontinuierlich und automatisch an.
+</p>
+
+<p>
+    Zur einfachen Integration in ein Netzwerk kann der aktuelle
+    Verbindungsstatus direkt auf dem Display des Messgeräts
+    angezeigt werden.
+</p>
+
+<ul>
+    <li>Frequenzbereich: EU 863–870 MHz</li>
+    <li>Gerätetyp: LoRaWAN® Class C</li>
+    <li>Zwei-Wege-Kommunikation</li>
+    <li>
+        Die LoRaWAN®-Schnittstelle steht jederzeit für
+        Downlink-Nachrichten zur Verfügung (Class C).
+    </li>
+    <li>Sendeleistung: 14 dBm</li>
+</ul>
+
+<p>
+    <strong>Anschluss einer externen Antenne</strong>
+</p>
+
+<p>
+    Für den Anschluss einer externen Antenne an den
+    SMA-Anschluss ist eine Antenne mit SMA-Stecker zu verwenden.
+</p>
+
+<p>
+    Beim Einsatz einer externen Antenne muss die entsprechende
+    Option am Messgerät aktiviert werden.
+</p>
+
+<div class="note-strip note-strip--red">
+    <strong>Bitte beachten Sie</strong>
+
+    <ul>
+        <li>
+            Die Verwendung einer RP-SMA-Antenne (auch mit Adapter)
+            wird nicht empfohlen.
+        </li>
+
+        <li>
+            Wird der Hyperion LoRa an einem LoRaWAN®-Netzwerk ohne
+            Class-C-Unterstützung betrieben, arbeitet das Gerät
+            automatisch als Class-A-Endgerät.
+        </li>
+
+        <li>
+            Der Hyperion LoRa verwendet eine adaptive Datenrate
+            (ADR). Ein Einsatz als Roaming-Gerät sollte deshalb
+            vorab sorgfältig geprüft werden.
+        </li>
+    </ul>
+</div>
+
+<h3>
+3. Installation und Konfiguration
+</h3>
+
+<p>
+    Dieser Abschnitt behandelt die Sicherheit bei der Installation,
+    die Einrichtung der Antenne sowie die erforderlichen
+    Konfigurationsschritte vor der Inbetriebnahme des
+    Hyperion LoRa-Messgeräts.
+</p>
+
+<div class="note-strip note-strip--blue">
+    <strong>Bitte beachten Sie</strong>
+
+    <ul>
+        <li>
+            Stellen Sie sicher, dass vor der Installation einer
+            externen Antenne sämtliche Strom- und
+            Spannungsanschlüsse getrennt sind.
+        </li>
+
+        <li>
+            Stellen Sie sicher, dass der SMA-Stecker korrekt
+            angeschlossen ist. Das maximale Anzugsdrehmoment
+            der Überwurfmutter darf 1 Nm nicht überschreiten.
+        </li>
+    </ul>
+</div>
+
+<h4>
+Inbetriebnahme
+</h4>
+
+<p>
+    Jedes Messgerät wird mit folgenden Parametern ausgeliefert:
+</p>
+
+<ul>
+    <li>
+        Join-Modus: <strong>OTAA</strong>
+    </li>
+
+    <li>
+        <strong>Device EUI</strong>
+        (beginnend mit 10 2C EF)
+    </li>
+
+    <li>
+        <strong>AppKey</strong>
+    </li>
+
+    <li>
+        <strong>JoinEUI</strong>
+        (früher AppEUI):
+        <code>10 2C EF 00 00 00 00 00</code>
+    </li>
+</ul>
+
+<p>
+    Die Device EUI und der AppKey können direkt über das Display
+    des Messgeräts ausgelesen werden.
+</p>
+
+<p>
+    Die JoinEUI (früher AppEUI) lautet bei jedem Zähler:
+</p>
+
+<pre><code>10 2C EF 00 00 00 00 00</code></pre>
+
+<div class="note-strip note-strip--blue">
+    <ul>
+        <li>
+            Stellen Sie sicher, dass der Zähler korrekt
+            angeschlossen ist (Phasenfolge, Leiterfolge und
+            Energieflussrichtung).
+        </li>
+
+        <li>
+            Stellen Sie sicher, dass die Strom- und
+            Spannungswandlerverhältnisse bei Wandlerzählern
+            korrekt konfiguriert wurden.
+        </li>
+    </ul>
+</div>
+
+<p>
+    Der Hyperion LoRa dient zur schnellen Erkennung potenzieller
+    Probleme hinsichtlich Verbindungsqualität und Datendurchsatz.
+</p>
+
+<p>
+    Eine Neupositionierung des LoRaWAN®-Gateways ist auch nach der
+    Installation des Hyperion LoRa möglich.
+</p>
+
+<p>
+    Solange die empfohlenen Abstände und Funkbedingungen
+    eingehalten werden, kommuniziert der Zähler weiterhin mit dem
+    LoRaWAN®-Netzwerkserver.
+</p>
+
+<p>
+    Der Betrieb eines Geräts mit SMA-Anschluss ist ausschließlich
+    mit angeschlossener Antenne zulässig.
+</p>
+
+<h3>
+4. LoRaWAN Funktionsübersicht
+</h3>
+
+<h4>
+LoRa JoinStatus 2/4
+</h4>
+
+<p>
+    <strong>Anzeigeinformationen:</strong>
+</p>
+
+<ul>
+    <li>
+        <strong>Joined:</strong>
+        Zeigt an, ob das Messgerät mit einem LoRaWAN®-Netzwerk
+        verbunden ist.
+    </li>
+
+    <li>
+        <strong>Uplink:</strong>
+        ACK / NACK (mit oder ohne Bestätigung)
+    </li>
+
+    <li>
+        Zeitstempel des letzten Uplinks
+    </li>
+</ul>
+
+<h4>
+LoRa Status 3/4
+</h4>
+
+<p>
+    <strong>Anzeigeinformationen:</strong>
+</p>
+
+<ul>
+    <li>
+        <strong>RSSI:</strong>
+        Empfangene Signalstärke
+    </li>
+
+    <li>
+        <strong>SNR:</strong>
+        Signal-Rausch-Verhältnis
+    </li>
+
+    <li>
+        <strong>SF:</strong>
+        Spreading Factor
+    </li>
+
+    <li>
+        <strong>BW:</strong>
+        Bandbreite
+    </li>
+</ul>
+
+<h4>
+LoRa JoinMode 4/4
+</h4>
+
+<p>
+    <strong>Anzeigeinformationen:</strong>
+</p>
+
+<ul>
+    <li>
+        <strong>Join-Modus:</strong>
+        OTAA oder ABP
+    </li>
+
+    <li>
+        <strong>Downlink:</strong>
+        ACK / NACK (mit oder ohne Bestätigung)
+    </li>
+
+    <li>
+        Zeitstempel des letzten Downlinks
+    </li>
+</ul>
+
+<h4>
+LoRa AppKey (nur bei OTAA)
+</h4>
+
+<p>
+    Durch kurzes Drücken der <strong>SRVC-Taste</strong>
+    wird der aktuell hinterlegte <strong>AppKey</strong> angezeigt.
+</p>
+
+<p>
+    Mit der Taste <strong>Pfeil Rechts</strong> kann ein neuer
+    <strong>AppKey</strong> generiert werden.
+</p>
+
+<ul>
+    <li>
+        Ein zweiter kurzer Tastendruck (&lt; 2 s) auf die
+        <strong>SRVC-Taste</strong> beendet den Bearbeitungsmodus,
+        ohne den AppKey zu ändern.
+    </li>
+
+    <li>
+        Ein zweiter langer Tastendruck (&gt; 2 s) auf die
+        <strong>SRVC-Taste</strong> bestätigt die Generierung des
+        neuen AppKey und beendet den Bearbeitungsmodus automatisch.
+    </li>
+
+    <li>
+        Die erfolgreiche Generierung eines neuen AppKey wird durch
+        ein kurzes Blinken der Display-Hintergrundbeleuchtung
+        bestätigt.
+    </li>
+</ul>
+
+<p>
+    Der neu erzeugte <strong>AppKey</strong> kann anschließend
+    durch kurzes Drücken der <strong>SRVC-Taste</strong>
+    angezeigt werden.
+</p>
+
+<h4>
+LoRa DevAddr (nur bei ABP)
+</h4>
+
+<p>
+    Durch kurzes Drücken der <strong>SRVC-Taste</strong>
+    wird die aktuelle <strong>DevAddr</strong> angezeigt.
+</p>
+
+<p>
+    Mit der Taste <strong>Pfeil Rechts</strong> kann eine neue
+    <strong>DevAddr</strong> generiert werden.
+</p>
+
+<ul>
+    <li>
+        Ein zweiter kurzer Tastendruck (&lt; 2 s) auf die
+        <strong>SRVC-Taste</strong> beendet den Bearbeitungsmodus,
+        ohne die DevAddr zu ändern.
+    </li>
+
+    <li>
+        Ein zweiter langer Tastendruck (&gt; 2 s) auf die
+        <strong>SRVC-Taste</strong> bestätigt die Generierung der
+        neuen DevAddr und beendet den Bearbeitungsmodus automatisch.
+    </li>
+
+    <li>
+        Die erfolgreiche Generierung einer neuen DevAddr wird durch
+        ein kurzes Blinken der Display-Hintergrundbeleuchtung
+        bestätigt.
+    </li>
+</ul>
+
+<p>
+    Die neu erzeugte <strong>DevAddr</strong> kann anschließend
+    durch kurzes Drücken der <strong>SRVC-Taste</strong>
+    angezeigt werden.
+</p>
+
+<h4>
+LoRa NwkSKey (nur bei ABP)
+</h4>
+
+<p>
+    Durch kurzes Drücken der <strong>SRVC-Taste</strong>
+    wird der aktuelle <strong>NwkSKey</strong> angezeigt.
+</p>
+
+<p>
+    Mit der Taste <strong>Pfeil Rechts</strong> kann ein neuer
+    <strong>NwkSKey</strong> generiert werden.
+</p>
+
+<ul>
+    <li>
+        Ein zweiter kurzer Tastendruck (&lt; 2 s) auf die
+        <strong>SRVC-Taste</strong> beendet den Bearbeitungsmodus,
+        ohne den NwkSKey zu ändern.
+    </li>
+
+    <li>
+        Ein zweiter langer Tastendruck (&gt; 2 s) auf die
+        <strong>SRVC-Taste</strong> bestätigt die Generierung des
+        neuen NwkSKey und beendet den Bearbeitungsmodus automatisch.
+    </li>
+
+    <li>
+        Die erfolgreiche Generierung eines neuen NwkSKey wird durch
+        ein kurzes Blinken der Display-Hintergrundbeleuchtung
+        bestätigt.
+    </li>
+</ul>
+
+<p>
+    Der neu erzeugte <strong>NwkSKey</strong> kann anschließend
+    durch kurzes Drücken der <strong>SRVC-Taste</strong>
+    angezeigt werden.
+</p>
+
+<h4>
+LoRa JoinMode (verfügbar mit OTAA und ABP)
+</h4>
+
+<p>
+    Der Parameter kann durch kurzes Drücken der
+    <strong>SRVC-Taste</strong> bearbeitet werden.
+</p>
+
+<p>
+    Mit der Taste <strong>Pfeil Rechts</strong> kann zwischen den
+    verfügbaren <strong>JoinMode</strong>-Optionen gewählt werden.
+</p>
+
+<ul>
+    <li>
+        Ein zweiter kurzer Tastendruck (&lt; 2 s) auf die
+        <strong>SRVC-Taste</strong> beendet den Bearbeitungsmodus,
+        ohne den JoinMode zu ändern.
+    </li>
+
+    <li>
+        Ein zweiter langer Tastendruck (&gt; 2 s) auf die
+        <strong>SRVC-Taste</strong> speichert den neuen JoinMode und verlässt automatisch den Bearbeitungsmodus.<br>Das erfolgreiche Speichern wird durch ein kurzes Blinken der Displaybeleuchtung bestätigt.</li>
+</ul>
+
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Nach einer erfolgreichen Änderung des JoinMode müssen die
+        neuen Schlüssel und Verbindungsparameter auf dem
+        LoRaWAN®-Netzwerkserver hinterlegt werden.
+    </p>
+</div>
+
+<h4>
+OTAA – Over-the-Air Activation
+</h4>
+
+<p>
+    Die LoRaWAN®-Schnittstelle des Hyperion Energiezählers
+    unterstützt den Verbindungsmodus <strong>OTAA</strong>
+    (Over-the-Air Activation).
+</p>
+
+<p>
+    Das Kommunikationsmodul übernimmt dabei automatisch die
+    Authentifizierung und Verschlüsselung mit dem
+    LoRaWAN®-Netzwerkserver und verbindet sich selbstständig
+    mit dem Netzwerk.
+</p>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Zwischen dem Hyperion Zähler und dem LoRaWAN®-Netzwerk
+        besteht ausschließlich eine 1:1-Verbindung. Diese
+        Kommunikationsart bietet einen erhöhten Schutz gegen
+        unbefugte Zugriffe und Störungen durch Dritte.
+    </p>
+</div>
+
+
+<h4>
+LoRa Join
+</h4>
+
+<p>
+    Durchführung eines (erneuten) Netzwerkbeitritts.
+</p>
+
+<p>
+    Der Parameter kann durch kurzes Drücken der
+    <strong>SRVC-Taste</strong> ausgewählt werden.
+</p>
+
+<p>
+    Mit der Taste <strong>Pfeil Rechts</strong> kann die Option
+    <strong>Reboot</strong> ausgewählt werden.
+</p>
+
+<ul>
+    <li>
+        Ein zweiter kurzer Tastendruck (&lt; 2 s) auf die
+        <strong>SRVC-Taste</strong> beendet den Bearbeitungsmodus,
+        ohne Änderungen zu übernehmen.
+    </li>
+
+    <li>
+        Ein zweiter langer Tastendruck (&gt; 2 s) auf die
+        <strong>SRVC-Taste</strong> startet den erneuten Join-Vorgang
+        und beendet den Bearbeitungsmodus automatisch.
+    </li>
+
+    <li>
+        Das erfolgreiche Speichern wird durch ein kurzes Blinken
+        der Displaybeleuchtung bestätigt.
+    </li>
+</ul>
+
+<h4>
+LoRa Test
+</h4>
+
+<p>
+    Sendet sofort eine Uplink-Nachricht mit der Konfiguration von
+    Slot&nbsp;1 an das LoRaWAN®-Netzwerk.
+</p>
+
+<p>
+    Der Parameter kann durch kurzes Drücken der
+    <strong>SRVC-Taste</strong> ausgewählt werden.
+</p>
+
+<p>
+    Der Uplink wird mit der Taste
+    <strong>Pfeil Rechts</strong> ausgelöst.
+</p>
+
+<ul>
+    <li>
+        Ein zweiter kurzer Tastendruck (&lt; 2 s) auf die
+        <strong>SRVC-Taste</strong> beendet den Bearbeitungsmodus,
+        ohne Änderungen vorzunehmen.
+    </li>
+
+    <li>
+        Ein zweiter langer Tastendruck (&gt; 2 s) auf die
+        <strong>SRVC-Taste</strong> startet den Uplink und beendet
+        den Bearbeitungsmodus automatisch.
+    </li>
+
+    <li>
+        Die erfolgreiche Übertragung wird durch ein kurzes Blinken
+        der Displaybeleuchtung bestätigt.
+    </li>
+</ul>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <ul>
+        <li>
+            Dieser Uplink kann nur gesendet werden, wenn
+            Slot&nbsp;1 als aktiv markiert ist.
+        </li>
+
+        <li>
+            Dieser Uplink kann nur gesendet werden, sofern keine
+            Duty-Cycle-Beschränkungen aktiv sind.
+        </li>
+    </ul>
+</div>
+
+
+<h4>
+<strong>LoRa-Antenne</strong>
+</h4>
+
+<p>
+    Ermöglicht das Umschalten zwischen interner und externer Antenne.
+</p>
+
+<p>
+    Die Einstellung erfolgt durch kurzes Drücken der
+    <strong>SRVC-Taste</strong>. Mit der Taste
+    <strong>„Pfeil rechts“</strong> kann die gewünschte
+    Antennenkonfiguration ausgewählt werden.
+</p>
+
+<ul>
+    <li>
+        Durch ein erneutes kurzes Drücken der SRVC-Taste (&lt; 2 s)
+        wird der Bearbeitungsmodus verlassen, ohne die Auswahl zu
+        speichern.
+    </li>
+
+    <li>
+        Durch ein erneutes langes Drücken der SRVC-Taste (&gt; 2 s)
+        wird die Auswahl gespeichert und der Bearbeitungsmodus
+        automatisch beendet.
+        Das erfolgreiche Speichern wird durch ein kurzes Blinken der
+        Displaybeleuchtung bestätigt.
+    </li>
+</ul>
+
+<div class="note-strip note-strip--red">
+    <strong>Gefahr</strong>
+
+    <ul>
+        <li>
+            Stellen Sie sicher, dass das Messgerät bei der Installation
+            der externen Antenne spannungsfrei ist.
+        </li>
+
+        <li>
+            Das Messgerät kann beschädigt werden, wenn die
+            Installationsanweisungen nicht befolgt werden.
+        </li>
+
+        <li>Befolgen Sie die Installationsanweisungen sorgfältig.</li>
+
+        <li>
+            Die externe Antenne muss angeschlossen sein, bevor diese
+            Einstellung geändert wird.
+        </li>
+    </ul>
+</div>
+
+<h4>
+<strong>LoRa-Schnittstelle</strong>
+</h4>
+
+<p>
+    Ermöglicht einen <strong>Soft-Reset (SoftReset)</strong> des
+    LoRa-Moduls oder das Zurücksetzen auf die
+    <strong>Werkseinstellungen (Factory Reset)</strong>.
+</p>
+
+<p>
+    Die Einstellung erfolgt durch kurzes Drücken der
+    <strong>SRVC-Taste</strong>. Mit der Taste
+    <strong>„Pfeil rechts“</strong> kann die gewünschte
+    Reset-Funktion ausgewählt werden.
+</p>
+
+<ul>
+    <li>
+        Durch ein erneutes kurzes Drücken der SRVC-Taste (&lt; 2 s)
+        wird der Bearbeitungsmodus beendet, ohne Änderungen
+        vorzunehmen.
+    </li>
+
+    <li>
+        Durch ein erneutes langes Drücken der SRVC-Taste (&gt; 2 s)
+        wird der ausgewählte Reset ausgeführt und der
+        Bearbeitungsmodus automatisch verlassen.
+        Das erfolgreiche Zurücksetzen wird durch ein kurzes Blinken
+        der Displaybeleuchtung bestätigt.
+    </li>
+</ul>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Ein Reset des LoRa-Moduls hat keinen Einfluss auf Messwerte,
+        Zählerstände oder andere messrelevante Funktionen des
+        Hyperion LoRa. Sämtliche Messdaten bleiben unverändert
+        erhalten.
+    </p>
+</div>
+
+
+<h4>
+Join-Anfrage
+</h4>
+
+<p>
+    Solange kein erfolgreicher Join-Vorgang durchgeführt wurde,
+    versucht der Hyperion LoRa regelmäßig, eine Verbindung zu einem
+    LoRaWAN®-Netzwerk herzustellen.
+</p>
+
+<p>
+    Die Join-Anfragen werden innerhalb eines Zeitfensters von etwa
+    10 Minuten zufällig verteilt gesendet. Dadurch werden
+    Bandbreitenengpässe reduziert, wenn mehrere Zähler gleichzeitig
+    in demselben Netzwerk betrieben werden.
+</p>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Der Uplink- und Downlink-Zähler wird nach einem Neustart
+        des Hyperion LoRa auf 0 zurückgesetzt.
+    </p>
+</div>
+
+<h4>
+LoRa Verbindungstest
+</h4>
+
+<p>
+    Der Hyperion LoRa überprüft mindestens einmal täglich seine
+    Verbindung zum LoRaWAN®-Netzwerk.
+</p>
+
+<p>
+    Optional können die Datenpakete so konfiguriert werden, dass
+    für jede Uplink-Übertragung eine ACK-Bestätigung angefordert
+    wird.
+</p>
+
+<p>
+    Ist diese Funktion aktiviert, kann das Messgerät deutlich
+    schneller auf Verbindungsunterbrechungen reagieren.
+</p>
+
+<p>
+    Der Hyperion LoRa startet automatisch einen neuen
+    <strong>(Re-)Join-Prozess</strong>, wenn:
+</p>
+
+<ul>
+    <li>
+        innerhalb von 24 Stunden keine ACK-Bestätigung für
+        Uplink-Nachrichten empfangen wird,
+    </li>
+
+    <li>
+        oder die tägliche Überprüfung der Verbindung zum
+        LoRaWAN®-Netzwerk fehlschlägt.
+    </li>
+</ul>
+
+<p>
+    Die Prüfung der bestehenden Netzwerkverbindung kann über eine
+    Zeitsynchronisation mittels
+    <strong>DeviceTimeReq</strong> oder über eine Uplink-Nachricht
+    an einen dedizierten fPort mit ACK-Bestätigung erfolgen.
+</p>
+
+<div class="note-strip note-strip--blue">
+    <strong>Hinweis</strong>
+
+    <p style="margin-bottom:0;">
+        Der Hyperion LoRa Energiezähler kann jede empfangene
+        Downlink-Übertragung bestätigen.
+    </p>
+</div>
+
+<h3>
+5. Konfiguration der Messwertübertragung
+</h3>
+
+<h4>
+Allgemeine Beschreibung
+</h4>
+
+<ul>
+    <li>
+        Über eine Downlink-Nachricht kann konfiguriert werden,
+        welche Messwerte in welchem Intervall übertragen werden.
+    </li>
+
+    <li>
+        Für die Auslesung stehen ausschließlich Messwerte aus dem
+        Datenlogger sowie dem Logbuch zur Verfügung.
+    </li>
+
+    <li>
+        Für die Konfiguration stehen zehn sogenannte
+        <strong>Slots</strong> zur Verfügung, die über die
+        fPorts 1 bis 10 abgebildet werden.
+    </li>
+
+    <li>
+        Pro Slot können maximal
+        <strong>10 Messwerte</strong>
+        gespeichert werden.
+    </li>
+
+    <li>
+        Slots mit niedrigerer Nummer besitzen eine höhere Priorität.
+    </li>
+
+    <li>
+        Standardmäßig werden die unter
+        <strong>Standard-Uplink</strong>
+        definierten Messregister übertragen.
+    </li>
+
+    <li>
+        Das Übertragungsintervall kann frei konfiguriert werden.
+        Zulässig sind Intervalle von 1 Minute bis maximal
+        67.500 Minuten (ca. 45 Tage).
+    </li>
+
+    <li>
+        Es kann festgelegt werden, ob das LoRaWAN®-Netzwerk jede
+        Übertragung per ACK bestätigen soll.
+        <ul>
+            <li>
+                Ist diese Option aktiviert, sendet der Zähler ein
+                Datenpaket erneut, wenn keine Bestätigung vom
+                Netzwerk empfangen wird.
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        Für jedes Profil kann definiert werden, ob es aktiv oder
+        inaktiv sein soll.
+    </li>
+</ul>
+
+<div class="note-strip note-strip--blue">
+    <strong>Bitte beachten Sie</strong>
+
+    <ul>
+        <li>
+            Wird ausschließlich das Übertragungsintervall geändert,
+            enthält die Downlink-Nachricht lediglich die beiden
+            Intervall-Bytes sowie die Flags für ACK und Aktiv,
+            jedoch keine zusätzlichen Registerinformationen.
+        </li>
+
+        <li>
+            Falls die zulässige Sendezeit des Zählers für die
+            vorgesehene Datenmenge nicht ausreicht, kann die
+            Übertragung nur teilweise oder überhaupt nicht
+            durchgeführt werden.
+        </li>
+    </ul>
+</div>
+
+
+<h4>
+Downlink-Meldungen
+</h4>
+
+<p>
+    Der Hyperion Energiezähler LoRa kann jede empfangene
+    Downlink-Übertragung bestätigen.
+</p>
+
+<h4>
+Beschreibung der Downlink-Nachricht
+</h4>
+
+<p>
+    Die Bitreihenfolge erfolgt im
+    <strong>LSB-Format (Least Significant Bit)</strong>,
+    die Bytereihenfolge im
+    <strong>Little-Endian-Format</strong>.
+</p>
+
+<p>
+    Über die Downlink-Nachricht wird konfiguriert, welche
+    Messregister übertragen werden sollen.
+</p>
+
+<p>
+    <strong>Länge:</strong> 4 bis 13 Byte<br>
+    <strong>fPort:</strong> 110
+</p>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Byte</th>
+                <th>Beschreibung</th>
+                <th>Beispiel</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><code>0–1</code></td>
+                <td>Zeitintervall in Minuten</td>
+                <td><code>0x01 0x00 0xFF 0xFF</code></td>
+            </tr>
+
+            <tr>
+                <td><code>2</code></td>
+                <td>Konfigurations-Flags</td>
+                <td>–</td>
+            </tr>
+
+            <tr>
+                <td><code>3–12</code></td>
+                <td>Register-IDs der zu übertragenden Messwerte</td>
+                <td><code>0x03 ...</code></td>
+            </tr>
+
+            <tr>
+                <td><code>–</code></td>
+                <td>CRC8-Prüfsumme</td>
+                <td>Siehe Definition</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h4>
+Konfiguration Flaggenbyte
+</h4>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Byte</th>
+                <th>Bit</th>
+                <th>Beschreibung</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><code>00000000</code></td>
+                <td>1</td>
+                <td>Einstellungen unverändert</td>
+            </tr>
+
+            <tr>
+                <td><code>00000000</code></td>
+                <td>2</td>
+                <td>Nach dem Upload wird kein ACK erwartet</td>
+            </tr>
+
+            <tr>
+                <td><code>00000010</code></td>
+                <td>2</td>
+                <td>ACK für jeden Upload erwartet</td>
+            </tr>
+
+            <tr>
+                <td><code>00000100</code></td>
+                <td>3</td>
+                <td>
+                    Nach ca. 60 Minuten erneut mit einem bestehenden
+                    oder neuen Netzwerk verbinden
+                </td>
+            </tr>
+
+            <tr>
+                <td><code>00000000</code></td>
+                <td>3</td>
+                <td>Nicht definiert</td>
+            </tr>
+
+            <tr>
+                <td><code>00001000</code></td>
+                <td>4</td>
+                <td>Verbindung deaktiviert</td>
+            </tr>
+
+            <tr>
+                <td><code>00000000</code></td>
+                <td>4</td>
+                <td>Verbindung aktiviert</td>
+            </tr>
+
+            <tr>
+                <td><code>00010000</code></td>
+                <td>5</td>
+                <td>Nicht definiert</td>
+            </tr>
+
+            <tr>
+                <td><code>00000000</code></td>
+                <td>5</td>
+                <td>Nicht definiert</td>
+            </tr>
+
+            <tr>
+                <td><code>00100000</code></td>
+                <td>6</td>
+                <td>Nicht definiert</td>
+            </tr>
+
+            <tr>
+                <td><code>00000000</code></td>
+                <td>6</td>
+                <td>Nicht definiert</td>
+            </tr>
+
+            <tr>
+                <td><code>01000000</code></td>
+                <td>7</td>
+                <td>Nicht definiert</td>
+            </tr>
+
+            <tr>
+                <td><code>00000000</code></td>
+                <td>7</td>
+                <td>Nicht definiert</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+<p>
+    Eine Liste der verfügbaren Register-IDs finden Sie im Kapitel
+    <strong>Measurement Register</strong>.
+</p>
+
+<div class="note-strip note-strip--red">
+    <strong>Hinweis</strong>
+
+    <ul>
+        <li>
+            Werden ausschließlich Byte 0 + 1, das Config-Byte und
+            die CRC8-Prüfsumme übertragen, werden lediglich das
+            Übertragungsintervall und die Konfigurationsflags
+            geändert.
+        </li>
+
+        <li>
+            Die konfigurierten Messregister bleiben dabei
+            unverändert.
+        </li>
+    </ul>
+</div>
+
+<h4>
+Beispiel für 1-Minuten-Intervall-Einstellung
+</h4>
+
+<pre><code>var data = [0x01, 0x00, 0x08, 0x53];</code></pre>
+
+<ul>
+    <li>
+        <code>0x01 0x00</code>
+        → 1-Minuten-Intervall
+    </li>
+
+    <li>
+        <code>0x08</code>
+        → Kein ACK, kein Re-Join, Port aktiv
+    </li>
+
+    <li>
+        <code>0x53</code>
+        → CRC-8-Prüfsumme
+    </li>
+</ul>
+
+<h4>
+Beispiel für Registerübertragung
+</h4>
+
+<p>
+    Dieses Beispiel zeigt den erforderlichen Downlink für die
+    zyklische Übertragung der Energieregister
+    <em>
+        Active &amp; Reactive Energy Import &amp; Export
+        Tarif 1 &amp; 2
+    </em>
+    im Abstand von einer Minute.
+</p>
+
+<pre><code>var data = [0x01, 0x00, 0x0A, 0x01, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A, 0x83];</code></pre>
+
+
+
+<ul>
+    <li>
+        <code>0x01 0x00</code>
+        → 1-Minuten-Intervall
+    </li>
+
+    <li>
+        <code>0x0A</code>
+        → ACK aktiviert, kein Re-Join, Port aktiv
+    </li>
+
+    <li>
+        <code>0x01</code>
+        → Zeitstempel
+    </li>
+
+    <li>
+        <code>0x03 – 0x0A</code>
+        → Für den Uplink ausgewählte Register
+    </li>
+
+    <li>
+        <code>0x83</code>
+        → CRC-8-Prüfsumme
+    </li>
+</ul>
+
+<h3>
+6. Uplink-Meldung
+</h3>
+
+<p>
+    <strong>
+        Die folgenden Nachrichten können vom Hyperion LoRa
+        gesendet werden:
+    </strong>
+</p>
+
+<ul>
+    <li>Join- / Rejoin-Anfrage</li>
+    <li>Zeitsynchronisation</li>
+    <li>Überwachung der Netzwerkzugehörigkeit</li>
+    <li>Übertragung von Messregistern</li>
+</ul>
+
+<h4>
+Join / Rejoin
+</h4>
+
+<p>
+    Der Hyperion LoRa führt einen Join- bzw. Rejoin-Vorgang mit
+    einem LoRaWAN®-Netzwerk durch.
+</p>
+
+<h4>
+DeviceTimeReq / Zeitsynchronisation
+</h4>
+
+<p>
+    Im Normalbetrieb versucht der Hyperion LoRa regelmäßig,
+    mindestens einmal innerhalb von 24 Stunden und maximal einmal
+    pro Stunde, die aktuelle Uhrzeit und das aktuelle Datum
+    zu synchronisieren.
+</p>
+
+<p>
+    Für die Übernahme der neuen Zeit gelten folgende Regeln:
+</p>
+
+<ul>
+    <li>
+        Weichen die bisherige und die neue Uhrzeit um weniger als
+        2 Sekunden voneinander ab, übernimmt das Messgerät die neue
+        Zeit direkt als gültige Zeitsynchronisation.
+    </li>
+
+    <li>
+        Beträgt die Abweichung mehr als 2 Sekunden, fordert das
+        Messgerät die aktuelle Uhrzeit mindestens drei weitere Male
+        an, um die Korrektheit der empfangenen Zeit zu verifizieren.
+    </li>
+</ul>
+
+<p>
+    Nach dem Einschalten des Geräts oder wenn der interne
+    RTC-Puffer erschöpft wurde, führt das Messgerät mindestens
+    drei DeviceTimeReq-Anfragen durch.
+</p>
+
+<p>
+    Diese drei Zeitabfragen werden innerhalb eines Zeitraums von
+    etwa drei Minuten ausgeführt.
+</p>
+
+
+<div class="note-strip note-strip--blue">
+    <strong>Bitte beachten Sie</strong>
+
+    <ul>
+        <li>
+            Der Betreiber der LoRaWAN®-Infrastruktur muss
+            sicherstellen, dass der Zähler seine Zeit regelmäßig
+            synchronisieren kann, um den ordnungsgemäßen Betrieb
+            des Hyperion Energiezählers sicherzustellen.
+        </li>
+
+        <li>
+            Der LoRaWAN®-Befehl
+            <code>DeviceTimeReq</code>
+            ist hierfür die empfohlene Lösung.
+        </li>
+    </ul>
+</div>
+
+<h4>
+Versenden von Messwerten
+</h4>
+
+<ul>
+    <li>
+        Der Hyperion LoRa überträgt die angeforderten Registerwerte
+        direkt aus seinem Datenlogger über LoRaWAN®, ohne die Daten
+        zu verändern.
+    </li>
+
+    <li>
+        Die angeforderten Messwerte werden zum jeweiligen
+        Übertragungszeitpunkt aus dem Datenlogger ausgelesen.
+    </li>
+
+    <li>
+        Die Übertragung muss innerhalb des konfigurierten
+        Übertragungsintervalls beginnen und abgeschlossen werden.
+    </li>
+</ul>
+
+<p>
+    <em>Beispiel für ein Übertragungsintervall von 15 Minuten:</em>
+</p>
+
+<ul>
+    <li>
+        <strong>09:00:02 Uhr</strong>:
+        Das LoRa-Kommunikationsmodul liest den letzten
+        Datenloggereintrag aus. Die gespeicherten Werte stammen
+        vom Zeitpunkt 09:00:00 Uhr.
+    </li>
+
+    <li>
+        <strong>09:00:03 Uhr bis 09:14:59 Uhr</strong>:
+        Der Zähler versucht, die Daten über das LoRaWAN®-Netzwerk
+        zu übertragen.
+    </li>
+
+    <li>
+        <strong>09:15:02 Uhr</strong>:
+        Das LoRa-Kommunikationsmodul liest den nächsten
+        Datenloggereintrag aus. Die gespeicherten Werte stammen
+        vom Zeitpunkt 09:15:00 Uhr.
+    </li>
+</ul>
+
+<div class="note-strip note-strip--blue">
+    <strong>Bitte beachten Sie</strong>
+
+    <ul>
+        <li>
+            Beim Betrieb mehrerer Zähler innerhalb desselben
+            LoRaWAN®-Netzwerks können sich Übertragungen zeitlich
+            überschneiden.
+        </li>
+
+        <li>
+            Falls der Hyperion LoRa aufgrund von
+            Netzwerkbedingungen, beispielsweise eines hohen
+            Spreading Factors (SF) oder einer niedrigen Datenrate,
+            Übertragungen zurückhalten muss, wird lediglich ein
+            Datenpaket gesendet.
+        </li>
+
+        <li>
+            Nicht übertragene Messwerte werden zu einem späteren
+            Zeitpunkt nicht erneut versendet. Stellen Sie daher
+            sicher, dass sowohl der Zähler als auch das
+            LoRaWAN®-Netzwerk für eine vollständige und
+            fristgerechte Datenübertragung ausgelegt sind.
+        </li>
+    </ul>
+</div>
+
+
+<h4>
+Aufbau von Uplink-Paketen
+</h4>
+
+<p>
+    Die Bitreihenfolge ist <strong>LSB</strong>, die Bytereihenfolge
+    ist <strong>Little Endian</strong>. Die ersten vier Bytes enthalten
+    immer den Zeitstempel des Datenloggers.
+</p>
+
+<h4>
+Erstes Telegramm nach Join mit einem LoRaWAN®-Server
+</h4>
+
+<p>
+    <strong>fPort:</strong> 100<br>
+    <strong>Länge:</strong> 29 Byte
+</p>
+
+<h4>
+Aufbau
+</h4>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Byte</th>
+                <th>Beschreibung</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><code>0-3</code></td>
+                <td>Aktuelle Systemzeit</td>
+            </tr>
+
+            <tr>
+                <td><code>4</code></td>
+                <td>Typ</td>
+            </tr>
+
+            <tr>
+                <td><code>5-8</code></td>
+                <td>Seriennummer</td>
+            </tr>
+
+            <tr>
+                <td><code>9</code></td>
+                <td>Typ</td>
+            </tr>
+
+            <tr>
+                <td><code>10</code></td>
+                <td>Zählertyp</td>
+            </tr>
+
+            <tr>
+                <td><code>11</code></td>
+                <td>Typ</td>
+            </tr>
+
+            <tr>
+                <td><code>12-13</code></td>
+                <td>Stromwandler primär</td>
+            </tr>
+
+            <tr>
+                <td><code>14</code></td>
+                <td>Typ</td>
+            </tr>
+
+            <tr>
+                <td><code>15-16</code></td>
+                <td>Stromwandler sekundär</td>
+            </tr>
+
+            <tr>
+                <td><code>17</code></td>
+                <td>Typ</td>
+            </tr>
+
+            <tr>
+                <td><code>18-19</code></td>
+                <td>Spannungswandler primär</td>
+            </tr>
+
+            <tr>
+                <td><code>20</code></td>
+                <td>Bauform</td>
+            </tr>
+
+            <tr>
+                <td><code>21-22</code></td>
+                <td>Spannungswandler sekundär</td>
+            </tr>
+
+            <tr>
+                <td><code>23</code></td>
+                <td>Bauform</td>
+            </tr>
+
+            <tr>
+                <td><code>24-27</code></td>
+                <td>MID-Zertifizierungsjahr (BCD)</td>
+            </tr>
+
+            <tr>
+                <td><code>28</code></td>
+                <td>CRC (8 Bit)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<p>
+    <em>Beispiel für ein Paket:</em>
+</p>
+
+<p>
+    # System time<br>
+    # Serial number 22150405<br>
+    # Meter type Converter Counter → 2<br>
+    # Current transformer ratio 5:5<br>
+    # Voltage transformer ratio 100:100<br>
+    # MID year of certification 2022<br>
+    CRC should be <code>0x65</code>
+</p>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Daten</th>
+                <th>Beschreibung</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>
+                    <code>VAR DATA = [0x68, 0x9B, 0xA8, 0x62</code>
+                </td>
+                <td>
+                    Systemzeit <code>0x62A89B68</code><br>
+                    → 1655217000<br>
+                    → Dienstag, 14. Juni 2022<br>
+                    → 16:30:00 GMT+02:00 (DST)
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <code>0xF1, 0x05, 0x04, 0x15, 0x22</code>
+                </td>
+                <td>
+                    Seriennummer <code>0x22150405</code><br>
+                    → 22150405
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <code>0xF7, 0x02</code>
+                </td>
+                <td>
+                    Zählertyp <code>0x02</code><br>
+                    → 2
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <code>0xF3, 0x05, 0x00</code>
+                </td>
+                <td>
+                    Stromwandler Primär <code>0x0005</code><br>
+                    → 5
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <code>0xF4, 0x05, 0x00</code>
+                </td>
+                <td>
+                    Stromwandler Sekundär <code>0x0005</code><br>
+                    → 5
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <code>0xF5, 0x64, 0x00</code>
+                </td>
+                <td>
+                    Spannungswandler Primär <code>0x0064</code><br>
+                    → 100
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <code>0xF6, 0x64, 0x00</code>
+                </td>
+                <td>
+                    Spannungswandler Sekundär <code>0x0064</code><br>
+                    → 100
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <code>0xF8, 0x02, 0x00, 0x02, 0x02</code>
+                </td>
+                <td>
+                    MID-Zertifizierungsjahr (BCD)<br>
+                    → 2022
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <code>0x65]</code>
+                </td>
+                <td>
+                    CRC-8 Prüfsumme
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h3>
+7. Standard Uplink
+</h3>
+
+<p>
+    Nach dem ersten Start oder nach dem Zurücksetzen auf die
+    Werkseinstellungen sendet das Messgerät das folgende Telegramm:
+</p>
+
+<ul>
+    <li><strong>fPort:</strong> 1</li>
+    <li><strong>Länge:</strong> 27 Byte</li>
+    <li>
+        <strong>Intervall:</strong>
+        Alle 15 Minuten wird der aktuellste Eintrag aus dem
+        Datenlogger des Zählers übertragen.
+    </li>
+</ul>
+
+<p>
+    <strong>Aufbau:</strong>
+</p>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Byte</th>
+                <th>Beschreibung</th>
+                <th>Beispiel</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><code>0–3</code></td>
+                <td>Zeitstempel</td>
+                <td><code>0x03</code></td>
+            </tr>
+
+            <tr>
+                <td><code>4</code></td>
+                <td>Typ</td>
+                <td>–</td>
+            </tr>
+
+            <tr>
+                <td><code>5–8</code></td>
+                <td>Wirkenergie Import L123 Tarif 1</td>
+                <td><code>0x04</code></td>
+            </tr>
+
+            <tr>
+                <td><code>9</code></td>
+                <td>Typ</td>
+                <td>–</td>
+            </tr>
+
+            <tr>
+                <td><code>10–13</code></td>
+                <td>Wirkenergie Import L123 Tarif 2</td>
+                <td><code>0x05</code></td>
+            </tr>
+
+            <tr>
+                <td><code>14</code></td>
+                <td>Typ</td>
+                <td>–</td>
+            </tr>
+
+            <tr>
+                <td><code>15–18</code></td>
+                <td>Wirkenergie Export L123 Tarif 1</td>
+                <td><code>0x06</code></td>
+            </tr>
+
+            <tr>
+                <td><code>19</code></td>
+                <td>Typ</td>
+                <td>–</td>
+            </tr>
+
+            <tr>
+                <td><code>20–23</code></td>
+                <td>Wirkenergie Export L123 Tarif 2</td>
+                <td><code>0x07</code></td>
+            </tr>
+
+            <tr>
+                <td><code>24</code></td>
+                <td>Typ</td>
+                <td>–</td>
+            </tr>
+
+            <tr>
+                <td><code>25</code></td>
+                <td>Fehlercode</td>
+                <td><code>0xFF</code></td>
+            </tr>
+
+            <tr>
+                <td><code>26</code></td>
+                <td>CRC 8-Bit</td>
+                <td>–</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p>
+    Die fPorts 1–10 können individuell angepasst werden, wie im
+    Kapitel <strong>Downlink Messages</strong> beschrieben.
+</p>
+
+<h3>
+8. Messwerte-Register und Statuscodes
+</h3>
+
+<h4>
+Messwertregister
+</h4>
+
+<p>
+    Die Energiemessungen und technischen Informationen werden aus
+    dem Datenlogger des Hyperion Energiezählers ausgelesen und über
+    LoRa übertragen. Die Speicherung der Messwerte erfolgt jeweils
+    am Ende einer Messperiode (15 Minuten).
+</p>
+
+<div class="note-strip note-strip--blue">
+    <strong>Bitte beachten Sie</strong>
+
+    <ul>
+        <li>
+            Änderungen an der Konfiguration des Hyperion, z. B.
+            am Stromwandlerverhältnis, werden erst am Ende einer
+            Messperiode im Datenlogger aktualisiert.
+        </li>
+    </ul>
+</div>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Typ</th>
+                <th>Beschreibung</th>
+                <th>Einheit</th>
+                <th>Auflösung</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+         <tr><td><code>0x00</code></td><td>uInt32</td><td>Index</td><td>Index</td><td></td></tr>
+    <tr><td><code>0x01</code></td><td>uInt32</td><td>Zeitstempel</td><td>Zeit</td><td>Epoche</td></tr>
+    <tr><td><code>0x02</code></td><td>uInt32</td><td>Ursprünglicher Zeitstempel des Eintrags</td><td>Zeit</td><td>Epoche</td></tr>
+    <tr><td><code>0x03</code></td><td>uInt32</td><td>Effektiver Energieimport L123 T1</td><td>Wh</td><td>1 Wh</td></tr>
+    <tr><td><code>0x04</code></td><td>uInt32</td><td>Effektiver Energieimport L123 T2</td><td>Wh</td><td>1 Wh</td></tr>
+    <tr><td><code>0x05</code></td><td>uInt32</td><td>Effektiver Energieexport L123 T1</td><td>Wh</td><td>1 Wh</td></tr>
+    <tr><td><code>0x06</code></td><td>uInt32</td><td>Effektiver Energieexport L123 T2</td><td>Wh</td><td>1 Wh</td></tr>
+    <tr><td><code>0x07</code></td><td>uInt32</td><td>Blindenergieimporte L123 T1</td><td>varh</td><td>1 varh</td></tr>
+    <tr><td><code>0x08</code></td><td>uInt32</td><td>Import reaktive Energie L123 T2</td><td>varh</td><td>1 varh</td></tr>
+    <tr><td><code>0x09</code></td><td>uInt32</td><td>Exportieren von Blindleistung L123 T1</td><td>varh</td><td>1 varh</td></tr>
+    <tr><td><code>0x0A</code></td><td>uInt32</td><td>Export von Blindleistung L123 T2</td><td>varh</td><td>1 varh</td></tr>
+    <tr><td><code>0x0B</code></td><td>Int32</td><td>Tatsächliche Leistung L123</td><td>W</td><td>1 W</td></tr>
+    <tr><td><code>0x0C</code></td><td>Int32</td><td>Tatsächliche Leistung L1</td><td>W</td><td>1 W</td></tr>
+    <tr><td><code>0x0D</code></td><td>Int32</td><td>Tatsächliche Leistung L2</td><td>W</td><td>1 W</td></tr>
+    <tr><td><code>0x0E</code></td><td>Int32</td><td>Tatsächliche Leistung</td><td>W</td><td>1 W</td></tr>
+    <tr><td><code>0x0F</code></td><td>Int32</td><td>Elektrizität L123</td><td>mA</td><td>1 mA</td></tr>
+    <tr><td><code>0x10</code></td><td>Int32</td><td>Strom L1</td><td>mA</td><td>1 mA</td></tr>
+    <tr><td><code>0x11</code></td><td>Int32</td><td>Elektrizität L2</td><td>mA</td><td>1 mA</td></tr>
+    <tr><td><code>0x12</code></td><td>Int32</td><td>Elektrizität L3</td><td>mA</td><td>1 mA</td></tr>
+    <tr><td><code>0x13</code></td><td>Int32</td><td>Strom L4 (Nullleiter, nur für Stromwandlerzähler)</td><td>mA</td><td>1 mA</td></tr>
+    <tr><td><code>0x14</code></td><td>Int32</td><td>Spannung L1-N</td><td>V</td><td>100 mV</td></tr>
+    <tr><td><code>0x15</code></td><td>Int32</td><td>Spannung L2-N</td><td>V</td><td>100 mV</td></tr>
+    <tr><td><code>0x16</code></td><td>Int32</td><td>Spannung L3-N</td><td>V</td><td>100 mV</td></tr>
+    <tr><td><code>0x17</code></td><td>Int8</td><td>Leistungsfaktor L1</td><td>-1..1</td><td>0,01</td></tr>
+    <tr><td><code>0x18</code></td><td>Int8</td><td>Leistungsfaktor L2</td><td>-1..1</td><td>0,01</td></tr>
+    <tr><td><code>0x19</code></td><td>Int8</td><td>Leistungsfaktor L3</td><td>-1..1</td><td>0,01</td></tr>
+    <tr><td><code>0x1A</code></td><td>Int16</td><td>Frequenz</td><td>Hz</td><td>0,1 Hz</td></tr>
+    <tr><td><code>0x1B</code></td><td>uInt32</td><td>Mittlere Leistung</td><td>W</td><td>1 W</td></tr>
+    <tr><td><code>0x1C</code></td><td>uInt32</td><td>Effektiver Energieimport L123 T1</td><td>kWh</td><td>1 kWh</td></tr>
+    <tr><td><code>0x1D</code></td><td>uInt32</td><td>Import effektiver Energie L123 T2</td><td>kWh</td><td>1 kWh</td></tr>
+    <tr><td><code>0x1E</code></td><td>uInt32</td><td>Effektiver Energieexport L123 T1</td><td>kWh</td><td>1 kWh</td></tr>
+    <tr><td><code>0x1F</code></td><td>uInt32</td><td>Effektiver Energieexport L123 T2</td><td>kWh</td><td>1 kWh</td></tr>
+    <tr><td><code>0x20</code></td><td>uInt32</td><td>Import reaktive Energie L123 T1</td><td>kvarh</td><td>1 kvarh</td></tr>
+    <tr><td><code>0x21</code></td><td>uInt32</td><td>Importieren der Blindleistung L123 T2</td><td>kvarh</td><td>1 kvarh</td></tr>
+    <tr><td><code>0x22</code></td><td>uInt32</td><td>Importieren der Blindleistung L123 T1</td><td>kvarh</td><td>1 kvarh</td></tr>
+    <tr><td><code>0x23</code></td><td>uInt32</td><td>Importieren der Blindleistung L123 T2</td><td>kvarh</td><td>1 kvarh</td></tr>
+    <tr><td><code>0x24</code></td><td>uInt64</td><td>Effektiver Energieimport L123 T1</td><td>Wh</td><td>1 Wh</td></tr>
+    <tr><td><code>0x25</code></td><td>uInt64</td><td>Importarbeit L123</td><td>Wh</td><td>1 Wh</td></tr>
+    <tr><td><code>0x26</code></td><td>uInt64</td><td>Effektive Energieexporte L123 T1</td><td>Wh</td><td>1 Wh</td></tr>
+    <tr><td><code>0x27</code></td><td>uInt64</td><td>Effektive Energieexporte L123 T2</td><td>Wh</td><td>1 Wh</td></tr>
+    <tr><td><code>0x28</code></td><td>uInt64</td><td>Blindenergieimporte L123 T1</td><td>varh</td><td>1 varh</td></tr>
+    <tr><td><code>0x29</code></td><td>uInt64</td><td>Import reaktive Energie L123 T2</td><td>varh</td><td>1 varh</td></tr>
+    <tr><td><code>0x2A</code></td><td>uInt64</td><td>Exportieren von Blindleistung L123 T1</td><td>varh</td><td>1 varh</td></tr>
+    <tr><td><code>0x2B</code></td><td>uInt64</td><td>Export von Blindleistung L123 T2</td><td>varh</td><td>1 varh</td></tr>
+    <tr><td><code>0xF0</code></td><td>uInt8</td><td>Fehlercode</td><td></td><td></td></tr>
+    <tr><td><code>0xF1</code></td><td>uInt32</td><td>Hex Seriennummer</td><td></td><td></td></tr>
+    <tr><td><code>0xF2</code></td><td>uInt32</td><td>Hex Anlagennummer</td><td></td><td></td></tr>
+    <tr><td><code>0xF3</code></td><td>uInt16</td><td>Stromwandler Primärseite</td><td></td><td></td></tr>
+    <tr><td><code>0xF4</code></td><td>uInt16</td><td>Stromwandler sekundär</td><td></td><td></td></tr>
+    <tr><td><code>0xF5</code></td><td>uInt16</td><td>Spannungswandler primär</td><td></td><td></td></tr>
+    <tr><td><code>0xF6</code></td><td>uInt16</td><td>Spannungswandler sekundär</td><td></td><td></td></tr>
+    <tr><td><code>0xF7</code></td><td>uInt8</td><td>Zählertyp</td><td></td><td></td></tr>
+    <tr><td><code>0xF8</code></td><td>uInt32</td><td>MID Jahr der Zertifizierung</td><td></td><td>BCD</td></tr>
+    <tr><td><code>0xF9</code></td><td>uInt32</td><td>Herstellungsjahr</td><td></td><td>BCD</td></tr>
+    <tr><td><code>0xFA</code></td><td>uInt32</td><td>Firmware-Version</td><td></td><td>ASCII</td></tr>
+    <tr><td><code>0xFB</code></td><td>uInt32</td><td>MID-Messversion</td><td></td><td>ASCII</td></tr>
+    <tr><td><code>0xFC</code></td><td>uInt32</td><td>Produzenten</td><td></td><td>ASCII</td></tr>
+    <tr><td><code>0xFD</code></td><td>uInt32</td><td>Hardware-Index</td><td></td><td>ASCII</td></tr>
+    <tr><td><code>0xFE</code></td><td>uInt32</td><td>Aktuelle Systemzeit</td><td>Zeit</td><td>Epoche</td></tr>
+
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+<p>
+    Die möglichen Werte des Fehlercodes finden Sie im Kapitel
+    <strong>Status Codes</strong>.
+</p>
+
+<h3>
+9. Status Codes
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Abschnitt</th>
+                <th>Titel</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Einführung</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Hardware</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Installation und Inbetriebnahme</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>LoRaWAN-Übersicht</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>Konfiguration der Messwertübertragung</td>
+            </tr>
+
+            <tr>
+                <td>6</td>
+                <td>Uplink-Nachricht</td>
+            </tr>
+
+            <tr>
+                <td>7</td>
+                <td>Standard-Uplink</td>
+            </tr>
+
+            <tr>
+                <td>8</td>
+                <td>Messregister und Status-Codes</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+<br><br>
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/da5b9e96fc814a41b14ac2c0d9753607b94f93c6/logo/mioty_lora.png"  alt="Supported radio technologies"  style="max-width:750px; height:auto;"
+    loading="lazy">
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
+    alt="trash bin Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
+</div>
+        <!-- FOOTER -->
+    </div>
+    <div class="footer-note">
+        <p>© Sentinum GmbH – Alle Rechte vorbehalten. </p>
+        <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bilder, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+        <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.
+
+        </p>
+        <p>Eine Vervielfältigung, Verbreitung oder Nutzung – auch auszugsweise – ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+        <p style="padding-left:14px; font-style:italic;"> Technische Daten können sich ändern. Alle Angaben erfolgen ohne Gewähr.</p>
+    </div>
+
+</body></html>
