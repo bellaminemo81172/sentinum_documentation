@@ -1,0 +1,2376 @@
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+    code,
+    .inline-code {
+        background-color: #f3f4f6;
+        border: 1px solid #d0d7de;
+        border-radius: 4px;
+        padding: 2px 6px;
+        font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 0.9em;
+        color: #111827;
+        display: inline-block;
+    }
+
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+</style>
+<div class="container">
+    <div class="pdf-viewer"> <iframe src="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/bded099d7b5b524eac270b3318c41432dcb1bbaf/Hyperion/Hyperion_Betriebsanleitung/Hyperion_Operating_Instructions_1.0.1_en-US.pdf" title=" Hyperion Operating Manual PDF" loading="lazy">
+
+
+        </iframe> </div>
+    <div class="pdf-download"> 📄 You can view the PDF above or <a href="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/bded099d7b5b524eac270b3318c41432dcb1bbaf/Hyperion/Hyperion_Betriebsanleitung/Hyperion_Operating_Instructions_1.0.1_en-US.pdf" target=" _blank" rel="noopener noreferrer">
+            <strong>download it here</strong> </a>. </div>
+
+
+
+    <figure class="figure"> <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_0.jpg" alt=“Hyperion IoT Energy Meter” loading="lazy">
+        <figcaption> Figure 1. Hyperion IoT Energy Meter </figcaption>
+    </figure>
+</div>
+<div class="main-toc"> <strong>Table of Contents</strong>
+    <ol>
+        <li>Version History</li>
+        <li>General Warnings and Safety Instructions</li>
+        <li> General Information <ol>
+                <li>Features</li>
+                <li>MID Approval for Billing Purposes</li>
+                <li>Display Operation</li>
+                <li>Accuracy in Photovoltaic Systems</li>
+            </ol>
+        </li>
+        <li> Current Transformers <ol>
+                <li>Measurement Values on the Display</li>
+            </ol>
+        </li>
+        <li> Wireless Communication <ol>
+                <li>LoRaWAN® and mioty® Base Stations</li>
+                <li>Operation of LoRa® and mioty ® networks</li>
+                <li>Technical Features</li>
+            </ol>
+        </li>
+        <li> Product Information </li>
+        <li> Safety Instructions <ol>
+                <li>Customer Responsibilities</li>
+                <li>Scope of Delivery and Inspection upon Receipt</li>
+            </ol>
+        </li>
+        <li> Installation and Commissioning <ol>
+                <li>Measurement Method</li>
+                <li>Operating Concept</li>
+                <li>Overview: Front View of Hyperion</li>
+                <li>Overview of the Hyperion Display</li>
+                <li>Compatible Devices</li>
+            </ol>
+        </li>
+        <li> Installation <ol>
+                <li>Safety Instructions</li>
+                <li>Commissioning / Inspection</li>
+                <li>Factory Default Settings</li>
+                <li>Wiring Diagram: Direct Connection (3-Phase)</li>
+                <li>Wiring Diagram: Direct Connection (1-Phase)</li>
+                <li>Tightening Torque</li>
+                <li>Spring Clamp Terminals: Strand Cross-Section</li>
+            </ol>
+        </li>
+        <li> Operation <ol>
+                <li>Main Menu Pages</li>
+                <li>Submenu Pages</li>
+                <li>Power and Power Consumption</li>
+                <li>Voltage, Power Factor, and Frequency</li>
+            </ol>
+        </li>
+        <li> Configuration Settings <ol>
+                <li>Basic Settings</li>
+                <li>Transformer Ratio Settings</li>
+                <li>Additional Settings</li>
+            </ol>
+        </li>
+        <li>M-Bus Wiring Diagram</li>
+        <li> Additional Configurations, Communication, and Diagnostics <ol>
+                <li>LoRa® Factory Settings</li>
+                <li>mioty® Factory Settings</li>
+                <li>Error Conditions</li>
+            </ol>
+        </li>
+        <li> Advanced Information on Load Profiles According to PTB-A 50.7 <ol>
+                <li>Measurement Accuracy Notes</li>
+                <li>Error Messages / Time Adjustments</li>
+                <li>Power Outage and Restart</li>
+            </ol>
+        </li>
+    </ol>
+</div>
+<h3>1. Version History</h3>
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Version</th>
+                <th>Date</th>
+                <th>Change</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1.0.0</td>
+                <td>Jan. 9, 2025</td>
+                <td>Created</td>
+            </tr>
+            <tr>
+                <td>1. 0.1</td>
+                <td>March 25, 2026</td>
+                <td>
+                    <ul>
+                        <li>Formatting adjustments</li>
+                        <li>Single-phase operation, Revision of Chapter 8.1, revision of Chapter 3, and addition of Chapter 9.5</li>
+                        <li>Addition of Chapter 13.3 “mioty® Factory Settings”</li>
+                        <li>Addition of an FAQ section</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<h3>2. General Warnings and Safety Instructions</h3>
+<div class="note-strip note-strip--yellow"> <strong>Warning</strong>
+    <p style="margin-bottom:0;"> Warnings and important information about potential hazards or possible damage. </p>
+</div>
+<div class="note-strip note-strip--blue"> <strong>Note</strong>
+    <p style="margin-bottom: 0;"> Important information required for the proper operation of the devices . </p>
+</div>
+<div class="note-strip note-strip--yellow"> <strong>Please note</strong>
+    <ul>
+        <li>Follow the safety instructions and installation guidelines in the manual and the installation checklist.</li>
+        <li>Ensure that the installation environment complies with the specified operating range guidelines. Always adhere to temperature and other limit values.</li>
+        <li>The device may only be used within the ranges specified in the technical specifications.</li>
+        <li>The device may only be used for the purposes described.</li>
+        <li>Safety and functionality can no longer be guaranteed if the device is modified or expanded.</li>
+        <li>The sensor must not be mounted on ceilings or floors.</li>
+        <li>Operation of the sensor is permitted only up to a maximum altitude of 2,000 m above sea level.</li>
+        <li>Operation is permitted only in rooms with a maximum ceiling height of 2 m.</li>
+        <li>Due to human exposure regulations, a minimum distance of 20 cm must be maintained between the device and people. </li>
+        <li>Ensure that the installation environment complies with the prescribed guidelines for the respective application.</li>
+        <li>Adhere to all temperature, humidity, and operating limits at all times.</li>
+    </ul>
+</div>
+
+<div class="note-strip note-strip--red “>    <strong>Warning</strong>    <p>        If the device is installed incorrectly:    </p>    <ul>        <li>It may not function properly.</li>        <li>It may be permanently damaged.</li>        <li>It may pose a risk of injury.</li>    </ul></div><div class=”note-strip note -strip--yellow"> <strong>Caution</strong>
+    <ul>
+        <li> Improper handling, such as excessive mechanical stress or dropping the device, can lead to damage. </li>
+        <li> If battery cells other than those recommended are used, performance, runtime, and product safety may be negatively affected. </li>
+        <li> The device may only be installed and put into operation if it has been removed from the original packaging undamaged. Immediately after removal, a visual inspection for for damage. If the product is damaged, it must not be put into service. </li>
+    </ul>
+</div>
+<h3>3. General Information</h3>
+<ul>
+    <li> The Hyperion is a multifunctional, bidirectional energy meter that is only 90 mm (5 TE) wide and offers high flexibility and accuracy. </li>
+    <li> Via direct or current transformer connection, it supports the analysis and monitoring of a wide variety of parameters in residential, commercial, and industrial applications. </li>
+    <li> It combines the functions of an energy meter with those of a data logger and provides additional measurements such as current, voltage, and power. </li>
+    <li> Depending on the device variant, data transmission is via mioty® or LoRaWAN®. </li>
+</ul>
+<h3>3.1. Features</h3>
+<ul>
+    <li>Bidirectional meter (Supply and consumption)</li>
+    <li>MID B + D certification for billing purposes (3-phase operation only)</li>
+    <li>Mechanical environmental conditions: M2</li>
+    <li> 1- and 5-A current transformer connection for up to 20,000/5 A or 4,000/1 A. The transformer ratio can be configured multiple times using sealable buttons. </li>
+    <li>Direct connection up to 100 A</li>
+    <li>2- or 4-rate operation (configurable on the meter)</li>
+    <li>Heavy-duty Opto Power MOSFET</li>
+    <li>S0 pulse output, 5 to 60 V AC/DC</li>
+    <li>Graphical LC display (38 × 28 mm) with backlight</li>
+    <li>Dynamic 8-digit display with up to three decimal places</li>
+    <li> mioty® or LoRaWAN® wireless interface</li>
+</ul>
+<h3>3.2. MID approval for billing purposes</h3>
+<p> The Hyperion has been tested and approved in accordance with MID Modules B + D (Measurement Instruments Directive 2004/22/EC of the European Commission) </p>
+<p> The device therefore has the necessary declaration of conformity. Thanks to the additional certification under Module D for manufacturing and final inspection, all Hyperion energy meters can be used ex works for billing purposes within the European Union and the European Economic Area (EEA).</p>
+<h3>3.3. Display Operation</h3>
+<p> A 38 × 28 mm backlit graphical LCD display allows measurement values and settings to be read even under difficult lighting conditions.</p>
+<p> The desired menu language can be selected using the control buttons. The clear and intuitive operation simplifies commissioning as well as daily work with the energy meters.</p>
+<h3>3.4. Accuracy in Photovoltaic Systems</h3>
+<p> The Hyperion has been specifically tested for use with inverters in photovoltaic systems. This additional testing ensures accurate measurement results in the unregulated frequency range between 2 kHz and 150 kHz.</p>
+<p> In this context, renowned trade journals report measurement errors of up to 18% when using unsuitable measuring instruments.</p>
+<h3>4. Current Transformers</h3>
+<p> With the Hyperion, the current transformer ratio can be configured multiple times via the control buttons from 5/5 to 20,000/5 A or from 1/1 to 4,000/1 A, in accordance with MID certification can be configured multiple times via the control buttons from 5/5 to 20,000/5 A or from 1/1 to 4,000/1 A. The sealable service button protects against tampering. In addition, configuration changes are logged and archived.</p>
+<h4>Highlights</h4>
+<ul>
+    <li>MID B + D approval</li>
+    <li>Bidirectional meter</li>
+    <li>Certification of frequency-independent metering mechanism in the range from 2 kHz to 1 50 kHz</li>
+    <li>Integrated tamper detection</li>
+</ul>
+<figure class="figure"> <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_1.png" alt="Hyperion IoT Energy Meter Current Transformer" loading="lazy">
+    <figcaption> Figure 2. Hyperion energy meter with current transformer connection. </figcaption>
+</figure>
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th> Measured Value</th>
+                <th>Total / 3 Phases</th>
+                <th>Per Phase</th>
+                <th>Per Rate</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Active Energy Consumption (kWh)</td>
+                <td>✓</td>
+                <td>✓</ td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>Active energy consumption (kWh)</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>Reactive energy consumption (kvarh)</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>Reactive energy supplied (kvarh)</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>Active power (kW)</td>
+                <td>✓</td>
+                <td>✓</ td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Reactive power (kvar)</td>
+                <td>✓</td>
+                <td> ✓</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Apparent power (kVA)</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td> -</td>
+            </tr>
+            <tr>
+                <td>Current (A)</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Voltage (V) L-N</td>
+                <td>-</td>
+                <td>✓</td>
+                <td> -</td>
+            </tr>
+            <tr>
+                <td>Voltage (V) L-L</td>
+                <td>-</td>
+                <td>✓</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Power Factor (Cos Phi)</td>
+                <td>-</td>
+                <td>✓</td>
+                <td> -</td>
+            </tr>
+            <tr>
+                <td>Frequency (Hz)</td>
+                <td>✓</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Number of power outages</td>
+                <td>✓ </td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Load profile storage</td>
+                <td>-</td>
+                <td> -</td>
+                <td>✓</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<h3>4.1. Measured Values on the Display</h3>
+<p> The table of available measured values is not exhaustive. Additional measured values are continuously being integrated and made available via both the graphical display and the data output interface.</p>
+<h4> Features</h4>
+<ul>
+    <li>Logbook for events relevant to metrology and configuration changes</li>
+    <li>Changes to the time or date</li>
+    <li>Changes to the current transformer ratio</li>
+    <li>Changes to the pulse rate and pulse duration</li>
+    <li>Change in voltage transformer ratio</li>
+    <li>Buffered internal clock</li>
+</ul>
+<p> The internal clock is buffered in the event of a power outage. The load profile is saved every 15 minutes. The saved data can be read via the interface or viewed directly on the display. </p>
+<h3>5. Wireless Communication</h3>
+<h3>5.1. LoRaWAN® and mioty® wireless interfaces</h3>
+<p> LoRaWAN® and mioty® wireless technologies enable communication between meters, sensors, and actuators via unlicensed radio frequencies. Both technologies were developed specifically for the Internet of Things (IoT) and are designed for long ranges combined with high transmission reliability.</p>
+<p> The Hyperion optionally features an integrated LoRaWAN® wireless interface. The device is designed as a Class -C device and can therefore receive LoRaWAN® commands at any time. The measured values to be transmitted are freely configurable and can be flexibly adapted to the respective requirements.</p>
+<p> The mioty® version currently supports only uplink communication and cannot receive downlink messages.</p>
+<h3>5.2. Operation of LoRaWAN® and mioty® Networks</h3>
+<p> The Hyperion energy meter can be operated in:</p>
+<ul>
+    <li>existing LoRaWAN® or mioty® networks</li>
+    <li>self-operated LoRaWAN® or mioty® networks</li>
+    <li>mioty® networks provided by DIEHL</li>
+</ul>
+<p> This also enables cost-effective operation of your own LoRaWAN® or mioty® networks.</p>
+<h3>5.3. Technical Features</h3>
+<ul>
+    <li>Internal antenna optimized for the 863 to 870 MHz frequency range</li>
+    <li>Optional model with SMA connector for external antennas</li>
+    <li>Transmit power of up to 14 dBm</li>
+    <li>Class C device, can also be operated as a Class A device</li>
+    <li> Automatic time synchronization via the LoRaWAN® network</li>
+    <li>Support for OTAA and ABP as join procedures</li>
+    <li>Flexible configuration of the content and interval of uplink messages</li>
+    <li>Decoders and encoders already stored in The Things Network</li>
+    <li>Free availability of decoders and encoders for third-party applications</li>
+    <li>Status display for LoRaWAN® and mioty® on the LCD</li>
+</ul>
+<h3>6. Ordering Information and Product Information</h3>
+<h3>6. 1. Ordering Information</h3>
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Model</th>
+                <th>Type</th>
+                <th>Part No.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Hyperion Energy Meter with direct measurement up to 100 A</td>
+                <td>LoRaWAN®, internal antenna</td>
+                <td>S-HYPE-LOEU-D-INT</td>
+            </tr>
+            <tr>
+                <td>Hyperion Energy Meter with direct measurement up to 100 A</td>
+                <td>LoRaWAN®, external antenna</td>
+                <td>S-HYPE -LOEU-D-EXT</td>
+            </tr>
+            <tr>
+                <td>Hyperion Energy Meter with direct measurement up to 100 A</td>
+                <td>mioty®, internal antenna</td>
+                <td>S-HYPE-MIOTY-D-INT</td>
+            </tr>
+            <tr>
+                <td>Hyperion Energy Meter with direct measurement up to 100 A</td>
+                <td>mioty®, external antenna</td>
+                <td>S-HYPE-MIOTY-D-EXT</td>
+            </tr>
+            <tr>
+                <td>Hyperion Energy Meter with current transformer connection</td>
+                <td>LoRaWAN®, internal antenna</td>
+                <td>S-HYPE-LOEU-W-INT</td>
+            </tr>
+            <tr>
+                <td>Hyperion Energy Meter with current transformer connection</td>
+                <td>LoRaWAN®, external antenna</td>
+                <td>S -HYPE-LOEU-W-EXT</td>
+            </tr>
+            <tr>
+                <td>Hyperion Energy Meter with current transformer connection</td>
+                <td>mioty®, internal antenna</td>
+                <td>S-HYPE-MIOTY-W-INT</td>
+            </tr>
+            <tr>
+                <td>Hyperion Energy Meter with current transformer connection</td>
+                <td>mioty®, external antenna</td>
+                <td>S-HYPE-MIOTY-W-EXT</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p> 3/100</p>
+<figure class="figure"> <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_2.png" alt=" Hyperion 3/100" loading="lazy">
+    <figcaption> Figure 3. Hyperion 3/100. </figcaption>
+</figure>
+<p> 3/5</p>
+<figure class="figure"> <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_3.png" alt="Hyperion 3/5" loading="lazy">
+    <figcaption> Figure 4. Hyperion 3/5. </figcaption>
+</figure>
+<h3>6.2. Product Information</h3>
+<div class="table-wrap ">
+    <table>
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Active energy</td>
+                <td> Class B (1%) according to EN50470-3 Direct-connection meter<br> Class B (1% ) per EN50470-3 Transformer-based meters </td>
+            </tr>
+            <tr>
+                <td>Reactive energy</td>
+                <td>Class 2 (2%) per EN62053</td>
+                </tr>
+            <tr>
+                <td>Operating voltage</td>
+                <td> L-L: 400 VAC ±20 %<br> L-N: 230 VAC ±20 % </td>
+            </tr>
+            <tr>
+                <td>Maximum current</td>
+                <td> Direct-reading meters: 100 A<br> Transformer meter: 6 A </td>
+            </tr>
+            <tr>
+                <td>Inrush current</td>
+                <td> Direct-reading meters: 20 mA at power factor 1<br> Transformer-based meters: 1 mA at power factor 1 </td>
+            </tr>
+            <tr>
+                <td>Mains frequency</td>
+                <td> Nominal frequency: 50 Hz, 60 Hz upon request<br> Threshold frequencies: 40 to 65 Hz </td>
+            </tr>
+            <tr>
+                <td>Power consumption</td>
+                <td> Voltage path: 0.8 VA / 0.8 W per phase<br> Current path for transformer meters: 0.075 VA per phase </td>
+            </tr>
+            <tr>
+                <td>Current and voltage connections</td>
+                <td> Direct-reading meters: 1.5 to 35 mm², torque 2 Nm, max. 3 Nm<br> Transformer meters: 1 to 6 mm², torque 0.8 Nm, max. 1 Nm </td>
+            </tr>
+            <tr>
+                <td>Rate switching</td>
+                <td> 2 - or 4-tariff operation (configurable on the meter)<br> Tariff switching: 230 VAC </td>
+            </tr>
+            <tr>
+                <td>Current transformer ratios</td>
+                <td> On the Hyperion 3/5, the current transformer ratio can be configured in multiple ways.<br> Current transformer /5 A: 5/5 A up to 20,000/5 A in 5-A - steps<br> Current transformer /1 A: 1/1 A up to 4,000/1 A in 1-A steps </td>
+            </tr>
+            <tr>
+                <td>Display (LCD)</td>
+                <td> Dynamic 8-digit display with up to three decimal places<br> Graphical LCD display with backlighting backlight<br> Dimensions (W × H): 38 × 28 mm </td>
+            </tr>
+            <tr>
+                <td>S0 pulse output</td>
+                <td> Standard EN62053-31<br> Potential-free output<br> Pulse rate per kWh/kvarh: 1, 10, 100, 1,000, or 10,000 pulses<br> Pulse width: 2 ms, 10 ms, 30 ms, 40 ms, or 120 ms<br> Pulse rate and pulse width adjustable on the meter </td>
+            </tr>
+            <tr>
+                <td>Optional data interfaces</td>
+                <td> LoRaWAN® or mioty®<br> Optional with SMA connector for external antenna </td>
+            </tr>
+            <tr>
+                <td>Optical (IR) D0 interface</td>
+                <td>EN 62056-21</td>
+            </tr>
+            <tr>
+                <td>Data retention</td>
+                <td> Storage in EEPROM, at least 10 years<br> Optional: IOTA Tangle (blockchain technology) </td>
+            </tr>
+            <tr>
+                <td>Clock </td>
+                <td> Buffered clock (up to 18 days)<br> Time synchronization via interfaces possible </td>
+            </tr>
+            <tr>
+                <td>Mounting / Installation</td>
+                <td> Orientation-independent<br> On a 35-mm DIN rail or with a front mounting frame </td>
+            </tr>
+            <tr>
+                <td>Weight</td>
+                <td>approx. 350 g</td>
+            </tr>
+            <tr>
+                <td>Housing</td>
+                <td> Polycarbonate, halogen-free, recyclable<br> Enclosure protection rating IP51, terminal protection rating IP20<br> Protection class II </td>
+            </tr>
+            <tr>
+                <td>Dimensions (L × W × D)</td>
+                <td> 90 × 91 × 72 mm<br> 5 module widths </td>
+                </ tr>
+            <tr>
+                <td>Approvals</td>
+                <td> CE and MID B + D<br> PTB-A 20.1<br> PTB-A 50.7<br> Suitable for energy management according to ISO 50001 </td>
+            </tr>
+            <tr>
+                <td>Environmental Conditions</td>
+                <td> Me Mechanical: M2<br> Electromagnetic: E2<br> Operating temperature: -25 °C to +70 °C<br> Storage temperature: -30 °C to +70 °C<br> Relative humidity: Annual average 75%, 90% for short periods, non-condensing </td>
+            </tr>
+            <tr>
+                <td>Safety Notice</td>
+                <td> Electric meters must be installed exclusively by qualified electricians. Current transformers must not be operated while open, as dangerous voltages may occur. This can cause injury to persons and property damage. </td>
+            </tr>
+            <tr>
+                <td>Device Selection</td>
+                <td> To ensure the simplest possible maintenance or replacement (e.g., due to calibration validity), the requirements of the respective system should be taken into account when selecting the devices. </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p> <strong>Disclaimer</strong></p>
+<p> This documentation may contain forward-looking statements based on the current assumptions and assessments of company management. Such statements are identified as forward-looking by corresponding wording.</p>
+<p> Forward-looking statements are not guarantees of future developments. The actual business performance of Sentinum GmbH and its affiliated companies may differ significantly from the expectations presented due to various risks, uncertainties, and external factors.</p>
+<p> These factors include, in particular, changes in the economic environment and the behavior of competitors, market participants, or regulators. Many of these factors are beyond the direct control of Sentinum GmbH and cannot be reliably predicted.</p>
+<p> There are no plans to update the forward-looking statements contained in this documentation. Sentinum GmbH assumes no separate obligation to do so.</p>
+<h3>7. Safety Instructions</h3>
+<p> Please carefully read this operating manual as well as all other documents provided by Sentinum GmbH.</p>
+<p> When using the Hyperion energy meter, observe all safety regulations and warnings. Failure to do so may result in serious personal injury or property damage.</p>
+<p> Use the Hyperion exclusively within the specified operating range. Exceeding the permissible limits may cause damage to persons or equipment. Unauthorized modifications to the device will result in the loss of any warranty claims.</p>
+<p> All applicable safety , installation, and factory regulations must be observed. Installation of the Hyperion energy meter may only be performed by qualified and appropriately trained technical personnel. </p>
+<p> The following symbols indicate different types of instructions and hazards:</p>
+<div class=" note-strip note-strip--blue"> <strong>Note</strong>
+    <p style="margin-bottom:0;"> This symbol describes important information, procedures, or handling instructions for the proper operation of the device. </p>
+</div>
+<div class="note-strip note-strip--red"> <strong>Warning</strong>
+    <p style="margin-bottom:0;"> This label indicates situations that could result in property damage, serious injury, or death. </p>
+</div>
+<p> <strong>Maintenance</strong>
+</p>
+<p> The Hyperion is maintenance-free. In the event of damage—for example, due to incorrect connection or improper storage—repairs may be performed exclusively by Sentinum.</p>
+<p> <strong>Disclaimer</strong></p>
+<p> The selection of the appropriate meter and the assessment of its suitability for a specific purpose are the sole the sole responsibility of the purchaser.</p>
+<p> No liability or warranty is assumed for this selection. Information in catalogs and data sheets does not constitute a guarantee of specific product characteristics, but is based on empirical data and measurements.</p>
+<p> Liability for damages resulting from incorrect operation, project planning, or malfunctions of the energy meter is excluded.</p>
+<p> The operator or project planner must ensure that incorrect operation, incorrect project planning, or malfunctions cannot lead to further damage. </p>
+<p> Sentinum GmbH assumes no liability for defects or damage resulting from improper use of the Hyperion energy meter or from failure to follow these operating instructions.</p>
+<h3>7.1. Customer Obligations</h3>
+    <p> <strong>Data Backup and Backup Copies</strong></p>
+    <p> Regardless of the type of installation of the Hyperion energy meter, the customer is solely responsible for data backup. The risks and costs of operation are borne by the customer.</p>
+    <p> As part of additional services, Sentinum may assist the customer in developing suitable concepts. The customer must perform the data readings and create backup copies, and must store them securely.</p>
+    <p> <strong>Monitoring Obligation</strong></p>
+    <p> The customer is obligated to implement appropriate monitoring measures to ensure that a failure of metering points is detected immediately, or at the latest within 24 hours.</p>
+    <p> <strong>Access Permissions</strong></p>
+    <p> The customer is responsible for protecting the Hyperion from unauthorized access through appropriate technical and organizational measures.</p>
+    <p> <strong>Responsibility for the IT Environment</strong>
+    </p>
+    <p> The customer is responsible for its IT environment and for ensuring access. The customer acknowledges that the Hyperion energy meter and future firmware updates require certain system requirements.</p>
+    <p> The customer is solely responsible for meet these requirements and to provide the necessary hardware and sufficiently qualified personnel.</p>
+    <p> The customer must take appropriate measures in the event that the Hyperion energy meter fails to function properly, either in whole or in part. These include, for example:</p>
+    <ul>
+        <li>daily data backups,</li>
+        <li>fault diagnostics,</li>
+        <li>regular verification of measurement results,</li>
+        <li>emergency and restart planning.</li>
+    </ul>
+    <p> The infrastructure required for this, as well as the technical capabilities of the operating environment, are entirely the responsibility of the customer.</p>
+    <p> Since system requirements may change due to firmware updates or ongoing operation, the customer is obligated to regularly verify that the requirements continue to be met.</p>
+    <p> The Hyperion’s data log entries must be read and archived daily. </p>
+    <h3>7.2. Scope of Delivery and Incoming Inspection</h3>
+    <p> <strong>Scope of Delivery</strong></p>
+    <ul>
+        <li> A quick start guide containing the most important information about the Hyperion energy meter. Please read this carefully. </li>
+        <li> A Hyperion energy meter. </li>
+        </ul>
+        <p> If your shipment shows obvious damage, please contact us immediately via email. When doing so, please provide the serial number for each affected device as well as the corresponding delivery note or invoice number.</p>
+        <h3>8. Further information on the design, product, measurement method, and use</h3>
+        <h3>8.1. Product Description</h3>
+        <p> The Hyperion is:</p>
+        <ul>
+            <li> intended exclusively for use as a three-phase energy meter. MID compliance applies exclusively to three-phase operation. </li>
+            <li> intended for the static three-phase measurement of active energy consumed and supplied in accordance with EN 50470-3:2006 in residential, commercial, and industrial environments. <ul>
+                    <li>These measurements can be used for billing purposes.</li>
+                </ul>
+            </li>
+            <li> intended for the static three-phase measurement of reactive energy consumed and supplied in accordance with EN 62053 in residential, commercial, and industrial environments. <ul>
+                    <li>These measurements can be used for billing purposes.</li>
+                </ul>
+            </li>
+            <li> Not MID-compliant in single-phase operation. The specified wiring diagram must be strictly adhered to. </li>
+            <li> Suitable for installation in stationary, weather-protected control cabinets inside buildings. </li>
+            <li> Suitable for use in four-wire systems and TN systems. </li>
+            <li> The 3/100 variant is suitable for direct current measurements up to 100 A. </li>
+            <li> Suitable for measurements in medium- and high-voltage networks only in conjunction with current and voltage transformers. <ul>
+                    <li> The use of voltage transformers is not certified; the measured values are not legally valid for calibration purposes. </li>
+                    <li> Voltage transformers can only be set to a ratio of ../100. </li>
+                </ul>
+            </li>
+            <li> The 3/5 version is designed for current measurements via external ../1-A or ../5-A current transformers. </li>
+            <li> Suitable for use in residential, commercial, and industrial applications. </li>
+            <li> The LP version is certified for load profile measurements according to PTB-A 20. 1 and PTB-A 50.7. </li>
+        </ul>
+        <p> The measurement data can be displayed on the screen and, depending on the device model, read out via the available interfaces and processed further.</p>
+        <h3>8.2. Measurement Method</h3>
+        <p> Current and voltage are measured continuously. The Hyperion measures current and voltage over a period of one second and then automatically starts a new measurement cycle.</p>
+        <p> During this measurement interval, the relevant electrical parameters are recorded and processed for the further calculation of energy, power, and status values.</p>
+        <ul>
+            <li> The Hyperion records 8,192 measurement points for voltage (U) and current (I). These measurement points have a resolution of 32 bits. </li>
+            <li> All measured values for voltage (U) and current (I) are squared, summed, and then divided by the number of measurement points (8,192). The respective root mean square value is calculated from the square root of this result. </li>
+        </ul>
+        <p> The root mean square (RMS) value of the voltage is calculated as follows:</p>
+        <pre>Ueff = √((U₁² + U₂² + ... + U₈₁₉₂²) / 8192)</pre>
+        <p> The root mean square (RMS) value of the current is calculated as follows:</p>
+        <pre>Ieff = √((I₁² + I₂² + . .. + I₈₁₉₂²) / 8192)</pre>
+        <p> The power factor λ (cos φ) is calculated as follows:</p>
+        <pre>λ = ∫ U × I dt / Sλ = ∫ U × I dt / (Ueff × Ieff)</pre>
+        <p> The active power P is calculated as follows: </p>
+        <pre>P = PF × F</pre>
+        <h3>8.3. Operating Concept</h3>
+        <p> The following section explains the controls of the Hyperion energy meter.</p>
+        <figure class="figure"> <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_4.jpg" alt="Controls of the Hyperion energy meter" loading="lazy">
+            <figcaption> Figure 5. Controls of the Hyperion energy meter. </figcaption>
+        </figure>
+        <p> <strong>Buttons</strong></p>
+        <p> The meter is operated using two touch buttons and a service button (SRVC).</p>
+        <h4>Right Arrow (Button 1)</h4>
+        <ul>
+            <li> Short press (< 2 s): Go to the next main menu page. </li>
+            <li> Long press (> 2 s): Go to the previous main menu page (starting with firmware 1.3.0). </li>
+        </ul>
+        <h4>Down Arrow (Button 2)</h4>
+        <ul>
+            <li> Short press (< 2 s) : Switch between the submenu pages of the current main menu. </li>
+            <li> Long press (> 2 s): Execute the respective special function in the submenu. </li>
+        </ul>
+        <h4>Service button (SRVC) </h4>
+        <ul>
+            <li> The Service button is recessed into the housing and must only be pressed with a thin, non-conductive tool. </li>
+            <li> Short press (< 2 s): Activates edit mode in the “Settings” menu. </li>
+            <li> Second short press (& lt; 2 s): Exits edit mode without saving. </li>
+            <li> Long press (> 2 s): Saves changes made in the “Settings” menu. </li>
+            <li> After installation, the service button can be protected against unauthorized changes by applying a seal. </li>
+        </ul>
+        <p> The cover for the current and voltage connections can also be sealed.</p>
+        <h3>8.4. Overview: Front View of the Hyperion</h3>
+        <p> The front of the Hyperion energy meter features the following key controls and displays.</p>
+        <figure class="figure"> <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_5.jpg"        alt=" Front view of the Hyperion energy meter" loading="lazy">
+            <figcaption> Figure 6. Front view of the Hyperion energy meter. </figcaption>
+        </figure>
+        <p> The front panel also features the following labeled elements:</p>
+        <ol>
+            <li>Model designation</li>
+            <li>Active energy certification</li>
+            <li>D0 -Interface</li>
+            <li>“Right Arrow” control button</li>
+            <li>“Down Arrow” control button</li>
+            <li>QR code with serial number and website address</li>
+            <li>Number of phases and conductors</li>
+            <li>Serial number</li>
+            <li>Class designation</li>
+            <li>Reference voltage and reference frequency</li>
+            <li>Operating temperature</li>
+            <li>Current range</li>
+            <li>Company logo</li>
+        </ol>
+        <h3>8.5. Overview of the Hyperion Display</h3>
+        <figure class="figure"> <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_6.png">
+            <figcaption> Figure 7. Overview of the Hyperion Display </figcaption>
+        </figure>
+        <ol>
+            <li>Current Rate</li>
+            <li> Active Communication Interface (model-dependent) </li>
+            <li>Phase Sequence</li>
+            <li> Four-Quadrant Display for Active Energy: <ol>
+                    <li><code>&lt;&lt;P</code>: Active energy is being fed into the grid.</li>
+                    <li><code>P& &gt;&gt;</code>: Active energy is being drawn.</li>
+                </ol>
+            </li>
+            <li> Four-quadrant display for reactive power: <ol>
+                    <li><code>&lt;&lt;Q</code>: Reactive power is being fed into the grid (inductive).</li>
+                    <li><code>Q&gt;&gt;</code>: Reactive power is being drawn (capacitive).</li>
+                </ol>
+            </li>
+            <li>Measured value / Menu item</li>
+            <li>Submenu item</li>
+            <li>Current measured value</li>
+            <li>Unit of the current measured value</li>
+        </ol>
+        <p> The following table contains all symbols that can be displayed on the screen.</p>
+        <div class=“table-wrap”>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>T1</td>
+                        <td>Displays the currently active rate tier. The number corresponds to the selected rate.</td>
+                    </tr>
+                    <tr>
+                        <td>MODBUS</td>
+                        <td>The meter’s communication interface is Modbus.</td>
+                    </tr>
+                    <tr>
+                        <td>ETH</td>
+                        <td>The meter’s communication interface is TCP/IP.</td>
+                        </tr>
+                    <tr>
+                        <td>M-BUS</td>
+                        <td>The meter’s communication interface is M-Bus.</td>
+                        </tr>
+                    <tr>
+                        <td>LORA</td>
+                        <td>The meter’s communication interface is LoRaWAN®.</td>
+                    </tr>
+                    <tr>
+                        <td>L123</td>
+                        <td> All three phases are connected. If individual numbers are replaced by “-”, the corresponding phases are not connected. </td>
+                    </tr>
+                    <tr>
+                        <td>▶▶</td>
+                        <td>The meter is currently measuring active energy consumption.</td>
+                    </tr>
+                    <tr>
+                        <td>◀◀</td>
+                        <td>The meter is currently measuring active energy supply.</td>
+                    </tr>
+                    <tr>
+                        <td>Q+</td>
+                        <td>The meter is currently measuring of reactive energy (capacitive).</td>
+                    </tr>
+                    <tr>
+                        <td>Q−</td>
+                        <td>The meter is currently measuring the supply of reactive energy (inductive).</td>
+                    </tr>
+                    <tr>
+                        <td>OF</td>
+                        <td>One or more energy registers have detected an overflow.</td>
+                    </tr>
+                    <tr>
+                        <td>MEM</td>
+                        <td> The meter’s internal memory is faulty. Create a ticket at <a href="https://www.emuag. ch/support/formulare/">https://www. emuag.ch/support/formulare/</a>. </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p> The following symbols appear exclusively on the LP version of the Hyperion energy meter.</p>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>TNV</td>
+                        <td> The time on the meter is invalid. Synchronize the device’s date and time. </td>
+                    </tr>
+                    <tr>
+                        <td>TNS</td>
+                        <td> The time on the meter is not correctly synchronized. </td>
+                    </tr>
+                    <tr>
+                        <td>NTP</td>
+                        <td> Applies only to devices with a TCP/IP interface. The meter has not received time synchronization for at least one hour. </td>
+                    </tr>
+                    <tr>
+                        <td>PTB NV</td>
+                        <td> The meter is in a state that is invalid under calibration law . Further measurements must no longer be used for billing purposes. </td>
+                    </tr>
+                    <tr>
+                        <td>MEM</td>
+                        <td> The meter’s internal memory is defective. </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3>8.6. Compatible Devices</h3>
+        <p> Supported Interfaces: </p>
+        <ul>
+            <li>M-Bus</li>
+            <li>TCP/IP, Modbus TCP</li>
+            <li>Modbus RTU</li>
+            <li>LoRaWAN®</li>
+        </ul>
+        <h3>9. Installation</h3>
+        <p> The Hyperion can be installed in any orientation. The meter is designed for mounting on a DIN rail in accordance with EN 50022. Alternatively, the meter can be installed using a front-mounting frame. To remove the meter from a DIN rail, pull on the spring-loaded latch on the front of the device. The wiring for transformer-based meters should be kept as short as possible.</p>
+        <p> If significant measurement deviations occur after commissioning, please observe the following instructions:</p>
+        <ul>
+            <li> The use of Rogowski coils is not recommended for transformer-based meters due to the multiple current and voltage conversions with external amplification. Each conversion and amplification stage increases the potential measurement error. </li>
+        </ul>
+        <h4>Self-consumption</h4>
+        <p> Every energy meter has a self-consumption. A main meter therefore typically measures more energy than the sum of the downstream submeters. Depending on the model, a Hyperion requires up to 2 W per phase. This results in a typical self-consumption of approximately 36 kWh per year or a maximum of 52.5 kWh per year.</p>
+        <h4>Inrush current</h4>
+        <ul>
+            <li> The Hyperion 3/5 begins counting at a phase current of 1 mA or higher. </li>
+            <li> The Hyperion 3/ 100 begins counting at a phase current of 20 mA. </li>
+            <li> For transformer-based meters, the current transformers used must be appropriately sized. </li>
+        </ul>
+        <h4>Accuracy</h4>
+        <ul>
+            <li> In accordance with EN 50470, the Hyperion complies with accuracy class B for active energy and class 2 for reactive energy. </li>
+            <li> As a result, measurement deviations of up to 1% for active energy and up to 2% for reactive energy may occur. </li>
+            <li> The total energy of a main meter is affected by this error only once, whereas measurement deviations can add up across multiple submeters. </li>
+            <li> Example: A main meter supplies 20 submeters. Each submeter measures 0.2% less energy, while the main meter measures 0.2% too much. With an actual energy consumption of 100 kWh, this results in an energy difference of 4.2 kWh, or 4.2%. </li>
+        </ul>
+        <h4>Energy Direction (Transformer Meters)</h4>
+        <ul>
+            <li> If only positive currents are expected, but one or more currents with a negative sign are displayed, the respective current transformer is connected in the reverse direction. </li>
+        </ul>
+        <h4>Transformer Factor (Transformer Meter)</h4>
+        <ul>
+            <li> The meter’s transformer factors must be set according to the installed current and voltage transformers. </li>
+        </ul>
+        <h4>Correct Phase Assignment</h4>
+        <ul>
+            <li> Current L1 and voltage L1 must be assigned to the same measuring system. Please refer to the respective wiring diagram for transformer-based meters. </li>
+        </ul>
+        <p> A Hyperion meter weighs approximately 350 g.</p>
+        <h3>9.1. Safety Instructions</h3>
+        <div class="note-strip note-strip --red">    <strong>Warning</strong>    <p style=" margin-bottom:0;"> Electric meters may only be installed by qualified electricians. Current transformers must not be operated with their covers open, as this can result in dangerous voltages. This can lead to personal injury and property damage. </p>
+        </div>
+        <div class="note-strip note-strip--red"> <strong>Danger</strong>
+            <p style="margin-bottom:0;"> During installation, installing, and replacing the meter, all connected conductors must be de-energized. Touching live parts is life-threatening. </p>
+        </div>
+        <div class="note-strip note-strip--red"> <strong>Danger</strong>
+            <p style="margin-bottom:0;"> The Hyperion 3/5 transformer meter carries voltage along the current path. Ensure that the voltage paths are also de-energized before connecting current transformers. Touching live parts is life-threatening. </p>
+        </div>
+        <div class="note-strip note-strip--yellow"> <strong>Caution</strong>
+                <p style="margin-bottom:0;"> According to DIN VDE 0100-557, Section 5.3.1, the secondary terminals of current transformers in low-voltage switchgear must not be grounded. </p>
+        </div>
+        <div class="note-strip note-strip --blue">    <strong>Note</strong>    <p style=" margin-bottom:0;"> Only the intended screw and spring terminals may be used to connect the meter. The use of wire end ferrules is recommended. </p>
+        </div>
+        <div class="note-strip note-strip --blue"> <strong>Note</strong>
+            <p style="margin-bottom:0;"> Failure to follow the installation instructions may result in damage to or destruction of the device. Therefore, it is essential that you strictly adhere to the installation specifications described. </p>
+        </div>
+        <h3>9.2. Commissioning / Inspection</h3>
+        <p> The following points must be checked during commissioning:</p>
+        <ul>
+            <li>Rotation direction</li>
+            <li>Current per phase and energy direction</li>
+            <li>Phase sequence L1 → L2 → L3</li>
+            <li>Current transformer ratio</li>
+            <li>Voltage transformer ratio</li>
+            <li>Correct tightening torque for all terminals</li>
+            <li> When using a data acquisition interface: correct addressing</li>
+        </ul>
+        <p> The Hyperion energy meter may only be used to measure electrical energy and must only be operated within the specified technical specifications.</p>
+        <h3>9.3. Factory Default Settings</h3>
+        <p> <strong>S0 output:</strong> Active energy consumption (Pins 6 + 7)</p>
+        <p> <strong>Transformer-based meter:</strong> 10 pulses / kWh</p>
+        <p> <strong>Direct-connection meter:</strong> 1000 pulses / kWh</p>
+        <p> <strong>Dimensions:</strong> For dimensions, please consult the document “Dimensional Drawing Hyperion” (Doc. Ref. 1420).</p>
+        <h3>9.4. Connection Diagram for Direct Connection (3-Phase Operation)</h3>
+        <figure class="figure"> 
+        <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_7.png" alt="Hyperion Direct Connection Wiring Diagram" loading="lazy">
+            <figcaption> Figure 8. Wiring diagram for direct connection in 3-phase operation. </figcaption>
+        </figure>
+        <p> With a direct-connection meter, the voltage is tapped internally. The neutral conductor is connected to terminal <code>N</code>.</p>
+        <p> When connecting the power lines, observe the arrow markings on the meter’s connection terminals. <code>Lx ↑</code> indicates the utility-side connection, <code>Lx ↓</code> indicates the consumer- or generator-side connection.</p>
+        <div class="note-strip note-strip--blue"> <strong>Note</strong>
+            <p style="margin-bottom:0;"> This also applies if the Hyperion is to measure only supplied energy. The Hyperion measures both purchased and supplied energy correctly. </p>
+        </div>
+        <p> The following table contains the most important specifications for the connections.</p>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rated</th>
+                        <th>I min</th>
+                        <th>Itr</th>
+                        <th>Iref</th>
+                        <th>Imax</th>
+                    </tr>
+                    </thead>
+                <tbody>
+                    <tr>
+                        <td>0.02 A</td>
+                        <td>0.15 A</td>
+                        <td>0.5 A</td>
+                        <td>5 A</td>
+                        <td>100 A</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class=" note-strip note-strip--red"> <strong>Danger</strong>
+            <p style="margin-bottom:0;"> Make sure that all connected wires are de-energized before inspecting or modifying them. Touching live components can result in serious injury or death! </p>
+        </div>
+        <h3>9.5. Wiring Diagram Direct Connection (Single-Phase Operation)</h3>
+        <figure class="figure"> <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_8.png">
+            <figcaption> Figure 9. Wiring Diagram: Direct Connection (Single-Phase Operation) </figcaption>
+        </figure>
+        <p> The energy meter is suitable for both single-phase and three-phase operation. However, MID compliance applies exclusively to three-phase operation. In single-phase operation, the meter is not MID-compliant.</p>
+        <p> For single-phase operation, the connection diagram shown must be strictly followed. The corresponding terminals must be wired correctly according to the illustration, particularly the assignment of phase (L) and neutral (N). Deviations from the specified wiring diagram can lead to measurement errors or malfunctions.</p>
+        <p> For single-phase operation, phase L1 is routed through the L3 terminals. Specifically, this means:</p>
+        <ul>
+            <li>The input (L1) is connected to the L3 input terminal (↑).</li>
+            <li>The output to the load is routed from the L3 output terminal (↓). </li>
+            <li>The neutral conductor (N) is connected directly as intended.</li>
+        </ul>
+        <p> In this case, the L1 and L2 terminals remain unused.</p>
+        <h3>9. 6. Wiring Diagram for Transformer Meter</h3>
+        <figure class="figure"> <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_8.1.png">
+            <figcaption> Figure 10. Wiring Diagram for Transformer Meter </figcaption>
+        </figure>
+        <p> With a transformer meter, the voltage is tapped externally. Connect the respective phases to terminals <code>L1</code>, <code>L2</code>, and <code>L3</code>. The neutral conductor is connected to the terminal <code>N</code>.</p>
+        <p> When connecting the current transformers, observe the arrow directions on the meter’s connection terminals.</p>
+        <ul>
+            <li><code>S1 ↑</code> indicates the utility-side connection.</li>
+            <li><code>S2 ↓</code> indicates the consumer- or generator-side connection.</li>
+        </ul>
+        <div class="note-strip note-strip- -blue">    <strong>Note</strong>    <p style=" margin-bottom:0;"> This also applies if the Hyperion is intended to measure only energy supplied. The Hyperion accurately measures both energy consumption and energy supplied. </p>
+        </div>
+        <div class="note-strip note-strip--yellow"> <strong>Caution</strong>
+            <p style="margin-bottom :0;"> Due to the voltage present in the current path of the Hyperion Energy Meter 3/5, the connected current transformer must not be grounded. </p>
+        </div>
+        <div class="note-strip note-strip--yellow"> <strong>Danger</strong>
+                <p style="margin-bottom:0;"> The two terminals between <code>S2 ↓</code> the third phase and the neutral conductor are intended for functions that are currently still under development. Nothing may be connected to these terminals. Incorrect connections can result in damage to or destruction of the meter. </p>
+        </div>
+        <p> The following table contains the most important specifications for the two transformer connections:</p>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Specification</th>
+                        <th>Current Transformer /5 A</th>
+                        <th>Current Transformer /1 A</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Actual</td>
+                        <td>0.005 A</td>
+                        <td>0.001 A</td>
+                        </tr>
+                    <tr>
+                        <td>Imin</td>
+                        <td>0.05 A</td>
+                        <td>0.01 A</td>
+                        </tr>
+                    <tr>
+                        <td>Itr</td>
+                        <td>0.25 A</td>
+                        <td>0.05 A</td>
+                    </tr>
+                    <tr>
+                        <td>Iref</td>
+                        <td>5 A</td>
+                        <td>1 A</td>
+                    </tr>
+                    <tr>
+                        <td>Imax</td>
+                        <td>6 A</td>
+                        <td>1.2 A</td>
+                    </tr>
+                </tbody>
+                </table>
+        </div>
+        <div class="note-strip note-strip--red"> <strong>Danger</strong>
+            <p style="margin-bottom:0;"> Make sure that all connected wires are de-energized before inspecting or modifying them. Touching live components can cause serious injury or even death. </p>
+        </div>
+        <h3>9.7. Tightening Torque</h3>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Measuring Circuit / Mains</th>
+                        <th>Direct Connection up to 35 mm² (stranded wire)</th>
+                        <th>Transformer Connection up to 6 mm² (stranded wire)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Supply line L1 / L2 / L3</td>
+                        <td>2 – 3 Nm</td>
+                        <td>0.8 – 1 Nm</td>
+                    </tr>
+                    <tr>
+                        <td>Supply line N</td>
+                        <td>2 – 3 Nm</td>
+                        <td>0.8 – 1 Nm</td>
+                    </tr>
+                </tbody>
+            </table> <div class="note-strip note-strip--blue"> <strong>Note</strong>
+            <p style="margin-bottom:0; "> It is recommended to use wire end ferrules. </p>
+        </div>
+        <div class="note-strip note-strip--blue"> <strong>Note</strong>
+            <p style="margin-bottom:0;"> All rear pins are equipped with spring-loaded terminals. </p>
+        </div>
+        <h3>9.8. Spring-Loaded Terminals Strand Cross-Section</h3>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Terminal</th>
+                        <th>Conductor Cross-Section</th>
+                        <th>Strip Length</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>S0 Pulse Output </td>
+                        <td>1.5 mm² stranded wire</td>
+                        <td>12 mm</td>
+                    </tr>
+                    <tr>
+                        <td>Rate control</td>
+                        <td>1.5 mm² stranded wire</td>
+                        <td>12 mm</td>
+                    </tr>
+                    <tr>
+                        <td>M-Bus / Modbus</td>
+                        <td>1.5 mm² stranded wire</td>
+                        <td>12 mm</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="note-strip note-strip--blue"> <strong>Note</strong>
+            <p style="margin-bottom:0; "> When connecting cables carrying currents above 65 A, ensure that the conductor cross-section is sufficiently sized. </p>
+        </div>
+        <h3>10. Operation</h3>
+        <p> The following describes how to navigate through the various menus and submenus.</p>
+        <h3>10.1. Main Menu Pages</h3>
+        <p> After the power supply is initially connected , the test screen appears first. After about two seconds, the “Active Energy Import” main menu page is displayed.</p>
+        <p> Each time you press the <strong>Right Arrow</strong> button, you navigate through the various main menu pages.</p>
+        <figure class="figure"> <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_9.png" alt="Main menu screens of the Hyperion energy meter" loading="lazy">
+            <figcaption> Figure 11. Overview of the main menu screens of the Hyperion energy meter. </figcaption>
+            </figure>
+            <p> By pressing and holding the <strong>“Right Arrow”</strong> button for more than 2 seconds, you can also scroll backward through the circular menu (firmware version 1.3.0 or later).</p>
+            <div class="note-strip note -strip--blue"> <strong>Note</strong>
+                <p style="margin-bottom:0;"> Depending on the meter configuration, one or more main menu pages may not be available. Please refer to the overview shown above. </p>
+            </div>
+            <h3>10.2. Submenu Pages</h3>
+            <p> The available submenu pages are described below. </p>
+            <h4>Energy Displays</h4>
+            <p> The main menu pages for Active Energy Import/Export and Reactive Energy Import/Export display the total energy consumption or total energy supplied, respectively. By default, the following schema is used for the submenu pages:</p>
+            <figure class="figure"> <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_9.1.png">    
+            <figcaption>        Figure 12. Energy Displays and Submenu Pages    </figcaption></figure>
+            
+            <div class=" note-strip note-strip--blue"> <strong>Note</strong>
+                <p style="margin-bottom:0;"> Different displays can be configured. For more information, see the chapter “Display Settings.” </p>
+                </div>
+                <p> To ensure the most accurate display of energy values possible, the Hyperion features an autorange function. If the displayable range is exceeded, the message <code>OF</code> appears on the display. The registers that can be read via the communication interfaces only overflow at significantly higher values (approx. 18 billion GWh) than the display (99 million MWh).</p>
+                <p> The energy values are shown on the display according to the following scaling:</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Meter reading (Wh)</th>
+                                <th>Divider (prescaler)</th>
+                                <th>Divider (decimal place)</th>
+                                <th>Display range start</th>
+                                <th>Display range end</th>
+                                <th>Unit</th>
+                                <th>Change</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>100</td>
+                                <td>10</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>kWh</td>
+                                <td> -</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>100</td>
+                                <td>10</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>kWh</td>
+                                <td> -</td>
+                            </tr>
+                            <tr>
+                                <td>100</td>
+                                <td>100</td>
+                                <td>10</td>
+                                <td>0.1</td>
+                                <td>0.9</td>
+                                <td>kWh</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>1,000</td>
+                                <td>100</td>
+                                <td>10</td>
+                                <td>1.0</td>
+                                <td>9.9</td>
+                                <td>kWh</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>10. 000</td>
+                                <td>100</td>
+                                <td>10</td>
+                                <td>10.0</td>
+                                <td>99.9</td>
+                                <td>kWh</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>100,000</td>
+                                <td>100</td>
+                                <td>10</td>
+                                <td>100.0</td>
+                                <td>999.9</td>
+                                <td>kWh</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>1 × 10 ⁶</td>
+                                <td>100</td>
+                                <td>10</td>
+                                <td>1000.0</td>
+                                <td>9999.9</td>
+                                <td>kWh</td>
+                                <td> -</td>
+                            </tr>
+                            <tr>
+                                <td>10 × 10⁶</td>
+                                <td>100</td>
+                                <td>10</td>
+                                <td>10,000.0</td>
+                                <td>99,999.9</td>
+                                <td>kWh</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>100 × 10⁶</td>
+                                <td>100</td>
+                                <td>10</td>
+                                <td>100,000. 0</td>
+                                <td>999999.9</td>
+                                <td>kWh</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>1 × 10⁹</td>
+                                <td>100</td>
+                                <td>10</td>
+                                <td>1000000.0</td>
+                                <td>99999 99.9</td>
+                                <td>kWh</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>10 × 10⁹</td>
+                                <td>1,000</td>
+                                <td>1,000</td>
+                                <td>10,000. 000</td>
+                                <td>99999.999</td>
+                                <td>MWh</td>
+                                <td>3 decimal places; unit MWh</td>
+                            </tr>
+                            <tr>
+                                <td>100 × 10⁹</td>
+                                <td>10,000</td>
+                                <td>100</td>
+                                <td>1,000 00.00</td>
+                                <td>999999.99</td>
+                                <td>MWh</td>
+                                <td>2 decimal places</td>
+                            </tr>
+                            <tr>
+                                <td>1 × 10¹²</td>
+                                <td>100,000</td>
+                                <td>10</td>
+                                <td>1,000,000.0</td>
+                                <td>9,999,999.9</ td>
+                                <td>MWh</td>
+                                <td>1 decimal place</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Meter reading (Wh) range</th>
+                                <th>Divisor (prescaler) </th>
+                                <th>Divisor (decimal place)</th>
+                                <th>Display range start</th>
+                                <th>Display range end</th>
+                                <th>Unit</th>
+                                <th>Change</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>10 × 10¹²</strong></td>
+                                <td>1,000,000</td>
+                                <td>1</td>
+                                <td>10000000</td>
+                                <td>99999999</td>
+                                <td>MWh</td>
+                                <td>No decimal places</td>
+                            </tr>
+                            <tr>
+                                <td><strong>100 × 10¹²</strong></td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>Display Overflow</td>
+                                <td>Display Overflow</td>
+                                <td>MWh</td>
+                                <td>Display Overflow, Restart from 0</td>
+                            </tr>
+                            <tr>
+                                <td><strong>1 × 10¹⁵</strong></td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>Display Overflow</td>
+                                <td>Display Overflow</td>
+                                <td>MWh</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td><strong>10 × 10¹⁵</strong></td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>Display Overflow</td>
+                                <td>Display Overflow</td>
+                                <td>MWh</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td><strong>100 × 10¹⁵</strong></td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>Display Overflow</td>
+                                <td> Display Overflow</td>
+                                <td>MWh</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td><strong>1 × 10¹⁸</strong></td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>Display Overflow</td>
+                                <td>Display Overflow</td>
+                                <td>MWh</td>
+                                <td>-</td>
+                                </tr>
+                            <tr>
+                                <td><strong>10 × 10¹⁸</strong></td>
+                                <td> -</td>
+                                <td>-</td>
+                                <td>Display Overflow</td>
+                                <td>Display Overflow</td>
+                                <td>MWh</td>
+                                <td>Overflow Counter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p> <strong>Maximum energy register value:</strong> 18,446, 744,073,709,600,000 Wh = 18,446.7 PWh</p>
+                <h3>10.3. Power and Electricity Consumption</h3>
+                <p> The main menu pages “Active Power,” “Reactive Power,” and “Apparent Power ” each display the current total power across all three phases.</p>
+                <p> Use the <strong>Down Arrow</strong> key to switch between the power values of the individual phases.</p>
+                <p> On the <strong>Current</strong> main menu page, the total current of all three phases is displayed by default. Use the <strong>Down Arrow</strong> key to view the current values for the individual phases.</p>
+                <figure class="figure"> 
+                <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_10.png" alt=" Hyperion Power and Current Display" loading="lazy">
+                    <figcaption> Figure 13. Display of power and current values. </figcaption>
+                </figure>
+                <p> The four-quadrant diagram shows the relationship between positive and negative active and reactive power. When active power is negative, the displayed current is also shown as negative. In addition , the energy directions (P&gt;&gt;, Q&gt;&gt; etc.) are displayed.</p>
+                <h4>Quadrant I</h4>
+                <ul>
+                    <li>Positive active power; active energy reference register is incremented. </li>
+                    <li>Reactive power is positive; the reactive energy consumption register is incremented.</li>
+                </ul>
+                <h4>Quadrant II</h4>
+                <ul>
+                    <li>Active power is negative; the active energy delivery register is incremented.</li>
+                    <li>Reactive power is positive; the reactive energy delivery register is incremented.</li>
+                    </ul>
+                    <h4>Quadrant III</h4>
+                    <ul>
+                        <li>Active power is negative; the active energy consumption register is incremented.</li>
+                        <li>Reactive power is negative; the reactive energy consumption register is incremented.</li>
+                    </ul>
+                    <h4>Quadrant IV</h4>
+                    <ul>
+                        <li>Active power is positive; active energy consumption register is increased.</li>
+                        <li>Reactive power is negative, reactive energy consumption register is increased.</li>
+                    </ul>
+                    <figure class="figure"> <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_11.png" alt="Hyperion Four-Quadrant Diagram" loading="lazy">
+                        <figcaption> Figure 14. Four-quadrant representation of active and reactive power. </figcaption>
+                        </figure>
+                        <h3>10.4. Voltage, Power Factor, and Frequency</h3>
+                        <p> These menu pages display the current values for voltage, power factor, and frequency. The display is updated every second.</p>
+                        <p> If the <strong>Min/Max Values</strong> function is enabled, pressing the Down Arrow key briefly (& < 1 s) the <strong>Down Arrow</strong> button to display the maximum and minimum measured values.</p>
+                        <p> In addition, the timestamp of the respective minimum or maximum value is displayed.</p>
+                        <figure class="figure">
+                 <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_12.png" alt="Display of voltage, power factor, and frequency" loading="lazy">
+                            <figcaption> Figure 15. Display of voltage, power factor, and frequency. </figcaption>
+                        </figure>
+                        <h4>Load Profile and Log Book</h4>
+                        <p> By briefly pressing (&lt; 1 s) the <strong>Down Arrow</strong> button, you can navigate through the saved load profiles and log book entries. The display starts with the most recent entry each time.</p>
+                        <p> Pressing and holding (&gt; 2 s) the <strong>Down Arrow</strong> button allows you to switch between “Consumption” and “Supply” in load profiles.</p>
+                        <p> In the logbook, you can switch between the actual changes and the corresponding meter readings at the time of the change.</p>
+                        <figure class="figure"> <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_13.png" alt="Load Profile and Logbook Display Hyperion" loading="lazy">
+                            <figcaption> Figure 16. Display of load profile and logbook data. </figcaption>
+                        </figure>
+                        <h3>11. Configuration Settings</h3>
+                        <h3>11.1. Basic Settings</h3>
+                        <h4>Language | Sprache</h4>
+                        <p> Switch between the languages <strong>German</strong> (default setting) and <strong>English</strong>.</p>
+                        <ul>
+                            <li>Use the “Right Arrow” to navigate to the “E settings.”</li>
+                            <li>Use the “Down Arrow” to select the “Language” menu item.</li>
+                            <li>Press the Service button briefly (&lt; 2 seconds).</li>
+                            <li>Use the “Down Arrow” to select between German and English. </li>
+                            <li> To save, press and hold the service button for more than 2 seconds until the display flashes. </li>
+                        </ul>
+                        <h4>Rate Switching</h4>
+                        <p> Any change to the rate is applied immediately. The rate present at terminals 9 through 11 at that moment becomes active immediately.</p>
+                        <p> The rate signal consists of an AC voltage of 230 VAC applied between NE (terminal 11) and E2 (terminal 9) or E1 (terminal 10).</p>
+                        <p> The rate switching occurs according to the following truth table. The following applies:</p>
+                        <ul>
+                            <li><strong>0</strong> = 0 VAC relative to NE (Terminal 11)</li>
+                            <li><strong>1</strong> = 230 VAC relative to NE (Terminal 11)</li>
+                        </ul>
+                        <div class="table-wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>E2 (Terminal 9)</th>
+                                        <th>E1 (Terminal 10)</th>
+                                        <th>Tariff</th>
+                                    </tr>
+                                    </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>4</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p> Tariff 1 is preset at the factory. The tariff inputs are electrically isolated internally via optocouplers.</p>
+                        <div class="note-strip note-strip--blue"> <strong>Note</strong>
+                            <p style="margin-bottom:0;"> For the LP version of the Hyperion energy meter, a tariff change is not applied until the start of a new recording period. The tariff present at terminals 9 through 11 at that time remains active at least until the start of the next recording period. </p>
+                        </div>
+                        <figure class="figure"> <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_14.png" alt="Tariff Switching on the Hyperion Energy Meter" loading="lazy">
+                            <figcaption> Figure 17. Tariff switching on the Hyperion energy meter. </figcaption>
+                        </figure>
+                        <h4>Set the number of rate plans</h4>
+                        <p> In the settings, you can specify the number of rate plans to be used. You can choose between <strong>Dual-rate plan (2)</strong> and <strong>Quadruple-rate plan (4)</strong> can be selected.</p>
+                        <ul>
+                            <li>Press the “Right Arrow” until you reach the <strong>Settings</strong> menu.</li>
+                            <li>Press the “Down Arrow” until you reach the <strong>Number of Tariffs</strong> menu item.</li>
+                            <li>Briefly press the “Service Button” (&lt; 2 seconds).</li>
+                            <li>Use the “Down Arrow” to switch between <strong>2 rate plans</strong> and <strong>4 rate plans</strong>.</li>
+                            <li> Save: Press the “Service Button” for more than 2 seconds until the LCD display flashes. </li>
+                        </ul>
+                        <div class="note-strip note-strip --blue"> <strong>Note</strong>
+                            <p style="margin-bottom:0;"> All illustrations in this documentation show dual-rate operation. Operation and menu navigation are identical for four-rate operation. </p>
+                        </div>
+                        <div class="note-strip note-strip--blue"> <strong>Note</strong>
+                                <p style="margin-bottom:0;"> The LP version of the Hyperion energy meter operates exclusively in two-rate mode. This setting cannot be changed. </p>
+                        </div>
+                        <h4>Real-time clock</h4>
+                        <p> The real-time clock of the Hyperion energy meter can be configured directly on the device or via optional interfaces.</p>
+                        <p> The available interfaces (TCP/IP, M-Bus, Modbus, and LoRaWAN®) also enable synchronization with a time server, allowing the meter to update automatically.</p>
+                        <p> The Hyperion’s internal clock has a typical deviation of approximately ±0.4 seconds per day.</p>
+                        <p> The LP version includes additional status messages for monitoring the real-time clock. For more information, see the PTB-A-50. 7-specific chapter of this manual.</p>
+                        <h4>Configuration on the Device</h4>
+                        <p> The real-time clock can be set directly on the Hyperion energy meter. The internal clock is backed up by an energy storage device for at least 18 days in the event of a power failure.</p>
+                        <div class="note-strip note-strip--blue "> <strong>Note</strong>
+                            <p style="margin-bottom:0;"> The meter must have been in operation for at least two hours so that the internal energy storage can be fully charged. </p>
+                        </div>
+                        <ul>
+                            <li>Press the “Right Arrow” until you reach the <strong>Settings</strong> menu.</li>
+                            <li>Press the “Down Arrow” ” until you reach the menu item <strong>Real-Time Clock</strong>.</li>
+                            <li>Briefly press the “Service Button” (< 2 seconds).</li>
+                            <li>Use the “Right Arrow” to select the desired digit.</li>
+                            <li>Use the “Down Arrow” to increase the selected digit.</li>
+                            <li> Save: Press the “Service button” for more than 2 seconds until the LCD display flashes. </li>
+                        </ul>
+                        <h4>Automatic Time Synchronization</h4>
+                        <p> Time synchronization takes place via M-Bus using a defined command through the meter’s respective interface. During this process, date and time information is transferred to the meter.</p>
+                        <p> Synchronization takes effect immediately and is confirmed by the meter with an ACK message.</p>
+                        <p> Devices with a TCP/IP or LoRaWAN® interface can automatically synchronize with a configured time server. </p>
+                        <p> Until the first successful synchronization, a request is sent to the time server every 12 minutes. After that, synchronization occurs automatically once per hour.</p>
+                        <div class="note-strip note-strip--blue"> <strong>Note</strong>
+                            <p style="margin-bottom:0; "> For projects requiring load profile certification in accordance with PTB-A 50.7, only 2,048 entries are available for time changes, converter factor changes, S0 pulse value changes, or changes to the pulse length. Once this limit is exceeded, the counter enters a state that is invalid under metrology regulations. Furthermore, time synchronizations may only occur once per load profile interval. </p>
+                        </div>
+                        <h4>Load Profile Interval</h4>
+                        <p> The load profile interval can be set . Available intervals are:</p>
+                        <p> 1 minute, 5 minutes, 15 minutes (default), 30 minutes, 1 hour, 6 hours, 12 hours, or 24 hours.</p>
+                        <ul>
+                            <li>Press the “Right Arrow” until you reach the <strong>Settings</strong> menu.</li>
+                            <li> Press the “Down Arrow” until you reach the menu item <strong>Load Profile Interval</strong>.</li>
+                            <li>Press the “Service Button” briefly (< 2 seconds).</li>
+                            <li>Use the “Down Arrow” to select the desired interval.</li>
+                            <li> Save: Press and hold the “Service Button” for more than 2 seconds, until the LCD display flashes. </li>
+                        </ul>
+                        <div class="note-strip note-strip--blue"> <strong>Note</strong>
+                            <p style="margin-bottom:0;"> This setting is only available on devices with load profile enabled. TCP/IP and LoRaWAN® variants are shipped with load profile enabled . </p>
+                        </div>
+                        <div class="note-strip note-strip--blue"> <strong>Note</strong>
+                            <p style="margin-bottom:0;"> The LP version of the Hyperion energy meter has a fixed load profile interval of 15 minutes. This setting cannot be changed. </p>
+                        </div>
+                        <h3>11.2. Setting the Transformation Ratios</h3>
+                        <p> The transformation ratio can be configured directly using the control buttons on the Hyperion energy meter.</p>
+                        <ul>
+                            <li>Press the “Right Arrow” until you reach the <strong>Settings</strong> menu.</li>
+                            <li>Press the “Down Arrow” until the menu item <strong>CT / VT Ratio</strong>.</li>
+                            <li>Briefly press the “Service” button (< 2 seconds).</li>
+                            <li>Use the “Right Arrow” to select the desired digit.</li>
+                            <li>Use the “Down Arrow” to increase the selected digit.</li>
+                            <li> Save: Press the “Service button” for longer than 2 seconds until the LCD display flashes. </li>
+                        </ul>
+                        <p> The current transformer ratio (CT Ratio) can be set as follows:</p>
+                        <ul>
+                            <li>5/5 A to 20,000/5 A in 5 -A increments</li>
+                            <li>1/1 A to 4,000/1 A in 1-A increments</li>
+                        </ul>
+                        <p> The voltage transformer ratio (VT Ratio) can be set from 100 V / 100 V to 36,000 V / 100 V in 100-V increments.</p>
+                        <p> Both the primary and secondary currents of the current transformer being used must be entered correctly.</p>
+                        <p> A set ratio of <code>100 : 1</code> means, for example, means, for example, that with a primary current of 100 A, a secondary current of 1 A flows.</p>
+                        <div class="note-strip note-strip--blue">    <strong>Note</strong>
+                        <p style=" margin-bottom:0;"> Make sure that the set transformer ratio corresponds to the actual current or voltage transformer in use. Incorrect settings or incorrectly sized transformers will result in erroneous energy and power values. </p>
+                        </div>
+                        <div class="note-strip note -strip--blue"> <strong>Note</strong>
+                            <p style="margin-bottom:0;"> For projects requiring load profile certification according to PTB-A 50.7, only 2,048 entries are available for transformer ratio changes, time changes, S0 pulse value changes, or changes to the pulse length. After that, the meter is in a state that is invalid under calibration law. Changes to the transformer ratio may only be made once per load profile interval. </p>
+                            </div>
+                            <h3>11.3. Additional Settings Options</h3>
+                            <h4>S0 Pulse Value</h4>
+                            <p> The pulse value of the S0 output can be set in the settings.</p>
+                            <ul>
+                                <li>Use the “Right Arrow” to switch to the <strong>Settings</strong> menu.</li>
+                                <li>Use the “Down Arrow” to navigate to the <strong>S0 Pulse Type</strong> menu item.</li>
+                                <li>Briefly press the Service button (&lt; 2 seconds). </li>
+                                <li>Use the “Down Arrow” to select between 1, 10, 100, 1000, and 10,000 pulses/kWh.</li>
+                                <li> To save, press and hold the Service button for more than 2 seconds until the display flashes. </li>
+                            </ul>
+                            <div class="note -strip note-strip--blue"> <strong>Note</strong>
+                                <p style="margin-bottom:0;"> For projects requiring load profile certification in accordance with PTB-A 50.7, only 2,048 entries are available for changes to pulse values, time settings, conversion factors, or the S0 pulse length. Furthermore, the S0 pulse value can only be changed once per load profile interval . </p>
+                            </div>
+                            <h4>Energy Display Settings </h4>
+                            <p> Specify which energy values should be shown on the display. The following options are available:</p>
+                            <p> <strong>Energy per Rate</strong></p>
+                            <ul>
+                                <li> <strong>On:</strong> On the “Active Energy Import,” “Active Energy Export,” “Reactive Energy Import,” and “Reactive Energy Export” main menu pages, the Hyperion displays the energy consumed or supplied separately for each rate. </li>
+                                <li> <strong>Off:</strong> Only the total energy across all rates is displayed. The display is then also determined by the setting “Energy per Phase.” </li>
+                            </ul>
+                            <p> <strong>Energy per Phase</strong></p>
+                            <ul>
+                                <li> <strong>On:</strong> On the aforementioned main menu pages, the Hyperion displays the energy consumed or supplied per phase. </li>
+                                <li> <strong>Off:</strong> Only the total energy is displayed. The display is also determined additionally on the “Energy per Tariff” setting. </li>
+                            </ul>
+                            <p> Depending on the selected configuration of the energy display, different submenu structures result for energy import and energy export.</p>
+                            <figure class="figure"> 
+                            <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_15.png">
+                                <figcaption> Figure 18. Overview of the energy display configuration </figcaption>
+                            </figure>
+                            <p> The following legend applies:</p>
+                            <ul>
+                                <li> <strong>Green:</strong> Only the “Energy per Phase” option is enabled. </li>
+                                <li> <strong>Orange:</strong> Only the “Energy per Tariff” is enabled. </li>
+                                <li> <strong>Red:</strong> Both options are enabled. </li>
+                            </ul>
+                            <h4>Interface Configuration</h4>
+                            <p> The Hyperion can be equipped with various interfaces; however, only one interface is available per device.</p>
+                            <h4>Interfaces</h4>
+                            <p> The Hyperion optionally features one of the following wireless interfaces:</p>
+                            <ul>
+                                <li>LoRaWAN®</li>
+                                <li>mioty®</li>
+                            </ul>
+                            <div class="note-strip note-strip--blue"> <strong>Note</strong>
+                                <p style="margin-bottom:0; "> Each Hyperion energy meter has only one of these interfaces. Configuration is performed directly on the device using the touch-sensitive control buttons. </p>
+                            </div>
+                            <h4>M-Bus</h4>
+                            <p> The M-Bus interface complies with the EN 13757-2/-3 standard (formerly EN 1434 -3). This allows the Hyperion M-Bus to communicate with all M-Bus-compatible devices.</p>
+                            <p> The M-Bus interface is integrated into the energy meter and protected against contamination and tampering.</p>
+                            <p> The connections are located on the back of the device: </p>
+                            <ul>
+                                <li>Pin 1 [3] = M-Bus (+)</li>
+                                <li>Pin 2 [4] = M-Bus (-)</li>
+                            </ul>
+                            <h4>Factory settings</h4>
+                            <div class="table -wrap">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Setting</th>
+                                            <th>Value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> Secondary address<br> Primary address<br> Baud rate </td>
+                                            <td> Device serial number<br> 0<br> 2400 </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h3>12. M-Bus Wiring Diagram</h3>
+                            <p> The Hyperion energy meter with an M-Bus interface has two M-Bus terminals connected in parallel internally terminals connected in parallel internally. This simplifies the serial wiring of multiple devices during installation.</p>
+                            <div class="note-strip note-strip--blue"> <strong>Note</strong>
+                                <p style="margin-bottom:0;">        The M-Bus interface is identical on the Hyperion 3/100        M-Bus and Hyperion 3/5 M-Bus models.    </p></div><figure class=" figure"> 
+                                <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_16.png" alt="M-Bus connection diagram" loading="lazy" style="max-width:100%; height:auto;">
+                                <figcaption> Figure 19. M-Bus connection diagram </figcaption>
+                    </figure>
+                    <h3>13. Additional Configurations, Communication, and Error Handling</h3>
+                        <h4>13.1. Configurations</h4>
+                        <h4>Configuring the Primary Address on the Device</h4>
+                        <ul>
+                            <li>Use the “Right Arrow” to navigate to the <strong>Settings</strong> menu.</li>
+                            <li>Use the “Down Arrow” to navigate to the menu item <strong>M-Bus Primary Address</strong>.</li>
+                            <li>Briefly press the Service button (< 2 seconds).</li>
+                            <li>Use the “Right Arrow” to select the desired digit. </li>
+                            <li>Use the “Down Arrow” to increase the selected digit.</li>
+                            <li>To save, press and hold the Service button for more than 2 seconds until the display flashes.</li>
+                        </ul>
+                        <h4>Configuring the Secondary Address on the Device</h4>
+                        <ul>
+                            <li>Use the “Right Arrow” key to navigate to the <strong>Settings</strong> menu.</li>
+                            <li>Use the “Down Arrow” key to navigate to the <strong>M -Bus Secondary Address</strong>.</li>
+                            <li>Press the Service button briefly (< 2 seconds).</li>
+                            <li>Use the “Right Arrow” to select the desired digit.</li>
+                            <li>Use the “Down Arrow” to increase the selected digit. </li>
+                            <li>To save, press and hold the service button for more than 2 seconds until the display flashes.</li>
+                        </ul>
+                        <h4>Configuring the baud rate on the device</h4>
+                        <ul>
+                            <li>Use the “Right Arrow” key to navigate to the <strong>Settings</strong> menu.</li>
+                            <li>Use the “Down Arrow” key ” to navigate to the menu item <strong>M-Bus Baud Rate</strong>.</li>
+                            <li>Briefly press the Service button (< 2 seconds).</li>
+                            <li> Use the “Right Arrow” key to cycle through the baud rates 300, 600, 1,200, 2,400 (default), 4,800, and 9,600 baud. </li>
+                            <li>To save, press and hold the Service button for more than 2 seconds until the display flashes.</li>
+                        </ul>
+                        <h4>Configuration via MB-Connect</h4>
+                        <p> The Hyperion M-Bus can also be configured and set up using the in-house software <strong>MB-Connect</strong>.</p>
+                        <h4>S0 Pulse Output</h4>
+                        <p> The S0 pulse output meets the requirements of the EN 62053-31 (DIN 43864). Every Hyperion has an S0 pulse output and can therefore communicate with devices that can receive and evaluate S0 pulses.</p>
+                        <p> The interface is located on the back of the meter at pins 6 and 7. A heavy-duty Opto-Power-MOSFET rated for 5 to 60 V AC or DC is used as the switching element. The S0 output is potential-free.</p>
+                        <div class="note-strip note-strip--blue"> <strong>Note</strong>
+                            <p style="margin-bottom:0;"> When connecting the S0 output, ensure correct polarity. </p>
+                        </div>
+                        <h4>Factory Settings</h4>
+                        <div class="table-wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Connection</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Transformer meter</td>
+                                        <td>10 pulses per kWh / kvarh at 120 ms pulse length</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Direct-connection meter</td>
+                                        <td>1000 pulses per kWh / kvarh at 40 ms pulse length</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h4>S0 pulse output connection diagram</h4>
+                        <div class=" note-strip note-strip--blue">    <strong>Note</strong>  
+                        <p style=" margin-bottom:0;"> The S0 interface is identical for the Hyperion 3/100 and the Hyperion 3/5. </p>
+                        </div>
+                        <figure class="figure">
+                 <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_17.png" alt="Hyperion S0 pulse output" loading="lazy"    >  
+                 <figcaption>        Figure 20. Wiring diagram for the S0 pulse output.    </figcaption></figure>
+                 
+                 <h4>Configuration: Readout Type</h4>
+                 <ul>    
+                 <li>Press the “Right Arrow” until you reach the <strong>Settings</strong> menu.</li>
+                 <li>Press the “Down Arrow” until you reach the <strong>S0 Pulse Readout Type</strong>.</li>
+                 <li>Briefly press the “Service button” (< 2 seconds) .</li>   
+                 <li>Use the “Right Arrow” to switch between the following output modes:</li>   
+                 <li>        <strong>Active Energy Diff</strong>:        All active energy (purchased and supplied) is output together.    </li>    
+                 <li>        <strong>Reactive Energy Diff</strong>:        All reactive energy (purchased and supplied) are displayed together.    </li>    
+                 <li>        <strong>Active Energy Import</strong>:        Only purchased active energy is displayed.    </li>    <li>        <strong>Reactive Energy Import</strong>:        Only purchased reactive energy is displayed.    </li>   
+                 <li>        <strong>Active Energy Export</strong>:        Only supplied active energy is displayed.    </li>    <li>        <strong>Reactive Energy Export</strong>:        Only supplied reactive energy is displayed.    </li>    
+                 <li>        Save: Press the “Service Button” for more than 2 seconds        until the LCD display flashes.    </li></ul>
+                 <h4>S0 Pulse Rate Configuration</h4>
+                 <p>    The pulse value can be set in the settings.</p>
+                 <ul>   
+                 <li>Press the “Right Arrow” until you reach the <strong>Settings</strong> menu.</li>   
+                 <li> Press the “Down Arrow” until you reach the menu item <strong>S0 Pulse Value</strong>.</li>    <li>Briefly press the “Service Button” (< 2 seconds).</li>    
+                 <li>        Use the “Down Arrow” to select between        1, 10, 100, 1000, and 10,000 pulses/ kWh.    </li>    <li>        To save: Press the “Service button” for more than 2 seconds until the LCD display flashes.    </li></ul>
+                 <h4>S0 Pulse Width Configuration</h4><p>    The pulse width can be defined in the settings.</p><ul>    <li>Press the “Right Arrow” until you reach the <strong>E Settings</strong>.</li>    <li>Press the “Down Arrow” until you reach the menu item <strong>S0 Pulse Width</strong>.</li>   
+                 <li>Briefly press the “Service Button” (< 2 seconds). </li>    <li>        Use the “Down Arrow” to select between        2 ms, 10 ms, 30 ms, 40 ms, and 120 ms.    </li>    <li>        To save: Press the “Service button” for longer than 2 seconds        until the LCD display flashes.    </li></ul>
+                 <h4>Modbus Wiring Diagram</h4>
+                 
+                 <div class=" note-strip note-strip--blue"> <strong>Note</strong>
+                            <p style=" margin-bottom:0;">        The Modbus interface is identical for the        Hyperion 3/100 Modbus and the Hyperion 3/5 Modbus.    </p></div><figure class=" figure">
+                                 <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_18.png" alt="Hyperion Modbus Wiring Diagram" loading="lazy">
+                            <figcaption> Figure 21. Wiring diagram of the Modbus interface. </figcaption>
+                        </figure>
+                        <h3>13.2. LoRaWAN® Factory Settings</h3>
+                        <p> The Hyperion supports communication via LoRaWAN®.</p>
+                        <h4>Factory Settings</h4>
+                        <p> By default, the Hyperion transmits the following data every 15 minutes:</p>
+                        <ul>
+                            <li>Timestamp</li>
+                            <li>Active energy import, tariffs 1 and 2</li>
+                            <li>Active energy export, tariffs 1 and 2</li>
+                            <li>Error code</li>
+                        </ul>
+                        <h3>13.3. mioty® Factory Settings</h3>
+                        <p> The Hyperion supports communication via mioty®.</p>
+                        <h4>Factory Settings</h4>
+                        <p> Profile 0 is used by default.</p>
+                        <p> <strong>Profile 0: Complete Data</strong></p>
+                        <p> Comprehensive transmission of power, current, voltage, energy, and power quality values.</p>
+                        <ul>
+                            <li> <strong>Power (W): </strong> p_l1_a, p_l2_a, p_l3_a, p_l123_a </li>
+                            <li> <strong>Current (mA):</strong> i_l1, i_l2, i_l3, i_l123 </li>
+                            <li> <strong>Voltage (V ÷ 10):</strong> u_l1, u_l2, u_l3, u_l12, u_l23, u_l31 </li>
+                            <li> <strong>Energy (Wh):</strong> e_ta_a_i, e_ta_a_e, e_ta_r_i, e_ta_r_e </li>
+                            <li> <strong>Power Quality:</strong> pf_l1–3 (÷100), f (Hz ÷10) </li>
+                            <li> <strong>Status:</strong> pwr_fail </li>
+                        </ul>
+                        <p> For more information on the available profiles, see the document <strong>HYPERION MIOTY PROFILE DE</strong>.</p>
+                        <p> <strong>Nomenclature</strong></p>
+                        <ul>
+                            <li><strong>Voltage:</strong> u_lX (Phase / Line)</li>
+                            <li><strong>Current:</strong> i_lX (Phase / Total Current)</li>
+                            <li><strong>Power:</strong> p_lX_a (Active Power per Phase / Total)</li>
+                            <li><strong>Energy:</strong> e_t{a|1|2}_{a|r}_{i|e} (e.g., e_ta_a_i)</li>
+                            <li><strong>Power Factor:</strong> pf_lX</li>
+                            <li><strong>Frequency:</strong> f</li>
+                            <li><strong>Transformer Ratio:</strong> {ct|vt}_{act|old}_{prim|sec}</li>
+                        </ul>
+                        <h3>13. 4. Error Cases</h3>
+                        <p> If you detect an error with the Hyperion, first consult the following information on the most common error patterns.</p>
+                        <h4>Discrepancies in Energy Measurement by the Hyperion Energy Meter</h4>
+                        <p> <strong>Initial Situation:</strong> One or more phase currents are displayed with a negative sign .</p>
+                        <p> <strong>Solution:</strong> Check whether the connections <code>S1 ↑</code> and <code>S2 ↓</code> (for direct-connection meters: <code>Lx ↑</code> and <code>Lx ↓</code>) are connected correctly.</p>
+                        <p> <code>S1 ↑</code> or <code>Lx ↑</code> must always be connected to the utility side . <code>S2 ↓</code> or <code>Lx ↓</code> must always be connected to the load or generation side.</p>
+                        <div class="note-strip note-strip--red"> <strong>Danger</strong>
+                            <p style="margin-bottom:0;"> Before inspecting or modifying connection wires, all connected conductors must be . Touching live parts is life-threatening. </p>
+                        </div>
+                        <h4>The meter is measuring too much or too little energy</h4>
+                        <p> <strong>Solution 1:</strong> Check the set current transformer and voltage transformer ratios. The settings must correspond to the transformers actually in use.</p>
+                        <p> <strong>Solution 2:</strong> Check that the meter is wired correctly. Phases with negative current flow are assigned to the export register.</p>
+                        <div class="note-strip note-strip--blue"> <strong>Note</strong>
+                            <p style="margin-bottom:0;"> If the Hyperion is used as a totalizing meter, the total energy may differ from the sum of several downstream energy meters. The total includes the respective individual measurement errors of all devices involved. </p>
+                        </div>
+                        <h4>Incorrect consumption display for transformer-based meters</h4>
+                        <p> <strong>Initial :</strong> The Hyperion displays a significantly higher or lower consumption than expected.</p>
+                        <p> <strong>Solution:</strong> Ensure that the set current transformer ratio matches the current transformer actually in use.</p>
+                        <p> The current transformer ratio can be configured directly using the Hyperion’s control buttons.</p>
+                        <ul>
+                            <li>5 / 5 A to 20,000 / 5 A in 5-A increments</li>
+                            <li>1 / 1 A to 4,000 / 1 A in 1-A increments</li>
+                        </ul>
+                        <h4>Incorrect consumption display in single-phase operating mode</h4>
+                        <p> <strong>Initial situation:</strong> The Hyperion is counting incorrectly or the energy meter reading is not increasing during single-phase operation. </p>
+                        <p> <strong>Solution:</strong> Check the wiring diagram for single-phase operation as described in Chapter 9.5. </p>
+                        <h4>Behavior for Consumption and Delivery</h4>
+                        <p> The Hyperion stores energy consumption and energy delivery in separate registers.</p>
+                        <p> The register values are never counted backward or offset against each other.</p>
+                        <p> The register <strong>Active Energy Consumption</strong> contains the electrical energy consumed from the utility and forms the basis for energy consumption.</p>
+                        <p> The register <strong>Active Energy Supplied</strong> contains the energy fed into the grid, for example from a photovoltaic system.</p>
+                        <p> <strong>Example:</strong></p>
+                        <p> Current consumption of a residential complex at 1:00 p.m.:</p>
+                        <ul>
+                            <li>Phase L1: 10 kW</li>
+                            <li>Phase L2: 20 kW</li>
+                            <li>Phase L3: 30 kW</li>
+                        </ul>
+                        <p> Total consumption: <strong>60 kW</strong></p>
+                        <h4>Feed-in from the photovoltaic system at 1:00 p.m.</h4>
+                        <ul>
+                            <li>Phase L1: 25 kW</li>
+                            <li>Phase L2: 25 kW</li>
+                            <li>Phase L3: 25 kW</li>
+                        </ul>
+                        <p> Total feed-in: <strong>75 kW</strong></p>
+                        <p> In this case, 15 kW is currently being fed into the grid. </p>
+                        <p> The <strong>Active Energy Consumption</strong> register remains unchanged for phases L1 and L2, since no energy is being drawn from the grid.</p>
+                        <p> The <strong>Active Energy Supply</strong> register is increased for phases L1 and L2, since energy is being fed back into the grid there.</p>
+                        <p> Phase L3 . Therefore, the <strong>Active Energy Supplied</strong> register for L3 remains unchanged, while the <strong>Active Energy Consumed</strong> register is further increased.</p>
+                        <h4>The Hyperion is supplying incorrect values via the pulse output</h4>
+                        <p> Check whether the configured pulse rate and pulse duration of the Hyperion energy meter match the specifications of your pulse receiver.</p>
+                        <p> The pulse rate and pulse duration can be adjusted directly using the Hyperion’s control buttons.</p>
+                        <p> Available settings:</p>
+                        <ul>
+                            <li>Pulse rates: 1, 10, 100, 1000, or 10,000 pulses per kWh / kvarh </li>
+                            <li>Pulse widths: 2 ms, 10 ms, 30 ms, 40 ms, or 120 ms</li>
+                        </ul>
+                        <p> The following values are set at the factory:</p>
+                        <div class="table-wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Connection</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Transformer meter</td>
+                                        <td>10 pulses per kWh / kvarh at a pulse width of 120 ms</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Direct-connection meter</td>
+                                        <td>1,000 pulses per kWh / kvarh with a pulse length of 40 ms</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h4>The tariff switching is not working</h4>
+                        <p> Tariff 1 is enabled by default. Check whether the tariff switching has been connected correctly.</p>
+                        <div class="table-wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>E2 (Terminal 9)</th>
+                                        <th>E1 (Terminal 10)</th>
+                                        <th>Tariff</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>3</td>
+                                        </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>4</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="note-strip note-strip--blue"> <strong>Note</strong>
+                            <p style="margin-bottom:0;"> For load profiles according to PTB-A 50.7, only two-rate operation is available. Tariff changes are not applied until the start of the next recording interval. </p>
+                        </div>
+                        <div class="note-strip note-strip--red"> <strong>Danger</strong>
+                            <p style="margin-bottom:0;"> When making changes to the tariff connections, all connected conductors must be de-energized. Touching live parts is life-threatening. </p>
+                        </div>
+                        <h4>The LoRaWAN® communication interface is not working</h4>
+                        <ul>
+                            <li> Make sure that the meter is registered on your LoRaWAN® network server. </li>
+                            <li> Check whether the set LoRaWAN® transmission interval matches the available network bandwidth. A high number of end devices on the same network can impair communication. </li>
+                            <li> Ensure that the meter can synchronize its time via the LoRaWAN® network. </li>
+                        </ul>
+                        <h3>14. Advanced Information on Load Profiles According to PTB-A 50.7</h3>
+                        <h3>14.1. Measurement Accuracy Guidelines: Requirements for Users Pursuant to Section 23 of the and Calibration Ordinance</h3>
+                        <p> The Measurement and Calibration Ordinance requires all users of measuring instruments to conduct measurements and operate measuring instruments in such a manner that the accuracy of the measurement results is guaranteed.</p>
+                        <p> Taking into account the market roles under the Metering Point Operation Act, a distinction is made between the following groups:</p>
+                        <ul>
+                            <li> <strong>Meter Users</strong>
+                                <ul>
+                                    <li> Meter users are metering point operators as defined by the Metering Point Operation Act. </li>
+                                </ul>
+                            </li>
+                            <li> <strong>Measurement Value Users</strong>
+                                <ul>
+                                    <li> Measurement value users are individuals or organizations that record measurements, pass on measurement values to authorized third parties, and handle billing for energy supply and grid usage. </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p> Metering device users are obligated to ensure that measurement value users are made aware of the following requirements.</p>
+                        <h4>Transparency of Use</h4>
+                        <p> The measurement value user must be able to clearly explain to electricity customers how the billed active energy and, if applicable, reactive energy values are calculated.</p>
+                        <p> Transparency means that customers can understand the items on their electricity bill using the meter readings relevant under metrology law.</p>
+                        <p> In particular, the following information must be provided:</p>
+                        <ul>
+                            <li> Which displayed measurement values may be used for billing purposes. </li>
+                            <li> That values not displayed may not be used for billing purposes. </li>
+                            <li> That displayed values originating from functions not relevant to metrology serve exclusively for informational purposes and may not be used for billing. </li>
+                            </ul>
+                            <p> In addition, the devices must be used in such a way so that electricity customers can clearly read both the meter readings relevant for billing and any error messages at any time.</p>
+                            <h4>Tariffing</h4>
+                            <p> For the use of meter reading sequences in compliance with metrology laws, only the tariffs <strong>T1</strong> and <strong>T2</strong> may be used.</p>
+                            <p> In doing so, the requirements of § 33 MessEG must be observed.</p>
+                            <p> The user of the meter readings must ensure that invoices, insofar as they are based on meter readings, can be easily understood and verified by the invoice recipients. If necessary, suitable tools must be provided for this purpose. </p>
+                            <p> It must be ensured at all times that all registers used for billing are also displayed on the meter’s screen.</p>
+                            <h3>14.2. Error Messages / Time Adjustments</h3>
+                            <p> <strong>Error Messages</strong></p>
+                            <p> The accompanying documents describe the device malfunctions that can be themselves.
+                                14.2. Error Messages / Time Adjustments
+                                Error Messages
+                                The accompanying documentation describes the device malfunctions that can be detected and displayed by the meters themselves.
+                                If one or more of the events designated as “metering-law </p>
+                            <p> If one or more of the events designated as <strong>“metering-law-relevant error messages”</strong> occur, the device’s compliance with metering laws is no longer guaranteed. In this case, the stored measurement values must be considered unreliable.</p>
+                            <p> The affected devices must be removed, repaired if necessary, and re-calibrated, provided they are to continue to be used for billing purposes.</p>
+                            <p> <strong>Time Adjustment</strong></p>
+                            <p> For meters with a remotely controllable internal clock, technical measures must ensure that any change to the time relevant to measurement and billing accuracy can be traced.</p>
+                            <p> For Hyperion meters, this is implemented as follows : </p>
+                            <ul>
+                                <li> Any change to the meter clock via one of the available communication interfaces generates an entry in the calibration log. </li>
+                                <li> The recording period in progress at the time of the time change is marked as invalid. </li>
+                                <li> The recording period restarted after the time change ends at the next
+                                    integer multiple of the set registration period length—for example, at minute 00, 15, 30, or 45, relative to the newly set time. </li>
+                            </ul>
+                            <h4>Use of Communication Interfaces</h4>
+                            <p> The meters’ communication interfaces do not comply with metrology regulations.</p>
+                            <p> Measurement values read via these interfaces may be used for billing purposes only to the extent that to the extent that they represent an unchanged repetition of the measurement results displayed on the screen. The provisions of the Measurement and Calibration Ordinance, Annex 2, Section 8.1, are decisive in this regard.</p>
+                            <h4>Time Synchronization</h4>
+                            <p> The meters mentioned can be synchronized via the existing communication interfaces.</p>
+                            <p> To ensure that meter reading procedures meter reading transactions, the operator must ensure that the meter’s internal clock is synchronized with the legal time.</p>
+                            <p> Before transmitting the date and time, the specified prerequisites must be met:</p>
+                            <ul>
+                                <li>The M-Bus must be available for communication.</li>
+                                <li>The Ethernet connection must be available for communication.</li>
+                                <li>Legal time must be used as the time source.</li>
+                            </ul>
+                            <p> If these requirements cannot be met, the meter reading operations must not be used for billing-related purposes.</p>
+                            <h4>Measurement results that must not be used for billing purposes</h4>
+                            <p> Measurement values other than those listed in the type examination certificate may not be used for billing purposes.</p>
+                            <h4>Logbook Function</h4>
+                            <p> The meters mentioned have a metrological logbook. This can only be deleted by bypassing the manufacturer’s access protection.</p>
+                            <h4>Hyperion</h4>
+                            <p> The following describes the menu items of the Hyperion energy meter relevant to load profile operation.</p>
+                            <p> The load profile of the Hyperion energy meter is certified according to PTB-A 50.7. For the LP version of the Hyperion energy meter, the following information applies regarding tariff switching, time synchronization, transformer parameters, and the S0 pulse output. </p>
+                            <h4>Current and Voltage Transformer Ratios</h4>
+                            <p> The set current and voltage transformer ratios determine the factor applied when measuring energy quantities. The values must be set according to the current and voltage transformers used.</p>
+                            <p> Changes to the current transformer and voltage transformer ratios can only be made using the <code>SRVC</code> button. The SRVC button can be secured against unauthorized access with a seal.</p>
+                            <h4>Real-time clock</h4>
+                            <p> The real-time clock displays the currently valid device time.</p>
+                            <p> If automatic time synchronization
+                                , the use of UTC time is recommended, as automatic daylight saving time adjustment is not supported.</p>
+                            <p> Changes to the real-time clock can be made using the <code>SRVC</code> button. The SRVC button can be secured against unauthorized changes with a seal. </p>
+                            <h4>S0 Pulse Output</h4>
+                                <p> The S0 pulse output can be configured for different types of energy:</p>
+                                <ul>
+                                    <li> <strong>Active energy diff:</strong> All active energy, regardless of whether it is consumption or supply, is output together. </li>
+                                    <li> <strong>Reactive energy diff:</strong> All reactive energy, regardless whether it is consumption or supply, is output together. </li>
+                                    <li> <strong>Active Energy Import:</strong> Only consumed active energy is output via the S0 output. </li>
+                                    <li> <strong>Reactive Energy Import:</strong> Only consumed reactive energy is output via the S0 output. </li>
+                                    <li> <strong>Active Energy Export:</strong> Only supplied active energy is output via the S0 output. </li>
+                                    <li> <strong>Reactive Energy Export:</strong> Only supplied reactive energy is output via the S0 output. </li>
+                                </ul>
+                                <p> The S0 output generates an electrical pulse for the set amount of energy. These pulses can be used to calculate the amount of energy transmitted.</p>
+                                <p> The following parameters can be configured:</p>
+                                <ul>
+                                    <li> <strong>Pulse value: </strong> Number of pulses output per unit of energy. </li>
+                                    <li> <strong>Pulse duration:</strong> Duration of a single pulse. </li>
+                                </ul>
+                                <p> The settings for the S0 pulse output can be changed only using the SRVC button.</p>
+                                <p> The SRVC button can be protected against unauthorized changes by means of a seal.</p>
+                                <h4>Use for Billing Purposes</h4>
+                                <p> For the LP version of the Hyperion energy meter, only active energy measurements are approved for billing purposes.</p>
+                                <p> These readings can be retrieved at any time via the display or the respective device interface.</p>
+                                <p> All other measured values shown on the display are for informational purposes only and must not be used for billing purposes.</p>
+                                <p> This also applies to measured values that can only be read via interfaces and are not shown on the display.</p>
+                                <h4>Description</h4>
+                                <p> The load profile function according to PTB-A 50.7 consists of two subfunctions:</p>
+                                <ul>
+                                    <li> <strong>Load Profile Memory</strong><br> The load profile memory records measured values and is designed as a circular buffer. Once the maximum storage capacity is reached, the oldest entries are overwritten. For technical reasons, overwriting occurs in groups of 27 data records each. </li>
+                                    <li> <strong>Logbook Memory (Metrological Logbook)</strong><br> The logbook documents all changes to parameters that affect the load profile recording. </li>
+                                    </ul>
+                                    <p> The logbook memory cannot be tampered with without damaging the existing seals. </p>
+                                    <p> The following changes are logged:</p>
+                                    <ul>
+                                        <li>Changes to the date and time</li>
+                                        <li>Changes to the voltage transformer or current transformer ratio</li>
+                                        <li>Changes to the S0 pulse polarity</li>
+                                        <li>Changes to the S0 pulse duration</li>
+                                        </ul>
+                                        <p> Within a load profile interval, each of these parameters can be changed only once. Further changes are possible only after the start of the next recording interval.</p>
+                                        <p> The logbook has a maximum capacity of 2,048 entries. These entries cannot be deleted or overwritten.</p>
+                                        <p> If the storage capacity is exhausted and a further change is subsequently made to one of the logged parameters, the meter enters a state that is invalid under metrology regulations.</p>
+                                        <p> This is indicated by the symbol <code>PTB NV</code> on the display. In addition, all subsequent load profile entries are assigned the status <code>NG</code> (invalid).</p>
+                                        <div class="note-strip note-strip--blue"> <strong>Note</strong>
+                                            <p style="margin-bottom:0;"> For legal reasons, the status <code>PTBNV</code> cannot be reset or reversed. </p>
+                                        </div>
+                                        <h4>Recording Interval
+                            </h4>
+                            <p> The load profile recording interval is fixed at 15 minutes for the LP versions of the Hyperion energy meter and cannot be changed.</p>
+                            <h4>Time Synchronization</h4>
+                            <p> Time synchronization is performed via a defined command using the M-Bus or TCP/ IP interface, via a time server recognized under metrology law that provides legal time, or directly via the meter’s control buttons.</p>
+                            <p> In this process, the date and time are transmitted to the meter. Synchronization is performed immediately and, when synchronized via the M-Bus interface, is confirmed with an <code>ACK</code> message.</p>
+                            <p> The time can only be synchronized or set once per 15-minute recording period. Legal time must always be used.</p>
+                            <p> A distinction is made between time synchronization and time setting:</p>
+                            <ul>
+                                <li> <strong>Time synchronization:</strong> Any time setting with a deviation of less than 9 seconds from the previously valid time is considered normal synchronization. In this case, no log entry is created. </li>
+                                <li> <strong>Time setting:</strong> If the real-time clock is set for the first time or if the deviation from the previous time exceeds 9 seconds, a log entry is generated and the current load profile is marked with the status <code>NG</code>. </li>
+                            </ul>
+                            <p> The internal buffer (power reserve) for maintaining the system time during a power outage lasts for at least 18 days, provided the meter has been in operation for at least two hours beforehand.</p>
+                            <div class="note-strip note-strip--blue"> <strong>Note</strong>
+                                <p style="margin-bottom:0;"> The Hyperion LP has internal timestamps that are reset each time the real-time clock is synchronized. If the meter is powered back on after more than two weeks without power, the system detects the missing required synchronization and marks all subsequent load profile entries as <code>NG</code> (invalid). </p>
+                            </div>
+                            <p> The messages <code>TNV</code>, <code>TNS</code> or <code>NTP</code> appear on the display. The following figure shows under which conditions these messages are displayed and what effects they have on the validity of the measured values.</p>
+                            <figure class="figure"> 
+                            <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_19.png" alt="Time Synchronization and Status Messages" loading="lazy" style="max-width:100%; height:auto;">
+                                <figcaption> Figure 22. Status Messages During Time Synchronization </figcaption>
+                            </figure>
+                            <div class="note-strip note-strip--blue"> <strong>Note</strong>
+                                <p style="margin-bottom:0; "> According to PTB-A 50.7, devices with a communication interface must undergo time synchronization at least once every 14 days. </p>
+                                <p style="margin-bottom:0;"> If no synchronization occurs within this period, all load profile entries will be marked with <code>NG</code> after 14 days have elapsed, until a valid synchronization is performed again. </p>
+                                <p style="margin-bottom:0;"> In addition, the message <code>TNS</code> appears on the display. </p>
+                            </div>
+                            <div class=“note-strip note-strip--blue”> <strong>Note</strong>
+                                <p style="margin-bottom:0;"> By default, the real-time buffer (RTC Buffer) of the Hyperion LP is uncharged and is therefore initially treated as “de-energized for more than 18 days” (<code>TNV</code>) . </p>
+                            </div>
+                            <h4>Tariff Change</h4>
+                            <p> For the LP version (PTB-A 50.7 certified) a tariff change is not applied until the start of a new recording period.</p>
+                            <p> The tariff applied to terminals 9 through 11 at the start of the interval remains valid until at least the start of the next recording period.</p>
+                            <p> For the LP version, only dual-tariff operation is available.</p>
+                            <p> The tariff is switched via the tariff inputs on the back of the meter (terminals 9 through 11).</p>
+                            <div class="note-strip note-strip--blue"> <strong>Note</strong>
+                                <p style=" margin-bottom:0;"> After a power outage, an incorrect rate may be temporarily displayed during the first recording interval. </p>
+                                <p style="margin-bottom:0;"> This interval is always marked with <code>NG</code>. The correct tariff setting is then applied from the tariff inputs NE, E1, and E2. </p>
+                            </div>
+                            <div class="note-strip note-strip--blue"> <strong>Note</strong>
+                                <p style="margin-bottom:0;"> For the load profile according to PTB-A 50.7, only dual-rate operation is available. Rate changes take effect only at the next recording interval. </p>
+                            </div>
+                            <h4>External Interface Readout</h4>
+                            <p> Readouts via the external interface can be used for billing purposes. </p>
+                            <p> The interfaces provide the same billing-relevant information that is also displayed on the device’s screen. </p>
+                            <h4>Storage Capacity</h4>
+                            <p> The internal memory offers the following capacities:</p>
+                            <ul>
+                                <li> Continuous load profile recordings: <strong>105,378 entries</strong> </li>
+                            </ul>
+                            <p> With a load profile interval of 15 minutes, this corresponds to a period of approximately three years.</p>
+                            <p> S As soon as the maximum storage capacity is reached, the meter overwrites the oldest entries in batches. In this process, the first 26 entries are deleted and replaced by new data records.</p>
+                            <p> Thus, the most recent <strong>105,352 load profile entries</strong> are available at all times, while older data records are lost.</p>
+                            <ul>
+                                <li> Logbook entries: <strong>2,048 entries</strong> </li>
+                            </ul>
+                            <p> Every change to the current transformer ratio, the voltage transformer ratio, the real-time clock, or the S0 pulse polarity or pulse length generates an entry in the calibration log.</p>
+                            <p> Once all available log entries have been used up, any further change to one of these parameters puts the Hyperion into a state that is invalid for calibration purposes in accordance with the requirements of PTB-A 50.7. state. The device may no longer be used for billing-related applications and must be replaced. </p>
+                            <h3>14.3. Power Outage and Restart</h3>
+                                <h4>Power Outage</h4>
+                                <p> All load profile values are stored at fixed 15-minute intervals, i.e., at XX:00, XX:15, XX:30, and XX:45. After a power outage, recording resumes accordingly.</p>
+                                <p> Example:</p>
+                                <ul>
+                                    <li>Current time: 7:37 a.m., last saved entry at 7:30 a.m.</li>
+                                    <li>Power outage until 8:12 a.m.</li>
+                                    <li>The next entry is made at 8:15 a.m. and is automatically marked as <code>NG</code> . </li>
+                                    <li>The entries for 7:45 a.m. and 8:00 a.m. are missing.</li>
+                                </ul>
+                                <p> After every power outage, the first load profile entry is marked with the status <code>NG</code> (not valid).</p>
+                                <p> If the internal power reserve was able to maintain the time during the outage, the subsequent load profile entries are not marked as invalid.</p>
+                                <h4>Restart</h4>
+                                <p> In rare cases, an internal restart of the meter may occur. In this case, the affected load profile entry is marked with the status <code>NG</code>.</p>
+                                <h4>Load Profile Display</h4>
+                                <figure class="figure"> 
+                                <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_20.png" alt="Load Profile Display" loading="lazy" style="max-width:100%; height:auto; ">
+                                    <figcaption> Figure 23. Load Profile Display </figcaption>
+                                </figure>
+                                <p> When the load profile display is opened, the most recently saved entry is always shown.</p>
+                                <p> If all 105,378 available load profile entries are occupied, Hyperion automatically deletes the oldest 26 entries. The sequential numbering is not reset in the process.</p>
+                                <p> Example:</p>
+                                <p> If a Hyperion has already stored 200,000 load profiles, entry 200,000 is initially displayed when the screen is opened. After scrolling back 105,378 entries, the display jumps back to the most recent data records. In this case, the oldest entries have already been overwritten.</p>
+                                <p> The following information is shown on the display:</p>
+                                <ul>
+                                    <li><strong>000003</strong>: Index of the displayed entry.</li>
+                                    <li><strong>January 5, 2021 10:45:00</strong>: Timestamp of the stored load profile.</li>
+                                    <li><strong>NG</strong>: Indicates an invalid load profile entry.</li>
+                                    <li><strong>T1 / T2</strong>: Associated rate plan.</li>
+                                    <li><strong>00000000.0 kWh</strong>: Meter reading of the active energy register at the time of recording.</li>
+                                </ul>
+                                <p> A load profile entry is marked as <code>NG</code> (not valid) if:</p>
+                                <ul>
+                                    <li>relevant device parameters have been tampered with,</li>
+                                    <li>it is the first load profile after a reboot or power outage,</li>
+                                    <li>no time synchronization has been performed within the last two weeks.</li>
+                                </ul>
+                                <p> Valid load profile entries are displayed without any additional marking.</p>
+                                <div class="note-strip note-strip--blue"> <strong>Note</strong>
+                                    <p style="margin-bottom:0;"> For load profiles according to PTB-A 50.7, only dual-rate operation is available. Tariff changes are not applied until the next recording interval. </p>
+                                </div>
+                                <p> <strong>Imp / Exp</strong> refers to switching between the consumption and supply registers.</p>
+                                <p> By pressing and holding the <strong>“Down Arrow”</strong> key (&gt; 2 s), you can switch between import (consumption) and export values (delivery).</p>
+                                <h4>Logbook Display</h4>
+                                <p> When the logbook display is called up, the most recently generated entry is always shown. The display shows the relevant information for the respective logbook entry. </p>
+                                <h4>In the case of a time entry</h4>
+                                <figure class="figure"> <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_20.1.png" alt="Logbook display after a time entry" loading=" lazy" style="max-width:100%; height:auto;">
+                                    <figcaption> Figure 24. Logbook entry by time position </figcaption>
+                                </figure>
+                                <ul>
+                                    <li> <strong>0003 / 2048:</strong> Index of the current logbook entry. The entries start with index 1 and can be pressing the <strong>“Down Arrow”</strong> in chronologically descending order. </li>
+                                    <li> <strong>January 1, 2021 2:41:04 a.m.:</strong> Previously valid time. This value also corresponds to the time of the previous time setting. </li>
+                                    <li> <strong>January 1, 2024 2 :40:56:</strong> Newly set time. </li>
+                                    <li> By briefly pressing (&lt; 1 s) the <strong>“Down Arrow” button ”</strong> button, you can navigate through the stored logbook entries. The display always starts with the most recent entry. </li>
+                                    <li> By pressing and holding (&gt; 2 s) the <strong> “Down Arrow”</strong>, you can switch between the logged changes and the corresponding meter readings at the time of the change. </li>
+                                </ul>
+                                <h4>In the event of a change to a conversion factor</h4>
+                                <figure class="figure"> 
+                                <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_21.png" alt="Log entry for conversion factor change" loading="lazy">
+                                    <figcaption> Figure 25. Example of a log entry for a conversion factor change. </figcaption>
+                                </figure>
+                                <ul>
+                                    <li> <strong>0002 / 2048:</strong> Index of the current log entry. </li>
+                                    <li> <strong>January 1, 2021 2:40:36 AM:</strong> Time of the change. </li>
+                                    <li> <strong>VT 100:100 → 1100:100</strong>: The previous voltage transformer factor is shown on the left, and the newly set factor on the right. </li>
+                                    <li> With a brief press (< 1 s) of the <strong>“Down Arrow”</strong> button, you can navigate through the saved logbook entries. </li>
+                                    <li> By holding down (&gt; 2 s) the <strong>“Down Arrow”</strong> button, you can switch between the change view and the meter readings at the time of the change . </li>
+                                </ul>
+                                <h4>In the event of a change to the pulse duration</h4>
+                                <figure class="figure"> <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_22.png" alt=“Log Entry: Pulse Duration Change” loading="lazy">
+                                    <figcaption> Figure 26. Example of a log entry for a change in the S0 pulse duration. </figcaption>
+                                </figure>
+                                <ul>
+                                    <li> <strong>0004 / 2048: </strong> Index of the current log entry. </li>
+                                    <li> <strong>January 1, 2024, 2:41:40 AM:</strong> Time of the change. </li>
+                                    <li> <strong>S0 I -Dur. 120 → 30:</strong> The previous pulse duration is shown on the left, and the newly set pulse duration in milliseconds is shown on the right. </li>
+                                    <li> By briefly pressing (&lt; 1 s) the <strong> “Down Arrow”</strong>, you can navigate through the saved logbook entries. </li>
+                                    <li> By pressing and holding (&gt; 2 s) the <strong>“Down Arrow”</strong> button, you can switch between the change information and the meter readings saved at the time of the change. </li>
+                                </ul>
+                                <h4>In the event of a change to the pulse value</h4>
+                                <figure class="figure"> <img src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_23.png" alt="Log entry for change to pulse value" loading=“lazy”>
+                                    <figcaption> Figure 27. Example of a log entry for changing the S0 pulse value. </figcaption>
+                                </figure>
+                                <ul>
+                                    <li> <strong>0001 / 2048:</strong> Index of the current log entry. Entries start with index 1 and can be scrolled through in chronologically descending order by pressing the <strong>“Down Arrow”</strong> key. </li>
+                                    <li> <strong>Jan. 01/2021 01:56:50:</strong> Time of the change. </li>
+                                    <li> <strong>S0 I-Rate 10 → 10000:</strong> The previous pulse value is shown on the left, and the newly set pulse value in pulses per kWh is shown on the right. </li>
+                                    <li> Pressing the <strong>“Down Arrow”</strong> button briefly (&lt; 1 s) allows you to navigate through the stored logbook entries. The display always starts with the most recent entry. </li>
+                                    <li> By pressing and holding (&gt; 2 s) the <strong>“Down Arrow”</strong> button, you can switch between the edit view and the meter readings saved at the time of the change. </li>
+                                </ul><br><br>
+
+
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/da5b9e96fc814a41b14ac2c0d9753607b94f93c6/logo/mioty_lora.png"  alt="Supported radio technologies"  style="max-width:750px; height:auto;"
+    loading="lazy">
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
+    alt="trash bin Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
+</div>
+      <!-- FOOTER -->
+                                </div>
+                                <div class="footer-note">
+                                    <p>© Sentinum GmbH – All rights reserved.</p>
+                                    <p>All content in this document, including text, tables, and images, is protected by copyright and is the property of Sentinum GmbH.</p>
+                                    <p>All images are subject to the copyright of Sentinum GmbH, unless otherwise stated.</p>
+                                    <p>Reproduction, distribution, or use—even in part—is not permitted without express written permission .</p>
+                                    <p style="padding-left:14px; font-style:italic;"> Specifications are subject to change. All information is provided without warranty. </p>
+                                </div>
+                                </body>
+
+                                </html>
+
+
