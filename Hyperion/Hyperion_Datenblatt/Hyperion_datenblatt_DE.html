@@ -1,0 +1,1084 @@
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+    code,
+    .inline-code {
+        background-color: #f3f4f6;
+        border: 1px solid #d0d7de;
+        border-radius: 4px;
+        padding: 2px 6px;
+        font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 0.9em;
+        color: #111827;
+        display: inline-block;
+    }
+
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+</style>
+
+
+             <div class="pdf-viewer">
+        <iframe
+            src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Hyperoin%20PDF%20Documents%201.0.1/Hyperion_Technisches_Datenblatt_1.0.1_DE-1.pdf"
+            title="Hyperion Betriebsanleitung PDF"
+            loading="lazy">
+        </iframe>
+    </div>
+
+    <div class="pdf-download">
+        📄 Sie können das PDF oben ansehen oder
+        <a href="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Hyperoin%20PDF%20Documents%201.0.1/Hyperion_Technisches_Datenblatt_1.0.1_DE-1.pdf"
+           target="_blank"
+           rel="noopener noreferrer">
+            <strong>hier herunterladen</strong>
+        </a>.
+    </div>
+
+
+
+ <figure class="figure">
+        <img
+            src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_0.jpg"
+            alt="Hyperion IoT Energymeter"
+            loading="lazy"
+        >
+        <figcaption>
+            Abbildung 1. Hyperion IoT Energymeter
+        </figcaption>
+    </figure>
+
+
+    
+
+        <nav class="main-toc">
+            <strong>Inhaltsverzeichnis</strong>
+            <ol>
+                <li><a href="#sec-version">Versionshistorie</a></li>
+                <li><a href="#sec-eigenschaften">Eigenschaften</a></li>
+                <li><a href="#sec-mid">MID Zulassung für Abrechnungszwecke</a></li>
+                <li><a href="#sec-display">Bedienung am Display</a></li>
+                <li><a href="#sec-parameter">Parameter</a></li>
+                <li><a href="#sec-features">Features</a></li>
+                <li><a href="#sec-bestellinformationen">Bestellinformationen</a></li>
+                <li><a href="#sec-anschlussschema-3100">Anschlussschema 3/100</a></li>
+                <li><a href="#sec-anschlussschema-35">Anschlussschema 3/5</a></li>
+                <li><a href="#sec-produktinformationen">Produktinformationen</a></li>
+                <li>Technische Daten</li>
+            </ol>
+        </nav>
+
+       <h3 id="sec-version">
+1. Versionshistorie
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Version</th>
+                <th>Datum</th>
+                <th>Änderung</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1.0.0</td>
+                <td>18.02.2025</td>
+                <td>Erstellung</td>
+            </tr>
+
+            <tr>
+                <td>1.0.1</td>
+                <td>25.03.2026</td>
+                <td>
+                    <ul>
+                        <li>Formatierung, Versionshistorie</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="sec-eigenschaften">
+2. Eigenschaften
+</h3>
+
+<ul>
+    <li>Funkschnittstelle mioty® oder LoRaWAN® (Modbus oder Wireless M-Bus auf Anfrage)</li>
+    <li>Zweirichtungszähler (Lieferung und Bezug)</li>
+    <li>MID B + D Zulassung für Abrechnungszwecke</li>
+    <li>Umweltbedingungen Mechanisch: M2</li>
+    <li>
+        1 A- und 5 A-Stromwandleranschluss für bis zu
+        20'000/5 A bzw. 4'000/1 A. Das Wandlerverhältnis kann
+        mehrmals über plombierbare Tasten konfiguriert werden.
+    </li>
+    <li>Direktanschluss bis 100 A</li>
+    <li>2- oder 4-Tarifbetrieb (am Zähler konfigurierbar)</li>
+    <li>Hochbelastbarer Opto Power MOSFET</li>
+    <li>S0-Impulsausgang, 5 bis 60 V AC/DC</li>
+    <li>Grafisches LC-Display (38 × 28 mm) mit Hintergrundbeleuchtung</li>
+    <li>
+        Dynamische 8-stellige Anzeige mit bis zu drei
+        Nachkommastellen
+    </li>
+</ul>
+
+       <h3>
+3. MID-Zulassung für Abrechnungszwecke
+</h3>
+
+<p>
+    Der Hyperion wurde gemäß MID-Modul B + D
+    (Measurement Instruments Directive, Messgeräterichtlinie
+    2004/22/EG der Europäischen Kommission) geprüft und für
+    Abrechnungszwecke zugelassen.
+</p>
+
+<h3>
+4. Bedienung am Display
+</h3>
+
+<p>
+    Ein grafisches LC-Display mit Hintergrundbeleuchtung und einer
+    Größe von 38 × 28 mm ermöglicht das komfortable Ablesen von
+    Messwerten und Einstellungen auch bei ungünstigen
+    Lichtverhältnissen.
+</p>
+
+<p>
+    Die gewünschte Menüsprache kann über die Bedientasten ausgewählt
+    werden. Die übersichtliche und intuitive Benutzerführung
+    vereinfacht sowohl die Inbetriebnahme als auch den täglichen
+    Betrieb des Energiezählers.
+</p>
+
+<h3>
+5. Parameter
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Messgröße</th>
+                <th>Total / 3 Phasen</th>
+                <th>Pro Phase</th>
+                <th>Pro Tarif</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Wirkenergie Bezug (kWh)</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+
+            <tr>
+                <td>Wirkenergie Lieferung (kWh)</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+
+            <tr>
+                <td>Blindenergie Bezug (kvarh)</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+
+            <tr>
+                <td>Blindenergie Lieferung (kvarh)</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+
+            <tr>
+                <td>Wirkleistung (kW)</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Blindleistung (kvar)</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Scheinleistung (kVA)</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Strom (A)</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Spannung (V) L-N</td>
+                <td>-</td>
+                <td>✓</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Spannung (V) L-L</td>
+                <td>-</td>
+                <td>✓</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Leistungsfaktor (Cos Phi)</td>
+                <td>-</td>
+                <td>✓</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Frequenz (Hz)</td>
+                <td>✓</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Anzahl Spannungsausfälle</td>
+                <td>✓</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Lastgangspeicherung</td>
+                <td>-</td>
+                <td>-</td>
+                <td>✓</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+       <h3>
+6. Features
+</h3>
+
+<ul>
+    <li>Logbuch für eichrechtsrelevante Ereignisse und Konfigurationsänderungen</li>
+    <li>Änderung von Uhrzeit oder Datum</li>
+    <li>Änderung des Stromwandlerverhältnisses</li>
+    <li>Änderung der Impulsrate und Impulsdauer</li>
+    <li>Änderung des Spannungswandlerverhältnisses</li>
+    <li>Gepufferte interne Echtzeituhr</li>
+</ul>
+
+<p>
+    Die interne Uhr wird bei einem Spannungsausfall durch eine
+    Pufferung aufrechterhalten. Der Lastgang wird alle 15 Minuten
+    gespeichert. Die gespeicherten Daten können über die vorhandenen
+    Schnittstellen ausgelesen oder direkt am Display eingesehen werden.
+</p>
+
+<h3>
+7. Bestellinformationen
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Ausführung</th>
+                <th>Typ</th>
+                <th>Art.-Nr.</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Hyperion Energy Meter mit Direktmessung bis 100 A</td>
+                <td>LoRaWAN®, interne Antenne</td>
+                <td>S-HYPE-LOEU-D-INT</td>
+            </tr>
+
+            <tr>
+                <td>Hyperion Energy Meter mit Direktmessung bis 100 A</td>
+                <td>LoRaWAN®, externe Antenne</td>
+                <td>S-HYPE-LOEU-D-EXT</td>
+            </tr>
+
+            <tr>
+                <td>Hyperion Energy Meter mit Direktmessung bis 100 A</td>
+                <td>mioty®, interne Antenne</td>
+                <td>S-HYPE-MIOTY-D-INT</td>
+            </tr>
+
+            <tr>
+                <td>Hyperion Energy Meter mit Direktmessung bis 100 A</td>
+                <td>mioty®, externe Antenne</td>
+                <td>S-HYPE-MIOTY-D-EXT</td>
+            </tr>
+
+            <tr>
+                <td>Hyperion Energy Meter mit Stromwandleranschluss</td>
+                <td>LoRaWAN®, interne Antenne</td>
+                <td>S-HYPE-LOEU-W-INT</td>
+            </tr>
+
+            <tr>
+                <td>Hyperion Energy Meter mit Stromwandleranschluss</td>
+                <td>LoRaWAN®, externe Antenne</td>
+                <td>S-HYPE-LOEU-W-EXT</td>
+            </tr>
+
+            <tr>
+                <td>Hyperion Energy Meter mit Stromwandleranschluss</td>
+                <td>mioty®, interne Antenne</td>
+                <td>S-HYPE-MIOTY-W-INT</td>
+            </tr>
+
+            <tr>
+                <td>Hyperion Energy Meter mit Stromwandleranschluss</td>
+                <td>mioty®, externe Antenne</td>
+                <td>S-HYPE-MIOTY-W-EXT</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+      <h3>
+8. Anschlussschema 3/100
+</h3>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Hyperion%20Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_2.png"
+        alt="Anschlussschema 3/100"
+        loading="lazy"
+        style="max-width:100%; height:auto;"
+    >
+    <figcaption>
+        Abbildung 2. Anschlussschema Hyperion 3/100
+    </figcaption>
+</figure>
+
+<h3>
+9. Anschlussschema 3/5
+</h3>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hubfs/Hyperion/Dokumentation/Hyperion%20Bilder%20Betriebsanleitung/Hyperion_IoT_Energymeter_3.png"
+        alt="Anschlussschema 3/5"
+        loading="lazy"
+        style="max-width:100%; height:auto;"
+    >
+    <figcaption>
+        Abbildung 3. Anschlussschema Hyperion 3/5
+    </figcaption>
+</figure>
+
+<h3>
+10. Produktinformationen
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Merkmal</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Wirkenergie</td>
+                <td>
+                    Klasse B (1 %) nach EN 50470-3, Direktanschlusszähler<br>
+                    Klasse B (1 %) nach EN 50470-3, Wandlerzähler
+                </td>
+            </tr>
+
+            <tr>
+                <td>Blindenergie</td>
+                <td>Klasse 2 (2 %) nach EN 62053</td>
+            </tr>
+
+            <tr>
+                <td>Betriebsspannung</td>
+                <td>
+                    L-L: 400 VAC ±20 %<br>
+                    L-N: 230 VAC ±20 %
+                </td>
+            </tr>
+
+            <tr>
+                <td>Maximalstrom</td>
+                <td>
+                    Direktmessende Zähler: 100 A<br>
+                    Wandlerzähler: 6 A
+                </td>
+            </tr>
+
+            <tr>
+                <td>Anlaufstrom</td>
+                <td>
+                    Direktmessende Zähler: 20 mA bei Leistungsfaktor 1<br>
+                    Wandlerzähler: 1 mA bei Leistungsfaktor 1
+                </td>
+            </tr>
+
+            <tr>
+                <td>Netzfrequenz</td>
+                <td>
+                    Nennfrequenz: 50 Hz, 60 Hz auf Anfrage<br>
+                    Grenzfrequenzen: 40 bis 65 Hz
+                </td>
+            </tr>
+
+            <tr>
+                <td>Eigenverbrauch</td>
+                <td>
+                    Spannungspfad: 0,8 VA / 0,8 W pro Phase<br>
+                    Strompfad Wandlerzähler: 0,075 VA pro Phase
+                </td>
+            </tr>
+
+            <tr>
+                <td>Strom- und Spannungsanschluss</td>
+                <td>
+                    Direktmessende Zähler: 1,5 bis 35 mm²,
+                    Drehmoment 2 Nm, max. 3 Nm<br>
+                    Wandlerzähler: 1 bis 6 mm²,
+                    Drehmoment 0,8 Nm, max. 1 Nm
+                </td>
+            </tr>
+
+            <tr>
+                <td>Tarifumschaltung</td>
+                <td>
+                    2 oder 4 Tarife (am Zähler konfigurierbar),
+                    Tarifumschaltung über 230 VAC
+                </td>
+            </tr>
+
+            <tr>
+                <td>Stromwandlerverhältnisse</td>
+                <td>
+                    Beim Hyperion 3/5 ist das Stromwandlerverhältnis
+                    mehrfach konfigurierbar.<br>
+                    Stromwandler /5 A: 5/5 A bis 20.000/5 A
+                    in 5-A-Schritten<br>
+                    Stromwandler /1 A: 1/1 A bis 4.000/1 A
+                    in 1-A-Schritten
+                </td>
+            </tr>
+
+            <tr>
+                <td>Anzeige (LCD)</td>
+                <td>
+                    Dynamische 8-stellige Anzeige mit bis zu drei Nachkommastellen<br>
+                    Grafisches LC-Display mit Hintergrundbeleuchtung,
+                    38 × 28 mm
+                </td>
+            </tr>
+
+            <tr>
+                <td>S0-Impulsausgang</td>
+                <td>
+                    Norm EN 62053-31<br>
+                    Potentialfreier Ausgang<br>
+                    Impulsrate pro kWh/kvarh:
+                    1, 10, 100, 1.000 oder 10.000 Impulse<br>
+                    Impulslängen: 2 ms, 10 ms, 30 ms, 40 ms oder 120 ms<br>
+                    Impulsrate und Impulslänge am Gerät einstellbar
+                </td>
+            </tr>
+
+            <tr>
+                <td>Optionale Datenschnittstellen</td>
+                <td>
+                    LoRaWAN® oder mioty®
+                    (optional mit SMA-Buchse für externe Antenne)
+                </td>
+            </tr>
+
+            <tr>
+                <td>Optische (IR) D0-Schnittstelle</td>
+                <td>EN 62056-21</td>
+            </tr>
+
+            <tr>
+                <td>Datenerhalt</td>
+                <td>
+                    Datenspeicherung spannungslos im EEPROM,
+                    mindestens 10 Jahre<br>
+                    Optional: IOTA Tangle (Blockchain-Technologie)
+                </td>
+            </tr>
+
+            <tr>
+                <td>Uhr</td>
+                <td>
+                    Gepufferte Echtzeituhr (bis zu 18 Tage)<br>
+                    Zeitsynchronisation über Kommunikationsschnittstellen möglich
+                </td>
+            </tr>
+
+            <tr>
+                <td>Montage / Einbau</td>
+                <td>
+                    Lageunabhängige Montage<br>
+                    Auf 35-mm-DIN-Schiene oder mit Fronteinbaurahmen
+                </td>
+            </tr>
+
+            <tr>
+                <td>Gewicht</td>
+                <td>ca. 350 g</td>
+            </tr>
+
+            <tr>
+                <td>Gehäuse</td>
+                <td>
+                    Gehäusematerial Polycarbonat, halogenfrei und recycelbar<br>
+                    Gehäuseschutzart IP51<br>
+                    Klemmenschutzart IP20<br>
+                    Schutzklasse II
+                </td>
+            </tr>
+
+            <tr>
+                <td>Abmessungen (L × B × T)</td>
+                <td>
+                    90 × 91 × 72 mm<br>
+                    5 TE breit
+                </td>
+            </tr>
+
+            <tr>
+                <td>Zulassungen</td>
+                <td>
+                    CE und MID B + D<br>
+                    Geeignet für Energiemanagement nach ISO 50001
+                </td>
+            </tr>
+
+            <tr>
+                <td>Umweltbedingungen</td>
+                <td>
+                    Mechanische Umgebung: M2<br>
+                    Elektromagnetische Umgebung: E2<br>
+                    Betriebstemperatur: -25 °C bis +70 °C<br>
+                    Lagertemperatur: -30 °C bis +70 °C<br>
+                    Relative Luftfeuchtigkeit:
+                    Jahresmittel 75 %, kurzzeitig bis 90 %,
+                    nicht kondensierend
+                </td>
+            </tr>
+
+            <tr>
+                <td>Sicherheitshinweis</td>
+                <td>
+                    Der Einbau darf ausschließlich durch eine
+                    qualifizierte Elektrofachkraft erfolgen.
+                    Stromwandler dürfen niemals offen betrieben werden,
+                    da gefährliche Spannungen entstehen können, die zu
+                    Personen- oder Sachschäden führen können.
+                </td>
+            </tr>
+
+            <tr>
+                <td>Geräteauswahl</td>
+                <td>
+                    Für Anwendungen, bei denen ein Abschalten der Anlage
+                    nur mit hohem Aufwand möglich ist, sollte bereits bei
+                    der Planung auf eine einfache Wartung und einen
+                    unkomplizierten Austausch des Hyperion
+                    Energiezählers geachtet werden, beispielsweise im
+                    Rahmen von Eichfristen.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+       <h3 id="sec-technische-daten">
+11. Technische Daten
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Merkmal</th>
+                <th>Wert</th>
+                <th>Einheit</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Abmessungen (L × B × T)</td>
+                <td>90 × 91 × 72</td>
+                <td>mm</td>
+            </tr>
+
+            <tr>
+                <td>Breite in Modulen</td>
+                <td>5</td>
+                <td>TE</td>
+            </tr>
+
+            <tr>
+                <td>Gewicht</td>
+                <td>ca. 350</td>
+                <td>g</td>
+            </tr>
+
+            <tr>
+                <td>Gehäusematerial</td>
+                <td>Polycarbonat, halogenfrei, recycelbar</td>
+                <td>–</td>
+            </tr>
+
+            <tr>
+                <td>Klemmenschutzart</td>
+                <td>IP20</td>
+                <td>–</td>
+            </tr>
+
+            <tr>
+                <td>Gehäuseschutzart</td>
+                <td>IP51</td>
+                <td>–</td>
+            </tr>
+
+            <tr>
+                <td>Schutzklasse</td>
+                <td>II</td>
+                <td>–</td>
+            </tr>
+
+            <tr>
+                <td>Betriebstemperatur</td>
+                <td>−25 bis +70</td>
+                <td>°C</td>
+            </tr>
+
+            <tr>
+                <td>Lagerungstemperatur</td>
+                <td>−30 bis +70</td>
+                <td>°C</td>
+            </tr>
+
+            <tr>
+                <td>Relative Luftfeuchtigkeit</td>
+                <td>Ø 75 %, kurzzeitig 90 % (nicht kondensierend)</td>
+                <td>%</td>
+            </tr>
+
+            <tr>
+                <td>Mechanische Umgebung</td>
+                <td>M2</td>
+                <td>–</td>
+            </tr>
+
+            <tr>
+                <td>Elektromagnetische Umgebung</td>
+                <td>E2</td>
+                <td>–</td>
+            </tr>
+
+            <tr>
+                <td>Displaytyp</td>
+                <td>Grafisches LC-Display mit Hintergrundbeleuchtung</td>
+                <td>–</td>
+            </tr>
+
+            <tr>
+                <td>Displaygröße</td>
+                <td>38 × 28</td>
+                <td>mm</td>
+            </tr>
+
+            <tr>
+                <td>Displayauflösung</td>
+                <td>8-stellig, bis zu 3 Nachkommastellen</td>
+                <td>–</td>
+            </tr>
+
+            <tr>
+                <td>Zulassungen</td>
+                <td>CE, MID B + D, PTB-A 20.1, PTB-A 50.7</td>
+                <td>–</td>
+            </tr>
+
+            <tr>
+                <td>Energie-Management</td>
+                <td>ISO 50001</td>
+                <td>–</td>
+            </tr>
+
+            <tr>
+                <td>Montageart</td>
+                <td>35 mm DIN-Schiene oder Fronteinbaurahmen</td>
+                <td>–</td>
+            </tr>
+
+            <tr>
+                <td>Montagerichtung</td>
+                <td>Lageunabhängig</td>
+                <td>–</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+<br><br>
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/da5b9e96fc814a41b14ac2c0d9753607b94f93c6/logo/mioty_lora.png"  alt="Supported radio technologies"  style="max-width:750px; height:auto;"
+    loading="lazy">
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
+    alt="trash bin Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
+</div>
+        <!-- FOOTER -->
+    </div>
+    <div class="footer-note">
+        <p>© Sentinum GmbH – Alle Rechte vorbehalten. </p>
+        <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bilder, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+        <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.
+
+        </p>
+        <p>Eine Vervielfältigung, Verbreitung oder Nutzung – auch auszugsweise – ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+        <p style="padding-left:14px; font-style:italic;"> Technische Daten können sich ändern. Alle Angaben erfolgen ohne Gewähr.</p>
+    </div>
+
+
+
+
+
+
+  
+</body></html>
