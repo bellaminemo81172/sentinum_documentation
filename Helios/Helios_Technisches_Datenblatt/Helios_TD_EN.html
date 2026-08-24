@@ -1,0 +1,1287 @@
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+    code,
+    .inline-code {
+        background-color: #f3f4f6;
+        border: 1px solid #d0d7de;
+        border-radius: 4px;
+        padding: 2px 6px;
+        font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 0.9em;
+        color: #111827;
+        display: inline-block;
+    }
+
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+</style>
+
+<div class="main-toc">
+    <strong>Table of Contents</strong>
+
+    <ol>
+        <li>Helios-P Part Numbers</li>
+        <li>Helios-P Order Tree</li>
+        <li>Default Settings / Factory Defaults</li>
+        
+<li>Standard Specifications</li>
+        <li>Connectivity and RF Specifications</li>
+        <li>Pressure Sensor Specifications (10 bar)</li>
+        <li>Cable Specifications</li>
+        <li>Service Life</li>
+        <li>Service Life (Years)</li>
+        
+<li>Technical Drawing</li>
+        <li>Marking and Certification</li>
+    </ol>
+</div>
+
+
+
+<figure class="figure">
+ <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/Helios-P%20LoRaWAN%20(1).png?width=688&amp;height=387&amp;name=Helios-P%20LoRaWAN%20(1).png" style="max-width:688px; width:100%; height:auto;">
+    <figcaption>
+        Figure 1. Helios-P housing view
+    </figcaption>
+</figure>
+
+<h3>
+1. Helios-P Part Numbers
+</h3>
+
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            
+<tr>
+                <th>Part Number</th>
+                <th>Sensor Technology</th>
+                <th>Maximum Pressure (bar)</th>
+                <th>Communication</th>
+                <th>Power Supply</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                
+<td>S-HELI-LOEU-P-10-BAT</td>
+                <td>Pressure Transmitter</td>
+                <td>10</td>
+                <td>LoRaWAN®</td>
+                <td>Battery</td>
+                <td>In Production</td>
+            </tr>
+            
+<tr>
+                <td>S-HELI-LOEU-P-25-BAT</td>
+                <td>Pressure Transmitter</td>
+                <td>25</td>
+                <td>LoRaWAN®</td>
+                <td>Battery</td>
+                <td>In production</td>
+            </tr>
+
+            <tr>
+                
+<td>S-HELI-LOEU-P-60-BAT</td>
+                <td>Pressure Transmitter</td>
+                <td>60</td>
+                <td>LoRaWAN®</td>
+                <td>Battery</td>
+                
+<td>In production</td>
+            </tr>
+
+            <tr>
+                <td>S-HELI-LOEU-P-100-BAT</td>
+                <td>Pressure transmitter</td>
+                <td>100</td>
+                <td>LoRaWAN®</td>
+                <td>Battery</td>
+                
+<td>In production</td>
+            </tr>
+
+            <tr>
+                <td>S-HELI-LOEU-P-450-BAT</td>
+                <td>Pressure transmitter</td>
+                <td>450</td>
+                <td>LoRaWAN®</td>
+                
+<td>Battery</td>
+                <td>In production</td>
+            </tr>
+
+            <tr>
+                <td>S-HELI-MIOTY-P-10-BAT</td>
+                <td>Pressure transmitter</td>
+                <td>10</ td>
+                <td>mioty®</td>
+                <td>Battery</td>
+                <td>In production</td>
+            </tr>
+
+            <tr>
+                <td>S-HELI-MIOTY-P-25-BAT</td>
+                <td>Pressure transmitter</td>
+                
+<td>25</td>
+                <td>mioty®</td>
+                <td>Battery</td>
+                <td>In production</td>
+            </tr>
+
+            <tr>
+                <td>S-HELI-MIOTY-P-60-BAT</td>
+                <td>Pressure transmitter</td>
+                
+<td>60</td>
+                <td>mioty®</td>
+                <td>Battery</td>
+                <td>In production</td>
+            </tr>
+
+            <tr>
+                <td>S-HELI-MIOTY-P-100-BAT</td>
+                <td>Pressure transmitter</td>
+                
+<td>100</td>
+                <td>mioty®</td>
+                <td>Battery</td>
+                <td>In production</td>
+            </tr>
+
+            <tr>
+                <td>S-HELI-MIOTY-P-450-BAT</td>
+                
+<td>Pressure Transmitter</td>
+                <td>450</td>
+                <td>mioty®</td>
+                <td>Battery</td>
+                <td>In Production</td>
+            </tr>
+            
+<tr>
+                <td>S-HELI-NB-P-10-BAT</td>
+                <td>Pressure Transmitter</td>
+                <td>10</td>
+                <td>NB-IoT + LTE-CAT-M1</td>
+                <td>Battery</td>
+                <td>In production</td>
+            </tr>
+            
+<tr>
+                <td>S-HELI-NB-P-25-BAT</td>
+                <td>Pressure Transmitter</td>
+                <td>25</td>
+                <td>NB-IoT + LTE-CAT-M1</td>
+                <td>Battery</td>
+                <td>In Production</td>
+            </tr>
+            
+<tr>
+                <td>S-HELI-NB-P-60-BAT</td>
+                <td>Pressure Transmitter</td>
+                <td>60</td>
+                <td>NB-IoT + LTE-CAT-M1</td>
+                <td>Battery</td>
+                <td>In Production</td>
+            </tr>
+            
+<tr>
+                <td>S-HELI-NB-P-100-BAT</td>
+                <td>Pressure Transmitter</td>
+                <td>100</td>
+                <td>NB-IoT + LTE-CAT-M1</td>
+                <td>Battery</td>
+                
+<td>In production</td>
+            </tr>
+
+            <tr>
+                <td>S-HELI-NB-P-450-BAT</td>
+                <td>Pressure transmitter</td>
+                <td>450</td>
+                <td>NB-IoT + LTE-CAT-M1</td>
+                <td>Battery</td>
+                
+<td>In production</td>
+            </tr>
+
+            <tr>
+                <td>Z-ADAP-14-12</td>
+                <td>Accessories</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>In production</td>
+            </tr>
+        </tbody>
+    
+</table>
+</div>
+
+<h3>
+2. Helios-P Order Tree
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                
+<th>Prefix</th>
+                <th>Product Series Code</th>
+                <th>Communication</th>
+                <th>Sensors</th>
+                <th>Pressure Range (bar)</th>
+                <th>Power Supply</th>
+                <th>Example</th>
+            </tr>
+        
+</thead>
+
+        <tbody>
+            <tr>
+                <td>S</td>
+                <td>HELI</td>
+                <td>mioty®, LOEU, NB</td>
+                
+<td>P</td>
+                <td>10, 25, 60, 100, 450</td>
+                <td>BAT, NET</td>
+                <td>S-HELI-LOEU-P-100-BAT</td>
+            </tr>
+        
+</tbody>
+    </table>
+</div>
+
+<h3>
+3. Default Settings / Factory Default Values
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                
+<th>For Communication Protocol</th>
+                <th>Description</th>
+                <th>Unit</th>
+                <th>Default Value</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Measurement Interval</td>
+                
+<td>All</td>
+                <td>
+                    Specifies the period during which measurement values are recorded
+                    . 10 minutes means that every 10 minutes
+                    the sensor takes a measurement.
+                </td>
+                <td>min</td>
+                <td>5</td>
+            </tr>
+            
+<tr>
+                <td>Delta Value</td>
+                <td>All</td>
+                <td>
+                    Specifies the absolute change in the measured value compared
+                    to the last transmission that must occur for an
+                    alarm transmission to be triggered. This transmission is carried out
+                    regardless of the regular transmission interval.
+                    Always refers to the main measured value.
+                </td>
+                <td>mbar</td>
+                <td>100</td>
+            </tr>
+
+            <tr>
+                
+<td>Regular Transmission Interval</td>
+                <td>All</td>
+                <td>
+                    Number of measurements after which the sensor sends an uplink even
+                    if no alarm condition exists.
+                </td>
+                <td>Number</td>
+                <td>2</td>
+            </tr>
+
+            <tr>
+                
+<td>Low Temperature Warning</td>
+                <td>All</td>
+                <td>
+                    Threshold value in °C at which an alarm message is triggered due to a
+                    temperature that is too low.
+                </td>
+                <td>°C</td>
+                <td>4</td>
+            </tr>
+
+            <tr>
+                
+<td>High Temperature Warning</td>
+                <td>All</td>
+                <td>
+                    Threshold value in °C at which an alarm message is triggered due to a
+                    temperature that is too high
+                    (first high temperature threshold).
+                </td>
+                <td>°C</td>
+                <td>55</td>
+            </tr>
+            
+<tr>
+                <td>Critical Temperature Warning</td>
+                <td>All</td>
+                <td>
+                    Threshold value in °C at which an alarm is triggered due to a critical,
+                    excessively high temperature
+                    (second high-temperature threshold).
+                </td>
+                <td>°C</td>
+                <td>55</td>
+            
+</tr>
+
+            <tr>
+                <td>Low Pressure Warning</td>
+                <td>All</td>
+                
+<td>
+                    Threshold value in mbar at which an alarm is triggered due to
+                    pressure that is too low.
+                </td>
+                <td>mbar</td>
+                <td>8000</td>
+            </tr>
+
+            <tr>
+                <td>High Pressure Warning</td>
+                <td>All</td>
+                
+<td>
+                    Threshold value in mbar at which an alarm is triggered due to
+                    excessive pressure
+                    (first high-pressure threshold).
+                </td>
+                <td>mbar</td>
+                <td>200</td>
+            </tr>
+
+            <tr>
+                <td>Critical Pressure Warning</td>
+                
+<td>All</td>
+                <td>
+                    Threshold value in mbar at which an alarm is triggered due to critical,
+                    excessively high pressure
+                    (second high-pressure threshold).
+                </td>
+                <td>mbar</td>
+                <td>8000</td>
+            </tr>
+        </tbody>
+    
+</table>
+</div>
+
+
+<h3>
+4. Standard Specifications
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Characteristic</th>
+                <th>Value</th>
+                <th>Unit</th>
+            </tr>
+        
+</thead>
+
+        <tbody>
+            <tr>
+                <td>Dimensions L × W × H</td>
+                <td>152 × 81 × 45</td>
+                <td>mm</td>
+            </tr>
+
+            <tr>
+                <td>Weight</td>
+                <td>266</td>
+                
+<td>g</td>
+            </tr>
+
+            <tr>
+                <td>Operating temperature</td>
+                <td>-30 to +85</td>
+                <td>°C</td>
+            </tr>
+
+            <tr>
+                <td>Storage temperature (recommended)</td>
+                
+<td>+12 to +26</td>
+                <td>°C</td>
+            </tr>
+
+            <tr>
+                <td>Relative humidity during operation</td>
+                <td>0–100</td>
+                <td>%</td>
+            </tr>
+            
+<tr>
+                <td>IP Rating</td>
+                <td>IP67 (IP69K upon request)</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Sensors</td>
+                <td>Pressure</td>
+                <td></td>
+            </tr>
+            
+<tr>
+                <td>Traffic light function</td>
+                <td>-</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Acoustic alarm function</td>
+                <td>-</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Provisioning</td>
+                
+<td>NFC</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Material</td>
+                <td>ABS/PC</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>NFC antenna</td>
+                <td>integrated</td>
+                <td></td>
+            
+</tr>
+
+            <tr>
+                <td>RF antenna</td>
+                <td>internal</td>
+                <td></td>
+            </tr>
+            
+<tr>
+                <td>Accelerometer</td>
+                <td>-</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Other Sensors</td>
+                <td>-</td>
+                <td></td>
+            
+</tr>
+
+            <tr>
+                <td>Cable length</td>
+                <td>2</td>
+                <td>m</td>
+            </tr>
+
+            <tr>
+                <td>Cable material</td>
+                <td>PVC</td>
+                <td></td>
+            </tr>
+            
+<tr>
+                <td>Connection Type</td>
+                <td>Plug</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Batteries</td>
+                
+<td>replaceable</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Primary cell type</td>
+                <td>
+                    4 × AA (recommended: Energizer® Ultimate Lithium AA
+                    or VARTA Ultra Lithium AA)
+                </td>
+                
+<td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>
+5. Connectivity and RF Specifications
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                
+<th>Feature</th>
+                <th>Value</th>
+                <th>Unit</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>RF Standards</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+<tr>
+                <td>LoRaWAN® / mioty® EU Frequency</td>
+                <td>868</td>
+                <td>MHz</td>
+            </tr>
+
+            <tr>
+                <td>Cellular Frequency</td>
+                
+<td>Band 8, 20 (900 MHz, 800 MHz)</td>
+                <td>MHz</td>
+            </tr>
+
+            <tr>
+                <td>Transmit Power LoRaWAN® / mioty® EU</td>
+                <td>14</td>
+                <td>dBm</td>
+            </tr>
+            
+<tr>
+                <td>NB-IoT Transmit Power</td>
+                <td>23</td>
+                <td>dBm</td>
+            </tr>
+
+            <tr>
+                <td>LoRaWAN® MAC Layer Version</td>
+                
+<td>1.0.2</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>
+6. Sensor Specifications: Pressure Sensor (10 bar)*
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                
+<th>Feature</th>
+                <th>Value</th>
+                <th>Unit</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Pressure Type</td>
+                <td>Relative Pressure</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                
+<td>Application range</td>
+                <td>Liquid and gaseous media, refrigerants, ammonia</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Minimum pressure measurement range</td>
+                <td>0</td>
+                <td>bar</td>
+            </tr>
+            
+<tr>
+                <td>Max. pressure measurement range</td>
+                <td>10</td>
+                <td>bar</td>
+            </tr>
+
+            <tr>
+                <td>Pressure resistance</td>
+                <td>30</td>
+                <td>bar</td>
+            </tr>
+            
+<tr>
+                <td>Process connection</td>
+                <td>
+                    DIN EN ISO 1179-2<br>
+                    Male thread<br>
+                    G 1/4
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                
+<td>Minimum ambient temperature</td>
+                <td>-30</td>
+                <td>°C</td>
+            </tr>
+            
+<tr>
+                <td>Maximum ambient temperature</td>
+                <td>85</td>
+                <td>°C</td>
+            </tr>
+
+            <tr>
+                <td>Medium temperature</td>
+                <td>-30 to 135</td>
+                <td>°C</td>
+            </tr>
+            
+<tr>
+                <td>Protection Class</td>
+                <td>IP67</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Resolution</td>
+                <td>1</td>
+                <td>mbar</td>
+            
+</tr>
+
+            <tr>
+                <td>Accuracy</td>
+                <td>
+                    Typical ± 0.3% FS<br>
+                    Max. ± 0.5% FS at 23 °C, including zero point,
+                    full scale, linearity, hysteresis, and
+                    repeatability
+                </td>
+                <td></td>
+            </tr>
+            
+<tr>
+                <td>Long-term stability</td>
+                <td>± 0.25% FS (Full Scale)</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Temperature response</td>
+                <td>± 0.2% FS / 10 K</td>
+                
+<td>Kelvin</td>
+            </tr>
+
+            <tr>
+                <td>Materials in contact with the medium</td>
+                <td>V4A</td>
+                <td></td>
+            </tr>
+            
+<tr>
+                <td>Tightening torque</td>
+                <td>20</td>
+                <td>Nm</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p>
+    *For additional maximum pressures, please request data sheets.
+</p>
+<h3>
+7. Cable Specifications
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                
+<th>Feature</th>
+                <th>Value</th>
+                <th>Unit</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Specification</td>
+                <td>M12 sensor connector</td>
+                <td>-</td>
+            </tr>
+            
+<tr>
+                <td>Cable diameter</td>
+                <td>4.5</td>
+                <td>mm</td>
+            </tr>
+
+            <tr>
+                <td>Cable material</td>
+                <td>PVC</td>
+                <td>-</td>
+            </tr>
+            
+<tr>
+                <td>Sheath Material</td>
+                <td>PVC</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Tightening Torque for Cap Nut</td>
+                <td>0.6 - 1.5</td>
+                
+<td>Nm</td>
+            </tr>
+
+            <tr>
+                <td>Min. temperature</td>
+                <td>-25</td>
+                <td>°C</td>
+            </tr>
+
+            <tr>
+                <td>Max. temperature</td>
+                
+<td>70</td>
+                <td>°C</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<p>
+    <strong>* IP69K cable with PUR material available upon request.</strong>
+</p>
+
+<h3>
+8. Service Life
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Characteristic</th>
+                <th>Value</th>
+                <th>Unit</th>
+            </tr>
+        </thead>
+        
+<tbody>
+            <tr>
+                <td>Measurement frequency</td>
+                <td>288</td>
+                <td>per day (24 h)</td>
+            </tr>
+
+            <tr>
+                <td>Primary cell</td>
+                
+<td>Energizer Ultimate Lithium</td>
+                <td>Energizer Ultimate Lithium</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h3>
+9. Service Life (Years)
+</h3>
+
+<div class="table-wrap">
+    <table>
+        
+<thead>
+            <tr>
+                <th>Number of transmissions per day</th>
+                <th>96</th>
+                <th>48</th>
+                <th>24</th>
+                <th>12</th>
+                <th>6</th>
+                
+<th>2</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>LoRaWAN® SF7 (@5.3 µWh)</td>
+                <td>10</td>
+                <td>10</td>
+                <td>10</td>
+                
+<td>10</td>
+                <td>10</td>
+                <td>10</td>
+            </tr>
+
+            <tr>
+                <td>LoRaWAN® SF12 (@100 µWh)</td>
+                <td>4</td>
+                <td>7</td>
+                <td>10</td>
+                
+<td>10</td>
+                <td>10</td>
+                <td>10</td>
+            </tr>
+
+            <tr>
+                <td>mioty® (@80 µWh)</td>
+                <td>4.8</td>
+                <td>8.2</td>
+                <td>10</td>
+                
+<td>10</td>
+                <td>10</td>
+                <td>10</td>
+            </tr>
+
+            <tr>
+                <td>
+                    Cellular NB-IoT / LTE Cat-M1<br>
+                    (Good Signal Strength, @70 µWh)
+                </td>
+                <td>5.4</td>
+                
+<td>8.9</td>
+                <td>10</td>
+                <td>10</td>
+                <td>10</td>
+                <td>10</td>
+            </tr>
+            
+<tr>
+                <td>
+                    Cellular NB-IoT / LTE Cat-M1<br>
+                    (Average Signal Strength, @250 µWh)
+                
+</td>
+                <td>1.7</td>
+                <td>3.3</td>
+                <td>5.9</td>
+                <td>9.6</td>
+                <td>10</td>
+                <td>10</td>
+            </tr>
+            
+<tr>
+                <td>
+                    Cellular NB-IoT / LTE Cat-M1<br>
+                    (Worst-Case Signal Strength, @1100 µWh)
+                </td>
+                <td>0.4</td>
+                <td>0.8</td>
+                <td>1.6</td>
+                
+<td>3.0</td>
+                <td>5.5</td>
+                <td>10</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+<h3>
+10. Technical Drawing
+</h3>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/image-png-May-21-2024-12-04-20-2976-PM.png?width=426&height=502&name=image-png -May-21-2024-12-04-20-2976-PM.png“
+        alt="Technical Drawing"
+        loading="lazy"
+        style=”max-width:426px; width:100%; height:auto;"
+    >
+    <figcaption>
+        Figure 2. Technical drawing of the Helios-P
+    </figcaption>
+   </figure>
+<h3>11. Marking and Certification</h3>
+
+
+
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png"  alt="Supported radio technologies"  style="max-width:750px; height:auto;"
+    loading="lazy">
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
+    alt="trash bin Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
+</div>
+<!-- FOOTER -->
+
+</div>
+<div class="footer-note">
+  
+<p>© Sentinum GmbH – All rights reserved.</p>
+  <p>All content in this document, including text, tables, and images, is protected by copyright and is the property of Sentinum GmbH.</p>
+  <p>All images are subject to the copyright of Sentinum GmbH, unless otherwise stated.</p>
+  
+<p>Reproduction, distribution, or use—even in part—is not permitted without express written permission.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Specifications are subject to change. All information is provided without warranty.
+  </p>
+</div>
+  
+</body></html>
