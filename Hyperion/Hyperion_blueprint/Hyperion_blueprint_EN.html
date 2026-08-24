@@ -1,0 +1,1101 @@
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+    code,
+    .inline-code {
+        background-color: #f3f4f6;
+        border: 1px solid #d0d7de;
+        border-radius: 4px;
+        padding: 2px 6px;
+        font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 0.9em;
+        color: #111827;
+        display: inline-block;
+    }
+
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+</style>
+
+
+  
+
+<h3>
+1. Hyperion mioty Blueprint
+</h3>
+
+<div class="pdf-viewer">
+    <iframe
+        src="https://docs.sentinum.de/hubfs/blueprint%20test%202026/Hyperion_mioty_blueprint_V2.json"
+        title="Hyperion mioty Blueprint JSON">
+    </iframe>
+</div>
+
+<div class="pdf-download">
+    📄 Download Blueprint as
+    <a href="https://docs.sentinum.de/hubfs/blueprint%20test%202026/Hyperion_mioty_blueprint_V2.json?hsLang=de"
+       target="_blank"
+       rel="noopener noreferrer">
+        <strong>JSON File</strong>
+    </a>.
+</div>
+<!-- ============================= -->
+<!-- Lesbarer Blueprint-Auszug -->
+<!-- ============================= -->
+
+<p>
+    
+The following JSON defines the mioty® blueprint for the
+    <strong>Hyperion Energy Meter</strong>.
+    It describes the structure of the uplink payloads, the supported
+    data types, scaling factors, and conditional fields for
+    decoding voltages, currents, power, energy meters,
+    power factors, and frequencies in different profiles.
+</p>
+<pre style="
+  background:#f7f7f7;
+  border:1px solid #ddd;
+  padding:15px;
+  overflow-x:auto;
+  font-family:monospace;
+  font-size:14px;
+  line-height:1.5;
+  border-radius:4px;
+  margin-bottom:40px;
+">
+    {
+    "typeEui": "FCA84A0000000007",
+    "meta": {
+        "firmwareVersion": "1.0",
+        "hardwareVersion": "1.3",
+        "name": "Hyperion v3",
+        "vendor": "Sentinum",
+        "description": "Hyperion energy meter data payload mioty blueprint."
+    },
+    "component": {
+        "version": {
+            "littleEndian": false,
+            "size": 4,
+            "type": "uint",
+            "unit": ""
+        },
+        "uint8_t": {
+            "littleEndian": false,
+            "size": 8,
+            "type": "uint"
+        },
+        "uint8_t_le": {
+            "littleEndian": true,
+            "size": 8,
+            "type": "uint"
+        },
+        "uint16_t": {
+            "littleEndian": false,
+            "size": 16,
+            "type": "uint"
+        },
+        "uint16_t_le": {
+            "littleEndian": true,
+            "size": 16,
+            "type": "uint"
+        },
+        "uint32_t": {
+            "littleEndian": false,
+            "size": 32,
+            "type": "uint"
+        },
+        "uint32_t_le": {
+            "littleEndian": true,
+            "size": 32,
+            "type": "uint"
+        },
+        "uint64_t": {
+            "littleEndian": false,
+            "size": 64,
+            "type": "uint"
+        },
+        "uint64_t_le": {
+            "littleEndian": true,
+            "size": 64,
+            "type": "uint"
+        },
+        "sint8_t": {
+            "littleEndian": false,
+            "size": 8,
+            "type": "int"
+        },
+        "sint8_t_le": {
+            "littleEndian": true,
+            "size": 8,
+            "type": "int"
+        },
+        "sint16_t": {
+            "littleEndian": false,
+            "size": 16,
+            "type": "int"
+        },
+        "sint16_t_le": {
+            "littleEndian": true,
+            "size": 16,
+            "type": "int"
+        },
+        "sint32_t": {
+            "littleEndian": false,
+            "size": 32,
+            "type": "int"
+        },
+        "sint32_t_le": {
+            "littleEndian": true,
+            "size": 32,
+            "type": "int"
+        },
+        "voltage_l1": {
+            "func": "$ / 10",
+            "littleEndian": false,
+            "size": 32,
+            "type": "int",
+            "unit": "V"
+        },
+        "voltage_l2": {
+            "func": "$ / 10",
+            "littleEndian": false,
+            "size": 32,
+            "type": "int",
+            "unit": "V"
+        },
+        "voltage_l3": {
+            "func": "$ / 10",
+            "littleEndian": false,
+            "size": 32,
+            "type": "int",
+            "unit": "V"
+        },
+        "voltage_l12": {
+            "func": "$ / 10",
+            "littleEndian": false,
+            "size": 32,
+            "type": "int",
+            "unit": "V"
+        },
+        "voltage_l23": {
+            "func": "$ / 10",
+            "littleEndian": false,
+            "size": 32,
+            "type": "int",
+            "unit": "V"
+        },
+        "voltage_l31": {
+            "func": "$ / 10",
+            "littleEndian": false,
+            "size": 32,
+            "type": "int",
+            "unit": "V"
+        },
+        "voltage_l1_le": {
+            "func": "$ / 10",
+            "littleEndian": true,
+            "size": 32,
+            "type": "int",
+            "unit": "V"
+        },
+        "voltage_l2_le": {
+            "func": "$ / 10",
+            "littleEndian": true,
+            "size": 32,
+            "type": "int",
+            "unit": "V"
+        },
+        "voltage_l3_le": {
+            "func": "$ / 10",
+            "littleEndian": true,
+            "size": 32,
+            "type": "int",
+            "unit": "V"
+        },
+        "current_ma": {
+            "littleEndian": false,
+            "size": 32,
+            "type": "int",
+            "unit": "mA"
+        },
+        "power_w": {
+            "littleEndian": false,
+            "size": 32,
+            "type": "int",
+            "unit": "W"
+        },
+        "energy_wh": {
+            "littleEndian": false,
+            "size": 64,
+            "type": "uint",
+            "unit": "Wh"
+        },
+        "power_factor": {
+            "func": "$ / 100",
+            "littleEndian": false,
+            "size": 8,
+            "type": "int"
+        },
+        "power_factor_le": {
+            "func": "$ / 10",
+            "littleEndian": true,
+            "size": 8,
+            "type": "int"
+        },
+        "frequency": {
+            "func": "$ / 10",
+            "littleEndian": false,
+            "size": 16,
+            "type": "int",
+            "unit": "Hz"
+        },
+        "frequency_le": {
+            "func": "$ / 10",
+            "littleEndian": true,
+            "size": 16,
+            "type": "int",
+            "unit": "Hz"
+        }
+    },
+    "uplink": [
+        {
+            "id": 0,
+            "payload": [
+                {
+                    "component": "version",
+                    "name": "fw_base_id"
+                },
+                {
+                    "component": "version",
+                    "name": "fw_major_ver"
+                },
+                {
+                    "component": "version",
+                    "name": "fw_minor_ver"
+                },
+                {
+                    "component": "version",
+                    "name": "dev_sub_type"
+                },
+                {
+                    "component": "uint8_t",
+                    "name": "msg_counter"
+                },
+                {
+                    "component": "uint8_t",
+                    "name": "status"
+                },
+                {
+                    "component": "uint32_t",
+                    "name": "serial_num"
+                },
+                {
+                    "component": "uint32_t",
+                    "name": "app_version"
+                },
+                {
+                    "component": "uint32_t",
+                    "name": "mid_version"
+                },
+                {
+                    "component": "uint8_t",
+                    "name": "profile",
+                    "condition": "($fw_minor_ver &gt;= 3)"
+                },
+                {
+                    "component": "sint32_t",
+                    "name": "p_l1_a",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 0)"
+                },
+                {
+                    "component": "sint32_t",
+                    "name": "p_l2_a",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 0)"
+                },
+                {
+                    "component": "sint32_t",
+                    "name": "p_l3_a",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 0)"
+                },
+                {
+                    "component": "sint32_t",
+                    "name": "p_l123_a",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 0)"
+                },
+                {
+                    "component": "sint32_t",
+                    "name": "i_l1",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 0)"
+                },
+                {
+                    "component": "sint32_t",
+                    "name": "i_l2",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 0)"
+                },
+                {
+                    "component": "sint32_t",
+                    "name": "i_l3",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 0)"
+                },
+                {
+                    "component": "sint32_t",
+                    "name": "i_l123",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 0)"
+                },
+                {
+                    "component": "voltage_l1",
+                    "name": "u_l1",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 0)"
+                },
+                {
+                    "component": "voltage_l2",
+                    "name": "u_l2",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 0)"
+                },
+                {
+                    "component": "voltage_l3",
+                    "name": "u_l3",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 0)"
+                },
+                {
+                    "component": "voltage_l12",
+                    "name": "u_l12",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 0)"
+                },
+                {
+                    "component": "voltage_l23",
+                    "name": "u_l23",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 0)"
+                },
+                {
+                    "component": "voltage_l31",
+                    "name": "u_l31",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 0)"
+                },
+                {
+                    "component": "uint64_t",
+                    "name": "e_ta_a_i",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 0)"
+                },
+                {
+                    "component": "uint64_t",
+                    "name": "e_ta_a_e",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 0)"
+                },
+                {
+                    "component": "uint64_t",
+                    "name": "e_ta_r_i",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 0)"  
+                },
+                {
+                    "component": "uint64_t",
+                    "name": "e_ta_r_e",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 0)"
+                },
+                {
+                    "component": "power_factor",
+                    "name": "pf_l1",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 0)"
+                },
+                {
+                    "component": "power_factor",
+                    "name": "pf_l2",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 0)"
+                },
+                {
+                    "component": "power_factor",
+                    "name": "pf_l3",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 0)"
+                },
+                {
+                    "component": "frequency",
+                    "name": "f",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 0)"
+                },
+                {
+                    "component": "uint32_t",
+                    "name": "pwr_fail",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 0)"
+                },
+                {
+                    "component": "voltage_l1",
+                    "name": "u_l1",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 1)"
+                },
+                {
+                    "component": "voltage_l2",
+                    "name": "u_l2",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 1)"
+                },
+                {
+                    "component": "voltage_l3",
+                    "name": "u_l3",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 1)"
+                },
+                {
+                    "component": "voltage_l12",
+                    "name": "u_l12",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 1)"
+                },
+                {
+                    "component": "voltage_l23",
+                    "name": "u_l23",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 1)"
+                },
+                {
+                    "component": "voltage_l31",
+                    "name": "u_l31",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 1)"
+                },
+                {
+                    "component": "sint32_t",
+                    "name": "i_l1",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 1)"
+                },
+                {
+                    "component": "sint32_t",
+                    "name": "i_l2",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 1)"
+                },
+                {
+                    "component": "sint32_t",
+                    "name": "i_l3",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 1)"
+                },
+                {
+                    "component": "sint32_t",
+                    "name": "i_l123",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 1)"
+                },
+                {
+                    "component": "power_factor",
+                    "name": "pf_l1",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 1)"
+                },
+                {
+                    "component": "power_factor",
+                    "name": "pf_l2",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 1)"
+                },
+                {
+                    "component": "power_factor",
+                    "name": "pf_l3",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 1)"
+                },
+                {
+                    "component": "frequency",
+                    "name": "f",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 1)"
+                },
+                {
+                    "component": "sint32_t",
+                    "name": "p_l1_a",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 2)"
+                },
+                {
+                    "component": "sint32_t",
+                    "name": "p_l2_a",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 2)"
+                },
+                {
+                    "component": "sint32_t",
+                    "name": "p_l3_a",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 2)"
+                },
+                {
+                    "component": "sint32_t",
+                    "name": "p_l123_a",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 2)"
+                },
+                {
+                    "component": "sint32_t",
+                    "name": "i_l1",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 2)"
+                },
+                {
+                    "component": "sint32_t",
+                    "name": "i_l2",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 2)"
+                },
+                {
+                    "component": "sint32_t",
+                    "name": "i_l3",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 2)"
+                },
+                {
+                    "component": "sint32_t",
+                    "name": "i_l123",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 2)"
+                },
+                {
+                    "component": "power_factor",
+                    "name": "pf_l1",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 2)"
+                },
+                {
+                    "component": "power_factor",
+                    "name": "pf_l2",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 2)"
+                },
+                {
+                    "component": "power_factor",
+                    "name": "pf_l3",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 2)"
+                },
+                {
+                    "component": "frequency",
+                    "name": "f",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 2)"
+                },
+                {
+                    "component": "uint64_t",
+                    "name": "e_ta_a_i",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 3)"
+                },
+                {
+                    "component": "uint64_t",
+                    "name": "e_ta_a_e",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 3)"
+                },
+                {
+                    "component": "uint64_t",
+                    "name": "e_ta_r_i",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 3)"
+                },
+                {
+                    "component": "uint64_t",
+                    "name": "e_ta_r_e",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 3)"
+                },
+                {
+                    "component": "uint32_t_le",
+                    "name": "index",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "uint64_t_le",
+                    "name": "epoch",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "uint64_t_le",
+                    "name": "epoch_old",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "uint64_t_le",
+                    "name": "e_t1_a_i",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "uint64_t_le",
+                    "name": "e_t2_a_i",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "uint64_t_le",
+                    "name": "e_t1_a_e",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "uint64_t_le",
+                    "name": "e_t2_a_e",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "uint64_t_le",
+                    "name": "e_t1_r_i",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "uint64_t_le",
+                    "name": "e_t2_r_i",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "uint64_t_le",
+                    "name": "e_t1_r_e",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "uint64_t_le",
+                    "name": "e_t2_r_e",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "sint32_t_le",
+                    "name": "i_l1",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "sint32_t_le",
+                    "name": "i_l2",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "sint32_t_le",
+                    "name": "i_l3",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "sint32_t_le",
+                    "name": "i_l4",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "sint32_t_le",
+                    "name": "i_l123",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "sint32_t_le",
+                    "name": "p_l1_a",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "sint32_t_le",
+                    "name": "p_l2_a",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "sint32_t_le",
+                    "name": "p_l3_a",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "sint32_t_le",
+                    "name": "p_l123_a",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "sint32_t_le",
+                    "name": "p_l123_a_avg",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "voltage_l1_le",
+                    "name": "u_l1",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "voltage_l2_le",
+                    "name": "u_l2",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "voltage_l3_le",
+                    "name": "u_l3",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "frequency_le",
+                    "name": "f",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "uint16_t_le",
+                    "name": "ct_act_prim",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "uint16_t_le",
+                    "name": "ct_old_prim",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "uint16_t_le",
+                    "name": "ct_act_sec",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "uint16_t_le",
+                    "name": "ct_old_sec",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "uint16_t_le",
+                    "name": "vt_act_prim",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "uint16_t_le",
+                    "name": "vt_old_prim",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "uint16_t_le",
+                    "name": "vt_act_sec",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "uint16_t_le",
+                    "name": "vt_old_sec",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "power_factor_le",
+                    "name": "pf_l1",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "power_factor_le",
+                    "name": "pf_l2",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                },
+                {
+                    "component": "power_factor_le",
+                    "name": "pf_l3",
+                    "condition": "($fw_minor_ver &gt;= 3) &amp;&amp; ($status == 0) &amp;&amp; ($profile == 4)"
+                }
+            ]
+        }
+    ],
+    "version": "1.0"
+}
+</pre>
+
+<div class="pdf-download">
+    <span class="icon">📄</span>
+    <span>
+        Prefer a plaintext version?
+        <a href="https://docs.sentinum.de/hubfs/blueprint%20test%202026/Hyperion_mioty_blueprint_V2.txt?hsLang=de"
+           target="_blank"
+           rel="noopener">
+            <strong>Download Blueprint as a TXT document</strong>
+        </a>.
+    </span>
+</div>
+
+<br><br>
+
+
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-17-2025-10-45-56-1539-AM.png?width=115&amp;height=42&amp;name=image-png-Jun-17-2025-10-45-56-1539-AM.png"  alt="Supported radio technologies"  style="max-width:750px; height:auto;"
+    loading="lazy">
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
+    alt="trash bin Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
+</div>
+     
+<!-- FOOTER -->
+
+</div>
+<div class="footer-note">
+  
+<p>© Sentinum GmbH – All rights reserved.</p>
+  <p>All content in this document, including text, tables, and images, is protected by copyright and is the property of Sentinum GmbH.</p>
+  <p>All images are subject to the copyright of Sentinum GmbH, unless otherwise stated.</p>
+  
+<p>Reproduction, distribution, or use—even in part—is not permitted without express written permission.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Specifications are subject to change. All information is provided without warranty.
+  </p>
+</div>
+  
+</body></html>
+  
