@@ -1,0 +1,1221 @@
+<!--
+  templateType: "page"
+  isAvailableForNewContent: true
+-->
+
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sentinum – Drahtlose IoT-Sensorik. Made in Germany.</title>
+<meta name="description" content="Energieautarke LPWAN IoT-Sensoren entwickelt und produziert in Deutschland. mioty®, LoRaWAN®, NB-IoT, LTE-CAT-M1. Vom Sensor bis in die Cloud.">
+
+<meta property="og:title" content="Sentinum – Drahtlose IoT-Sensorik. Made in Germany.">
+<meta property="og:description" content="Energieautarke LPWAN IoT-Sensoren – Apollon-Q, Hyperion, Nyx, Juno, Aion und mehr. Hardware, Firmware und Cloud aus einer Hand.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+
+<link rel="canonical" href="https://sentinum.de/">
+
+<!-- ✅ FONT PERFORMANCE FIX -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'">
+
+<noscript>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</noscript>
+
+<!-- ✅ CSS NON-BLOCKING -->
+<link rel="preload"
+      href="{{ get_asset_url('/Homepage V2/Home_css.css') }}"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'">
+
+<noscript>
+<link rel="stylesheet" href="{{ get_asset_url('/Homepage V2/Home_css.css') }}">
+</noscript>
+
+<!-- ✅ STRUCTURED DATA UNCHANGED -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Sentinum GmbH",
+  "url": "https://sentinum.de",
+  "description": "Sentinum entwickelt und produziert energieautarke LPWAN IoT-Sensoren in Deutschland - mioty, LoRaWAN, NB-IoT und LTE-CAT-M1.",
+  "areaServed": "Worldwide",
+  "sameAs": ["https://shop.sentinum.de", "https://docs.sentinum.de", "https://blog.sentinum.de"]
+}
+</script>
+
+<style>
+
+/* =========================
+✅ HOVER SYSTEM OPTIMIERT
+========================= */
+
+/* ❗ basis reduziert (kein heavy multi-transition) */
+.hover-lift {
+  transition: transform 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-3px);
+}
+
+
+/* ✅ nur Desktop Hover */
+@media (hover: hover) {
+
+  [class*="hover:-translate-y"]:hover {
+    transform: translateY(-3px);
+  }
+
+  [class*="hover:shadow"]:hover {
+    box-shadow: 0 16px 36px -12px hsl(var(--primary)/0.3);
+  }
+
+  [class*="hover:border"]:hover {
+    border-color: hsl(var(--primary)/0.4);
+  }
+}
+
+/* ✅ Mobile komplett deaktiviert */
+@media (max-width: 768px) {
+  [class*="hover:"] {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+}
+
+/* =========================
+✅ IMAGE FIX (CLS + LCP)
+========================= */
+
+
+
+/* =========================
+✅ HUBSPOT FORM FIX (unchanged)
+========================= */
+
+#hubspot-form .inputs-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+#hubspot-form .inputs-list li {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+#hubspot-form .inputs-list li label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  cursor: pointer;
+}
+
+#hubspot-form input[type="checkbox"] {
+  margin: 4px 0 0 0;
+  transform: scale(1.2);
+  flex-shrink: 0;
+}
+
+#hubspot-form .inputs-list li span {
+  display: inline-block;
+  color: #cbd5e1;
+  line-height: 1.5;
+  max-width: 600px;
+}
+
+/* ✅ weniger aggressive selectors */
+#hubspot-form form > .hs-form-field,
+#hubspot-form form > div {
+  display: block;
+}
+
+/* ✅ Farben reduziert (kein mehrfach override nötig) */
+#hubspot-form label {
+  color: #ffffff;
+}
+
+#hubspot-form .inputs-list li span {
+  color: #cbd5e1;
+}
+
+/* =========================
+✅ PERFORMANCE SAFETY
+========================= */
+
+/* reduziert GPU usage */
+
+
+@media (max-width: 768px) {
+  .sn-header *,
+  .sn-drawer,
+  .sn-burger span,
+  .sn-navbar__dropdown,
+  .sn-submenu,
+  .sn-drawer__sub {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+
+</style>
+
+{{ standard_header_includes }}
+
+</head>
+
+<body>
+ {% module "main_nav"
+  path="/Homepage V2/Sentinum New Header Nav.module",
+  label="Main Navigation"
+%}
+    <a href="#produkte" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-primary text-primary-foreground px-3 py-2 rounded">Zum Inhalt springen</a>
+    <main>
+        <section id="top" class="relative overflow-hidden pt-24 pb-12 border-b border-border">
+            <div class="absolute inset-0 dot-bg opacity-[0.05]"></div>
+            <div class="absolute top-[10%] right-[-10%] w-[700px] h-[700px] rounded-full bg-primary opacity-[0.08] blur-[80px]"></div>
+            <div class="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] rounded-full bg-primary opacity-[0.05] blur-[80px]"></div>
+            <div class="container-wide relative z-10">
+
+                <!-- Asymmetric grid: 7/5 split -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+
+                    <!-- Left: Headline + CTA -->
+                    <div class="lg:col-span-7">
+
+                        <!-- Capability Badges -->
+                        <div class="flex flex-wrap gap-2 mt-4 mb-16 max-w-[620px]">
+                            <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[13px] font-medium bg-accent-dim/15 border border-primary/25 text-primary">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                    <rect x="4" y="4" width="16" height="16" rx="2" />
+                                    <rect x="9" y="9" width="6" height="6" />
+                                    <path d="M9 1v3" />
+                                    <path d="M15 1v3" />
+                                    <path d="M9 20v3" />
+                                    <path d="M15 20v3" />
+                                    <path d="M20 9h3" />
+                                    <path d="M20 15h3" />
+                                    <path d="M1 9h3" />
+                                    <path d="M1 15h3" />
+                                </svg> Hardware</span><span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[13px] font-medium bg-accent-dim/15 border border-primary/25 text-primary">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                                </svg> Entwicklung</span><span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[13px] font-medium bg-accent-dim/15 border border-primary/25 text-primary">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                    <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9" />
+                                    <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5" />
+                                    <circle cx="12" cy="12" r="2" />
+                                    <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5" />
+                                    <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19" />
+                                </svg> Connectivity</span><span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[13px] font-medium bg-accent-dim/15 border border-primary/25 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                    <path d="M17.5 19a4.5 4.5 0 1 0 0-9h-1.8A7 7 0 1 0 4 14.9" />
+                                </svg> Cloud</span><span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[13px] font-medium bg-accent-dim/15 border border-primary/25 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                    <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" />
+                                    <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+                                    <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+                                </svg> User Application</span><span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[13px] font-medium bg-accent-dim/15 border border-primary/25 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                </svg> Support</span><span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[13px] font-medium bg-accent-dim/15 border border-primary/25 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                    <circle cx="12" cy="8" r="6" />
+                                    <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                                </svg> Made in Germany</span>
+                        </div>
+
+                        <h1 class="font-heading font-bold text-[clamp(44px,6.5vw,88px)] tracking-tighter leading-[0.98] mb-10">
+                            Drahtlose<br />
+                            IoT-Sensorik.<br />
+                            <span class="gradient-text">Vom Sensor<br />bis in die Cloud.</span>
+                        </h1>
+                        <p class="text-muted-foreground text-lg max-w-[560px] mb-14 leading-relaxed">
+                            <span class="text-primary font-heading font-semibold">Sentinum – IoT made in Germany.</span><br />
+                            Wir entwickeln und produzieren energie­autarke LPWAN-Sensoren in Deutschland.
+                            Hardware, Firmware und Webapp – aus einer Hand, für mioty®, LoRaWAN®, NB-IoT und LTE-CAT-M1.
+                        </p>
+
+                        <div class="flex gap-4 flex-wrap mb-12">
+                            <a href="https://shop.sentinum.de" target="_blank" rel="noopener" 
+                               class="inline-flex items-center gap-3 px-8 py-[18px] rounded-xl font-heading font-bold text-[15px] tracking-tight bg-primary text-primary-foreground hover:opacity-90 hover:-translate-y-0.5 transition-all shadow-[0_10px_28px_-10px_hsl(var(--primary)/0.55)]">Zum Shop <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                    <path d="M5 12h14" />
+                                    <path d="m12 5 7 7-7 7" />
+                                </svg></a>
+                            <a href="https://docs.sentinum.de" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-8 py-[18px] rounded-xl font-heading font-bold text-[15px] tracking-tight border border-border text-foreground hover:border-primary/40 hover:bg-surface transition-all">Dokumentation</a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Stack 01/02/03 -->
+                    <div class="lg:col-span-5 lg:pt-4">
+                        <div class="bg-surface/40 border border-border rounded-2xl p-7 ">
+                            <div class="flex items-center gap-2 mb-4 text-[11px] uppercase tracking-[2px] text-muted-foreground">
+                                <span class="w-1.5 h-1.5 rounded-full bg-primary animate-glow-pulse"></span>
+                                Open Plattform
+                            </div>
+                            <div class="mt-4"><a href="https://sentinum.de/de/iot-sensoren-uebersicht" class="group flex items-start gap-5 py-5 border-t border-border last:border-b transition-colors hover:bg-primary/5 -mx-3 px-3 rounded-lg">
+                                    <div class="font-heading font-bold text-primary text-[28px] tracking-tight shrink-0 w-14 leading-none pt-1">01</div>
+                                    <div class="flex-1">
+                                        <div class="font-heading font-semibold text-foreground text-[16px] mb-1 group-hover:text-primary transition-colors flex items-center gap-2">Hardware & Sensoren <span class="opacity-0 group-hover:opacity-100 transition-opacity text-primary">→</span></div>
+                                        <div class="text-muted-foreground text-[14px] leading-relaxed">Energieautarke LPWAN-Sensoren – entwickelt und gefertigt in Deutschland.</div>
+                                    </div>
+                                </a><a href="https://sentinum.de/hardwareentwicklung-und-beratung" target="_blank" rel="noopener" class="group flex items-start gap-5 py-5 border-t border-border last:border-b transition-colors hover:bg-primary/5 -mx-3 px-3 rounded-lg">
+                                    <div class="font-heading font-bold text-primary text-[28px] tracking-tight shrink-0 w-14 leading-none pt-1">02</div>
+                                    <div class="flex-1">
+                                        <div class="font-heading font-semibold text-foreground text-[16px] mb-1 group-hover:text-primary transition-colors flex items-center gap-2">Customization & Entwicklung <span class="opacity-0 group-hover:opacity-100 transition-opacity text-primary">→</span></div>
+                                        <div class="text-muted-foreground text-[14px] leading-relaxed">Eigenentwickelte Stacks für mioty®, LoRaWAN®, NB-IoT und LTE-CAT-M1.</div>
+                                    </div>
+                                </a><a href="https://sentinum.de/de/iot-loesungen" target="_blank" rel="noopener" class="group flex items-start gap-5 py-5 border-t border-border last:border-b transition-colors hover:bg-primary/5 -mx-3 px-3 rounded-lg">
+                                    <div class="font-heading font-bold text-primary text-[28px] tracking-tight shrink-0 w-14 leading-none pt-1">03</div>
+                                    <div class="flex-1">
+                                        <div class="font-heading font-semibold text-foreground text-[16px] mb-1 group-hover:text-primary transition-colors flex items-center gap-2">Cloud Backend & Anwendungen <span class="opacity-0 group-hover:opacity-100 transition-opacity text-primary">→</span></div>
+                                        <div class="text-muted-foreground text-[14px] leading-relaxed">Sentinum Cloud, LinQs App und offene Schnittstellen – aus einer Hand.</div>
+                                    </div>
+                                </a></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+        <section class="section-padding">
+            <div class="container-main">
+                <div class="text-center max-w-2xl mx-auto mb-14">
+                    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Neuheiten</div>
+                    <h2 class="font-heading font-bold text-[clamp(32px,4.5vw,48px)] tracking-tight leading-[1.1] mb-4">
+                        Unsere <span class="gradient-text">neuen Produkte</span>
+                    </h2>
+                    <p class="text-muted-foreground text-lg">
+                         Entdecken Sie die neuesten Erweiterungen unseres Industrial-IoT-Portfolios – 
+                      von der drahtlosen IO-Link-Anbindung bis zur Integration bestehender 4–20-mA-Sensorik in moderne LPWAN-Netzwerke.
+                    </p>
+                </div>
+                
+                
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+  <!-- ✅ AION Lorawan -->
+  <a href="https://sentinum.de/de/aion-io-link-adapter" target="_blank" rel="noopener"
+     class="group relative bg-surface border border-border rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_12px_40px_-12px_hsl(var(--primary)/0.3)]">
+
+    <!-- Badge -->
+    <span class="absolute top-4 right-4 inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-heading font-semibold bg-primary text-primary-foreground uppercase tracking-[1.5px] z-10">
+      Auf Anfrage
+    </span>
+
+    <!-- Bild -->
+    <div class="relative aspect-[4/3] bg-background/40 flex items-center justify-center overflow-hidden border-b border-border">
+      <div class="absolute inset-0 dot-bg opacity-[0.08]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle,hsl(var(--primary)/0.15),transparent)] blur-[60px]"></div>
+
+      
+    <img
+  src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Aion420_Website/AION-IOL_free2.png"
+  srcset="
+    https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Aion420_Website/AION-IOL_free2.png 400w,
+    https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Aion420_Website/AION-IOL_free2.png 1000w
+  "
+  sizes="(max-width: 600px) 90vw, 600px"
+  width="1000"
+  height="600"
+  loading="lazy"
+  decoding="async"
+  alt="AION IO-Link mioty adapter"
+  style="max-width: 100%; height: auto; object-fit: contain;"
+>
+      </div>
+    
+
+    <!-- Inhalt -->
+    <div class="p-7 flex flex-col flex-1">
+      <div class="text-primary text-[14px] font-heading font-medium mb-2">
+        Industrielle IO-Link Konnektivität
+
+      </div>
+
+      <h3 class="font-heading font-bold text-2xl mb-2 tracking-tight">
+        Aion LoRaWAN®
+      </h3>
+
+      <p class="text-muted-foreground text-[15px] leading-relaxed mb-6 flex-1">
+       Drahtloser IO-Link Adapter zur einfachen Integration bestehender Sensoren in mioty®- und LoRaWAN®-Netzwerke – ohne Änderungen an der installierten Infrastruktur.
+      </p>
+
+      <div class="inline-flex items-center gap-2 text-primary font-heading font-semibold text-[14px] group-hover:gap-3 transition-all">
+        Mehr erfahren
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" class="w-4 h-4">
+          <path d="M5 12h14" />
+          <path d="m12 5 7 7-7 7" />
+        </svg>
+      </div>
+    </div>
+  </a>
+
+
+  <!-- EOS 420 -->
+  <a href="https://sentinum.de/de/aion-420" target="_blank" rel="noopener"
+     class="group relative bg-surface border border-border rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_12px_40px_-12px_hsl(var(--primary)/0.3)]">
+
+    <!-- Badge -->
+    <span class="absolute top-4 right-4 inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-heading font-semibold bg-primary text-primary-foreground uppercase tracking-[1.5px] z-10">
+      Neu
+    </span>
+
+    <!-- Bild -->
+    <div class="relative aspect-[4/3] bg-background/40 flex items-center justify-center overflow-hidden border-b border-border">
+      <div class="absolute inset-0 dot-bg opacity-[0.08]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle,hsl(var(--primary)/0.15),transparent)] blur-[60px]"></div>
+
+     
+       <img
+  src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Aion420_Website/AION420-A_Back.png"
+  srcset="
+   https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Aion420_Website/AION420-A_Back.png,
+   https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Aion420_Website/AION420-A_Back.png 1000w
+  "
+  sizes="(max-width: 600px) 90vw, 600px"
+  width="1000"
+  height="600"
+  loading="lazy"
+  decoding="async"
+  alt="AION IO-Link mioty adapter"
+  style="max-width: 100%; height: auto; object-fit: contain;"
+>
+
+      </div>
+    
+
+    <!-- Inhalt -->
+    <div class="p-7 flex flex-col flex-1">
+      <div class="text-primary text-[14px] font-heading font-medium mb-2">
+        4–20 mA Sensorintegration
+      </div>
+
+      <h3 class="font-heading font-bold text-2xl mb-2 tracking-tight">
+       Aion 420
+      </h3>
+
+      <p class="text-muted-foreground text-[15px] leading-relaxed mb-6 flex-1">
+     Ermöglicht die drahtlose Anbindung bestehender 4–20-mA-Sensoren an LoRaWAN®, mioty®, NB-IoT und LTE-M für eine zuverlässige Fernüberwachung industrieller Messwerte. 
+      </p>
+
+      <div class="inline-flex items-center gap-2 text-primary font-heading font-semibold text-[14px] group-hover:gap-3 transition-all">
+        Mehr erfahren
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" class="w-4 h-4">
+          <path d="M5 12h14" />
+          <path d="m12 5 7 7-7 7" />
+        </svg>
+      </div>
+    </div>
+  </a>
+
+</div> </div>
+     </section>
+      
+      
+        <section class="section-padding">
+            <div class="container-main">
+                <div class="text-center max-w-2xl mx-auto mb-14">
+                    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Im Fokus</div>
+                    <h2 class="font-heading font-bold text-[clamp(32px,4.5vw,48px)] tracking-tight leading-[1.1] mb-4">
+                        Unsere <span class="gradient-text">Highlight-Produkte</span>
+                    </h2>
+                    <p class="text-muted-foreground text-lg">
+                        Zwei Produkte, die unsere Plattform besonders gut zeigen –
+                        vom MID-zertifizierten Stromzähler bis zum drahtlosen IO-Link-Adapter.
+                    </p>
+                </div>
+                
+                
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+  <!-- ✅ EOS Radar -->
+  <a href="https://sentinum.de/de/eos-radar" target="_blank" rel="noopener"
+     class="group relative bg-surface border border-border rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_12px_40px_-12px_hsl(var(--primary)/0.3)]">
+
+    <!-- Badge -->
+    <span class="absolute top-4 right-4 inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-heading font-semibold bg-primary text-primary-foreground uppercase tracking-[1.5px] z-10">
+      NEU
+    </span>
+
+    <!-- Bild -->
+    <div class="relative aspect-[4/3] bg-background/40 flex items-center justify-center overflow-hidden border-b border-border">
+      <div class="absolute inset-0 dot-bg opacity-[0.08]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle,hsl(var(--primary)/0.15),transparent)] blur-[60px]"></div>
+
+      
+   <img
+  src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Orelia/Image.png"
+  srcset="
+   https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Orelia/Image.png 400w,
+    https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Orelia/Image.png 600w
+  "
+  sizes="(max-width: 600px) 90vw, 600px"
+  width="600"
+  height="338"
+  loading="lazy"
+  decoding="async"
+  alt="Hyperion Energiezähler LoRa Gerätefront Ansicht"
+  style="max-width: 100%; height: auto; object-fit: contain;"
+>
+      </div>
+    
+
+    <!-- Inhalt -->
+    <div class="p-7 flex flex-col flex-1">
+      <div class="text-primary text-[14px] font-heading font-medium mb-2">
+        Radar Level Sensoren
+      </div>
+
+      <h3 class="font-heading font-bold text-2xl mb-2 tracking-tight">
+        EOS Radar
+      </h3>
+
+      <p class="text-muted-foreground text-[15px] leading-relaxed mb-6 flex-1">
+       Berührungslose IoT-Füllstandsmessung mit 60-GHz-Radartechnologie für Tanks, Silos, Schächte, Gewässer und industrielle Infrastruktur. 
+        Präzise Messwerte per LoRaWAN®, mioty®, NB-IoT oder LTE-M direkt in die Cloud.
+      </p>
+
+      <div class="inline-flex items-center gap-2 text-primary font-heading font-semibold text-[14px] group-hover:gap-3 transition-all">
+        Mehr erfahren
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" class="w-4 h-4">
+          <path d="M5 12h14" />
+          <path d="m12 5 7 7-7 7" />
+        </svg>
+      </div>
+    </div>
+  </a>
+
+
+  <!-- EOS 420 -->
+  <a href="https://sentinum.de/de/eos-420" target="_blank" rel="noopener"
+     class="group relative bg-surface border border-border rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_12px_40px_-12px_hsl(var(--primary)/0.3)]">
+
+    <!-- Badge -->
+    <span class="absolute top-4 right-4 inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-heading font-semibold bg-primary text-primary-foreground uppercase tracking-[1.5px] z-10">
+      Neu
+    </span>
+
+    <!-- Bild -->
+    <div class="relative aspect-[4/3] bg-background/40 flex items-center justify-center overflow-hidden border-b border-border">
+      <div class="absolute inset-0 dot-bg opacity-[0.08]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle,hsl(var(--primary)/0.15),transparent)] blur-[60px]"></div>
+
+     
+       <img
+  src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/EOS-Website/EOS_420%201.png"
+  srcset="
+    https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/EOS-Website/EOS_420%201.png 400w,
+    https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/EOS-Website/EOS_420%201.png 1000w
+  "
+  sizes="(max-width: 600px) 90vw, 600px"
+  width="1000"
+  height="600"
+  loading="lazy"
+  decoding="async"
+  alt="AION IO-Link mioty adapter"
+  style="max-width: 100%; height: auto; object-fit: contain;"
+>
+
+      </div>
+    
+
+    <!-- Inhalt -->
+    <div class="p-7 flex flex-col flex-1">
+      <div class="text-primary text-[14px] font-heading font-medium mb-2">
+        Industrielle IoT Level Sensoren
+      </div>
+
+      <h3 class="font-heading font-bold text-2xl mb-2 tracking-tight">
+       EOS 420
+      </h3>
+
+      <p class="text-muted-foreground text-[15px] leading-relaxed mb-6 flex-1">
+      Bindet externe 4–20-mA-Pegelsonden an LPWAN-Netzwerke an. Zuverlässige Fernüberwachung über LoRaWAN®, mioty®, NB-IoT und LTE-M.
+      </p>
+
+      <div class="inline-flex items-center gap-2 text-primary font-heading font-semibold text-[14px] group-hover:gap-3 transition-all">
+        Mehr erfahren
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" class="w-4 h-4">
+          <path d="M5 12h14" />
+          <path d="m12 5 7 7-7 7" />
+        </svg>
+      </div>
+    </div>
+  </a>
+
+</div> </div>
+   </section>
+      
+        <section class="relative overflow-hidden section-padding-lg border-y border-border bg-surface/20">
+            <div class="absolute inset-0 dot-bg opacity-[0.04]"></div>
+            <div class="absolute top-[10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-primary opacity-[0.10] blur-[80px]"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-primary opacity-[0.07] blur-[80px]"></div>
+
+            <div class="container-main relative z-10">
+                <div class="max-w-[860px] mx-auto text-center">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[11px] font-heading font-semibold uppercase tracking-[2px] bg-primary/10 border border-primary/30 text-primary mb-8">
+                        <span class="w-1.5 h-1.5 rounded-full bg-primary animate-glow-pulse"></span>
+                        Featured Application
+                    </div>
+                    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-4">Sentinum Webapp · IoT-Plattform</div>
+                    <h2 class="font-heading font-bold text-[clamp(36px,5vw,60px)] tracking-tighter leading-[1.05] mb-8">
+                        Eine Plattform.<br />
+                        <span class="gradient-text">Alle Sensoren. Alle Daten.</span>
+                    </h2>
+                    <p class="text-muted-foreground text-lg leading-relaxed max-w-[640px] mx-auto mb-12">
+                        Geräteverwaltung, Live-Daten, Alarme, Dashboards und offene APIs – die Sentinum Webapp
+                        bringt jede Sensor­familie in eine einheitliche Oberfläche. Ohne Vendor-Lock-in,
+                        DSGVO-konform, gehostet in Deutschland.
+                    </p>
+
+                    <div class="flex gap-4 flex-wrap justify-center mb-14">
+                        <a href="https://sentinum.de/de/iot-loesungen" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-8 py-[18px] rounded-xl font-heading font-bold text-[15px] tracking-tight bg-primary text-primary-foreground hover:opacity-90 hover:-translate-y-0.5 transition-all shadow-[0_10px_28px_-10px_hsl(var(--primary)/0.55)]">Plattform entdecken <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                <path d="M5 12h14" />
+                                <path d="m12 5 7 7-7 7" />
+                            </svg></a>
+                        <a href="https://sentinum.de/kontakt" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-8 py-[18px] rounded-xl font-heading font-bold text-[15px] tracking-tight border border-border text-foreground hover:border-primary/40 hover:bg-surface transition-all">Demo anfragen</a>
+                    </div>
+                </div>
+
+                <!-- Visual placeholder: stilisierter Browser/Dashboard-Frame -->
+                <div class="relative max-w-[1000px] mx-auto">
+                    <div class="relative bg-surface/60 border border-border rounded-2xl overflow-hidden backdrop-blur-md shadow-[0_30px_80px_-20px_hsl(var(--primary)/0.25)]">
+                        <!-- Browser bar -->
+                        <div class="flex items-center gap-2 px-5 py-3 border-b border-border bg-background/40">
+                            <span class="w-2.5 h-2.5 rounded-full bg-primary/40"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-primary/25"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-primary/15"></span>
+                            <div class="ml-4 text-[11px] tracking-[1.5px] text-muted-foreground font-heading">app.sentinum.de</div>
+                        </div>
+                       <!-- Body -->
+<div class="relative aspect-[16/8] flex items-center justify-center bg-background/40">
+
+  <div class="absolute inset-0 dot-bg opacity-[0.06]"></div>
+  <div class="absolute inset-0 bg-[radial-gradient(circle,hsl(var(--primary)/0.18),transparent)] "></div>
+
+ 
+
+ <img
+  src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/webp/Dashboard.webp"
+  srcset="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/webp/Dashboard%20(1)1000.webp 1000w,
+          https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/webp/Dashboard.webp 3000w"
+  sizes="100vw"
+  width="3000"
+  height="1500"
+  loading="eager"
+  fetchpriority="high"
+  decoding="async"
+  alt="IoT Dashboard"
+  style="width: 100%; height: auto; object-fit: contain;"
+>
+
+  </div>
+</div>
+
+                       
+                    </div>
+                </div>
+
+            
+        </section>
+        
+
+     
+        
+        
+      
+        <section id="produkte" class="section-padding">
+            <div class="container-main">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Produktportfolio</div>
+                    <h2 class="font-heading font-bold text-[clamp(32px,4.5vw,48px)] tracking-tight leading-[1.1] mb-4">
+                        Acht Sensor-Familien.<br /><span class="gradient-text">Eine Plattform.</span>
+                    </h2>
+                    <p class="text-muted-foreground text-lg">
+                        Vom Füllstandssensor über Energiezähler bis zum solar­betriebenen Indoor-Sensor –
+                        jede Familie ist in mehreren LPWAN-Standards verfügbar und nahtlos in unsere Webapp integriert.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"><a href="https://sentinum.de/apollon-q" target="_blank" rel="noopener" class="group relative bg-surface border border-border rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_12px_40px_-12px_hsl(var(--primary)/0.3)]">
+                        <span class="absolute top-4 right-4 inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-heading font-semibold bg-primary text-primary-foreground uppercase tracking-[1.5px] z-10">Bestseller</span>
+                        <div class="relative aspect-[4/3] bg-background/40 flex items-center justify-center overflow-hidden border-b border-border">
+                            <div class="absolute inset-0 dot-bg opacity-[0.08]"></div>
+                            <div class="absolute inset-0 bg-[radial-gradient(circle,hsl(var(--primary)/0.15),transparent)] blur-[60px]"></div>
+                            
+                             <img
+  src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/webp/Q-TR_Front%20(1)800.webp"
+  srcset="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/webp/Q-TR_Front%20(1)400.webp 400w,
+          https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/webp/Q-TR_Front%20(1)800.webp 800w"
+  sizes="(max-width: 600px) 90vw, 600px"
+  width="800"
+  height="auto"
+  loading="lazy"
+  decoding="async"
+  alt="Q‑TR Frontansicht Gerät"
+  style="max-width: 100%; height: auto; object-fit: contain;"
+
+                             
+                           
+                           
+                            </div>
+                        </div>
+                        <div class="p-7 flex flex-col flex-1">
+                            <h3 class="font-heading font-bold text-2xl mb-1 tracking-tight">Apollon-Q</h3>
+                            <div class="text-primary text-[14px] font-heading font-medium mb-4">Radar &amp; Laser ToF Füllstandssensoren</div>
+                            <p class="text-muted-foreground text-[15px] leading-relaxed mb-6 flex-1">Drei Familien (TR, SW-TR, T) mit dualem Messprinzip aus Radar und Laser ToF. Für Tanks, Mülltonnen, Schüttgut und Logistik – 2 cm bis 2,50 m, IP69k.</p>
+                            <div class="inline-flex items-center gap-2 text-primary font-heading font-semibold text-[14px] group-hover:gap-3 transition-all">Mehr erfahren <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                    <path d="M5 12h14" />
+                                    <path d="m12 5 7 7-7 7" />
+                                </svg></div>
+                        </div>
+                    </a><a href="https://sentinum.de/hyperion" target="_blank" rel="noopener" class="group relative bg-surface border border-border rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_12px_40px_-12px_hsl(var(--primary)/0.3)]">
+                           <span class="absolute top-4 right-4 inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-heading font-semibold bg-primary text-primary-foreground uppercase tracking-[1.5px] z-10">
+      MID-zertifiziert
+    </span>
+                        <div class="relative aspect-[4/3] bg-background/40 flex items-center justify-center overflow-hidden border-b border-border">
+                            <div class="absolute inset-0 dot-bg opacity-[0.08]"></div>
+                            <div class="absolute inset-0 bg-[radial-gradient(circle,hsl(var(--primary)/0.15),transparent)] blur-[60px]"></div>
+                            
+                            <img
+  src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/webp/Hyperion_frei.webp"
+  srcset="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/webp/Hyperion_frei%20(1)400.webp 400w,
+          https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/webp/Hyperion_frei.webp 600w"
+  sizes="(max-width: 600px) 90vw, 600px"
+  width="600"
+  height="338"
+  loading="lazy"
+  decoding="async"
+  alt="Hyperion Smart‑Meter zur Energieerfassung, freigestellte Geräteansicht"
+  style="max-width: 100%; height: auto; object-fit: contain;"
+
+                            </div>
+                        </div>
+                        <div class="p-7 flex flex-col flex-1">
+                            <h3 class="font-heading font-bold text-2xl mb-1 tracking-tight">Hyperion</h3>
+                            <div class="text-primary text-[14px] font-heading font-medium mb-4">Smarte Energie- und Stromzähler</div>
+                            <p class="text-muted-foreground text-[15px] leading-relaxed mb-6 flex-1">MID-zertifizierte LoRaWAN®- und mioty®-Stromzähler für Energie­management, Sub-Metering und Verbrauchs­transparenz in Industrie und Wohnungs­wirtschaft.</p>
+                            <div class="inline-flex items-center gap-2 text-primary font-heading font-semibold text-[14px] group-hover:gap-3 transition-all">Mehr erfahren <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                    <path d="M5 12h14" />
+                                    <path d="m12 5 7 7-7 7" />
+                                </svg></div>
+                        </div>
+                    </a><a href="https://sentinum.de/nyx" target="_blank" rel="noopener" class="group relative bg-surface border border-border rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_12px_40px_-12px_hsl(var(--primary)/0.3)]">
+                        <span class="absolute top-4 right-4 inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-heading font-semibold bg-primary text-primary-foreground uppercase tracking-[1.5px] z-10">Solar</span>
+                        <div class="relative aspect-[4/3] bg-background/40 flex items-center justify-center overflow-hidden border-b border-border">
+                            <div class="absolute inset-0 dot-bg opacity-[0.08]"></div>
+                            <div class="absolute inset-0 bg-[radial-gradient(circle,hsl(var(--primary)/0.15),transparent)] blur-[60px]"></div>
+                            
+                            
+                          <img
+  src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/webp/Nyx-Aktuelle20frei20(1).webp"
+  srcset="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/webp/medium%20(4)400.webp 400w,
+          https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/webp/Nyx-Aktuelle20frei20(1).webp 800w"
+  sizes="(max-width: 600px) 90vw, 600px"
+  width="800"
+  height="auto"
+  loading="lazy"
+  decoding="async"
+  alt="Nyx batterieloser, solarbetriebener Indoor‑Sensor für Umwelt‑ und Zustandsmessung, freigestellte Ansicht"
+  style="max-width: 100%; height: auto; object-fit: contain;"
+
+
+                            </div>
+                        </div>
+                        <div class="p-7 flex flex-col flex-1">
+                            <h3 class="font-heading font-bold text-2xl mb-1 tracking-tight">Nyx</h3>
+                            <div class="text-primary text-[14px] font-heading font-medium mb-4">Solarbetriebener Indoor-Sensor</div>
+                            <p class="text-muted-foreground text-[15px] leading-relaxed mb-6 flex-1">Ultraflacher, batteriefreier Indoor-Sensor mit Solarzelle. Erfasst Neigung, Öffnungen, Betriebs­stunden und Tracking-Daten – komplett wartungsfrei.</p>
+                            <div class="inline-flex items-center gap-2 text-primary font-heading font-semibold text-[14px] group-hover:gap-3 transition-all">Mehr erfahren <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                    <path d="M5 12h14" />
+                                    <path d="m12 5 7 7-7 7" />
+                                </svg></div>
+                        </div>
+                    </a><a href="https://sentinum.de/juno-th-sensor-tracker" target="_blank" rel="noopener" class="group relative bg-surface border border-border rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_12px_40px_-12px_hsl(var(--primary)/0.3)]">
+
+                        <div class="relative aspect-[4/3] bg-background/40 flex items-center justify-center overflow-hidden border-b border-border">
+                            <div class="absolute inset-0 dot-bg opacity-[0.08]"></div>
+                            <div class="absolute inset-0 bg-[radial-gradient(circle,hsl(var(--primary)/0.15),transparent)] blur-[60px]"></div>
+                            
+                            
+                            <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/webp/Juno_open_Front.webp" 
+                                
+srcset="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/webp/medium%20(1)400.webp 400w,
+          https://sentinum.de/hubfs/Webprodukt_Bild/webp/Juno_open_Front.webp 800w"
+  sizes="(max-width: 600px) 90vw, 600px"
+  width="800"
+  height="auto"
+  loading="lazy"
+  decoding="async"
+  alt="Juno IoT‑Sensor mit geöffneter Front zur Darstellung der internen Komponenten, freigestellte Ansicht"
+  style="max-width: 100%; height: auto; object-fit: contain;"
+ 
+                            </div>
+                        </div>
+                        <div class="p-7 flex flex-col flex-1">
+                            <h3 class="font-heading font-bold text-2xl mb-1 tracking-tight">Juno</h3>
+                            <div class="text-primary text-[14px] font-heading font-medium mb-4">Tracker &amp; IP67 TH-Sensor</div>
+                            <p class="text-muted-foreground text-[15px] leading-relaxed mb-6 flex-1">Robuste Tracker- und Temperatur/Feuchte-Sensoren mit GPS und WiFi-Sniffing. Für Logistik, Asset-Tracking und Outdoor-Anwendungen.</p>
+                            <div class="inline-flex items-center gap-2 text-primary font-heading font-semibold text-[14px] group-hover:gap-3 transition-all">Mehr erfahren <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                    <path d="M5 12h14" />
+                                    <path d="m12 5 7 7-7 7" />
+                                </svg></div>
+                        </div>
+                    </a><a href="https://sentinum.de/aion-io-link-adapter" target="_blank" rel="noopener" class="group relative bg-surface border border-border rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_12px_40px_-12px_hsl(var(--primary)/0.3)]">
+                        <span class="absolute top-4 right-4 inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-heading font-semibold bg-primary text-primary-foreground uppercase tracking-[1.5px] z-10">Neu</span>
+                        <div class="relative aspect-[4/3] bg-background/40 flex items-center justify-center overflow-hidden border-b border-border">
+                            <div class="absolute inset-0 dot-bg opacity-[0.08]"></div>
+                            <div class="absolute inset-0 bg-[radial-gradient(circle,hsl(var(--primary)/0.15),transparent)] blur-[60px]"></div>
+                            
+                            
+                           <img
+  src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/webp/AION_freigestellt1000.webp"
+  srcset="
+    https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/webp/AION_freigestellt%20400.webp 400w,
+    https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/webp/AION_freigestellt1000.webp 1000w
+  "
+  sizes="(max-width: 600px) 90vw, 600px"
+  width="1000"
+  height="600"
+  loading="lazy"
+  decoding="async"
+  alt="AION IO-Link mioty adapter"
+  style="max-width: 100%; height: auto; object-fit: contain;"
+
+
+                            </div>
+                        </div>
+                        <div class="p-7 flex flex-col flex-1">
+                            <h3 class="font-heading font-bold text-2xl mb-1 tracking-tight">Aion</h3>
+                            <div class="text-primary text-[14px] font-heading font-medium mb-4">IO-Link mioty® Adapter</div>
+                            <p class="text-muted-foreground text-[15px] leading-relaxed mb-6 flex-1">Macht jeden IO-Link-Sensor drahtlos. Verbindet industrielle Messtechnik mit LPWAN – Plug &amp; Play in SCADA, Cloud und Industrie 4.0.</p>
+                            <div class="inline-flex items-center gap-2 text-primary font-heading font-semibold text-[14px] group-hover:gap-3 transition-all">Mehr erfahren <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                    <path d="M5 12h14" />
+                                    <path d="m12 5 7 7-7 7" />
+                                </svg></div>
+                        </div>
+                    </a><a href="https://sentinum.de/gaia" target="_blank" rel="noopener" class="group relative bg-surface border border-border rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_12px_40px_-12px_hsl(var(--primary)/0.3)]">
+
+                        <div class="relative aspect-[4/3] bg-background/40 flex items-center justify-center overflow-hidden border-b border-border">
+                            <div class="absolute inset-0 dot-bg opacity-[0.08]"></div>
+                            <div class="absolute inset-0 bg-[radial-gradient(circle,hsl(var(--primary)/0.15),transparent)] blur-[60px]"></div>
+                            
+                            
+                         <img
+  src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/webp/GAIA.webp"
+  srcset="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/webp/medium%20(2)400.webp 400w,
+          https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/webp/GAIA.webp 800w"
+  sizes="(max-width: 600px) 90vw, 600px"
+  width="800"
+  height="auto"
+  loading="lazy"
+  decoding="async"
+  alt="GAIA IoT‑Sensor zur Erfassung von Bodenfeuchte, Temperatur und Umweltdaten für Analyse‑ und Monitoring‑Systeme"
+  style="max-width: 100%; height: auto; object-fit: contain;"
+
+                            </div>
+                        </div>
+                        <div class="p-7 flex flex-col flex-1">
+                            <h3 class="font-heading font-bold text-2xl mb-1 tracking-tight">Gaia</h3>
+                            <div class="text-primary text-[14px] font-heading font-medium mb-4">IoT Smart Hub</div>
+                            <p class="text-muted-foreground text-[15px] leading-relaxed mb-6 flex-1">Universal-Hub für Umweltdaten­erfassung, Wetterstationen und Soil Condition Monitoring. Flexibel konfigurier­bar für Smart Agriculture und Industrie.</p>
+                            <div class="inline-flex items-center gap-2 text-primary font-heading font-semibold text-[14px] group-hover:gap-3 transition-all">Mehr erfahren <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                    <path d="M5 12h14" />
+                                    <path d="m12 5 7 7-7 7" />
+                                </svg></div>
+                        </div>
+                    </a><a href="https://sentinum.de/helios" target="_blank" rel="noopener" class="group relative bg-surface border border-border rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_12px_40px_-12px_hsl(var(--primary)/0.3)]">
+
+                        <div class="relative aspect-[4/3] bg-background/40 flex items-center justify-center overflow-hidden border-b border-border">
+                            <div class="absolute inset-0 dot-bg opacity-[0.08]"></div>
+                            <div class="absolute inset-0 bg-[radial-gradient(circle,hsl(var(--primary)/0.15),transparent)] blur-[60px]"></div>
+                            
+                            
+                            <img
+  src="https://sentinum.de/hubfs/Webprodukt_Bild/webp/Helios_M12_4_new.webp"
+  srcset="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/webp/medium%20(3)%20400.webp 400w,
+          https://sentinum.de/hubfs/Webprodukt_Bild/webp/Helios_M12_4_new.webp 800w"
+  sizes="(max-width: 600px) 90vw, 600px"
+  width="800"
+  height="auto"
+  loading="lazy"
+  decoding="async"
+  alt="Helios Smart‑Hub zur zentralen Erfassung, Verarbeitung und Weiterleitung von Sensordaten in IoT‑Systemen"
+  style="max-width: 100%; height: auto; object-fit: contain;"
+
+                            </div>
+                        </div>
+                        <div class="p-7 flex flex-col flex-1">
+                            <h3 class="font-heading font-bold text-2xl mb-1 tracking-tight">Helios</h3>
+                            <div class="text-primary text-[14px] font-heading font-medium mb-4">Anschlussbox für die Wohnungswirtschaft</div>
+                            <p class="text-muted-foreground text-[15px] leading-relaxed mb-6 flex-1">Günstige und flexible Anschluss­box mit Temperatur­fühler, Drucksensor, Pulszähler und Modbus-Bridge – ideal für Sub-Metering und Industrie.</p>
+                            <div class="inline-flex items-center gap-2 text-primary font-heading font-semibold text-[14px] group-hover:gap-3 transition-all">Mehr erfahren <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                    <path d="M5 12h14" />
+                                    <path d="m12 5 7 7-7 7" />
+                                </svg></div>
+                        </div>
+                    </a><a href="https://sentinum.de/febris-co2" target="_blank" rel="noopener" class="group relative bg-surface border border-border rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_12px_40px_-12px_hsl(var(--primary)/0.3)]">
+
+                        <div class="relative aspect-[4/3] bg-background/40 flex items-center justify-center overflow-hidden border-b border-border">
+                            <div class="absolute inset-0 dot-bg opacity-[0.08]"></div>
+                            <div class="absolute inset-0 bg-[radial-gradient(circle,hsl(var(--primary)/0.15),transparent)] blur-[60px]"></div>
+                            
+                           <img
+  src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/webp/Febris-1-1%20(1)600.webp"
+  srcset="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/webp/Febris-1-1%20(1)400.webp 400w,
+          https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/webp/Febris-1-1%20(1)600.webp 600w"
+  sizes="(max-width: 600px) 90vw, 600px"
+  width="600"
+  height="auto"
+  loading="lazy"
+  decoding="async"
+  alt="Febris IoT‑Sensor zur Erfassung von Raumluft‑ und Klimadaten für Gebäudemonitoring und Analytics"
+  style="max-width: 100%; height: auto; object-fit: contain;"
+
+                            </div>
+                        </div>
+                        <div class="p-7 flex flex-col flex-1">
+                            <h3 class="font-heading font-bold text-2xl mb-1 tracking-tight">Febris</h3>
+                            <div class="text-primary text-[14px] font-heading font-medium mb-4">Raumklima &amp; CO₂</div>
+                            <p class="text-muted-foreground text-[15px] leading-relaxed mb-6 flex-1">Sensorfamilie für Temperatur, Luftfeuchte, CO₂ und Luftdruck. Für Büros, Schulen, Gastronomie, Museen und Schimmel­prävention.</p>
+                            <div class="inline-flex items-center gap-2 text-primary font-heading font-semibold text-[14px] group-hover:gap-3 transition-all">Mehr erfahren <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                    <path d="M5 12h14" />
+                                    <path d="m12 5 7 7-7 7" />
+                                </svg></div>
+                        </div>
+                    </a></div>
+            </div>
+        </section>
+        <section id="branchen" class="section-padding">
+            <div class="container-main">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Branchen</div>
+                    <h2 class="font-heading font-bold text-[clamp(32px,4.5vw,48px)] tracking-tight leading-[1.1] mb-4">
+                        Wo Sentinum-Sensoren <span class="gradient-text">arbeiten</span>
+                    </h2>
+                    <p class="text-muted-foreground text-lg">
+                        Von der Smart City bis zur Industrie­halle – unsere Sensoren liefern in
+                        acht Branchen verlässlich Daten, oft jahrelang ohne einen einzigen Akku­wechsel.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                    <div class="bg-surface border border-border rounded-xl p-7 transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5">
+                        <div class="w-12 h-12 rounded-[12px] bg-accent-dim flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary">
+                                <path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z" />
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2 tracking-tight">Industrie 4.0</h3>
+                        <p class="text-muted-foreground text-[14px] leading-relaxed">Maschinendaten, IO-Link-Adapter, Energie­monitoring und Bestands­erfassung in Produktions­umgebungen.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-xl p-7 transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5">
+                        <div class="w-12 h-12 rounded-[12px] bg-accent-dim flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary">
+                                <rect width="16" height="20" x="4" y="2" rx="2" ry="2" />
+                                <path d="M9 22v-4h6v4" />
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2 tracking-tight">Wohnungs- &amp; Gebäudewirtschaft</h3>
+                        <p class="text-muted-foreground text-[14px] leading-relaxed">Sub-Metering, Heizungs- und Wasser­zähler, Raumklima und Schimmel­prävention für intelligente Gebäude.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-xl p-7 transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5">
+                        <div class="w-12 h-12 rounded-[12px] bg-accent-dim flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary">
+                                <path d="M3 21V8l6-4v17" />
+                                <path d="M9 21V12l6-4v13" />
+                                <path d="M15 21V8l6 4v9" />
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2 tracking-tight">Smart City</h3>
+                        <p class="text-muted-foreground text-[14px] leading-relaxed">Mülltonnen, Regen­wasser, Schnee­schmelz­anlagen, Luft­qualität und urbane Infrastruktur.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-xl p-7 transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5">
+                        <div class="w-12 h-12 rounded-[12px] bg-accent-dim flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary">
+                                <path d="M3 6h18" />
+                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+                                <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2 tracking-tight">Abfallwirtschaft</h3>
+                        <p class="text-muted-foreground text-[14px] leading-relaxed">Smart-Waste-Füllstands­messung für Container, Papier­körbe, Glas- und Altkleider­container.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-xl p-7 transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5">
+                        <div class="w-12 h-12 rounded-[12px] bg-accent-dim flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary">
+                                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2 tracking-tight">Wasserwirtschaft</h3>
+                        <p class="text-muted-foreground text-[14px] leading-relaxed">Pegel­messung, Stark­regen-Frühwarnung, Brunnen­überwachung und Klär­anlagen.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-xl p-7 transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5">
+                        <div class="w-12 h-12 rounded-[12px] bg-accent-dim flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary">
+                                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                                <path d="M2 21c0-3 1.85-5.36 5.08-6" />
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2 tracking-tight">Smart Agriculture</h3>
+                        <p class="text-muted-foreground text-[14px] leading-relaxed">Boden­feuchte, Wetter­daten, Bewässerung und Silo-Überwachung für moderne Land­wirtschaft.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-xl p-7 transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5">
+                        <div class="w-12 h-12 rounded-[12px] bg-accent-dim flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary">
+                                <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2 tracking-tight">Energieversorger</h3>
+                        <p class="text-muted-foreground text-[14px] leading-relaxed">MID-zertifizierte Strom­zähler, Sub-Metering und Brennstoff­tank-Überwachung.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-xl p-7 transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5">
+                        <div class="w-12 h-12 rounded-[12px] bg-accent-dim flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary">
+                                <path d="M5 18H3a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h11a1 1 0 0 1 1 1v11" />
+                                <path d="M14 9h4l4 4v5a1 1 0 0 1-1 1h-2" />
+                                <circle cx="7" cy="18" r="2" />
+                                <circle cx="17" cy="18" r="2" />
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2 tracking-tight">Logistik &amp; Tracking</h3>
+                        <p class="text-muted-foreground text-[14px] leading-relaxed">Asset-Tracking, Container-Überwachung, Temperatur­ketten und Präsenz­detektion in Echtzeit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="oem" class="section-padding bg-surface/40">
+            <div class="container-main">
+                <div class="max-w-3xl mx-auto text-center mb-14">
+                    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">OEM &amp; Entwicklung</div>
+                    <h2 class="font-heading font-bold text-[clamp(32px,4.5vw,48px)] tracking-tight leading-[1.1] mb-4">
+                        Ihr Sensor. <span class="gradient-text">Unsere Plattform.</span>
+                    </h2>
+                    <p class="text-muted-foreground text-lg">
+                        Sie haben eine Idee oder ein bestehendes Produkt, das drahtlos werden soll?
+                        Wir entwickeln und produzieren maßgeschneiderte LPWAN-Sensoren – von der Spezifikation bis zur Serie.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
+                    <div class="bg-surface/50 border border-border rounded-xl p-6">
+                        <div class="w-11 h-11 rounded-[10px] bg-primary/10 flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                            </svg></div>
+                        <h4 class="font-heading font-semibold text-[16px] mb-2">White-Label</h4>
+                        <p class="text-muted-foreground text-[14px] leading-relaxed">IoT-Geräte unter eigener Marke schnell und kosten­effizient zur Markt­reife bringen.</p>
+                    </div>
+                    <div class="bg-surface/50 border border-border rounded-xl p-6">
+                        <div class="w-11 h-11 rounded-[10px] bg-primary/10 flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary">
+                                <rect x="4" y="4" width="16" height="16" rx="2" />
+                                <rect x="9" y="9" width="6" height="6" />
+                                <path d="M9 1v3" />
+                                <path d="M15 1v3" />
+                                <path d="M9 20v3" />
+                                <path d="M15 20v3" />
+                                <path d="M20 9h3" />
+                                <path d="M20 15h3" />
+                                <path d="M1 9h3" />
+                                <path d="M1 15h3" />
+                            </svg></div>
+                        <h4 class="font-heading font-semibold text-[16px] mb-2">PCB-Design &amp; Fertigung</h4>
+                        <p class="text-muted-foreground text-[14px] leading-relaxed">Maßgeschneiderte Hardware-Designs nach individuellen Anforderungen – Entwicklung in Bayern.</p>
+                    </div>
+                    <div class="bg-surface/50 border border-border rounded-xl p-6">
+                        <div class="w-11 h-11 rounded-[10px] bg-primary/10 flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary">
+                                <polyline points="16 18 22 12 16 6" />
+                                <polyline points="8 6 2 12 8 18" />
+                            </svg></div>
+                        <h4 class="font-heading font-semibold text-[16px] mb-2">Custom Firmware</h4>
+                        <p class="text-muted-foreground text-[14px] leading-relaxed">Angepasste Firmware für maximale Leistung, Sicherheit und Lebensdauer Ihrer Hardware.</p>
+                    </div>
+                    <div class="bg-surface/50 border border-border rounded-xl p-6">
+                        <div class="w-11 h-11 rounded-[10px] bg-primary/10 flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary">
+                                <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" />
+                                <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+                                <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+                            </svg></div>
+                        <h4 class="font-heading font-semibold text-[16px] mb-2">Gehäusedesign</h4>
+                        <p class="text-muted-foreground text-[14px] leading-relaxed">Robuste, ästhetische Gehäuse für jeden Einsatz­fall – von Indoor bis IP69k.</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="https://sentinum.de/kontakt" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg font-heading font-semibold text-[15px] bg-primary text-primary-foreground hover:opacity-90 hover:-translate-y-0.5 transition-all">Entwicklungsanfrage starten <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                            <path d="M5 12h14" />
+                            <path d="m12 5 7 7-7 7" />
+                        </svg></a>
+                </div>
+            </div>
+        </section>
+      
+       <section class="section-padding bg-surface/40">
+  <div class="container-main">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+      <div class="max-w-2xl">
+        <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">
+          Aus dem Sentinum Blog
+        </div>
+        <h2 class="font-heading font-bold text-[clamp(32px,4vw,44px)] tracking-tight leading-[1.1]">
+          Aktuelles aus der <span class="gradient-text">IoT-Welt</span>
+        </h2>
+        <p class="text-muted-foreground text-[15px] leading-relaxed mt-4 max-w-xl">
+          Live-Vorschau direkt aus unserem Sentinum-Blog — neue Beiträge erscheinen hier automatisch beim nächsten Build.
+        </p>
+      </div>
+
+      <div class="flex gap-4 flex-wrap mb-12">
+        <a href="https://blog.sentinum.de/blog" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-3 px-8 py-[18px] rounded-xl font-heading font-bold text-[15px] tracking-tight bg-primary text-primary-foreground hover:opacity-90 hover:-translate-y-0.5 transition-all shadow-[0_10px_28px_-10px_hsl(var(--primary)/0.55)]">
+          Alle Beiträge auf Sentinum
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    {% set posts = blog_recent_posts("default", 3) %}
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:auto-rows-fr">
+      {% for post in posts %}
+        <a href="{{ post.absolute_url }}" target="_blank" rel="noopener"
+           class="group h-full bg-surface border border-border rounded-2xl overflow-hidden flex flex-col hover:border-primary/40 transition-all duration-300">
+
+          <!-- IMAGE -->
+          <div class="w-full aspect-[4/3] overflow-hidden bg-black">
+            <img
+              src="{{ post.featured_image }}"
+              alt="{{ post.name }}"
+              loading="lazy"
+              class="w-full h-full object-cover object-center"
+            />
+          </div>
+
+          <!-- CONTENT -->
+          <div class="p-6 flex flex-col flex-1">
+
+            <!-- META -->
+            <div class="flex items-center gap-3 mb-3">
+              <div class="text-primary text-[11px] font-heading font-semibold uppercase tracking-[2px]">
+                Blog
+              </div>
+
+              <span class="text-muted-foreground text-[11px] font-medium">
+                {{ post.publish_date|datetimeformat("%d. %b %Y") }}
+              </span>
+            </div>
+
+            <!-- TITLE -->
+            <h3 class="font-heading font-semibold text-lg mb-2 tracking-tight leading-snug min-h-[3.5rem]">
+              {{ post.name }}
+            </h3>
+
+            <!-- TEXT -->
+            <p class="text-muted-foreground text-[14px] leading-relaxed flex-1 min-h-[6rem]">
+              {{ post.post_summary }}
+            </p>
+
+            <!-- LINK -->
+            <div class="mt-4 inline-flex items-center gap-2 text-primary font-heading font-semibold text-[13px] group-hover:gap-3 transition-all">
+              Zum Artikel
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" class="w-4 h-4">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </div>
+
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section-padding">
+  <div class="container-main max-w-5xl mx-auto border border-primary p-8 rounded-lg">
+    <h2 class="font-heading font-bold text-2xl mb-8">
+      Kontaktieren Sie uns
+    </h2>
+
+    <div id="hubspot-form"></div>
+  </div>
+</section>
+      
+      
+      
+
+<!-- HubSpot Script -->
+<script>
+let formLoaded = false;
+
+function loadForm() {
+  if (formLoaded) return;
+  
+  const script = document.createElement("script");
+  script.src = "https://js-eu1.hsforms.net/forms/embed/v2.js";
+  script.defer = true;
+  script.onload = function () {
+    hbspt.forms.create({
+      region: "eu1",
+      portalId: "25427114",
+      formId: "5de3401e-9df7-4ec1-a52e-6050f31feb48",
+      target: "#hubspot-form"
+    });
+  };
+
+  document.body.appendChild(script);
+  formLoaded = true;
+}
+
+
+window.addEventListener("load", () => {
+  setTimeout(loadForm, 3000);
+});
+
+</script>
+      
+        <section class="section-padding-lg text-center relative overflow-hidden">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-primary opacity-[0.08] blur-[80px]"></div>
+            <div class="container-main relative z-10">
+                <div class="max-w-3xl mx-auto">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/25 text-primary text-[13px] font-medium mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg> Sprechen Sie mit uns</div>
+                    <h2 class="font-heading font-bold text-[clamp(36px,5vw,60px)] tracking-tighter leading-[1.05] mb-6">
+                        Bereit für Ihr <span class="gradient-text">IoT-Projekt</span>?
+                    </h2>
+                    <p class="text-muted-foreground text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+                        Egal ob Standardprodukt aus dem Shop, individuelle OEM-Entwicklung oder Komplett­lösung
+                        mit Webapp – wir beraten Sie unverbindlich und finden gemeinsam die beste Lösung.
+                    </p>
+                    <div class="flex gap-3 flex-wrap justify-center">
+                        <a href="https://sentinum.de/kontakt" target="_blank" rel="noopener" 
+                           class="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-heading font-semibold text-[15px] bg-primary text-primary-foreground hover:opacity-90 hover:-translate-y-0.5 transition-all">Beratung anfragen 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                <path d="M5 12h14" />
+                                <path d="m12 5 7 7-7 7" />
+                            </svg>
+                      </a>
+                        <a href="https://shop.sentinum.de" target="_blank" rel="noopener" 
+                           class="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-heading font-semibold text-[15px] border border-border text-foreground hover:border-primary/40 hover:bg-surface transition-all">Zum Shop</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+  {% module "page_footer" path="/Homepage V2/Sentinum_Footer.module", label="Footer" %}
+   {{ standard_footer_includes }}
+ 
+   <script>
+window.addEventListener("load", () => {
+  const scripts = document.querySelectorAll('script[src*="scriptloader"]');
+  scripts.forEach(s => s.setAttribute("defer", "true"));
+});
+</script>
+</body>
+
+</html>
+   
+
+   

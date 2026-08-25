@@ -1,0 +1,118 @@
+<!--
+  templateType: "page"
+  isAvailableForNewContent: true
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Imprint | Sentinum</title>
+<meta name="description" content="Imprint of Sentinum GmbH – address, managing directors, register entry, sales tax ID and legal information.">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://sentinum.de/en/impressum">
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap");
+:root{
+  --background:216 24% 8%;
+  --foreground:210 20% 90%;
+  --surface:214 20% 11%;
+  --muted-foreground:213 20% 55%;
+  --primary:17 89% 48%;
+  --primary-light:20 89% 53%;
+  --border:213 20% 18%;
+  --font-heading:"Space Grotesk",sans-serif;
+  --font-body:"DM Sans",sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:hsl(var(--background));color:hsl(var(--foreground));font-family:var(--font-body);line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:hsl(var(--primary-light));text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:880px;margin:0 auto;padding:0 24px}
+.hero{position:relative;padding:120px 0 60px;border-bottom:1px solid hsl(var(--border));overflow:hidden}
+.hero::before{content:"";position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:400px;background:radial-gradient(ellipse,hsl(var(--primary)/0.18),transparent 60%);filter:blur(60px);z-index:0}
+.hero-inner{position:relative;z-index:1}
+.eyebrow{display:inline-block;font-family:var(--font-heading);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:hsl(var(--primary));margin-bottom:20px}
+h1{font-family:var(--font-heading);font-size:clamp(36px,5vw,56px);font-weight:700;line-height:1.1;margin:0 0 16px;background:linear-gradient(135deg,hsl(var(--primary)),hsl(var(--primary-light)));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.lead{font-size:17px;color:hsl(var(--muted-foreground));max-width:640px}
+.content{padding:60px 0 120px}
+.content h2{font-family:var(--font-heading);font-size:clamp(22px,2.5vw,28px);font-weight:600;margin:48px 0 16px;color:hsl(var(--foreground))}
+.content h3{font-family:var(--font-heading);font-size:18px;font-weight:600;margin:32px 0 8px;color:hsl(var(--foreground))}
+.content p{margin:0 0 16px;color:hsl(var(--foreground)/0.85)}
+.content strong{color:hsl(var(--foreground));font-weight:600}
+.card{background:hsl(var(--surface)/0.5);border:1px solid hsl(var(--border));border-radius:14px;padding:32px;margin:24px 0}
+.card p{margin:0 0 8px}
+.card p:last-child{margin-bottom:0}
+.lang-switch{position:absolute;top:24px;right:24px;font-family:var(--font-heading);font-size:13px;letter-spacing:1px;text-transform:uppercase;color:hsl(var(--muted-foreground));z-index:2}
+.lang-switch a{color:hsl(var(--muted-foreground));padding:6px 12px;border:1px solid hsl(var(--border));border-radius:999px;margin-left:8px;transition:all .2s}
+.lang-switch a:hover{color:hsl(var(--primary));border-color:hsl(var(--primary)/0.4);text-decoration:none}
+.lang-switch a.active{color:hsl(var(--primary));border-color:hsl(var(--primary)/0.4);background:hsl(var(--primary)/0.08)}
+</style>
+   {{ standard_header_includes }}
+</head>
+<body>
+{% module "main_nav"
+  path="/Homepage V2/Sentinum New Header Nav.module",
+  label="Main Navigation"
+%}
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">Legal</span>
+    <h1>Imprint</h1>
+    <p class="lead">Information pursuant to § 5 TMG and legal notices regarding the use of this website.</p>
+  </div>
+</section>
+
+<section class="content">
+  <div class="container">
+    <div class="card">
+      <p><strong>Sentinum GmbH</strong></p>
+      <p>Heinrich-Stranka-Str. 3-5</p>
+      <p>90765 Fürth</p>
+      <p>&nbsp;</p>
+      <p>Phone: +49 911 99868818</p>
+      <p>E-mail: <a href="mailto:info@sentinum.de">info@sentinum.de</a></p>
+    </div>
+
+    <h3>Managing directors:</h3>
+    <p>Manuel Hart, Simon Schrampfer, Johannes Ollech, Dr. Alexander Kahlig</p>
+
+    <h3>Register entry:</h3>
+    <p>Entered in the commercial register.</p>
+    <p>Register court: Local court Fürth</p>
+    <p>Register number: HRB 20594</p>
+    <p>HRB 20594</p>
+
+    <h3>Sales tax ID:</h3>
+    <p>Sales tax identification number according to §27a sales tax law:</p>
+    <p>DE321037616</p>
+
+    <h2>Disclaimer - legal information</h2>
+
+    <h3>§ 1 Content warning</h3>
+    <p>The free and freely accessible content of this website has been created with the greatest possible care. However, the provider of this website assumes no liability for the accuracy and timeliness of the free and freely accessible journalistic guides and news provided. Contributions identified by name reflect the opinion of the respective author and not always the opinion of the provider. No contractual relationship is established between the user and the provider simply by accessing the free and freely accessible content; in this respect, the provider's intention to be legally bound is lacking.</p>
+
+    <h3>§ 2 External links</h3>
+    <p>This website contains links to third-party websites ("external links"). These websites are subject to the liability of the respective operators. When the external links were first created, the provider checked the third-party content for any legal violations. No legal violations were apparent at that time. The provider has no influence whatsoever on the current and future design and content of the linked pages. The inclusion of external links does not mean that the provider adopts the content behind the reference or link as its own. It is not reasonable for the provider to constantly monitor external links without concrete evidence of legal violations. However, such external links will be deleted immediately if we become aware of any legal infringements.</p>
+
+    <h3>§ 3 Copyright and ancillary copyrights</h3>
+    <p>The content published on this website is subject to German copyright and ancillary copyright law. Any use not permitted by German copyright and ancillary copyright law requires the prior written consent of the provider or respective rights holder. This applies in particular to the duplication, editing, translation, storage, processing or reproduction of content in databases or other electronic media and systems. Third-party content and rights are identified as such. The unauthorized reproduction or distribution of individual contents or complete pages is not permitted and is punishable by law. Only the production of copies and downloads for personal, private and non-commercial use is permitted.</p>
+    <p>The presentation of this website in external frames is only permitted with written permission.</p>
+
+    <h3>§ 4 Special terms of use</h3>
+    <p>Insofar as special conditions for individual uses of this website deviate from the aforementioned paragraphs, this will be expressly indicated at the appropriate point. In this case, the special terms of use apply in each individual case.</p>
+
+    <p>Icons were used by <a href="https://icons8.com" rel="noopener">icons8.com</a>.</p>
+  </div>
+</section>
+  {% module "page_footer" path="/Homepage V2/Sentinum_Footer_en.module", label="Footer" %}
+   {{ standard_footer_includes }}
+</body>
+</html>
+
+   
+
+   

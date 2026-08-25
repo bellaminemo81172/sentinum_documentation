@@ -1,0 +1,1602 @@
+<!--
+  templateType: "page"
+  isAvailableForNewContent: true
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IODA – Cloud IODD Decoding Service for IO-Link via LoRaWAN® | Sentinum</title>
+    <meta name="description" content="IODA ist der cloudbasierte IODD-Decoding-Service von Sentinum: Aus rohen IO-Link-Bytefeldern werden über IODDs strukturierte, nutzbare Sensorwerte – Plug & Play, ohne Eingriff am Gerät." />
+    <meta name="keywords" content="IODA, IO-Link, IODD, IODD Decoding, LoRaWAN, LPWAN, Industrial IoT, AION, Sentinum, Payload Decoder, Industrie 4.0" />
+    <meta property="og:title" content="IODA – Cloud IODD Decoding Service für IO-Link über LoRaWAN®" />
+    <meta property="og:description" content="Aus Hex-Bytes werden Informationen: IODA dekodiert IO-Link-Payloads mit IODDs in der Cloud – herstellerunabhängig, skalierbar und ohne lokale Logik." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="de_DE" />
+    <link rel="canonical" href="https://sentinum.de/ioda" />
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [{
+                    "@type": "SoftwareApplication",
+                    "name": "IODA",
+                    "applicationCategory": "Cloud Decoding Service",
+                    "operatingSystem": "Cloud",
+                    "description": "Cloudbasierter IODD-Decoding-Service fuer IO-Link Sensoren ueber LoRaWAN. Dekodiert Roh-Payloads anhand der jeweiligen IODD und liefert strukturierte Sensorwerte.",
+                    "brand": {
+                        "@type": "Brand",
+                        "name": "Sentinum"
+                    }
+                },
+                {
+                    "@type": "FAQPage",
+                    "mainEntity": [{
+                            "@type": "Question",
+                            "name": "Was ist IODA?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "IODA ist ein Cloud-Decoding-Service von Sentinum, der Roh-Payloads von IO-Link Sensoren ueber LPWAN-Geraete wie AION mithilfe von IODDs in strukturierte Sensorwerte uebersetzt."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Welche Hardware wird unterstuetzt?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Sentinum AION sowie kompatible LoRaWAN IO-Link Master von Drittanbietern, die Prozessdaten standardisiert per LPWAN uebertragen."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Wie wird IODA integriert?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Ueber eine offene REST-API koennen Payloads aus beliebigen LoRaWAN Network Servern an IODA uebergeben werden. Dekodierte Werte werden via REST, MQTT oder direkter IoT-Plattform-Integration ausgeliefert."
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
+
+        :root {
+            --background: hsl(216 24% 8%);
+            --surface: hsl(214 20% 11%);
+            --surface-2: hsl(213 18% 14%);
+            --foreground: hsl(210 20% 90%);
+            --muted: hsl(213 20% 55%);
+            --border: hsl(213 20% 18%);
+            --primary: hsl(17 89% 48%);
+            --primary-light: hsl(20 89% 53%);
+            --primary-25: hsl(17 89% 48% / .25);
+            --primary-15: hsl(17 89% 48% / .15);
+            --primary-10: hsl(17 89% 48% / .10);
+            --radius: .75rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            background: var(--background);
+            color: var(--foreground);
+            font-family: 'DM Sans', system-ui, sans-serif;
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            line-height: 1.2;
+            font-weight: 700
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        img,
+        svg {
+            display: block;
+            max-width: 100%;
+            height: auto
+        }
+
+        ul {
+            list-style: none
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px
+        }
+
+        .section {
+            padding: 100px 0
+        }
+
+        .section-alt {
+            background: hsl(214 20% 11% / .5)
+        }
+
+        .section-soft {
+            background: hsl(214 20% 11% / .35);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border)
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary-25), transparent)
+        }
+
+        .eyebrow {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--primary);
+            margin-bottom: 12px
+        }
+
+        .h2 {
+            font-size: clamp(28px, 4vw, 42px);
+            margin-bottom: 16px
+        }
+
+        .lead {
+            color: var(--muted);
+            font-size: 1.125rem;
+            max-width: 680px
+        }
+
+        .center {
+            text-align: center;
+            margin: 0 auto
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: var(--primary-10);
+            border: 1px solid var(--primary-25);
+            color: var(--primary);
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 14px
+        }
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 120px 0 100px
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 15%;
+            right: 15%;
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            background: var(--primary);
+            opacity: .06;
+            filter: blur(120px)
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 64px;
+            align-items: center;
+            position: relative;
+            z-index: 1
+        }
+
+        @media(min-width:1024px) {
+            .hero-grid {
+                grid-template-columns: 1.1fr 1fr
+            }
+        }
+
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 24px
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 500;
+            background: var(--primary-15);
+            border: 1px solid var(--primary-25);
+            color: var(--primary)
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 5vw, 60px);
+            margin-bottom: 24px
+        }
+
+        .hero p.lead {
+            margin-bottom: 32px
+        }
+
+        .cta-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 30px;
+            border-radius: var(--radius);
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all .2s ease;
+            cursor: pointer;
+            border: 1px solid transparent
+        }
+
+        .btn-sm {
+            padding: 10px 20px;
+            font-size: 14px
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #fff
+        }
+
+        .btn-primary:hover {
+            opacity: .9;
+            transform: translateY(-2px)
+        }
+
+        .btn-ghost {
+            border-color: var(--border);
+            color: var(--foreground)
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--primary-25);
+            background: var(--surface)
+        }
+
+        .link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--primary);
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 15px
+        }
+
+        .link:hover {
+            text-decoration: underline
+        }
+
+        /* Mock decode diagram */
+        .mock {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 22px;
+            box-shadow: 0 30px 60px -20px hsl(17 89% 48% / .25)
+        }
+
+        .mock-bar {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 18px
+        }
+
+        .mock-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--surface-2)
+        }
+
+        .flow {
+            display: grid;
+            gap: 14px
+        }
+
+        .flow-row {
+            display: grid;
+            grid-template-columns: 1fr 28px 1fr;
+            gap: 10px;
+            align-items: center
+        }
+
+        .flow-cell {
+            background: var(--background);
+            border: 1px solid var(--border);
+            border-radius: .6rem;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-height: 60px
+        }
+
+        .flow-cell .ic {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: var(--primary-15);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0
+        }
+
+        .flow-cell .lbl {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--muted)
+        }
+
+        .flow-cell .val {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 13px;
+            color: var(--foreground);
+            margin-top: 1px
+        }
+
+        .flow-arrow {
+            color: var(--primary);
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700
+        }
+
+        .flow-center {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: #fff;
+            border: none;
+            text-align: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 2px
+        }
+
+        .flow-center .lbl {
+            color: #fff;
+            opacity: .85
+        }
+
+        .flow-center .val {
+            color: #fff;
+            font-size: 15px
+        }
+
+        /* Hex → Value comparison */
+        .hexcompare {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 1fr 28px 1fr;
+            align-items: center;
+            margin-top: 18px
+        }
+
+        .hex-box {
+            background: var(--background);
+            border: 1px solid var(--border);
+            border-radius: .6rem;
+            padding: 14px;
+            text-align: center
+        }
+
+        .hex-box .lbl {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--muted);
+            margin-bottom: 6px
+        }
+
+        .hex-box .raw {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            color: var(--muted);
+            letter-spacing: 2px
+        }
+
+        .hex-box.out {
+            border-color: var(--primary-25);
+            background: var(--primary-10)
+        }
+
+        .hex-box.out .raw {
+            color: var(--primary)
+        }
+
+        .grid {
+            display: grid;
+            gap: 24px;
+            grid-template-columns: 1fr
+        }
+
+        @media(min-width:640px) {
+            .grid-2 {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media(min-width:768px) {
+            .grid-3-md {
+                grid-template-columns: repeat(3, 1fr)
+            }
+        }
+
+        @media(min-width:1024px) {
+            .grid-3 {
+                grid-template-columns: repeat(3, 1fr)
+            }
+
+            .grid-4 {
+                grid-template-columns: repeat(4, 1fr)
+            }
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px;
+            transition: all .3s ease
+        }
+
+        .card:hover {
+            border-color: var(--primary-25);
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px -10px hsl(17 89% 48% / .25)
+        }
+
+        .card .icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            background: var(--primary-15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            margin-bottom: 18px
+        }
+
+        .card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 15px
+        }
+
+        /* Problem cards (red-tinted accent) */
+        .problem {
+            display: grid;
+            gap: 24px;
+            grid-template-columns: 1fr
+        }
+
+        @media(min-width:768px) {
+            .problem {
+                grid-template-columns: repeat(3, 1fr)
+            }
+        }
+
+        .problem-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px
+        }
+
+        .problem-card .pi {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: hsl(0 70% 50% / .12);
+            color: hsl(0 75% 60%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 14px
+        }
+
+        .problem-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 17px;
+            margin-bottom: 8px
+        }
+
+        .problem-card p {
+            color: var(--muted);
+            font-size: 14.5px
+        }
+
+        /* How it works steps */
+        .steps {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr;
+            counter-reset: step
+        }
+
+        @media(min-width:768px) {
+            .steps {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media(min-width:1024px) {
+            .steps {
+                grid-template-columns: repeat(4, 1fr)
+            }
+        }
+
+        .step {
+            position: relative;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            transition: all .3s ease
+        }
+
+        .step:hover {
+            border-color: var(--primary-25);
+            transform: translateY(-2px)
+        }
+
+        .step::before {
+            counter-increment: step;
+            content: "0" counter(step);
+            position: absolute;
+            top: 14px;
+            right: 18px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--primary);
+            opacity: .18;
+            line-height: 1
+        }
+
+        .step .icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: var(--primary-15);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 14px
+        }
+
+        .step h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 8px
+        }
+
+        .step p {
+            color: var(--muted);
+            font-size: 14.5px
+        }
+
+        /* Use case (alternating image+text) */
+        .uc {
+            display: grid;
+            gap: 48px;
+            align-items: center;
+            grid-template-columns: 1fr
+        }
+
+        @media(min-width:1024px) {
+            .uc {
+                grid-template-columns: 1fr 1fr;
+                gap: 64px
+            }
+
+            .uc.reverse .uc-visual {
+                order: 1
+            }
+
+            .uc.reverse .uc-text {
+                order: 2
+            }
+        }
+
+        .uc-text h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(28px, 4vw, 40px);
+            margin-bottom: 18px
+        }
+
+        .uc-text h2 span {
+            color: var(--primary)
+        }
+
+        .uc-text p.lead {
+            margin-bottom: 22px;
+            text-align: left
+        }
+
+        .uc-list {
+            display: grid;
+            gap: 12px;
+            margin-bottom: 28px
+        }
+
+        .uc-list li {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            color: var(--muted);
+            font-size: 15px
+        }
+
+        .uc-list li svg {
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+            color: var(--primary);
+            margin-top: 2px
+        }
+
+        .uc-list li strong {
+            color: var(--foreground);
+            font-weight: 600
+        }
+
+        .uc-visual {
+            position: relative;
+            aspect-ratio: 3/2;
+            border-radius: 1rem;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 100%);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .4)
+        }
+
+        .uc-visual::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 30%, hsl(17 89% 48% / .22), transparent 60%)
+        }
+
+        .uc-visual svg {
+            position: relative;
+            z-index: 1;
+            width: 80%;
+            color: var(--primary);
+            filter: drop-shadow(0 0 30px hsl(17 89% 48% / .4))
+        }
+
+        /* Connectivity tiles */
+        .conn {
+            display: grid;
+            gap: 16px;
+            grid-template-columns: 1fr;
+            max-width: 900px;
+            margin: 0 auto
+        }
+
+        @media(min-width:768px) {
+            .conn {
+                grid-template-columns: repeat(3, 1fr)
+            }
+        }
+
+        .conn-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            text-align: center;
+            transition: all .3s ease
+        }
+
+        .conn-card:hover {
+            border-color: var(--primary-25)
+        }
+
+        .conn-card .ci {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 12px;
+            border-radius: 12px;
+            background: var(--primary-10);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .conn-card .cn {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            margin-bottom: 6px
+        }
+
+        .conn-card p {
+            color: var(--muted);
+            font-size: 13.5px
+        }
+
+        /* Story / Quote box */
+        .story {
+            display: grid;
+            gap: 32px;
+            grid-template-columns: 1fr;
+            align-items: start
+        }
+
+        @media(min-width:1024px) {
+            .story {
+                grid-template-columns: 1.1fr .9fr;
+                gap: 56px
+            }
+        }
+
+        .story-text p {
+            color: var(--muted);
+            font-size: 16px;
+            margin-bottom: 14px
+        }
+
+        .story-text p strong {
+            color: var(--foreground);
+            font-weight: 600
+        }
+
+        .quote {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--primary);
+            border-radius: var(--radius);
+            padding: 28px
+        }
+
+        .quote h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary);
+            margin-bottom: 14px
+        }
+
+        .quote ul {
+            display: grid;
+            gap: 12px
+        }
+
+        .quote ul li {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            color: var(--muted);
+            font-size: 15px
+        }
+
+        .quote ul li svg {
+            flex-shrink: 0;
+            width: 18px;
+            height: 18px;
+            color: var(--primary);
+            margin-top: 3px
+        }
+
+        .quote ul li strong {
+            color: var(--foreground);
+            font-weight: 600
+        }
+
+        /* Industries / Generic tiles */
+        .ind {
+            display: grid;
+            gap: 16px;
+            grid-template-columns: 1fr
+        }
+
+        @media(min-width:640px) {
+            .ind {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media(min-width:1024px) {
+            .ind {
+                grid-template-columns: repeat(3, 1fr)
+            }
+        }
+
+        .ind-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            text-align: center;
+            transition: all .3s ease
+        }
+
+        .ind-card:hover {
+            border-color: var(--primary-25);
+            transform: translateY(-2px)
+        }
+
+        .ind-card .ii {
+            width: 52px;
+            height: 52px;
+            margin: 0 auto 14px;
+            border-radius: 14px;
+            background: var(--primary-15);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .ind-card .it {
+            color: var(--primary);
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px
+        }
+
+        .ind-card p {
+            color: var(--muted);
+            font-size: 14px
+        }
+
+        /* FAQ */
+        .faq {
+            max-width: 820px;
+            margin: 0 auto;
+            display: grid;
+            gap: 12px
+        }
+
+        details.faq-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            transition: border-color .2s
+        }
+
+    
+
+        details.faq-item summary {
+            cursor: pointer;
+            list-style: none;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px
+        }
+
+           details.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+details.faq-item summary::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%239aa4b2' stroke-width='2' viewBox='0 0 24 24'><path d='M6 9l6 6 6-6'/></svg>");
+
+    transition: transform 0.25s ease;
+}
+
+details.faq-item[open] summary::after {
+    transform: rotate(180deg);
+}
+
+        details.faq-item p {
+            margin-top: 12px;
+            color: var(--muted);
+            font-size: 15px
+        }
+
+        /* CTA */
+        .cta {
+            text-align: center
+        }
+
+        .cta h2 {
+            font-size: clamp(28px, 4vw, 42px);
+            margin-bottom: 16px
+        }
+
+        .cta p {
+            color: var(--muted);
+            font-size: 1.125rem;
+            max-width: 640px;
+            margin: 0 auto 32px
+        }
+
+        /* Stat strip */
+        .stats {
+            display: grid;
+            gap: 16px;
+            grid-template-columns: 1fr;
+            max-width: 1000px;
+            margin: 0 auto
+        }
+
+        @media(min-width:640px) {
+            .stats {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media(min-width:1024px) {
+            .stats {
+                grid-template-columns: repeat(4, 1fr)
+            }
+        }
+
+        .stat {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            text-align: center;
+            transition: all .3s ease
+        }
+
+        .stat:hover {
+            border-color: var(--primary-25)
+        }
+
+        .stat .ico {
+            font-size: 28px;
+            margin-bottom: 8px
+        }
+
+        .stat .st {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            color: var(--foreground);
+            font-size: 15px;
+            margin-bottom: 4px
+        }
+
+        .stat p {
+            color: var(--muted);
+            font-size: 13.5px
+        }
+
+        /* helpers */
+        .max-720 {
+            max-width: 720px
+        }
+
+        .max-820 {
+            max-width: 820px
+        }
+
+        .mb-56 {
+            margin-bottom: 56px
+        }
+
+        .mb-48 {
+            margin-bottom: 48px
+        }
+
+        .mt-40 {
+            margin-top: 40px
+        }
+
+        .ta-c {
+            text-align: center
+        }
+    </style>
+   {{ standard_header_includes }}
+</head>
+
+<body>
+  {% module "main_nav"
+  path="/Homepage V2/Sentinum New Header Nav.module",
+  label="Main Navigation"
+%}
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="top">
+        <div class="container hero-grid">
+            <div>
+                <div class="badges">
+                    <span class="badge"> Sentinum Cloud Service</span>
+                    <span class="badge" style="background:hsl(17 89% 48% / .15);border-color:hsl(17 89% 48% / .4);color:var(--primary)">Wireless IO-Link IODD Parsing</span>
+                    <span class="badge">Replacement for IO-Link Wireless</span>
+                    <span class="badge">IO-Link via LoRaWAN®</span>
+                </div>
+                <h1><span class="gradient-text">IODA</span> – Wireless IO-Link IODD parsing made easy.</h1>
+                <p class="lead">IODA is Sentinum’s <strong style="color:var(--foreground)">cloud-based IODD decoding service</strong> and thus the practical <strong style="color:var(--foreground)">alternative to IO-Link Wireless</strong>. It translates raw IO-Link process data—for example, from devices such as the <strong style="color:var(--foreground)">Sentinum AION</strong> —into structured, understandable sensor values using the corresponding IODDs. Fully plug-and-play, without local logic in the device and without manual integration.</p>
+                <div class="cta-row">
+                    <a href="https://sentinum.de/en/kontakt" class="btn btn-primary">Request API access →</a>
+                    <a href="#wie-funktioniert" class="btn btn-ghost">How it works ↓</a>
+                </div>
+            </div>
+            <div class="mock">
+                <div class="mock-bar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
+                <div class="flow">
+                    <div class="flow-row">
+                        <div class="flow-cell">
+                            <div class="ic"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="3" width="18" height="14" rx="2"></rect>
+                                    <path d="M8 21h8M12 17v4"></path>
+                                </svg></div>
+                            <div>
+                                <div class="lbl">Edge</div>
+                                <div class="val">IO-Link sensor + AION</div>
+                            </div>
+                        </div>
+                        <div class="flow-arrow">›</div>
+                        <div class="flow-cell">
+                            <div class="ic"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                    <path d="M5 12.55a11 11 0 0114 0M8.5 16a6 6 0 017 0M12 20h.01M2 8.82a15 15 0 0120 0"></path>
+                                </svg></div>
+                            <div>
+                                <div class="lbl">Uplink</div>
+                                <div class="val">LoRaWAN® Raw Payload</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-row">
+                        <div class="flow-cell">
+                            <div class="ic"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                                    <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+                                    <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+                                    <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+                                </svg></div>
+                            <div>
+                                <div class="lbl">LNS / Network Server</div>
+                                <div class="val">Any LNS</div>
+                            </div>
+                        </div>
+                        <div class="flow-arrow">›</div>
+                        <div class="flow-cell flow-center">
+                            <div class="lbl">IODA Cloud</div>
+                            <div class="val">IODD Lookup + Decode</div>
+                        </div>
+                    </div>
+                    <div class="flow-row">
+                        <div class="flow-cell">
+                            <div class="ic"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 12h4l3-9 4 18 3-9h4"></path>
+                                </svg></div>
+                            <div>
+                                <div class="lbl">Output</div>
+                                <div class="val">Values + Units + Status</div>
+                            </div>
+                        </div>
+                        <div class="flow-arrow">›</div>
+                        <div class="flow-cell">
+                            <div class="ic"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 6h16M4 12h16M4 18h16"></path>
+                                </svg></div>
+                            <div>
+                                <div class="lbl">Delivery</div>
+                                <div class="val">REST · MQTT · Webhook</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hexcompare">
+                    <div class="hex-box">
+                        <div class="lbl">Raw Payload</div>
+                        <div class="raw">0x01 9C</div>
+                    </div>
+                    <div class="flow-arrow">›</div>
+                    <div class="hex-box out">
+                        <div class="lbl">Decoded</div>
+                        <div class="raw">41.2 °C</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ===== WAS IST IODA ===== -->
+    <section class="section section-alt" id="was-ist">
+        <div class="container">
+            <div class="ta-c max-720 center mb-56">
+                <p class="eyebrow">What is IODA</p>
+                <h2 class="h2">IODD decoding – <span class="gradient-text">fully in the cloud</span></h2>
+                <p class="lead center">IO-Link sensors deliver compact, encoded process data via LoRaWAN®. IODA handles the complete interpretation—automatically, standardized, and without any intervention in the devices.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="icon"><svg width="26" height="26" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16v16H4z"></path>
+                            <path d="M4 9h16M9 4v16"></path>
+                        </svg></div>
+                    <h3>IODD-based decoding</h3>
+                    <p>Raw byte streams are interpreted based on the respective IODD (IO Device Description) – exactly according to the sensor manufacturer’s specifications.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><svg width="26" height="26" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                        </svg></div>
+                    <h3>Plug &amp; Play</h3>
+                    <p>No custom decoder logic, no firmware adjustments to the device. Store the IODD, connect the sensor—and you have decoded data.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><svg width="26" height="26" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            <path d="M12 7v5l3 2"></path>
+                        </svg></div>
+                    <h3>Structured sensor values</h3>
+                    <p>0x01 9C becomes 41.2 °C: values with units, labels, and status—immediately usable in dashboards, alarms, and APIs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROBLEM SECTION ===== -->
+    <section class="section" id="problem">
+        <div class="container">
+            <div class="ta-c max-720 center mb-56">
+                <p class="eyebrow">The real problem</p>
+                <h2 class="h2">Wireless Industrial IoT – <span class="gradient-text">Data Without Context</span></h2>
+                <p class="lead center">LPWAN makes IO-Link wireless and energy-efficient. But what arrives in the cloud are bytes—not information.</p>
+            </div>
+            <div class="problem">
+                <div class="problem-card">
+                    <div class="pi"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 9v4M12 17h.01"></path>
+                            <circle cx="12" cy="12" r="10"></circle>
+                        </svg></div>
+                    <h3>Limited data transfer</h3>
+                    <p>LPWAN offers only a few bytes per message. Sensors transmit only cyclical process data—heavily compressed, without self-description.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="pi"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 3h18v4H3zM3 10h18v4H3zM3 17h18v4H3z"></path>
+                        </svg></div>
+                    <h3>Raw byte streams</h3>
+                    <p>Bit fields and encoded values end up in the cloud. Their meaning lies not in the payload—but in the associated IODD.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="pi"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 9l6 6-6 6M4 4v7a4 4 0 004 4h12"></path>
+                        </svg></div>
+                    <h3>No Post-Processing Logic</h3>
+                    <p>Firmware updates on LPWAN devices are complex. The decoding logic does not belong in the device—but in the cloud.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WIE FUNKTIONIERT ===== -->
+    <section class="section section-soft" id="wie-funktioniert">
+        <div class="container">
+            <div class="ta-c max-720 center mb-56">
+                <p class="eyebrow">How IODA works</p>
+                <h2 class="h2">Four steps from <span class="gradient-text">hex value to sensor value</span></h2>
+                <p class="lead center">An efficient, cloud-centric architecture – from the IO-Link sensor to your IoT platform.</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="icon"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="14" rx="2"></rect>
+                            <path d="M8 21h8M12 17v4"></path>
+                        </svg></div>
+                    <h3>Sensor &amp; AION</h3>
+                    <p>The IO-Link sensor delivers cyclic process data to an LPWAN master such as the Sentinum AION.</p>
+                </div>
+                <div class="step">
+                    <div class="icon"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12.55a11 11 0 0114 0M8.5 16a6 6 0 017 0M12 20h.01M2 8.82a15 15 0 0120 0"></path>
+                        </svg></div>
+                    <h3>LoRaWAN® Uplink</h3>
+                    <p>The compact raw payload is transmitted via LoRaWAN® to any LNS—no proprietary stack required.</p>
+                </div>
+                <div class="step">
+                    <div class="icon"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16v16H4z"></path>
+                            <path d="M4 9h16M9 4v16"></path>
+                        </svg></div>
+                    <h3>IODD Decode</h3>
+                    <p>IODA applies the stored IODD, decodes bit fields, and translates them into named values with units and status.</p>
+                </div>
+                <div class="step">
+                    <div class="icon"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                        </svg></div>
+                    <h3>Delivery</h3>
+                    <p>Structured data via REST API, MQTT, or direct integration into your IoT platform.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== USE CASE 01 — Decoding statt Rohdaten ===== -->
+    <section class="section" id="decoding">
+        <div class="container">
+            <div class="uc">
+                <div class="uc-text">
+                    <span class="tag">Bytes become values</span>
+                    <h2>No more <span>meaningless hex values</span></h2>
+                    <p class="lead">Sensors send their data in a fixed, encoded structure—without self-description. Without decoding, they remain meaningless hex values. IODA handles the interpretation entirely in the cloud.</p>
+                    <ul class="uc-list">
+                        <li><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg><span><strong>Automatic:</strong> IODD lookup per device type, no manual mapping.</span></li>
+                        <li><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg><span><strong>Standardized:</strong> Exactly according to the sensor manufacturer’s IO-Link specification.</span></li>
+                        <li><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg><span><strong>No intervention on the device:</strong> no firmware updates, no local logic.</span></li>
+                        <li><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg><span><strong>Structured:</strong> Values with description, unit, and status bits are directly usable.</span></li>
+                    </ul>
+                    <a href="https://sentinum.de/en/kontakt" class="link">Watch decoding live →</a>
+                </div>
+                <div class="uc-visual">
+                   
+                       
+                      <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/code_temp.jpeg" loading="lazy" alt="Orelia Tilt Sensor" />
+             
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STAT STRIP ===== -->
+    <section class="section section-alt" style="padding:60px 0">
+        <div class="container">
+            <div class="stats">
+                <div class="stat">
+                    <div class="ico">⚡</div>
+                    <div class="st">Plug &amp; Play</div>
+                    <p>Register IODD, receive values – no code required in the device.</p>
+                </div>
+                <div class="stat">
+                    <div class="ico">📡</div>
+                    <div class="st">LPWAN-Ready</div>
+                    <p>Ideal for compressed LoRaWAN® payloads.</p>
+                </div>
+                <div class="stat">
+                    <div class="ico">🧩</div>
+                    <div class="st">Standardized</div>
+                    <p>IO-Link compliant, vendor-independent.</p>
+                </div>
+                <div class="stat">
+                    <div class="ico">🚀</div>
+                    <div class="st">Scalable</div>
+                    <p>From pilot to fleet rollout in a single system.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== USE CASE 02 — Offen & integrierbar ===== -->
+    <section class="section" id="open">
+        <div class="container">
+            <div class="uc reverse">
+                <div class="uc-visual">
+                   <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Lunex/Lunex%20API.png" alt="LuneX API" />
+                </div>
+                <div class="uc-text">
+                    <span class="tag">Open &amp; integrable</span>
+                    <h2>Full <span>data sovereignty</span> – no vendor lock-in</h2>
+                    <p class="lead">Decoded data can be flexibly processed further—within <strong style="color:var(--foreground)">mysentinum</strong> or in any third-party systems via APIs, MQTT, or data streams. The architecture is intentionally kept open.</p>
+                    <ul class="uc-list">
+                        <li><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg><span><strong>LNS-agnostic:</strong> ChirpStack, TTN, Actility, Loriot, Helium, and others.</span></li>
+                        <li><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg><span><strong>Third-party hardware:</strong> not just AION – any compliant LoRaWAN IO-Link device.</span></li>
+                        <li><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg><span><strong>No vendor lock-in:</strong> full data sovereignty, switching possible at any time.</span></li>
+                        <li><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg><span><strong>Flexible integration:</strong> REST API, MQTT topics, or webhook push.</span></li>
+                    </ul>
+                    <a href="https://sentinum.de/en/kontakt" class="link">Discuss integration →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== USE CASE 03 — AION ===== -->
+    <section class="section section-alt" id="aion">
+        <div class="container">
+            <div class="uc">
+                <div class="uc-text">
+                    <span class="tag">Native hardware</span>
+                    <h2>Sentinum <span>AION</span> + IODA</h2>
+                    <p class="lead">AION is Sentinum’s LoRaWAN IO-Link master – designed to connect IO-Link sensors to the LPWAN in an energy-efficient manner. Together with IODA, it creates a complete, wireless IO-Link chain: from the sensor to the structured value in the cloud.</p>
+                    <ul class="uc-list">
+                        <li><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg><span><strong>Seamless:</strong> AION payloads are pre-configured for IODA out of the box.</span></li>
+                        <li><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg><span><strong>Energy-efficient:</strong> Decoding in the cloud saves processing time at the edge.</span></li>
+                        <li><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg><span><strong>Scalable:</strong> from a pilot with a single sensor to a full-scale factory rollout.</span></li>
+                        <li><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg><span><strong>Industry standard:</strong> full compatibility with IO-Link-compliant sensors.</span></li>
+                    </ul>
+                    <a href="https://sentinum.de/en/aion-io-link-adapter" class="link">View AION hardware →</a>
+                </div>
+                <div class="uc-visual">
+                  <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/mioty-Adapter/AION%20V2%20(altes%20Geh%C3%A4use)/AION_freigestellt.png" alt="AION Device" />
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STORY: WARUM IODA ===== -->
+    <section class="section" id="warum">
+        <div class="container">
+            <div class="ta-c max-720 center mb-48">
+                <p class="eyebrow">Why IODA was created</p>
+                <h2 class="h2">From real projects <span class="gradient-text">for real requirements</span></h2>
+            </div>
+            <div class="story">
+                <div class="story-text">
+                    <p>Industrial IoT is becoming increasingly wireless—especially thanks to energy-efficient LPWAN technologies like <strong>LoRaWAN®.</strong> This allows IO-Link sensors to be connected flexibly and their data transmitted over long distances, for example using devices like the Sentinum AION.</p>
+                    <p>However, this efficiency comes with a key challenge: only a few bytes are available per message, and there is no continuous high-bandwidth communication. Only <strong>cyclic process data</strong> is transmitted—heavily compressed and reduced to the absolute minimum.</p>
+                    <p>What arrives in the cloud is not directly usable information, but <strong>raw byte streams</strong>. Their significance lies not in the payload, but in the associated IODDs. Projects therefore often get stuck in the integration phase, as every new device connection requires custom solutions.</p>
+                    <p>This is exactly where <strong>IODA</strong> comes in: a cloud-based IODD decoding service that handles the interpretation—automatically, standardized, and without any intervention in the devices. In this way, IODA combines the efficiency of LPWAN with the usability of structured data—and makes IO-Link truly scalable in wireless architectures for the first time.</p>
+                </div>
+                <aside class="quote">
+                    <h4>Our Mission</h4>
+                    <ul>
+                        <li><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg><span>Accurately map the IO-Link specification</span></li>
+                        <li><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg><span>Seamlessly integrable into existing LNS architectures</span></li>
+                        <li><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg><span>Scalable from a single device to a large fleet</span></li>
+                        <li><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg><span>Maximum flexibility – proprietary hardware or third-party providers</span></li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== INTEGRATION CHANNELS ===== -->
+    <section class="section section-alt" id="integration">
+        <div class="container">
+            <div class="ta-c max-720 center mb-48">
+                <p class="eyebrow">Integration</p>
+                <h2 class="h2">Three ways to your <span class="gradient-text">sensor values</span></h2>
+                <p class="lead center">No matter which platform—IODA delivers decoded IO-Link data exactly where you need it.</p>
+            </div>
+            <div class="conn">
+                <div class="conn-card">
+                    <div class="ci"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg></div>
+                    <div class="cn">REST API</div>
+                    <p>Standardized HTTPS endpoints for push and pull – ideal for custom integrations.</p>
+                </div>
+                <div class="conn-card">
+                    <div class="ci"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12.55a11 11 0 0114 0M8.5 16a6 6 0 017 0M12 20h.01M2 8.82a15 15 0 0120 0"></path>
+                        </svg></div>
+                    <div class="cn">MQTT / Data Streams</div>
+                    <p>Real-time push of decoded values via freely selectable MQTT topics or streams.</p>
+                </div>
+                <div class="conn-card">
+                    <div class="ci"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                            <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+                            <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+                            <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+                        </svg></div>
+                    <div class="cn">mysentinum &amp; IoT Platform</div>
+                    <p>Direct connection to mysentinum, Sentinum Datahub, or your own IoT platforms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== USE CASES / BRANCHEN ===== -->
+    <section class="section" id="branchen">
+        <div class="container">
+            <div class="ta-c max-720 center mb-56">
+                <p class="eyebrow">Applications</p>
+                <h2 class="h2">Where IODA <span class="gradient-text">is used</span></h2>
+                <p class="lead center">Anywhere where IO-Link sensors need to be wirelessly monitored and their data reliably made available.</p>
+            </div>
+            <div class="ind">
+                <div class="ind-card">
+                    <div class="ii"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 20a2 2 0 002 2h16a2 2 0 002-2V8l-7 5V8l-7 5V4a2 2 0 00-2-2H4a2 2 0 00-2 2z"></path>
+                        </svg></div>
+                    <div class="it">Industry &amp; Mechanical Engineering</div>
+                    <p>Wireless connection of pressure, temperature, and vibration sensors to production facilities.</p>
+                </div>
+                <div class="ind-card">
+                    <div class="ii"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"></path>
+                        </svg></div>
+                    <div class="it">Buildings &amp; Utilities</div>
+                    <p>IO-Link sensors in heating, ventilation, air conditioning, and utility infrastructure.</p>
+                </div>
+                <div class="ind-card">
+                    <div class="ii"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 12h4l3-9 4 18 3-9h4"></path>
+                        </svg></div>
+                    <div class="it">Predictive Maintenance</div>
+                    <p>Condition data from pumps, motors, and drives directly in maintenance platforms.</p>
+                </div>
+                <div class="ind-card">
+                    <div class="ii"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="1" y="3" width="15" height="13"></rect>
+                            <path d="M16 8h4l3 3v5h-7zM5 21a2 2 0 100-4 2 2 0 000 4zM19 21a2 2 0 100-4 2 2 0 000 4z"></path>
+                        </svg></div>
+                    <div class="it">Logistics &amp; Warehousing</div>
+                    <p>Level, position, and status of mobile containers and storage facilities.</p>
+                </div>
+                <div class="ind-card">
+                    <div class="ii"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 22a8 8 0 018-8M22 22a16 16 0 00-16-16M2 14a16 16 0 0116 16"></path>
+                        </svg></div>
+                    <div class="it">Water &amp; Environment</div>
+                    <p>Wireless IO-Link sensors in wastewater treatment plants, wells, and supply networks.</p>
+                </div>
+                <div class="ind-card">
+                    <div class="ii"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10H3M21 6H3M21 14H3M21 18H3"></path>
+                        </svg></div>
+                    <div class="it">Energy &amp; Plant Engineering</div>
+                    <p>Monitor distributed systems over long distances without complex cabling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section section-alt" id="faq">
+        <div class="container">
+            <div class="ta-c max-720 center mb-48">
+                <p class="eyebrow">FAQ</p>
+                <h2 class="h2">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq">
+                <details class="faq-item">
+                    <summary>What is IODA?</summary>
+                    <p>IODA is a cloud decoding service from Sentinum. It translates raw IO-Link process data transmitted via LoRaWAN® from devices such as the AION into structured, usable sensor values using the corresponding IODDs.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What hardware is supported?</summary>
+                    <p>Sentinum AION as well as compatible third-party LoRaWAN IO-Link masters that transmit process data in a standardized manner via LPWAN.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What is an IODD and why is it necessary?</summary>
+                    <p>The IO Device Description (IODD) describes an IO-Link sensor: data structure, bit fields, values, units, and status. Without an IODD, the transmitted bytes remain meaningless hex values. IODA automatically applies the appropriate IODD to every incoming payload.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Why not decode directly in the device?</summary>
+                    <p>With wireless LPWAN devices, firmware updates are complex, parameter changes are difficult, and resources are limited. The decoding logic belongs in the cloud—where it can be centrally maintained, updated, and scaled.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Which network servers are compatible?</summary>
+                    <p>IODA is LNS-agnostic. Payloads can be transferred to IODA via API from any LoRaWAN Network Server (e.g., ChirpStack, The Things Stack, Actility ThingPark, Loriot, Helium).</p>
+                </details>
+                <details class="faq-item">
+                    <summary>How are results delivered?</summary>
+                    <p>Via REST API, MQTT, or through direct integration with mysentinum, the Sentinum Data Hub, or third-party systems. Structured values are provided, including description, unit, and status.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Do I retain data sovereignty?</summary>
+                    <p>Yes. IODA is deliberately designed to be open: no vendor lock-in; decoded data can be forwarded to any third-party systems—the user retains full data sovereignty.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section cta" id="kontakt">
+        <div class="container">
+            <h2>Turning bytes into <span class="gradient-text">information</span> – let’s talk about it.</h2>
+            <p>Do you operate or plan to use IO-Link sensors via LoRaWAN®? We’ll show you how IODA fits into your existing LNS and IoT landscape—including live decoding at your sensor.</p>
+            <div class="cta-row" style="justify-content:center">
+                <a href="mailto:info@sentinum.de" class="btn btn-primary">Request API access →</a>
+                <a href="mailto:info@sentinum.de" class="btn btn-ghost">Schedule a demo</a>
+            </div>
+        </div>
+    </section>
+  {% module "page_footer" path="/Homepage V2/Sentinum_Footer_en.module", label="Footer" %}
+    {{ standard_footer_includes }}
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+<!--
+  templateType: "page"
+  isAvailableForNewContent: true
+-->
+
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impressum | Sentinum</title>
+<meta name="description" content="Impressum der Sentinum GmbH – Anschrift, Geschäftsführung, Registereintrag, Umsatzsteuer-ID und rechtliche Hinweise.">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://sentinum.de/impressum">
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap");
+:root{
+  --background:216 24% 8%;
+  --foreground:210 20% 90%;
+  --surface:214 20% 11%;
+  --muted-foreground:213 20% 55%;
+  --primary:17 89% 48%;
+  --primary-light:20 89% 53%;
+  --border:213 20% 18%;
+  --font-heading:"Space Grotesk",sans-serif;
+  --font-body:"DM Sans",sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:hsl(var(--background));
+  color:hsl(var(--foreground));
+  font-family:var(--font-body);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:hsl(var(--primary-light));text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:880px;margin:0 auto;padding:0 24px}
+.hero{
+  position:relative;
+  padding:120px 0 60px;
+  border-bottom:1px solid hsl(var(--border));
+  overflow:hidden;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  top:-200px;left:50%;transform:translateX(-50%);
+  width:800px;height:400px;
+  background:radial-gradient(ellipse,hsl(var(--primary)/0.18),transparent 60%);
+  filter:blur(60px);
+  z-index:0;
+}
+.hero-inner{position:relative;z-index:1}
+.eyebrow{
+  display:inline-block;
+  font-family:var(--font-heading);
+  font-size:12px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:hsl(var(--primary));
+  margin-bottom:20px;
+}
+h1{
+  font-family:var(--font-heading);
+  font-size:clamp(36px,5vw,56px);
+  font-weight:700;
+  line-height:1.1;
+  margin:0 0 16px;
+  background:linear-gradient(135deg,hsl(var(--primary)),hsl(var(--primary-light)));
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.lead{
+  font-size:17px;
+  color:hsl(var(--muted-foreground));
+  max-width:640px;
+}
+.content{padding:60px 0 120px}
+.content h2{
+  font-family:var(--font-heading);
+  font-size:clamp(22px,2.5vw,28px);
+  font-weight:600;
+  margin:48px 0 16px;
+  color:hsl(var(--foreground));
+}
+.content h3{
+  font-family:var(--font-heading);
+  font-size:18px;
+  font-weight:600;
+  margin:32px 0 8px;
+  color:hsl(var(--foreground));
+}
+.content p{margin:0 0 16px;color:hsl(var(--foreground)/0.85)}
+.content strong{color:hsl(var(--foreground));font-weight:600}
+.card{
+  background:hsl(var(--surface)/0.5);
+  border:1px solid hsl(var(--border));
+  border-radius:14px;
+  padding:32px;
+  margin:24px 0;
+}
+.card p{margin:0 0 8px}
+.card p:last-child{margin-bottom:0}
+.lang-switch{
+  position:absolute;
+  top:24px;right:24px;
+  font-family:var(--font-heading);
+  font-size:13px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:hsl(var(--muted-foreground));
+  z-index:2;
+}
+.lang-switch a{
+  color:hsl(var(--muted-foreground));
+  padding:6px 12px;
+  border:1px solid hsl(var(--border));
+  border-radius:999px;
+  margin-left:8px;
+  transition:all .2s;
+}
+.lang-switch a:hover{
+  color:hsl(var(--primary));
+  border-color:hsl(var(--primary)/0.4);
+  text-decoration:none;
+}
+.lang-switch a.active{
+  color:hsl(var(--primary));
+  border-color:hsl(var(--primary)/0.4);
+  background:hsl(var(--primary)/0.08);
+}
+</style>
+    {{ standard_header_includes }}
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">Rechtliches</span>
+    <h1>Impressum</h1>
+    <p class="lead">Angaben gemäß § 5 TMG sowie rechtliche Hinweise zur Nutzung dieser Website.</p>
+  </div>
+</section>
+{% module "main_nav"
+  path="/Homepage V2/Sentinum New Header Nav.module",
+  label="Main Navigation"
+%}
+<section class="content">
+  <div class="container">
+    <div class="card">
+      <p><strong>Sentinum GmbH</strong></p>
+      <p>Heinrich-Stranka-Str. 3-5</p>
+      <p>90765 Fürth</p>
+      <p>&nbsp;</p>
+      <p>Telefon: +49 911 99868818</p>
+      <p>E-Mail: <a href="mailto:info@sentinum.de">info@sentinum.de</a></p>
+    </div>
+
+    <h3>Geschäftsführer:</h3>
+    <p>Manuel Hart, Simon Schrampfer, Johannes Ollech, Dr. Alexander Kahlig</p>
+
+    <h3>Registereintrag:</h3>
+    <p>Eingetragen im Handelsregister.</p>
+    <p>Registergericht: Amtsgericht Fürth</p>
+    <p>Registernummer: HRB 20594</p>
+    <p>HRB 20594</p>
+
+    <h3>Umsatzsteuer-ID:</h3>
+    <p>Umsatzsteuer-Identifikationsnummer nach §27a Umsatzsteuergesetz:</p>
+    <p>DE321037616</p>
+
+    <h2>Disclaimer – rechtliche Hinweise</h2>
+
+    <h3>§ 1 Warnhinweis zu Inhalten</h3>
+    <p>Die kostenlosen und frei zugänglichen Inhalte dieser Webseite wurden mit größtmöglicher Sorgfalt erstellt. Der Anbieter dieser Webseite übernimmt jedoch keine Gewähr für die Richtigkeit und Aktualität der bereitgestellten kostenlosen und frei zugänglichen journalistischen Ratgeber und Nachrichten. Namentlich gekennzeichnete Beiträge geben die Meinung des jeweiligen Autors und nicht immer die Meinung des Anbieters wieder. Allein durch den Aufruf der kostenlosen und frei zugänglichen Inhalte kommt keinerlei Vertragsverhältnis zwischen dem Nutzer und dem Anbieter zustande, insoweit fehlt es am Rechtsbindungswillen des Anbieters.</p>
+
+    <h3>§ 2 Externe Links</h3>
+    <p>Diese Website enthält Verknüpfungen zu Websites Dritter („externe Links"). Diese Websites unterliegen der Haftung der jeweiligen Betreiber. Der Anbieter hat bei der erstmaligen Verknüpfung der externen Links die fremden Inhalte daraufhin überprüft, ob etwaige Rechtsverstöße bestehen. Zu dem Zeitpunkt waren keine Rechtsverstöße ersichtlich. Der Anbieter hat keinerlei Einfluss auf die aktuelle und zukünftige Gestaltung und auf die Inhalte der verknüpften Seiten. Das Setzen von externen Links bedeutet nicht, dass sich der Anbieter die hinter dem Verweis oder Link liegenden Inhalte zu Eigen macht. Eine ständige Kontrolle der externen Links ist für den Anbieter ohne konkrete Hinweise auf Rechtsverstöße nicht zumutbar. Bei Kenntnis von Rechtsverstößen werden jedoch derartige externe Links unverzüglich gelöscht.</p>
+
+    <h3>§ 3 Urheber- und Leistungsschutzrechte</h3>
+    <p>Die auf dieser Website veröffentlichten Inhalte unterliegen dem deutschen Urheber- und Leistungsschutzrecht. Jede vom deutschen Urheber- und Leistungsschutzrecht nicht zugelassene Verwertung bedarf der vorherigen schriftlichen Zustimmung des Anbieters oder jeweiligen Rechteinhabers. Dies gilt insbesondere für Vervielfältigung, Bearbeitung, Übersetzung, Einspeicherung, Verarbeitung bzw. Wiedergabe von Inhalten in Datenbanken oder anderen elektronischen Medien und Systemen. Inhalte und Rechte Dritter sind dabei als solche gekennzeichnet. Die unerlaubte Vervielfältigung oder Weitergabe einzelner Inhalte oder kompletter Seiten ist nicht gestattet und strafbar. Lediglich die Herstellung von Kopien und Downloads für den persönlichen, privaten und nicht kommerziellen Gebrauch ist erlaubt.</p>
+    <p>Die Darstellung dieser Website in fremden Frames ist nur mit schriftlicher Erlaubnis zulässig.</p>
+
+    <h3>§ 4 Besondere Nutzungsbedingungen</h3>
+    <p>Soweit besondere Bedingungen für einzelne Nutzungen dieser Website von den vorgenannten Paragraphen abweichen, wird an entsprechender Stelle ausdrücklich darauf hingewiesen. In diesem Falle gelten im jeweiligen Einzelfall die besonderen Nutzungsbedingungen.</p>
+
+    <p>Icons wurden von <a href="https://icons8.com" rel="noopener">icons8.com</a> verwendet.</p>
+  </div>
+</section>
+  {% module "page_footer" path="/Homepage V2/Sentinum_Footer.module", label="Footer" %}
+   {{ standard_footer_includes }}
+</body>
+</html>
+
+  
+
+   
+
