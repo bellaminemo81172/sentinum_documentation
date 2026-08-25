@@ -1,0 +1,1514 @@
+<!--
+  templateType: "page"
+  isAvailableForNewContent: true
+-->
+
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envira – IoT Umweltmonitoring & Wetter-Dashboard | Sentinum</title>
+    <meta name="description" content="Envira ist die Umwelt-App in der Sentinum Anwendercloud Starvice. Wetter- und Umweltsensoren wie GAIA und Helios live auf Karte und in Listen – mit Temperatur, Feuchte, Regen, Wind, UV, Licht und vollständiger Historie pro Gerät.">
+    <meta name="keywords" content="IoT Lösung, Umweltmonitoring, Temperaturüberwachung, Wettermonitoring, IoT Dashboard, LoRaWAN, NB-IoT, mioty, Wetterstation IoT, Luftqualität, Sentinum, Envira, GAIA, Helios">
+    <meta property="og:title" content="Envira – IoT Umweltmonitoring & Wetter-Dashboard von Sentinum">
+    <meta property="og:description" content="Wetter- und Umweltgeräte (GAIA, Helios) auf Karte: Live-Werte, Historie und Diagramme für Temperatur, Wind, Regen, UV und Licht.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <link rel="canonical" href="https://sentinum.de/envira">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [{
+                    "@type": "SoftwareApplication",
+                    "name": "Envira",
+                    "applicationCategory": "IoT Environmental Monitoring",
+                    "operatingSystem": "Web",
+                    "description": "Umwelt- und Wettermonitoring-App in der Sentinum Anwendercloud Starvice. Karten, Listen, Live-Werte und Historie für GAIA und Helios.",
+                    "brand": {
+                        "@type": "Brand",
+                        "name": "Sentinum"
+                    }
+                },
+                {
+                    "@type": "FAQPage",
+                    "mainEntity": [{
+                            "@type": "Question",
+                            "name": "Was ist Envira?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Envira ist die Umwelt- und Wettermonitoring-App in der Sentinum Anwendercloud Starvice. Sie zeigt GAIA und Helios mit Live-Werten und vollständiger Historie."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Welche Sensoren sind in Envira integriert?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Die Wetterstation GAIA und der Umweltsensor Helios – inklusive Temperatur, Feuchte, Niederschlag, Wind, UV-Index und Helligkeit."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Welche Funktechnologien werden unterstützt?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "GAIA und Helios senden über LoRaWAN, mioty oder NB-IoT."
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
+
+        :root {
+            --background: hsl(216 24% 8%);
+            --surface: hsl(214 20% 11%);
+            --surface-2: hsl(213 18% 14%);
+            --foreground: hsl(210 20% 90%);
+            --muted: hsl(213 20% 55%);
+            --border: hsl(213 20% 18%);
+            --primary: hsl(17 89% 48%);
+            --primary-light: hsl(20 89% 53%);
+            --primary-25: hsl(17 89% 48% / .25);
+            --primary-15: hsl(17 89% 48% / .15);
+            --primary-10: hsl(17 89% 48% / .10);
+            --radius: .75rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            background: var(--background);
+            color: var(--foreground);
+            font-family: 'DM Sans', system-ui, sans-serif;
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            line-height: 1.2;
+            font-weight: 700
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        img,
+        svg {
+            display: block;
+            max-width: 100%;
+            height: auto
+        }
+
+        ul {
+            list-style: none
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px
+        }
+
+        .section {
+            padding: 100px 0
+        }
+
+        .section-alt {
+            background: hsl(214 20% 11% / .5)
+        }
+
+        .section-soft {
+            background: hsl(214 20% 11% / .35);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border)
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary-25), transparent)
+        }
+
+        .eyebrow {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--primary);
+            margin-bottom: 12px
+        }
+
+        .h2 {
+            font-size: clamp(28px, 4vw, 42px);
+            margin-bottom: 16px
+        }
+
+        .lead {
+            color: var(--muted);
+            font-size: 1.125rem;
+            max-width: 680px
+        }
+
+        .center {
+            text-align: center;
+            margin: 0 auto
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent
+        }
+
+        /* Tag/Badge */
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: var(--primary-10);
+            border: 1px solid var(--primary-25);
+            color: var(--primary);
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 14px
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 120px 0 100px
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 15%;
+            right: 15%;
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            background: var(--primary);
+            opacity: .06;
+            filter: blur(120px)
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 64px;
+            align-items: center;
+            position: relative;
+            z-index: 1
+        }
+
+        @media(min-width:1024px) {
+            .hero-grid {
+                grid-template-columns: 1.1fr 1fr
+            }
+        }
+
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 24px
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 500;
+            background: var(--primary-15);
+            border: 1px solid var(--primary-25);
+            color: var(--primary)
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 5vw, 60px);
+            margin-bottom: 24px
+        }
+
+        .hero p.lead {
+            margin-bottom: 32px
+        }
+
+        .cta-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 30px;
+            border-radius: var(--radius);
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all .2s ease;
+            cursor: pointer;
+            border: 1px solid transparent
+        }
+
+        .btn-sm {
+            padding: 10px 20px;
+            font-size: 14px
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #fff
+        }
+
+        .btn-primary:hover {
+            opacity: .9;
+            transform: translateY(-2px)
+        }
+
+        .btn-ghost {
+            border-color: var(--border);
+            color: var(--foreground)
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--primary-25);
+            background: var(--surface)
+        }
+
+        .link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--primary);
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 15px
+        }
+
+        .link:hover {
+            text-decoration: underline
+        }
+
+        /* Mock dashboard */
+        .mock {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 18px;
+            box-shadow: 0 30px 60px -20px hsl(17 89% 48% / .25)
+        }
+
+        .mock-bar {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 14px
+        }
+
+        .mock-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--surface-2)
+        }
+
+        .mock-map {
+            position: relative;
+            background: var(--background);
+            border: 1px solid var(--border);
+            border-radius: .75rem;
+            height: 200px;
+            margin-bottom: 12px;
+            overflow: hidden
+        }
+
+        .mock-map svg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            opacity: .35;
+            color: var(--primary)
+        }
+
+        .mock-pin {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--primary);
+            box-shadow: 0 0 0 6px hsl(17 89% 48% / .25), 0 0 20px hsl(17 89% 48% / .6)
+        }
+
+        .mock-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px
+        }
+
+        .mock-stat {
+            background: var(--background);
+            border: 1px solid var(--border);
+            border-radius: .6rem;
+            padding: 10px
+        }
+
+        .mock-stat .lbl {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--muted)
+        }
+
+        .mock-stat .val {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--primary);
+            margin-top: 2px
+        }
+
+        /* Generic grid + cards */
+        .grid {
+            display: grid;
+            gap: 24px;
+            grid-template-columns: 1fr
+        }
+
+        @media(min-width:640px) {
+            .grid-2 {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media(min-width:768px) {
+            .grid-3-md {
+                grid-template-columns: repeat(3, 1fr)
+            }
+        }
+
+        @media(min-width:1024px) {
+            .grid-3 {
+                grid-template-columns: repeat(3, 1fr)
+            }
+
+            .grid-4 {
+                grid-template-columns: repeat(4, 1fr)
+            }
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px;
+            transition: all .3s ease
+        }
+
+        .card:hover {
+            border-color: var(--primary-25);
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px -10px hsl(17 89% 48% / .25)
+        }
+
+        .card .icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            background: var(--primary-15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            margin-bottom: 18px
+        }
+
+        .card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 15px
+        }
+
+        /* Plug & Play (2 cards with media) */
+        .pp {
+            display: grid;
+            gap: 32px;
+            grid-template-columns: 1fr
+        }
+
+        @media(min-width:768px) {
+            .pp {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        .pp-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all .3s ease
+        }
+
+        .pp-card:hover {
+            border-color: var(--primary-25)
+        }
+
+        .pp-media {
+            position: relative;
+            aspect-ratio: 4/3;
+            background: linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden
+        }
+
+        .pp-media::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 30%, hsl(17 89% 48% / .25), transparent 60%)
+        }
+
+        .pp-media svg {
+            position: relative;
+            z-index: 1;
+            width: 50%;
+            color: var(--primary);
+            filter: drop-shadow(0 0 30px hsl(17 89% 48% / .4))
+        }
+
+        .pp-step {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            z-index: 2;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: hsl(216 24% 8% / .8);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--primary-25);
+            color: var(--primary);
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px
+        }
+
+        .pp-body {
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            flex: 1
+        }
+
+        .pp-body h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 22px;
+            font-weight: 700
+        }
+
+        .pp-body p {
+            color: var(--muted);
+            font-size: 15px;
+            flex: 1
+        }
+
+        /* Use case (alternating image+text) */
+        .uc {
+            display: grid;
+            gap: 48px;
+            align-items: center;
+            grid-template-columns: 1fr
+        }
+
+        @media(min-width:1024px) {
+            .uc {
+                grid-template-columns: 1fr 1fr;
+                gap: 64px
+            }
+
+            .uc.reverse .uc-visual {
+                order: 1
+            }
+
+            .uc.reverse .uc-text {
+                order: 2
+            }
+        }
+
+        .uc-text h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(28px, 4vw, 40px);
+            margin-bottom: 18px
+        }
+
+        .uc-text h2 span {
+            color: var(--primary)
+        }
+
+        .uc-text p.lead {
+            margin-bottom: 22px;
+            text-align: left
+        }
+
+        .uc-list {
+            display: grid;
+            gap: 12px;
+            margin-bottom: 28px
+        }
+
+        .uc-list li {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            color: var(--muted);
+            font-size: 15px
+        }
+
+        .uc-list li svg {
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+            color: var(--primary);
+            margin-top: 2px
+        }
+
+        .uc-list li strong {
+            color: var(--foreground);
+            font-weight: 600
+        }
+
+        .uc-visual {
+            position: relative;
+            aspect-ratio: 3/2;
+            border-radius: 1rem;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 100%);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .4)
+        }
+
+        .uc-visual::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 30%, hsl(17 89% 48% / .22), transparent 60%)
+        }
+
+        .uc-visual svg {
+            position: relative;
+            z-index: 1;
+            width: 80%;
+            color: var(--primary);
+            filter: drop-shadow(0 0 30px hsl(17 89% 48% / .4))
+        }
+
+        /* Devices (sensor cards) */
+        .devices {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr
+        }
+
+        @media(min-width:768px) {
+            .devices {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        .device {
+            position: relative;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            transition: all .3s ease;
+            overflow: hidden
+        }
+
+        .device::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top right, hsl(17 89% 48% / .12), transparent 60%);
+            opacity: 0;
+            transition: opacity .3s ease;
+            pointer-events: none
+        }
+
+        .device:hover {
+            border-color: var(--primary-25);
+            transform: translateY(-3px)
+        }
+
+        .device:hover::after {
+            opacity: 1
+        }
+
+        .device .device-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            background: var(--primary-15);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .device h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px
+        }
+
+        .device p {
+            color: var(--muted);
+            font-size: 15px
+        }
+
+        .device ul {
+            display: grid;
+            gap: 8px;
+            margin-top: 6px
+        }
+
+        .device ul li {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            color: var(--muted);
+            font-size: 14.5px
+        }
+
+        .device ul li::before {
+            content: "";
+            flex-shrink: 0;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--primary);
+            margin-top: 9px
+        }
+
+        /* Connectivity tiles */
+        .conn {
+            display: grid;
+            gap: 16px;
+            grid-template-columns: 1fr;
+            max-width: 900px;
+            margin: 0 auto
+        }
+
+        @media(min-width:768px) {
+            .conn {
+                grid-template-columns: repeat(3, 1fr)
+            }
+        }
+
+        .conn-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            text-align: center;
+            transition: all .3s ease
+        }
+
+        .conn-card:hover {
+            border-color: var(--primary-25)
+        }
+
+        .conn-card .ci {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 12px;
+            border-radius: 12px;
+            background: var(--primary-10);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .conn-card .cn {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            margin-bottom: 6px
+        }
+
+        .conn-card p {
+            color: var(--muted);
+            font-size: 13.5px
+        }
+
+        /* Industries */
+        .ind {
+            display: grid;
+            gap: 16px;
+            grid-template-columns: 1fr
+        }
+
+        @media(min-width:640px) {
+            .ind {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media(min-width:1024px) {
+            .ind {
+                grid-template-columns: repeat(3, 1fr)
+            }
+        }
+
+        .ind-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            text-align: center;
+            transition: all .3s ease
+        }
+
+        .ind-card:hover {
+            border-color: var(--primary-25);
+            transform: translateY(-2px)
+        }
+
+        .ind-card .ii {
+            width: 52px;
+            height: 52px;
+            margin: 0 auto 14px;
+            border-radius: 14px;
+            background: var(--primary-15);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .ind-card .it {
+            color: var(--primary);
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px
+        }
+
+        .ind-card p {
+            color: var(--muted);
+            font-size: 14px
+        }
+
+        /* FAQ */
+        .faq {
+            max-width: 820px;
+            margin: 0 auto;
+            display: grid;
+            gap: 12px
+        }
+
+        details.faq-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            transition: border-color .2s
+        }
+
+      
+
+        details.faq-item summary {
+            cursor: pointer;
+            list-style: none;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px
+        }
+
+        details.faq-item summary::-webkit-details-marker {
+            display: none
+        }
+
+      
+details.faq-item summary {
+    position: relative;
+    padding-right: 30px; /* Platz für Pfeil rechts */
+}
+
+/* Pfeil */
+details.faq-item summary::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 7px;
+    height: 7px;
+    
+    border-right: 2px solid hsl(210 20% 65%); /* leicht grau */
+    border-bottom: 2px solid hsl(210 20% 65%);
+    
+    transform: translateY(-50%) rotate(45deg); /* ▼ */
+    transition: transform 0.25s ease, border-color 0.2s ease;
+}
+
+/* geöffnet */
+details.faq-item[open] summary::after {
+    transform: translateY(-50%) rotate(-135deg); /* ▲ */
+}
+
+        details.faq-item p {
+            margin-top: 12px;
+            color: var(--muted);
+            font-size: 15px
+        }
+
+        /* CTA */
+        .cta {
+            text-align: center
+        }
+
+        .cta h2 {
+            font-size: clamp(28px, 4vw, 42px);
+            margin-bottom: 16px
+        }
+
+        .cta p {
+            color: var(--muted);
+            font-size: 1.125rem;
+            max-width: 640px;
+            margin: 0 auto 32px
+        }
+
+        /* Footer */
+        footer {
+            background: hsl(216 24% 7%);
+            border-top: 1px solid var(--border);
+            padding: 60px 0 28px;
+            color: var(--muted);
+            font-size: 14.5px
+        }
+
+        .foot-grid {
+            display: grid;
+            gap: 32px;
+            grid-template-columns: 1.2fr 1fr;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--border)
+        }
+
+        @media(max-width:640px) {
+            .foot-grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .foot-grid h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--foreground);
+            margin-bottom: 12px
+        }
+
+        .li-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 999px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            color: var(--foreground);
+            font-weight: 500;
+            font-size: 14px;
+            margin-top: 8px;
+            transition: all .2s ease
+        }
+
+        .li-btn:hover {
+            border-color: var(--primary-25);
+            color: var(--primary)
+        }
+
+        .foot-bot {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            padding-top: 24px
+        }
+
+        .foot-bot a {
+            color: var(--muted);
+            transition: color .2s
+        }
+
+        .foot-bot a:hover {
+            color: var(--primary)
+        }
+
+        .foot-links {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap
+        }
+
+        /* helpers */
+        .max-720 {
+            max-width: 720px
+        }
+
+        .max-820 {
+            max-width: 820px
+        }
+
+        .mb-56 {
+            margin-bottom: 56px
+        }
+
+        .mb-48 {
+            margin-bottom: 48px
+        }
+
+        .mt-40 {
+            margin-top: 40px
+        }
+
+        .ta-c {
+            text-align: center
+        }
+    </style>
+    {{ standard_header_includes }}
+</head>
+
+<body>
+  {% module "main_nav"
+  path="/Homepage V2/Sentinum New Header Nav.module",
+  label="Main Navigation"
+%}
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="top">
+        <div class="container hero-grid">
+            <div>
+                <div class="badges">
+                    <span class="badge"> Sentinum App</span>
+                    <span class="badge">Umweltmonitoring</span>
+                    <span class="badge">Wetter & Klima</span>
+                </div>
+                <h1><span class="gradient-text">ENVIRA</span> – Wetter- und Umweltdaten in einer Cloud.</h1>
+                <p class="lead">Envira ist die Umwelt-App in Starvice. Sie zeigt Ihre Wetter- und Umweltgeräte – <strong style="color:var(--foreground)">GAIA</strong> und <strong style="color:var(--foreground)">Helios</strong> – auf Karte und in Listen, mit Live-Werten und vollständiger Historie pro Gerät.</p>
+                <div class="cta-row">
+                    <a href="https://sentinum.de/de/starvice" class="btn btn-primary">In Envira einloggen →</a>
+                    <a href="https://sentinum.de/de/kontakt" class="btn btn-ghost">Demo anfordern</a>
+                </div>
+            </div>
+            <div class="mock">
+                <div class="mock-bar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
+                <div class="mock-map">
+                    <svg viewBox="0 0 400 200" fill="none" stroke="currentColor" stroke-width="1">
+                        <path d="M0 60 Q80 30 160 70 T320 50 L400 70" />
+                        <path d="M0 110 Q100 90 200 120 T400 100" />
+                        <path d="M0 160 Q120 140 220 170 T400 150" />
+                        <path d="M60 0v200M180 0v200M280 0v200" />
+                    </svg>
+                    <div class="mock-pin" style="top:30%;left:22%"></div>
+                    <div class="mock-pin" style="top:55%;left:48%"></div>
+                    <div class="mock-pin" style="top:38%;left:72%"></div>
+                    <div class="mock-pin" style="top:70%;left:30%"></div>
+                </div>
+                <div class="mock-stats">
+                    <div class="mock-stat">
+                        <div class="lbl">Temp</div>
+                        <div class="val">21,4°</div>
+                    </div>
+                    <div class="mock-stat">
+                        <div class="lbl">Feuchte</div>
+                        <div class="val">62%</div>
+                    </div>
+                    <div class="mock-stat">
+                        <div class="lbl">Wind</div>
+                        <div class="val">14 km/h</div>
+                    </div>
+                    <div class="mock-stat">
+                        <div class="lbl">UV</div>
+                        <div class="val">3,1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ===== WAS IST ENVIRA ===== -->
+    <section class="section section-alt" id="was-ist">
+        <div class="container">
+            <div class="ta-c max-720 center mb-56">
+                <p class="eyebrow">Was ist Envira</p>
+                <h2 class="h2">Eine Plattform für <span class="gradient-text">alle Umweltsensoren</span></h2>
+                <p class="lead center">Karten, Listen und Charts: Envira bündelt Wetter- und Umweltdaten von GAIA und Helios in einem konsistenten IoT-Dashboard.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2C8 8 5 10 5 14a7 7 0 0014 0c0-4-3-6-7-12z" />
+                        </svg></div>
+                    <h3>Karte & Liste</h3>
+                    <p>Alle Geräte geo-referenziert auf einer interaktiven Karte und filterbar in der Geräteliste.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 3v18h18" />
+                            <path d="M7 15l4-6 4 3 5-8" />
+                        </svg></div>
+                    <h3>Live-Werte</h3>
+                    <p>Temperatur, Feuchte, Regen, Wind, UV und Licht in Echtzeit – pro Gerät und Standort.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="9" />
+                            <path d="M12 7v5l3 2" />
+                        </svg></div>
+                    <h3>Historie & Charts</h3>
+                    <p>Diagramme für Temperaturverlauf, Wind-Rose, Regen-Balken und mehr – mit frei wählbarem Zeitraum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PLUG & PLAY ===== -->
+    <section class="section section-soft" id="plug-and-play">
+        <div class="container">
+            <div class="ta-c max-720 center mb-56">
+                <p class="eyebrow">Plug & Play</p>
+                <h2 class="h2">In <span class="gradient-text">2 Schritten</span> live</h2>
+                <p class="lead center">Sensor montieren, einschalten – und in Envira sofort sehen. Keine Konfiguration, keine Middleware.</p>
+            </div>
+            <div class="pp">
+                <div class="pp-card">
+                    <div class="pp-media">
+                        <span class="pp-step">Schritt 01</span>
+                        <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/Gaia_Helios.jpeg" loading="lazy" alt="Orelia Tilt Sensor" />
+                    </div>
+                    <div class="pp-body">
+                        <h3>Sensor: GAIA oder Helios</h3>
+                        <p>Robuste Outdoor-Geräte mit LoRaWAN, mioty oder NB-IoT. Auspacken, montieren, einschalten – senden automatisch alle Umweltparameter an Envira.</p>
+                        <a href="https://sentinum.de/de/iot-sensoren-uebersicht" class="btn btn-primary btn-sm" style="align-self:flex-start">Geräte entdecken →</a>
+                    </div>
+                </div>
+                <div class="pp-card">
+                    <div class="pp-media">
+                        <span class="pp-step">Schritt 02</span>
+                       <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/ger%C3%A4te%C3%BCbersicht.jpeg" loading="lazy" alt="Orelia Tilt Sensor" />
+                    </div>
+                    <div class="pp-body">
+                        <h3>Monitor: Envira Webapp</h3>
+                        <p>Im Browser einloggen – Karte, Live-Werte, Diagramme und Alarme stehen sofort bereit. Kein App-Download, kein Setup, keine Installation.</p>
+                        <a href="https://sentinum.de/de/starvice" class="btn btn-ghost btn-sm" style="align-self:flex-start">Envira öffnen →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== USE CASE 01 — Wettermonitoring (GAIA) ===== -->
+    <section class="section" id="use-cases">
+        <div class="container">
+            <div class="uc">
+                <div class="uc-text">
+                    <span class="tag">Use Case 01</span>
+                    <h2>Wettermonitoring <span>in Echtzeit</span></h2>
+                    <p class="lead">Wie ist das Wetter an meinem Standort, gerade jetzt? Envira visualisiert mit GAIA Wind, Regen, Temperatur und Luftdruck — pro Standort, mit historischen Verläufen und exportierbaren Reports.</p>
+                    <ul class="uc-list">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg><span><strong>Wind-Rose:</strong> Geschwindigkeit und Richtung als 360°-Diagramm.</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg><span><strong>Regen-Balken:</strong> Niederschlag pro Stunde, Tag, Woche, Monat.</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg><span><strong>Temperaturverlauf:</strong> Linien-Chart mit Min/Max-Markierungen.</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg><span><strong>Luftdruck-Trend:</strong> Wetterumschwünge frühzeitig erkennen.</span></li>
+                    </ul>
+                    <a href="https://sentinum.de/de/gaia" class="link">Wetterstation GAIA entdecken →</a>
+                </div>
+                <div class="uc-visual">
+                      <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/map.jpeg" loading="lazy" alt="Orelia Tilt Sensor" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== USE CASE 02 — Umweltmonitoring (Helios) ===== -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="uc reverse">
+                <div class="uc-visual">
+                     <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/umwelt.png" loading="lazy" alt="Orelia Tilt Sensor" />
+                </div>
+                <div class="uc-text">
+                    <span class="tag">Use Case 02</span>
+                    <h2>Umweltmonitoring <span>für Smart City & Agrar</span></h2>
+                    <p class="lead">Helios liefert Lichtverhältnisse, UV-Belastung und Klimadaten — ideal für Stadtklima, Landwirtschaft und Solar-Anwendungen. Envira aggregiert alles standortübergreifend in einem IoT-Dashboard.</p>
+                    <ul class="uc-list">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg><span><strong>UV-Index:</strong> Echtzeit-Wert plus Tagesmaximum mit Push-Alarm.</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg><span><strong>Helligkeit:</strong> Lux-Verlauf — perfekt für Solar- und Landwirtschafts-KPIs.</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg><span><strong>Klimaparameter:</strong> Temperatur, Feuchte, Druck — kombinierbar in einem Chart.</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg><span><strong>Globalstrahlung:</strong> Energieertrag und Verschattung quantifizieren.</span></li>
+                    </ul>
+                    <a href="https://sentinum.de/de/helios" class="link">Umweltsensor Helios entdecken →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ===== CONNECTIVITY ===== -->
+    <section class="section" id="connectivity">
+        <div class="container">
+            <div class="ta-c max-720 center mb-48">
+                <p class="eyebrow">Connectivity</p>
+                <h2 class="h2">Drei <span class="gradient-text">LPWAN-Protokolle</span> – eine Oberfläche</h2>
+                <p class="lead center">Egal welcher Funkstandard – Envira visualisiert alles in derselben Karte und Tabelle.</p>
+            </div>
+            <div class="conn">
+                <div class="conn-card">
+                    <div class="ci"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <path d="M5 12.55a11 11 0 0114 0M8.5 16a6 6 0 017 0M12 20h.01M2 8.82a15 15 0 0120 0" />
+                        </svg></div>
+                    <div class="cn">LoRaWAN®</div>
+                    <p>Lange Reichweite, ideal für Smart City, Agrar, große Areale.</p>
+                </div>
+                <div class="conn-card">
+                    <div class="ci"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5" />
+                            <circle cx="12" cy="12" r="2" />
+                            <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5M19.1 4.9C23 8.8 23 15.1 19.1 19" />
+                        </svg></div>
+                    <div class="cn">mioty®</div>
+                    <p>Robust gegen Interferenzen, bis 100.000 Knoten je Basisstation.</p>
+                </div>
+                <div class="conn-card">
+                    <div class="ci"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="5" y="2" width="14" height="20" rx="2" />
+                            <path d="M11 18h2" />
+                        </svg></div>
+                    <div class="cn">Cellular</div>
+                    <p>NB-IoT / LTE-CAT-M1 — mobile Stationen, Outdoor, weltweit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="section section-alt" id="features">
+        <div class="container">
+            <div class="max-720 mb-56">
+                <p class="eyebrow">Funktionen</p>
+                <h2 class="h2">Alles, was professionelles <span class="gradient-text">Umweltmonitoring</span> braucht</h2>
+                <p class="lead">Von der Live-Karte bis zur Wind-Rose – Envira bündelt den vollen Funktions­umfang einer modernen IoT-Plattform für Wetter und Umwelt.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z" />
+                            <path d="M9 3v15M15 6v15" />
+                        </svg></div>
+                    <h3>Live-Karte mit Cluster</h3>
+                    <p>Farbcodierte Marker, automatische Cluster-Auflösung beim Zoomen, Wartungsmodus pro Gerät.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 3v18h18" />
+                            <path d="m19 9-5 5-4-4-3 3" />
+                        </svg></div>
+                    <h3>Historische Charts</h3>
+                    <p>Bis zu 4 Messwerte gleichzeitig in einem Zeit­reihen­diagramm, frei wählbares Zeitfenster, CSV/PDF-Export.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+                            <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+                        </svg></div>
+                    <h3>Alarme & Schwellwerte</h3>
+                    <p>Mehrere alarmfähige Messwerte pro Gerät, kritische Schwellen separat, E-Mail- und Push-Empfänger.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 2v20M2 12h20" />
+                        </svg></div>
+                    <h3>Wind-Rose</h3>
+                    <p>360°-Diagramm für Windgeschwindigkeit und ‑richtung — historisch oder live.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 16l3-8 4 5 3-3 4 6" />
+                            <path d="M3 22h18" />
+                        </svg></div>
+                    <h3>Regen-Statistik</h3>
+                    <p>Niederschlag aggregiert pro Stunde, Tag, Woche und Monat — als Balken oder Linie.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                            <polyline points="14 2 14 8 20 8" />
+                        </svg></div>
+                    <h3>Reports</h3>
+                    <p>Tages-, Wochen-, Monatsberichte – CSV/PDF, mehrere Geräte, automatischer E-Mail-Versand.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 01-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 011-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 011.52 0C14.51 3.81 17 5 19 5a1 1 0 011 1z" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg></div>
+                    <h3>Rollen & SSO</h3>
+                    <p>Tenant-Admin, Customer, Sub-Customer. Single Sign-On über die Starvice-Anwendercloud.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 2a14.5 14.5 0 010 20 14.5 14.5 0 010-20M2 12h20" />
+                        </svg></div>
+                    <h3>Webbasiert & responsive</h3>
+                    <p>Kein App-Download. Desktop, Tablet, Smartphone — mit WebSocket-Echtzeit-Push.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <ellipse cx="12" cy="5" rx="9" ry="3" />
+                            <path d="M3 5v14a9 3 0 0018 0V5" />
+                            <path d="M3 12a9 3 0 0018 0" />
+                        </svg></div>
+                    <h3>Datahub-API</h3>
+                    <p>Roh- und Aggregatdaten via Datahub in eigene Systeme — REST-API und Webhooks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BRANCHEN ===== -->
+    <section class="section" id="branchen">
+        <div class="container">
+            <div class="ta-c max-720 center mb-56">
+                <p class="eyebrow">Branchen</p>
+                <h2 class="h2">Wo Envira <span class="gradient-text">eingesetzt wird</span></h2>
+                <p class="lead center">Vom Smart Building bis zur Landwirtschaft – eine Plattform für jede Umgebung.</p>
+            </div>
+            <div class="ind">
+                <div class="ind-card">
+                    <div class="ii"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 22a8 8 0 018-8M22 22a16 16 0 00-16-16M2 14a16 16 0 0116 16" />
+                        </svg></div>
+                    <div class="it">Landwirtschaft</div>
+                    <p>Mikroklima auf Feldern, Bewässerung & Frostwarnung.</p>
+                </div>
+                <div class="ind-card">
+                    <div class="ii"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="16" height="20" x="4" y="2" rx="2" ry="2" />
+                            <path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01" />
+                        </svg></div>
+                    <div class="it">Smart City</div>
+                    <p>Stadtklima, Luftqualität, UV-Belastung im urbanen Raum.</p>
+                </div>
+                <div class="ind-card">
+                    <div class="ii"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="4" />
+                            <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2" />
+                        </svg></div>
+                    <div class="it">Solar & Energie</div>
+                    <p>Globalstrahlung und Wind für Anlagenplanung & Forecasting.</p>
+                </div>
+                <div class="ind-card">
+                    <div class="ii"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 21h18M5 21V8l7-5 7 5v13M9 12h6M9 16h6" />
+                        </svg></div>
+                    <div class="it">Facility Management</div>
+                    <p>Außenklima, Wettereinflüsse auf Gebäude und Technik.</p>
+                </div>
+                <div class="ind-card">
+                    <div class="ii"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 20a2 2 0 002 2h16a2 2 0 002-2V8l-7 5V8l-7 5V4a2 2 0 00-2-2H4a2 2 0 00-2 2z" />
+                        </svg></div>
+                    <div class="it">Industrie & Logistik</div>
+                    <p>Außenlager, Standortwetter, Wind- und Frostwarnungen.</p>
+                </div>
+                <div class="ind-card">
+                    <div class="ii"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 12c2-3 4-3 6-3s4 0 6 3 4 3 6 3" />
+                            <path d="M3 6c2-3 4-3 6-3s4 0 6 3 4 3 6 3M3 18c2-3 4-3 6-3s4 0 6 3 4 3 6 3" />
+                        </svg></div>
+                    <div class="it">Forschung & Bildung</div>
+                    <p>Klimadaten-Erhebung, Citizen Science, Langzeitstudien.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PLATFORM ===== -->
+    <section class="section section-alt" id="platform">
+        <div class="container">
+            <div class="ta-c max-720 center mb-48">
+                <p class="eyebrow">Sentinum Service Platform</p>
+                <h2 class="h2">One Platform. <span class="gradient-text">All Tools.</span></h2>
+                <p class="lead center">Envira ist Teil eines integrierten Ökosystems aus Sensorik, Daten-Backbone und Visualisierung – alles aus einer Hand.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <ellipse cx="12" cy="5" rx="9" ry="3" />
+                            <path d="M3 5v14a9 3 0 0018 0V5" />
+                            <path d="M3 12a9 3 0 0018 0" />
+                        </svg></div>
+                    <h3>Sentinum Datahub</h3>
+                    <p>Daten-Backbone für alle Sensoren — REST-API, Webhooks und MQTT für Drittsysteme.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="7" height="7" rx="1" />
+                            <rect x="14" y="3" width="7" height="7" rx="1" />
+                            <rect x="3" y="14" width="7" height="7" rx="1" />
+                            <rect x="14" y="14" width="7" height="7" rx="1" />
+                        </svg></div>
+                    <h3>Starvice Anwendercloud</h3>
+                    <p>Single Sign-On in alle Sentinum-Apps: Envira, Orelia, IOWA, Domira – ein Login, ein UI.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg></div>
+                    <h3>Sensorik aus einer Hand</h3>
+                    <p>GAIA, Helios und die ganze Sentinum-Familie — entwickelt und gefertigt in Deutschland.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="ta-c max-720 center mb-48">
+                <p class="eyebrow">FAQ</p>
+                <h2 class="h2">Häufige Fragen</h2>
+            </div>
+            <div class="faq">
+                <details class="faq-item" open>
+                    <summary>Was ist Envira?</summary>
+                    <p>Envira ist die Umwelt- und Wettermonitoring-App in der Sentinum Anwendercloud Starvice. Sie zeigt Ihre GAIA- und Helios-Geräte auf einer Karte, in Listen und mit vollständiger Historie pro Gerät.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Welche Sensoren sind in Envira integriert?</summary>
+                    <p>Aktuell die Wetterstation GAIA und der Umweltsensor Helios. Beide werden automatisch erkannt, geo-positioniert und mit allen Messwerten visualisiert.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Welche Funktechnologien werden unterstützt?</summary>
+                    <p>GAIA und Helios sind in Varianten für LoRaWAN, mioty und NB-IoT verfügbar. Envira visualisiert alle Funkstandards in derselben Oberfläche.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Welche Messwerte zeigt Envira an?</summary>
+                    <p>Temperatur, Feuchte, Luftdruck, Niederschlag, Windgeschwindigkeit & ‑richtung, UV-Index, Helligkeit (Lux) sowie Globalstrahlung — abhängig vom Sensor-Typ.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Kann ich Daten exportieren oder per API abgreifen?</summary>
+                    <p>Ja. Envira bietet CSV- und PDF-Export pro Gerät und Zeitraum. Für maschinelle Integrationen steht zusätzlich der Sentinum Datahub mit REST-API, Webhooks und MQTT zur Verfügung.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Wie schnell bin ich live?</summary>
+                    <p>In zwei Schritten: Sensor montieren und einschalten — Envira erkennt das Gerät automatisch und zeigt Live-Werte ohne Konfiguration.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section cta" id="kontakt">
+        <div class="container">
+            <h2>Bereit für Ihr <span class="gradient-text">Umwelt-Dashboard</span>?</h2>
+            <p>Starten Sie mit Envira und erleben Sie, wie einfach Wetter- und Umweltmonitoring mit Sentinum funktioniert.</p>
+            <div class="cta-row" style="justify-content:center">
+                <a href="https://starvice.sentinum.de" class="btn btn-primary">Jetzt einloggen →</a>
+                <a href="mailto:info@sentinum.de" class="btn btn-ghost">Demo anfordern</a>
+            </div>
+        </div>
+    </section>
+  {% module "page_footer" path="/Homepage V2/Sentinum_Footer.module", label="Footer" %}
+  {{ standard_footer_includes }}
+
+</body>
+
+</html>

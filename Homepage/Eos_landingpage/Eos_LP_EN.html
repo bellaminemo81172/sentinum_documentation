@@ -1,0 +1,2263 @@
+<!--
+  templateType: "page"
+  isAvailableForNewContent: true
+-->
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Level Monitoring – EOS-R Radar &amp; EOS420 with Orelia Cloud | Sentinum</title>
+    <meta name="description" content="Drahtloses Füllstandmonitoring von Sentinum: EOS-R 60 GHz Radar und EOS420 für 4–20 mA Pegelsonden mit Orelia Cloud – Volumen, Gewicht und Füllstand in %, Frühwarnung und automatisierte Dokumentation." />
+    <meta property="og:title" content="Füllstandmonitoring – EOS-R Radar & EOS420 mit Orelia Cloud" />
+    <meta property="og:description" content="Keine leeren Fahrten, keine überlaufenden Tanks: Füllstände drahtlos erfassen, Volumen/Gewicht ausgeben und Befüllungen/Leerungen automatisch alarmieren." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="de_DE" />
+    <link rel="canonical" href="https://sentinum.de/fuellstandmonitoring" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --background: 216 24% 8%;
+            --foreground: 210 20% 92%;
+            --muted: 213 18% 62%;
+            --surface: 214 20% 11%;
+            --surface-2: 214 20% 14%;
+            --border: 213 20% 20%;
+            --primary: 17 89% 48%;
+            --primary-light: 20 89% 55%;
+            --primary-foreground: 0 0% 100%;
+            --radius: 12px;
+            --font-heading: "Space Grotesk", system-ui, sans-serif;
+            --font-body: "DM Sans", system-ui, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: hsl(var(--background));
+            color: hsl(var(--foreground));
+            font-family: var(--font-body);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: min(1160px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 96px 0;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: hsl(var(--primary));
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 28px;
+            height: 2px;
+            background: hsl(var(--primary));
+            border-radius: 99px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .button-row {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 12px 22px;
+            border-radius: 10px;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            transition: transform .2s ease, border-color .2s ease, background .2s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+        }
+
+        .button-primary {
+            background: hsl(var(--primary));
+            color: hsl(var(--primary-foreground));
+        }
+
+        .button-secondary {
+            border: 1px solid hsl(var(--border));
+            color: hsl(var(--foreground));
+            background: hsl(var(--surface) / .45);
+        }
+
+        .button-secondary:hover {
+            border-color: hsl(var(--primary) / .45);
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            border-bottom: 1px solid hsl(var(--border));
+            background: hsl(var(--background) / .86);
+            backdrop-filter: blur(16px);
+        }
+
+        .nav {
+            min-height: 74px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            font-family: var(--font-heading);
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            color: hsl(var(--muted));
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: hsl(var(--foreground));
+        }
+
+        .hero {
+            position: relative;
+            min-height: 720px;
+            display: flex;
+            align-items: center;
+            padding: 92px 0 120px;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: -20% -10% auto auto;
+            width: 620px;
+            height: 620px;
+            border-radius: 999px;
+            background: radial-gradient(circle, hsl(var(--primary) / .16), transparent 66%);
+            filter: blur(16px);
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1.05fr .95fr;
+            align-items: center;
+            gap: 72px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin: 0;
+            font-family: var(--font-heading);
+            line-height: 1.08;
+        }
+
+        h1 {
+            margin-top: 18px;
+            max-width: 760px;
+            font-size: clamp(42px, 6vw, 74px);
+        }
+
+        h2 {
+            font-size: clamp(30px, 4vw, 48px);
+        }
+
+        h3 {
+            font-size: 22px;
+        }
+
+        .lead {
+            margin: 24px 0 34px;
+            max-width: 640px;
+            color: hsl(var(--muted));
+            font-size: 20px;
+            line-height: 1.7;
+        }
+
+        .hero-card {
+            position: relative;
+            border: 1px solid hsl(var(--border));
+            border-radius: 24px;
+            background: linear-gradient(180deg, hsl(var(--surface-2) / .92), hsl(var(--surface) / .72));
+            padding: 24px;
+            box-shadow: 0 34px 80px hsl(0 0% 0% / .42);
+        }
+
+        .hero-card img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: contain;
+            border-radius: 18px;
+            background: hsl(var(--background) / .5);
+        }
+
+        .signal-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .signal-strip span {
+            border: 1px solid hsl(var(--border));
+            border-radius: 10px;
+            padding: 12px 10px;
+            color: hsl(var(--muted));
+            text-align: center;
+            font-size: 13px;
+            font-weight: 700;
+            background: hsl(var(--background) / .38);
+        }
+
+        .steps-section {
+            background: hsl(var(--surface) / .32);
+            border-top: 1px solid hsl(var(--border));
+            border-bottom: 1px solid hsl(var(--border));
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 44px;
+        }
+
+        .step {
+            position: relative;
+            border: 1px solid hsl(var(--border));
+            border-radius: 20px;
+            padding: 32px 28px;
+            background: hsl(var(--surface) / .58);
+            overflow: hidden;
+        }
+
+        .step-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            background: hsl(var(--primary) / .12);
+            color: hsl(var(--primary));
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 20px;
+            margin-bottom: 22px;
+        }
+
+        .step p {
+            margin: 10px 0 0;
+            color: hsl(var(--muted));
+        }
+
+        .step-pictogram {
+            position: absolute;
+            top: 26px;
+            right: 24px;
+            width: 56px;
+            height: 56px;
+            color: hsl(var(--primary) / .55);
+            opacity: .9;
+        }
+
+        .step-pictogram svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 38px;
+        }
+
+        .card {
+            border: 1px solid hsl(var(--border));
+            border-radius: 18px;
+            background: hsl(var(--surface) / .58);
+            padding: 26px;
+        }
+
+        .card p {
+            margin: 12px 0 0;
+            color: hsl(var(--muted));
+        }
+
+        .icon {
+            width: 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            margin-bottom: 22px;
+            border-radius: 12px;
+            background: hsl(var(--primary) / .12);
+            color: hsl(var(--primary));
+            font-weight: 800;
+        }
+
+        .split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .split.reverse .visual {
+            order: -1;
+        }
+
+        .visual {
+            border: 1px solid hsl(var(--border));
+            border-radius: 24px;
+            overflow: hidden;
+            background: hsl(var(--surface) / .4);
+            box-shadow: 0 30px 70px hsl(0 0% 0% / .38);
+        }
+
+        .visual img {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 4/3;
+            object-fit: contain;
+            background: hsl(var(--background) / .5);
+        }
+
+        .spec-list {
+            display: grid;
+            gap: 12px;
+            margin-top: 26px;
+        }
+
+        .spec {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 16px 0;
+            border-bottom: 1px solid hsl(var(--border));
+            color: hsl(var(--muted));
+        }
+
+        .spec strong {
+            color: hsl(var(--foreground));
+            font-family: var(--font-heading);
+        }
+
+        .copy p {
+            color: hsl(var(--muted));
+            font-size: 18px;
+            margin: 20px 0 0;
+            max-width: 610px;
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+            margin: 26px 0 0;
+            display: grid;
+            gap: 12px;
+        }
+
+        .checklist li {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            color: hsl(var(--foreground));
+        }
+
+        .checklist li::before {
+            content: "✓";
+            flex-shrink: 0;
+            width: 22px;
+            height: 22px;
+            border-radius: 999px;
+            background: hsl(var(--primary) / .16);
+            color: hsl(var(--primary));
+            display: grid;
+            place-items: center;
+            font-weight: 800;
+            font-size: 13px;
+            margin-top: 3px;
+        }
+
+        .orelia-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .orelia-split.reverse .orelia-split-media {
+            order: -1;
+        }
+
+        .orelia-split-media {
+            border: 1px solid hsl(var(--border));
+            border-radius: 20px;
+            overflow: hidden;
+            background: hsl(var(--surface) / .5);
+            box-shadow: 0 24px 60px hsl(0 0% 0% / .35);
+        }
+
+        .orelia-split-media img {
+            width: 100%;
+            aspect-ratio: 16/10;
+            object-fit: cover;
+            display: block;
+        }
+
+        .orelia-split-num {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 14px;
+            color: hsl(var(--primary));
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .orelia-split h3 {
+            font-size: 30px;
+            margin-bottom: 14px;
+        }
+
+        .orelia-split>div>p {
+            color: hsl(var(--muted));
+            font-size: 17px;
+            margin: 0 0 20px;
+        }
+
+        /* Bausteine card thumbnails */
+        .module-thumb {
+            border-radius: 14px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border: 1px solid hsl(var(--border));
+        }
+
+        .module-thumb img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            display: block;
+        }
+
+
+        .module-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            margin-top: 44px;
+            text-align: left;
+        }
+
+        .module-card {
+            border: 1px solid hsl(var(--border));
+            border-radius: 20px;
+            padding: 34px 30px;
+            background: hsl(var(--surface) / .58);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .module-card>p {
+            flex: 1;
+            color: hsl(var(--muted));
+            margin: 0 0 20px;
+        }
+
+        .text-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: hsl(var(--primary));
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 15px;
+            margin-top: 20px;
+        }
+
+        .text-link:hover {
+            text-decoration: underline;
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 999px;
+            background: hsl(var(--primary) / .14);
+            color: hsl(var(--primary));
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .module-card h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .industries {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 38px;
+        }
+
+        .industry {
+            border: 1px solid hsl(var(--border));
+            border-radius: 18px;
+            padding: 26px;
+            background: hsl(var(--surface) / .58);
+        }
+
+        .industry h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .industry p {
+            margin: 0;
+            color: hsl(var(--muted));
+            font-size: 15px;
+        }
+
+        .hardware-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            margin-top: 44px;
+        }
+
+        .hardware-card {
+            border: 1px solid hsl(var(--border));
+            border-radius: 20px;
+            padding: 34px 30px;
+            background: hsl(var(--surface) / .58);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hardware-card .module-thumb img {
+            aspect-ratio: 4/3;
+        }
+
+        .hardware-card ul {
+            flex: 1;
+        }
+
+        .compliance-card {
+            display: grid;
+            grid-template-columns: 1.15fr .85fr;
+            gap: 48px;
+            align-items: center;
+            border: 1px solid hsl(var(--primary) / .4);
+            border-radius: 24px;
+            padding: 44px;
+            background: linear-gradient(135deg, hsl(var(--surface-2) / .8), hsl(var(--surface) / .4));
+        }
+
+        .compliance-spec {
+            border: 1px solid hsl(var(--border));
+            border-radius: 18px;
+            padding: 26px 24px;
+            background: hsl(var(--background) / .5);
+        }
+
+        .compliance-spec-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 14px;
+            margin-bottom: 6px;
+            border-bottom: 1px solid hsl(var(--border));
+            color: hsl(var(--muted));
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .compliance-tag {
+            color: hsl(var(--primary));
+        }
+
+        .cta {
+            text-align: center;
+            padding: 92px 0;
+            background: linear-gradient(180deg, hsl(var(--surface) / .28), hsl(var(--background)));
+        }
+
+        .cta p {
+            margin: 20px auto 32px;
+            max-width: 620px;
+            color: hsl(var(--muted));
+            font-size: 18px;
+        }
+
+        footer {
+            border-top: 1px solid hsl(var(--border));
+            padding: 34px 0;
+            color: hsl(var(--muted));
+            font-size: 14px;
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 72px 0 86px;
+            }
+
+            .hero-grid,
+            .split,
+            .orelia-split,
+            .compliance-card,
+            .module-grid,
+            .hardware-grid {
+                grid-template-columns: 1fr;
+                gap: 38px;
+            }
+
+            .split.reverse .visual,
+            .orelia-split.reverse .orelia-split-media {
+                order: 0;
+            }
+
+            .cards,
+            .steps,
+            .industries {
+                grid-template-columns: 1fr;
+            }
+
+            .compliance-card {
+                padding: 28px;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .container {
+                width: min(100% - 28px, 1160px);
+            }
+
+            .section {
+                padding: 72px 0;
+            }
+
+            h1 {
+                font-size: 38px;
+            }
+
+            .lead {
+                font-size: 18px;
+            }
+
+            .signal-strip {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-card {
+                padding: 14px;
+                border-radius: 18px;
+            }
+
+            .button {
+                width: 100%;
+            }
+        }
+            .language-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: hsl(var(--muted));
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.language-links a:hover {
+  color: hsl(var(--foreground));
+}
+  #produkte {
+    padding: 96px 0;
+    background: hsl(var(--surface) / 0.4);
+}
+
+#produkte .container-main {
+    width: min(1160px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+#produkte .max-w-3xl {
+    max-width: 768px;
+}
+
+#produkte .mb-12 {
+    margin-bottom: 48px;
+}
+
+#produkte .mb-4 {
+    margin-bottom: 16px;
+}
+
+#produkte .mb-3 {
+    margin-bottom: 12px;
+}
+
+#produkte .flex {
+    display: flex;
+}
+
+#produkte .items-center {
+    align-items: center;
+}
+
+#produkte .items-start {
+    align-items: flex-start;
+}
+
+#produkte .justify-center {
+    justify-content: center;
+}
+
+#produkte .gap-2 {
+    gap: 8px;
+}
+
+#produkte .gap-3 {
+    gap: 12px;
+}
+
+#produkte .gap-6 {
+    gap: 24px;
+}
+
+#produkte .w-10 {
+    width: 40px;
+}
+
+#produkte .h-10 {
+    height: 40px;
+}
+
+#produkte .w-5 {
+    width: 20px;
+}
+
+#produkte .h-5 {
+    height: 20px;
+}
+
+#produkte .w-3\.5 {
+    width: 14px;
+}
+
+#produkte .h-3\.5 {
+    height: 14px;
+}
+
+#produkte .rounded-xl {
+    border-radius: 12px;
+}
+
+#produkte .rounded-lg {
+    border-radius: 12px;
+}
+
+#produkte .bg-primary\/10 {
+    background: hsl(var(--primary) / 0.10);
+}
+
+#produkte .bg-surface {
+    background: hsl(var(--surface));
+}
+
+#produkte .bg-surface\/40 {
+    background: hsl(var(--surface) / 0.40);
+}
+
+#produkte .bg-background\/40 {
+    background: hsl(var(--background) / 0.40);
+}
+
+#produkte .text-primary {
+    color: hsl(var(--primary));
+}
+
+#produkte .text-primary-foreground {
+    color: hsl(var(--primary-foreground));
+}
+
+#produkte .text-muted-foreground {
+    color: hsl(var(--muted));
+}
+
+#produkte .text-sm {
+    font-size: 14px;
+}
+
+#produkte .text-\[15px\] {
+    font-size: 15px;
+}
+
+#produkte .text-\[14px\] {
+    font-size: 14px;
+}
+
+#produkte .text-\[12px\] {
+    font-size: 12px;
+}
+
+#produkte .text-\[16px\] {
+    font-size: 16px;
+}
+
+#produkte .text-\[clamp\(24px\,3vw\,32px\)\] {
+    font-size: clamp(24px, 3vw, 32px);
+}
+
+#produkte .font-heading {
+    font-family: var(--font-heading);
+}
+
+#produkte .font-semibold {
+    font-weight: 600;
+}
+
+#produkte .font-bold {
+    font-weight: 700;
+}
+
+#produkte .uppercase {
+    text-transform: uppercase;
+}
+
+#produkte .tracking-wider {
+    letter-spacing: 1.5px;
+}
+
+#produkte .grid {
+    display: grid;
+}
+
+#produkte .grid-cols-1 {
+    grid-template-columns: 1fr;
+}
+
+#produkte .border {
+    border: 1px solid hsl(var(--border));
+}
+
+#produkte .border-border {
+    border-color: hsl(var(--border));
+}
+
+#produkte .border-b {
+    border-bottom: 1px solid hsl(var(--border));
+}
+
+#produkte .overflow-hidden {
+    overflow: hidden;
+}
+
+#produkte .transition-all {
+    transition: all 0.3s ease;
+}
+
+#produkte .duration-300 {
+    transition-duration: 0.3s;
+}
+
+#produkte .flex-col {
+    flex-direction: column;
+}
+
+#produkte .flex-1 {
+    flex: 1;
+}
+
+#produkte .p-6 {
+    padding: 24px;
+}
+
+#produkte .mb-2 {
+    margin-bottom: 8px;
+}
+
+#produkte .leading-snug {
+    line-height: 1.3;
+}
+
+#produkte .leading-relaxed {
+    line-height: 1.7;
+}
+
+#produkte .mb-5 {
+    margin-bottom: 20px;
+}
+
+#produkte .inline-flex {
+    display: inline-flex;
+}
+
+#produkte .px-4 {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+#produkte .py-2\.5 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#produkte .hover\:opacity-90:hover {
+    opacity: 0.9;
+}
+
+#produkte .hover\:-translate-y-0\.5:hover {
+    transform: translateY(-2px);
+}
+
+#produkte .hover\:border-primary\/25:hover {
+    border-color: hsl(var(--primary) / 0.25);
+}
+
+#produkte .hover\:shadow-\[0_0_30px_-10px_hsl\(var\(--primary\)\/0\.25\)\]:hover {
+    box-shadow: 0 0 30px -10px hsl(var(--primary) / 0.25);
+}
+
+#produkte img.max-w-full {
+    max-width: 100%;
+}
+
+#produkte img.h-auto {
+    height: auto;
+}
+
+#produkte img.object-contain {
+    object-fit: contain;
+}
+
+#produkte img.block {
+    display: block;
+}
+
+#produkte h2 {
+    margin: 0;
+    font-family: var(--font-heading);
+    line-height: 1.15;
+}
+
+#produkte h3 {
+    margin: 0;
+    font-family: var(--font-heading);
+    line-height: 1.3;
+}
+
+#produkte p {
+    margin-top: 0;
+}
+
+@media (min-width: 768px) {
+    #produkte .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    #produkte .lg\:grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    #produkte {
+        padding: 72px 0;
+    }
+}
+
+@media (max-width: 560px) {
+    #produkte .container-main {
+        width: min(100% - 28px, 1160px);
+    }
+}
+      #produkte .inline-flex {
+    display: inline-flex;
+}
+
+#produkte .items-center {
+    align-items: center;
+}
+
+#produkte .gap-2 {
+    gap: 8px;
+}
+
+#produkte .px-4 {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+#produkte .py-2\.5 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#produkte .rounded-lg {
+    border-radius: 12px;
+}
+
+#produkte .font-heading {
+    font-family: var(--font-heading);
+}
+
+#produkte .font-semibold {
+    font-weight: 600;
+}
+
+#produkte .text-\[14px\] {
+    font-size: 14px;
+}
+
+#produkte .bg-primary {
+    background: hsl(var(--primary));
+}
+
+#produkte .text-primary-foreground {
+    color: hsl(var(--primary-foreground));
+}
+
+#produkte .transition-all {
+    transition: all 0.3s ease;
+}
+
+#produkte .hover\:opacity-90:hover {
+    opacity: 0.9;
+}
+
+#produkte .hover\:-translate-y-0\.5:hover {
+    transform: translateY(-2px);
+}
+      :root {
+    --background: 216 24% 8%;
+    --foreground: 210 20% 90%;
+    --surface: 214 20% 11%;
+    --primary: 17 89% 48%;
+    --primary-light: 20 89% 53%;
+    --muted-foreground: 213 20% 55%;
+    --border: 213 20% 18%;
+    --radius: .75rem;
+    --font-heading: "Space Grotesk", sans-serif;
+    --font-body: "DM Sans", sans-serif;
+}
+
+.section-padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.container-main {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.max-w-2xl {
+    max-width: 42rem;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mb-16 {
+    margin-bottom: 4rem;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.mb-3 {
+    margin-bottom: .75rem;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.gap-6 {
+    gap: 1.5rem;
+}
+
+.bg-surface\/40 {
+    background: hsl(var(--surface)/.4);
+}
+
+.bg-surface {
+    background: hsl(var(--surface));
+}
+
+.border {
+    border-width: 1px;
+    border-style: solid;
+}
+
+.border-border {
+    border-color: hsl(var(--border));
+}
+
+.rounded-2xl {
+    border-radius: 1rem;
+}
+
+.p-8 {
+    padding: 2rem;
+}
+
+.transition-all {
+    transition: all .15s cubic-bezier(.4, 0, .2, 1);
+}
+
+.duration-300 {
+    transition-duration: .3s;
+}
+
+.hover\:border-primary\/25:hover {
+    border-color: hsl(var(--primary)/.25);
+}
+
+.hover\:-translate-y-1:hover {
+    transform: translateY(-.25rem);
+}
+
+.hover\:shadow-glow:hover {
+    box-shadow: 0 0 40px -12px hsl(var(--primary)/.35);
+}
+
+.text-primary {
+    color: hsl(var(--primary));
+}
+
+.text-muted-foreground {
+    color: hsl(var(--muted-foreground));
+}
+
+.text-sm {
+    font-size: .875rem;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.text-\[15px\] {
+    font-size: 15px;
+}
+
+.text-\[clamp\(32px\,4vw\,44px\)\] {
+    font-size: clamp(32px, 4vw, 44px);
+}
+
+.font-heading {
+    font-family: var(--font-heading);
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.tracking-wider {
+    letter-spacing: .05em;
+}
+
+.gradient-text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+}
+
+.sensor-img {
+    background: radial-gradient(circle at 50% 55%, hsl(var(--primary)/.18), transparent 60%);
+    border-radius: 1.25rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sensor-img img {
+    max-height: 340px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h2, h3 {
+    margin: 0;
+    font-family: var(--font-heading);
+    line-height: 1.2;
+}
+
+p {
+    margin: 0;
+    font-family: var(--font-body);
+}
+
+body {
+    font-family: var(--font-body);
+    color: hsl(var(--foreground));
+    background: hsl(var(--background));
+}
+
+@media (min-width: 768px) {
+    .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+      :root {
+    --background: 216 24% 8%;
+    --foreground: 210 20% 90%;
+    --surface: 214 20% 11%;
+    --primary: 17 89% 48%;
+    --primary-foreground: 0 0% 100%;
+    --muted-foreground: 213 20% 55%;
+    --border: 213 20% 18%;
+    --radius: .75rem;
+    --font-heading: "Space Grotesk", sans-serif;
+    --font-body: "DM Sans", sans-serif;
+}
+
+#produkte {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: hsl(var(--surface) / .4);
+}
+
+#produkte .container-main {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+#produkte .max-w-3xl {
+    max-width: 48rem;
+}
+
+#produkte .mb-12 {
+    margin-bottom: 3rem;
+}
+
+#produkte .mb-5 {
+    margin-bottom: 1.25rem;
+}
+
+#produkte .mb-4 {
+    margin-bottom: 1rem;
+}
+
+#produkte .mb-3 {
+    margin-bottom: .75rem;
+}
+
+#produkte .text-sm {
+    font-size: .875rem;
+}
+
+#produkte .text-\[12px\] {
+    font-size: 12px;
+}
+
+#produkte .text-\[13px\] {
+    font-size: 13px;
+}
+
+#produkte .text-\[14px\] {
+    font-size: 14px;
+}
+
+#produkte .text-\[15px\] {
+    font-size: 15px;
+}
+
+#produkte .text-\[16px\] {
+    font-size: 16px;
+}
+
+#produkte .text-\[clamp\(24px\,3vw\,32px\)\] {
+    font-size: clamp(24px, 3vw, 32px);
+}
+
+#produkte .font-heading {
+    font-family: var(--font-heading);
+}
+
+#produkte .font-semibold {
+    font-weight: 600;
+}
+
+#produkte .font-bold {
+    font-weight: 700;
+}
+
+#produkte .uppercase {
+    text-transform: uppercase;
+}
+
+#produkte .tracking-wider {
+    letter-spacing: .05em;
+}
+
+#produkte .text-primary {
+    color: hsl(var(--primary));
+}
+
+#produkte .text-muted-foreground {
+    color: hsl(var(--muted-foreground));
+}
+
+#produkte .text-primary-foreground {
+    color: hsl(var(--primary-foreground));
+}
+
+#produkte .flex {
+    display: flex;
+}
+
+#produkte .items-center {
+    align-items: center;
+}
+
+#produkte .justify-center {
+    justify-content: center;
+}
+
+#produkte .flex-col {
+    flex-direction: column;
+}
+
+#produkte .flex-1 {
+    flex: 1 1 0%;
+}
+
+#produkte .inline-flex {
+    display: inline-flex;
+}
+
+#produkte .gap-2 {
+    gap: .5rem;
+}
+
+#produkte .gap-3 {
+    gap: .75rem;
+}
+
+#produkte .gap-6 {
+    gap: 1.5rem;
+}
+
+#produkte .grid {
+    display: grid;
+}
+
+#produkte .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+    #produkte .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    #produkte .lg\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+#produkte .bg-surface {
+    background: hsl(var(--surface));
+}
+
+#produkte .bg-background\/40 {
+    background: hsl(var(--background) / .4);
+}
+
+#produkte .bg-primary {
+    background: hsl(var(--primary));
+}
+
+#produkte .border {
+    border-width: 1px;
+    border-style: solid;
+}
+
+#produkte .border-b {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+#produkte .border-border {
+    border-color: hsl(var(--border));
+}
+
+#produkte .rounded-lg {
+    border-radius: var(--radius);
+}
+
+#produkte .rounded-xl {
+    border-radius: .875rem;
+}
+
+#produkte .overflow-hidden {
+    overflow: hidden;
+}
+
+#produkte .transition-all {
+    transition: all .15s cubic-bezier(.4, 0, .2, 1);
+}
+
+#produkte .duration-300 {
+    transition-duration: .3s;
+}
+
+#produkte .hover\:border-primary\/25:hover {
+    border-color: hsl(var(--primary) / .25);
+}
+
+#produkte .hover\:-translate-y-0\.5:hover {
+    transform: translateY(-.125rem);
+}
+
+#produkte .hover\:shadow-\[0_0_30px_-10px_hsl\(var\(--primary\)\/0\.25\)\]:hover {
+    box-shadow: 0 0 30px -10px hsl(var(--primary) / 0.25);
+}
+
+#produkte .max-w-full {
+    max-width: 100%;
+}
+
+#produkte .h-auto {
+    height: auto;
+}
+
+#produkte .object-contain {
+    object-fit: contain;
+}
+
+#produkte .block {
+    display: block;
+}
+
+#produkte .p-6 {
+    padding: 1.5rem;
+}
+
+#produkte .px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+#produkte .py-3 {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+}
+
+#produkte .leading-snug {
+    line-height: 1.375;
+}
+
+#produkte .leading-relaxed {
+    line-height: 1.625;
+}
+
+#produkte .w-3\.5 {
+    width: .875rem;
+}
+
+#produkte .h-3\.5 {
+    height: .875rem;
+}
+
+#produkte h2,
+#produkte h3,
+#produkte p,
+#produkte a {
+    margin-top: 0;
+}
+
+#produkte .section-badge-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #151c28;
+    color: #f65a0a;
+    flex-shrink: 0;
+}
+
+#produkte .section-badge-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+#produkte a.inline-flex.items-center.gap-2.px-5.py-3.rounded-xl.font-heading.font-semibold.text-\[13px\].bg-primary.text-primary-foreground {
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+#produkte a.inline-flex.items-center.gap-2.px-5.py-3.rounded-xl.font-heading.font-semibold.text-\[13px\].bg-primary.text-primary-foreground:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+}
+    </style>
+   {{ standard_header_includes }}
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Sentinum Füllstandmonitoring",
+            "brand": {
+                "@type": "Brand",
+                "name": "Sentinum"
+            },
+            "category": "Drahtloses Füllstandmonitoring mit EOS-R, EOS420 und Orelia",
+            "description": "Drahtlose Füllstandüberwachung mit 60 GHz Pulsradar (EOS-R) und 4–20 mA Pegelsonden (EOS420) plus Orelia Cloud – für optimierte Logistik, weniger leere Fahrten und automatisierte Dokumentation."
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav class="container nav" aria-label="Hauptnavigation">
+            <a class="brand" href="#top"><img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/sentinum-logo-weiss_orange.png" style="width:140px;height:auto;" a="">
+            <div class="nav-links">
+                <a href="#bausteine">Components</a>
+                <a href="#steps">How It Works</a>
+                <a href="#features">Orelia</a>
+                <a href="#hardware">Hardware</a>
+                <a href="#anwendungen">Applications</a>
+                <a href="#branchen">Industries</a>
+                <a href="#kontakt">Contact</a>
+            </div>
+              <div class="language-links">
+  <a href="https://landingpages.sentinum.de/de/eos-landing">DE</a>
+  <span>|</span>
+  <a href="https://landingpages.sentinum.de/en/eos-landing">EN</a>
+</div>
+        </a></nav>
+    </header>
+
+    <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container hero-grid">
+                <div>
+                    <span class="eyebrow">Level Monitoring</span>
+                    <h1 id="hero-title"><span class="gradient-text">Wirelessly track</span> fill levels—optimize logistics</h1>
+                    <p class="lead">With the EOS series and Orelia Cloud, you always know how much is inside—as volume, weight, or fill level in %. No unnecessary trips, no overflowing tanks: Filling and emptying are automatically flagged and fully documented.</p>
+                    <div class="button-row">
+                        <a class="button button-primary" href="https://sentinum.de/en/kontakt">Request a demo →</a>
+                        <a class="button button-secondary" href="mailto:info@sentinum.de?subject=Informationen%20F%C3%BCllstandmonitoring">More information</a>
+                        <a class="button button-secondary" href="https://shop.sentinum.de/collections/eos" target="_blank" rel="noopener noreferrer"> Shop ↗</a>
+                    </div>
+                </div>
+                <aside class="hero-card" aria-label="EOS Füllstandmonitoring">
+                    <img src="https://sentinum.de/hs-fs/hubfs/EOS-Website/seitlich.png?width=620&height=420&name=seitlich.png" alt="EOS Radar-Füllstandsensor 60 GHz von Sentinum" width="820" height="615" loading="eager" />
+                    <div class="signal-strip" aria-label="Kernfunktionen">
+                        <span>Volume · Weight</span>
+                        <span>Real-time Alerts</span>
+                        <span>Audit-ready</span>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section id="bausteine" class="section steps-section" aria-labelledby="bausteine-title">
+            <div class="container" style="text-align:center;">
+                <span class="eyebrow">Components</span>
+                <h2 id="bausteine-title" style="margin-top:14px;">A <span class="gradient-text">Platform for Level Measurement</span></h2>
+                <p style="color: hsl(var(--muted)); font-size: 18px; margin: 18px auto 0; max-width: 640px;">EOS sensors for any installation location and Orelia Cloud for configuration, alarms, and documentation—all in one view.</p>
+                <div class="module-grid">
+                    <article class="module-card">
+                        <div class="module-thumb">
+                            <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Orelia/Screenshot%202026-07-13%20154516.jpg" alt="Orelia Dashboard mit Füllstandverläufen" loading="lazy" />
+                        </div>
+                        <span class="pill">Web App</span>
+                        <h3>Orelia</h3>
+                        <p>Level dashboard with live readings in volume, weight, and percentage, alarm rules for filling and emptying, route planning, and audit-ready data export—without the need for your own server infrastructure.</p>
+                        <a class="text-link" href="https://sentinum.de/en/orelia">Learn more →</a>
+                    </article>
+                    <article class="module-card">
+                        <div class="module-thumb">
+                            <img src="https://sentinum.de/hubfs/EOS-Website/Front.png" alt="EOS Füllstandsensoren – EOS-R und EOS420" loading="lazy" />
+                        </div>
+                        <span class="pill">Hardware</span>
+                        <h3>EOS Series</h3>
+                        <p>EOS-R with contactless 60-GHz pulse radar or EOS420 for 4–20 mA level probes—same platform, same wireless standards: LoRaWAN®, mioty®, NB-IoT, and LTE-M.</p>
+                        <a class="text-link" href="https://sentinum.de/en/eos-landing" target="_blank" rel="noopener noreferrer">To the EOS overview ↗</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="steps" class="section" aria-labelledby="steps-title">
+            <div class="container">
+                <span class="eyebrow">Optimized in 3 steps</span>
+                <h2 id="steps-title">From measurement to an <span class="gradient-text">optimized route</span></h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-pictogram" aria-hidden="true">
+                            <svg viewbox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 10h28v44H18z"></path>
+                                <path d="M18 40h28"></path>
+                                <path d="M24 46h4M32 46h4M40 46h4"></path>
+                            </svg>
+                        </div>
+                        <div class="step-num">1</div>
+                        <h3>Measurement</h3>
+                        <p>The EOS-R measures non-contact using 60-GHz radar; the EOS420 reads data from connected 4–20 mA level probes—battery-powered and low-maintenance.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-pictogram" aria-hidden="true">
+                            <svg viewbox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M32 8v6M32 50v6M8 32h6M50 32h6"></path>
+                                <circle cx="32" cy="32" r="14"></circle>
+                                <path d="M26 32h12"></path>
+                            </svg>
+                        </div>
+                        <div class="step-num">2</div>
+                        <h3>Alarms</h3>
+                        <p>Orelia automatically notifies you when a container needs to be emptied, refilled, or when threshold values are exceeded.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-pictogram" aria-hidden="true">
+                            <svg viewbox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 8h22l10 10v38a4 4 0 0 1-4 4H18a4 4 0 0 1-4-4V12a4 4 0 0 1 4-4z"></path>
+                                <path d="M40 8v10h10"></path>
+                                <path d="M22 34h20M22 42h20M22 50h14"></path>
+                            </svg>
+                        </div>
+                        <div class="step-num">3</div>
+                        <h3>Optimize &amp; Document</h3>
+                        <p>Drive only to full or empty containers—trips, fillings, and emptying are fully logged and exported.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+      
+        <section id="produkte" class="section-padding bg-surface/40">
+            <div class="container-main">
+                <div class="max-w-3xl mb-12">
+                    <h2 class="font-heading font-bold text-[clamp(24px,3vw,32px)] mb-5">
+      <div class="flex items-center gap-3 mb-4">
+
+    <div class="section-badge-icon">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             stroke-linecap="round"
+             stroke-linejoin="round">
+            <path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/>
+            <path d="M9.6 4.6A2 2 0 1 1 11 8H2"/>
+            <path d="M12.6 19.4A2 2 0 1 0 14 16H2"/>
+        </svg>
+    </div>
+
+    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider">
+        EOS with Webapp
+    </div>
+
+</div>
+                    <h2 class="font-heading font-bold text-[clamp(24px,3vw,32px)] mb-3">Radar Level Sensor with Web App</h2>
+                    <p class="text-muted-foreground text-[15px]">Reliable level and distance measurement using radar technology for industrial applications, tanks, silos, shafts, and containers.</p>
+                </div>
+                <br>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                    <div class="bg-surface border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5 hover:shadow-[0_0_30px_-10px_hsl(var(--primary)/0.25)] flex flex-col">
+                    <div class="bg-background/40 border-b border-border flex items-center justify-center">
+    <img
+        src="https://shop.sentinum.de/cdn/shop/files/7809-EOS_ohne_G.png?v=1785186832&width=990"
+        alt="Febris Indoor CO2-Sensor zur drahtlosen Überwachung der Raumluftqualität mit Messung von CO₂, Temperatur, Luftfeuchte und Luftdruck über LoRaWAN®"
+       class="max-w-full h-auto object-contain block"
+        loading="lazy"
+    />
+</div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <div class="flex items-center gap-2 text-primary text-[12px] font-heading font-semibold uppercase tracking-wider mb-2">
+                            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/>
+    <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/>
+    <circle cx="12" cy="12" r="2"/>
+    <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/>
+    <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/>
+</svg>NB-IoT/LTE-CAT-M1</div>
+                            <h3 class="font-heading font-semibold text-[16px] mb-3 leading-snug">EOS Radar with Webapp</h3>
+                            <p class="text-muted-foreground text-[14px] leading-relaxed flex-1 mb-5">Wireless IoT radar level and distance sensor for tanks, silos, manholes and industrial applications, featuring NB-IoT/LTE-M connectivity, rugged IP69K protection and direct cloud integration for reliable monitoring without additional infrastructure.</p>
+                            <div><a href="https://shop.sentinum.de/products/radar-fullstandsensor-nb-iot-fur-ibc-tanks" target="_blank" rel="noopener" 
+                            class="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-heading font-semibold text-[13px] bg-primary text-primary-foreground">  View in the shop →</a></div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="bg-surface border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5 hover:shadow-[0_0_30px_-10px_hsl(var(--primary)/0.25)] flex flex-col">
+                       <div class="bg-background/40 border-b border-border flex items-center justify-center">
+                       
+                        <img
+        src="https://shop.sentinum.de/cdn/shop/files/7625-Dashboard_EOS.png?v=1784552399&width=990"
+        alt="Febris Indoor CO2-Sensor mit LED-Ampel zur drahtlosen Überwachung der Raumluftqualität über mioty®, mit Messung von CO₂, Temperatur, Luftfeuchte und Luftdruck"
+       class="max-w-full h-auto object-contain block"
+        loading="lazy"
+    />
+</div>
+                       
+                       
+                        <div class="p-6 flex flex-col flex-1">
+                            <div class="flex items-center gap-2 text-primary text-[12px] font-heading font-semibold uppercase tracking-wider mb-2">
+                              
+   <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/>
+    <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/>
+    <circle cx="12" cy="12" r="2"/>
+    <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/>
+    <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/>
+</svg>
+ NB-IoT/LTE-CAT-M1</div>
+                            <h3 class="font-heading font-semibold text-[16px] mb-3 leading-snug">EOS Radar with Webapp</h3>
+                            <p class="text-muted-foreground text-[14px] leading-relaxed flex-1 mb-5">Wireless IoT radar level and distance sensor with NB-IoT/LTE-M connectivity for reliable monitoring of tanks, silos, manholes and industrial assets, featuring direct cloud integration, GNSS positioning and rugged IP69K protection.</p>
+                            <div><a href="https://shop.sentinum.de/products/drahtloser-radar-fullstandsensor-nb-iot" target="_blank" rel="noopener" 
+                                   class="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-heading font-semibold text-[13px] bg-primary text-primary-foreground">  View in the shop →</a></div>
+                        </div>
+                    </div>
+                    
+                   
+                      
+        </section>
+
+        <section id="logistik" class="section steps-section" aria-labelledby="logistik-title">
+            <div class="container">
+                <div class="compliance-card">
+                    <div>
+                        <span class="eyebrow">Logistics Efficiency</span>
+                        <h2 id="logistik-title" style="margin-top:14px;">No More <span class="gradient-text">Redundant Routes</span> </h2>
+                        <p style="color: hsl(var(--muted)); font-size: 18px; margin: 20px 0 0; max-width: 560px;">Instead of visiting every container on a fixed schedule, Orelia shows you exactly which locations actually require attention. This saves kilometers, fuel, and labor hours—and documentation is generated automatically.</p>
+                        <ul class="checklist" style="margin-top: 24px;">
+                            <li><strong>Demand-based routes</strong> – only visit full or empty containers</li>
+                            <li><strong>Early warning</strong> for refills and emptying</li>
+                            <li><strong>Volume, weight, and %</strong> —output tailored to the process</li>
+                            <li><strong>Audit-ready reports</strong> by container, location, or time period</li>
+                        </ul>
+                        <div class="button-row" style="margin-top: 32px;">
+                            <a class="button button-primary" href="https://sentinum.de/en/kontakt">Request a demo →</a>
+                            <a class="button button-secondary" href="mailto:info@sentinum.de?subject=F%C3%BCllstand%20Logistik%20Setup">Discuss setup</a>
+                        </div>
+                    </div>
+                    <aside class="compliance-spec" aria-label="Ausgaben & Alarme">
+                        <div class="compliance-spec-head">
+                            <span>Expenses &amp; Alerts</span>
+                            <span class="compliance-tag">Flexible</span>
+                        </div>
+                        <div class="spec"><strong>Fill Level</strong><span>in %</span></div>
+                        <div class="spec"><strong>Volume</strong><span>Liters · m³</span></div>
+                        <div class="spec"><strong>Weight</strong><span>kg · t (at density)</span></div>
+                        <div class="spec"><strong>Alarms</strong><span>Full · Empty · Threshold</span></div>
+                        <div class="spec" style="border-bottom:none;"><strong>Export</strong><span>PDF · CSV · API</span></div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="section" aria-labelledby="features-title">
+            <div class="container">
+                <div style="text-align:center; max-width: 760px; margin: 0 auto;">
+                    <span class="eyebrow">Orelia Features</span>
+                    <h2 id="features-title" style="margin-top:14px;">Configure, <span class="gradient-text">alert, and analyze</span> fill levels</h2>
+                    <p style="color: hsl(var(--muted)); font-size: 18px; margin: 18px auto 0;">
+                        Everything you need for reliable level monitoring—in a single web interface.
+                    </p>
+                </div>
+
+                <div class="orelia-split" style="margin-top: 88px;">
+                    <div>
+                        <div class="orelia-split-num">01 · Level Configuration</div>
+                        <h3>Create a tank once—understand it everywhere</h3>
+                        <p>Define the geometry, nominal volume, and density for each tank. Orelia automatically converts the raw measurement value into volume, weight, and percentage.</p>
+                        <ul class="checklist">
+                            <li>Container geometries: cylinders, cuboids, IBCs, silos</li>
+                            <li>Conversion to <strong>volume (l/m³), weight (kg/t), and fill level in %</strong></li>
+                            <li>Density and offset calibration per asset</li>
+                            <li>Grouping by location, route, or customer</li>
+                        </ul>
+                    </div>
+                    <div class="orelia-split-media">
+                        <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Orelia/Screenshot%202026-07-13%20154300-1.png" 
+                             alt="Orelia Konfiguration von Behältern und Füllständen" loading="lazy" />
+                    </div>
+                </div>
+
+                <div class="orelia-split reverse" style="margin-top: 64px;">
+                    <div>
+                        <div class="orelia-split-num">02 · Warnings &amp; Alarms</div>
+                        <h3>Early warning for filling and emptying</h3>
+                        <p>Define thresholds for each tank or group—Orelia automatically notifies you when refilling or emptying is required.</p>
+                        <ul class="checklist">
+                            <li>Custom thresholds for <strong>full, empty, and critical levels</strong></li>
+                            <li>Alarms via email, SMS, and webhook</li>
+                            <li>Escalation levels and recipient lists</li>
+                            <li>Trend detection: consumption per hour/day</li>
+                        </ul>
+                    </div>
+                    <div class="orelia-split-media">
+                        <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Orelia/Screenshot%202026-07-13%20154008-1.png" 
+                             alt="Orelia Alarmregeln und Schwellwert-Konfiguration" loading="lazy" />
+                    </div>
+                </div>
+
+                <div class="orelia-split" style="margin-top: 64px;">
+                    <div>
+                        <div class="orelia-split-num">03 · Reports &amp; Documentation</div>
+                        <h3>Automated Documentation</h3>
+                        <p>Recurring reports, audit-ready exports, and a tamper-proof archive—for internal processes and external compliance requirements.</p>
+                        <ul class="checklist">
+                            <li>Automatic PDF reports (daily, weekly, monthly)</li>
+                            <li>CSV export by time period, location, and container</li>
+                            <li>Signed, tamper-proof archiving</li>
+                            <li>Consumption and filling history per asset</li>
+                        </ul>
+                    </div>
+                    <div class="orelia-split-media">
+                        <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Orelia/Screenshot%202026-07-13%20154739.jpg" 
+                             alt="Orelia Report-Ansicht mit Auswertungen" loading="lazy" />
+                    </div>
+                </div>
+
+                <div class="orelia-split reverse" style="margin-top: 64px;">
+                    <div>
+                        <div class="orelia-split-num">04 · API</div>
+                        <h3>Data in Your ERP and Scheduling Systems</h3>
+                        <p>Do you already have an ERP, routing, or logistics system? Orelia delivers fill level data and alerts directly via REST or Webhook.</p>
+                        <ul class="checklist">
+                            <li>REST API for measurement values, assets, and reports</li>
+                            <li>Webhook notifications for alarms and thresholds</li>
+                            <li>Payload decoder available as an NPM package</li>
+                        </ul>
+                    </div>
+                    <div class="orelia-split-media">
+                        <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webprodukt_Bild/Screenshot%202026-07-10%20102555.png" 
+                             alt="REST API und Webhook Integration" loading="lazy"  style="width:100%; height:100%; object-fit:contain;"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="hardware" class="section steps-section" aria-labelledby="hardware-title">
+            <div class="container">
+                <div style="text-align:center; max-width: 760px; margin: 0 auto;">
+                    <span class="eyebrow">Hardware</span>
+                    <h2 id="hardware-title" style="margin-top:14px;">Two technologies, <span class="gradient-text">one IoT ecosystem</span></h2>
+                    <p style="color: hsl(var(--muted)); font-size: 18px; margin: 18px auto 0;">
+                        Choose the EOS variant that best suits your measurement task and installation location. Both sensors use the same platform, the same wireless standards, and the same cloud integrations.
+                    </p>
+                </div>
+
+                <div class="hardware-grid">
+                    <article class="hardware-card">
+                        <div class="module-thumb">
+                            <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/EOS-Website/Front.png" alt="EOS-R Radar-Füllstandsensor 60 GHz" loading="lazy" />
+                        </div>
+                        <span class="pill">60 GHz Radar</span>
+                        <h3>EOS-R</h3>
+                        <p>Non-contact level measurement using 60-GHz pulse radar—directly on the surface, without contact with the medium. For liquids and bulk materials, open containers, shafts, and bodies of water.</p>
+                        <ul class="checklist">
+                            <li><strong>Range up to 10 m</strong> · ±10 mm absolute, 1 mm resolution</li>
+                            <li><strong>Liquids &amp; bulk materials</strong> · IBCs, tanks, channels, silos</li>
+                            <li>Low-maintenance &amp; wear-free · no contact with media</li>
+                            <li>IP69K · –25 °C to +85 °C · replaceable batteries</li>
+                            <li>LoRaWAN®, mioty®, NB-IoT &amp; LTE-M · Dedicated GNSS</li>
+                        </ul>
+                        <a class="text-link" href="https://sentinum.de/de/eos-radar" target="_blank" rel="noopener noreferrer">Go to the EOS-R product page → </a>
+                    </article>
+
+                    <article class="hardware-card">
+                        <div class="module-thumb">
+                            <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/EOS-Website/Front.png" alt="EOS420 IoT-Sensor für 4–20 mA Pegelsonden" loading="lazy" />
+                        </div>
+                        <span class="pill">M12 · 4–20 mA</span>
+                        <h3>EOS420</h3>
+                        <p>Wireless connection of external hydrostatic level probes via the rugged M12 connector. Ideal for wells, boreholes, groundwater monitoring stations, tanks, and shafts—anywhere radar reaches its limits.</p>
+                        <ul class="checklist">
+                            <li><strong>4–20 mA input</strong> · M12 · Industry standard</li>
+                            <li><strong>12 V sensor power supply</strong> for external probes (e.g., ifm PS3417)</li>
+                            <li>IP69K · –20 °C to +80 °C · replaceable batteries</li>
+                            <li>LoRaWAN®, mioty®, NB-IoT &amp; LTE-M</li>
+                            <li>Made in Germany</li>
+                        </ul>
+                        <a class="text-link" href="https://sentinum.de/en/eos-420" target="_blank" rel="noopener noreferrer">Go to the EOS420 product page → </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+      
+        <!-- BAUFORMEN -->
+        <section class="section-padding bg-surface/40">
+            <div class="container-main">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Designs</div>
+                    <h2 class="font-heading font-bold text-[clamp(32px,4vw,44px)] mb-4">One housing, <span class="gradient-text">two mounting</span> options</h2>
+                    <p class="text-muted-foreground text-lg">Suitable for any installation location—from an IBC lid to a narrow shaft.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-surface border border-border rounded-2xl p-8 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1 hover:shadow-glow">
+                        <div class="sensor-img mb-6" style="padding:1rem;background:radial-gradient(circle at 50% 55%,hsl(var(--primary)/.15),transparent 60%)"><img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/EOS-Website/Front.png" alt="EOS 1,5-Zoll-Gewinde Bauform" style="max-height:200px" /></div>
+                        <h3 class="font-heading font-bold text-2xl mb-3">1.5-inch thread</h3>
+                        <p class="text-muted-foreground text-[15px]">Process connection for tanks, pipes, and containers — quick to screw in, permanently sealed, without an additional adapter.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-2xl p-8 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1 hover:shadow-glow">
+                        <div class="sensor-img mb-6" style="padding:1rem;background:radial-gradient(circle at 50% 55%,hsl(var(--primary)/.15),transparent 60%)"><img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/EOS-Website/Schr%C3%A4g-3.png" alt="EOS flache Bauform" style="max-height:200px" /></div>
+                        <h3 class="font-heading font-bold text-2xl mb-3">Low-profile version</h3>
+                        <p class="text-muted-foreground text-[15px]">Low profile for shafts, IBC lids, and confined installation locations with flush mounting.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="anwendungen" class="section" aria-labelledby="anwendungen-title">
+            <div class="container">
+                <span class="eyebrow">Applications</span>
+                <h2 id="anwendungen-title"><span class="gradient-text">The right setup</span> for every <span class="gradient-text">tank</span></h2>
+                <div class="industries" style="grid-template-columns: repeat(4, 1fr);">
+                    <article class="industry">
+                        <div class="icon">01</div>
+                        <h3>Groundwater Level</h3>
+                        <p>Level probes connected via the EOS420 at boreholes and monitoring sites—wireless and self-contained.</p>
+                    </article>
+                    <article class="industry">
+                        <div class="icon">02</div>
+                        <h3>River water levels</h3>
+                        <p>EOS-R radar for non-contact level measurement on rivers, streams, and canals.</p>
+                    </article>
+                    <article class="industry">
+                        <div class="icon">03</div>
+                        <h3>Oil Tanks</h3>
+                        <p>Continuously monitor heating oil and diesel tanks—trigger reorders early.</p>
+                    </article>
+                    <article class="industry">
+                        <div class="icon">04</div>
+                        <h3>IBCs</h3>
+                        <p>IBC containers with chemicals, water, or additives—remaining quantity in liters and %.</p>
+                    </article>
+                    <article class="industry">
+                        <div class="icon">05</div>
+                        <h3>Grit silos</h3>
+                        <p>Salt and de-icing material silos for winter road maintenance—plan refills as needed.</p>
+                    </article>
+                    <article class="industry">
+                        <div class="icon">06</div>
+                        <h3>Silos</h3>
+                        <p>Feed, pellet, or raw material silos—volume and weight can be read directly in Orelia.</p>
+                    </article>
+                    <article class="industry">
+                        <div class="icon">07</div>
+                        <h3>Trash Containers</h3>
+                        <p>Pick up only full containers—dynamically plan routes based on fill levels.</p>
+                    </article>
+                    <article class="industry">
+                        <div class="icon">08</div>
+                        <h3>Channels &amp; Tanks</h3>
+                        <p>Non-contact radar detection of sewer lines, stormwater retention systems, and process tanks.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="starter" class="section steps-section" aria-labelledby="starter-title">
+            <div class="container">
+                <div class="compliance-card">
+                    <div>
+                        <span class="eyebrow">Starter Package</span>
+                        <h2 id="starter-title" style="margin-top:14px;">Level Monitoring with <span class="gradient-text">EOS &amp; Web App</span></h2>
+                        <p style="color: hsl(var(--muted)); font-size: 18px; margin: 20px 0 0; max-width: 560px;">The complete package for a quick start: the EOS sensor of your choice with cellular connectivity, a preconfigured Orelia web app, and everything you need for your first tank monitoring project—available for direct online ordering.</p>
+                        <ul class="checklist" style="margin-top: 24px;">
+                            <li><strong>EOS-R or EOS420</strong> – tailored to your tank</li>
+                            <li><strong>Orelia Web App access</strong> – configuration, alarms, and reports enabled</li>
+                            <li><strong>SIM &amp; connectivity</strong> – no additional contract required (cellular)</li>
+                        </ul>
+                        <div class="button-row" style="margin-top: 32px;">
+                            <a class="button button-primary" href="https://shop.sentinum.de/" target="_blank" rel="noopener noreferrer">Order Now ↗</a>
+                            <a class="button button-secondary" href="mailto:info@sentinum.de?subject=Informationen%20Einsteigerpaket%20F%C3%BCllstand">Request more information</a>
+                        </div>
+                    </div>
+                    <aside class="compliance-spec" aria-label="Im Paket enthalten">
+                        <div class="compliance-spec-head">
+                            <span>Included in the package</span>
+                            <span class="compliance-tag">Starter</span>
+                        </div>
+                        <div class="spec"><strong>Sensor</strong><span>EOS-R or EOS 420</span></div>
+                        <div class="spec"><strong>Connectivity</strong><span>NB-IoT / LTE-M</span></div>
+                        <div class="spec"><strong>Web app</strong><span>Orelia included</span></div>
+                        <div class="spec"><strong>Specifications</strong><span>Volume · Weight · %</span></div>
+                        <div class="spec" style="border-bottom:none;"><strong>Protection Class</strong><span>IP69K</span></div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+      
+      <section id="produkte" class="section-padding bg-surface/40">
+            <div class="container-main">
+                <div class="max-w-3xl mb-12">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                <path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2" />
+                                <path d="M9.6 4.6A2 2 0 1 1 11 8H2" />
+                                <path d="M12.6 19.4A2 2 0 1 0 14 16H2" />
+                            </svg></div>
+                        <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider">Three Connectivity Standards</div>
+                    </div>
+                    <h2 class="font-heading font-bold text-[clamp(24px,3vw,32px)] mb-3">EOS-Radar – tailored to your infrastructure</h2>
+                    <p class="text-muted-foreground text-[15px]">LoRaWAN®, mioty® or NB-IoT/LTE-M. Same hardware platform, same sensing technology – choose the wireless standard that best fits your deployment.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-surface border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5 hover:shadow-[0_0_30px_-10px_hsl(var(--primary)/0.25)] flex flex-col">
+                    <div class="bg-background/40 border-b border-border flex items-center justify-center">
+    <img
+        src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/EOS-Website/Schr%C3%A4g.png"
+       alt="EOS420 IoT level monitoring sensor with LoRaWAN® connectivity for external 4–20 mA level probes used in groundwater monitoring wells, tanks, shafts and industrial infrastructure"
+       class="max-w-full h-auto object-contain block"
+        loading="lazy"
+    />
+</div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <div class="flex items-center gap-2 text-primary text-[12px] font-heading font-semibold uppercase tracking-wider mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5">
+                                    <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9" />
+                                    <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5" />
+                                    <circle cx="12" cy="12" r="2" />
+                                    <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5" />
+                                    <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19" />
+                                </svg> LoRaWAN®</div>
+                            <h3 class="font-heading font-semibold text-[16px] mb-3 leading-snug">EOS-Radar LoRaWAN®</h3>
+                            <p class="text-muted-foreground text-[14px] leading-relaxed flex-1 mb-5">IoT level monitoring sensor for external 4–20 mA probes with LoRaWAN® connectivity. Ideal for municipal networks, smart city projects and private gateways.</p>
+                            <div><a href="https://shop.sentinum.de/products/radar-fullstandsensor-lorawan-mit-externer-antenne" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg font-heading font-semibold text-[14px] bg-primary text-primary-foreground hover:opacity-90 hover:-translate-y-0.5 transition-all">View in Shop →</a></div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="bg-surface border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5 hover:shadow-[0_0_30px_-10px_hsl(var(--primary)/0.25)] flex flex-col">
+                       <div class="bg-background/40 border-b border-border flex items-center justify-center">
+                       
+                        <img
+        src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/EOS-Website/Schr%C3%A4g-1.png"
+       alt="EOS420 wireless level monitoring sensor with mioty® connectivity for external hydrostatic 4–20 mA level probes in smart city and industrial applications"
+       class="max-w-full h-auto object-contain block"
+        loading="lazy"
+    />
+</div>
+                       
+                       
+                        <div class="p-6 flex flex-col flex-1">
+                            <div class="flex items-center gap-2 text-primary text-[12px] font-heading font-semibold uppercase tracking-wider mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5">
+                                    <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9" />
+                                    <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5" />
+                                    <circle cx="12" cy="12" r="2" />
+                                    <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5" />
+                                    <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19" />
+                                </svg> mioty®</div>
+                            <h3 class="font-heading font-semibold text-[16px] mb-3 leading-snug">EOS-Radar mioty®</h3>
+                            <p class="text-muted-foreground text-[14px] leading-relaxed flex-1 mb-5"> EOS420 with mioty® connectivity for highly reliable LPWAN communication, even in challenging radio environments.</p>
+                            <div><a href="https://shop.sentinum.de/products/radar-fullstandsensor-mioty-mit-externer-antenne" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg font-heading font-semibold text-[14px] bg-primary text-primary-foreground hover:opacity-90 hover:-translate-y-0.5 transition-all">View in Shop →</a></div>
+                        </div>
+                    </div>
+                    
+                    
+                     <div class="bg-surface border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5 hover:shadow-[0_0_30px_-10px_hsl(var(--primary)/0.25)] flex flex-col">
+                    <div class="bg-background/40 border-b border-border flex items-center justify-center">
+                      
+                      <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/EOS-Website/Schr%C3%A4g-2.png" 
+                         alt="EOS420 cellular IoT level monitoring sensor with NB-IoT and LTE-M connectivity for remote monitoring of tanks, wells, boreholes and water infrastructure"
+                           class="max-w-full h-auto object-contain block" loading="lazy" />
+</div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <div class="flex items-center gap-2 text-primary text-[12px] font-heading font-semibold uppercase tracking-wider mb-2"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"></path>
+                                    <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"></path>
+                                    <circle cx="12" cy="12" r="2"></circle>
+                                    <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"></path>
+                                    <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"></path>
+                                </svg> NB-IoT / LTE-M </div>
+                            <h3 class="font-heading font-semibold text-[16px] mb-3 leading-snug">EOS-Radar NB-IoT / LTE-M</h3>
+                            <p class="text-muted-foreground text-[14px] leading-relaxed flex-1 mb-5"> Cellular-based level monitoring without the need for a dedicated gateway. Ideal for distributed assets and remote installation.</p>
+                            <div><a href="https://shop.sentinum.de/products/radar-fullstandsensor-nb-iot-mit-externer-antenne" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg font-heading font-semibold text-[14px] bg-primary text-primary-foreground hover:opacity-90 hover:-translate-y-0.5 transition-all">View in Shop →</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="branchen" class="section" aria-labelledby="branchen-title">
+            <div class="container">
+                <span class="eyebrow">Industries</span>
+                <h2 id="branchen-title">Anywhere where <span class="gradient-text">fill levels matter</span></h2>
+                <div class="industries">
+                    <article class="industry">
+                        <div class="icon">01</div>
+                        <h3>Water Management</h3>
+                        <p>Groundwater, water levels, stormwater retention, and wastewater—monitor them autonomously and wirelessly.</p>
+                    </article>
+                    <article class="industry">
+                        <div class="icon">02</div>
+                        <h3>Municipalities &amp; Winter Road Maintenance</h3>
+                        <p>Trash containers, grit and salt silos—dynamically plan routes based on fill levels.</p>
+                    </article>
+                    <article class="industry">
+                        <div class="icon">03</div>
+                        <h3>Energy &amp; Utilities</h3>
+                        <p>Heating oil tanks, diesel tanks, gas tanks – automatically trigger reorders.</p>
+                    </article>
+                    <article class="industry">
+                        <div class="icon">04</div>
+                        <h3>Industry &amp; Chemicals</h3>
+                        <p>Reliable, contactless detection of IBCs, process tanks, and chemical drums.</p>
+                    </article>
+                    <article class="industry">
+                        <div class="icon">05</div>
+                        <h3>Agriculture</h3>
+                        <p>Feed, pellet, and fertilizer silos—remaining quantities by volume and weight.</p>
+                    </article>
+                    <article class="industry">
+                        <div class="icon">06</div>
+                        <h3>Smart City</h3>
+                        <p>Connected infrastructure: canals, containers, retention basins, and water level monitoring stations.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="https://sentinum.de/en/kontakt" class="cta" aria-labelledby="contact-title">
+            <div class="container">
+                <span class="eyebrow">Get started now</span>
+                <h2 id="contact-title">Ready for <span class="gradient-text">efficient level monitoring?</span></h2>
+                <p>Whether it’s a single tank or a multi-site rollout—we’ll advise you on the right setup using EOS-R, EOS420, and Orelia.</p>
+                <div class="button-row" style="justify-content: center;">
+                    <a class="button button-primary" href="mailto:info@sentinum.de?subject=Demo%20F%C3%BCllstandmonitoring">Request a demo →</a>
+                    <a class="button button-secondary" href="mailto:info@sentinum.de?subject=Informationen%20F%C3%BCllstandmonitoring">Request more information</a>
+                    <a class="button button-secondary" href="https://shop.sentinum.de/" target="_blank" rel="noopener noreferrer">Go to the store ↗</a>
+                </div>
+            </div>
+        </section>
+    </main>
+ {% module "page_footer" path="/Homepage V2/Sentinum_Footer_en.module", label="Footer" %}
+    {{ standard_footer_includes }}
+   
+</body>
+
+</html>

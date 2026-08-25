@@ -1,0 +1,1548 @@
+<!--
+  templateType: "page"
+  isAvailableForNewContent: true
+-->
+
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EOS420 – IoT Füllstandsensor für 4–20 mA Pegelsonden | Sentinum</title>
+    <meta name="description" content="EOS420 – drahtloser IoT-Füllstandsensor für externe 4–20 mA Pegelsonden über M12. Für hydrostatische Sonden in Brunnen, Tanks & Schächten. LoRaWAN, mioty, NB-IoT, LTE-M. IP69K, Made in Germany.">
+    <meta property="og:title" content="EOS420 – IoT Füllstandsensor für 4–20 mA Pegelsonden">
+    <meta property="og:description" content="Drahtlose Füllstandmessung mit externen hydrostatischen Pegelsonden über M12-Anschluss. Für Brunnen, Grundwasser, Tanks und Bohrlöcher.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <link rel="canonical" href="https://sentinum.de/eos420">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "EOS420 IoT Füllstandsensor",
+            "brand": {
+                "@type": "Brand",
+                "name": "Sentinum"
+            },
+            "description": "Drahtloser IoT-Füllstandsensor mit M12-Anschluss für externe 4–20 mA Pegelsonden. LoRaWAN, mioty, NB-IoT und LTE-CAT-M1. IP69K.",
+            "category": "IoT Level Sensor"
+        }
+    </script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap");
+
+        *,
+        :after,
+        :before {
+            box-sizing: border-box;
+            border: 0 solid #e5e7eb
+        }
+
+        :root {
+            --background: 216 24% 8%;
+            --foreground: 210 20% 90%;
+            --surface: 214 20% 11%;
+            --card: 214 20% 11%;
+            --primary: 17 89% 48%;
+            --primary-foreground: 0 0% 100%;
+            --primary-light: 20 89% 53%;
+            --muted-foreground: 213 20% 55%;
+            --accent-dim: 17 89% 48%;
+            --border: 213 20% 18%;
+            --radius: .75rem;
+            --font-heading: "Space Grotesk", sans-serif;
+            --font-body: "DM Sans", sans-serif
+        }
+
+        * {
+            border-color: hsl(var(--border))
+        }
+
+        html {
+            line-height: 1.5;
+            -webkit-text-size-adjust: 100%
+        }
+
+        body {
+            margin: 0;
+            background: hsl(var(--background));
+            color: hsl(var(--foreground));
+            font-family: var(--font-body);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: var(--font-heading);
+            line-height: 1.2;
+            margin: 0
+        }
+
+        p,
+        ul {
+            margin: 0
+        }
+
+        ul {
+            list-style: none;
+            padding: 0
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        img,
+        svg {
+            display: block;
+            max-width: 100%;
+            height: auto
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0
+        }
+
+        .focus\:not-sr-only:focus {
+            position: static;
+            width: auto;
+            height: auto;
+            padding: 0;
+            margin: 0;
+            overflow: visible;
+            clip: auto;
+            white-space: normal
+        }
+
+        .focus\:absolute:focus {
+            position: absolute
+        }
+
+        .focus\:top-2:focus {
+            top: .5rem
+        }
+
+        .focus\:left-2:focus {
+            left: .5rem
+        }
+
+        .container-main {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem
+        }
+
+        .section-padding {
+            padding-top: 100px;
+            padding-bottom: 100px
+        }
+
+        .relative {
+            position: relative
+        }
+
+        .absolute {
+            position: absolute
+        }
+
+        .overflow-hidden {
+            overflow: hidden
+        }
+
+        .z-10 {
+            z-index: 10
+        }
+
+        .w-\[300px\] {
+            width: 300px
+        }
+
+        .h-\[300px\] {
+            height: 300px
+        }
+
+        .w-\[400px\] {
+            width: 400px
+        }
+
+        .h-\[400px\] {
+            height: 400px
+        }
+
+        .w-3 {
+            width: .75rem
+        }
+
+        .h-3 {
+            height: .75rem
+        }
+
+        .w-4 {
+            width: 1rem
+        }
+
+        .h-4 {
+            height: 1rem
+        }
+
+        .w-5 {
+            width: 1.25rem
+        }
+
+        .h-5 {
+            height: 1.25rem
+        }
+
+        .w-6 {
+            width: 1.5rem
+        }
+
+        .h-6 {
+            height: 1.5rem
+        }
+
+        .w-full {
+            width: 100%
+        }
+
+        .max-w-2xl {
+            max-width: 42rem
+        }
+
+        .max-w-3xl {
+            max-width: 48rem
+        }
+
+        .max-w-4xl {
+            max-width: 56rem
+        }
+
+        .max-w-\[720px\] {
+            max-width: 720px
+        }
+
+        .max-w-\[560px\] {
+            max-width: 560px
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .mb-3 {
+            margin-bottom: .75rem
+        }
+
+        .mb-4 {
+            margin-bottom: 1rem
+        }
+
+        .mb-5 {
+            margin-bottom: 1.25rem
+        }
+
+        .mb-6 {
+            margin-bottom: 1.5rem
+        }
+
+        .mb-7 {
+            margin-bottom: 1.75rem
+        }
+
+        .mb-8 {
+            margin-bottom: 2rem
+        }
+
+        .mb-10 {
+            margin-bottom: 2.5rem
+        }
+
+        .mb-16 {
+            margin-bottom: 4rem
+        }
+
+        .mt-0\.5 {
+            margin-top: .125rem
+        }
+
+        .mt-8 {
+            margin-top: 2rem
+        }
+
+        .mt-12 {
+            margin-top: 3rem
+        }
+
+        .flex {
+            display: flex
+        }
+
+        .inline-flex {
+            display: inline-flex
+        }
+
+        .grid {
+            display: grid
+        }
+
+        .flex-col {
+            flex-direction: column
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap
+        }
+
+        .flex-1 {
+            flex: 1 1 0%
+        }
+
+        .shrink-0 {
+            flex-shrink: 0
+        }
+
+        .items-start {
+            align-items: flex-start
+        }
+
+        .items-center {
+            align-items: center
+        }
+
+        .justify-center {
+            justify-content: center
+        }
+
+        .justify-between {
+            justify-content: space-between
+        }
+
+        .gap-1\.5 {
+            gap: .375rem
+        }
+
+        .gap-2 {
+            gap: .5rem
+        }
+
+        .gap-3 {
+            gap: .75rem
+        }
+
+        .gap-4 {
+            gap: 1rem
+        }
+
+        .gap-6 {
+            gap: 1.5rem
+        }
+
+        .gap-8 {
+            gap: 2rem
+        }
+
+        .gap-12 {
+            gap: 3rem
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        .font-heading {
+            font-family: var(--font-heading)
+        }
+
+        .font-medium {
+            font-weight: 500
+        }
+
+        .font-semibold {
+            font-weight: 600
+        }
+
+        .font-bold {
+            font-weight: 700
+        }
+
+        .uppercase {
+            text-transform: uppercase
+        }
+
+        .tracking-wider {
+            letter-spacing: .05em
+        }
+
+        .leading-relaxed {
+            line-height: 1.625
+        }
+
+        .text-sm {
+            font-size: .875rem
+        }
+
+        .text-lg {
+            font-size: 1.125rem;
+            line-height: 1.75rem
+        }
+
+        .text-2xl {
+            font-size: 1.5rem;
+            line-height: 2rem
+        }
+
+        .text-3xl {
+            font-size: 1.875rem;
+            line-height: 2.25rem
+        }
+
+        .text-\[11px\] {
+            font-size: 11px
+        }
+
+        .text-\[13px\] {
+            font-size: 13px
+        }
+
+        .text-\[14px\] {
+            font-size: 14px
+        }
+
+        .text-\[15px\] {
+            font-size: 15px
+        }
+
+        .text-\[clamp\(28px\,4vw\,42px\)\] {
+            font-size: clamp(28px, 4vw, 42px)
+        }
+
+        .text-\[clamp\(32px\,4vw\,44px\)\] {
+            font-size: clamp(32px, 4vw, 44px)
+        }
+
+        .text-\[clamp\(36px\,5vw\,60px\)\] {
+            font-size: clamp(36px, 5vw, 60px)
+        }
+
+        .text-foreground {
+            color: hsl(var(--foreground))
+        }
+
+        .text-muted-foreground {
+            color: hsl(var(--muted-foreground))
+        }
+
+        .text-primary {
+            color: hsl(var(--primary))
+        }
+
+        .text-primary-foreground {
+            color: hsl(var(--primary-foreground))
+        }
+
+        .bg-background {
+            background: hsl(var(--background))
+        }
+
+        .bg-background\/80 {
+            background: hsl(var(--background)/.8)
+        }
+
+        .bg-surface {
+            background: hsl(var(--surface))
+        }
+
+        .bg-surface\/40 {
+            background: hsl(var(--surface)/.4)
+        }
+
+        .bg-primary {
+            background: hsl(var(--primary))
+        }
+
+        .bg-primary\/10 {
+            background: hsl(var(--primary)/.1)
+        }
+
+        .bg-accent-dim\/15 {
+            background: hsl(var(--accent-dim)/.15)
+        }
+
+        .border {
+            border-width: 1px
+        }
+
+        .border-border {
+            border-color: hsl(var(--border))
+        }
+
+        .border-primary\/25 {
+            border-color: hsl(var(--primary)/.25)
+        }
+
+        .rounded-full {
+            border-radius: 9999px
+        }
+
+        .rounded-lg {
+            border-radius: var(--radius)
+        }
+
+        .rounded-xl {
+            border-radius: .75rem
+        }
+
+        .rounded-2xl {
+            border-radius: 1rem
+        }
+
+        .px-3 {
+            padding-left: .75rem;
+            padding-right: .75rem
+        }
+
+        .px-4 {
+            padding-left: 1rem;
+            padding-right: 1rem
+        }
+
+        .px-8 {
+            padding-left: 2rem;
+            padding-right: 2rem
+        }
+
+        .py-1 {
+            padding-top: .25rem;
+            padding-bottom: .25rem
+        }
+
+        .py-1\.5 {
+            padding-top: .375rem;
+            padding-bottom: .375rem
+        }
+
+        .py-3\.5 {
+            padding-top: .875rem;
+            padding-bottom: .875rem
+        }
+
+        .p-6 {
+            padding: 1.5rem
+        }
+
+        .p-8 {
+            padding: 2rem
+        }
+
+        .p-10 {
+            padding: 2.5rem
+        }
+
+        .opacity-\[0\.05\] {
+            opacity: .05
+        }
+
+        .opacity-\[0\.06\] {
+            opacity: .06
+        }
+
+        .blur-\[100px\] {
+            filter: blur(100px)
+        }
+
+        .blur-\[120px\] {
+            filter: blur(120px)
+        }
+
+        .grid-cols-1 {
+            grid-template-columns: repeat(1, minmax(0, 1fr))
+        }
+
+        .grid-cols-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr))
+        }
+
+        @media(min-width:768px) {
+            .md\:grid-cols-2 {
+                grid-template-columns: repeat(2, minmax(0, 1fr))
+            }
+
+            .md\:grid-cols-3 {
+                grid-template-columns: repeat(3, minmax(0, 1fr))
+            }
+
+            .md\:grid-cols-4 {
+                grid-template-columns: repeat(4, minmax(0, 1fr))
+            }
+
+            .md\:grid-cols-5 {
+                grid-template-columns: repeat(5, minmax(0, 1fr))
+            }
+
+            .md\:grid-cols-\[240px_1fr\] {
+                grid-template-columns: 240px 1fr
+            }
+
+            .md\:gap-8 {
+                gap: 2rem
+            }
+
+            .md\:p-6 {
+                padding: 1.5rem
+            }
+        }
+
+        .divide-y>*+* {
+            border-top-width: 1px
+        }
+
+        .divide-border>*+* {
+            border-color: hsl(var(--border))
+        }
+
+        .max-w-5xl {
+            max-width: 64rem
+        }
+
+        .py-5 {
+            padding-top: 1.25rem;
+            padding-bottom: 1.25rem
+        }
+
+        .p-2 {
+            padding: .5rem
+        }
+
+        @media(min-width:1024px) {
+            .lg\:grid-cols-2 {
+                grid-template-columns: repeat(2, minmax(0, 1fr))
+            }
+
+            .lg\:grid-cols-3 {
+                grid-template-columns: repeat(3, minmax(0, 1fr))
+            }
+
+            .lg\:grid-cols-4 {
+                grid-template-columns: repeat(4, minmax(0, 1fr))
+            }
+        }
+
+        .transition-all {
+            transition: all .15s cubic-bezier(.4, 0, .2, 1)
+        }
+
+        .duration-300 {
+            transition-duration: .3s
+        }
+
+        .hover\:opacity-90:hover {
+            opacity: .9
+        }
+
+        .hover\:-translate-y-0\.5:hover {
+            transform: translateY(-.125rem)
+        }
+
+        .hover\:-translate-y-1:hover {
+            transform: translateY(-.25rem)
+        }
+
+        .hover\:border-primary\/25:hover {
+            border-color: hsl(var(--primary)/.25)
+        }
+
+        .hover\:bg-surface:hover {
+            background: hsl(var(--surface))
+        }
+
+        .hover\:shadow-glow:hover {
+            box-shadow: 0 0 40px -12px hsl(var(--primary)/.35)
+        }
+
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)))
+        }
+
+        .icon-tile {
+            width: 3rem;
+            height: 3rem;
+            border-radius: .875rem;
+            background: hsl(var(--primary)/.12);
+            border: 1px solid hsl(var(--primary)/.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: hsl(var(--primary));
+            margin-bottom: 1.25rem
+        }
+
+        .spec-num {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 2rem;
+            color: hsl(var(--primary));
+            line-height: 1
+        }
+
+        .sensor-img {
+            background: radial-gradient(circle at 50% 55%, hsl(var(--primary)/.18), transparent 60%);
+            border-radius: 1.25rem;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .sensor-img img {
+            max-height: 340px;
+            width: auto;
+            object-fit: contain
+        }
+
+        .check {
+            width: 1.25rem;
+            height: 1.25rem;
+            border-radius: 9999px;
+            background: hsl(var(--primary)/.1);
+            color: hsl(var(--primary));
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: .15rem
+        }
+      
+      .overflow-hidden {
+    overflow: hidden;
+}
+
+.border-b {
+    border-bottom-width: 1px;
+}
+
+.block {
+    display: block;
+}
+
+.object-contain {
+    object-fit: contain;
+}
+
+.h-auto {
+    height: auto;
+}
+
+.leading-snug {
+    line-height: 1.375;
+}
+
+.text-\[16px\] {
+    font-size: 16px;
+}
+
+.w-3\.5 {
+    width: .875rem;
+}
+
+.h-3\.5 {
+    height: .875rem;
+}
+
+.hover\:shadow-\[0_0_30px_-10px_hsl\(var\(--primary\)\/0\.25\)\]:hover {
+    box-shadow: 0 0 30px -10px hsl(var(--primary)/0.25);
+}
+      .w-10 {
+    width: 2.5rem;
+}
+
+.h-10 {
+    height: 2.5rem;
+}
+
+.mb-12 {
+    margin-bottom: 3rem;
+}
+
+.py-2\.5 {
+    padding-top: .625rem;
+    padding-bottom: .625rem;
+}
+
+.text-\[12px\] {
+    font-size: 12px;
+}
+
+.bg-background\/40 {
+    background: hsl(var(--background)/.4);
+}
+    </style>   {{ standard_header_includes }}
+
+</head>
+
+<body>
+  {% module "main_nav"
+  path="/Homepage V2/Sentinum New Header Nav.module",
+  label="Main Navigation"
+%}
+    <a href="#top" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-primary text-primary-foreground px-3 py-1.5 rounded-lg">Zum Inhalt springen</a>
+    <main>
+
+        <!-- HERO -->
+        <section id="top" class="relative overflow-hidden section-padding">
+            <div class="absolute" style="top:10%;right:15%">
+                <div class="w-[400px] h-[400px] rounded-full bg-primary opacity-[0.06] blur-[120px]"></div>
+            </div>
+            <div class="absolute" style="bottom:5%;left:5%">
+                <div class="w-[300px] h-[300px] rounded-full bg-primary opacity-[0.05] blur-[100px]"></div>
+            </div>
+            <div class="container-main relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="flex gap-2 flex-wrap mb-6">
+                            <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[13px] font-medium bg-accent-dim/15 border border-primary/25 text-primary">4–20 mA · M12</span>
+                            <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[13px] font-medium bg-accent-dim/15 border border-primary/25 text-primary">IP69K</span>
+                            <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[13px] font-medium bg-accent-dim/15 border border-primary/25 text-primary">Made in Germany</span>
+                            <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[13px] font-medium bg-accent-dim/15 border border-primary/25 text-primary">Drahtlos</span>
+                            <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[13px] font-medium bg-accent-dim/15 border border-primary/25 text-primary">IoT-fähig</span>
+                        </div>
+                        <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Füllstandsmessung · Pegelsonde · IoT</div>
+                        <h1 class="font-heading font-bold text-[clamp(36px,5vw,60px)] mb-6">EOS420 – IoT Sensor für <span class="gradient-text">4–20 mA Pegelsonden</span></h1>
+                        <p class="text-muted-foreground text-lg max-w-[560px] mb-8">Drahtlose Füllstandsüberwachung mit externen hydrostatischen Pegelsonden über den robusten M12-Anschluss. Ideal für Brunnen, Bohrlöcher, Grundwassermessstellen, Tanks und Schächte — überall dort, wo Radar an seine Grenzen kommt.</p>
+                        <div class="flex gap-3 flex-wrap">
+                            <a href="#anwendungen" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg font-heading font-semibold text-[15px] bg-primary text-primary-foreground hover:opacity-90 hover:-translate-y-0.5 transition-all">Anwendungen entdecken ↓</a>
+                            <a href="https://sentinum.de/kontakt" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg font-heading font-semibold text-[15px] border border-border text-foreground hover:border-primary/25 hover:bg-surface transition-all">Anfrage stellen →</a>
+                        </div>
+                    </div>
+                    <div class="sensor-img">
+                        <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/EOS-Website/EOS_420%201.png" alt="EOS420 IoT-Sensor für 4–20 mA Pegelsonden von Sentinum" width="620" height="420">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KEY SPECS -->
+        <section class="section-padding bg-surface/40" style="padding-top:60px;padding-bottom:60px">
+            <div class="container-main">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div>
+                        <div class="spec-num">4–20 mA</div>
+                        <div class="text-muted-foreground text-sm mt-2">Industriestandard über M12</div>
+                    </div>
+                    <div>
+                        <div class="spec-num">IP69K</div>
+                        <div class="text-muted-foreground text-sm mt-2">−20 °C bis +80 °C</div>
+                    </div>
+                    <div>
+                        <div class="spec-num">4 Netze</div>
+                        <div class="text-muted-foreground text-sm mt-2">LoRaWAN · mioty · NB-IoT · LTE-M</div>
+                    </div>
+                    <div>
+                        <div class="spec-num">12 V</div>
+                        <div class="text-muted-foreground text-sm mt-2">Sensorspeisung für externe Sonde</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRINZIP -->
+        <section id="anwendungen" class="section-padding">
+<div class="mt-12 bg-surface border border-border rounded-2xl overflow-hidden max-w-5xl mx-auto transition-all duration-300 hover:border-primary/25 hover:shadow-glow">
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 items-center">
+
+        <!-- Bild -->
+        <div style="background:hsl(var(--background)/0.4);padding:2rem;">
+          <img
+    src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/EOS-Website/PS3417.avif"
+    alt="Hydrostatische Pegelsonde für drahtlose Füllstandsmessung mit dem EOS420 IoT-Füllstandsensor"
+    loading="lazy"
+    style="width:100%;max-height:420px;object-fit:contain;"
+>
+        </div>
+
+        <!-- Content -->
+        <div style="padding:2.5rem;">
+
+            <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">
+                Kompatible Pegelsonden
+            </div>
+
+            <h3 class="font-heading font-bold text-3xl mb-4">
+                Industrielle 4–20 mA Sensorik einfach integrieren
+            </h3>
+
+            <p class="text-muted-foreground text-[15px] leading-relaxed mb-6">
+                Der EOS420 wurde speziell für die Anbindung externer hydrostatischer
+                Pegelsonden entwickelt. Über den robusten M12-Anschluss können
+                marktübliche 4–20 mA Sensoren direkt angeschlossen, versorgt und
+                drahtlos über LoRaWAN®, mioty®, NB-IoT oder LTE-M ausgelesen werden.
+            </p>
+
+            <ul class="flex flex-col gap-3 mb-7">
+
+                <li class="flex items-start gap-3">
+                    <span class="check">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="w-3 h-3">
+                            <path d="M20 6 9 17l-5-5"/>
+                        </svg>
+                    </span>
+                    <span class="text-muted-foreground">
+                        Direkte Unterstützung von 4–20 mA Pegelsonden
+                    </span>
+                </li>
+
+                <li class="flex items-start gap-3">
+                    <span class="check">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="w-3 h-3">
+                            <path d="M20 6 9 17l-5-5"/>
+                        </svg>
+                    </span>
+                    <span class="text-muted-foreground">
+                        12-V-Versorgung der Sonde durch den EOS420
+                    </span>
+                </li>
+
+                <li class="flex items-start gap-3">
+                    <span class="check">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="w-3 h-3">
+                            <path d="M20 6 9 17l-5-5"/>
+                        </svg>
+                    </span>
+                    <span class="text-muted-foreground">
+                        Kompatibel mit führenden Herstellern wie ifm
+                    </span>
+                </li>
+
+            </ul>
+
+            <div class="flex flex-wrap gap-3">
+
+              <a href="https://www.ifm.com/de/de/product/PS3417"
+   target="_blank"
+   rel="noopener"
+   class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg font-heading font-semibold text-[15px] bg-primary text-primary-foreground hover:opacity-90 hover:-translate-y-0.5 transition-all">
+    ifm PS3417 ansehen →
+</a>
+
+                <a href="https://sentinum.de/kontakt"
+                   class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg font-heading font-semibold text-[15px] border border-border text-foreground hover:border-primary/25 hover:bg-surface transition-all">
+                    Kompatibilität anfragen
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+          </div>
+        </section>
+
+        <!-- BAUFORMEN -->
+        <section class="section-padding bg-surface/40">
+            <div class="container-main">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Bauformen</div>
+                    <h2 class="font-heading font-bold text-[clamp(32px,4vw,44px)] mb-4">Ein Gehäuse, <span class="gradient-text">zwei Montagen</span></h2>
+                    <p class="text-muted-foreground text-lg">Passend zu jedem Einbauort — vom IBC-Deckel bis zum engen Schacht.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-surface border border-border rounded-2xl p-8 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1 hover:shadow-glow">
+                        <div class="sensor-img mb-6" style="padding:1rem;background:radial-gradient(circle at 50% 55%,hsl(var(--primary)/.15),transparent 60%)"><img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/EOS-Website/seitlich.png" alt="EOS420 1,5-Zoll-Gewinde Bauform" style="max-height:200px"></div>
+                        <h3 class="font-heading font-bold text-2xl mb-3">1,5-Zoll-Gewinde</h3>
+                        <p class="text-muted-foreground text-[15px]">Prozessanschluss für Tanks, Rohre und Behälter — schnell eingeschraubt, dauerhaft dicht, ohne zusätzlichen Adapter.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-2xl p-8 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1 hover:shadow-glow">
+                        <div class="sensor-img mb-6" style="padding:1rem;background:radial-gradient(circle at 50% 55%,hsl(var(--primary)/.15),transparent 60%)"><img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/EOS-Website/Schr%C3%A4g-3.png" alt="EOS420 flache Bauform" style="max-height:200px"></div>
+                        <h3 class="font-heading font-bold text-2xl mb-3">Flache Variante</h3>
+                        <p class="text-muted-foreground text-[15px]">Niedriges Profil für Schächte, IBC-Deckel und beengte Einbauorte mit flacher, bündiger Montage.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+      
+      <section id="produkte" class="section-padding bg-surface/40">
+            <div class="container-main">
+                <div class="max-w-3xl mb-12">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                <path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2" />
+                                <path d="M9.6 4.6A2 2 0 1 1 11 8H2" />
+                                <path d="M12.6 19.4A2 2 0 1 0 14 16H2" />
+                            </svg></div>
+                        <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider">Drei Funkstandards</div>
+                    </div>
+                    <h2 class="font-heading font-bold text-[clamp(24px,3vw,32px)] mb-3">EOS420 – passend zu Ihrer Infrastruktur</h2>
+                    <p class="text-muted-foreground text-[15px]">LoRaWAN®, mioty® oder NB-IoT/LTE-M. Gleiche Hardware­basis, gleiche Sensorik – Sie wählen den passenden Funk­standard.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-surface border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5 hover:shadow-[0_0_30px_-10px_hsl(var(--primary)/0.25)] flex flex-col">
+                    <div class="bg-background/40 border-b border-border flex items-center justify-center">
+    <img
+        src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/EOS-Website/Front1.png"
+        alt="Febris Indoor CO2-Sensor zur drahtlosen Überwachung der Raumluftqualität mit Messung von CO₂, Temperatur, Luftfeuchte und Luftdruck über LoRaWAN®"
+       class="max-w-full h-auto object-contain block"
+        loading="lazy"
+    />
+</div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <div class="flex items-center gap-2 text-primary text-[12px] font-heading font-semibold uppercase tracking-wider mb-2">
+                            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/>
+    <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/>
+    <circle cx="12" cy="12" r="2"/>
+    <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/>
+    <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/>
+</svg>LoRaWAN®</div>
+                            <h3 class="font-heading font-semibold text-[16px] mb-3 leading-snug">EOS420 LoRaWAN®</h3>
+                            <p class="text-muted-foreground text-[14px] leading-relaxed flex-1 mb-5">IoT-Füllstandsensor für externe 4–20 mA Pegelsonden mit LoRaWAN®. Ideal für kommunale Netze, Smart City und private Gateways.</p>
+                            <div><a href="https://shop.sentinum.de/products/iot-fullstandsensor-lorawan-4-20ma-fur-pegelsonden" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg font-heading font-semibold text-[14px] bg-primary text-primary-foreground hover:opacity-90 hover:-translate-y-0.5 transition-all">Im Shop ansehen →</a></div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="bg-surface border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5 hover:shadow-[0_0_30px_-10px_hsl(var(--primary)/0.25)] flex flex-col">
+                       <div class="bg-background/40 border-b border-border flex items-center justify-center">
+                       
+                        <img
+        src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/EOS-Website/Front1%20(1).png"
+        alt="Febris Indoor CO2-Sensor mit LED-Ampel zur drahtlosen Überwachung der Raumluftqualität über mioty®, mit Messung von CO₂, Temperatur, Luftfeuchte und Luftdruck"
+       class="max-w-full h-auto object-contain block"
+        loading="lazy"
+    />
+</div>
+                       
+                       
+                        <div class="p-6 flex flex-col flex-1">
+                            <div class="flex items-center gap-2 text-primary text-[12px] font-heading font-semibold uppercase tracking-wider mb-2">
+                              
+   <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/>
+    <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/>
+    <circle cx="12" cy="12" r="2"/>
+    <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/>
+    <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/>
+</svg>
+ mioty®</div>
+                            <h3 class="font-heading font-semibold text-[16px] mb-3 leading-snug">EOS420 mioty®</h3>
+                            <p class="text-muted-foreground text-[14px] leading-relaxed flex-1 mb-5">EOS420 mit mioty® für besonders robuste LPWAN-Kommunikation auch in schwierigen Funkumgebungen.</p>
+                            <div><a href="https://shop.sentinum.de/products/iot-fullstandsensor-mioty-4-20ma-fur-pegelsonden" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg font-heading font-semibold text-[14px] bg-primary text-primary-foreground hover:opacity-90 hover:-translate-y-0.5 transition-all">Im Shop ansehen →</a></div>
+                        </div>
+                    </div>
+                    
+                    
+                     <div class="bg-surface border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5 hover:shadow-[0_0_30px_-10px_hsl(var(--primary)/0.25)] flex flex-col">
+                    <div class="bg-background/40 border-b border-border flex items-center justify-center">
+                      
+                      <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/EOS-Website/Schr%C3%A4g-2.png" 
+                           alt="Febris Indoor CO2-Sensor zur kontinuierlichen Überwachung der Raumluftqualität mit Messung der Kohlendioxidkonzentration sowie weiterer Klimaparameter in Innenräumen" 
+                           class="max-w-full h-auto object-contain block" loading="lazy" />
+</div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <div class="flex items-center gap-2 text-primary text-[12px] font-heading font-semibold uppercase tracking-wider mb-2">
+                              
+   <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/>
+    <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/>
+    <circle cx="12" cy="12" r="2"/>
+    <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/>
+    <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/>
+</svg>
+ NB-IoT / LTE-M </div>
+                            <h3 class="font-heading font-semibold text-[16px] mb-3 leading-snug">EOS420 NB-IoT / LTE-M</h3>
+                            <p class="text-muted-foreground text-[14px] leading-relaxed flex-1 mb-5">Mobilfunkbasierte Füllstandsüberwachung ohne eigenes Gateway. Ideal für verteilte Anlagen und abgelegene Standorte.</p>
+                            <div><a href="https://shop.sentinum.de/products/radar-fullstandsensor-nb-iot-flach" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg font-heading font-semibold text-[14px] bg-primary text-primary-foreground hover:opacity-90 hover:-translate-y-0.5 transition-all">Im Shop ansehen →</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURES GRID -->
+        <section class="section-padding">
+            <div class="container-main">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Features</div>
+                    <h2 class="font-heading font-bold text-[clamp(32px,4vw,44px)] mb-4">Alles an <span class="gradient-text">Bord</span></h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-surface border border-border rounded-2xl p-6 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1">
+                        <div class="icon-tile"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M4 12h4" />
+                                <path d="M16 12h4" />
+                                <circle cx="12" cy="12" r="3" />
+                                <path d="M12 4v2" />
+                                <path d="M12 18v2" />
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">Funkstandards</h3>
+                        <p class="text-muted-foreground text-[14px]">LoRaWAN, mioty &amp; Cellular (NB-IoT / LTE-CAT-M1) — alles aus einem Gerät.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-2xl p-6 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1">
+                        <div class="icon-tile"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <rect x="4" y="4" width="16" height="16" rx="2" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">M12-Anschluss</h3>
+                        <p class="text-muted-foreground text-[14px]">Robuste M12-Verbindung für 4–20 mA Pegelsonden und externe Industriesensorik.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-2xl p-6 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1">
+                        <div class="icon-tile"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M12 2v4" />
+                                <path d="m4.93 4.93 2.83 2.83" />
+                                <path d="M2 12h4" />
+                                <path d="M12 22a10 10 0 0 1-10-10" />
+                                <path d="M22 12A10 10 0 0 0 12 2" />
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">Auto-Antennenselektor</h3>
+                        <p class="text-muted-foreground text-[14px]">Interne oder externe SMA-Antenne — automatische Auswahl je nach Konfiguration.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-2xl p-6 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1">
+                        <div class="icon-tile"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M12 22s8-4 8-12V5l-8-3-8 3v5c0 8 8 12 8 12Z" />
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">IP69K</h3>
+                        <p class="text-muted-foreground text-[14px]">Staub- und Hochdruck-wasserdicht. Umspritzter SMA-Konnektor, vibrationsfest.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-2xl p-6 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1">
+                        <div class="icon-tile"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">Hochperformantes GPS</h3>
+                        <p class="text-muted-foreground text-[14px]">Dediziertes GNSS (GPS, Galileo, GLONASS, BeiDou) in allen Versionen.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-2xl p-6 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1">
+                        <div class="icon-tile"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M3 12h4l3-9 4 18 3-9h4" />
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">Beschleunigungssensor</h3>
+                        <p class="text-muted-foreground text-[14px]">Integrierter Sensor zur Stoßerkennung und „Tracking on Activity".</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-2xl p-6 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1">
+                        <div class="icon-tile"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <rect x="5" y="7" width="14" height="10" rx="2" />
+                                <path d="M19 11h2v2h-2" />
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">Energiequelle</h3>
+                        <p class="text-muted-foreground text-[14px]">Wechselbare 3×AA LiSOCl₂ oder 2×C LiMnO₂ Zellen für extra lange Laufzeiten.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-2xl p-6 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1">
+                        <div class="icon-tile"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M8 2h8" />
+                                <path d="M12 14v-4" />
+                                <circle cx="12" cy="14" r="8" />
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">BLE Provisioning</h3>
+                        <p class="text-muted-foreground text-[14px]">Konfiguration und Provisionierung via Bluetooth oder LoRaWAN-Downlink.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-2xl p-6 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1">
+                        <div class="icon-tile"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M3 3v18h18" />
+                                <path d="M7 15l4-6 3 4 5-8" />
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">Flexible Intervalle</h3>
+                        <p class="text-muted-foreground text-[14px]">Mess- und Sendeintervalle frei konfigurierbar — optimal für Langzeit-Deployment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SMART CITY -->
+        <section class="section-padding bg-surface/40">
+            <div class="container-main">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Smart City</div>
+                    <h2 class="font-heading font-bold text-[clamp(32px,4vw,44px)] mb-4">Kommunale <span class="gradient-text">Infrastruktur</span></h2>
+                    <p class="text-muted-foreground text-lg">Ob Brunnen, Bohrloch oder Retentionsbecken — der EOS420 liefert Pegeldaten dort, wo eine Sonde die einzig sinnvolle Option ist.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-surface border border-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-primary/25 hover:-translate-y-1 hover:shadow-glow">
+                        <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/EOS-Website/BCO.ec3512ed-91c0-4a9c-a611-8031ed04fb89.png" alt="Grundwassermessstelle mit EOS420 und Pegelsonde" style="width:100%;height:220px;object-fit:cover">
+                        <div class="p-6">
+                            <h3 class="font-heading font-bold text-xl mb-2">Grundwasserpegel</h3>
+                            <p class="text-muted-foreground text-[14px]">Grundwasserstände in Brunnen und Messstellen dauerhaft dokumentieren.</p>
+                        </div>
+                    </div>
+                    <div class="bg-surface border border-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-primary/25 hover:-translate-y-1 hover:shadow-glow">
+                        <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/EOS-Website/Designer.png" alt="Abwasserschacht mit EOS420 und hydrostatischer Sonde" style="width:100%;height:220px;object-fit:cover">
+                        <div class="p-6">
+                            <h3 class="font-heading font-bold text-xl mb-2">Bohrlöcher &amp; Tiefwasser</h3>
+                            <p class="text-muted-foreground text-[14px]">Sondenmessung bis in große Tiefen — auch in engen Brunnenrohren.</p>
+                        </div>
+                    </div>
+                    <div class="bg-surface border border-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-primary/25 hover:-translate-y-1 hover:shadow-glow">
+                        <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/EOS-Website/BCO.63a2f745-b270-43b2-b7a1-8107304a7b6b.png" alt="Retentionsbecken mit EOS420" style="width:100%;height:220px;object-fit:cover">
+                        <div class="p-6">
+                            <h3 class="font-heading font-bold text-xl mb-2">Retentions- &amp; Rückhaltebecken</h3>
+                            <p class="text-muted-foreground text-[14px]">Kontinuierliche Pegelüberwachung für Hochwasser- und Regenwassermanagement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WEITERE BRANCHEN -->
+        <section class="section-padding">
+            <div class="container-main">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Über Smart City hinaus</div>
+                    <h2 class="font-heading font-bold text-[clamp(32px,4vw,44px)] mb-4">Weitere <span class="gradient-text">Branchen</span></h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-surface border border-border rounded-2xl p-8 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1">
+                        <div class="text-primary font-heading font-bold text-sm mb-3">01</div>
+                        <h3 class="font-heading font-bold text-xl mb-2">Industrie</h3>
+                        <p class="text-muted-foreground text-[14px]">Prozessmedien und Additive in Tanks &amp; Behältern kontinuierlich überwachen.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-2xl p-8 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1">
+                        <div class="text-primary font-heading font-bold text-sm mb-3">02</div>
+                        <h3 class="font-heading font-bold text-xl mb-2">Versorger &amp; Kläranlagen</h3>
+                        <p class="text-muted-foreground text-[14px]">Wasser- und Abwasserpegel in abgelegenen Außenanlagen.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-2xl p-8 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1">
+                        <div class="text-primary font-heading font-bold text-sm mb-3">03</div>
+                        <h3 class="font-heading font-bold text-xl mb-2">Nachrüstung</h3>
+                        <p class="text-muted-foreground text-[14px]">Bestehende 4–20 mA Sonden in eine drahtlose IoT-Infrastruktur überführen.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-2xl p-8 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1">
+                        <div class="text-primary font-heading font-bold text-sm mb-3">04</div>
+                        <h3 class="font-heading font-bold text-xl mb-2">Chemie</h3>
+                        <p class="text-muted-foreground text-[14px]">Sondenmaterialien wählbar für aggressive Medien und Chemikalien.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-2xl p-8 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1">
+                        <div class="text-primary font-heading font-bold text-sm mb-3">05</div>
+                        <h3 class="font-heading font-bold text-xl mb-2">Building Management</h3>
+                        <p class="text-muted-foreground text-[14px]">Zisternen, Löschwasser- und Regenwassertanks im Gebäude.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-2xl p-8 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1">
+                        <div class="text-primary font-heading font-bold text-sm mb-3">06</div>
+                        <h3 class="font-heading font-bold text-xl mb-2">Mobile Tanks</h3>
+                        <p class="text-muted-foreground text-[14px]">Container- und Tanküberwachung mit GNSS-Ortung inklusive.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STARVICE / ORELIA -->
+        <section class="section-padding bg-surface/40">
+            <div class="container-main">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Eine Plattform</div>
+                        <h2 class="font-heading font-bold text-[clamp(32px,4vw,44px)] mb-4">Starvice &amp; <span class="gradient-text">Orelia</span></h2>
+                        <p class="text-muted-foreground text-lg mb-6">EOS420-Daten fließen direkt in <strong class="text-foreground">Starvice</strong>, das zentrale Portal der Sentinum Cloud. Die App <strong class="text-foreground">Orelia</strong> visualisiert Pegel, Standort und Zustand aller Geräte.</p>
+                        <ul class="flex flex-col gap-3 mb-8">
+                            <li class="flex items-start gap-3 text-[15px]"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="w-3 h-3">
+                                        <path d="M20 6 9 17l-5-5" />
+                                    </svg></span><span class="text-muted-foreground"><strong class="text-foreground">Live-Karte &amp; Historie</strong> — alle Geräte auf einen Blick</span></li>
+                            <li class="flex items-start gap-3 text-[15px]"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="w-3 h-3">
+                                        <path d="M20 6 9 17l-5-5" />
+                                    </svg></span><span class="text-muted-foreground"><strong class="text-foreground">Alarme &amp; Reports</strong> — Schwellwerte, PDF-/CSV-Export</span></li>
+                            <li class="flex items-start gap-3 text-[15px]"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="w-3 h-3">
+                                        <path d="M20 6 9 17l-5-5" />
+                                    </svg></span><span class="text-muted-foreground"><strong class="text-foreground">API &amp; Webhooks</strong> — Datahub-Integration in eigene Systeme</span></li>
+                            <li class="flex items-start gap-3 text-[15px]"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="w-3 h-3">
+                                        <path d="M20 6 9 17l-5-5" />
+                                    </svg></span><span class="text-muted-foreground"><strong class="text-foreground">ThingsBoard-Basis</strong> — dashboard-fähig und erweiterbar</span></li>
+                        </ul>
+                        <a href="https://sentinum.de/starvice" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg font-heading font-semibold text-[15px] border border-border text-foreground hover:border-primary/25 hover:bg-surface transition-all">Zur Starvice-Plattform →</a>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden border border-border bg-surface"><img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Orelia%20Screenshot%20Tilt%20Sensor.png" alt="Orelia App mit EOS420-Pegeldaten" style="width:100%;height:auto;display:block"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECH SPECS -->
+        <section class="section-padding">
+            <div class="container-main">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Technische Daten</div>
+                    <h2 class="font-heading font-bold text-[clamp(32px,4vw,44px)] mb-4">Spezifikationen <span class="gradient-text">im Überblick</span></h2>
+                </div>
+
+                <div class="bg-surface border border-border rounded-2xl p-2 md:p-6 mb-14 max-w-5xl mx-auto">
+                    <dl class="divide-y divide-border">
+                        <div class="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-2 md:gap-8 px-4 py-5">
+                            <dt class="font-heading font-semibold text-foreground">Messeingang</dt>
+                            <dd class="text-muted-foreground">4–20 mA Stromschleife · M12-Konnektor · 12 V Sensorspeisung</dd>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-2 md:gap-8 px-4 py-5">
+                            <dt class="font-heading font-semibold text-foreground">Kompatibilität</dt>
+                            <dd class="text-muted-foreground">Hydrostatische Pegelsonden &amp; industrielle 4–20 mA Sensorik (z. B. ifm PS3417)</dd>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-2 md:gap-8 px-4 py-5">
+                            <dt class="font-heading font-semibold text-foreground">Funkstandards</dt>
+                            <dd class="text-muted-foreground">LoRaWAN · mioty® · NB-IoT · LTE-CAT-M1 — 868 MHz / Band 8 &amp; 20</dd>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-2 md:gap-8 px-4 py-5">
+                            <dt class="font-heading font-semibold text-foreground">Sendeleistung</dt>
+                            <dd class="text-muted-foreground">14 dBm (LoRaWAN/mioty) · 23 dBm (NB-IoT)</dd>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-2 md:gap-8 px-4 py-5">
+                            <dt class="font-heading font-semibold text-foreground">Lokalisierung</dt>
+                            <dd class="text-muted-foreground">GNSS (GPS · Galileo · GLONASS · BeiDou) · WiFi-SSID-Scan · Cell Locate · Tracking in Motion</dd>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-2 md:gap-8 px-4 py-5">
+                            <dt class="font-heading font-semibold text-foreground">Schutzklasse</dt>
+                            <dd class="text-muted-foreground">IP69K · staub- und strahlwasserdicht (Hochdruckreinigung)</dd>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-2 md:gap-8 px-4 py-5">
+                            <dt class="font-heading font-semibold text-foreground">Temperatur</dt>
+                            <dd class="text-muted-foreground">−20 °C bis +80 °C Betriebstemperatur · 5–99 % rel. Feuchte</dd>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-2 md:gap-8 px-4 py-5">
+                            <dt class="font-heading font-semibold text-foreground">Abmessungen</dt>
+                            <dd class="text-muted-foreground">128 × 57 mm (Thread-Variante) · 160 g</dd>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-2 md:gap-8 px-4 py-5">
+                            <dt class="font-heading font-semibold text-foreground">Gehäusematerial</dt>
+                            <dd class="text-muted-foreground">POCAN 4225B PBT-GF-20</dd>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-2 md:gap-8 px-4 py-5">
+                            <dt class="font-heading font-semibold text-foreground">Bauformen</dt>
+                            <dd class="text-muted-foreground">Thread (T) 1,5″ Außengewinde · Flat (F) ohne Gewinde · SMA umspritzt</dd>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-2 md:gap-8 px-4 py-5">
+                            <dt class="font-heading font-semibold text-foreground">Zusatzsensorik</dt>
+                            <dd class="text-muted-foreground">Beschleunigungssensor (Schockdetektion, Tracking on Activity) · Temperaturmessung</dd>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-2 md:gap-8 px-4 py-5">
+                            <dt class="font-heading font-semibold text-foreground">Sicherheit</dt>
+                            <dd class="text-muted-foreground">Ende-zu-Ende-Verschlüsselung (AES-128) · Geräteauthentifizierung · BLE-Provisionierung</dd>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-2 md:gap-8 px-4 py-5">
+                            <dt class="font-heading font-semibold text-foreground">Integration</dt>
+                            <dd class="text-muted-foreground">Standardisiertes Cloud-Decoding · REST · Webhooks · MQTT · SCADA / ERP / Edge / Cloud</dd>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-2 md:gap-8 px-4 py-5">
+                            <dt class="font-heading font-semibold text-foreground">Stromversorgung</dt>
+                            <dd class="text-muted-foreground">3×AA LiSOCl₂ (LS14500) oder 2×C LiMnO₂ (LM26500) · wechselbar</dd>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-2 md:gap-8 px-4 py-5">
+                            <dt class="font-heading font-semibold text-foreground">Einsatzbereich</dt>
+                            <dd class="text-muted-foreground">Outdoor · Industrie · Smart City · raue Umgebungen</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- BESTELLINFORMATIONEN -->
+        <section class="section-padding bg-surface/40">
+            <div class="container-main">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Bestellinformationen</div>
+                    <h2 class="font-heading font-bold text-[clamp(32px,4vw,44px)] mb-4">SKU- <span class="gradient-text">Übersicht</span></h2>
+                    <p class="text-muted-foreground text-lg mt-4">Alle verfügbaren EOS420-Varianten nach Funkstandard, Ausführung, Antennen- und Batterieoption.</p>
+                </div>
+
+                <div class="bg-surface border border-border rounded-2xl p-6 md:p-8 overflow-x-auto max-w-5xl mx-auto mb-8">
+                    <h3 class="font-heading font-bold text-xl mb-4">Version EOS (3×AA LiSOCl₂)</h3>
+                    <table style="width:100%;border-collapse:collapse;font-size:14px;min-width:720px">
+                        <thead>
+                            <tr style="text-align:left;color:hsl(var(--muted-foreground));border-bottom:1px solid hsl(var(--border))">
+                                <th style="padding:10px 12px;font-weight:600">Artikel-Code</th>
+                                <th style="padding:10px 12px;font-weight:600">Batterie</th>
+                                <th style="padding:10px 12px;font-weight:600">Ausführung</th>
+                                <th style="padding:10px 12px;font-weight:600;text-align:center">Externe Antenne</th>
+                                <th style="padding:10px 12px;font-weight:600;text-align:center">Verfügbar</th>
+                                <th style="padding:10px 12px;font-weight:600">Konfiguration</th>
+                            </tr>
+                        </thead>
+                        <tbody style="color:hsl(var(--foreground))">
+                            <tr style="border-bottom:1px solid hsl(var(--border))">
+                                <td style="padding:10px 12px;font-family:monospace">S-EOS-LOEU-420-F</td>
+                                <td style="padding:10px 12px">3×AA</td>
+                                <td style="padding:10px 12px">Flach</td>
+                                <td style="padding:10px 12px;text-align:center;color:hsl(var(--muted-foreground))">—</td>
+                                <td style="padding:10px 12px;text-align:center;color:#22c55e">✓</td>
+                                <td style="padding:10px 12px">BLE</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid hsl(var(--border))">
+                                <td style="padding:10px 12px;font-family:monospace">S-EOS-MIOTY-420-F</td>
+                                <td style="padding:10px 12px">3×AA</td>
+                                <td style="padding:10px 12px">Flach</td>
+                                <td style="padding:10px 12px;text-align:center;color:hsl(var(--muted-foreground))">—</td>
+                                <td style="padding:10px 12px;text-align:center;color:#22c55e">✓</td>
+                                <td style="padding:10px 12px">BLE</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid hsl(var(--border))">
+                                <td style="padding:10px 12px;font-family:monospace">S-EOS-NBM1-420-F</td>
+                                <td style="padding:10px 12px">3×AA</td>
+                                <td style="padding:10px 12px">Flach</td>
+                                <td style="padding:10px 12px;text-align:center;color:hsl(var(--muted-foreground))">—</td>
+                                <td style="padding:10px 12px;text-align:center;color:#22c55e">✓</td>
+                                <td style="padding:10px 12px">BLE</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid hsl(var(--border))">
+                                <td style="padding:10px 12px;font-family:monospace">S-EOS-LOEU-420-F-SMA</td>
+                                <td style="padding:10px 12px">3×AA</td>
+                                <td style="padding:10px 12px">Flach</td>
+                                <td style="padding:10px 12px;text-align:center;color:#22c55e">✓</td>
+                                <td style="padding:10px 12px;text-align:center;color:#22c55e">✓</td>
+                                <td style="padding:10px 12px">BLE</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid hsl(var(--border))">
+                                <td style="padding:10px 12px;font-family:monospace">S-EOS-MIOTY-420-F-SMA</td>
+                                <td style="padding:10px 12px">3×AA</td>
+                                <td style="padding:10px 12px">Flach</td>
+                                <td style="padding:10px 12px;text-align:center;color:#22c55e">✓</td>
+                                <td style="padding:10px 12px;text-align:center;color:#22c55e">✓</td>
+                                <td style="padding:10px 12px">BLE</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid hsl(var(--border))">
+                                <td style="padding:10px 12px;font-family:monospace">S-EOS-NBM1-420-F-SMA</td>
+                                <td style="padding:10px 12px">3×AA</td>
+                                <td style="padding:10px 12px">Flach</td>
+                                <td style="padding:10px 12px;text-align:center;color:#22c55e">✓</td>
+                                <td style="padding:10px 12px;text-align:center;color:#22c55e">✓</td>
+                                <td style="padding:10px 12px">BLE</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid hsl(var(--border))">
+                                <td style="padding:10px 12px;font-family:monospace">S-EOS-LOEU-420-F-SMA-M12</td>
+                                <td style="padding:10px 12px">3×AA</td>
+                                <td style="padding:10px 12px">Flach</td>
+                                <td style="padding:10px 12px;text-align:center;color:#22c55e">✓</td>
+                                <td style="padding:10px 12px;text-align:center;color:#ef4444">✗</td>
+                                <td style="padding:10px 12px">BLE</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid hsl(var(--border))">
+                                <td style="padding:10px 12px;font-family:monospace">S-EOS-MIOTY-420-F-SMA-M12</td>
+                                <td style="padding:10px 12px">3×AA</td>
+                                <td style="padding:10px 12px">Flach</td>
+                                <td style="padding:10px 12px;text-align:center;color:#22c55e">✓</td>
+                                <td style="padding:10px 12px;text-align:center;color:#ef4444">✗</td>
+                                <td style="padding:10px 12px">BLE</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid hsl(var(--border))">
+                                <td style="padding:10px 12px;font-family:monospace">S-EOS-NBM1-420-F-SMA-M12</td>
+                                <td style="padding:10px 12px">3×AA</td>
+                                <td style="padding:10px 12px">Flach</td>
+                                <td style="padding:10px 12px;text-align:center;color:#22c55e">✓</td>
+                                <td style="padding:10px 12px;text-align:center;color:#ef4444">✗</td>
+                                <td style="padding:10px 12px">BLE</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid hsl(var(--border))">
+                                <td style="padding:10px 12px;font-family:monospace">S-EOS-LOEU-420-T</td>
+                                <td style="padding:10px 12px">3×AA</td>
+                                <td style="padding:10px 12px">1,5″ Gewinde</td>
+                                <td style="padding:10px 12px;text-align:center;color:hsl(var(--muted-foreground))">—</td>
+                                <td style="padding:10px 12px;text-align:center;color:#22c55e">✓</td>
+                                <td style="padding:10px 12px">BLE</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid hsl(var(--border))">
+                                <td style="padding:10px 12px;font-family:monospace">S-EOS-MIOTY-420-T</td>
+                                <td style="padding:10px 12px">3×AA</td>
+                                <td style="padding:10px 12px">1,5″ Gewinde</td>
+                                <td style="padding:10px 12px;text-align:center;color:hsl(var(--muted-foreground))">—</td>
+                                <td style="padding:10px 12px;text-align:center;color:#22c55e">✓</td>
+                                <td style="padding:10px 12px">BLE</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid hsl(var(--border))">
+                                <td style="padding:10px 12px;font-family:monospace">S-EOS-NBM1-420-T</td>
+                                <td style="padding:10px 12px">3×AA</td>
+                                <td style="padding:10px 12px">1,5″ Gewinde</td>
+                                <td style="padding:10px 12px;text-align:center;color:hsl(var(--muted-foreground))">—</td>
+                                <td style="padding:10px 12px;text-align:center;color:#22c55e">✓</td>
+                                <td style="padding:10px 12px">BLE</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid hsl(var(--border))">
+                                <td style="padding:10px 12px;font-family:monospace">S-EOS-LOEU-420-T-SMA</td>
+                                <td style="padding:10px 12px">3×AA</td>
+                                <td style="padding:10px 12px">1,5″ Gewinde</td>
+                                <td style="padding:10px 12px;text-align:center;color:#22c55e">✓</td>
+                                <td style="padding:10px 12px;text-align:center;color:#22c55e">✓</td>
+                                <td style="padding:10px 12px">BLE</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid hsl(var(--border))">
+                                <td style="padding:10px 12px;font-family:monospace">S-EOS-MIOTY-420-T-SMA</td>
+                                <td style="padding:10px 12px">3×AA</td>
+                                <td style="padding:10px 12px">1,5″ Gewinde</td>
+                                <td style="padding:10px 12px;text-align:center;color:#22c55e">✓</td>
+                                <td style="padding:10px 12px;text-align:center;color:#22c55e">✓</td>
+                                <td style="padding:10px 12px">BLE</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid hsl(var(--border))">
+                                <td style="padding:10px 12px;font-family:monospace">S-EOS-NBM1-420-T-SMA</td>
+                                <td style="padding:10px 12px">3×AA</td>
+                                <td style="padding:10px 12px">1,5″ Gewinde</td>
+                                <td style="padding:10px 12px;text-align:center;color:#22c55e">✓</td>
+                                <td style="padding:10px 12px;text-align:center;color:#22c55e">✓</td>
+                                <td style="padding:10px 12px">BLE</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid hsl(var(--border))">
+                                <td style="padding:10px 12px;font-family:monospace">S-EOS-LOEU-420-T-SMA-M12</td>
+                                <td style="padding:10px 12px">3×AA</td>
+                                <td style="padding:10px 12px">1,5″ Gewinde</td>
+                                <td style="padding:10px 12px;text-align:center;color:#22c55e">✓</td>
+                                <td style="padding:10px 12px;text-align:center;color:#ef4444">✗</td>
+                                <td style="padding:10px 12px">BLE</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid hsl(var(--border))">
+                                <td style="padding:10px 12px;font-family:monospace">S-EOS-MIOTY-420-T-SMA-M12</td>
+                                <td style="padding:10px 12px">3×AA</td>
+                                <td style="padding:10px 12px">1,5″ Gewinde</td>
+                                <td style="padding:10px 12px;text-align:center;color:#22c55e">✓</td>
+                                <td style="padding:10px 12px;text-align:center;color:#ef4444">✗</td>
+                                <td style="padding:10px 12px">BLE</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:10px 12px;font-family:monospace">S-EOS-NBM1-420-T-SMA-M12</td>
+                                <td style="padding:10px 12px">3×AA</td>
+                                <td style="padding:10px 12px">1,5″ Gewinde</td>
+                                <td style="padding:10px 12px;text-align:center;color:#22c55e">✓</td>
+                                <td style="padding:10px 12px;text-align:center;color:#ef4444">✗</td>
+                                <td style="padding:10px 12px">BLE</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section-padding">
+            <div class="container-main">
+                <div class="relative overflow-hidden bg-surface border border-border rounded-2xl p-10 text-center">
+                    <div class="absolute" style="top:-20%;left:50%;transform:translateX(-50%)">
+                        <div class="w-[400px] h-[400px] rounded-full bg-primary opacity-[0.06] blur-[120px]"></div>
+                    </div>
+                    <div class="relative z-10">
+                        <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Sprechen wir über Ihr Projekt</div>
+                        <h2 class="font-heading font-bold text-[clamp(32px,4vw,44px)] mb-4">Pegelmessung, die <span class="gradient-text">mitdenkt</span></h2>
+                        <p class="text-muted-foreground text-lg max-w-[720px] mx-auto mb-8">Von der Hardware bis zur Cloud — alles aus einer Hand. Lassen Sie uns Ihren Anwendungsfall gemeinsam umsetzen.</p>
+                        <div class="flex gap-3 flex-wrap justify-center">
+                            <a href="mailto:info@sentinum.de" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg font-heading font-semibold text-[15px] bg-primary text-primary-foreground hover:opacity-90 hover:-translate-y-0.5 transition-all">Anfrage senden →</a>
+                            <a href="https://sentinum.de/de/kontakt" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg font-heading font-semibold text-[15px] border border-border text-foreground hover:border-primary/25 hover:bg-surface transition-all">Zum Kontakt</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+ {% module "page_footer" path="/Homepage V2/Sentinum_Footer.module", label="Footer" %}
+   {{ standard_footer_includes }}
+    </main>
+</body>
+
+</html>
