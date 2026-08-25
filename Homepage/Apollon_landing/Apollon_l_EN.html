@@ -1,0 +1,1462 @@
+<!--
+  templateType: "page"
+  isAvailableForNewContent: true
+-->
+
+ 
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apollon Series – Level &amp; Presence Sensors from Sentinum</title>
+    <meta name="description" content="Die Apollon-Serie von Sentinum: Apollon-Q als robuster Füllstandsensor mit Radar/ToF für Smart Waste und Industrie, Apollon-Q-PP als Premium-Präsenzsensor mit LoRaWAN®, mioty® und NB-IoT." />
+    <meta property="og:title" content="Apollon-Serie – Füllstand- & Präsenzsensoren von Sentinum" />
+    <meta property="og:description" content="Apollon-Q und Apollon-Q-PP – Füllstand- und Präsenzdetektion in industrieller Qualität." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="de_DE" />
+    <link rel="canonical" href="https://sentinum.de/apollon" />
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Sentinum Apollon-Serie",
+            "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Apollon-Q",
+                    "url": "https://sentinum.de/apollon-q"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Apollon-Q-PP",
+                    "url": "https://sentinum.de/apollon-q-pp"
+                }
+            ]
+        }
+    </script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap");
+
+        *,
+        :after,
+        :before {
+            box-sizing: border-box;
+            border: 0 solid #e5e7eb
+        }
+
+        :root {
+            --background: 216 24% 8%;
+            --foreground: 210 20% 90%;
+            --surface: 214 20% 11%;
+            --card: 214 20% 11%;
+            --primary: 17 89% 48%;
+            --primary-foreground: 0 0% 100%;
+            --primary-light: 20 89% 53%;
+            --muted-foreground: 213 20% 55%;
+            --accent-dim: 17 89% 48%;
+            --border: 213 20% 18%;
+            --radius: .75rem;
+            --font-heading: "Space Grotesk", sans-serif;
+            --font-body: "DM Sans", sans-serif
+        }
+
+        * {
+            border-color: hsl(var(--border))
+        }
+
+        html {
+            line-height: 1.5;
+            -webkit-text-size-adjust: 100%
+        }
+
+        body {
+            margin: 0;
+            background: hsl(var(--background));
+            color: hsl(var(--foreground));
+            font-family: var(--font-body);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: var(--font-heading);
+            line-height: 1.2;
+            margin: 0
+        }
+
+        p,
+        ul {
+            margin: 0
+        }
+
+        ul {
+            list-style: none;
+            padding: 0
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        img,
+        svg {
+            display: block;
+            max-width: 100%;
+            height: auto
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0
+        }
+
+        .focus\:not-sr-only:focus {
+            position: static;
+            width: auto;
+            height: auto;
+            padding: 0;
+            margin: 0;
+            overflow: visible;
+            clip: auto;
+            white-space: normal
+        }
+
+        .focus\:absolute:focus {
+            position: absolute
+        }
+
+        .focus\:top-2:focus {
+            top: .5rem
+        }
+
+        .focus\:left-2:focus {
+            left: .5rem
+        }
+
+        .container-main {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem
+        }
+
+        .section-padding {
+            padding-top: 100px;
+            padding-bottom: 100px
+        }
+
+        .relative {
+            position: relative
+        }
+
+        .absolute {
+            position: absolute
+        }
+
+        .overflow-hidden {
+            overflow: hidden
+        }
+
+        .z-10 {
+            z-index: 10
+        }
+
+        .top-4 {
+            top: 1rem
+        }
+
+        .left-4 {
+            left: 1rem
+        }
+
+        .top-\[15\%\] {
+            top: 15%
+        }
+
+        .right-\[20\%\] {
+            right: 20%
+        }
+
+        .bottom-\[10\%\] {
+            bottom: 10%
+        }
+
+        .left-\[10\%\] {
+            left: 10%
+        }
+
+        .w-\[300px\] {
+            width: 300px
+        }
+
+        .h-\[300px\] {
+            height: 300px
+        }
+
+        .w-\[400px\] {
+            width: 400px
+        }
+
+        .h-\[400px\] {
+            height: 400px
+        }
+
+        .w-3 {
+            width: .75rem
+        }
+
+        .h-3 {
+            height: .75rem
+        }
+
+        .w-3\.5 {
+            width: .875rem
+        }
+
+        .h-3\.5 {
+            height: .875rem
+        }
+
+        .w-4 {
+            width: 1rem
+        }
+
+        .h-4 {
+            height: 1rem
+        }
+
+        .w-5 {
+            width: 1.25rem
+        }
+
+        .h-5 {
+            height: 1.25rem
+        }
+
+        .w-10 {
+            width: 2.5rem
+        }
+
+        .h-10 {
+            height: 2.5rem
+        }
+
+        .w-full {
+            width: 100%
+        }
+
+        .h-full {
+            height: 100%
+        }
+
+        .max-w-2xl {
+            max-width: 42rem
+        }
+
+        .max-w-3xl {
+            max-width: 48rem
+        }
+
+        .max-w-4xl {
+            max-width: 56rem
+        }
+
+        .max-w-\[720px\] {
+            max-width: 720px
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .mb-3 {
+            margin-bottom: .75rem
+        }
+
+        .mb-4 {
+            margin-bottom: 1rem
+        }
+
+        .mb-5 {
+            margin-bottom: 1.25rem
+        }
+
+        .mb-6 {
+            margin-bottom: 1.5rem
+        }
+
+        .mb-7 {
+            margin-bottom: 1.75rem
+        }
+
+        .mb-8 {
+            margin-bottom: 2rem
+        }
+
+        .mb-10 {
+            margin-bottom: 2.5rem
+        }
+
+        .mb-16 {
+            margin-bottom: 4rem
+        }
+
+        .mt-0\.5 {
+            margin-top: .125rem
+        }
+
+        .mt-auto {
+            margin-top: auto
+        }
+
+        .flex {
+            display: flex
+        }
+
+        .inline-flex {
+            display: inline-flex
+        }
+
+        .grid {
+            display: grid
+        }
+
+        .flex-col {
+            flex-direction: column
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap
+        }
+
+        .flex-1 {
+            flex: 1 1 0%
+        }
+
+        .shrink-0 {
+            flex-shrink: 0
+        }
+
+        .items-start {
+            align-items: flex-start
+        }
+
+        .items-center {
+            align-items: center
+        }
+
+        .justify-center {
+            justify-content: center
+        }
+
+        .gap-1\.5 {
+            gap: .375rem
+        }
+
+        .gap-2 {
+            gap: .5rem
+        }
+
+        .gap-3 {
+            gap: .75rem
+        }
+
+        .gap-6 {
+            gap: 1.5rem
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        .font-heading {
+            font-family: var(--font-heading)
+        }
+
+        .font-medium {
+            font-weight: 500
+        }
+
+        .font-semibold {
+            font-weight: 600
+        }
+
+        .font-bold {
+            font-weight: 700
+        }
+
+        .uppercase {
+            text-transform: uppercase
+        }
+
+        .tracking-wider {
+            letter-spacing: .05em
+        }
+
+        .leading-relaxed {
+            line-height: 1.625
+        }
+
+        .text-sm {
+            font-size: .875rem
+        }
+
+        .text-lg {
+            font-size: 1.125rem;
+            line-height: 1.75rem
+        }
+
+        .text-2xl {
+            font-size: 1.5rem;
+            line-height: 2rem
+        }
+
+        .text-\[11px\] {
+            font-size: 11px
+        }
+
+        .text-\[13px\] {
+            font-size: 13px
+        }
+
+        .text-\[14px\] {
+            font-size: 14px
+        }
+
+        .text-\[14\.5px\] {
+            font-size: 14.5px
+        }
+
+        .text-\[15px\] {
+            font-size: 15px
+        }
+
+        .text-\[clamp\(28px\,4vw\,42px\)\] {
+            font-size: clamp(28px, 4vw, 42px)
+        }
+
+        .text-\[clamp\(32px\,4vw\,44px\)\] {
+            font-size: clamp(32px, 4vw, 44px)
+        }
+
+        .text-\[clamp\(32px\,4vw\,48px\)\] {
+            font-size: clamp(32px, 4vw, 48px)
+        }
+
+        .text-\[clamp\(36px\,5vw\,60px\)\] {
+            font-size: clamp(36px, 5vw, 60px)
+        }
+
+        .text-foreground {
+            color: hsl(var(--foreground))
+        }
+
+        .text-muted-foreground {
+            color: hsl(var(--muted-foreground))
+        }
+
+        .text-primary {
+            color: hsl(var(--primary))
+        }
+
+        .text-primary-foreground {
+            color: hsl(var(--primary-foreground))
+        }
+
+        .bg-background {
+            background: hsl(var(--background))
+        }
+
+        .bg-background\/40 {
+            background: hsl(var(--background)/.4)
+        }
+
+        .bg-background\/80 {
+            background: hsl(var(--background)/.8)
+        }
+
+        .bg-surface {
+            background: hsl(var(--surface))
+        }
+
+        .bg-surface\/40 {
+            background: hsl(var(--surface)/.4)
+        }
+
+        .bg-primary {
+            background: hsl(var(--primary))
+        }
+
+        .bg-primary\/10 {
+            background: hsl(var(--primary)/.1)
+        }
+
+        .bg-accent-dim\/15 {
+            background: hsl(var(--accent-dim)/.15)
+        }
+
+        .border {
+            border-width: 1px
+        }
+
+        .border-b {
+            border-bottom-width: 1px
+        }
+
+        .border-border {
+            border-color: hsl(var(--border))
+        }
+
+        .border-primary\/25 {
+            border-color: hsl(var(--primary)/.25)
+        }
+
+        .rounded {
+            border-radius: .25rem
+        }
+
+        .rounded-full {
+            border-radius: 9999px
+        }
+
+        .rounded-lg {
+            border-radius: var(--radius)
+        }
+
+        .rounded-xl {
+            border-radius: .75rem
+        }
+
+        .rounded-2xl {
+            border-radius: 1rem
+        }
+
+        .px-3 {
+            padding-left: .75rem;
+            padding-right: .75rem
+        }
+
+        .px-4 {
+            padding-left: 1rem;
+            padding-right: 1rem
+        }
+
+        .px-8 {
+            padding-left: 2rem;
+            padding-right: 2rem
+        }
+
+        .py-1 {
+            padding-top: .25rem;
+            padding-bottom: .25rem
+        }
+
+        .py-1\.5 {
+            padding-top: .375rem;
+            padding-bottom: .375rem
+        }
+
+        .py-2 {
+            padding-top: .5rem;
+            padding-bottom: .5rem
+        }
+
+        .py-3\.5 {
+            padding-top: .875rem;
+            padding-bottom: .875rem
+        }
+
+        .p-8 {
+            padding: 2rem
+        }
+
+        .aspect-\[16\/10\] {
+            aspect-ratio: 16/10
+        }
+
+        .object-cover {
+            -o-object-fit: cover;
+            object-fit: cover
+        }
+
+        .backdrop-blur-md {
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px)
+        }
+
+        .opacity-\[0\.05\] {
+            opacity: .05
+        }
+
+        .opacity-\[0\.06\] {
+            opacity: .06
+        }
+
+        .blur-\[100px\] {
+            filter: blur(100px)
+        }
+
+        .blur-\[120px\] {
+            filter: blur(120px)
+        }
+
+        .grid-cols-1 {
+            grid-template-columns: repeat(1, minmax(0, 1fr))
+        }
+
+        @media(min-width:768px) {
+            .md\:grid-cols-2 {
+                grid-template-columns: repeat(2, minmax(0, 1fr))
+            }
+        }
+
+        .transition-all {
+            transition: all .15s cubic-bezier(.4, 0, .2, 1)
+        }
+
+        .transition-transform {
+            transition: transform .15s cubic-bezier(.4, 0, .2, 1)
+        }
+
+        .duration-300 {
+            transition-duration: .3s
+        }
+
+        .duration-500 {
+            transition-duration: .5s
+        }
+
+        .hover\:opacity-90:hover {
+            opacity: .9
+        }
+
+        .hover\:-translate-y-0\.5:hover {
+            transform: translateY(-.125rem)
+        }
+
+        .hover\:-translate-y-1:hover {
+            transform: translateY(-.25rem)
+        }
+
+        .hover\:border-primary\/25:hover {
+            border-color: hsl(var(--primary)/.25)
+        }
+
+        .hover\:bg-surface:hover {
+            background: hsl(var(--surface))
+        }
+
+        .hover\:shadow-glow:hover {
+            box-shadow: 0 0 40px -12px hsl(var(--primary)/.35)
+        }
+
+        .group:hover .group-hover\:scale-105 {
+            transform: scale(1.05)
+        }
+
+        .group:hover .group-hover\:gap-3 {
+            gap: .75rem
+        }
+
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)))
+        }
+
+        .max-w-\[900px\] {
+            max-width: 900px
+        }
+      /* GRID */
+#produkte .produkte-grid {
+    display: grid;
+    gap: 2rem;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    #produkte .produkte-grid {
+        grid-template-columns: repeat(2, 360px);
+    }
+}
+
+
+#produkte .produkt-card {
+    display: flex;
+    flex-direction: column;
+
+    background: hsl(var(--surface));
+    border: 1px solid hsl(var(--border));
+    border-radius: 14px;
+
+    overflow: hidden;
+    min-height: 540px;
+
+    transition: all 0.3s ease;
+}
+
+/* GRID gleich lassen */
+
+/* 🔥 TOPLINE (orange small text) */
+#produkte .produkt-topline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+
+    color: hsl(var(--primary));
+    margin: 12px 16px 8px 16px;
+}
+
+/* ICON LINKS (kleiner Punkt) */
+#produkte .produkt-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: hsl(var(--primary));
+}
+
+/* für zweite Karte */
+#produkte .produkt-dot.square {
+    border-radius: 2px;
+}
+
+
+/* IMAGE */
+#produkte .produkt-image {
+    height: 170px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid hsl(var(--border));
+}
+
+#produkte .produkt-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* CONTENT */
+#produkte .produkt-content {
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* 🔥 TITLE ROW MIT ICON */
+#produkte .produkt-title-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* ICON (link neben Titel) */
+#produkte .produkt-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+
+    background: hsl(var(--primary) / 0.1);
+    color: hsl(var(--primary));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#produkte .produkt-icon svg {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+}
+
+/* TITLE */
+#produkte .produkt-title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* TEXT */
+#produkte .produkt-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: hsl(var(--muted-foreground));
+    margin-bottom: 14px;
+}
+
+/* BUTTON */
+#produkte .produkt-button {
+    margin-top: auto;
+}
+
+#produkte .produkt-button a {
+    display: inline-block;
+    background: hsl(var(--primary));
+    color: white;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+#produkte .produkt-button a:hover {
+    opacity: 0.9;
+}
+
+#produkte .produkt-card {
+    position: relative;
+}
+#produkte .produkt-features {
+    margin-bottom: 18px;
+}
+
+#produkte .produkt-features li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 8px;
+
+    font-size: 14px;
+   color: hsl(var(--muted-foreground))
+}
+
+/* ✅ ORANGE ICON */
+#produkte .produkt-features li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+
+    background: hsl(var(--primary));
+}
+
+/* ========================= */
+/* ✅ JUNO STYLE OVERRIDE */
+/* ========================= */
+
+/* GRID wie Juno */
+#produkte .produkte-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+@media (min-width:768px) {
+    #produkte .produkte-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* CARD wie Juno */
+#produkte .produkt-card {
+    background: hsl(var(--surface));
+    border: 1px solid hsl(var(--border));
+    border-radius: 16px;
+
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    transition: all 0.3s ease;
+}
+
+#produkte .produkt-card:hover {
+    border-color: hsl(var(--primary) / 0.25);
+    transform: translateY(-6px);
+
+    box-shadow: 0 0 40px -12px hsl(var(--primary) / 0.35);
+}
+
+/* IMAGE wie Juno */
+#produkte .produkt-image {
+    position: relative;
+    height: 240px;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: hsl(var(--background) / 0.4);
+    border-bottom: 1px solid hsl(var(--border));
+
+    overflow: hidden;
+}
+
+#produkte .produkt-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    transition: transform 0.5s ease;
+}
+
+#produkte .produkt-card:hover .produkt-image img {
+    transform: scale(1.05);
+}
+
+/* TOP LABEL wie Overlay-Badge */
+#produkte .produkt-topline {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 6px 10px;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    background: hsl(var(--background) / 0.8);
+    backdrop-filter: blur(8px);
+
+    border: 1px solid hsl(var(--border));
+    border-radius: 999px;
+
+    color: hsl(var(--primary));
+
+    margin: 0; /* wichtig */
+}
+     /* ========================= */
+/* ✅ PRODUKT CARDS GLOBAL */
+/* ========================= */
+.produkt-card-mini {
+    background: hsl(var(--surface));
+    border: 1px solid hsl(var(--border));
+    border-radius: 18px;
+
+text-decoration: none; /* ✅ verhindert Link Styling */
+    color: inherit;
+
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+   /* max-width: 440px; *//* ✅ optimal Breite */
+
+    transition: all 0.3s ease;
+}
+
+
+
+
+/* ========================= */
+/* ✅ IMAGE BLOCK */
+/* ========================= */
+
+
+.produkt-card-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+
+/* ========================= */
+/* ✅ CONTENT */
+/* ========================= */
+.produkt-card-content {
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    background: hsl(var(--surface)); /* sorgt für visuelle Trennung */
+
+    text-align: left; /* ✅ wichtig */
+}
+
+.produkt-card-content h3 {
+    margin-bottom: 8px;
+}
+
+.produkt-card-content p {
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+
+/* ========================= */
+/* ✅ FUNK LABEL */
+/* ========================= */
+.produkt-card-funk {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    color: hsl(var(--primary));
+
+    margin-bottom: 10px;
+}
+
+.produkt-card-funk svg {
+    width: 14px;
+    height: 14px;
+
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+}
+
+
+/* ========================= */
+/* ✅ LISTEN (Febris Features) */
+/* ========================= */
+.produkt-card-content ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.produkt-card-content ul li {
+    color: hsl(var(--muted-foreground));
+    line-height: 1.4;
+}
+
+
+/* ========================= */
+/* ✅ BUTTON */
+/* ========================= */
+/*.produkt-button {
+    margin-top: auto;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    width: fit-content;
+
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+
+    padding: 10px 16px;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: all 0.2s ease;
+}
+
+.produkt-button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}*/
+
+
+/* ========================= */
+/* ✅ GRID VERBESSERUNG */
+/* ========================= */
+
+/* verhindert zentrierte Karten */
+.grid {
+    justify-items: stretch;
+}
+
+/* sorgt für saubere Alignment */
+@media (min-width: 768px) {
+    .grid {
+        align-items: stretch;
+    }}
+.produkt-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    padding: 6px 10px;
+
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(6px);
+
+    border: 1px solid hsl(var(--border));
+    border-radius: 999px;
+
+    color: hsl(var(--primary));
+}
+
+.produkt-badge svg {
+    width: 12px;
+    height: 12px;
+}
+.produkt-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.produkt-title-icon {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: hsl(var(--primary) / 0.1);
+    color: hsl(var(--primary));
+}
+
+.produkt-title-icon svg {
+    width: 16px;
+    height: 16px;
+}
+.produkt-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.produkt-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    font-size: 14px;
+    color: hsl(var(--muted-foreground));
+}
+
+.produkt-list-icon {
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+
+    background: hsl(var(--primary) / 0.15);
+    color: hsl(var(--primary));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.produkt-list-icon svg {
+    width: 12px;
+    height: 12px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+}
+.produkt-card-image {
+    position: relative;
+
+    height: 260px; /* 🔥 größer wie Juno */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: hsl(var(--background) / 0.4);
+    border-bottom: 1px solid hsl(var(--border));
+}
+
+
+
+
+/* ✅ Hover */
+.produkt-container:hover {
+    border-color: hsl(var(--primary) / 0.25);
+    transform: translateY(-4px);
+    box-shadow: 0 0 40px -12px hsl(var(--primary) / 0.35);
+}
+.produkt-link {
+    margin-top: auto;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 14.5px;
+
+    color: hsl(var(--primary));
+
+    transition: all 0.2s ease;
+}
+
+.produkt-card-mini:hover {
+    transform: translateY(-6px);
+
+    border-color: hsl(var(--primary) / 0.25);
+
+    box-shadow: 0 0 40px -12px hsl(var(--primary) / 0.35);
+}
+
+
+  </style>
+  
+    {{ standard_header_includes }}
+</head>
+
+<body>
+   {% module "main_nav"
+  path="/Homepage V2/Sentinum New Header Nav.module",
+  label="Main Navigation"%}
+   <a href="#top" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-primary text-primary-foreground px-3 py-2 rounded">Skip to content</a>
+    <main>
+        <section id="top" class="relative overflow-hidden section-padding">
+            <div class="absolute top-[15%] right-[20%] w-[400px] h-[400px] rounded-full bg-primary opacity-[0.06] blur-[120px]"></div>
+            <div class="absolute bottom-[10%] left-[10%] w-[300px] h-[300px] rounded-full bg-primary opacity-[0.05] blur-[100px]"></div>
+            <div class="container-main relative z-10 text-center">
+                <div class="flex gap-3 flex-wrap justify-center mb-6">
+                    <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[13px] font-medium bg-accent-dim/15 border border-primary/25 text-primary"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="6"></circle>
+                            <circle cx="12" cy="12" r="2"></circle>
+                        </svg> Apollon-Q</span>
+                    <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[13px] font-medium bg-accent-dim/15 border border-primary/25 text-primary"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 7v10a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4V7"></path>
+                            <path d="M3 7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4"></path>
+                            <path d="M3 13h18"></path>
+                        </svg> Apollon-Q-PP</span>
+                </div>
+                <h1 class="font-heading font-bold text-[clamp(36px,5vw,60px)] mb-6 max-w-4xl mx-auto">The <span class="gradient-text">Apollon Series</span> – Industrial-grade level and presence detection</h1>
+                <p class="text-muted-foreground text-lg max-w-[720px] mx-auto mb-10">Two complementary products for rugged outdoor and industrial applications: Apollon-Q as a multi-purpose level sensor with radar or ToF, Apollon-Q-PP as a premium presence sensor. Both with LoRaWAN®, mioty®, or NB-IoT.</p>
+                <div class="flex gap-3 flex-wrap justify-center">
+                    <a href="#produkte" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg font-heading font-semibold text-[15px] bg-primary text-primary-foreground hover:opacity-90 hover:-translate-y-0.5 transition-all">View products ↓</a>
+                    <a href="https://shop.sentinum.de/search?q=apollon&options%5Bprefix%5D=last" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg font-heading font-semibold text-[15px] border border-border text-foreground hover:border-primary/25 hover:bg-surface transition-all">Go to the shop →</a>
+                </div>
+            </div>
+        </section>
+
+ <section id="produkte" class="section-padding bg-surface/40">
+  <div class="container-main">
+
+    <!-- HEADER -->
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">
+        The Apollon Series
+      </div>
+
+      <h2 class="font-heading font-bold text-[clamp(32px,4vw,44px)] mb-4">
+        Two variants, <span class="gradient-text">one robust platform</span>
+      </h2>
+
+      <p class="text-muted-foreground text-lg">
+        Choose the right variant for your application.
+      </p>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- ✅ CARD 1 -->
+      <a href="https://sentinum.de/en/apollon-q" class="produkt-card-mini">
+
+        <!-- IMAGE -->
+        <div class="produkt-card-image">
+
+          <!-- BADGE -->
+          <div class="produkt-badge">
+            Level · Radar / ToF
+          </div>
+
+          <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Apollon-Q/Apollon_Q-T/freigestellt/Cellular_black_Front.png"
+               alt="Apollon-Q level sensor">
+        </div>
+
+        <!-- CONTENT -->
+        <div class="produkt-card-content">
+
+          <!-- TITLE -->
+          <div class="produkt-title">
+            <div class="produkt-title-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <circle cx="12" cy="12" r="10"/>
+                <circle cx="12" cy="12" r="6"/>
+              </svg>
+            </div>
+
+            <h3 class="font-heading font-bold text-xl">Apollon‑Q</h3>
+          </div>
+
+          <!-- TEXT -->
+          <p class="text-muted-foreground text-[15px]">
+            Multi-purpose level sensor with radar or ToF for smart waste, containers,
+            and industrial applications.
+          </p>
+
+          <!-- LIST -->
+          <ul class="produkt-list">
+            <li>
+              <span class="produkt-list-icon">
+                <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              Radar or ToF measurement
+            </li>
+
+            <li>
+              <span class="produkt-list-icon">
+                <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              IP69k · outdoor & industrial use
+            </li>
+
+            <li>
+              <span class="produkt-list-icon">
+                <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              LoRaWAN® · mioty® · NB-IoT
+            </li>
+          </ul>
+
+          <!-- LINK -->
+          <div class="produkt-link">
+            View product →
+          </div>
+
+        </div>
+      </a>
+
+
+      <!-- ✅ CARD 2 -->
+      <a href="https://sentinum.de/en/apollon-q-pp-presence-detection" class="produkt-card-mini">
+
+        <!-- IMAGE -->
+        <div class="produkt-card-image">
+
+          <!-- BADGE -->
+          <div class="produkt-badge">
+            Presence · Premium
+          </div>
+
+          <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Front.png"
+               alt="Apollon-Q-PP presence sensor">
+        </div>
+
+        <!-- CONTENT -->
+        <div class="produkt-card-content">
+
+          <!-- TITLE -->
+          <div class="produkt-title">
+            <div class="produkt-title-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <rect x="3" y="7" width="18" height="10" rx="3"/>
+              </svg>
+            </div>
+
+            <h3 class="font-heading font-bold text-xl">Apollon‑Q‑PP</h3>
+          </div>
+
+          <!-- TEXT -->
+          <p class="text-muted-foreground text-[15px]">
+            Premium IoT presence sensor for logistics, parking management,
+            and container tracking.
+          </p>
+
+          <!-- LIST -->
+          <ul class="produkt-list">
+            <li>
+              <span class="produkt-list-icon">
+                <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              High-precision presence detection
+            </li>
+
+            <li>
+              <span class="produkt-list-icon">
+                <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              Rugged design for outdoor use
+            </li>
+
+            <li>
+              <span class="produkt-list-icon">
+                <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              LoRaWAN® · mioty® · NB-IoT
+            </li>
+          </ul>
+
+          <!-- LINK -->
+          <div class="produkt-link">
+            View product →
+          </div>
+
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+        <section class="section-padding">
+            <div class="container-main text-center">
+                <h2 class="font-heading font-bold text-[clamp(32px,4vw,48px)] mb-6 max-w-3xl mx-auto">Not sure which <span class="gradient-text">Apollon</span> is right for you?</h2>
+                <p class="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">Our team advises on rollouts in smart waste, logistics, and industry—including platform integration via Orelia or Datahub and OEM versions.</p>
+                <div class="flex gap-3 flex-wrap justify-center">
+                    <a href="https://sentinum.de/en/kontakt" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg font-heading font-semibold text-[15px] bg-primary text-primary-foreground hover:opacity-90 hover:-translate-y-0.5 transition-all">Request a consultation →</a>
+                    <a href="https://docs.sentinum.de/en/sensors-product-lines" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg font-heading font-semibold text-[15px] border border-border text-foreground hover:border-primary/25 hover:bg-surface transition-all">Open documentation ↗</a>
+                </div>
+            </div>
+        </section>
+    </main>
+   {% module "page_footer" path="/Homepage V2/Sentinum_Footer_en.module", label="Footer" %} 
+  {{ standard_footer_includes }}
+</body>
+
+</html>

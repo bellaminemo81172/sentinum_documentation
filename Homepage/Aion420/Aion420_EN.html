@@ -1,0 +1,1310 @@
+<!--
+  templateType: "page"
+  isAvailableForNewContent: true
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AION420 – 4–20 mA to LoRaWAN® &amp; mioty® Bridge | Sentinum</title>
+    <meta name="description" content="AION420 – die IoT-Bridge digitalisiert bestehende 4–20 mA Sensoren per LoRaWAN® oder mioty®. Als 2- und 3-Leiter-Variante, mit Signalmapping, Grenzwerten und Durchschleiffunktion. Made in Germany." />
+    <meta property="og:title" content="AION420 – 4–20 mA zu LoRaWAN® & mioty® Bridge" />
+    <meta property="og:description" content="Retrofit für 4–20 mA Sensorik. Signalmapping, Grenzwertalarme, Durchschleiffunktion und LPWAN-Übertragung in einem kompakten Industriegehäuse." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="de_DE" />
+    <link rel="canonical" href="https://sentinum.de/aion420" />
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "AION420 4–20 mA IoT Bridge",
+            "brand": {
+                "@type": "Brand",
+                "name": "Sentinum"
+            },
+            "description": "IoT-Bridge zur Digitalisierung von 4–20 mA Sensorik via LoRaWAN® oder mioty®. 2- und 3-Leiter-Variante, Signalmapping, Grenzwertalarme, Durchschleiffunktion.",
+            "category": "IoT Gateway / Bridge"
+        }
+    </script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap");
+
+        *,
+        :after,
+        :before {
+            box-sizing: border-box;
+            border: 0 solid #e5e7eb
+        }
+
+        :root {
+            --background: 216 24% 8%;
+            --foreground: 210 20% 90%;
+            --surface: 214 20% 11%;
+            --card: 214 20% 11%;
+            --primary: 17 89% 48%;
+            --primary-foreground: 0 0% 100%;
+            --primary-light: 20 89% 53%;
+            --muted-foreground: 213 20% 55%;
+            --accent-dim: 17 89% 48%;
+            --border: 213 20% 18%;
+            --radius: .75rem;
+            --font-heading: "Space Grotesk", sans-serif;
+            --font-body: "DM Sans", sans-serif
+        }
+
+        * {
+            border-color: hsl(var(--border))
+        }
+
+        html {
+            line-height: 1.5;
+            -webkit-text-size-adjust: 100%
+        }
+
+        body {
+            margin: 0;
+            background: hsl(var(--background));
+            color: hsl(var(--foreground));
+            font-family: var(--font-body);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: var(--font-heading);
+            line-height: 1.2;
+            margin: 0
+        }
+
+        p,
+        ul {
+            margin: 0
+        }
+
+        ul {
+            list-style: none;
+            padding: 0
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        img,
+        svg {
+            display: block;
+            max-width: 100%;
+            height: auto
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0
+        }
+
+        .focus\:not-sr-only:focus {
+            position: static;
+            width: auto;
+            height: auto;
+            padding: 0;
+            margin: 0;
+            overflow: visible;
+            clip: auto;
+            white-space: normal
+        }
+
+        .focus\:absolute:focus {
+            position: absolute
+        }
+
+        .focus\:top-2:focus {
+            top: .5rem
+        }
+
+        .focus\:left-2:focus {
+            left: .5rem
+        }
+
+       
+.container-main {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+
+        .section-padding {
+            padding-top: 100px;
+            padding-bottom: 100px
+        }
+
+        .relative {
+            position: relative
+        }
+
+        .absolute {
+            position: absolute
+        }
+
+        .overflow-hidden {
+            overflow: hidden
+        }
+
+        .z-10 {
+            z-index: 10
+        }
+
+        .w-\[300px\] {
+            width: 300px
+        }
+
+        .h-\[300px\] {
+            height: 300px
+        }
+
+        .w-\[400px\] {
+            width: 400px
+        }
+
+        .h-\[400px\] {
+            height: 400px
+        }
+
+        .w-4 {
+            width: 1rem
+        }
+
+        .h-4 {
+            height: 1rem
+        }
+
+        .w-5 {
+            width: 1rem
+        }
+
+        .h-5 {
+            height: 1rem
+        }
+
+        .w-6 {
+            width: 1.5rem
+        }
+
+        .h-6 {
+            height: 1.5rem
+        }
+      .w-10 {
+    width: 2rem;
+}
+
+.h-10 {
+    height: 2rem;
+}
+        .w-full {
+            width: 100%
+        }
+
+        .max-w-2xl {
+            max-width: 42rem
+        }
+
+        .max-w-3xl {
+            max-width: 48rem
+        }
+
+        .max-w-4xl {
+            max-width: 56rem
+        }
+
+        .max-w-\[720px\] {
+            max-width: 720px
+        }
+
+        .max-w-\[560px\] {
+            max-width: 560px
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .mb-2 {
+            margin-bottom: .5rem
+        }
+
+        .mb-3 {
+            margin-bottom: .75rem
+        }
+
+        .mb-4 {
+            margin-bottom: 1rem
+        }
+
+        .mb-5 {
+            margin-bottom: 1.25rem
+        }
+
+        .mb-6 {
+            margin-bottom: 1.5rem
+        }
+
+        .mb-8 {
+            margin-bottom: 2rem
+        }
+
+        .mb-10 {
+            margin-bottom: 2.5rem
+        }
+
+        .mb-16 {
+            margin-bottom: 4rem
+        }
+
+        .mt-0\.5 {
+            margin-top: .125rem
+        }
+
+        .mt-2 {
+            margin-top: .5rem
+        }
+
+        .mt-8 {
+            margin-top: 2rem
+        }
+
+        .mt-12 {
+            margin-top: 3rem
+        }
+
+        .flex {
+            display: flex
+        }
+
+        .inline-flex {
+            display: inline-flex
+        }
+
+        .grid {
+            display: grid
+        }
+
+        .flex-col {
+            flex-direction: column
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap
+        }
+
+        .flex-1 {
+            flex: 1 1 0%
+        }
+
+        .shrink-0 {
+            flex-shrink: 0
+        }
+
+        .items-start {
+            align-items: flex-start
+        }
+
+        .items-center {
+            align-items: center
+        }
+
+        .justify-center {
+            justify-content: center
+        }
+
+        .gap-1\.5 {
+            gap: .375rem
+        }
+
+        .gap-2 {
+            gap: .5rem
+        }
+
+        .gap-3 {
+            gap: .75rem
+        }
+
+        .gap-4 {
+            gap: 1rem
+        }
+
+        .gap-6 {
+            gap: 1.5rem
+        }
+
+        .gap-8 {
+            gap: 2rem
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        .font-heading {
+            font-family: var(--font-heading)
+        }
+
+        .font-medium {
+            font-weight: 500
+        }
+
+        .font-semibold {
+            font-weight: 600
+        }
+
+        .font-bold {
+            font-weight: 700
+        }
+
+        .uppercase {
+            text-transform: uppercase
+        }
+
+        .tracking-wider {
+            letter-spacing: .05em
+        }
+
+        .text-sm {
+            font-size: .875rem
+        }
+
+        .text-lg {
+            font-size: 1.125rem;
+            line-height: 1.75rem
+        }
+
+        .text-xl {
+            font-size: 1.25rem;
+            line-height: 1.75rem
+        }
+
+        .text-2xl {
+            font-size: 1.5rem;
+            line-height: 2rem
+        }
+
+        .text-\[13px\] {
+            font-size: 13px
+        }
+
+        .text-\[14px\] {
+            font-size: 14px
+        }
+
+        .text-\[15px\] {
+            font-size: 15px
+        }
+
+        .text-\[clamp\(28px\,4vw\,42px\)\] {
+            font-size: clamp(28px, 4vw, 42px)
+        }
+
+        .text-\[clamp\(32px\,4vw\,44px\)\] {
+            font-size: clamp(32px, 4vw, 44px)
+        }
+
+        .text-\[clamp\(36px\,5vw\,60px\)\] {
+            font-size: clamp(36px, 5vw, 60px)
+        }
+
+        .text-foreground {
+            color: hsl(var(--foreground))
+        }
+
+        .text-muted-foreground {
+            color: hsl(var(--muted-foreground))
+        }
+
+        .text-primary {
+            color: hsl(var(--primary))
+        }
+
+        .text-primary-foreground {
+            color: hsl(var(--primary-foreground))
+        }
+
+        .bg-surface {
+            background: hsl(var(--surface))
+        }
+
+        .bg-surface\/40 {
+            background: hsl(var(--surface)/.4)
+        }
+
+        .bg-primary {
+            background: hsl(var(--primary))
+        }
+
+        .bg-accent-dim\/15 {
+            background: hsl(var(--accent-dim)/.15)
+        }
+
+        .border {
+            border-width: 1px
+        }
+
+        .border-border {
+            border-color: hsl(var(--border))
+        }
+
+        .border-primary\/25 {
+            border-color: hsl(var(--primary)/.25)
+        }
+
+        .rounded-full {
+            border-radius: 9999px
+        }
+
+        .rounded-lg {
+            border-radius: var(--radius)
+        }
+
+        .rounded-2xl {
+            border-radius: 1rem
+        }
+
+        .px-3 {
+            padding-left: .75rem;
+            padding-right: .75rem
+        }
+
+        .px-4 {
+            padding-left: 1rem;
+            padding-right: 1rem
+        }
+
+        .px-8 {
+            padding-left: 2rem;
+            padding-right: 2rem
+        }
+
+        .py-1\.5 {
+            padding-top: .375rem;
+            padding-bottom: .375rem
+        }
+
+        .py-3\.5 {
+            padding-top: .875rem;
+            padding-bottom: .875rem
+        }
+
+        .p-6 {
+            padding: 1.5rem
+        }
+
+        .p-8 {
+            padding: 2rem
+        }
+
+        .opacity-\[0\.05\] {
+            opacity: .05
+        }
+
+        .opacity-\[0\.06\] {
+            opacity: .06
+        }
+
+        .blur-\[100px\] {
+            filter: blur(100px)
+        }
+
+        .blur-\[120px\] {
+            filter: blur(120px)
+        }
+
+        .grid-cols-1 {
+            grid-template-columns: repeat(1, minmax(0, 1fr))
+        }
+
+        .grid-cols-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr))
+        }
+
+        @media(min-width:768px) {
+            .md\:grid-cols-2 {
+                grid-template-columns: repeat(2, minmax(0, 1fr))
+            }
+
+            .md\:grid-cols-3 {
+                grid-template-columns: repeat(3, minmax(0, 1fr))
+            }
+
+            .md\:grid-cols-4 {
+                grid-template-columns: repeat(4, minmax(0, 1fr))
+            }
+
+            .md\:p-8 {
+                padding: 2rem
+            }
+        }
+
+        @media(min-width:1024px) {
+            .lg\:grid-cols-2 {
+                grid-template-columns: repeat(2, minmax(0, 1fr))
+            }
+
+            .lg\:grid-cols-3 {
+                grid-template-columns: repeat(3, minmax(0, 1fr))
+            }
+
+            .lg\:grid-cols-4 {
+                grid-template-columns: repeat(4, minmax(0, 1fr))
+            }
+        }
+
+        .transition-all {
+            transition: all .15s cubic-bezier(.4, 0, .2, 1)
+        }
+
+        .duration-300 {
+            transition-duration: .3s
+        }
+
+        .hover\:opacity-90:hover {
+            opacity: .9
+        }
+
+        .hover\:-translate-y-0\.5:hover {
+            transform: translateY(-.125rem)
+        }
+
+        .hover\:-translate-y-1:hover {
+            transform: translateY(-.25rem)
+        }
+
+        .hover\:border-primary\/25:hover {
+            border-color: hsl(var(--primary)/.25)
+        }
+
+        .hover\:bg-surface:hover {
+            background: hsl(var(--surface))
+        }
+
+        .hover\:shadow-glow:hover {
+            box-shadow: 0 0 40px -12px hsl(var(--primary)/.35)
+        }
+
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)))
+        }
+
+        .icon-tile {
+            width: 3rem;
+            height: 3rem;
+            border-radius: .875rem;
+            background: hsl(var(--primary)/.12);
+            border: 1px solid hsl(var(--primary)/.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: hsl(var(--primary));
+            margin-bottom: 1.25rem
+        }
+
+        .spec-num {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 2rem;
+            color: hsl(var(--primary));
+            line-height: 1
+        }
+
+        .sensor-img {
+            background: radial-gradient(circle at 50% 55%, hsl(var(--primary)/.18), transparent 60%);
+            border-radius: 1.25rem;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .sensor-img img {
+            max-height: 380px;
+            width: auto;
+            object-fit: contain
+        }
+
+        .check {
+            width: 1.25rem;
+            height: 1.25rem;
+            border-radius: 9999px;
+            background: hsl(var(--primary)/.1);
+            color: hsl(var(--primary));
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: .15rem
+        }
+
+        .spec-row {
+            display: flex;
+            justify-content: space-between;
+            padding: .9rem 0;
+            border-bottom: 1px solid hsl(var(--border));
+            font-size: .95rem
+        }
+
+        .spec-row:last-child {
+            border-bottom: 0
+        }
+
+        .spec-row span:first-child {
+            color: hsl(var(--muted-foreground))
+        }
+
+        .spec-row span:last-child {
+            color: hsl(var(--foreground));
+            font-weight: 500
+        }
+
+        .map-box {
+            background: hsl(var(--background));
+            border: 1px solid hsl(var(--border));
+            border-radius: .75rem;
+            padding: 1.25rem;
+            font-family: var(--font-heading)
+        }
+
+        .map-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: .5rem 0;
+            font-size: .95rem
+        }
+
+        .map-line .arrow {
+            color: hsl(var(--primary));
+            font-weight: 700
+        }
+      .section-badge-icon{
+    width:40px;
+    height:40px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:#1a1f2b;
+
+    color:#f65a0a;
+
+    flex-shrink:0;
+}
+
+.section-badge-icon svg{
+    width:16px;
+    height:16px;
+}
+    </style>
+  {{ standard_header_includes }}
+
+
+</head>
+<body>
+ {% module "main_nav"
+  path="/Homepage V2/Sentinum New Header Nav.module",
+  label="Main Navigation"
+%}
+
+
+
+    <a href="#top" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-primary text-primary-foreground px-3 py-1.5 rounded-lg">Skip to content</a>
+    <main>
+
+        <!-- HERO -->
+        <section id="top" class="relative overflow-hidden section-padding">
+            <div class="absolute" style="top:10%;right:15%">
+                <div class="w-[400px] h-[400px] rounded-full bg-primary opacity-[0.06] blur-[120px]"></div>
+            </div>
+            <div class="absolute" style="bottom:5%;left:5%">
+                <div class="w-[300px] h-[300px] rounded-full bg-primary opacity-[0.05] blur-[100px]"></div>
+            </div>
+            <div class="container-main relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <div class="flex gap-2 flex-wrap mb-6">
+                            <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[13px] font-medium bg-accent-dim/15 border border-primary/25 text-primary">4–20 mA Bridge</span>
+                            <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[13px] font-medium bg-accent-dim/15 border border-primary/25 text-primary">LoRaWAN®</span>
+                            <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[13px] font-medium bg-accent-dim/15 border border-primary/25 text-primary">mioty®</span>
+                            <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[13px] font-medium bg-accent-dim/15 border border-primary/25 text-primary">Retrofit</span>
+                            <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[13px] font-medium bg-accent-dim/15 border border-primary/25 text-primary">Made in Germany</span>
+                        </div>
+                        <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Industry · Retrofit · IoT</div>
+                        <h1 class="font-heading font-bold text-[clamp(36px,5vw,60px)] mb-6">AION420 – Your <span class="gradient-text">4–20 mA sensors</span> go IoT.</h1>
+                        <p class="text-muted-foreground text-lg max-w-[560px] mb-8">The simple solution for digitizing existing 4–20 mA sensors. AION420 seamlessly connects traditional industrial sensors to LoRaWAN® or mioty®—without any system modifications. Perfect for retrofits in industry, energy, water management, and building automation.</p>
+                        <div class="flex gap-3 flex-wrap">
+                            <a href="#features" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg font-heading font-semibold text-[15px] bg-primary text-primary-foreground hover:opacity-90 hover:-translate-y-0.5 transition-all">Discover features ↓</a>
+                            <a href="https://sentinum.de/en/kontakt" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg font-heading font-semibold text-[15px] border border-border text-foreground hover:border-primary/25 hover:bg-surface transition-all">Submit a request →</a>
+                        </div>
+                    </div>
+                    <div class="sensor-img">
+                        <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Aion420_Website/AION420-A_Back.png" alt="AION420 4–20 mA zu LoRaWAN und mioty IoT-Bridge von Sentinum" width="620" height="620" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KEY SPECS -->
+        <section class="bg-surface/40" style="padding-top:60px;padding-bottom:60px">
+            <div class="container-main">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div>
+                        <div class="spec-num">4–20 mA</div>
+                        <div class="text-muted-foreground text-sm mt-2">Industry standard</div>
+                    </div>
+                    <div>
+                        <div class="spec-num">±0.5%</div>
+                        <div class="text-muted-foreground text-sm mt-2">Measurement accuracy</div>
+                    </div>
+                    <div>
+                        <div class="spec-num">24 V DC</div>
+                        <div class="text-muted-foreground text-sm mt-2">Supply voltage</div>
+                    </div>
+                    <div>
+                        <div class="spec-num">2 power sources</div>
+                        <div class="text-muted-foreground text-sm mt-2">LoRaWAN® · mioty®</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VARIANTEN -->
+        <section class="section-padding">
+            <div class="container-main">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Variants</div>
+                    <h2 class="font-heading font-bold text-[clamp(32px,4vw,44px)] mb-4">Compatible with <span class="gradient-text">any sensor</span></h2>
+                    <p class="text-muted-foreground text-lg">Whether it’s a passive 2-wire transmitter or an active 3-wire sensor—the AION420 is available in the right design for either LoRaWAN® or mioty®.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-surface border border-border rounded-2xl p-8 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1 hover:shadow-glow">
+                        <div class="icon-tile"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M4 12h16"></path>
+                                <path d="M4 6h16"></path>
+                            </svg></div>
+                        <h3 class="font-heading font-bold text-2xl mb-3">2-wire version</h3>
+                        <p class="text-muted-foreground text-[15px]">For passive sensors that receive power and signals via the same two wires. Ideal for pressure, level, and temperature transmitters.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-2xl p-8 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1 hover:shadow-glow">
+                        <div class="icon-tile"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M4 6h16"></path>
+                                <path d="M4 12h16"></path>
+                                <path d="M4 18h16"></path>
+                            </svg></div>
+                        <h3 class="font-heading font-bold text-2xl mb-3">3-wire version</h3>
+                        <p class="text-muted-foreground text-[15px]">For active sensors with separate power and signal lines. Compatible with flow, humidity, and process sensors from all manufacturers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MEGA FEATURE: SIGNAL MAPPING -->
+        <section class="section-padding bg-surface/40">
+            <div class="container-main">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Mega Feature</div>
+                        <h2 class="font-heading font-bold text-[clamp(32px,4vw,44px)] mb-4">Freely Configurable <span class="gradient-text">Signal Mapping</span></h2>
+                        <p class="text-muted-foreground text-lg mb-6">Convert the raw 4–20 mA current directly into physical values—bar, meters, %, °C, l/min. The AION420 transmits the scaled measurement value directly to the network. No post-processing, no calculations on the backend.</p>
+                        <ul class="flex flex-col gap-3 mb-6">
+                            <li class="flex gap-3 items-start"><span class="check">✓</span><span class="text-[15px]">Customizable scaling from 4–20 mA to any physical quantity</span></li>
+                            <li class="flex gap-3 items-start"><span class="check">✓</span><span class="text-[15px]">Linearization along sensor-specific characteristic curves</span></li>
+                            <li class="flex gap-3 items-start"><span class="check">✓</span><span class="text-[15px]">Freely configurable upper and lower limit values with hysteresis</span></li>
+                            <li class="flex gap-3 items-start"><span class="check">✓</span><span class="text-[15px]">Immediate alarm transmission upon limit value violation — including return signal</span></li>
+                        </ul>
+                    </div>
+                    <div class="bg-surface border border-border rounded-2xl p-6 md:p-8">
+                        <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-4">Example: Pressure sensor</div>
+                        <div class="map-box mb-4">
+                            <div class="map-line"><span>4 mA</span><span class="arrow">→</span><span class="text-primary font-bold">0 bar</span></div>
+                            <div class="map-line"><span>12 mA</span><span class="arrow">→</span><span class="text-primary font-bold">8 bar</span></div>
+                            <div class="map-line"><span>20 mA</span><span class="arrow">→</span><span class="text-primary font-bold">16 bar</span></div>
+                        </div>
+                        <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-4 mt-8">Example: Level</div>
+                        <div class="map-box">
+                            <div class="map-line"><span>4 mA</span><span class="arrow">→</span><span class="text-primary font-bold">0%</span></div>
+                            <div class="map-line"><span>20 mA</span><span class="arrow">→</span><span class="text-primary font-bold">100%</span></div>
+                        </div>
+                        <p class="text-muted-foreground text-[13px] mt-6">If a threshold is exceeded (e.g., &gt; 14 bar), the AION420 immediately sends an alarm—regardless of the next transmission interval.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RETROFIT / DURCHSCHLEIFEN -->
+        <section class="section-padding">
+            <div class="container-main">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Retrofit without system intervention</div>
+                    <h2 class="font-heading font-bold text-[clamp(32px,4vw,44px)] mb-4"><span class="gradient-text">Loop through</span> the signal, get double the benefit</h2>
+                    <p class="text-muted-foreground text-lg">The analog 4–20 mA signal remains available for PLCs, data loggers, and process control systems—while the measured value is transmitted via LPWAN in parallel. No rewiring, no modifications to the existing control system.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-surface border border-border rounded-2xl p-8 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1 hover:shadow-glow">
+                        <div class="icon-tile"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M3 12h4l3-9 4 18 3-9h4"></path>
+                            </svg></div>
+                        <h3 class="font-heading font-bold text-xl mb-2">1 · Integration</h3>
+                        <p class="text-muted-foreground text-[14px]">The AION420 is integrated into the existing current loop—passively, without signal distortion.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-2xl p-8 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1 hover:shadow-glow">
+                        <div class="icon-tile"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                                <path d="M9 9h6v6H9z"></path>
+                            </svg></div>
+                        <h3 class="font-heading font-bold text-xl mb-2">2 · Galvanic Isolation</h3>
+                        <p class="text-muted-foreground text-[14px]">Precise measurement with ±0.5% accuracy—the PLC and control system remain unaffected.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-2xl p-8 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1 hover:shadow-glow">
+                        <div class="icon-tile"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M4 12h4"></path>
+                                <path d="M16 12h4"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path d="M12 4v2"></path>
+                                <path d="M12 18v2"></path>
+                            </svg></div>
+                        <h3 class="font-heading font-bold text-xl mb-2">3 · Wireless transmission to the cloud</h3>
+                        <p class="text-muted-foreground text-[14px]">Transmission via LoRaWAN® or mioty® — with ranges of several kilometers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURES GRID -->
+        <section id="features" class="section-padding bg-surface/40">
+            <div class="container-main">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Features</div>
+                    <h2 class="font-heading font-bold text-[clamp(32px,4vw,44px)] mb-4">Everything on <span class="gradient-text">board</span></h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <div class="bg-surface border border-border rounded-2xl p-6 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1">
+                        <div class="icon-tile"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M4 12h4"></path>
+                                <path d="M16 12h4"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">Smart signal processing</h3>
+                        <p class="text-muted-foreground text-[14px]">Scaling, linearization, and physical conversion directly within the device.</p>
+                    </div>
+
+                    <div class="bg-surface border border-border rounded-2xl p-6 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1">
+                        <div class="icon-tile"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M12 2v20"></path>
+                                <path d="M2 12h20"></path>
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">Flexible Alarms</h3>
+                        <p class="text-muted-foreground text-[14px]">Threshold values with hysteresis, immediate alerts, and “return to normal range” notifications.</p>
+                    </div>
+
+                    <div class="bg-surface border border-border rounded-2xl p-6 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1">
+                        <div class="icon-tile"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M12 20V10"></path>
+                                <path d="M18 20V4"></path>
+                                <path d="M6 20v-6"></path>
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">Efficient transmission</h3>
+                        <p class="text-muted-foreground text-[14px]">Cyclic or event-based transmission with intelligent filtering.</p>
+                    </div>
+
+                    <div class="bg-surface border border-border rounded-2xl p-6 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1">
+                        <div class="icon-tile"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3z"></path>
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">Diagnostics &amp; Maintenance</h3>
+                        <p class="text-muted-foreground text-[14px]">Cable break, loop, and sensor fault detection; power supply status monitoring.</p>
+                    </div>
+
+                    <div class="bg-surface border border-border rounded-2xl p-6 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1">
+                        <div class="icon-tile"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M3 12a9 9 0 1 0 9-9"></path>
+                                <path d="M3 4v5h5"></path>
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">Remote configuration</h3>
+                        <p class="text-muted-foreground text-[14px]">Convenient over-the-air parameterization, scaling, and interval settings via downlink.</p>
+                    </div>
+
+                    <div class="bg-surface border border-border rounded-2xl p-6 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1">
+                        <div class="icon-tile"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                                <path d="M8 4v16"></path>
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">Signal loop-through</h3>
+                        <p class="text-muted-foreground text-[14px]">PLCs and controllers continue to use the analog signal—with parallel transmission via radio.</p>
+                    </div>
+
+                    <div class="bg-surface border border-border rounded-2xl p-6 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1">
+                        <div class="icon-tile"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M2 12h4l3-9 4 18 3-9h6"></path>
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">Galvanic isolation</h3>
+                        <p class="text-muted-foreground text-[14px]">Low-interference, reliable acquisition of the 4–20 mA signal.</p>
+                    </div>
+
+                    <div class="bg-surface border border-border rounded-2xl p-6 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1">
+                        <div class="icon-tile"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M4 20h16"></path>
+                                <path d="M6 20V8l6-4 6 4v12"></path>
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">Compact industrial housing</h3>
+                        <p class="text-muted-foreground text-[14px]">Robust design for control cabinets and industrial environments.</p>
+                    </div>
+
+                    <div class="bg-surface border border-border rounded-2xl p-6 transition-all duration-300 hover:border-primary/25 hover:-translate-y-1">
+                        <div class="icon-tile"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M12 2 2 22h20L12 2z"></path>
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">Suitable for brownfield applications</h3>
+                        <p class="text-muted-foreground text-[14px]">Compatible with sensors from virtually all manufacturers—ideal for existing systems.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+      
+            <section id="produkte" class="section-padding bg-surface/40">
+            <div class="container-main">
+                <div class="max-w-3xl mb-12">
+                    <h2 class="font-heading font-bold text-[clamp(24px,3vw,32px)] mb-5">
+      <div class="flex items-center gap-3 mb-4">
+
+    <div class="section-badge-icon">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             stroke-linecap="round"
+             stroke-linejoin="round">
+            <path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/>
+            <path d="M9.6 4.6A2 2 0 1 1 11 8H2"/>
+            <path d="M12.6 19.4A2 2 0 1 0 14 16H2"/>
+        </svg>
+    </div>
+
+    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider">
+        Two wireless Standard timed
+    </div>
+
+</div>
+                    <h2 class="font-heading font-bold text-[clamp(24px,3vw,32px)] mb-3">AION420 – suited to your infrastructure</h2>
+                    <p class="text-muted-foreground text-[15px]">LoRaWAN®, mioty® oder NB-IoT/LTE-M. Same hardware, same sensors – you pick the right wireless standard.</p>
+                </div>
+                <br>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                    <div class="bg-surface border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5 hover:shadow-[0_0_30px_-10px_hsl(var(--primary)/0.25)] flex flex-col">
+                    <div class="bg-background/40 border-b border-border flex items-center justify-center">
+    <img
+        src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Aion420_Website/LoRa_BLE_black_Front.png"
+        alt="Febris Indoor CO2-Sensor zur drahtlosen Überwachung der Raumluftqualität mit Messung von CO₂, Temperatur, Luftfeuchte und Luftdruck über LoRaWAN®"
+       class="max-w-full h-auto object-contain block"
+        loading="lazy"
+    />
+</div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <div class="flex items-center gap-2 text-primary text-[12px] font-heading font-semibold uppercase tracking-wider mb-2">
+                            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/>
+    <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/>
+    <circle cx="12" cy="12" r="2"/>
+    <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/>
+    <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/>
+</svg>LoRaWAN®</div>
+                            <h3 class="font-heading font-semibold text-[16px] mb-3 leading-snug">AION420 LoRaWAN®</h3>
+                            <p class="text-muted-foreground text-[14px] leading-relaxed flex-1 mb-5">Wireless connectivity for existing 4–20 mA sensors. Ideal for industrial retrofits and remote monitoring via LoRaWAN®.</p>
+                            <div><a href="https://shop.sentinum.de/products/4-20ma-lorawan-bridge-terminiert-fur-industriesensoren" target="_blank" rel="noopener" 
+                            class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-lg font-heading font-semibold text-[11px] bg-primary text-primary-foreground">  View in the shop →</a></div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="bg-surface border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5 hover:shadow-[0_0_30px_-10px_hsl(var(--primary)/0.25)] flex flex-col">
+                       <div class="bg-background/40 border-b border-border flex items-center justify-center">
+                       
+                        <img
+        src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Aion420_Website/mioty_BLE_black_Front.png"
+        alt="Febris Indoor CO2-Sensor mit LED-Ampel zur drahtlosen Überwachung der Raumluftqualität über mioty®, mit Messung von CO₂, Temperatur, Luftfeuchte und Luftdruck"
+       class="max-w-full h-auto object-contain block"
+        loading="lazy"
+    />
+</div>
+                       
+                       
+                        <div class="p-6 flex flex-col flex-1">
+                            <div class="flex items-center gap-2 text-primary text-[12px] font-heading font-semibold uppercase tracking-wider mb-2">
+                              
+   <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/>
+    <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/>
+    <circle cx="12" cy="12" r="2"/>
+    <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/>
+    <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/>
+</svg>
+ mioty®</div>
+                            <h3 class="font-heading font-semibold text-[16px] mb-3 leading-snug">AION420 mioty®</h3>
+                            <p class="text-muted-foreground text-[14px] leading-relaxed flex-1 mb-5">Wireless connectivity for existing 4–20 mA sensors. Ideal for industrial retrofits and remote monitoring via mioty®.</p>
+                            <div><a href="https://shop.sentinum.de/products/aion-4-20ma-adapter-mioty-2-leiter" target="_blank" rel="noopener" 
+                                    class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-lg font-heading font-semibold text-[11px] bg-primary text-primary-foreground">  View in the shop →</a></div>
+                        </div>
+                    </div>
+                    
+                   
+                      
+        </section>
+    <section id="produkte" class="section-padding bg-surface/40">
+            <div class="container-main">
+                <div class="max-w-3xl mb-12">
+                    <h2 class="font-heading font-bold text-[clamp(24px,3vw,32px)] mb-5">
+      <div class="flex items-center gap-3 mb-4">
+
+    <div class="section-badge-icon">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             stroke-linecap="round"
+             stroke-linejoin="round">
+            <path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/>
+            <path d="M9.6 4.6A2 2 0 1 1 11 8H2"/>
+            <path d="M12.6 19.4A2 2 0 1 0 14 16H2"/>
+        </svg>
+    </div>
+
+    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider">
+        Two wireless Standard loop
+    </div>
+
+</div>
+                    <h2 class="font-heading font-bold text-[clamp(24px,3vw,32px)] mb-3">AION420 – suited to your infrastructure</h2>
+                    <p class="text-muted-foreground text-[15px]">LoRaWAN®, mioty® oder NB-IoT/LTE-M. Same hardware, same sensors – you pick the right wireless standard.</p>
+                </div>
+                <br>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                    <div class="bg-surface border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5 hover:shadow-[0_0_30px_-10px_hsl(var(--primary)/0.25)] flex flex-col">
+                    <div class="bg-background/40 border-b border-border flex items-center justify-center">
+    <img
+        src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Aion420_Website/LoRa_BLE_black_Front.png"
+        alt="Febris Indoor CO2-Sensor zur drahtlosen Überwachung der Raumluftqualität mit Messung von CO₂, Temperatur, Luftfeuchte und Luftdruck über LoRaWAN®"
+       class="max-w-full h-auto object-contain block"
+        loading="lazy"
+    />
+</div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <div class="flex items-center gap-2 text-primary text-[12px] font-heading font-semibold uppercase tracking-wider mb-2">
+                            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/>
+    <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/>
+    <circle cx="12" cy="12" r="2"/>
+    <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/>
+    <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/>
+</svg>LoRaWAN®</div>
+                            <h3 class="font-heading font-semibold text-[16px] mb-3 leading-snug">AION420 LoRaWAN®</h3>
+                            <p class="text-muted-foreground text-[14px] leading-relaxed flex-1 mb-5">Wireless connectivity for existing 4–20 mA sensors. Ideal for industrial retrofits and remote monitoring via LoRaWAN®.</p>
+                            <div><a href="https://shop.sentinum.de/products/4-20ma-lorawan-bridge-geschleift-fur-industriesensoren" target="_blank" rel="noopener" 
+                            class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-lg font-heading font-semibold text-[11px] bg-primary text-primary-foreground">  View in the shop →</a></div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="bg-surface border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5 hover:shadow-[0_0_30px_-10px_hsl(var(--primary)/0.25)] flex flex-col">
+                       <div class="bg-background/40 border-b border-border flex items-center justify-center">
+                       
+                        <img
+        src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Aion420_Website/mioty_BLE_black_Front.png"
+        alt="Febris Indoor CO2-Sensor mit LED-Ampel zur drahtlosen Überwachung der Raumluftqualität über mioty®, mit Messung von CO₂, Temperatur, Luftfeuchte und Luftdruck"
+       class="max-w-full h-auto object-contain block"
+        loading="lazy"
+    />
+</div>
+                       
+                       
+                        <div class="p-6 flex flex-col flex-1">
+                            <div class="flex items-center gap-2 text-primary text-[12px] font-heading font-semibold uppercase tracking-wider mb-2">
+                              
+   <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/>
+    <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/>
+    <circle cx="12" cy="12" r="2"/>
+    <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/>
+    <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/>
+</svg>
+ mioty®</div>
+                            <h3 class="font-heading font-semibold text-[16px] mb-3 leading-snug">AION420 mioty®</h3>
+                            <p class="text-muted-foreground text-[14px] leading-relaxed flex-1 mb-5">Wireless connectivity for existing 4–20 mA sensors. Ideal for industrial retrofits and remote monitoring via mioty®.</p>
+                            <div><a href="https://shop.sentinum.de/products/4-20-ma-zu-mioty-bridge-geschleift-fur-industriesensoren" target="_blank" rel="noopener" 
+                                    class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-lg font-heading font-semibold text-[11px] bg-primary text-primary-foreground">  View in the shop →</a></div>
+                        </div>
+                    </div>
+                    
+                   
+                      
+        </section>
+        <!-- ANWENDUNGEN -->
+        <section class="section-padding">
+            <div class="container-main">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Applications</div>
+                    <h2 class="font-heading font-bold text-[clamp(32px,4vw,44px)] mb-4">Wherever there’s <span class="gradient-text">4–20 mA</span>, there’s AION420.</h2>
+                    <p class="text-muted-foreground text-lg">Universally applicable in industry, water management, energy, and building automation.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-surface border border-border rounded-lg p-6 text-center">
+                        <div class="text-primary font-heading font-semibold">Level</div>
+                        <div class="text-muted-foreground text-sm mt-2">Tanks, silos, containers</div>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg p-6 text-center">
+                        <div class="text-primary font-heading font-semibold">Pressure</div>
+                        <div class="text-muted-foreground text-sm mt-2">Process &amp; Hydraulics</div>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg p-6 text-center">
+                        <div class="text-primary font-heading font-semibold">Flow</div>
+                        <div class="text-muted-foreground text-sm mt-2">Liquid &amp; Gas</div>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg p-6 text-center">
+                        <div class="text-primary font-heading font-semibold">Temperature</div>
+                        <div class="text-muted-foreground text-sm mt-2">All types of transmitters</div>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg p-6 text-center">
+                        <div class="text-primary font-heading font-semibold">Humidity</div>
+                        <div class="text-muted-foreground text-sm mt-2">Air &amp; Material</div>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg p-6 text-center">
+                        <div class="text-primary font-heading font-semibold">pH / LF</div>
+                        <div class="text-muted-foreground text-sm mt-2">Water Analysis</div>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg p-6 text-center">
+                        <div class="text-primary font-heading font-semibold">Energy</div>
+                        <div class="text-muted-foreground text-sm mt-2">Consumption Measurement</div>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg p-6 text-center">
+                        <div class="text-primary font-heading font-semibold">Process</div>
+                        <div class="text-muted-foreground text-sm mt-2">Plant Monitoring</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VORTEILE -->
+        <section class="section-padding bg-surface/40">
+            <div class="container-main">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Benefits</div>
+                    <h2 class="font-heading font-bold text-[clamp(32px,4vw,44px)] mb-4">At a <span class="gradient-text">Glance</span></h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-surface border border-border rounded-2xl p-8">
+                        <h3 class="font-heading font-bold text-xl mb-2 text-primary">Retrofit without system intervention</h3>
+                        <p class="text-muted-foreground text-[15px]">Digitize existing 4–20 mA sensors without replacing them or modifying the control system.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-2xl p-8">
+                        <h3 class="font-heading font-bold text-xl mb-2 text-primary">Signal Can Be Used in Parallel</h3>
+                        <p class="text-muted-foreground text-[15px]">The analog signal remains available for PLCs and process control systems—measurement values are also transmitted via radio.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-2xl p-8">
+                        <h3 class="font-heading font-bold text-xl mb-2 text-primary">Long wireless range</h3>
+                        <p class="text-muted-foreground text-[15px]">LoRaWAN® and mioty® transmit sensor data over several kilometers—even in hard-to-reach facilities.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-2xl p-8">
+                        <h3 class="font-heading font-bold text-xl mb-2 text-primary">Cost-effective digitization</h3>
+                        <p class="text-muted-foreground text-[15px]">No additional cabling, no complex network infrastructure, minimal installation costs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECH SPECS -->
+        <section class="section-padding">
+            <div class="container-main">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Technical Data</div>
+                    <h2 class="font-heading font-bold text-[clamp(32px,4vw,44px)]">Specifications</h2>
+                </div>
+                <div class="max-w-3xl mx-auto bg-surface border border-border rounded-2xl p-6 md:p-8">
+                    <div class="spec-row"><span>Input Signal</span><span>4–20 mA (isolated)</span></div>
+                    <div class="spec-row"><span>Power Supply (Vin)</span><span>24 V DC</span></div>
+                    <div class="spec-row"><span>Measurement Accuracy</span><span>±0.5%</span></div>
+                    <div class="spec-row"><span>Variants</span><span>2-wire / 3-wire</span></div>
+                    <div class="spec-row"><span>Wireless technology</span><span>LoRaWAN® or mioty®</span></div>
+                    <div class="spec-row"><span>Signal loop</span><span>Loop-through function</span></div>
+                    <div class="spec-row"><span>Configuration</span><span>Over-the-air (downlink)</span></div>
+                    <div class="spec-row"><span>Diagnostics</span><span>Cable break, loop, or sensor error</span></div>
+                    <div class="spec-row"><span>Design</span><span>Industrial-grade housing</span></div>
+                    <div class="spec-row"><span>Origin</span><span>Made in Germany</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HIGHLIGHTS -->
+        <section class="section-padding bg-surface/40">
+            <div class="container-main">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Highlights</div>
+                    <h2 class="font-heading font-bold text-[clamp(32px,4vw,44px)]">Why <span class="gradient-text">AION420</span>?</h2>
+                </div>
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                    <div class="flex gap-3 items-start"><span class="check">✓</span><span class="text-[15px]">LoRaWAN® or mioty®</span></div>
+                    <div class="flex gap-3 items-start"><span class="check">✓</span><span class="text-[15px]">2-wire and 3-wire versions</span></div>
+                    <div class="flex gap-3 items-start"><span class="check">✓</span><span class="text-[15px]">24 V DC power supply</span></div>
+                    <div class="flex gap-3 items-start"><span class="check">✓</span><span class="text-[15px]">±0.5% measurement accuracy</span></div>
+                    <div class="flex gap-3 items-start"><span class="check">✓</span><span class="text-[15px]">Freely scalable signal mapping</span></div>
+                    <div class="flex gap-3 items-start"><span class="check">✓</span><span class="text-[15px]">Configurable thresholds &amp; alarms</span></div>
+                    <div class="flex gap-3 items-start"><span class="check">✓</span><span class="text-[15px]">Loop-through 4–20 mA signal</span></div>
+                    <div class="flex gap-3 items-start"><span class="check">✓</span><span class="text-[15px]">Cyclic or event-driven transmission</span></div>
+                    <div class="flex gap-3 items-start"><span class="check">✓</span><span class="text-[15px]">Over-the-air remote configuration</span></div>
+                    <div class="flex gap-3 items-start"><span class="check">✓</span><span class="text-[15px]">Retrofit of existing sensor systems</span></div>
+                    <div class="flex gap-3 items-start"><span class="check">✓</span><span class="text-[15px]">Compact industrial enclosure</span></div>
+                    <div class="flex gap-3 items-start"><span class="check">✓</span><span class="text-[15px]">Made in Germany</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section-padding">
+            <div class="container-main">
+                <div class="max-w-3xl mx-auto text-center bg-surface border border-border rounded-2xl p-8 md:p-8" style="padding:3rem 2rem">
+                    <h2 class="font-heading font-bold text-[clamp(28px,4vw,42px)] mb-4">Turn any <span class="gradient-text">4–20 mA sensor</span> into an IoT sensor.</h2>
+                    <p class="text-muted-foreground text-lg mb-8">Talk to us about your retrofit project. We’ll advise you on the right model, configuration, and LPWAN connection.</p>
+                    <div class="flex gap-3 flex-wrap justify-center">
+                        <a href="https://sentinum.de/en/kontakt" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg font-heading font-semibold text-[15px] bg-primary text-primary-foreground hover:opacity-90 hover:-translate-y-0.5 transition-all">Submit a request →</a>
+                        <a href="#top" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg font-heading font-semibold text-[15px] border border-border text-foreground hover:border-primary/25 hover:bg-surface transition-all">Back to top ↑</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+  {% module "page_footer" path="/Homepage V2/Sentinum_Footer_en.module", label="Footer" %}
+    {{ standard_footer_includes }}
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,2115 @@
+<!--
+  templateType: "page"
+  isAvailableForNewContent: true
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sentinum Datahub – IoT Data Platform with MQTT &amp; REST API</title>
+    <meta name="description" content="Sentinum Datahub: Zentrale IoT-Plattform für LoRaWAN®, mioty®, NB-IoT und LTE-CAT-M1. MQTT, REST API, Webhooks. DSGVO-konform, Hosting in Deutschland." />
+    <meta property="og:title" content="Sentinum Datahub – IoT Datenplattform" />
+    <meta property="og:description" content="Zentrale Plattform für IoT-Sensordaten mit MQTT, REST API und Webhooks. Bidirektional, DSGVO-konform, herstellerübergreifend." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="de_DE" />
+    <link rel="canonical" href="https://sentinum.de/datahub" />
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [{
+                    "@type": "Product",
+                    "name": "Sentinum Datahub",
+                    "description": "Zentrale IoT-Datenplattform mit MQTT, REST API und Webhooks. Unterstützt LoRaWAN, mioty, NB-IoT und LTE-CAT-M1.",
+                    "brand": {
+                        "@type": "Brand",
+                        "name": "Sentinum"
+                    },
+                    "category": "IoT Data Platform"
+                },
+                {
+                    "@type": "FAQPage",
+                    "mainEntity": [{
+                            "@type": "Question",
+                            "name": "Was ist der Sentinum Datahub?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Zentrale IoT-Datenplattform mit MQTT, REST und Webhooks fuer LoRaWAN, mioty, NB-IoT und LTE-M."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Wie greife ich auf meine Daten zu?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Ueber MQTT (Push) oder REST API (Pull), beide TLS-verschluesselt und authentifiziert."
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    </script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap");
+
+        *,
+        :after,
+        :before {
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-pan-x: ;
+            --tw-pan-y: ;
+            --tw-pinch-zoom: ;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-gradient-from-position: ;
+            --tw-gradient-via-position: ;
+            --tw-gradient-to-position: ;
+            --tw-ordinal: ;
+            --tw-slashed-zero: ;
+            --tw-numeric-figure: ;
+            --tw-numeric-spacing: ;
+            --tw-numeric-fraction: ;
+            --tw-ring-inset: ;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgba(59, 130, 246, .5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            --tw-blur: ;
+            --tw-brightness: ;
+            --tw-contrast: ;
+            --tw-grayscale: ;
+            --tw-hue-rotate: ;
+            --tw-invert: ;
+            --tw-saturate: ;
+            --tw-sepia: ;
+            --tw-drop-shadow: ;
+            --tw-backdrop-blur: ;
+            --tw-backdrop-brightness: ;
+            --tw-backdrop-contrast: ;
+            --tw-backdrop-grayscale: ;
+            --tw-backdrop-hue-rotate: ;
+            --tw-backdrop-invert: ;
+            --tw-backdrop-opacity: ;
+            --tw-backdrop-saturate: ;
+            --tw-backdrop-sepia: ;
+            --tw-contain-size: ;
+            --tw-contain-layout: ;
+            --tw-contain-paint: ;
+            --tw-contain-style:
+        }
+
+        ::backdrop {
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-pan-x: ;
+            --tw-pan-y: ;
+            --tw-pinch-zoom: ;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-gradient-from-position: ;
+            --tw-gradient-via-position: ;
+            --tw-gradient-to-position: ;
+            --tw-ordinal: ;
+            --tw-slashed-zero: ;
+            --tw-numeric-figure: ;
+            --tw-numeric-spacing: ;
+            --tw-numeric-fraction: ;
+            --tw-ring-inset: ;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgba(59, 130, 246, .5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            --tw-blur: ;
+            --tw-brightness: ;
+            --tw-contrast: ;
+            --tw-grayscale: ;
+            --tw-hue-rotate: ;
+            --tw-invert: ;
+            --tw-saturate: ;
+            --tw-sepia: ;
+            --tw-drop-shadow: ;
+            --tw-backdrop-blur: ;
+            --tw-backdrop-brightness: ;
+            --tw-backdrop-contrast: ;
+            --tw-backdrop-grayscale: ;
+            --tw-backdrop-hue-rotate: ;
+            --tw-backdrop-invert: ;
+            --tw-backdrop-opacity: ;
+            --tw-backdrop-saturate: ;
+            --tw-backdrop-sepia: ;
+            --tw-contain-size: ;
+            --tw-contain-layout: ;
+            --tw-contain-paint: ;
+            --tw-contain-style:
+        }
+
+        /*! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com*/
+        *,
+        :after,
+        :before {
+            box-sizing: border-box;
+            border: 0 solid #e5e7eb
+        }
+
+        :after,
+        :before {
+            --tw-content: ""
+        }
+
+        :host,
+        html {
+            line-height: 1.5;
+            -webkit-text-size-adjust: 100%;
+            -moz-tab-size: 4;
+            -o-tab-size: 4;
+            tab-size: 4;
+            font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+            font-feature-settings: normal;
+            font-variation-settings: normal;
+            -webkit-tap-highlight-color: transparent
+        }
+
+        body {
+            margin: 0;
+            line-height: inherit
+        }
+
+        hr {
+            height: 0;
+            color: inherit;
+            border-top-width: 1px
+        }
+
+        abbr:where([title]) {
+            -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: inherit;
+            font-weight: inherit
+        }
+
+        a {
+            color: inherit;
+            text-decoration: inherit
+        }
+
+        b,
+        strong {
+            font-weight: bolder
+        }
+
+        code,
+        kbd,
+        pre,
+        samp {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+            font-feature-settings: normal;
+            font-variation-settings: normal;
+            font-size: 1em
+        }
+
+        small {
+            font-size: 80%
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline
+        }
+
+        sub {
+            bottom: -.25em
+        }
+
+        sup {
+            top: -.5em
+        }
+
+        table {
+            text-indent: 0;
+            border-color: inherit;
+            border-collapse: collapse
+        }
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: inherit;
+            font-feature-settings: inherit;
+            font-variation-settings: inherit;
+            font-size: 100%;
+            font-weight: inherit;
+            line-height: inherit;
+            letter-spacing: inherit;
+            color: inherit;
+            margin: 0;
+            padding: 0
+        }
+
+        button,
+        select {
+            text-transform: none
+        }
+
+        button,
+        input:where([type=button]),
+        input:where([type=reset]),
+        input:where([type=submit]) {
+            -webkit-appearance: button;
+            background-color: transparent;
+            background-image: none
+        }
+
+        :-moz-focusring {
+            outline: auto
+        }
+
+        :-moz-ui-invalid {
+            box-shadow: none
+        }
+
+        progress {
+            vertical-align: baseline
+        }
+
+        ::-webkit-inner-spin-button,
+        ::-webkit-outer-spin-button {
+            height: auto
+        }
+
+        [type=search] {
+            -webkit-appearance: textfield;
+            outline-offset: -2px
+        }
+
+        ::-webkit-search-decoration {
+            -webkit-appearance: none
+        }
+
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            font: inherit
+        }
+
+        summary {
+            display: list-item
+        }
+
+        blockquote,
+        dd,
+        dl,
+        figure,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        hr,
+        p,
+        pre {
+            margin: 0
+        }
+
+        fieldset {
+            margin: 0
+        }
+
+        fieldset,
+        legend {
+            padding: 0
+        }
+
+        menu,
+        ol,
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0
+        }
+
+        dialog {
+            padding: 0
+        }
+
+        textarea {
+            resize: vertical
+        }
+
+        input::-moz-placeholder,
+        textarea::-moz-placeholder {
+            opacity: 1;
+            color: #9ca3af
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            opacity: 1;
+            color: #9ca3af
+        }
+
+        [role=button],
+        button {
+            cursor: pointer
+        }
+
+        :disabled {
+            cursor: default
+        }
+
+        audio,
+        canvas,
+        embed,
+        iframe,
+        img,
+        object,
+        svg,
+        video {
+            display: block;
+            vertical-align: middle
+        }
+
+        img,
+        video {
+            max-width: 100%;
+            height: auto
+        }
+
+        [hidden]:where(:not([hidden=until-found])) {
+            display: none
+        }
+
+        :root {
+            --background: 216 24% 8%;
+            --foreground: 210 20% 90%;
+            --surface: 214 20% 11%;
+            --surface-hover: 213 18% 14%;
+            --card: 214 20% 11%;
+            --card-foreground: 210 20% 90%;
+            --popover: 214 20% 11%;
+            --popover-foreground: 210 20% 90%;
+            --primary: 17 89% 48%;
+            --primary-foreground: 0 0% 100%;
+            --primary-light: 20 89% 53%;
+            --secondary: 214 20% 11%;
+            --secondary-foreground: 210 20% 90%;
+            --muted: 213 18% 14%;
+            --muted-foreground: 213 20% 55%;
+            --accent: 17 89% 48%;
+            --accent-foreground: 0 0% 100%;
+            --accent-dim: 17 89% 48%;
+            --destructive: 0 84% 60%;
+            --destructive-foreground: 0 0% 100%;
+            --border: 213 20% 18%;
+            --input: 213 20% 18%;
+            --ring: 17 89% 48%;
+            --radius: 0.75rem;
+            --font-heading: "Space Grotesk", sans-serif;
+            --font-body: "DM Sans", sans-serif
+        }
+
+        * {
+            border-color: hsl(var(--border))
+        }
+
+        body {
+            background-color: hsl(var(--background));
+            color: hsl(var(--foreground));
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-family: var(--font-body);
+            line-height: 1.65
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: var(--font-heading);
+            line-height: 1.2
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0
+        }
+
+        .absolute {
+            position: absolute
+        }
+
+        .relative {
+            position: relative
+        }
+
+        .bottom-\[10\%\] {
+            bottom: 10%
+        }
+
+        .left-1\/2 {
+            left: 50%
+        }
+
+        .left-\[10\%\] {
+            left: 10%
+        }
+
+        .right-\[20\%\] {
+            right: 20%
+        }
+
+        .top-1\/2 {
+            top: 50%
+        }
+
+        .top-\[15\%\] {
+            top: 15%
+        }
+
+        .z-10 {
+            z-index: 10
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .mb-1 {
+            margin-bottom: .25rem
+        }
+
+        .mb-10 {
+            margin-bottom: 2.5rem
+        }
+
+        .mb-12 {
+            margin-bottom: 3rem
+        }
+
+        .mb-16 {
+            margin-bottom: 4rem
+        }
+
+        .mb-2 {
+            margin-bottom: .5rem
+        }
+
+        .mb-3 {
+            margin-bottom: .75rem
+        }
+
+        .mb-4 {
+            margin-bottom: 1rem
+        }
+
+        .mb-5 {
+            margin-bottom: 1.25rem
+        }
+
+        .mb-6 {
+            margin-bottom: 1.5rem
+        }
+
+        .mb-8 {
+            margin-bottom: 2rem
+        }
+
+        .ml-auto {
+            margin-left: auto
+        }
+
+        .mt-4 {
+            margin-top: 1rem
+        }
+
+        .block {
+            display: block
+        }
+
+        .flex {
+            display: flex
+        }
+
+        .inline-flex {
+            display: inline-flex
+        }
+
+        .grid {
+            display: grid
+        }
+
+        .aspect-square {
+            aspect-ratio: 1/1
+        }
+
+        .h-10 {
+            height: 2.5rem
+        }
+
+        .h-12 {
+            height: 3rem
+        }
+
+        .h-14 {
+            height: 3.5rem
+        }
+
+        .h-16 {
+            height: 4rem
+        }
+
+        .h-4 {
+            height: 1rem
+        }
+
+        .h-5 {
+            height: 1.25rem
+        }
+
+        .h-6 {
+            height: 1.5rem
+        }
+
+        .h-8 {
+            height: 2rem
+        }
+
+        .h-\[300px\] {
+            height: 300px
+        }
+
+        .h-\[400px\] {
+            height: 400px
+        }
+
+        .h-\[600px\] {
+            height: 600px
+        }
+
+        .w-10 {
+            width: 2.5rem
+        }
+
+        .w-12 {
+            width: 3rem
+        }
+
+        .w-14 {
+            width: 3.5rem
+        }
+
+        .w-16 {
+            width: 4rem
+        }
+
+        .w-4 {
+            width: 1rem
+        }
+
+        .w-5 {
+            width: 1.25rem
+        }
+
+        .w-6 {
+            width: 1.5rem
+        }
+
+        .w-8 {
+            width: 2rem
+        }
+
+        .w-\[300px\] {
+            width: 300px
+        }
+
+        .w-\[400px\] {
+            width: 400px
+        }
+
+        .w-\[600px\] {
+            width: 600px
+        }
+
+        .w-full {
+            width: 100%
+        }
+
+        .max-w-2xl {
+            max-width: 42rem
+        }
+
+        .max-w-3xl {
+            max-width: 48rem
+        }
+
+        .max-w-5xl {
+            max-width: 64rem
+        }
+
+        .max-w-6xl {
+            max-width: 72rem
+        }
+
+        .max-w-\[460px\] {
+            max-width: 460px
+        }
+
+        .max-w-\[520px\] {
+            max-width: 520px
+        }
+
+        .max-w-\[720px\] {
+            max-width: 720px
+        }
+
+        .flex-1 {
+            flex: 1 1 0%
+        }
+
+        .shrink-0 {
+            flex-shrink: 0
+        }
+
+        .-translate-x-1\/2 {
+            --tw-translate-x: -50%
+        }
+
+        .-translate-x-1\/2,
+        .-translate-y-1\/2 {
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        .-translate-y-1\/2 {
+            --tw-translate-y: -50%
+        }
+
+        .transform {
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        @keyframes pulse {
+            50% {
+                opacity: 1
+            }
+
+            0%,
+            to {
+                opacity: .4
+            }
+        }
+
+        .animate-glow-pulse {
+            animation: pulse 3s ease-in-out infinite
+        }
+
+        .grid-cols-1 {
+            grid-template-columns: repeat(1, minmax(0, 1fr))
+        }
+
+        .grid-cols-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr))
+        }
+
+        .flex-col {
+            flex-direction: column
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap
+        }
+
+        .items-center {
+            align-items: center
+        }
+
+        .justify-center {
+            justify-content: center
+        }
+
+        .justify-between {
+            justify-content: space-between
+        }
+
+        .gap-1\.5 {
+            gap: .375rem
+        }
+
+        .gap-16 {
+            gap: 4rem
+        }
+
+        .gap-2 {
+            gap: .5rem
+        }
+
+        .gap-3 {
+            gap: .75rem
+        }
+
+        .gap-4 {
+            gap: 1rem
+        }
+
+        .gap-6 {
+            gap: 1.5rem
+        }
+
+        .gap-8 {
+            gap: 2rem
+        }
+
+        .overflow-hidden {
+            overflow: hidden
+        }
+
+        .rounded {
+            border-radius: .25rem
+        }
+
+        .rounded-2xl {
+            border-radius: 1rem
+        }
+
+        .rounded-\[14px\] {
+            border-radius: 14px
+        }
+
+        .rounded-full {
+            border-radius: 9999px
+        }
+
+        .rounded-lg {
+            border-radius: var(--radius)
+        }
+
+        .rounded-xl {
+            border-radius: .75rem
+        }
+
+        .border {
+            border-width: 1px
+        }
+
+        .border-b {
+            border-bottom-width: 1px
+        }
+
+        .border-dashed {
+            border-style: dashed
+        }
+
+        .border-border {
+            border-color: hsl(var(--border))
+        }
+
+        .border-primary {
+            border-color: hsl(var(--primary))
+        }
+
+        .border-primary\/25 {
+            border-color: hsl(var(--primary)/.25)
+        }
+
+        .bg-accent-dim {
+            background-color: hsl(var(--accent-dim)/.12)
+        }
+
+        .bg-accent-dim\/15 {
+            background-color: hsl(var(--accent-dim)/.15)
+        }
+
+        .bg-background {
+            background-color: hsl(var(--background))
+        }
+
+        .bg-primary {
+            background-color: hsl(var(--primary))
+        }
+
+        .bg-primary\/10 {
+            background-color: hsl(var(--primary)/.1)
+        }
+
+        .bg-surface {
+            background-color: hsl(var(--surface))
+        }
+
+        .bg-surface\/40 {
+            background-color: hsl(var(--surface)/.4)
+        }
+
+        .bg-surface\/50 {
+            background-color: hsl(var(--surface)/.5)
+        }
+
+        .bg-surface\/60 {
+            background-color: hsl(var(--surface)/.6)
+        }
+
+        .bg-\[radial-gradient\(circle\2c hsl\(var\(--accent-dim\)\/0\.12\)\2c transparent\)\] {
+            background-image: radial-gradient(circle, hsl(var(--accent-dim)/.12), transparent)
+        }
+
+        .p-10 {
+            padding: 2.5rem
+        }
+
+        .p-6 {
+            padding: 1.5rem
+        }
+
+        .p-8 {
+            padding: 2rem
+        }
+
+        .px-3 {
+            padding-left: .75rem;
+            padding-right: .75rem
+        }
+
+        .px-4 {
+            padding-left: 1rem;
+            padding-right: 1rem
+        }
+
+        .px-5 {
+            padding-left: 1.25rem;
+            padding-right: 1.25rem
+        }
+
+        .px-6 {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem
+        }
+
+        .px-8 {
+            padding-left: 2rem;
+            padding-right: 2rem
+        }
+
+        .py-1\.5 {
+            padding-top: .375rem;
+            padding-bottom: .375rem
+        }
+
+        .py-2 {
+            padding-top: .5rem;
+            padding-bottom: .5rem
+        }
+
+        .py-3\.5 {
+            padding-top: .875rem;
+            padding-bottom: .875rem
+        }
+
+        .py-4 {
+            padding-top: 1rem;
+            padding-bottom: 1rem
+        }
+
+        .py-5 {
+            padding-top: 1.25rem
+        }
+
+        .pb-5,
+        .py-5 {
+            padding-bottom: 1.25rem
+        }
+
+        .text-left {
+            text-align: left
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        .font-heading {
+            font-family: Space Grotesk, sans-serif
+        }
+
+        .text-3xl {
+            font-size: 1.875rem;
+            line-height: 2.25rem
+        }
+
+        .text-\[13px\] {
+            font-size: 13px
+        }
+
+        .text-\[14px\] {
+            font-size: 14px
+        }
+
+        .text-\[15px\] {
+            font-size: 15px
+        }
+
+        .text-\[clamp\(28px\2c 4vw\2c 42px\)\] {
+            font-size: clamp(28px, 4vw, 42px)
+        }
+
+        .text-\[clamp\(32px\2c 4vw\2c 44px\)\] {
+            font-size: clamp(32px, 4vw, 44px)
+        }
+
+        .text-\[clamp\(32px\2c 4vw\2c 48px\)\] {
+            font-size: clamp(32px, 4vw, 48px)
+        }
+
+        .text-\[clamp\(36px\2c 5vw\2c 60px\)\] {
+            font-size: clamp(36px, 5vw, 60px)
+        }
+
+        .text-base {
+            font-size: 1rem;
+            line-height: 1.5rem
+        }
+
+        .text-lg {
+            font-size: 1.125rem;
+            line-height: 1.75rem
+        }
+
+        .text-sm {
+            font-size: .875rem;
+            line-height: 1.25rem
+        }
+
+        .font-bold {
+            font-weight: 700
+        }
+
+        .font-medium {
+            font-weight: 500
+        }
+
+        .font-semibold {
+            font-weight: 600
+        }
+
+        .uppercase {
+            text-transform: uppercase
+        }
+
+        .leading-relaxed {
+            line-height: 1.625
+        }
+
+        .leading-snug {
+            line-height: 1.375
+        }
+
+        .tracking-\[3px\] {
+            letter-spacing: 3px
+        }
+
+        .tracking-wider {
+            letter-spacing: .05em
+        }
+
+        .text-foreground {
+            color: hsl(var(--foreground))
+        }
+
+        .text-muted-foreground {
+            color: hsl(var(--muted-foreground))
+        }
+
+        .text-primary {
+            color: hsl(var(--primary))
+        }
+
+        .text-primary-foreground {
+            color: hsl(var(--primary-foreground))
+        }
+
+        .opacity-\[0\.05\] {
+            opacity: .05
+        }
+
+        .opacity-\[0\.06\] {
+            opacity: .06
+        }
+
+        .opacity-\[0\.07\] {
+            opacity: .07
+        }
+
+        .blur-\[100px\] {
+            --tw-blur: blur(100px)
+        }
+
+        .blur-\[100px\],
+        .blur-\[120px\] {
+            filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+        }
+
+        .blur-\[120px\] {
+            --tw-blur: blur(120px)
+        }
+
+        .backdrop-blur-md {
+            --tw-backdrop-blur: blur(12px);
+            -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+            backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)
+        }
+
+        .transition-all {
+            transition-property: all;
+            transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+            transition-duration: .15s
+        }
+
+        .transition-colors {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+            transition-duration: .15s
+        }
+
+        .transition-transform {
+            transition-property: transform;
+            transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+            transition-duration: .15s
+        }
+
+        .duration-300 {
+            transition-duration: .3s
+        }
+
+        .ease-in-out {
+            transition-timing-function: cubic-bezier(.4, 0, .2, 1)
+        }
+
+        @keyframes enter {
+            0% {
+                opacity: var(--tw-enter-opacity, 1);
+                transform: translate3d(var(--tw-enter-translate-x, 0), var(--tw-enter-translate-y, 0), 0) scale3d(var(--tw-enter-scale, 1), var(--tw-enter-scale, 1), var(--tw-enter-scale, 1)) rotate(var(--tw-enter-rotate, 0))
+            }
+        }
+
+        @keyframes exit {
+            to {
+                opacity: var(--tw-exit-opacity, 1);
+                transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0) scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0))
+            }
+        }
+
+        .duration-300 {
+            animation-duration: .3s
+        }
+
+        .ease-in-out {
+            animation-timing-function: cubic-bezier(.4, 0, .2, 1)
+        }
+
+        .gradient-text {
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)))
+        }
+
+        .container-main {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1200px;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem
+        }
+
+        .section-padding {
+            padding-top: 100px;
+            padding-bottom: 100px
+        }
+
+        .last\:border-0:last-child {
+            border-width: 0
+        }
+
+        .hover\:-translate-y-0\.5:hover {
+            --tw-translate-y: -0.125rem;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        .hover\:border-primary:hover {
+            border-color: hsl(var(--primary))
+        }
+
+        .hover\:border-primary\/25:hover {
+            border-color: hsl(var(--primary)/.25)
+        }
+
+        .hover\:bg-surface:hover {
+            background-color: hsl(var(--surface))
+        }
+
+        .hover\:bg-surface-hover:hover {
+            background-color: hsl(var(--surface-hover))
+        }
+
+        .hover\:underline:hover {
+            text-decoration-line: underline
+        }
+
+        .hover\:opacity-90:hover {
+            opacity: .9
+        }
+
+        .hover\:shadow-\[0_0_30px_-10px_hsl\(var\(--primary\)\/0\.25\)\]:hover {
+            --tw-shadow: 0 0 30px -10px hsl(var(--primary)/0.25);
+            --tw-shadow-colored: 0 0 30px -10px var(--tw-shadow-color);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+        }
+
+        .focus\:not-sr-only:focus {
+            position: static;
+            width: auto;
+            height: auto;
+            padding: 0;
+            margin: 0;
+            overflow: visible;
+            clip: auto;
+            white-space: normal
+        }
+
+        .focus\:absolute:focus {
+            position: absolute
+        }
+
+        .focus\:left-2:focus {
+            left: .5rem
+        }
+
+        .focus\:top-2:focus {
+            top: .5rem
+        }
+
+        .group:hover .group-hover\:bg-primary {
+            background-color: hsl(var(--primary))
+        }
+
+        .group:hover .group-hover\:text-primary-foreground {
+            color: hsl(var(--primary-foreground))
+        }
+
+        @media (min-width:640px) {
+            .sm\:grid-cols-2 {
+                grid-template-columns: repeat(2, minmax(0, 1fr))
+            }
+        }
+
+        @media (min-width:768px) {
+            .md\:col-span-2 {
+                grid-column: span 2/span 2
+            }
+
+            .md\:grid-cols-2 {
+                grid-template-columns: repeat(2, minmax(0, 1fr))
+            }
+
+            .md\:grid-cols-3 {
+                grid-template-columns: repeat(3, minmax(0, 1fr))
+            }
+
+            .md\:grid-cols-4 {
+                grid-template-columns: repeat(4, minmax(0, 1fr))
+            }
+        }
+
+        @media (min-width:1024px) {
+            .lg\:grid-cols-2 {
+                grid-template-columns: repeat(2, minmax(0, 1fr))
+            }
+
+            .lg\:grid-cols-3 {
+                grid-template-columns: repeat(3, minmax(0, 1fr))
+            }
+
+            .lg\:grid-cols-4 {
+                grid-template-columns: repeat(4, minmax(0, 1fr))
+            }
+        }
+    </style>
+    <style>
+        /* Arbitrary utilities */
+        .gap-8 {
+            gap: 2rem
+        }
+
+        @media (min-width:640px) {
+            .sm\:inline-flex {
+                display: inline-flex
+            }
+        }
+
+        .text-\[12px\] {
+            font-size: 12px
+        }
+
+        .text-\[13px\] {
+            font-size: 13px
+        }
+
+        .text-\[14px\] {
+            font-size: 14px
+        }
+
+        .text-\[15px\] {
+            font-size: 15px
+        }
+
+        .text-\[clamp\(28px\,4vw\,42px\)\] {
+            font-size: clamp(28px, 4vw, 42px)
+        }
+
+        .text-\[clamp\(32px\,4vw\,44px\)\] {
+            font-size: clamp(32px, 4vw, 44px)
+        }
+
+        .text-\[clamp\(32px\,4vw\,48px\)\] {
+            font-size: clamp(32px, 4vw, 48px)
+        }
+
+        .text-\[clamp\(36px\,5vw\,60px\)\] {
+            font-size: clamp(36px, 5vw, 60px)
+        }
+
+        .text-\[clamp\(24px\,3vw\,32px\)\] {
+            font-size: clamp(24px, 3vw, 32px)
+        }
+
+        .tracking-\[2px\] {
+            letter-spacing: 2px
+        }
+
+        .tracking-\[3px\] {
+            letter-spacing: 3px
+        }
+
+        .aspect-\[4\/3\] {
+            aspect-ratio: 4/3
+        }
+
+        .aspect-\[5\/4\] {
+            aspect-ratio: 5/4
+        }
+
+        .aspect-\[16\/10\] {
+            aspect-ratio: 16/10
+        }
+
+        .bg-background\/40 {
+            background-color: hsl(var(--background)/0.4)
+        }
+
+        .max-w-\[460px\] {
+            max-width: 460px
+        }
+
+        .max-w-\[520px\] {
+            max-width: 520px
+        }
+
+        .max-w-\[560px\] {
+            max-width: 560px
+        }
+
+        .max-w-\[720px\] {
+            max-width: 720px
+        }
+
+        .w-\[300px\] {
+            width: 300px
+        }
+
+        .h-\[300px\] {
+            height: 300px
+        }
+
+        .w-\[400px\] {
+            width: 400px
+        }
+
+        .h-\[400px\] {
+            height: 400px
+        }
+
+        .w-\[600px\] {
+            width: 600px
+        }
+
+        .h-\[600px\] {
+            height: 600px
+        }
+
+        .top-\[15\%\] {
+            top: 15%
+        }
+
+        .right-\[20\%\] {
+            right: 20%
+        }
+
+        .bottom-\[10\%\] {
+            bottom: 10%
+        }
+
+        .left-\[10\%\] {
+            left: 10%
+        }
+
+        .opacity-\[0\.05\] {
+            opacity: .05
+        }
+
+        .opacity-\[0\.06\] {
+            opacity: .06
+        }
+
+        .opacity-\[0\.07\] {
+            opacity: .07
+        }
+
+        .opacity-\[0\.08\] {
+            opacity: .08
+        }
+
+        .blur-\[100px\] {
+            filter: blur(100px)
+        }
+
+        .blur-\[120px\] {
+            filter: blur(120px)
+        }
+
+        .bg-\[radial-gradient\(circle\,hsl\(var\(--accent-dim\)\/0\.12\)\,transparent\)\] {
+            background-image: radial-gradient(circle, hsl(var(--accent-dim)/0.12), transparent)
+        }
+
+        .bg-\[radial-gradient\(circle\,hsl\(var\(--accent-dim\)\/0\.14\)\,transparent\)\] {
+            background-image: radial-gradient(circle, hsl(var(--accent-dim)/0.14), transparent)
+        }
+
+        .bg-background\/80 {
+            background-color: hsl(var(--background)/0.8)
+        }
+
+        .backdrop-blur-md {
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px)
+        }
+
+        .bg-surface\/40 {
+            background-color: hsl(var(--surface)/0.4)
+        }
+
+        .bg-surface\/50 {
+            background-color: hsl(var(--surface)/0.5)
+        }
+
+        .bg-surface\/60 {
+            background-color: hsl(var(--surface)/0.6)
+        }
+
+        .bg-primary\/10 {
+            background-color: hsl(var(--primary)/0.1)
+        }
+
+        .bg-primary\/20 {
+            background-color: hsl(var(--primary)/0.2)
+        }
+
+        .bg-accent-dim\/15 {
+            background-color: hsl(var(--accent-dim)/0.15)
+        }
+
+        .border-primary\/25 {
+            border-color: hsl(var(--primary)/0.25)
+        }
+
+        .border-primary\/40 {
+            border-color: hsl(var(--primary)/0.4)
+        }
+
+        .border-dashed {
+            border-style: dashed
+        }
+
+        @keyframes glow-pulse-anim {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: .6
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 1
+            }
+        }
+
+        .animate-glow-pulse {
+            animation: glow-pulse-anim 4s ease-in-out infinite
+        }
+
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)))
+        }
+
+        .container-main {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem
+        }
+
+        .section-padding {
+            padding-top: 100px;
+            padding-bottom: 100px
+        }
+
+        .shrink-0 {
+            flex-shrink: 0
+        }
+
+        .last\:border-0:last-child {
+            border-width: 0
+        }
+
+        pre.code-block {
+            background: hsl(var(--background));
+            border: 1px solid hsl(var(--border));
+            border-radius: .75rem;
+            padding: 1.25rem;
+            overflow-x: auto;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 13px;
+            line-height: 1.55;
+            color: hsl(var(--foreground))
+        }
+
+        pre.code-block .c-key {
+            color: hsl(var(--primary))
+        }
+    </style>
+  
+   {{ standard_header_includes }}
+
+</head>
+
+<body>
+  {% module "main_nav"
+  path="/Homepage V2/Sentinum New Header Nav.module",
+  label="Main Navigation"
+%}
+    <a href="#top" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-primary text-primary-foreground px-3 py-2 rounded">Skip to content</a>
+    <main>
+        <section id="top" class="relative flex items-center overflow-hidden section-padding">
+            <div class="absolute top-[15%] right-[20%] w-[400px] h-[400px] rounded-full bg-primary opacity-[0.06] blur-[120px]"></div>
+            <div class="absolute bottom-[10%] left-[10%] w-[300px] h-[300px] rounded-full bg-primary opacity-[0.05] blur-[100px]"></div>
+            <div class="container-main relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <div class="flex gap-3 flex-wrap mb-6"><span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[13px] font-medium bg-accent-dim/15 border border-primary/25 text-primary"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg> REST &amp; MQTT</span><span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[13px] font-medium bg-accent-dim/15 border border-primary/25 text-primary"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"></path>
+                                    <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"></path>
+                                    <circle cx="12" cy="12" r="2"></circle>
+                                    <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"></path>
+                                    <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"></path>
+                                </svg> LoRaWAN® · mioty® · NB-IoT · LTE-M</span><span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[13px] font-medium bg-accent-dim/15 border border-primary/25 text-primary"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17 3 21 7l-4 4"></path>
+                                    <path d="M3 7h18"></path>
+                                    <path d="m7 21-4-4 4-4"></path>
+                                    <path d="M21 17H3"></path>
+                                </svg> Bidirectional</span><span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[13px] font-medium bg-accent-dim/15 border border-primary/25 text-primary"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg> GDPR-compliant</span></div>
+                        <h1 class="font-heading font-bold text-[clamp(36px,5vw,60px)] mb-6">Sentinum <span class="gradient-text">Datahub</span> – the central platform for your IoT data</h1>
+                        <p class="text-muted-foreground text-lg max-w-[520px] mb-8">Collect, normalize, and integrate sensor data from LoRaWAN®, mioty®, NB-IoT, and LTE-CAT-M1 – in real time, across manufacturers, and in compliance with the GDPR. Connects to any cloud, ERP, or SCADA environment via MQTT, REST API, and webhooks.</p>
+                        <div class="flex gap-3 flex-wrap mb-10">
+                            <a href="https://sentinum.de/en/kontakt" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg font-heading font-semibold text-[15px] bg-primary text-primary-foreground hover:opacity-90 hover:-translate-y-0.5 transition-all">Request a quote →</a>
+                            <a href="https://docs.sentinum.de/en/datahub" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg font-heading font-semibold text-[15px] border border-border text-foreground hover:border-primary/25 hover:bg-surface transition-all">Documentation</a>
+                        </div>
+                    </div>
+                    <div class="flex justify-center relative">
+                        <div class="absolute w-[300px] h-[300px] rounded-full bg-[radial-gradient(circle,hsl(var(--accent-dim)/0.12),transparent)] animate-glow-pulse"></div>
+                        <div class="relative z-10 w-full aspect-square max-w-[460px] rounded-2xl border border-dashed border-border bg-surface/60 flex flex-col items-center justify-center text-center p-8 text-muted-foreground">
+                           
+                           
+<div class="flex items-center justify-center bg-muted/30 rounded-lg p-0 w-full h-full">
+  <img
+    src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Datahub/Datahub%2c%20Server.png"
+    alt="DataHub Visualisierung"
+    class="w-full h-full object-cover"
+  />
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="was-ist" class="section-padding bg-surface/50">
+            <div class="container-main">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">What is the Datahub?</div>
+                    <h2 class="font-heading font-bold text-[clamp(32px,4vw,44px)]">A data platform— <span class="gradient-text">without vendor lock-in</span></h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-surface border border-border rounded-lg p-6 hover:border-primary/25 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg></div>
+                        <div class="font-heading font-semibold text-base mb-2">Data forwarding via MQTT &amp; REST</div>
+                        <p class="text-muted-foreground text-[14px]">Sensor data in real time via MQTT (push) or traditionally via REST API (pull)—TLS-encrypted and authenticated.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg p-6 hover:border-primary/25 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"></path>
+                                <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"></path>
+                                <circle cx="12" cy="12" r="2"></circle>
+                                <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"></path>
+                                <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"></path>
+                            </svg></div>
+                        <div class="font-heading font-semibold text-base mb-2">Cellular, LoRaWAN® &amp; mioty®</div>
+                        <p class="text-muted-foreground text-[14px]">Compatible with devices and systems via NB-IoT, LTE-CAT-M1, LoRaWAN®, and mioty® – across all manufacturers.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg p-6 hover:border-primary/25 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                                <path d="m9 12 2 2 4-4"></path>
+                            </svg></div>
+                        <div class="font-heading font-semibold text-base mb-2">Secure · Hosted in the EU</div>
+                        <p class="text-muted-foreground text-[14px]">Operated in compliance with the GDPR in European data centers. TLS-encrypted transmission, secure storage.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg p-6 hover:border-primary/25 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M19.439 7.85c-.049.322.059.648.289.878l1.568 1.568c.47.47.706 1.087.706 1.704s-.235 1.233-.706 1.704l-1.611 1.611a.98.98 0 0 1-.837.276c-.47-.07-.802-.48-.968-.925a2.501 2.501 0 1 0-3.214 3.214c.446.166.855.497.925.968a.979.979 0 0 1-.276.837l-1.61 1.61a2.404 2.404 0 0 1-1.705.707 2.402 2.402 0 0 1-1.704-.706l-1.568-1.568a1.026 1.026 0 0 0-.877-.29c-.493.074-.84.504-1.02.968a2.5 2.5 0 1 1-3.237-3.237c.464-.18.894-.527.967-1.02a1.026 1.026 0 0 0-.289-.877l-1.568-1.568A2.402 2.402 0 0 1 1.998 12c0-.617.236-1.234.706-1.704L4.23 8.77c.24-.24.581-.353.917-.303.515.077.877.528 1.073 1.01a2.5 2.5 0 1 0 3.259-3.259c-.482-.196-.933-.558-1.01-1.073-.05-.336.062-.676.303-.917l1.525-1.525A2.402 2.402 0 0 1 12 1.998c.617 0 1.234.236 1.704.706l1.568 1.568c.23.23.556.338.877.29.493-.074.84-.504 1.02-.968a2.5 2.5 0 1 1 3.237 3.237c-.464.18-.894.527-.967 1.02Z"></path>
+                            </svg></div>
+                        <div class="font-heading font-semibold text-base mb-2">Open, no lock-in</div>
+                        <p class="text-muted-foreground text-[14px]">Standard protocols and documented API – seamless integration with third-party apps, cloud, ERP, SCADA, and more.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="platforms" class="section-padding">
+            <div class="container-main">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Third-party providers</div>
+                    <h2 class="font-heading font-bold text-[clamp(28px,4vw,42px)] mb-4">Seamlessly integrated with <span class="gradient-text">your tools</span></h2>
+                    <p class="text-muted-foreground text-lg">Via open standards into all common cloud and backend platforms.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+                    <div class="bg-surface border border-border rounded-lg px-5 py-4 text-center hover:border-primary/25 transition-all">
+                        <div class="font-heading font-semibold text-[14px] text-foreground">Microsoft Azure</div>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg px-5 py-4 text-center hover:border-primary/25 transition-all">
+                        <div class="font-heading font-semibold text-[14px] text-foreground">AWS IoT</div>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg px-5 py-4 text-center hover:border-primary/25 transition-all">
+                        <div class="font-heading font-semibold text-[14px] text-foreground">Google Cloud</div>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg px-5 py-4 text-center hover:border-primary/25 transition-all">
+                        <div class="font-heading font-semibold text-[14px] text-foreground">SAP</div>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg px-5 py-4 text-center hover:border-primary/25 transition-all">
+                        <div class="font-heading font-semibold text-[14px] text-foreground">Node-RED</div>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg px-5 py-4 text-center hover:border-primary/25 transition-all">
+                        <div class="font-heading font-semibold text-[14px] text-foreground">Grafana</div>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg px-5 py-4 text-center hover:border-primary/25 transition-all">
+                        <div class="font-heading font-semibold text-[14px] text-foreground">Power BI</div>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg px-5 py-4 text-center hover:border-primary/25 transition-all">
+                        <div class="font-heading font-semibold text-[14px] text-foreground">Custom ERP</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="how" class="section-padding bg-surface/50">
+            <div class="container-main">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">How it works</div>
+                    <h2 class="font-heading font-bold text-[clamp(32px,4vw,44px)] mb-4">From sensor to <span class="gradient-text">business process</span></h2>
+                    <p class="text-muted-foreground text-lg">Four steps from wireless transmission to live integration into your systems.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-surface border border-border rounded-lg p-8 transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-primary font-heading font-bold text-3xl">01</span>
+                            <div class="w-12 h-12 rounded-xl bg-accent-dim/15 text-primary flex items-center justify-center ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                    <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"></path>
+                                    <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"></path>
+                                    <circle cx="12" cy="12" r="2"></circle>
+                                    <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"></path>
+                                    <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"></path>
+                                </svg></div>
+                        </div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">Sensors send</h3>
+                        <p class="text-muted-foreground text-[14px]">Devices send telemetry to the Datahub via LoRaWAN®, mioty®, NB-IoT, or LTE-CAT-M1.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg p-8 transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-primary font-heading font-bold text-3xl">02</span>
+                            <div class="w-12 h-12 rounded-xl bg-accent-dim/15 text-primary flex items-center justify-center ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                    <path d="M12 2v4"></path>
+                                    <path d="M12 18v4"></path>
+                                    <path d="m4.93 4.93 2.83 2.83"></path>
+                                    <path d="m16.24 16.24 2.83 2.83"></path>
+                                    <path d="M2 12h4"></path>
+                                    <path d="M18 12h4"></path>
+                                    <path d="m4.93 19.07 2.83-2.83"></path>
+                                    <path d="m16.24 7.76 2.83-2.83"></path>
+                                </svg></div>
+                        </div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">Datahub processes</h3>
+                        <p class="text-muted-foreground text-[14px]">Data is normalized, decoded, and stored persistently—regardless of the manufacturer.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg p-8 transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-primary font-heading font-bold text-3xl">03</span>
+                            <div class="w-12 h-12 rounded-xl bg-accent-dim/15 text-primary flex items-center justify-center ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg></div>
+                        </div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">Provide API &amp; MQTT</h3>
+                        <p class="text-muted-foreground text-[14px]">Access via REST API (pull) and MQTT broker (push)—with authentication and topic structure.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg p-8 transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-primary font-heading font-bold text-3xl">04</span>
+                            <div class="w-12 h-12 rounded-xl bg-accent-dim/15 text-primary flex items-center justify-center ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                    <path d="M17.5 19a4.5 4.5 0 1 0-1.4-8.78 7 7 0 1 0-13.6 2.78H4"></path>
+                                    <path d="M17.5 19H7"></path>
+                                </svg></div>
+                        </div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">Integrate systems</h3>
+                        <p class="text-muted-foreground text-[14px]">ERP, SCADA, Smart Building, Azure, AWS, Google Cloud, SAP – live data available everywhere.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="code" class="section-padding">
+            <div class="container-main">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Integration</div>
+                    <h2 class="font-heading font-bold text-[clamp(32px,4vw,44px)] mb-4"><span class="gradient-text">Live</span> in minutes</h2>
+                    <p class="text-muted-foreground text-lg">Stream sensor data into your application with just a few lines of code—via MQTT or REST.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-surface border border-border rounded-2xl p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                    <path d="M2 18h20"></path>
+                                    <path d="M5 14a7 7 0 0 1 14 0"></path>
+                                    <path d="M8 10a4 4 0 0 1 8 0"></path>
+                                    <circle cx="12" cy="6" r="1"></circle>
+                                </svg></div>
+                            <div>
+                                <div class="font-heading font-semibold text-base">MQTT (Python)</div>
+                                <div class="text-muted-foreground text-[13px]">paho-mqtt · TLS · Wildcard subscribe</div>
+                            </div>
+                        </div>
+                        <pre class="code-block"><code>import paho.mqtt.client as mqtt
+import json
+
+BROKER = "broker.sentinum.de"
+PORT   = 8883
+USER   = "your-customer-name"
+PASS   = "your-password"
+TOPIC  = f"devices/{USER}/+/+/+/up"
+
+def on_message(client, userdata, msg):
+    payload = json.loads(msg.payload)
+    print(msg.topic, payload)
+
+client = mqtt.Client(client_id="my-integration")
+client.username_pw_set(USER, PASS)
+client.tls_set()
+client.on_message = on_message
+client.connect(BROKER, PORT, 60)
+client.subscribe(TOPIC, qos=1)
+client.loop_forever()</code></pre>
+                        <a href="https://docs.sentinum.de/en/new-integration-guide" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-4 text-primary text-sm font-heading font-semibold hover:underline"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                            </svg> Complete MQTT Guide</a>
+                    </div>
+                    <div class="bg-surface border border-border rounded-2xl p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                    <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                                    <path d="M7 8h10"></path>
+                                    <path d="M7 12h10"></path>
+                                    <path d="M7 16h6"></path>
+                                </svg></div>
+                            <div>
+                                <div class="font-heading font-semibold text-base">REST API (cURL)</div>
+                                <div class="text-muted-foreground text-[13px]">Bearer Auth · JSON · Swagger UI</div>
+                            </div>
+                        </div>
+                        <pre class="code-block"><code>curl -X GET "<deviceid>https://api.sentinum.de/v1/devices//measurements?limit=100" \
+  -H "Authorization: Bearer <your_token>" \
+  -H "Accept: application/json"</your_token></deviceid></code></pre>
+                        <a href="https://docs.sentinum.de/en/rest-api-swagger-ui" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-4 text-primary text-sm font-heading font-semibold hover:underline"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                            </svg> Open REST API Swagger</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="warum" class="section-padding bg-surface/50">
+            <div class="container-main">
+                <div class="max-w-2xl mb-16">
+                    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Why Datahub?</div>
+                    <h2 class="font-heading font-bold text-[clamp(32px,4vw,44px)] mb-4">One platform – <span class="gradient-text">countless possibilities</span></h2>
+                    <p class="text-muted-foreground text-lg">Six reasons why Datahub forms the backbone of modern IoT architectures.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-surface border border-border rounded-lg p-8 transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5 hover:shadow-[0_0_30px_-10px_hsl(var(--primary)/0.25)]">
+                        <div class="w-14 h-14 rounded-[14px] bg-accent-dim flex items-center justify-center mb-5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary">
+                                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                <path d="M3 5v14a9 3 0 0 0 18 0V5"></path>
+                                <path d="M3 12a9 3 0 0 0 18 0"></path>
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">Central Data Collection</h3>
+                        <p class="text-muted-foreground text-[15px]">Collects and aggregates data from a wide variety of IoT sensors—across manufacturers, normalized, and ready to use.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg p-8 transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5 hover:shadow-[0_0_30px_-10px_hsl(var(--primary)/0.25)]">
+                        <div class="w-14 h-14 rounded-[14px] bg-accent-dim flex items-center justify-center mb-5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary">
+                                <path d="M3 3v18h18"></path>
+                                <path d="m19 9-5 5-4-4-3 3"></path>
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">Intelligent data analysis</h3>
+                        <p class="text-muted-foreground text-[15px]">Provides valuable insights for optimizing processes, energy consumption, and maintenance cycles.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg p-8 transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5 hover:shadow-[0_0_30px_-10px_hsl(var(--primary)/0.25)]">
+                        <div class="w-14 h-14 rounded-[14px] bg-accent-dim flex items-center justify-center mb-5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary">
+                                <path d="M19.439 7.85c-.049.322.059.648.289.878l1.568 1.568c.47.47.706 1.087.706 1.704s-.235 1.233-.706 1.704l-1.611 1.611a.98.98 0 0 1-.837.276c-.47-.07-.802-.48-.968-.925a2.501 2.501 0 1 0-3.214 3.214c.446.166.855.497.925.968a.979.979 0 0 1-.276.837l-1.61 1.61a2.404 2.404 0 0 1-1.705.707 2.402 2.402 0 0 1-1.704-.706l-1.568-1.568a1.026 1.026 0 0 0-.877-.29c-.493.074-.84.504-1.02.968a2.5 2.5 0 1 1-3.237-3.237c.464-.18.894-.527.967-1.02a1.026 1.026 0 0 0-.289-.877l-1.568-1.568A2.402 2.402 0 0 1 1.998 12c0-.617.236-1.234.706-1.704L4.23 8.77c.24-.24.581-.353.917-.303.515.077.877.528 1.073 1.01a2.5 2.5 0 1 0 3.259-3.259c-.482-.196-.933-.558-1.01-1.073-.05-.336.062-.676.303-.917l1.525-1.525A2.402 2.402 0 0 1 12 1.998c.617 0 1.234.236 1.704.706l1.568 1.568c.23.23.556.338.877.29.493-.074.84-.504 1.02-.968a2.5 2.5 0 1 1 3.237 3.237c-.464.18-.894.527-.967 1.02Z"></path>
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">Seamless integration</h3>
+                        <p class="text-muted-foreground text-[15px]">Compatible with existing IoT and cloud systems – plug-in for ERP, SCADA, and smart building systems.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg p-8 transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5 hover:shadow-[0_0_30px_-10px_hsl(var(--primary)/0.25)]">
+                        <div class="w-14 h-14 rounded-[14px] bg-accent-dim flex items-center justify-center mb-5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary">
+                                <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"></path>
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">Real-time monitoring</h3>
+                        <p class="text-muted-foreground text-[15px]">Increases transparency and response speed through live data streams via MQTT and webhooks.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg p-8 transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5 hover:shadow-[0_0_30px_-10px_hsl(var(--primary)/0.25)]">
+                        <div class="w-14 h-14 rounded-[14px] bg-accent-dim flex items-center justify-center mb-5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary">
+                                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                                <path d="m9 12 2 2 4-4"></path>
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">Secure data management</h3>
+                        <p class="text-muted-foreground text-[15px]">GDPR-compliant storage and encryption – hosting in Germany, TLS-secured connections.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg p-8 transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5 hover:shadow-[0_0_30px_-10px_hsl(var(--primary)/0.25)]">
+                        <div class="w-14 h-14 rounded-[14px] bg-accent-dim flex items-center justify-center mb-5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary">
+                                <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"></path>
+                                <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"></path>
+                                <circle cx="12" cy="12" r="2"></circle>
+                                <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"></path>
+                                <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"></path>
+                            </svg></div>
+                        <h3 class="font-heading font-semibold text-lg mb-2">LPWAN interfaces</h3>
+                        <p class="text-muted-foreground text-[15px]">Support for many LPWAN protocols such as LWM2M, CoAP, MQTT-SN – for Cellular, LoRaWAN®, and mioty®.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="connectivity" class="section-padding">
+            <div class="container-main">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Connectivity</div>
+                    <h2 class="font-heading font-bold text-[clamp(28px,4vw,42px)] mb-4">All common <span class="gradient-text">LPWAN standards</span></h2>
+                    <p class="text-muted-foreground text-lg">Bring your devices into a unified data ecosystem, regardless of the wireless standard.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+                    <div class="bg-surface border border-border rounded-lg p-6 text-center hover:border-primary/25 transition-all">
+                        <div class="w-12 h-12 mx-auto rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"></path>
+                                <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"></path>
+                                <circle cx="12" cy="12" r="2"></circle>
+                                <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"></path>
+                                <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"></path>
+                            </svg></div>
+                        <div class="font-heading font-semibold mb-1">LoRaWAN®</div>
+                        <p class="text-muted-foreground text-[13px]">Long range, battery-friendly – ideal for stationary sensors in smart cities and industry.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg p-6 text-center hover:border-primary/25 transition-all">
+                        <div class="w-12 h-12 mx-auto rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"></path>
+                                <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"></path>
+                                <circle cx="12" cy="12" r="2"></circle>
+                                <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"></path>
+                                <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"></path>
+                            </svg></div>
+                        <div class="font-heading font-semibold mb-1">mioty®</div>
+                        <p class="text-muted-foreground text-[13px]">Resistant to interference and scalable up to 100,000 nodes per base station.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg p-6 text-center hover:border-primary/25 transition-all">
+                        <div class="w-12 h-12 mx-auto rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"></path>
+                                <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"></path>
+                                <circle cx="12" cy="12" r="2"></circle>
+                                <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"></path>
+                                <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"></path>
+                            </svg></div>
+                        <div class="font-heading font-semibold mb-1">NB-IoT</div>
+                        <p class="text-muted-foreground text-[13px]">Mobile network-based, available worldwide – ideal for mobile assets and large-scale rollouts.</p>
+                    </div>
+                    <div class="bg-surface border border-border rounded-lg p-6 text-center hover:border-primary/25 transition-all">
+                        <div class="w-12 h-12 mx-auto rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"></path>
+                                <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"></path>
+                                <circle cx="12" cy="12" r="2"></circle>
+                                <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"></path>
+                                <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"></path>
+                            </svg></div>
+                        <div class="font-heading font-semibold mb-1">LTE-CAT-M1</div>
+                        <p class="text-muted-foreground text-[13px]">Higher bandwidth and mobility than NB-IoT – for tracking and real-time applications.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="specs" class="section-padding bg-surface/50">
+            <div class="container-main">
+                <div class="max-w-3xl mx-auto">
+                    <div class="text-center mb-12">
+                        <div class="text-primary text-sm font-heading font-semibold uppercase tracking-wider mb-3">Technical Specifications</div>
+                        <h2 class="font-heading font-bold text-[clamp(32px,4vw,44px)] mb-4">Specifications <span class="gradient-text">at a glance</span></h2>
+                    </div>
+                    <div class="p-8 rounded-2xl bg-surface border border-border">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 py-4 border-b border-border last:border-0">
+                            <div class="font-heading font-semibold text-foreground">Protocols</div>
+                            <div class="md:col-span-2 text-muted-foreground">MQTT, REST, Webhooks, LWM2M, CoAP, MQTT-SN</div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 py-4 border-b border-border last:border-0">
+                            <div class="font-heading font-semibold text-foreground">Wireless standards</div>
+                            <div class="md:col-span-2 text-muted-foreground">LoRaWAN®, mioty®, NB-IoT, LTE-CAT-M1</div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 py-4 border-b border-border last:border-0">
+                            <div class="font-heading font-semibold text-foreground">MQTT brokers</div>
+                            <div class="md:col-span-2 text-muted-foreground">mqtts://broker.sentinum.de:8883 (TLS) · mqtt://broker.sentinum.de:1883</div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 py-4 border-b border-border last:border-0">
+                            <div class="font-heading font-semibold text-foreground">Authentication</div>
+                            <div class="md:col-span-2 text-muted-foreground">Username/password or client certificate (upon request)</div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 py-4 border-b border-border last:border-0">
+                            <div class="font-heading font-semibold text-foreground">QoS</div>
+                            <div class="md:col-span-2 text-muted-foreground">QoS 0–2 supported</div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 py-4 border-b border-border last:border-0">
+                            <div class="font-heading font-semibold text-foreground">Topic schema</div>
+                            <div class="md:col-span-2 text-muted-foreground">devices/&lt;customer&gt;/&lt;baseType&gt;/&lt;deviceType&gt;/&lt;deviceId&gt;/up</div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 py-4 border-b border-border last:border-0">
+                            <div class="font-heading font-semibold text-foreground">Bidirectional</div>
+                            <div class="md:col-span-2 text-muted-foreground">Downlinks to devices via REST and MQTT</div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 py-4 border-b border-border last:border-0">
+                            <div class="font-heading font-semibold text-foreground">Hosting</div>
+                            <div class="md:col-span-2 text-muted-foreground">Germany · GDPR-compliant · TLS-encrypted</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="faq" class="section-padding">
+            <div class="container-main">
+                <div class="text-center mb-16">
+                    <p class="font-heading text-[13px] font-semibold uppercase tracking-[3px] text-primary mb-3">FAQ</p>
+                    <h2 class="font-heading font-bold text-[clamp(28px,4vw,42px)]">Frequently Asked Questions</h2>
+                </div>
+                <div class="max-w-[720px] mx-auto flex flex-col gap-4">
+                    <div class="faq-item bg-surface border border-border rounded-lg overflow-hidden">
+                        <button class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-surface-hover transition-colors">
+                            <span class="font-heading font-semibold text-base text-foreground">What is the Sentinum Datahub?</span>
+                            <span class="text-muted-foreground shrink-0"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 faq-chevron transition-transform duration-300" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m6 9 6 6 6-6"></path>
+                                </svg></span></button>
+                        <div class="faq-answer px-6 pb-5 text-muted-foreground text-[15px]" style="display:none">The Datahub is Sentinum’s central IoT data platform. It collects sensor data from LoRaWAN®, mioty®, NB-IoT, and LTE-CAT-M1 networks, normalizes it, and makes it available via MQTT, REST API, and webhooks—across manufacturers, in real time, and GDPR-compliant.</div>
+                    </div>
+                    <div class="faq-item bg-surface border border-border rounded-lg overflow-hidden">
+                        <button class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-surface-hover transition-colors">
+                            <span class="font-heading font-semibold text-base text-foreground">How do I access my data?</span>
+                            <span class="text-muted-foreground shrink-0"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 faq-chevron transition-transform duration-300" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m6 9 6 6 6-6"></path>
+                                </svg></span></button>
+                        <div class="faq-answer px-6 pb-5 text-muted-foreground text-[15px]" style="display:none">There are two ways: MQTT (push, persistent connection, low latency) or REST API (pull, Swagger-documented). Both interfaces are authenticated and TLS-encrypted. You can reach the MQTT broker at mqtts://broker.sentinum.de:8883.</div>
+                    </div>
+                    <div class="faq-item bg-surface border border-border rounded-lg overflow-hidden">
+                        <button class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-surface-hover transition-colors">
+                            <span class="font-heading font-semibold text-base text-foreground">Which protocols does the Datahub support?</span>
+                            <span class="text-muted-foreground shrink-0"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 faq-chevron transition-transform duration-300" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m6 9 6 6 6-6"></path>
+                                </svg></span></button>
+                        <div class="faq-answer px-6 pb-5 text-muted-foreground text-[15px]" style="display:none">MQTT, REST, Webhooks, and LPWAN-specific protocols such as LWM2M, CoAP, and MQTT-SN. This allows for the integration of nearly all common IoT devices and backend systems.</div>
+                    </div>
+                    <div class="faq-item bg-surface border border-border rounded-lg overflow-hidden">
+                        <button class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-surface-hover transition-colors">
+                            <span class="font-heading font-semibold text-base text-foreground">Is the Datahub bidirectional?</span>
+                            <span class="text-muted-foreground shrink-0"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 faq-chevron transition-transform duration-300" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m6 9 6 6 6-6"></path>
+                                </svg></span></button>
+                        <div class="faq-answer px-6 pb-5 text-muted-foreground text-[15px]" style="display:none">Yes. You can not only receive data but also send downlinks to devices—for example, to configure transmission intervals or trigger actions. This works via both REST and MQTT.</div>
+                    </div>
+                    <div class="faq-item bg-surface border border-border rounded-lg overflow-hidden">
+                        <button class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-surface-hover transition-colors">
+                            <span class="font-heading font-semibold text-base text-foreground">Where is the data stored?</span>
+                            <span class="text-muted-foreground shrink-0"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 faq-chevron transition-transform duration-300" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m6 9 6 6 6-6"></path>
+                                </svg></span></button>
+                        <div class="faq-answer px-6 pb-5 text-muted-foreground text-[15px]" style="display:none">Hosted in Germany, GDPR-compliant, with TLS-encrypted transmission and secure storage. Dedicated instances or on-premise deployments are available upon request.</div>
+                    </div>
+                    <div class="faq-item bg-surface border border-border rounded-lg overflow-hidden">
+                        <button class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-surface-hover transition-colors">
+                            <span class="font-heading font-semibold text-base text-foreground">Which third-party systems can be integrated?</span>
+                            <span class="text-muted-foreground shrink-0"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 faq-chevron transition-transform duration-300" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m6 9 6 6 6-6"></path>
+                                </svg></span></button>
+                        <div class="faq-answer px-6 pb-5 text-muted-foreground text-[15px]" style="display:none">Microsoft Azure, AWS IoT, Google Cloud, SAP, Node-RED, Grafana, Power BI, as well as custom ERP, SCADA, and smart building systems—via the open API and standard protocols.</div>
+                    </div>
+                    <div class="faq-item bg-surface border border-border rounded-lg overflow-hidden">
+                        <button class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-surface-hover transition-colors">
+                            <span class="font-heading font-semibold text-base text-foreground">Do I need a my.sentinum account for MQTT?</span>
+                            <span class="text-muted-foreground shrink-0"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 faq-chevron transition-transform duration-300" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m6 9 6 6 6-6"></path>
+                                </svg></span></button>
+                        <div class="faq-answer px-6 pb-5 text-muted-foreground text-[15px]" style="display:none">No. MQTT credentials are independent of my.sentinum user accounts and are issued by Sentinum upon request. A unique ClientID per client is recommended.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="downloads" class="section-padding bg-surface/50">
+            <div class="container-main">
+                <div class="text-center mb-16 max-w-2xl mx-auto">
+                    <p class="font-heading text-[13px] font-semibold uppercase tracking-[3px] text-primary mb-3">Resources</p>
+                    <h2 class="font-heading font-bold text-[clamp(28px,4vw,42px)] mb-4">Documentation &amp; Guides</h2>
+                    <p class="text-muted-foreground text-[15px]">Everything you need to integrate the Datahub.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto"><a href="https://docs.sentinum.de/en/new-integration-guide" target="_blank" rel="noopener" class="group bg-surface border border-border rounded-xl p-6 flex flex-col gap-4 hover:border-primary transition-all duration-300">
+                        <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                            </svg></div>
+                        <div class="font-heading font-semibold text-foreground">MQTT Integration Guide</div>
+                        <p class="text-muted-foreground text-[14px] leading-relaxed flex-1">Step-by-step guide with Python and Node-RED examples.</p>
+                        <span class="inline-flex items-center gap-2 text-primary text-sm font-heading font-semibold"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" x2="12" y1="15" y2="3"></line>
+                            </svg> Open</span>
+                    </a><a href="https://docs.sentinum.de/en/rest-api-swagger-ui" target="_blank" rel="noopener" class="group bg-surface border border-border rounded-xl p-6 flex flex-col gap-4 hover:border-primary transition-all duration-300">
+                        <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                            </svg></div>
+                        <div class="font-heading font-semibold text-foreground">REST API (Swagger UI)</div>
+                        <p class="text-muted-foreground text-[14px] leading-relaxed flex-1">Complete API reference with interactive testing environment.</p>
+                        <span class="inline-flex items-center gap-2 text-primary text-sm font-heading font-semibold"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" x2="12" y1="15" y2="3"></line>
+                            </svg> Open</span>
+                    </a></div>
+            </div>
+        </section>
+        <section class="section-padding text-center relative overflow-hidden">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary opacity-[0.07] blur-[120px]"></div>
+            <div class="container-main relative z-10">
+                <h2 class="font-heading font-bold text-[clamp(32px,4vw,48px)] mb-6 max-w-3xl mx-auto">Ready for your <span class="gradient-text">IoT data strategy</span>?</h2>
+                <p class="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">Talk to our team about access, dedicated instances, on-premises options, and custom integrations.</p>
+                <div class="flex gap-3 flex-wrap justify-center">
+                    <a href="https://sentinum.de/en/kontakt" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg font-heading font-semibold text-[15px] bg-primary text-primary-foreground hover:opacity-90 hover:-translate-y-0.5 transition-all">Get a quote →</a>
+                    <a href="https://docs.sentinum.de/en/datahub" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg font-heading font-semibold text-[15px] border border-border text-foreground hover:border-primary/25 hover:bg-surface transition-all">Documentation</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        (function() {
+            document.querySelectorAll(".faq-item").forEach(function(i) {
+                var b = i.querySelector("button"),
+                    a = i.querySelector(".faq-answer"),
+                    c = i.querySelector(".faq-chevron");
+                b && a && b.addEventListener("click", function() {
+                    var o = a.style.display !== "none" && a.style.display !== "";
+                    document.querySelectorAll(".faq-answer").forEach(function(x) {
+                        x.style.display = "none"
+                    });
+                    document.querySelectorAll(".faq-chevron").forEach(function(x) {
+                        x.style.transform = "rotate(0deg)"
+                    });
+                    o || (a.style.display = "block", c && (c.style.transform = "rotate(180deg)"))
+                })
+            })
+        })();
+    </script>
+  {% module "page_footer" path="/Homepage V2/Sentinum_Footer_en.module", label="Footer" %}
+     {{ standard_footer_includes }}
+</body>
+
+</html>
+   
+ 
