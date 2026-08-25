@@ -1,0 +1,214 @@
+<!-- ============================================================
+     Sentinum – Static Footer (HTML + CSS)
+     ============================================================ -->
+<style>
+  .sn-footer {
+    --sf-bg:           hsl(216 24% 7%);
+    --sf-border:       hsl(213 20% 18% / .9);
+    --sf-fg:           hsl(210 20% 90%);
+    --sf-muted:        hsl(213 20% 60%);
+    --sf-primary:      hsl(17 89% 48%);
+    --sf-primary-light:hsl(20 89% 65%);
+
+    background: var(--sf-bg);
+    color: var(--sf-fg);
+    font-family: 'DM Sans', system-ui, sans-serif;
+    border-top: 1px solid var(--sf-border);
+    padding: 72px 0 28px;
+  }
+  .sn-footer__inner { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+
+  .sn-footer__top {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 56px 64px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--sf-border);
+  }
+
+  .sn-footer__brand { display: flex; flex-direction: column; gap: 16px; max-width: 420px; }
+  .sn-footer__logo { display: block; max-width: 160px; height: auto; }
+  .sn-footer__tagline { margin: 0; color: var(--sf-muted); font-size: 14px; line-height: 1.65; }
+
+  .sn-footer__social {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-top: 8px;
+    padding: 10px 16px;
+    background: transparent;
+    border: 1px solid var(--sf-border);
+    border-radius: 999px;
+    color: var(--sf-fg);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    width: fit-content;
+    transition: all .2s ease;
+  }
+  .sn-footer__social:hover {
+    border-color: var(--sf-primary);
+    color: var(--sf-primary-light);
+    transform: translateY(-1px);
+  }
+  .sn-footer__social svg { width: 16px; height: 16px; }
+
+  .sn-footer__col { display: flex; flex-direction: column; gap: 12px; }
+  .sn-footer__heading {
+    margin: 0 0 6px;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 700; font-size: 18px; color: #fff;
+  }
+  .sn-footer__line { margin: 0; color: var(--sf-muted); font-size: 14px; line-height: 1.6; }
+  .sn-footer__line--strong { color: var(--sf-fg); font-weight: 600; }
+  .sn-footer__address {
+    display: flex; flex-direction: column; gap: 2px;
+    font-style: normal; color: var(--sf-muted);
+    font-size: 14px; line-height: 1.65;
+  }
+  .sn-footer__contact { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+  .sn-footer__contact li { display: flex; gap: 8px; align-items: baseline; font-size: 14px; color: var(--sf-muted); }
+  .sn-footer__contact-label { color: var(--sf-fg); font-weight: 600; }
+  .sn-footer__contact a { color: var(--sf-muted); text-decoration: none; transition: color .2s ease; }
+  .sn-footer__contact a:hover { color: var(--sf-primary-light); }
+
+  .sn-footer__bottom {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; padding-top: 24px; flex-wrap: wrap;
+  }
+  .sn-footer__copy { margin: 0; color: var(--sf-muted); font-size: 13px; }
+  .sn-footer__legal { list-style: none; margin: 0; padding: 0; display: flex; gap: 24px; flex-wrap: wrap; }
+  .sn-footer__legal a { color: var(--sf-muted); text-decoration: none; font-size: 13px; transition: color .2s ease; }
+  .sn-footer__legal a:hover { color: var(--sf-primary-light); }
+
+  @media (max-width: 768px) {
+    .sn-footer { padding-top: 56px; }
+    .sn-footer__top { grid-template-columns: 1fr; gap: 40px; padding-bottom: 32px; }
+  }
+  @media (max-width: 600px) {
+    .sn-footer__bottom { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+
+{% if request.query_dict.hsLang == 'en' or '/en/' in request.path %}
+
+
+<!-- ================= ENGLISH FOOTER ================= -->
+<footer class="sn-footer">
+  <div class="sn-footer__inner">
+
+    <div class="sn-footer__top">
+      <div class="sn-footer__brand">
+        <a href="https://sentinum.de/en/" aria-label="Go to homepage">
+          <img class="sn-footer__logo"
+               src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Sentinum%20Logo%20wei%C3%9F_orange.png"
+               alt="Sentinum">
+        </a>
+
+        <p class="sn-footer__tagline">
+          Sentinum, part of the ifm group, develops IoT sensors with
+          mioty®, LoRaWAN®, NB-IoT and LTE-M - made in Germany with passion.
+        </p>
+
+          <a class="sn-footer__social"
+           href="https://www.linkedin.com/company/sentinum"
+           target="_blank" rel="noopener"
+           aria-label="Sentinum auf LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.22 0z"/>
+          </svg>
+          <span>Follow us on LinkedIn</span>
+        </a>
+      </div>
+
+      <div class="sn-footer__col">
+        <h3 class="sn-footer__heading">Contact Details</h3>
+        <p class="sn-footer__line sn-footer__line--strong">Sentinum GmbH</p>
+        <address class="sn-footer__address">
+          <span>Heinrich-Stranka-Straße 3-5</span>
+          <span>90765 Fürth</span>
+          <span>Germany</span>
+        </address>
+
+        <ul class="sn-footer__contact">
+          <li>
+            <span class="sn-footer__contact-label">Tel:</span>
+            <a href="tel:+4991199868818">+49 911 998 688 18</a>
+          </li>
+          <li>
+            <span class="sn-footer__contact-label">Email:</span>
+            <a href="mailto:info@sentinum.de">info@sentinum.de</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sn-footer__bottom">
+      <p class="sn-footer__copy">© 2026 Sentinum GmbH. All rights reserved.</p>
+      <ul class="sn-footer__legal">
+        <li><a href="/en/legal-notice">Legal notice</a></li>
+        <li><a href="/en/privacy">Privacy policy</a></li>
+      </ul>
+    </div>
+
+  </div>
+</footer>
+
+{% else %}
+
+<footer class="sn-footer">
+  <div class="sn-footer__inner">
+
+    <div class="sn-footer__top">
+      <div class="sn-footer__brand">
+        <a href="/" aria-label="Zur Startseite">
+          <img class="sn-footer__logo"
+               src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Sentinum%20Logo%20wei%C3%9F_orange.png"
+               alt="Sentinum">
+        </a>
+        <p class="sn-footer__tagline">
+          Sentinum, Teil der ifm Gruppe, entwickelt IoT-Sensoren mit
+          mioty®, LoRaWAN®, NB-IoT und LTE-M - made in Germany with Passion.
+        </p>
+
+        <a class="sn-footer__social"
+           href="https://www.linkedin.com/company/sentinum"
+           target="_blank" rel="noopener"
+           aria-label="Sentinum auf LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.22 0z"/>
+          </svg>
+          <span>Folgen Sie uns auf LinkedIn</span>
+        </a>
+      </div>
+
+      <div class="sn-footer__col">
+        <h3 class="sn-footer__heading">Kontakt</h3>
+        <p class="sn-footer__line sn-footer__line--strong">Sentinum GmbH</p>
+        <address class="sn-footer__address">
+          <span>Heinrich-Stranka-Straße 3-5</span>
+          <span>90765 Fürth</span>
+          <span>Germany</span>
+        </address>
+        <ul class="sn-footer__contact">
+          <li>
+            <span class="sn-footer__contact-label">Tel:</span>
+            <a href="tel:+4991199868818">+49 911 998 688 18</a>
+          </li>
+          <li>
+            <span class="sn-footer__contact-label">Email:</span>
+            <a href="mailto:info@sentinum.de">info@sentinum.de</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sn-footer__bottom">
+      <p class="sn-footer__copy">© 2026 Sentinum GmbH. Alle Rechte vorbehalten.</p>
+      <ul class="sn-footer__legal">
+        <li><a href="/impressum">Impressum</a></li>
+        <li><a href="/datenschutz">Datenschutzerklärung</a></li>
+      </ul>
+    </div>
+
+  </div>
+</footer>
+{% endif %}

@@ -1,0 +1,190 @@
+{# ============================================================
+   Sentinum – Premium Navbar Module (HubSpot)
+   - Nutzt module.hubspot_menu (HubSpot Menu)
+   - Sticky Header, Mega-Submenu, Mobile Drawer
+   ============================================================ #}
+
+{# ---------- Submenu (rekursiv) ---------- #}
+{% macro render_submenu(node, depth=1) %}
+  {% if node.children %}
+    <ul class="sn-submenu sn-submenu--depth-{{ depth }}">
+      {% for item in node.children %}
+        {% set has_children = item.children|length > 0 %}
+        <li class="sn-submenu__item{% if has_children %} sn-has-children{% endif %}">
+          <a class="sn-submenu__link"
+             href="{{ item.url | default('#') }}"
+             {% if item.linkTarget %}target="{{ item.linkTarget }}" rel="noopener"{% endif %}>
+            <span class="sn-submenu__label">
+              {{ item.label | default(item.linkLabel, true) | default(item.contentName, true) }}
+            </span>
+
+            {% if has_children %}
+              <svg class="sn-submenu__chev" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            {% endif %}
+          </a>
+
+          {{ render_submenu(item, depth + 1) }}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}
+
+{# ---------- CTA Button ---------- #}
+{% macro render_navbar_button(btn, variant) -%}
+  {% if btn and btn.labeltext %}
+    <a class="sn-cta sn-cta--{{ variant }}"
+       href="{% if variant == 'primary' %}https://shop.sentinum.de/{% elif variant == 'ghost' %}https://my.sentinum.de/{% else %}#{% endif %}"
+       target="_blank"
+       rel="noopener">
+      <span>{{ btn.labeltext }}</span>
+      {% if variant == 'primary' %}
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+             aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      {% endif %}
+    </a>
+  {% endif %}
+{%- endmacro %}
+
+{% set node = [] %}
+{% if module.hubspot_menu %}
+  {% set node = menu(module.hubspot_menu).children %}
+{% endif %}
+
+<header class="sn-header" data-sn-header>
+  <div class="sn-header__inner">
+    <nav class="sn-navbar" aria-label="Hauptnavigation">
+
+      {# ---------- Logo ---------- #}
+      {% if module.logo.image.src %}
+        <a class="sn-navbar__logo-wrap"
+           href="https://sentinum.de/de/" data-force-link="true"
+
+           aria-label="Zur Startseite">
+          <img class="sn-navbar__logo"
+               src="{{ module.logo.image.src }}"
+               alt="{{ module.logo.image.alt | default('Logo', true) }}"
+               width="{{ module.logo.image.width | default(140) }}"
+               height="{{ module.logo.image.height | default(36) }}"
+               loading="eager" decoding="async">
+        </a>
+      {% endif %}
+
+      {# ---------- Desktop Menu ---------- #}
+      {% if node %}
+        <ul class="sn-navbar__menu" role="menubar">
+          {% for item in node %}
+            {% set has_children = item.children|length > 0 %}
+            <li class="sn-navbar__item{% if has_children %} sn-has-children{% endif %}" role="none">
+              <a class="sn-navbar__link"
+                 href="{{ item.url | default('#') }}"
+                 {% if item.linkTarget %}target="{{ item.linkTarget }}" rel="noopener"{% endif %}
+                 role="menuitem"
+                 {% if has_children %}aria-haspopup="true" aria-expanded="false"{% endif %}>
+                <span>{{ item.label | default(item.linkLabel, true) | default(item.contentName, true) }}</span>
+
+                {% if has_children %}
+                  <svg class="sn-navbar__chev" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"
+                       aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                {% endif %}
+              </a>
+
+              {% if has_children %}
+                <div class="sn-navbar__dropdown" role="region" aria-label="{{ item.label }} Untermenü">
+                  <div class="sn-navbar__dropdown-inner">
+                    {{ render_submenu(item) }}
+                  </div>
+                </div>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      {# ---------- Right side ---------- #}
+      <div class="sn-navbar__end">
+        {% if module.language_switcher %}
+          <div class="sn-navbar__lang">
+            {% language_switcher "language_switcher"
+              overrideable=false,
+              display_mode='localized',
+              label='Language Switcher'
+            %}
+          </div>
+        {% endif %}
+
+        {{ render_navbar_button(module.secondary_cta, 'ghost') }}
+        {{ render_navbar_button(module.primary_cta, 'primary') }}
+
+        {# Mobile Hamburger #}
+        <button class="sn-burger"
+                type="button"
+                aria-label="Menü öffnen"
+                aria-expanded="false"
+                data-sn-burger>
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  {# ---------- Mobile Drawer ---------- #}
+  {% if node %}
+    <div class="sn-drawer" data-sn-drawer aria-hidden="true">
+      <ul class="sn-drawer__menu">
+        {% for item in node %}
+          {% set has_children = item.children|length > 0 %}
+          <li class="sn-drawer__item{% if has_children %} sn-drawer__item--parent{% endif %}">
+            <div class="sn-drawer__row">
+              <a class="sn-drawer__link"
+                 href="{{ item.url | default('#') }}"
+                 {% if item.linkTarget %}target="{{ item.linkTarget }}" rel="noopener"{% endif %}>
+                {{ item.label | default(item.linkLabel, true) | default(item.contentName, true) }}
+              </a>
+
+              {% if has_children %}
+                <button class="sn-drawer__toggle" type="button" aria-label="Untermenü öffnen">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+              {% endif %}
+            </div>
+
+            {% if has_children %}
+              <ul class="sn-drawer__sub">
+                {% for sub in item.children %}
+                  <li>
+                    <a href="{{ sub.url | default('#') }}"
+                       {% if sub.linkTarget %}target="{{ sub.linkTarget }}" rel="noopener"{% endif %}>
+                      {{ sub.label | default(sub.linkLabel, true) | default(sub.contentName, true) }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+
+      <div class="sn-drawer__cta">
+        {{ render_navbar_button(module.secondary_cta, 'ghost') }}
+        {{ render_navbar_button(module.primary_cta, 'primary') }}
+      </div>
+    </div>
+  {% endif %}
+</header>
+
+<div class="sn-header-placeholder" aria-hidden="true"></div>

@@ -1,0 +1,638 @@
+/* ============================================================
+   Sentinum Navbar – module.css
+   Stable sticky header + mega dropdown + mobile drawer
+   ============================================================ */
+
+:root {
+  --sn-bg:           hsl(216 24% 8%);
+  --sn-surface:      hsl(214 20% 11%);
+  --sn-border:       hsl(213 20% 18% / .9);
+  --sn-fg:           hsl(210 20% 90%);
+  --sn-muted:        hsl(213 20% 60%);
+  --sn-primary:      hsl(17 89% 48%);
+  --sn-primary-soft: hsl(17 89% 48% / .12);
+  --sn-primary-light:hsl(20 89% 58%);
+  --sn-radius:       14px;
+  --sn-h:            76px;
+  --sn-font-h:       'Space Grotesk', system-ui, sans-serif;
+  --sn-font-b:       'DM Sans', system-ui, sans-serif;
+  --sn-ease:         cubic-bezier(.22,.61,.36,1);
+}
+
+/* ---------- Hard safety resets (prevents "higher/chaos") ---------- */
+.sn-header, .sn-header * { box-sizing: border-box; }
+.sn-header ul, .sn-header li { margin: 0; padding: 0; }
+.sn-header ul { list-style: none; }
+.sn-header a { text-decoration: none; color: inherit; }
+.sn-header img { display: block; }
+
+/* ---------- Header shell ---------- */
+.sn-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1000;
+
+  font-family: var(--sn-font-b);
+  color: var(--sn-fg);
+
+  background: hsl(216 24% 8% / .82);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+
+  border-bottom: 1px solid transparent;
+  transition: background .3s var(--sn-ease), border-color .3s var(--sn-ease);
+
+  /* stops weird filter/backdrop leaking */
+  isolation: isolate;
+}
+.sn-header.is-scrolled {
+  background: hsl(216 24% 7% / .92);
+  border-bottom-color: var(--sn-border);
+}
+.sn-header-placeholder { height: var(--sn-h); }
+
+.sn-header__inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ---------- Navbar ---------- */
+.sn-navbar {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+
+  height: var(--sn-h);
+  min-height: var(--sn-h);
+  flex-wrap: nowrap;
+}
+
+.sn-navbar__logo-wrap {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.sn-navbar__logo { height: 34px; width: auto; }
+
+/* ---------- Top menu ---------- */
+.sn-navbar__menu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  flex: 1;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.sn-navbar__item { position: relative; }
+
+.sn-navbar__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 10px 14px;
+  border-radius: 10px;
+
+  font-family: var(--sn-font-h);
+  font-size: 14.5px;
+  font-weight: 500;
+  letter-spacing: .01em;
+
+  color: var(--sn-fg);
+  transition: color .2s var(--sn-ease), background-color .2s var(--sn-ease);
+  position: relative;
+  line-height: 1.1;
+}
+
+.sn-navbar__link:hover,
+.sn-navbar__item:hover > .sn-navbar__link,
+.sn-navbar__link[aria-expanded="true"] {
+  color: hsl(0 0% 100%);
+  background: hsl(213 18% 100% / .04);
+}
+
+.sn-navbar__chev { transition: transform .25s var(--sn-ease); opacity: .75; }
+.sn-navbar__item:hover .sn-navbar__chev,
+.sn-navbar__link[aria-expanded="true"] .sn-navbar__chev { transform: rotate(180deg); opacity: 1; }
+
+/* ---------- Mega Dropdown (Desktop) ---------- */
+.sn-navbar__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding-top: 18px; /* hover bridge */
+  min-width: 360px;  /* mega width */
+  max-width: min(560px, calc(100vw - 48px));
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity .18s var(--sn-ease), visibility .18s;
+  z-index: 3000;
+}
+
+/* Hover bridge so cursor doesn't drop */
+.sn-navbar__item.sn-has-children::after {
+  content: "";
+  position: absolute;
+  left: -28px;
+  right: -28px;
+  top: 100%;
+  height: 26px;
+}
+
+.sn-navbar__item:hover > .sn-navbar__dropdown,
+.sn-navbar__item:focus-within > .sn-navbar__dropdown,
+.sn-navbar__item.is-open > .sn-navbar__dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.sn-navbar__dropdown-inner {
+  background: var(--sn-surface);
+  border: 1px solid var(--sn-border);
+  border-radius: var(--sn-radius);
+  padding: 12px;
+
+  box-shadow:
+    0 24px 48px -16px hsl(0 0% 0% / .55),
+    0 0 0 1px hsl(213 20% 18% / .4);
+
+  /* protects against theme filter/backdrop weirdness */
+  filter: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+/* Submenu as mega grid (level 1) */
+.sn-submenu--depth-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Deeper levels remain flyout */
+.sn-submenu { list-style: none; }
+.sn-submenu__item { position: relative; }
+
+.sn-submenu__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  padding: 10px 12px;
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 550;
+  line-height: 1.2;
+
+  color: var(--sn-fg);
+  transition: background .15s var(--sn-ease), color .15s var(--sn-ease);
+}
+
+.sn-submenu__link:hover {
+  background: var(--sn-primary-soft);
+  color: hsl(0 0% 100%);
+}
+
+.sn-submenu__chev { opacity: .55; }
+
+/* Nested submenu flyout */
+.sn-submenu .sn-submenu {
+  position: absolute;
+  top: -8px;
+  left: calc(100% + 10px);
+
+  min-width: 260px;
+  background: var(--sn-surface);
+  border: 1px solid var(--sn-border);
+  border-radius: var(--sn-radius);
+  padding: 10px;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-6px);
+
+  transition: opacity .2s var(--sn-ease), transform .2s var(--sn-ease), visibility .2s;
+  box-shadow: 0 24px 48px -16px hsl(0 0% 0% / .55);
+  z-index: 10;
+}
+.sn-submenu__item:hover > .sn-submenu,
+.sn-submenu__item:focus-within > .sn-submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* ---------- Right side ---------- */
+.sn-navbar__end {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+
+/* Language switcher minimal-stabil (keine Höhe aufblasen) */
+.sn-navbar__lang {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  font-size: 13px;
+  color: hsl(0 0% 100%);
+  position: relative;
+}
+.sn-navbar__lang,
+.sn-navbar__lang * {
+  color: hsl(0 0% 100%) !important;
+}
+
+/* Language switcher dropdown panel (HubSpot variants) */
+body .sn-navbar__lang .lang_list_class,
+body .sn-navbar__lang [class*="lang_list"],
+body .sn-navbar__lang [class*="language-switcher"] ul,
+body .hs-language-switcher__menu {
+  background: hsl(214 20% 11%) !important;
+  background-color: hsl(214 20% 11%) !important;
+  border: 1px solid hsl(213 20% 18% / .9) !important;
+  border-radius: 10px !important;
+  padding: 6px !important;
+  box-shadow: 0 16px 40px -12px hsl(0 0% 0% / .6) !important;
+}
+body .hs-language-switcher__menu:before,
+body .hs-language-switcher__menu:after,
+body .lang_list_class:before,
+body .lang_list_class:after { display: none !important; }
+
+/* ---------- CTA buttons ---------- */
+.sn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 18px;
+  border-radius: 999px;
+
+  font-family: var(--sn-font-h);
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  white-space: nowrap;
+
+  transition: transform .2s var(--sn-ease), background .2s var(--sn-ease),
+              box-shadow .2s var(--sn-ease), color .2s var(--sn-ease);
+}
+
+.sn-cta--ghost {
+  color: var(--sn-fg);
+  background: transparent;
+  border: 1px solid var(--sn-border);
+}
+.sn-cta--ghost:hover {
+  background: hsl(213 18% 100% / .05);
+  color: hsl(0 0% 100%);
+}
+
+.sn-cta--primary {
+  color: hsl(0 0% 100%);
+  background: linear-gradient(135deg, var(--sn-primary), var(--sn-primary-light));
+  box-shadow: 0 8px 24px -8px hsl(17 89% 48% / .55);
+}
+.sn-cta--primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px -8px hsl(17 89% 48% / .7);
+}
+.sn-cta svg { transition: transform .2s var(--sn-ease); }
+.sn-cta:hover svg { transform: translateX(2px); }
+
+/* ---------- Hamburger ---------- */
+.sn-burger {
+  display: none;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+
+  background: transparent;
+  border: 1px solid var(--sn-border);
+  border-radius: 10px;
+
+  cursor: pointer;
+  position: relative;
+}
+.sn-burger span {
+  position: absolute;
+  left: 11px;
+  right: 11px;
+  height: 2px;
+
+  background: var(--sn-fg);
+  border-radius: 2px;
+
+  transition: transform .3s var(--sn-ease), opacity .2s var(--sn-ease), top .3s var(--sn-ease);
+}
+.sn-burger span:nth-child(1) { top: 14px; }
+.sn-burger span:nth-child(2) { top: 20px; }
+.sn-burger span:nth-child(3) { top: 26px; }
+.sn-burger[aria-expanded="true"] span:nth-child(1) { top: 20px; transform: rotate(45deg); }
+.sn-burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.sn-burger[aria-expanded="true"] span:nth-child(3) { top: 20px; transform: rotate(-45deg); }
+
+/* ---------- Mobile drawer ---------- */
+.sn-drawer {
+  position: fixed;
+  top: var(--sn-h, 76px);
+  left: 0;
+  right: 0;
+
+  height: calc(100dvh - var(--sn-h, 76px));
+  background: var(--sn-bg);
+  padding: 24px;
+
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  transform: translate3d(0, -12px, 0);
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity .25s var(--sn-ease), transform .25s var(--sn-ease), visibility .25s;
+  z-index: 2000;
+  contain: layout paint;
+  will-change: transform, opacity;
+}
+
+.sn-drawer.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translate3d(0, 0, 0);
+}
+
+.sn-drawer__menu { list-style: none; }
+.sn-drawer__item { border-bottom: 1px solid var(--sn-border); }
+.sn-drawer__row { display: flex; align-items: center; justify-content: space-between; }
+.sn-drawer__link {
+  flex: 1;
+  display: block;
+  padding: 16px 4px;
+
+  font-family: var(--sn-font-h);
+  font-size: 17px;
+  font-weight: 500;
+
+  color: var(--sn-fg);
+}
+.sn-drawer__toggle {
+  width: 44px;
+  height: 44px;
+
+  background: transparent;
+  border: 0;
+  color: var(--sn-muted);
+
+  cursor: pointer;
+  transition: transform .25s var(--sn-ease);
+}
+.sn-drawer__item--open > .sn-drawer__row .sn-drawer__toggle {
+  transform: rotate(180deg);
+  color: var(--sn-primary);
+}
+
+.sn-drawer__sub {
+  list-style: none;
+  padding: 0 0 12px 8px;
+
+  max-height: 0;
+  overflow: hidden;
+
+  transition: max-height .35s var(--sn-ease);
+}
+.sn-drawer__item--open > .sn-drawer__sub { max-height: 700px; }
+
+.sn-drawer__sub a {
+  display: block;
+  padding: 10px 4px;
+  font-size: 15px;
+  color: var(--sn-muted);
+  transition: color .15s var(--sn-ease);
+}
+.sn-drawer__sub a:hover { color: var(--sn-primary); }
+
+.sn-drawer__cta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 28px;
+}
+.sn-drawer__cta .sn-cta { justify-content: center; padding: 14px 22px; }
+
+/* ---------- Body lock ---------- */
+body.sn-no-scroll { overflow: hidden; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1023px) {
+  .sn-navbar__menu { display: none; }
+  .sn-navbar__end .sn-cta { display: none; }
+  .sn-navbar__end .sn-cta--primary { display: inline-flex; }
+  .sn-burger { display: inline-flex; align-items: center; justify-content: center; }
+}
+@media (max-width: 600px) {
+  :root { --sn-h: 68px; }
+  .sn-header__inner { padding: 0 16px; }
+  .sn-navbar { gap: 16px; }
+  .sn-navbar__end .sn-cta--primary { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sn-drawer,
+  .sn-burger span {
+    transition: none !important;
+  }
+}
+
+/* ============================================================
+   Language Switcher – robust fix (verhindert "weißes leeres Feld")
+   ============================================================ */
+
+.sn-navbar__lang {
+  position: relative;
+  z-index: 5000;           /* über mega dropdown */
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+/* Trigger/Button/Link im Header */
+.sn-navbar__lang a,
+.sn-navbar__lang button,
+.sn-navbar__lang [role="button"] {
+  color: hsl(0 0% 100%) !important;
+  background: transparent !important;
+  border: 0;
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font: inherit;
+  line-height: 1;
+}
+
+/* Falls HubSpot ein Wrapper-Element nutzt */
+.sn-navbar__lang .hs-language-switcher,
+.sn-navbar__lang [class*="language-switcher"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px;
+}
+
+/* DAS ist der wichtigste Teil:
+   JEDES UL/DROPDOWN innerhalb des Switchers dunkel machen */
+.sn-navbar__lang ul,
+.sn-navbar__lang [class*="menu"],
+.sn-navbar__lang [class*="dropdown"],
+.sn-navbar__lang [class*="list"] {
+  background: hsl(214 20% 11%) !important;
+  background-color: hsl(214 20% 11%) !important;
+  border: 1px solid hsl(213 20% 18% / .9) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 16px 40px -12px hsl(0 0% 0% / .6) !important;
+}
+
+/* List items/links lesbar machen */
+.sn-navbar__lang li,
+.sn-navbar__lang li a {
+  color: hsl(0 0% 100%) !important;
+  background: transparent !important;
+  text-decoration: none !important;
+  padding: 8px 12px !important;
+  border-radius: 8px !important;
+  display: block;
+}
+
+/* Hover */
+.sn-navbar__lang li:hover,
+.sn-navbar__lang li a:hover {
+  background: hsl(17 89% 48% / .18) !important;
+  color: hsl(20 89% 65%) !important;
+}
+
+/* Entfernt den weißen "Pointer"-Pfeil, falls HubSpot ihn rendert */
+.sn-navbar__lang ul:before,
+.sn-navbar__lang ul:after,
+.sn-navbar__lang [class*="menu"]:before,
+.sn-navbar__lang [class*="menu"]:after {
+  display: none !important;
+}
+
+/* ============================================================
+   Language Switcher – FIX (Popup dunkel + Text sichtbar)
+   - trifft HubSpot Varianten, auch wenn Menü an <body> hängt
+   ============================================================ */
+
+.sn-navbar__lang {
+  position: relative;
+  z-index: 6500; /* über Mega-Menü */
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+/* Trigger im Header: immer sichtbar und klickbar */
+.sn-navbar__lang a,
+.sn-navbar__lang button,
+.sn-navbar__lang [role="button"] {
+  color: hsl(0 0% 100%) !important;
+  background: transparent !important;
+  border: 0 !important;
+  padding: 8px 10px !important;
+  border-radius: 10px !important;
+  line-height: 1 !important;
+}
+
+/* ========== WICHTIG: Popup-Container (egal wo gerendert) ========== */
+/* HubSpot rendert je nach Theme/Portal unterschiedlich:
+   - .lang_list_class
+   - .hs-language-switcher__menu
+   - ul in switcher wrapper
+   - manchmal hängt das Menü direkt an <body>
+*/
+.sn-navbar__lang :is(.lang_list_class, .hs-language-switcher__menu, [class*="lang_list"], [class*="language-switcher"] ul),
+body :is(.lang_list_class, .hs-language-switcher__menu) {
+  background: hsl(214 20% 11%) !important;
+  background-color: hsl(214 20% 11%) !important;
+  border: 1px solid hsl(213 20% 18% / .9) !important;
+  border-radius: 12px !important;
+  padding: 6px !important;
+  box-shadow: 0 16px 40px -12px hsl(0 0% 0% / .6) !important;
+
+  /* falls irgendein Theme filter/backdrop reinballert */
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+
+  z-index: 7000 !important;
+}
+
+/* Links/Items: sichtbar, klickbar */
+.sn-navbar__lang :is(.lang_list_class a, .hs-language-switcher__menu a, [class*="lang_list"] a, [class*="language-switcher"] a),
+body :is(.lang_list_class a, .hs-language-switcher__menu a) {
+  color: hsl(0 0% 100%) !important;
+  background: transparent !important;
+  text-decoration: none !important;
+  display: block !important;
+  padding: 8px 12px !important;
+  border-radius: 8px !important;
+  line-height: 1.1 !important;
+}
+
+/* Hover */
+.sn-navbar__lang :is(.lang_list_class a:hover, .hs-language-switcher__menu a:hover, [class*="lang_list"] a:hover, [class*="language-switcher"] a:hover),
+body :is(.lang_list_class a:hover, .hs-language-switcher__menu a:hover) {
+  background: hsl(17 89% 48% / .18) !important;
+  color: hsl(20 89% 65%) !important;
+}
+
+/* diesen weißen "Pointer"-Pfeil killen (falls vorhanden) */
+body :is(.lang_list_class:before, .lang_list_class:after, .hs-language-switcher__menu:before, .hs-language-switcher__menu:after) {
+  display: none !important;
+}
+
+/* Optional: Flags als Trigger (wenn HubSpot globe_class nutzt) */
+.sn-navbar__lang .globe_class {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 16px;
+}
+
+/* Nur Globe-Icon verstecken, falls vorhanden – nicht global alle SVG killen */
+.sn-navbar__lang .globe_class > img,
+.sn-navbar__lang .globe_class > svg {
+  display: none !important;
+}
+
+/* Flags anzeigen */
+.sn-navbar__lang .globe_class::before {
+  content: "🇩🇪|🇺🇸";
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12px;
+}
+.sn-navbar__lang {
+  margin-right: 18px;       /* Abstand zu Buttons */
+  padding-right: 14px;      /* optische Trennung */
+ border-right: none;
+}
