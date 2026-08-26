@@ -1,0 +1,725 @@
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+    code,
+    .inline-code {
+        background-color: #f3f4f6;
+        border: 1px solid #d0d7de;
+        border-radius: 4px;
+        padding: 2px 6px;
+        font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 0.9em;
+        color: #111827;
+        display: inline-block;
+    }
+
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+</style>
+
+
+ <div class="pdf-viewer">
+        <iframe
+            src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/027d18c902d1f41d92e07c0c2b03c1625e0a5938/Helpdesk/Juno_ID_tilt/Juno_ID_Tilt_technisches_Datenblatt/Juno_ID_TILT_Technisches%20Datenblatt_V2_EN.pdf"
+            title="Hyperion User Manual PDF"
+            
+loading=“lazy”>
+        </iframe>
+    </div>
+
+    <div class="pdf-download">
+        📄 You can view the PDF above or
+        <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/027d18c902d1f41d92e07c0c2b03c1625e0a5938/Helpdesk/Juno_ID_tilt/Juno_ID_Tilt_technisches_Datenblatt/Juno_ID_TILT_Technisches%20Datenblatt_V2_EN.pdf"
+           target="_blank"
+           
+rel=“noopener noreferrer”>
+            <strong>Download here</strong>
+        </a>.
+    </div>
+
+
+<!-- TOC -->
+<nav class="main-toc">
+  <h4>Table of Contents</h4>
+  <ol>
+    
+<li><a href="#versionshistorie">Version History</a></li>
+    <li><a href="#uebersicht">Overview</a></li>
+    <li><a href="#versionen"> Versions</a></li>
+    
+<li><a href="#general"> General Characteristics</a></li>
+    <li><a href="#rf"> Connectivity and RF Specifications</a></li>
+    <li><a href="#tilt"> Sensor Specifications – Tilt</a></li>
+    
+<li><a href="#temperature"> Sensor Specifications – Temperature</a></li>
+    <li><a href="#drawing"> Technical Drawing</a></li>
+  </ol>
+</nav>
+
+<!-- VERSION HISTORY -->
+<h3 id="versionshistory">1. Version History</h3>
+
+<div class="table-wrap">
+  <table>
+    <colgroup>
+      <col style="width:33.33%">
+      <col style="width:33.33%">
+      <col style="width:33.33%">
+    </colgroup>
+    <thead>
+      <tr>
+        
+<th>Version</th>
+        <th>Date</th>
+        <th>Change</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1.0.0</td>
+        <td>February 18, 2025</td>
+        
+<td>Creation</td>
+      </tr>
+      <tr>
+        <td>1.0.1</td>
+        <td>April 24, 2026</td>
+        <td>Formatting, Version History</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- OVERVIEW -->
+<h3 id="overview">2. Overview</h3>
+
+<p>
+  The Juno IP69k ID/TILT is designed for reliable tilt detection and opening detection
+  of flaps and doors. The sensor does not have its own tracking mechanisms
+  and must be tracked passively via the respective network. The Juno ID/TILT is available 
+  with either mioty® or LoRaWAN®. With a precise tilt sensor, it can reliably detect flap openings
+. Thanks to its robust design and IP69k protection rating, it is ideal
+  for use in demanding environments and withstands dust, water, and high pressure.
+</p>
+
+<figure class="figure">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/ea9f8aa025058fddc8c8482b6a910a3814b88e37/Juno_TILT/Juno_TILT_allgemeine_Beschreibung/Pic/Juno_TILT_allgemeine_BeschreibungPic1.webp" alt="Juno ID TILT Sensor" style="height: auto;">
+  <figcaption>Figure 1. Juno ID TILT</figcaption>
+</figure>
+
+<!-- VERSIONS -->
+<h3 id="versions">3. Versions</h3>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        
+<th>Item Code</th>
+        <th>Features</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>S-JUNO-LOEU-ID</td>
+        <td>JUNO IP69k Temperature, Tilt Detection, and Door Open Detection LoRaWAN</td>
+      </tr>
+      <tr>
+        
+<td>S-JUNO-MIOTY-ID</td>
+        <td>JUNO IP69k Temperature, Tilt Detection, and Door Open Detection mioty</td>
+      </tr>
+      <tr>
+        <td>S-JUNO-IX-LOEU-ID</td>
+        
+<td>INDUSTRIAL JUNO IP69k Temperature, Tilt Detection, and Door Open Detection LoRaWAN</td>
+      </tr>
+      <tr>
+        <td>S-JUNO-IX-MIOTY-ID</td>
+        <td>INDUSTRIAL JUNO IP69k Temperature, Tilt Detection, and Door Open Detection mioty</td>
+      </tr>
+    
+</tbody>
+  </table>
+</div>
+
+<!-- GENERAL FEATURES -->
+<h3 id="general">4. General Features</h3>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Feature</th>
+        
+<th>Value</th>
+        <th>Unit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Dimensions L×W×H</td>
+        <td>86 × 86 × 25</td>
+        <td>mm</td>
+      </tr>
+      <tr>
+        
+<td>Weight</td>
+        <td>&lt; 200</td>
+        <td>g</td>
+      </tr>
+      <tr>
+        <td>Operating temperature</td>
+        <td>-25 to +75 (please inquire about extended temperature range. The temperature range is limited by the maximum operating temperature of the primary cells)</td>
+        
+<td>°C</td>
+      </tr>
+      <tr>
+        <td>Maximum operating temperature of the device</td>
+        <td>85</td>
+        <td>°C</td>
+      </tr>
+      <tr>
+        <td>Storage temperature (recommended)</td>
+        
+<td>15 to +30</td>
+        <td>°C</td>
+      </tr>
+      <tr>
+        <td>Relative humidity during operation</td>
+        <td>5 to 99</td>
+        
+<td>%RH</td>
+      </tr>
+      <tr>
+        <td>IP Rating</td>
+        <td>IP69k</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>IK Rating</td>
+        <td>TBD</td>
+        <td></td>
+      
+</tr>
+      <tr>
+        <td>Sensors</td>
+        <td>Temperature, relative humidity, accelerometer</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Traffic-light function</td>
+        <td>No</td>
+        <td></td>
+      
+</tr>
+      <tr>
+        <td>Acoustic Alarm Function</td>
+        <td>Yes, Buzzer</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Provisioning</td>
+        <td>NFC</td>
+        <td></td>
+      </tr>
+      <tr>
+        
+<td>Material</td>
+        <td>PBT GF20 + ASA</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>NFC antenna</td>
+        <td>Integrated</td>
+        <td></td>
+      </tr>
+      <tr>
+        
+<td>RF antenna</td>
+        <td>Integrated</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Accelerometer</td>
+        <td>Yes</td>
+        <td></td>
+      </tr>
+      <tr>
+        
+<td>Batteries</td>
+        <td>Primary cell, replaceable, AA</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Primary cell type</td>
+        <td>
+          LoRaWAN, mioty:<br>
+          
+• 2 × 3.6 V LiSOCl₂ (SAFT LS14500 recommended)
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Housing Color</td>
+        <td>
+          S-JUNO-XXXX: black<br>
+          S-JUNO-IX-XXXX: silk gray
+        
+</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- CONNECTIVITY AND RF SPECIFICATIONS -->
+<h3 id="rf">5. Connectivity and RF Specifications</h3>
+
+<div class="table-wrap">
+  
+<table>
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Value</th>
+        <th>Unit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>RF Standards</td>
+        <td></td>
+        <td>MHz</td>
+      </tr>
+      
+<tr>
+        <td>LoRaWAN® / mioty® EU Frequency</td>
+        <td>868</td>
+        <td>MHz</td>
+      </tr>
+      <tr>
+        <td>LoRaWAN® / mioty® EU Transmit Power</td>
+        <td>14</td>
+        
+<td>dBm</td>
+      </tr>
+      <tr>
+        <td>LoRa® MAC Layer Version</td>
+        <td>1.0.4</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- TILT SENSOR SPECIFICATION -->
+<h3 id="tilt">6. Sensor Specification – Tilt</h3>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Characteristic</th>
+        <th>Value</th>
+        <th>Unit</th>
+      </tr>
+    </thead>
+    
+<tbody>
+      <tr>
+        <td>Measuring range</td>
+        <td>0 to 360</td>
+        <td>°</td>
+      </tr>
+      <tr>
+        <td>Accuracy</td>
+        <td>±2</td>
+        <td>°</td>
+      </tr>
+      
+<tr>
+        <td>Triggering in Low Power Mode for Opening Detection</td>
+        <td>±60</td>
+        <td>°</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SENSOR SPECIFICATION: TEMPERATURE OF THE ACCELEROMETER -->
+<h3 id="temperature">7. Sensor Specification – Temperature of the Accelerometer</h3>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Characteristic</th>
+        <th>Value</th>
+        <th>Unit</th>
+      </tr>
+    </thead>
+    
+<tbody>
+      <tr>
+        <td>Measurement range</td>
+        <td>-40 to +85</td>
+        <td>°C</td>
+      </tr>
+      <tr>
+        
+<td>Accuracy</td>
+        <td>±0.8</td>
+        <td>°C</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- TECHNICAL DRAWING -->
+<h3 id="drawing">8. Technical Drawing</h3>
+
+<figure class="figure">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/aedccdd5f1a36c0cc446d3a3078dc665745e256e/Juno_TILT/Juno_ID_TILT_Technical_datasheet/technical_drawing.png" alt= “Juno ID TILT Technical Drawing” style="height: auto;">
+  <figcaption>Figure 2. Juno ID TILT – Technical Drawing</figcaption>
+</figure>
+
+<h4><strong>Magnetic Switch Position</strong></h4>
+
+<figure class="figure">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/86c26e4e4707d0abc9d4015e30b3eacfdd8b0f86/Juno_TILT/Juno_ID_TILT_Technical_datasheet/position%20of%20magnetic%20switch.png" alt="Position Magnetschalter – Juno ID TILT" style="height: auto;">
+  
+<figcaption>Figure 3. Juno ID TILT – Magnetic Switch Position</figcaption>
+</figure>
+
+<br><br>
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/68a77348a6f04ccd2af4f398bbd3eafcb9643866/Helpdesk/logo/mioty_lora_nb-iot.png"  alt="Supported radio technologies"  style="max-width:750px; height:auto;"
+    loading="lazy">
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
+    alt="trash bin Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
+</div>
+        <!-- FOOTER -->
+    </div>
+    <div class="footer-note">
+        <p>© Sentinum GmbH – All rights reserved. </p>
+        
+<p>All content in this document, including text, tables, and images, is protected by copyright and is the property of Sentinum GmbH.</p>
+        <p>All images are subject to the copyright of Sentinum GmbH, unless otherwise noted.
+
+        </p>
+        
+<p>Reproduction, distribution, or use—even in part—is not permitted without express written permission.</p>
+        <p style="padding-left:14px; font-style:italic;"> Technical specifications are subject to change. All information is provided without warranty.</p>
+    </div>
+
+
+
+  
+</body></html>
