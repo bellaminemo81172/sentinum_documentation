@@ -338,6 +338,50 @@
             <strong>hier herunterladen</strong>
         </a>.
     </div>
+    
+    <nav class="main-toc">
+    <strong>Inhaltsverzeichnis</strong>
+
+    <ol>
+        <li>Warn- und Sicherheitshinweise</li>
+        <li>Verwendung und Produktversionen</li>
+        <li> Vorgesehene Verwendung</li>   
+        <li>Unterschiede der iX Versionen</li>
+       
+        <li>Technische Zeichnungen und Lieferumfang</li>
+        <ol>
+        <li>Technische Zeichnung Juno</li>     
+        <li>Lieferumfang</li>
+        <li>Klebepad Technische Zeichnung</li>
+        </ol>
+        <li>Zugelassene Batterien und Typen</li>
+        <li>Funktionsweise des WLAN-SSID-Scans</li>   
+        <ol>
+        <li>GNSS- & WLAN-Daten in der LoRa® Cloud</li>
+        <li>Tracking im LoRaWAN®</li>
+        </ol>
+        <li>Allgemeine Handhabungshinweise</li>
+        <ol>
+        <li>Besondere Handhabungshinweise für -TH Versionen</li>
+        </ol>
+        <li> Montage und Installation</li>
+        <li> Allgemeine Installationshinweise</li>  
+        <ol>
+            <li>Installationshinweise für Juno TH Versionen</li>
+            <li>Installationshinweise für Tracker-Versionen</li>
+            <li>Wichtiger Hinweis für Geräte mit externer Antenne</li>
+        </ol>
+        <li>Wandmontage mit Schrauben</li>
+        <li>Inbetriebnahme des Sensors via BLE</li> 
+        <li>Inbetriebnahme des Sensors über NFC</li>       
+        <li>Sensorfunktionen</li>
+        <li>Batteriewechsel</li>
+        <li>LoRaWAN-spezifische Funktionen</li>
+       
+    </ol>
+</nav>
+   
+    
 
      <figure class="figure">
         <img
@@ -694,7 +738,7 @@ Produktcodes und Lokalisierungsverfahren
 </div>
                                                                                          
   <h3>
-Vorgesehene Verwendung
+3. Vorgesehene Verwendung
 </h3>
 
 <p>
@@ -721,7 +765,7 @@ Vorgesehene Verwendung
 </p>
 
 <h3>
-Unterschiede der iX-Versionen
+4. Unterschiede der iX-Versionen
 </h3>
 
 <p>
@@ -766,12 +810,12 @@ Unterschiede der iX-Versionen
                                                                                 
                                                                                 
     <h3>
-Technische Zeichnung
+5. Technische Zeichnung
 </h3>
-
+<h4>5.1 Technische Zeichnung Juno</h4>
 <ul>
     <li>
-        <strong>Juno (ohne TH)</strong>
+        <strong> Juno (ohne TH)</strong>
     </li>
 </ul>
 
@@ -797,8 +841,8 @@ Technische Zeichnung
         Abbildung 3. Technische Zeichnung Juno TH (mit TH-Öffnung)
     </figcaption>
 </figure>
-                                                                               <h4>
-Lieferumfang
+    <h4>
+5.2 Lieferumfang
 </h4>
 
 <div class="table-wrap">
@@ -838,9 +882,9 @@ Lieferumfang
 
 
                                                                                         
-  <p>
-    <strong>Klebepad Technische Zeichnung</strong>
-</p>
+  
+    <h4>5.3 Klebepad Technische Zeichnung</h4>
+
 
 <figure class="figure">
     <img
@@ -854,8 +898,8 @@ Lieferumfang
 <h4>
 Zugelassene Batterien und Typen
 </h4>                                                                                      
-                                                                                  <h3>
-Zugelassene Batterietypen
+  <h3>
+6. Zugelassene Batterietypen
 </h3>
 
 <div class="table-wrap">
@@ -911,8 +955,8 @@ Zugelassene Batterietypen
     </table>
 </div>
 
-                                                                             <h3>
-Funktionsweise des WLAN-SSID-Scans
+  <h3>
+7. Funktionsweise des WLAN-SSID-Scans
 </h3>
 
 <ul>
@@ -1069,7 +1113,7 @@ Funktionsweise des GNSS-Scans
 </p>
 
 <h4>
-GNSS- und WLAN-Daten in der LoRa® Cloud
+7.1 GNSS- und WLAN-Daten in der LoRa® Cloud
 </h4>
 
 <ul>
@@ -1334,7 +1378,7 @@ Port-Zuordnung für Wi-Fi-SSID-Scan, GNSS-Scan und reguläre Payloads
 
 
 
-
+<p>Die folgenden Anbieter können für die Dekodierung der WIFI SSID SCAN- und GNSS SCAN-Daten empfohlen werden:</p>
 
 <ul>
     <li>Semtech LoRa Cloud (wird Ende Juli 2025 eingestellt)</li>
@@ -1349,7 +1393,7 @@ Port-Zuordnung für Wi-Fi-SSID-Scan, GNSS-Scan und reguläre Payloads
     verwendet werden.
 </p>
                                                                                       <h4>
-Tracking im LoRaWAN®
+7.2 Tracking im LoRaWAN®
 </h4>
 
 <p>
@@ -1456,92 +1500,7 @@ TDOA (Time Difference of Arrival)
     </ul>
 </div>
 
-<p>
-    <strong>Einsatzmöglichkeiten:</strong>
-</p>
 
-<ul>
-    <li>
-        Große Innenbereiche, beispielsweise Lagerhallen,
-        Logistikzentren oder Terminals mit hoher
-        Gateway-Abdeckung
-    </li>
-
-    <li>
-        Verwendung von Algorithmen zur Fehlerkorrektur bei
-        Mehrwegeausbreitung
-    </li>
-
-    <li>
-        Hybride Ortungssysteme durch Kombination von
-        LoRaWAN®-TDOA mit Bluetooth®, UWB oder Wi-Fi zur
-        Verbesserung der Positionsgenauigkeit
-    </li>
-</ul>
-                                                                             <h4>
-Tracking im LoRaWAN®
-</h4>
-
-<p>
-    Das Tracking im LoRaWAN® basiert darauf, dass Endgeräte
-    („Nodes“) Funksignale an mehrere Gateways senden.
-</p>
-
-<p>
-    Die Positionsbestimmung erfolgt nicht im Gerät selbst,
-    sondern im Netzwerk oder über eine Positionierungsplattform
-    wie die Semtech LoRa® Cloud.
-</p>
-
-<p>
-    Die Berechnung der Position basiert auf den von den
-    Gateways empfangenen Funksignalen. Je nach Infrastruktur
-    und Anwendungsfall können dabei unterschiedliche Verfahren
-    oder Kombinationen mehrerer Verfahren eingesetzt werden.
-</p>
-
-<p>
-    <strong>TDOA (Time Difference of Arrival)</strong>
-</p>
-
-<ul>
-    <li>
-        <strong>Funktionsweise:</strong>
-        Jedes Gateway versieht die Übertragung eines Nodes mit
-        einem Zeitstempel in Nanosekunden-Präzision.
-    </li>
-
-    <li>
-        <strong>Multilateration:</strong>
-        Die Zeitunterschiede zwischen den empfangenen Signalen
-        definieren Hyperbeln. Ab drei Gateways kann daraus eine
-        Position (Breiten- und Längengrad) berechnet werden.
-    </li>
-
-    <li>
-        <strong>Verarbeitung:</strong>
-        Die Positionsberechnung erfolgt zentral im
-        Netzwerkserver oder in einer Cloud-Anwendung.
-    </li>
-
-    <li>
-        <strong>Typische Genauigkeit:</strong>
-        Etwa 200 bis 1.000 m, abhängig von Gateway-Dichte,
-        Zeitsynchronisation und Umgebungsbedingungen.
-    </li>
-</ul>
-
-<div class="note-strip note-strip--blue">
-    <strong>Spezielle Gateways erforderlich</strong>
-
-    <p style="margin-bottom:0;">
-        Die eingesetzten Gateways müssen GPS oder PTP
-        (Precision Time Protocol) zur hochgenauen
-        Zeitsynchronisation verwenden. Bereits geringe
-        Zeitabweichungen im Mikrosekundenbereich können zu
-        erheblichen Positionsfehlern führen.
-    </p>
-</div>
 
 <p>
     <strong>Wichtige Einflussfaktoren auf die Genauigkeit:</strong>
@@ -1553,32 +1512,7 @@ Tracking im LoRaWAN®
     <li>Umgebungsbedingungen, z. B. Reflexionen an Gebäuden</li>
 </ul>
 
-                                                                                       <div class="note-strip note-strip--yellow">
-    <strong>TDOA für Indoor-Tracking – Herausforderungen</strong>
-
-    <ul>
-        <li>
-            Signalverzerrungen durch Wände und Einrichtungsgegenstände
-            können Zeitmessfehler verursachen.
-        </li>
-
-        <li>
-            Mehrwegeausbreitung (Multipath) verändert die
-            tatsächlichen Ankunftszeiten der Signale.
-        </li>
-
-        <li>
-            Eine direkte Sichtverbindung zu mindestens drei Gateways
-            ist in Innenräumen häufig nur schwer realisierbar.
-        </li>
-
-        <li>
-            Die GPS-basierte Zeitsynchronisation kann innerhalb von
-            Gebäuden unzuverlässig sein.
-        </li>
-    </ul>
-</div>
-
+   
 <p>
     <strong>Einsatzmöglichkeiten:</strong>
 </p>
@@ -1613,7 +1547,7 @@ Tracking über das Mobilfunknetz („Cell Locate“)
 <p>
     Die Standortbestimmung erfolgt nicht durch GNSS im Gerät,
     sondern durch die Auswertung verschiedener Netzwerkparameter</p>
-                                                                                       <div class="table-wrap">
+   <div class="table-wrap">
     <table>
         <thead>
             <tr>
@@ -1750,7 +1684,7 @@ eDRX: Auf dem Weg zum abfragbaren Tracker
     </li>
 </ul>
                                                                                <h3>
-Allgemeine Handhabungshinweise
+8. Allgemeine Handhabungshinweise
 </h3>
 
 <ul>
@@ -1873,7 +1807,7 @@ Allgemeine Handhabungshinweise
     </li>
 </ul>
                                                             <h4>
-Besondere Handhabungshinweise für TH-Versionen
+8.1 Besondere Handhabungshinweise für TH-Versionen 
 </h4>
 
 <p>
@@ -1987,9 +1921,9 @@ Zusätzliche Hinweise
         Gerät nur in freigegebenen Umgebungen.
     </li>
 </ul>
-<h4>
-Montage und Installation
-</h4>
+<h3>
+9. Montage und Installation
+</h3>
 
 <p>
     <strong>Warn- und Sicherheitshinweise zur Installation</strong>
@@ -2134,9 +2068,9 @@ Empfohlene Befestigungsarten
         </tbody>
     </table>
 </div>
-                <h4>
-️ Allgemeine Installationshinweise
-</h4>
+                <h3>
+10. Allgemeine Installationshinweise
+</h3>
 
 <h4>
 Installation der Juno Tracker-Versionen (ohne Gehäuseöffnung)
@@ -2180,7 +2114,7 @@ Installation der Juno Tracker-Versionen (ohne Gehäuseöffnung)
 </ul>
 
 <h4>
-️ Installationshinweise für Juno TH-Versionen
+1️0.1 Installationshinweise für Juno TH-Versionen
 </h4>
 
 <ul>
@@ -2227,7 +2161,7 @@ Installation der Juno Tracker-Versionen (ohne Gehäuseöffnung)
 </ul>
 
 <h4>
-Installationshinweise für Tracker-Versionen
+10.2 Installationshinweise für Tracker-Versionen
 </h4>
 
 <ul>
@@ -2270,7 +2204,7 @@ Installationshinweise für Tracker-Versionen
     </li>
 </ul>
                     <h4>
-Wichtiger Hinweis für Geräte mit externer Antenne
+10.3 Wichtiger Hinweis für Geräte mit externer Antenne
 </h4>
 
 <p>
@@ -2318,7 +2252,7 @@ Wichtiger Hinweis für Geräte mit externer Antenne
     </p>
 </div>
                     <h3>
-🪛 Wandmontage mit Schrauben
+11. Wandmontage mit Schrauben
 </h3>
 
 <p>
@@ -2596,7 +2530,7 @@ Inbetriebnahme und Nutzung
 </div>
 
 <h4>
- Inbetriebnahme des Sensors mit Magnet
+Inbetriebnahme des Sensors mit Magnet
 </h4>
 
 <p>
@@ -2690,7 +2624,7 @@ Inbetriebnahme und Nutzung
 </div>
 
 <h4>
-Inbetriebnahme des Sensors via BLE (Kurzanleitung)
+12. Inbetriebnahme des Sensors via BLE (Kurzanleitung)
 </h4>
 
 <p>
@@ -2754,7 +2688,7 @@ So aktivieren Sie den Advertising-Modus
 </figure>
                 
             <h4>
-Inbetriebnahme des Sensors via NFC
+13. Inbetriebnahme des Sensors via NFC
 </h4>
 
 <p>
@@ -2979,7 +2913,7 @@ Akustisches Signal und Rückmeldung
     </li>
 </ul>
         <h3>
-Sensorfunktionen
+14. Sensorfunktionen
 </h3>
 
 <p>
@@ -3261,7 +3195,7 @@ Pflege und Reinigung
 </ul>
       
     <h4>
-Batteriewechsel
+15. Batteriewechsel
 </h4>
 
 <ol>
@@ -3511,9 +3445,9 @@ Ausrichtungen
         Abbildung 20. Zulässige und empfohlene Ausrichtungen des Sensors
     </figcaption>
 </figure>                                                                                                          
-<h4>
-LoRaWAN®-spezifische Funktionen
-</h4>
+<h3>
+16. LoRaWAN®-spezifische Funktionen
+</h3>
 
 <p>
     <strong>LoRaWAN® Join-Verhalten</strong>
