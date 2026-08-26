@@ -1,0 +1,3551 @@
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+    code,
+    .inline-code {
+        background-color: #f3f4f6;
+        border: 1px solid #d0d7de;
+        border-radius: 4px;
+        padding: 2px 6px;
+        font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 0.9em;
+        color: #111827;
+        display: inline-block;
+    }
+
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+</style>
+
+
+
+    
+            
+            
+            
+   <div class="pdf-viewer">
+        <iframe
+            src="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/f3d3bdbd3d019c3936309c72b6ff361361d7881a/Helpdesk/Juno_ID_tilt/Juno_ID_tilt_Betriebsanleitung/Juno_Betriebsanleitung_DE_EN.pdf"
+            title="Hyperion User Manual PDF"
+            loading="lazy">
+        </iframe>
+    </div>
+    
+<div class="pdf-download">
+        📄 You can view the PDF above or
+        <a href="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/f3d3bdbd3d019c3936309c72b6ff361361d7881a/Helpdesk/Juno_ID_tilt/Juno_ID_tilt_Betriebsanleitung/Juno_Betriebsanleitung_DE_EN.pdf"
+           target="_blank"
+           rel="noopener noreferrer">
+            <strong>download it here</strong>
+        
+</a>.
+    </div>
+    
+    <nav class="main-toc">
+    <strong>Table of Contents</strong>
+    
+<ol>
+        <li>Warnings and Safety Instructions</li>
+        <li>Usage and Product Versions</li>
+        <li>Intended Use</li>
+        <li>Differences Between iX Versions</li>
+               
+<li>Technical Drawings and Package Contents</li>
+        <ol>
+        <li>Juno Technical Drawing</li>
+        <li>Package Contents</li>
+        <li>Adhesive Pad Technical Drawing</li>
+        </ol>
+        <li>Approved Batteries and Types</li>
+        
+<li>How the Wi-Fi SSID Scan Works</li>
+        <ol>
+        <li>GNSS & Wi-Fi Data in the LoRa® Cloud</li>
+        <li>Tracking in LoRaWAN®</li>
+        </ol>
+        <li>General Handling Instructions</li>
+        <ol>
+        
+<li>Special Handling Instructions for -TH Versions</li>
+        </ol>
+        <li> Assembly and Installation</li>
+        <li> General Installation Instructions</li>
+        <ol>
+            <li>Installation Instructions for Juno TH Versions</li>
+            <li>Installation Instructions for Tracker Versions</li>
+            <li>Important Note for Devices with an External Antenna</li>
+        </ol>
+        <li>Wall Mounting with Screws</li>
+        <li>Commissioning the Sensor via BLE</li>
+        <li>Commissioning the Sensor via NFC</li>
+        <li>Sensor Functions</li>
+        <li>Battery Replacement</li>
+        <li>LoRaWAN-Specific Functions</li>
+       
+    </ol>
+</nav>
+            
+<figure class="figure">
+        <img
+            src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Juno/Juno/open/ohne%20Logo/Juno_open_Front_w.png"
+            alt="Hyperion IoT Energy Meter"
+            loading="lazy"
+        >
+        <figcaption>
+            Figure 1. Juno ID Tilt
+        
+</figcaption>
+    </figure>
+                                                                                
+     <h3>
+1. General Warnings and Safety Instructions
+</h3>
+
+<p>
+    <strong>Please note:</strong>
+</p>
+
+<ul>
+    <li>
+        Follow the safety and
+        installation instructions in the operating manual and in the
+        installation guide.
+    </li>
+    
+<li>
+        Ensure that the installation environment meets the
+        specified operating conditions
+        (e.g., temperature limits and environmental conditions).
+    </li>
+
+    <li>
+        The device may only be used for the applications and
+        uses described in the technical
+        
+areas of application described in the technical specifications.
+    </li>
+
+    <li>
+        Modifications or additions to the device may
+        compromise safety and functionality. In this case,
+        the warranty is void.
+    </li>
+
+    <li>
+        The sensor must not be mounted on ceilings or floors.
+    </li>
+
+    <li>
+        Operation is permitted only up to a maximum altitude of
+        2,000 m above sea level and in rooms with a
+        maximum height of 2 m.
+    </li>
+
+    <li>
+        A minimum distance
+        of 20 cm must be maintained between the device and people.
+    </li>
+</ul>
+
+<div class="note -strip note-strip--red">
+    <strong>In case of incorrect installation</strong>
+
+    <ul>
+        <li>
+            The device may not function properly.
+        </li>
+
+        <li>
+            The device may be permanently damaged.
+        </li>
+
+        <li>
+            There may be a risk of injury.
+        </li>
+    
+</ul>
+</div><p>
+    <strong>Please also note:</strong>
+</p>
+
+<ul>
+    <li>
+        Improper mechanical stress, such as
+        from dropping the device, can cause damage to the device.
+    </li>
+    
+<li>
+        The use of unauthorized battery cells can negatively
+        affect performance and product safety
+        .
+    </li>
+
+    <li>
+        The device may only be installed and put into operation
+        if it has been removed from the original packaging
+        undamaged. Immediately after unpacking,
+        
+a visual inspection for any potential shipping damage.
+    </li>
+</ul>
+
+<h3>
+2. Intended Use and Product Versions
+</h3>
+
+<p>
+    These operating instructions apply to the entire product series
+    <strong>Juno</strong>.
+</p>
+
+<p>
+    Within the product series, various
+    product versions are available, which differ in terms of their
+    localization methods, sensor technology, and
+    range of functions.
+</p>
+
+<p>
+    The specific properties, features, and
+    functions of the respective product variants are described in detail
+    in the following chapters of this operating manual
+    .
+</p>
+
+    <div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Part Number</th>
+                <th>Wireless Standard</th>
+                <th>Functions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>S-JUNO(-iX)-LOEU</td>
+                <td>LoRaWAN
+ 
+®</td>
+                <td>Tilt detection, activity detection, door-opening and motion detection</td>
+            </tr>
+
+            <tr>
+                <td>S-JUNO(-iX)-MIOTY</td>
+                <td>mioty®</td>
+                <td>Tilt detection, activity detection, door-opening and motion detection</td>
+            
+</tr>
+
+            <tr>
+                <td>S-JUNO(-iX)-LOEU-TH</td>
+                <td>LoRaWAN®</td>
+                <td>Temperature, relative humidity, Tilt detection, activity detection, opening and motion detection</td>
+            </tr>
+
+            <tr>
+                <td>S-JUNO(-iX)-MIOTY-TH</td>
+                <td>mioty®</td>
+                <td>Temperature, relative humidity, tilt detection, activity detection, opening and motion detection</td>
+            
+</tr>
+            <tr>
+                <td>S-JUNO-NB-TH</td>
+                <td>NB-IoT</td>
+                
+<td>Temperature, relative humidity, tilt detection, activity detection, door-opening and motion detection</td>
+            </tr>
+
+            <tr>
+                <td>S-JUNO(-iX)-LOEU-TRACK</td>
+                <td>LoRaWAN®</td>
+                <td>Tilt detection, activity detection, door-opening and motion detection</td>
+            </tr>
+
+            <tr>
+                <td>S-JUNO(-iX)-LOEU-TH-TRACK</td>
+                <td>LoRaWAN®</td>
+                <td>Temperature, relative humidity, tilt detection, activity detection, door opening and motion detection</td>
+            </tr>
+
+            <tr>
+                <td>S-JUNO(-iX)-NBM1-TRACK-2</td>
+                <td>NB-IoT, CAT -M1</td>
+                <td>Tilt detection, activity detection, door-opening and motion detection</td>
+            </tr>
+
+            <tr>
+                <td>S-JUNO(-iX)-NBM1-TRACK-3</td>
+                <td>NB-IoT, CAT-M1</td>
+                
+<td>Tilt detection, activity detection, door-opening and motion detection</td>
+            </tr>
+
+            <tr>
+                <td>S-JUNO(-iX)-NBM1-TH-TRACK-2</td>
+                <td>NB-IoT, CAT-M1</td>
+                <td>Temperature, relative humidity, Tilt detection, activity detection, door-opening and motion detection</td>
+            </tr>
+
+            <tr>
+                <td>S-JUNO(-iX)-NBM1-TH-TRACK-3</td>
+                <td>NB-IoT, CAT-M1</td>
+                <td>Temperature, relative humidity, tilt detection, activity detection, door-opening
+ 
+and motion detection</td>
+            </tr>
+
+            <tr>
+                <td>S-JUNO(-iX)-MIOTY-TRACK</td>
+                
+<td>mioty®</td>
+                <td>Tilt detection, activity detection, door-opening and motion detection</td>
+            </tr>
+
+            <tr>
+                <td>S-JUNO(-iX)-MIOTY-TH-TRACK</td>
+                <td>mioty®</td>
+                <td>Temperature, relative humidity, tilt detection, activity detection, opening and motion detection</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4>
+Product Codes and Localization Methods
+</h4>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Part Number</th>
+                <th>Wireless Standard</th>
+                <th>Wi-Fi SSID Scan</th>
+                
+<th>GNSS Scan</th>
+                <th>GNSS</th>
+                <th>Cell Locate</th>
+                <th>LPWAN Tracking</th>
+            </tr>
+        </thead>
+
+      <tbody>
+                <tr style="background-color: #ffffff;" data-mce-style="background-color: #ffffff;">
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">S-JUNO(-iX)-LOEU</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">LoRaWAN®</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                </tr>
+                                                                                                <tr style="background-color: #fafafa;" data-mce-style="background-color: #fafafa;">
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">S-JUNO(-iX)-MIOTY</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">mioty®</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                </tr>
+                                                                                                <tr style="background-color: #ffffff;" data-mce-style="background-color: #ffffff;">
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">S-JUNO(-iX)-LOEU-TH</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">LoRaWAN®</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                </tr>
+                                                                                                <tr style="background-color: #fafafa;" data-mce-style="background-color: #fafafa;">
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">S-JUNO(-iX)-MIOTY-TH</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">mioty®</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                </tr>
+                                                                                                <tr style="background-color: #ffffff;" data-mce-style="background-color: #ffffff;">
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">S-JUNO-NB-TH</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">NB-IoT</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                </tr>
+                                                                                                <tr style="background-color: #fafafa;" data-mce-style="background-color: #fafafa;">
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">S-JUNO(-iX)-LOEU-TRACK</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">LoRaWAN®</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                </tr>
+                                                                                                <tr style="background-color: #ffffff;" data-mce-style="background-color: #ffffff;">
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">S-JUNO(-iX)-LOEU-TH-TRACK</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">LoRaWAN®</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                </tr>
+                                                                                                <tr style="background-color: #fafafa;" data-mce-style="background-color: #fafafa;">
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">S-JUNO(-iX)-NBM1-TRACK-2</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">NB-IoT, CAT-M1</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                </tr>
+                                                                                                <tr style="background-color: #ffffff;" data-mce-style="background-color: #ffffff;">
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">S-JUNO(-iX)-NBM1-TRACK-3</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">NB-IoT, CAT-M1</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                </tr>
+                                                                                                <tr style="background-color: #fafafa;" data-mce-style="background-color: #fafafa;">
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">S-JUNO(-iX)-NBM1-TH-TRACK-2</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">NB-IoT, CAT-M1</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                </tr>
+                                                                                                <tr style="background-color: #ffffff;" data-mce-style="background-color: #ffffff;">
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">S-JUNO(-iX)-NBM1-TH-TRACK-3</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">NB-IoT, CAT-M1</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                </tr>
+                                                                                                <tr style="background-color: #fafafa;" data-mce-style="background-color: #fafafa;">
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">S-JUNO(-iX)-MIOTY-TRACK</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">mioty®</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                </tr>
+                                                                                                <tr style="background-color: #ffffff;" data-mce-style="background-color: #ffffff;">
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">S-JUNO(-iX)-MIOTY-TH-TRACK</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">mioty®</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✖</td>
+                                                                                                    <td style="border: 1px solid #ccc; padding: 8px;" data-mce-style="border: 1px solid #ccc; padding: 8px;">✔</td>
+        </tbody>
+    </table>
+</div>
+                                                                                         
+  <h3>
+3. Intended Use
+</h3>
+
+<p>
+    The Juno sensor is a battery-powered, wireless IoT device
+    designed to collect environmental and motion data. It was developed for
+    industrial and commercial applications, particularly
+    for condition monitoring and object localization in indoor and
+    outdoor environments.
+</p>
+
+<p>
+    Depending on the model, , the sensor features various
+    sensor modules—for example, for temperature, motion, or
+    tilt measurements—as well as different localization methods such as
+    GNSS, Wi-Fi SSID scanning, or LoRaWAN®-based positioning.
+</p>
+
+<p>
+    
+The sensor may only be used in accordance with this documentation and
+    within the specified technical specifications
+    . Any use deviating from these specifications is considered
+    improper. In such cases, Sentinum GmbH assumes
+    no liability for any resulting damage.
+</p>
+
+<h3>
+4. Differences Between the iX Versions
+</h3>
+
+<p>
+    
+The iX models feature advanced industrial
+    certifications, additional accessories, and more precise
+    configuration of measurement and transmission intervals.
+</p>
+
+<p>
+    While the standard versions support a minimum interval of
+    5 minutes, the iX variants allow intervals
+    starting at 1 minute.
+</p>
+
+<p>
+    
+In addition, the iX models differ from the
+    standard versions in terms of housing color.
+</p>
+                                                                                  <div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Version</th>
+                <th>Housing Color</th>
+            </tr>
+        </thead>
+        
+<tbody>
+            <tr>
+                <td>Standard version</td>
+                <td>Black</td>
+            </tr>
+
+            <tr>
+                <td>iX industrial version</td>
+                <td>Silver-gray</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+                                                                                                                                                                                                                            
+<h3>
+5. Technical Drawing
+</h3>
+<h4>5.1 Technical Drawing Juno</h4>
+<ul>
+    <li>
+        <strong> Juno (without TH)</strong>
+    </li>
+</ul>
+
+<figure class="figure">
+     <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-18-2025-03-23-53-5651-PM.png?width=688&amp;height=491&amp;name=image-png-Jun-18-2025-03-23-53-5651-PM.png"
+        alt="Technische Zeichnung Juno ohne TH"
+        loading="lazy">
+
+    <figcaption>Figure 2. Juno (without TH)</figcaption></figure>
+    <ul>
+        
+<li>
+        <strong>TechnicalH (with TH opening)</strong>
+    </li>
+</ul>
+
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-18-2025-03-24-58-0016-PM.png?width=688&amp;height=488&amp;name=image-png-Jun-18-2025-03-24-58-0016-PM.png"  alt="Technische Zeichnung Juno TH"
+        loading="lazy">
+
+    <figcaption>
+        Figure 3. Technical Drawing Juno TH (with TH opening)
+    </figcaption>
+</figure>
+    <h4>
+5.2 Scope of Delivery
+</h4>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Product Version</th>
+                <th>Scope of Delivery</th>
+            </tr>
+        </thead>
+        
+<tbody>
+            <tr>
+                <td>Standard Version</td>
+                <td>
+                    <ul>
+                        <li>Sensor</li>
+                        <li>Batteries</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td>iX Industrial Version</td>
+                <td>
+                    <ul>
+                        
+<li>Sensor</li>
+                        <li>Battery</li>
+                        <li>Drilling template</li>
+                        <li>Adhesive pad</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+                                                                                        
+  
+    <h4>5.3 Adhesive Pad Technical Drawing</h4>
+
+
+<figure class="figure">
+    
+<img
+        src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-18-2025-03-26-12-6660-PM.png?width=298&height=427&amp;name=image-png-Jun-18-2025 -03-26-12-6660-PM.png"
+        alt="ng X. Technical drawing of the adhesive pad ">
+        <figcaption>
+            Figure 4. Technical drawing of the adhesive pad
+    </figcaption>
+</figure>
+
+<h4>
+Approved batteries and types
+</h4>
+  <h3>
+6. Approved battery types
+</h3>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                
+<th>Part Number</th>
+                <th>Approved Batteries</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>
+                    S-JUNO(-iX)-LOEU<br>
+                    S-JUNO(-iX)-MIOTY<br>
+                    S-JUNO(-iX)-LOEU-TH<br>
+                    S-JUNO(-iX)-MIOTY-TH<br>
+                    S-JUNO(-iX)-LOEU-TRACK<br>
+                    S-JUNO(-iX)-MIOTY-TRACK<br>
+                    S-JUNO(-iX)-LOEU-TH-TRACK<br>
+                    
+S-JUNO(-iX)-MIOTY-TH-TRACK
+                </td>
+
+                <td>
+                    <ul>
+                        <li>Energizer Ultimate Lithium AA</li>
+                        <li>Varta Ultra Lithium AA</li>
+                        <li>Varta Longlife Power AA</li>
+                        <li>SAFT LS14500 (Standard)</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    S-JUNO(-iX)-NBM1-TRACK-2<br>
+                    S-JUNO(-iX)-NBM1-TRACK-3<br>
+                    S-JUNO(-iX)
+ 
+-NBM1-TH-TRACK-2<br>
+                    S-JUNO(-iX)-NBM1-TH-TRACK-3<br>
+                    S-JUNO-NB-TH
+                </td>
+
+                <td>
+                    <ul>
+                        <li>CR14505 (HCB)</li>
+                        <li>ER14505M (HCB, Standard)</li>
+                        <li>UHR-ER14505-X (Ultralife)</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+  <h3>
+7. How the Wi-Fi SSID Scan Works
+</h3>
+
+<ul>
+    
+<li>
+        <strong>Passive scan:</strong>
+        Receiving beacon frames containing SSID, BSSID, and RSSI values
+        from existing Wi-Fi access points.
+    </li>
+
+    <li>
+        <strong>RSSI measurement:</strong>
+        Evaluation of signal strength to estimate the distance to
+        individual access points.
+    </li>
+
+    <li>
+        <strong>Trilateration:</strong>
+        Use of RSSI values in conjunction with known positions
+        of the access points to determine position.
+    </li>
+    
+<li>
+        <strong>Refinement and display:</strong>
+        Taking environmental conditions and
+        motion information into account, followed by an update of the
+        position display.
+    </li>
+</ul>
+
+<h4>
+Advantages and Areas of Application
+</h4>
+
+<ul>
+    <li>High accuracy indoors where GNSS/GPS is unavailable.</li>
+    <li>Cost-effective use of existing Wi-Fi infrastructure.</li>
+    <li>Low power consumption, as no constant satellite connection is required.</li>
+</ul>
+
+<p>
+    
+<strong>Typical use cases:</strong>
+</p>
+
+<ul>
+    <li>Indoor navigation, for example in shopping malls or airports.</li>
+    <li>Asset and fleet tracking in warehouses, logistics centers, or on company premises.</li>
+    
+<li>Location tracking of battery-powered IoT devices.</li>
+</ul>
+                                                                                       <h4>
+Factors affecting accuracy
+</h4>
+
+<ul>
+    <li>
+        <strong>Signal variability:</strong>
+        
+RSSI-based distance measurement is not linear.
+        Walls, furniture, and radio interference can affect accuracy
+        .
+    </li>
+    
+<li>
+        <strong>Density and placement of access points:</strong>
+        Reliable trilateration requires at least
+        three strategically placed access points.
+    </li>
+
+    <li>
+        <strong>Algorithm quality:</strong>
+        Calibrated or machine learning-based methods
+        can reduce interference and measurement noise.
+    </li
+ 
+>
+</ul>
+
+<ul>
+    <li>
+        <strong>Open areas:</strong>
+        Approx. 1 to 5 m accuracy
+    </li>
+
+    <li>
+        <strong>Complex indoor spaces:</strong>
+        Approx. 5 to 20 m accuracy
+    </li>
+</ul>
+
+<h4>
+Advantages of Juno
+</h4>
+
+<ul>
+    <li>
+        
+<strong>Hybrid localization:</strong>
+        Combination of Wi-Fi SSID, GNSS, and cellular data.
+    </li>
+
+    <li>
+        <strong>Dual-band scan:</strong>
+        Active and passive scanning at 2.4 GHz and 5 GHz with
+        detection of up to 20 access points.
+    </li>
+    
+<li>
+        <strong>Battery-efficient:</strong>
+        Optimized for low power consumption and
+        long battery life.
+    </li>
+
+    <li>
+        <strong>Secure:</strong>
+        Supports WPA3.
+    </li>
+
+    <li>
+        
+<strong>Actual accuracy:</strong>
+        Typically 3 to 20 m, depending on the environment.
+    </li>
+</ul>
+
+<h4>
+How the GNSS scan works
+</h4>
+
+<ul>
+    <li>
+        <strong>Satellite positioning:</strong>
+        Receiving signals from at least four satellites
+        (GPS, Galileo, GLONASS, or BeiDou).
+    </li>
+
+    <li>
+        <strong>Time-of-flight measurement:</strong>
+        Distance is calculated using the speed of light and
+        the signal transit time.
+    
+</li>
+
+    <li>
+        <strong>Trilateration:</strong>
+        The position is determined from the intersection points of several
+        distance spheres.
+    </li>
+    
+<li>
+        <strong>Correction systems:</strong>
+        DGPS and SBAS methods compensate for atmospheric,
+        orbital, and time-related errors.
+    </li>
+</ul>
+
+<p>
+    <strong>Typical accuracy:</strong>
+    Single-GNSS: 2.5 to 10 m,
+    Multi-GNSS: 1 to 3 m
+    (up to 10 to 50 m in urban canyons).
+</p>
+
+<h4>
+7.1 GNSS and Wi-Fi Data in the LoRa® Cloud
+</h4>
+
+<ul>
+    <li>
+        <strong>Data ports:</strong>
+        Wi-Fi SSID scan (172),
+        GNSS scan (197)
+    </li>
+
+    <li>
+        
+<strong>Workflow:</strong>
+        Device → LoRa® Cloud → Geolocation →
+        Network server
+    </li>
+
+    <li>
+        <strong>Integrations:</strong>
+        Semtech LoRa Cloud,
+        The Things Stack (TTI),
+        ChirpStack
+    </li>
+</ul>
+                                                                     <h4>
+Requirements
+</h4>
+
+<ul>
+    <li>
+        An active account with The Things Stack (TTI) .
+    </li>
+
+    <li>
+        A registered LoRaWAN® device
+        (e.g., a tracker with GNSS functionality).
+    </li>
+
+    <li>
+        API access to Semtech LoRa Cloud Services
+        
+via the developer portal:
+        <a href="https://lora-developers.semtech.com"
+           target="_blank"
+           rel="noopener noreferrer">
+            https://lora-developers.semtech.com
+        </a>
+    </li>
+    
+<li>
+        A LoRa Cloud token (API key) from the
+        LoRa Cloud Portal.
+    </li>
+</ul>
+
+<h4>
+Activate Semtech LoRa Cloud
+</h4>
+
+<ul>
+    <li>
+        Open:
+        <a href="https://lora-developers.semtech.com"
+           target="_blank"
+           rel="noopener noreferrer">
+            https://lora-developers.semtech.com
+        
+</a>
+    </li>
+
+    <li>
+        Create an account or log in.
+    </li>
+
+    <li>
+        Navigate to
+        <em>LoRa Cloud → Modem Services</em>
+        and copy the API key (token) for 
+        later use.
+    </li>
+</ul>
+
+<h4>
+Set up integration with The Things Stack
+</h4>
+
+<ul>
+    <li>
+        Log in to the The Things Stack Portal:
+        <a href="https:/ /eu1.cloud.thethings.industries/"
+           target="_blank"
+           rel="noopener noreferrer">
+             https://eu1.cloud.thethings.industries/</a>
+            desired device.
+    </li>
+
+    <li>
+        Navigate to
+        <em>Integrations → Webhooks</em>.
+    </li>
+
+    <li>
+        Select <em>Add Webhook</em> and then
+        <em>Semtech LoRa Cloud</em> as the template.
+    </li>
+</ul>
+
+<h4>
+Configure Webhook
+</h4>
+
+<ul>
+    <li>
+        Fill out the configuration form
+ :
+        <ul>
+            <li>
+                <strong>Base URL:</strong>
+                Automatically suggested by The Things Stack.
+            </li>
+
+            <li>
+                <strong>Token:</strong>
+                API key from the Semtech LoRa Cloud.
+            </li>
+
+            <li>
+                Enable the required services, e.g. nbsp;e.g.,
+                <ul>
+                    <li>
+                        Modem Services
+                        (GNSS and Wi-Fi scans)
+                    </li>
+
+                    <li>
+                        Geolocation
+                        (TDOA- and RSSI-based positioning)
+                    </li>
+                </ul>
+            </li>
+            
+<li>
+                Depending on the device, additional GNSS or
+                Wi-Fi data may be transmitted.
+            </li>
+        </ul>
+    </li>
+</ul>
+    <p>
+    <strong>Customize payload formats (if necessary)</strong>
+</p>
+
+<ul>
+    <li>
+        The end device must use the payload format expected by Semtech
+        , such as the format used by
+        <strong>LoRa Basics™ Modem</strong>.
+    </li>
+</ul>
+
+<p>
+    <strong>Verify data</strong>
+</p>
+
+<ul>
+    <li>
+        As soon as the device transmits location data, it is forwarded by
+        The Things Industries (TTI) to the Semtech LoRa Cloud
+        .
+    
+</li>
+
+    <li>
+        The cloud’s response is then sent back via TTI to the
+        end device or connected application.
+    </li>
+</ul>
+
+<p>
+    <strong>Testing and Monitoring</strong>
+</p>
+
+<ul>
+    <li>
+        
+Use the live data view in TTI to verify
+        the transmitted data.
+    </li>
+
+    <li>
+        Monitor incoming and processed requests in
+        the Semtech LoRa Cloud.
+    </li>
+
+    <li>
+        Verify the returned geodata, such as
+        latitude, longitude, and accuracy information.
+    </li>
+</ul>
+
+<div class="note-strip note-strip--yellow">
+    <strong>Note</strong>
+    
+<p style="margin-bottom:0;">
+        This integration works best with devices based on
+        the Semtech LoRa Basics™ Modem-E architecture, such as
+        the LoRa Edge™ LR1110. Custom payload formats can also
+        be used, provided the API calls are compatible.
+    </p>
+</div>
+
+<h3>
+Port mapping for Wi-Fi SSID scan, GNSS scan, and regular payloads
+</h3>
+                                                                                       <div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Function</th>
+                <th>LoRaWAN Port</th>
+                
+<th>Description</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>GNSS scan payload</td>
+                <td>197</td>
+                <td>
+                    Raw data (satellite ID, time information, etc.)
+                    for the geolocation backend.
+                </td>
+            </tr>
+
+            <tr>
+                <td>Wi-Fi SSID scan payload</td>
+                <td>194</td>
+                <td>
+                    Scanned MAC addresses and RSSI values for
+                    position determination.
+                </td>
+            </tr>
+            
+<tr>
+                <td>Regular Payload</td>
+                <td>1</td>
+                <td>
+                    Standard sensor data such as temperature,
+                    humidity, tilt,
+                    battery voltage, and other measurements.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+                                                                                                                                                      
+<figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-18-2025-03-39-37-9153-PM.png?width=363& height=446&amp;name=image-png-Jun-18-2025-03-39-37-9153-PM.png"
+        alt="GNSS and Wi-Fi Localization in the LoRa Cloud"
+        loading="lazy">
+
+    <figcaption>
+      Figure 5. Processing of GNSS and decoding of
+    
+Wi-Fi SSID scan and GNSS scan data
+    </figcaption></figure>
+<p></p>
+
+
+
+<p>The following providers are recommended for decoding Wi-Fi SSID scan and GNSS scan data: </p>
+
+<ul>
+    <li>Semtech LoRa Cloud (to be discontinued at the end of July 2025)</li>
+    <li>AWS</li>
+    <li>Tencent</li>
+    <li>Traxmate</li>
+    <li>Sentinel</li>
+</ul>
+
+<p>
+    For on-premises applications, local databases
+    
+.
+</p>
+                                                                                      <h4>
+7.2 Tracking in LoRaWAN®
+</h4>
+
+<p>
+    Tracking in LoRaWAN® relies on end devices
+    
+(“nodes”) sending radio signals to multiple gateways.
+</p>
+
+<p>
+    Positioning does not take place within the device itself,
+    but rather through the network or via a
+    positioning platform such as the
+    <strong>Semtech LoRa Cloud®</strong>.
+</p>
+
+<p>
+    Position calculation is based on the received
+    radio signals
+ . Depending on the use case and available    infrastructure, different methods or    combinations of several methods can be used.</p><h4>TDOA (Time Difference of Arrival)</h4><ul>    <li>        <strong>How it works: </strong>        Each gateway assigns a        high-precision timestamp to a node’s transmission.    </li>    <li>        <strong>Multilateration:</strong>        The time differences between the received signals        define hyperbolas. With at least three gateways,        a geographic intersection point        (latitude and longitude) can be calculated.    </li>    <li>        <strong>Processing:</strong>        Position calculation is performed centrally on the network server        or in a cloud application.    </li>    <li>        <strong>Typical accuracy:</strong>        Approximately 200 to 1,000 m, depending on gateway density,        synchronization quality, and environmental conditions.    </li></ul><div class="note-strip note-strip--blue">    <strong>Special gateways required</strong>    <p style="margin-bottom:0;">        The gateways must use        GPS or PTP (Precision Time Protocol) for precise time synchronization.        Even deviations in the microsecond range can lead to        significant position errors.    </p></div><p>    <strong>Key factors affecting accuracy:</strong></p><ul>    <li>Gateway density and gateway layout</li>    <li>Quality of time synchronization</li>    <li>        Environmental conditions, such as reflections off        buildings or other obstacles    </li></ul>
+ <div class="note-strip note-strip--yellow">    <strong>TDOA for Indoor Tracking – Challenges</strong>    <ul>        <li>            Signal distortions caused by walls, furniture, or machinery            can result in time measurement errors.        </li>        <li>            Multipath propagation alters the            measured arrival times of the signals.        </li>        <li>            Positioning at least three gateways with            direct line of sight is often            difficult in buildings.        </li>        <li>            GPS synchronization is often            limited or unavailable indoors.        </li>    </ul></div><p>    <strong>Key factors affecting accuracy:</strong></p><ul>    <li>Gateway density and spatial arrangement</li>    <li>Precision of time synchronization</li>    <li>Environmental conditions, e.g., reflections
+ off buildings</li></ul>   <p>    <strong>Possible applications:</strong></p><ul>    <li>        Very large indoor areas, such as warehouses,        logistics centers, or terminals with high gateway density.    </li>    <li>        Use of algorithms to correct for        multipath propagation effects.    </li>    <li>        Hybrid positioning systems combining        LoRaWAN®-TDOA with Bluetooth® , UWB, or Wi-Fi to        improve positioning accuracy.    </li></ul><h4>Tracking via the cellular network (“Cell Locate”)</h4><p>    Positioning via the cellular network is based on    a device’s communication with surrounding cellular cells.</p><p>    Location determination is not performed by the device’s GNSS,    but rather by analyzing various network parameters</p>  
+ <div class="table-wrap">    <table>        <thead>            <tr>                <th>Method</th>                <th>Typical Accuracy</th>                <th>Note</th>            </tr>        </thead>        <tbody>            <tr>                <td>Cell ID</td>                <td>100 m to several km</td>                <td>                    Very inaccurate; depends on cell size                    (urban vs. rural areas).                </td>            </tr>            <tr>                <td>Enhanced Cell-ID </td>                <td>50 to 500 m</td>                <td>                    Improved accuracy through additional                    time information, but highly                    network-dependent.                </td>            </tr>            <tr>                <td>TDOA (Time Difference of Arrival)</td>                <td>50 to 150 m</td>                <td>                    Requires multiple synchronized                    base stations or gateways.                </td>            </tr>            <tr>                <td>AOA (Angle of Arrival)</td>                <td>100 to 200 m</td>                <td>                    Less common; special antennas                    required.                </td>            </tr>        </tbody>    </table></div>                                                                                      <p>    The accuracy of cellular positioning depends heavily on    the positioning method used, network coverage, and    the respective environmental conditions. Energy consumption is    generally very low    compared to other positioning technologies.
+</p>
+
+<h4>
+eDRX: On the Way to a Query-Enabled Tracker
+</h4>
+
+<p>
+    <strong>eDRX (Extended Discontinuous Reception)</strong> is a
+    feature available exclusively on mobile devices.
+</p>
+
+<p>
+    eDRX enables the creation of a tracker that is constantly reachable and
+    at the same time energy-efficient, which can be
+    queried remotely as needed.
+</p>
+
+<p>
+    
+<strong>How eDRX Works</strong>
+</p>
+
+<ul>
+    <li>
+        <strong>Sleep Mode:</strong>
+        After a transmission, the device interrupts its regular
+        network queries and switches to a power-saving mode.
+    </li>
+
+    <li>
+        <strong>Extended reception intervals:</strong>
+        Instead of continuously monitoring the network, the
+        device only listens for incoming
+        messages at set intervals, for example, once per minute or just once
+        per hour.
+    
+</li>
+
+    <li>
+        <strong>Wake-up cycle:</strong>
+        At each defined eDRX time, the device
+        briefly activates its receiver, processes any commands or
+        requests, and then returns to sleep mode
+        again.
+    </li>
+</ul>
+
+<div class="note-strip note-strip--green">
+    <strong>Advantages</strong>
+
+    <ul>
+        <li>Significantly lower energy consumption during idle phases.</li>
+        <li>The device remains registered on the cellular network.</li>
+        
+<li>Location and status queries can be performed on demand.</li>
+    </ul>
+</div>
+
+<p>
+    <strong>Planning and Design Considerations</strong>
+</p>
+
+<ul>
+    
+<li>
+        <strong>Cycle length:</strong>
+        Possible eDRX intervals range from a few seconds to
+        several hours, depending on the cellular network and its
+        configuration.
+    </li>
+
+    <li>
+        <strong>Consideration:</strong>
+        Shorter wake-up intervals increase the device’s
+        
+device but result in higher energy consumption.
+    </li>
+    
+<li>
+        <strong>Optimization:</strong>
+        The selected polling interval should always be determined
+        with consideration of the desired battery life and the
+        availability requirements.
+    </li>
+</ul>
+                                                                               <h3>
+8. General Handling Instructions
+</h3>
+
+<ul>
+    <li>
+        <strong>Transport and Storage</strong>
+        
+<ul>
+            <li>
+                Transport and store the sensor in
+                its original packaging whenever possible to prevent mechanical damage
+                and electrostatic discharge.
+            </li>
+
+            <li>
+                Store the device exclusively within the
+                environmental conditions specified in the technical data sheet.
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        <strong>Installation</strong>
+        <ul>
+            <li>
+                Use only the designated
+                mounting points on the housing.
+            </li>
+            
+<li>
+                Ensure a stable and, as far as possible, vibration-free
+                installation to guarantee optimal measurement accuracy
+                .
+            </li>
+        </ul>
+    
+</li>
+
+    <li>
+        <strong>Commissioning</strong>
+        <ul>
+            <li>
+                Insert the battery correctly and check
+                that it is sufficiently charged.
+            </li>
+            
+<li>
+                Activate the sensor using the built-in
+                magnetic switch or the smartphone app
+                (depending on the model).
+            </li>
+            
+<li>
+                For initial setup, use the software or app provided by Sentinum
+                .
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        <strong>Operation</strong>
+        <ul>
+            <li>
+                
+Operate the device exclusively within the
+                specified environmental conditions regarding
+                temperature, humidity, and protection class.
+            </li>
+
+            <li>
+                Avoid strong magnetic fields and metallic
+                shielding, as these can interfere with the wireless connection and
+                sensor functions.
+            
+</li>
+        </ul>
+    </li>
+
+    <li>
+        <strong>Cleaning</strong>
+        <ul>
+            <li>
+                Clean the housing as needed with a slightly
+                damp, lint-free cloth.
+            </li>
+
+            <li>
+                
+Do not use harsh cleaning agents,
+                solvents, or abrasive cleaners.
+            </li>
+
+            <li>
+                Tracker variants without a TH module and without an opening in the housing
+                have an IP69K protection rating and are suitable for
+                corresponding cleaning procedures.
+            </li>
+        </ul>
+    </li>
+    
+<li>
+        <strong>Maintenance</strong>
+        <ul>
+            <li>
+                Juno sensors are largely maintenance-free. Depending on the usage profile,
+                a battery replacement may be necessary after
+                several years.
+            </li>
+
+            <li>
+                
+Regularly check the device’s functionality as well as
+                the connection to the backend system.
+            </li>
+        </ul>
+    </li>
+    
+<li>
+        <strong>Disposal</strong>
+        <ul>
+            <li>
+                Dispose of the device at the end of its service life
+                in accordance with applicable regulations for waste electrical and
+                electronic equipment and batteries.
+            </li>
+        
+</ul>
+    </li>
+</ul>
+                                                            <h4>
+8.1 Special Handling Instructions for TH Versions
+</h4>
+
+<p>
+    The Juno <strong>TH</strong> versions feature a
+    sensitive membrane that enables air exchange for precise
+    temperature and humidity measurement.
+</p>
+
+<p>
+    Follow the instructions below to ensure the long-term functionality and
+    accuracy of the sensor system.
+</p>
+
+<div class="note-strip note-strip--blue">
+    <strong>Diaphragm Maintenance</strong>
+
+    <ul>
+        <li>
+            
+The diaphragm is sensitive to mechanical
+            stress. Never insert pointed or sharp
+            objects into the opening.
+        </li>
+
+        <li>
+            Avoid contamination from dust, metal shavings, or
+            other particles. Blockages can
+            
+compromise measurement accuracy.
+        </li>
+
+        <li>
+            Never clean or replace the membrane
+            yourself. Contact only
+            the manufacturer or authorized technicians for this purpose.
+        </li>
+
+        <li>
+            Keep cleaning agents away from the membrane.
+            Harsh chemicals can permanently
+            
+or alter its permeability.
+        </li>
+    </ul>
+</div>
+
+<h4>
+Installation Instructions
+</h4>
+
+<ul>
+    
+<li>
+        Despite the IP67 protection rating, you should prevent
+        standing moisture from collecting at the membrane opening, as this
+        can distort the measured values.
+    </li>
+
+    <li>
+        For outdoor use, installation at an angle of at least
+        45° is recommended so that the membrane faces downward.
+    </li>
+
+    <li>
+        
+Do not install the sensor near the ground or in
+        areas with heavy splashing water to prevent the ingress of
+        dirt, mud, or water.
+    </li>
+</ul>
+
+<div class="note-strip note-strip--red">
+    <strong>
+        
+Improper handling can lead to measurement errors or
+        malfunctions.
+    </strong>
+</div>
+
+<h4>
+Additional Notes
+</h4>
+
+<ul>
+    
+<li>
+        <strong>Ensure adequate air circulation:</strong>
+        Avoid completely enclosed housings or heavy
+        shielding. Unobstructed airflow is required for precise
+        measurements.
+    </li>
+
+    <li>
+        <strong>Avoid UV radiation:</strong>
+        Prolonged direct sunlight can damage the housing and
+        diaphragm. Installation in partial shade or
+        under a small protective cover is recommended.
+    </li>
+
+    <li>
+        <strong>Avoid condensation:</strong>
+        Significant temperature fluctuations can lead to the formation of
+        moisture at the diaphragm opening. Therefore, 
+        the opening to face downward.
+    </li>
+
+    <li>
+        <strong>Do not paint or coat:</strong>
+        Even thin coatings can seal the diaphragm
+        
+and cause significant measurement errors.
+    </li>
+
+    <li>
+        <strong>Avoid aggressive atmospheres:</strong>
+        High concentrations of solvent vapors,
+        sulfur compounds, or similar substances can
+        
+damage the membrane and electronics. Use the
+        device only in approved environments.
+    </li>
+</ul>
+<h3>
+9. Assembly and Installation
+</h3>
+
+<p>
+    
+<strong>Warning and Safety Instructions for Installation</strong>
+</p>
+
+<p>
+    If the sensor remains easily
+    accessible after installation, mount the sensor first and then
+    activate it.
+</p>
+
+<p>
+    If the sensor is no longer accessible after installation,
+    activate the sensor first and mount it only
+    afterward.
+</p>
+
+<p>
+    Before mounting, ensure that the intended
+    mounting surface is level. Uneven surfaces can cause
+    damage to the housing.
+</p>
+
+<p>
+    <strong>Please note:</strong>
+</p>
+
+<ul>
+    
+<li>
+        Do not insert any objects or body parts into the openings of the
+        sensor.
+    </li>
+
+    <li>
+        Do not mount the sensor on ceilings or directly on the floor.
+    </li>
+
+    <li>
+        Do not install the sensor at heights exceeding two meters.
+    </li>
+
+    <li>
+        Install the sensor exclusively indoors on a wall
+        
+in a standard room.
+        The recommended mounting height is 1.50 m to 1.80 m.
+    </li>
+</ul>
+
+<div class="note-strip note-strip--red">
+    <strong>Safety Instructions for Permanent Magnets</strong>
+
+    <ul>
+        <li>
+            
+Protect your hands and fingers. Strong magnets can
+            suddenly attract each other and cause injuries.
+            Keep a safe distance and wear
+            protective gloves if necessary.
+        </li>
+
+        <li>
+            Keep electronic devices away. Magnetic fields can
+            interfere with smartphones, credit cards, pacemakers, and other
+            electronic devices.
+        </li>
+
+        <li>
+            Be aware of the risk of breakage. Many magnets are brittle and
+            can shatter if struck.
+        </li>
+        
+<li>
+            People with implanted medical devices should
+            avoid strong magnets or seek medical advice
+            in advance.
+        </li>
+
+        <li>
+            Store magnets separately from other magnets and metal parts
+            to prevent uncontrolled attraction.
+        </li>
+
+        <li>
+            Keep small magnets out of the reach of children
+            to avoid the risk of swallowing.
+        </li>
+
+        <li>
+            Do not heat magnets beyond their permissible operating temperature
+            (typically 80 °C to 200 °C,
+            depending on the magnet type).
+        </li>
+    </ul>
+</div>
+
+<h4>
+Recommended Mounting Methods
+</h4>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Mounting Type</th>
+                <th>Description</th>
+                <th>Recommended Accessories</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Screw connection</td>
+                <td>Mounting with 2 × M4 or M5 screws</td>
+                <td>
+                    2 × suitable countersunk screws
+                    
+(wood screws with a diameter of 4–5 mm, if necessary)
+                </td>
+            </tr>
+
+            <tr>
+                <td>Magnetic mounting</td>
+                
+<td>
+                    Installation with 2 × neodymium pot magnets
+                    with M4 internal thread
+                </td>
+                <td>
+                    2 × neodymium magnets for indoor use,
+                    total load capacity 16–32 kg
+                </td>
+            </tr>
+
+            <tr>
+                <td>Adhesive mounting</td>
+                
+<td>
+                    Mounting using double-sided adhesive tape
+                    or mounting adhesive
+                </td>
+                <td>
+                    High-strength double-sided adhesive tape or
+                    approved mounting adhesive
+                </td>
+            </tr>
+        
+</tbody>
+    </table>
+</div>
+                <h3>
+10. General Installation Instructions
+</h3>
+
+<h4>
+Installation of Juno Tracker Versions (without housing opening)
+</h4>
+
+<ul>
+    <li>
+        
+Select an installation location within the permissible
+        environmental conditions and temperature ranges as specified
+        
+the technical specifications.
+    </li>
+
+    <li>
+        The housing must not be covered. Wireless communication
+        (e.g., LoRaWAN® or Bluetooth® Low Energy) must not
+        be impaired by metal housings, metallic objects, or other
+        shielding materials.
+    </li>
+
+    <li>
+        For optimal wireless connectivity, the device should have as
+        unobstructed a view of the sky as possible.
+</li>
+    
+<li>
+        Securely mount the sensor, preferably using the
+        provided mounting holes, on a low-vibration or
+        stable surface.
+    </li>
+
+    <li>
+        The standard version requires no special orientation
+        and can be mounted horizontally, vertically, or flat,
+        depending on the application.
+    </li>
+    
+<li>
+        Do not install the sensor in the immediate vicinity
+        of strong sources of electromagnetic interference.
+    </li>
+</ul>
+
+<h4>
+1️0.1 Installation Instructions for Juno TH Versions
+</h4>
+
+<ul>
+    <li>
+        The sensor must be mounted at an angle of at least 45°
+        so so that the diaphragm faces downward.
+        This prevents water or dirt from entering the
+        opening.
+    
+</li>
+
+    <li>
+        Avoid mounting the sensor near the ground or in areas
+        prone to splashing water. Install the sensor at a higher elevation and
+        protected from contamination.
+    </li>
+
+    <li>
+        Ensure adequate air circulation and
+        do not use enclosed housings without ventilation.
+    </li >
+
+    <li>
+        Direct sunlight should be avoided to
+        prevent overheating and measurement errors. A
+        partially shaded installation or a small weather shield is
+        recommended.
+    </li>
+
+    <li>
+        Avoid dusty or chip-laden environments,
+        such as workshops or grinding areas.
+    
+</li>
+
+    <li>
+        The diaphragm opening must never be glued, sealed, or
+        painted over.
+    </li>
+
+    <li>
+        
+Cleaning or replacement of the diaphragm may only be performed
+        by authorized technicians in consultation with the
+        manufacturer.
+    </li>
+</ul>
+
+<h4>
+10.2 Installation Instructions for Tracker Versions
+</h4>
+
+<ul>
+    <li>
+        The GNSS sensor should be mounted outside of metal enclosures
+        to ensure optimal satellite reception
+        .
+    </li>
+
+    <li>
+        Avoid mounting the sensor in the immediate vicinity of large
+        metal surfaces or metal structures.
+    </li>
+
+    <li>
+        Ensure the clearest possible view of the sky to
+        maximize GNSS performance.
+    
+</li>
+
+    <li>
+        Maintain a distance of
+        at least 30 cm from metallic materials in front of and to the sides of the sensor.
+    </li>
+
+    <li>
+        Do not install the sensor near
+        high-voltage power lines or strong electromagnetic
+        fields.
+    
+</li>
+
+    <li>
+        Avoid enclosed spaces or covers that
+        may block GNSS signals.
+    
+</li>
+
+    <li>
+        For mobile use, ensure that the sensor
+        is mounted securely and vibration-proof
+        during operation.
+    </li>
+</ul>
+                    <h4>
+10.3 Important Note for Devices with an External Antenna
+</h4>
+
+<p>
+    If you have ordered a device with an external antenna,
+    identifiable by the gold-colored RP-SMA connector, first install
+    the supplied antenna.
+</p>
+
+<ul>
+    <li>
+        <strong>External antenna:</strong>
+        The antenna should always be mounted vertically
+        and, if the application allows it , with the tip pointing
+        upward. Maintain a minimum distance of 2 cm from
+        metal surfaces and avoid shielding caused by
+        surrounding metal parts.
+    </li>
+
+    <li>
+        <strong>Internal Antenna:</strong>
+        
+Devices with an internal antenna (without a visible external antenna)
+        should be mounted vertically with the long side of the housing
+        to achieve maximum radio performance. The
+        antenna is located in the upper part of the housing on
+        the side with the logo and should also be at least 2 cm away
+        from metal surfaces. If possible, avoid
+        shielding caused by metal parts.
+    </li>
+
+    <li>
+        <strong>Please note:</strong>
+        Devices with an external antenna must never be
+        operated without
+        the antenna connected. This can cause
+        irreparable damage to the sensor.
+    </li>
+ 
+</ul>
+
+<div class="note-strip note-strip--red">
+    <strong>Warning</strong>
+
+    <p style="margin-bottom:0;">
+        Never operate devices with an RP-SMA connector without
+        a connected antenna. Operating the device without an antenna can
+        permanently damage the radio module.
+    
+</p>
+</div>
+                    <h3>
+11. Wall Mounting with Screws
+</h3>
+
+<p>
+    The Juno Sensor can be permanently and securely mounted on a wall or
+    another solid surface. Mounting
+    is performed using the mounting holes provided in the housing.
+</p>
+
+<p>
+    <strong>Preparing for Installation</strong>
+</p>
+
+<ul>
+    <li>
+        
+<strong>Determine the installation location:</strong>
+        Select a vibration-free and dry
+        installation location that meets the requirements of the respective
+        sensor variant. For TH versions,
+        for example, ensure sufficient air circulation
+        
+.
+    </li>
+
+    <li>
+        <strong>Check the mounting surface:</strong>
+        Suitable substrates include concrete, masonry, wood, or
+        engineering plastic panels. For porous or soft
+        materials, appropriate anchors should be used.
+    </li>
+
+    <li>
+        <strong>Prepare tools and fasteners:</strong>
+
+        <ul>
+            <li>
+                Cordless screwdriver or screwdriver with
+                torque limiter
+            </li>
+
+            <li>
+                Drill bits suitable for the respective wall material
+            </li>
+
+            <li>
+                Suitable anchors (if necessary)
+            
+</li>
+
+            <li>
+                Appropriate screws according to the installation instructions (see below)
+            </li>
+        
+</ul>
+    </li>
+</ul>
+      
+                                                                                
+  <figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-20-2025-11-28-45-0042-AM.png?width=521& height=390&amp;name=image-png-Jun-20-2025-11-28-45-0042-AM.png"
+        alt="Recommended installation of the Juno sensor"
+        loading="lazy">
+
+    <figcaption>Figure 6. Sketch of the Juno showing screw installation</figcaption></figure>
+    
+    <h4>
+       Screw Selection
+</h4>
+
+<ul>
+    <li>
+        The mounting holes in the sensor housing are designed for
+        M4 screws.
+    </li>
+
+    <li>
+        Depending on the mounting surface, the following
+        
+fasteners are recommended:
+
+        <ul>
+            <li>
+                M4 cylindrical screws
+                (e.g., DIN 912, stainless steel) for
+                plastic housings or metal frames.
+            </li>
+            
+<li>
+                Spax screws 4 × 30 mm with suitable anchors
+                for concrete, brick
+ or wooden walls.
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        The screws must be able to pass freely through the housing
+        without deforming or
+        damaging it.
+    </li>
+</ul>
+
+<h4>
+Installation Instructions
+</h4>
+
+<ul>
+    <li>
+        Maximum tightening torque: 3 Nm.
+        Higher torques can lead to housing deformation or
+        damage.
+    </li>
+
+    <li>
+        
+Tighten the screws evenly and without applying excessive tension.
+    </li>
+
+    <li>
+        Ensure that the housing rests flat and that no
+        mechanical stresses are created.
+    </li>
+
+    <li>
+        Do not drill any additional holes or make any
+        modifications to the housing.
+    </li>
+
+    <li>
+        
+Do not install with the opening facing upward if
+        condensation or dirt can enter.
+    </li>
+</ul>
+
+<div class="note-strip note-strip--red" >
+    <strong>Safety Instructions</strong>
+
+    <ul>
+        <li>
+            Wear appropriate
+            protective equipment during installation, such as safety glasses
+            when drilling.
+        </li>
+        
+<li>
+            After installation, check by gently
+            pulling and pushing to ensure the housing is securely fastened
+            .
+        </li>
+
+        <li>
+            Ensure that no cables or
+            electrical wires are located behind the mounting surface
+            and could be damaged.
+        
+</li>
+
+        <li>
+            For TH versions, observe the recommended
+            angle of inclination of at least 45° and ensure that
+            the diaphragm opening faces downward.
+        </li>
+    </ul>
+</div>
+                                                                                
+                                                                                
+       <figure class="figure">
+    <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-20-2025-11-34-06-3246-AM.png?width=564&height=486&amp;name=image-png-Jun -20-2025-11-34-06-3246-AM.png"
+        alt="Recommended Installation of the Juno Sensor"
+        
+loading=“lazy”>
+
+    <figcaption>Figure 7. Sketch of the Juno Requirements and Preparation</figcaption></figure>
+                                                                              
+    <h4>
+Requirements and Preparation
+</h4>
+
+<ul>
+    <li>
+        The mounting surface must be level, stable, clean, dry, and
+        free of grease.
+    
+</li>
+
+    <li>
+        Clean the surface before installation with
+        isopropyl alcohol or a suitable plastic cleaner.
+    
+</li>
+
+    <li>
+        The adhesive tape should not be used on porous, textured
+        or highly uneven surfaces, as this
+        may impair adhesion.
+    </li>
+</ul>
+
+<h4>
+Installation Instructions
+</h4>
+
+<ul>
+    <li>
+        Remove the protective film from one side of the
+        adhesive strip and apply the strip flat to the
+        back of the sensor. Use the provided
+        
+markings provided for alignment. Avoid
+        air bubbles and ensure precise
+        positioning.
+    </li>
+
+    <li>
+        Then remove the second protective film and
+        press the sensor evenly onto the prepared mounting surface for about 10 to
+        15 seconds.
+    
+</li>
+
+    <li>
+        Then allow the sensor to adhere undisturbed for at least
+        24 hours so that full adhesive strength
+        can be achieved.
+    </li>
+</ul>
+
+<h4>
+Important Notes
+</h4>
+
+<ul>
+    
+<li>
+        The adhesive bond is intended for permanent use in
+        indoor areas as well as in protected outdoor areas
+        .
+    </li>
+
+    <li>
+        High UV exposure, moisture, temperatures above
+        80 °C, or constant vibrations can impair the adhesive strength
+        .
+    </li>
+    
+<li>
+        Position adjustments after
+        bonding are only possible to a limited extent.
+    </li>
+
+    <li>
+        For TH versions, even with adhesive mounting, the
+        recommended installation orientation—with a minimum angle of 45° and the
+        diaphragm opening facing downward.
+    </li>
+
+    <li>
+        The adhesive strips are not reusable. When
+        relocating the sensor, a new adhesive strip
+        must be used.
+    </li>
+</ul>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+    
+<p style="margin-bottom:0;">
+        Maximum adhesive strength is only achieved after a sufficient
+        curing time. Avoid subjecting the sensor to mechanical stress during the first
+        24 hours.
+    </p>
+</div>
+           
+                                                                                
+    <h4>
+Commissioning and Use
+</h4>
+
+<div class=" note-strip note-strip--yellow">
+    <strong>Caution</strong>
+
+    <p style="margin-bottom:0;">
+        The housing and electronics may be damaged if
+        knives or other
+        sharp objects are used during installation or activation.
+    </p>
+</div>
+
+<h4>
+Commissioning the Sensor with a Magnet
+</h4>
+
+<p>
+    The sensor features a built-in magnetic field switch
+    for easy activation of the device.
+</p>
+
+<p>
+    The following figure shows the location of the
+    magnetic field switch.
+</p>
+
+<!-- Insert figure of magnetic field switch here -->
+
+<div class="table-wrap">
+    
+<table>
+        <thead>
+            <tr>
+                <th>Part Number</th>
+                
+<th>Approved Batteries</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>
+                    <ul>
+                        <li>S-JUNO(-iX)-LOEU/MIOTY</li>
+                        <li>S-JUNO(-iX)-LOEU/MIOTY-TH</li>
+                        <li>S -JUNO(-iX)-LOEU/MIOTY-TRACK</li>
+                        <li>S-JUNO(-iX)-LOEU/MIOTY-TH-TRACK</li>
+                        <li>S-JUNO(-iX)-NBM1-TRACK-2</li>
+                        <li>S-JUNO(-iX)-NBM1-TRACK-3</li>
+                        
+<li>S-JUNO(-iX)-NBM1-TH-TRACK-2</li>
+                        <li>S-JUNO(-iX)-NBM1-TH-TRACK-3</li>
+                        <li>S-JUNO-NB-TH</li>
+                    </ul>
+                </td>
+
+                <td>
+                    <figure class="figure">
+                        
+<img
+                            src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-20-2025-11-39-27 -8462-AM.png?width=404&height=269&amp;name=image-png-Jun-20-2025-11-39-27-8462-AM.png"
+                            alt="Approved Batteries for Juno Sensors"
+                            loading="lazy"
+                            style="max-width:100%; height:auto;"
+                        >
+                        <figcaption>
+                           Figure 7. Overview of Approved Battery Types
+                        </figcaption>
+                    </figure>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+                                                                                
+
+                                                                                        
+ <p>
+    To activate the sensor, hold a standard
+    magnet against the spot marked with <strong>“X”</strong>.
+    We recommend using a neodymium magnet with a
+    minimum surface area of 1 cm².
+</p>
+
+<p>
+    
+The magnet must be held in this position
+    for at least 2 seconds to trigger activation.
+</p>
+
+<p>
+    Successful activation is confirmed by an audible tone.
+</p>
+
+<figure class="figure">
+      <img
+        src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-20-2025-11-40-20-0232-AM.png?width=435&amp;height=332&amp;name=image-png-Jun-20-2025-11-40-20-0232-AM.png"
+        alt="Position des Magneten zur Aktivierung des Sensors"
+        loading="lazy"
+        style="max-width:435px; height:auto;"
+    >
+    <figcaption>
+     Figure 8. Position of the magnet for activating the sensor
+    </figcaption>
+</figure>
+
+<div class="note-strip note-strip--blue">
+<strong>Note</strong>
+<p> During operation, please note that Hall switch 1 can be used at any time to detect a flap opening, and magnetic switch 2 is always triggered to activate or reset BLE.</p>
+</div>
+
+<h4>
+12. Commissioning the Sensor via BLE (Quick Start Guide)
+</h4>
+
+<p>
+    <strong>This BLE activation applies exclusively to the
+    following part numbers:</strong>
+</p>
+                                                                                        
+                                                                                        
+ <ul>
+    <li>S-JUNO(-iX)-LOEU/MIOTY-TRACK</li>
+    <li>S-JUNO(-iX)-LOEU/MIOTY-TH-TRACK</li>
+    
+<li>S-JUNO(-iX)-NBM1-TRACK-2</li>
+    <li>S-JUNO(-iX)-NBM1-TRACK-3</li>
+    <li>S-JUNO(-iX)-NBM1-TH-TRACK-2</li>
+    <li>S-JUNO(-iX)-NBM1-TH-TRACK-3</li>
+</ul>
+
+<ol>
+    <li>
+        Set the sensor to BLE advertising mode
+        so that the Juno can be detected and
+        found by BLE-enabled devices.
+    </li>
+</ol>
+
+<h4>
+To activate advertising mode
+</h4>
+
+<p>
+    To activate advertising mode, hold a
+    
+standard magnet to the position marked in the image on the
+    housing.
+</p>
+
+<ul>
+    <li>
+        Hold the magnet near
+        the housing for at least 2 seconds,
+    </li>
+
+    <li>
+        or place it directly on the marked
+        spot for a moment.
+    </li>
+</ul>
+
+<p>
+    Advertising mode will then start automatically.
+</p>
+
+
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-20-2025-11-48-29-0722-AM.png?width=215&height=143&amp;name=image-png -Jun-20-2025-11-48-29-0722-AM.png" loading="lazy">
+    
+    <figcaption>
+      Figure 9. Position of the magnetic switch for activating the
+        BLE advertising mode
+    </figcaption>
+</figure>
+                
+            <h4>
+13. Sensor Setup via NFC
+</h4>
+
+<p>
+    This activation method applies exclusively to the following
+    part numbers:
+</p>
+
+<ul>
+    <li>S-JUNO(-iX)-LOEU/MIOTY</li>
+    <li>S-JUNO(-iX)-LOEU/ MIOTY-TH</li>
+    <li>S-JUNO-NB-TH</li>
+</ul>
+
+<p>
+    Activation is performed using an NFC-enabled smartphone app.
+    This requires a smartphone with NFC enabled.
+</p>
+
+<p>
+    The app can be downloaded from the respective app stores
+    
+. Search for <strong>“Sentinum LinQs”</strong> and
+    install the LinQs app on your smartphone.
+</p>
+
+                                                                       
+        <figure class="figure">
+      <img src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-20-2025-11-49-34-0282-AM.png?width=688&amp;height=331&amp;name=image-png-Jun-20-2025-11-49-34-0282-AM.png" loading="lazy">
+    
+    <figcaption>
+      Figure 10. Activation is performed via an NFC-enabled smartphone app
+    </figcaption>
+</figure>
+                                                                       
+    <p>First, locate the tag on the sensor, and then position the reader on your device. The NFC tag is located where the orange arrow points.</p>
+    
+     <figure class="figure">
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-20-2025-11-50-53-6057-AM.png?width=578&amp;height=301&amp;name=image-png-Jun-20-2025-11-50-53-6057-AM.png" loading="lazy">
+    
+    <figcaption>
+      Figure 11. Juno with front opening
+    
+</figcaption>
+</figure>
+                       
+   <p>
+    The position of the NFC tag is also marked on the top of the
+    device with the label <strong>“Tap here”</strong>
+    .
+</p>
+
+<p>
+    The exact position of the NFC tag can also be found in the
+    technical drawing of the device.
+</p>
+
+<p>
+    Open the app and activate the sensor.
+</p>
+
+<p>
+    
+To put the sensor into operation with the default settings
+    , select the function
+    <strong>“Activate Sensor”</strong> in the app’s start menu.
+</p>
+
+<p>
+    Then place your mobile device on the
+    sensor’s NFC tag.
+</p>
+
+<p>
+    Once activation is successful, the message
+    <strong>“Sensor updated!”</strong> appears.
+</p>
+
+<p>
+    You can then activate additional sensors in the same way
+    .
+</p>
+
+
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Description</th>
+</tr>
+</thead>
+        <tbody>
+            <tr>
+                <td>
+            
+                                                                                                
+    <figure class="figure">
+     <img src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-20-2025-11-51-44-2089-AM.png?width=208&amp;height=449&amp;name=image-png-Jun-20-2025-11-51-44-2089-AM.png" loading="lazy">  </figure>
+           </td>
+      
+     <td>
+<p>
+<strong>Activate Sensor:</strong><br>
+Use the
+<strong>“Activate Sensor”</strong> button
+to activate the sensor and start
+BLE advertising mode.
+</p>
+</td>
+</tr> <tr>
+<td>
+<figure class="figure">
+   <img src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-20-2025-11-51-51-8082-AM.png?width=208&amp;height=449&amp;name=image-png-Jun-20-2025-11-51-51-8082-AM.png" loading="lazy">  </figure> </td>
+       <td>
+      
+<p><strong>Read and set parameters via NFC:</strong><br>Use the <strong>“Read”</strong> button to read the parameters.</p>
+        </td>
+      </tr>
+        <tr>
+        <td>
+         <figure class="figure">
+          <img src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-20-2025-11-51-59-0466-AM.png?width=207&amp;height=449&amp;name=image-png-Jun-20-2025-11-51-59-0466-AM.png" loading="lazy">  </figure> </td>
+          <td>
+        <p><strong>Set values via NFC:</strong><br>Tap the desired table entry and change the values. Confirm using the button below “Update &amp; Restart” or “Update.”<br>“Update &amp; Restart” forces a restart in addition to applying the change;<br>“Update” is used for the next measurement or transmission.</p>
+         </td>
+            </tr>
+        </tbody>
+           
+</table>
+       <h4>
+Sensor Setup via BLE
+</h4>
+       </div>
+            <div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Cross-section</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        
+<tbody>
+            <tr>
+                
+<td>
+                     <figure class="figure">
+                 <img src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-20-2025-11-57-24-8265-AM.png?width=208&height=449&amp;name=image -png-Jun-20-2025-11-57-24-8265-AM.png" loading="lazy"> </figure>
+                </td>
+
+                <td>
+                  <p> <strong>Enable BLE advertising mode:</strong><br>BLE advertising mode can be activated either with the magnet or after activating the sensor.</p>
+                </td></tr>
+                
+                <tr>
+                <td>
+                     <figure class="figure">
+                <img src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-20-2025-11-57-32-2514-AM.png?width=208&height=449&amp; name=image-png-Jun-20-2025-11-57-32-2514-AM.png" loading="lazy"> </figure>
+                </td>
+
+                <td>
+                  <p> <strong>Search for a BLE device:</strong><br>Use the "Search" button " button to find the sensor via BLE.</p>
+                </td></tr>
+                 
+                <tr>
+                <td>
+                     <figure class="figure">
+                <img src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-20-2025-11-57-38-6991-AM.png? width=208&amp;height=449&amp;name=image-png-Jun-20-2025-11 -57-38-6991-AM.png" loading="lazy"> </figure>
+                </td>
+
+                <td>
+                  <p><strong>Connect to the sensor via BLE:</strong><br>Select the correct sensor and confirm by clicking “juno.”</p>
+                </td></tr>
+                 <tr>
+                <td>
+                     <figure class="figure">
+                <img src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-20-2025-11-57-56-2740-AM.png?width=207&amp;height=449&amp;name=image-png-Jun-20-2025-11-57-56-2740-AM.png" loading="lazy">   </figure>
+                </td>
+
+                <td>
+                  <p><strong>Connect to the sensor via BLE:</strong><br>Click the “Connect” button.</p>
+                </td></tr>
+                      <tr>
+                
+<td>
+                     <figure class="figure">
+                <img src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-20-2025-11-58-03-2352-AM.png?width=207&height=449& amp;name=image-png-Jun-20-2025-11-58-03-2352-AM.png" loading="lazy"> </figure>
+                </td>
+
+                <td>
+                  <p><strong>Configure via BLE with the sensor:</strong><br>Now use the “Configure” button to set parameters.</p>
+                </td></tr>
+                       <tr>
+                <td>
+                     <figure class="figure">
+              <img src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-20-2025-11-58-10-2211-AM.png?width=207&amp;height=449&amp;name=image-png-Jun-20-2025-11-58-10-2211-AM.png" loading="lazy">   </figure>
+                </td>
+
+                <td>
+                  <p><strong>Configure via BLE with the sensor:</strong><br>A transfer can be initiated using the “Trigger Send” button. Tap the desired table entry and change the values. Confirm by tapping the “Update &amp; Restart” or “Update” button below. <br>“Update &amp; Restart” forces a restart in addition to applying the changes;<br>“Update” is used for the next measurement or transmission.</p>
+                </td></tr>
+
+        </tbody>
+    </table>
+</div>
+   <h4>
+Audible Signal and Feedback
+</h4>
+
+<ul>
+    
+<li>
+        When the device is turned on, an audible signal sounds
+        consisting of several ascending tones. This tone sequence confirms
+        that the sensor has been successfully activated.
+    </li>
+
+    <li>
+        When the device is turned off, several descending
+        tones are played. This provides an audible indication
+        
+acoustically signals the successful shutdown of the device.
+    </li>
+
+    <li>
+        When establishing or disconnecting a
+        Bluetooth® connection (BLE), the sensor also
+        emits an audible signal to confirm the respective
+        connection status.
+    
+</li>
+</ul>
+        <h3>
+14. Sensor Functions
+</h3>
+
+<p>
+    The following section explains specific functions and settings of the
+    Juno sensor.
+</p>
+
+<h4>
+Hysteresis
+</h4>
+
+<p>
+    Hysteresis describes a behavior in which a system’s response
+    does not depend solely on the current measured value,
+    but is also influenced by the previous history.
+</p>
+
+<p>
+    The system thus “remembers” its previous state and can
+    react differently to the same measured value, depending on
+    
+whether the value is currently increasing or decreasing.
+</p>
+
+<p>
+    Put simply, hysteresis refers to a defined
+    delay or difference in switching behavior
+    
+between rising and falling measured values.
+</p>
+
+<p>
+    Two hysteresis thresholds are defined for the Juno sensor:
+</p>
+
+<ul>
+    <li>Hysteresis for temperature</li>
+    <li>Hysteresis for relative humidity</li>
+</ul>
+
+<p>
+    These hysteresis values apply to both delta thresholds and
+    absolute thresholds.
+</p>
+
+    <figure class="figure">
+                <img src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-20-2025-12-06-10-6279-PM.png? width=688&amp;height=409&amp;name=image-png-Jun-20-2025-12-06-10-6279-PM.png" loading="lazy">
+                
+<figcaption>
+                    Figure 12. Hysteresis values of an IoT sensor
+                </figcaption></figure>
+                
+   
+           <p>
+    <strong>Description:</strong>
+</p>
+
+<ul>
+    
+<li>
+        <strong>Orange line:</strong>
+        Sensor values over time.
+    </li>
+
+    <li>
+        <strong>Red lines:</strong>
+        <ul>
+            <li>
+                Dotted ( --):
+                Maximum alarm threshold
+                (e.g., 30 °C).
+            </li>
+
+            <li>
+                Dotted (---):
+                Reset point when temperature drops
+                
+(e.g., 28 °C).
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        <strong>Blue lines:</strong>
+        <ul>
+            <li>
+                Dashed (--):
+                Minimum alarm threshold
+                (e.g., 10 °C).
+            
+</li>
+
+            <li>
+                Dotted (---):
+                Reset point when the temperature rises
+                (e.g., 12 °C).
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<p>
+    <strong>Example sequence:</strong>
+</p>
+
+<ul>
+    <li>
+        The sensor triggers a <strong>MAX alarm</strong>,
+        as soon as the measured value is ≥ 30 °C.
+    </li>
+    
+<li>
+        The alarm remains active until the measured value drops below 28 °C
+        . Only then is the alarm reset.
+    </li>
+
+    <li>
+        Similarly, a <strong>MIN alarm</strong>
+        is triggered as soon as the measured value is ≤ 10 °C.
+    </li>
+</ul>
+
+<p>
+    This behavior prevents even small
+    fluctuations in the measured value from causing constant triggering and
+    resetting of alarms. This method is referred to as
+    <strong>hysteresis</strong>.
+</p>
+
+<h4>
+Tracking and Motion Detection
+</h4>
+
+<p>
+    The device is located independently of the
+    transmission of sensor data such as temperature,
+    tilt angle, or humidity.
+</p>
+       <p>
+    This means:
+</p>
+
+<ul>
+    <li>
+        The interval for position determination can be configured independently
+        of the transmission intervals for the sensor data
+        .
+    
+</li>
+
+    <li>
+        The sensor readings are recorded and transmitted independently of
+        the tracker’s motion status,
+        regardless of whether the device is moving or at rest.
+    </li>
+
+    <li>
+        Position determination can be performed either on a time-based schedule at
+        fixed intervals or on an event-based schedule, for example,
+        
+when motion is detected or other activity events occur,
+        .
+    </li>
+</ul>
+
+<h4>
+Tilt and Tilt Detection
+</h4>
+
+<p>
+    For Juno sensors with integrated tilt detection,
+    
+two different operating modes:
+</p>
+
+<ul>
+    <li>
+        <strong>Ultra-Low-Power Tilt Detection</strong><br>
+        This operating mode is characterized by particularly
+        low power consumption of just 1 µA.
+        Tilting or the opening of a flap is reliably
+        detected starting at approximately 50°. The mode is particularly suitable for
+        applications where coarse tilt detection
+        is sufficient and maximum battery life is a
+        priority.
+    </li>
+
+    <li>
+        <strong>Advanced Tilt Detection</strong><br>
+        This mode enables significantly more precise detection
+        of tilts and flap openings. Power consumption
+        depends on the selected sampling rate and is higher
+        than that of the ultra-low-power variant. It is suitable for
+        applications with higher accuracy requirements.
+    </li>
+</ul>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+
+    <p style="margin-bottom:0;">
+        The functions <strong>tilt or flap detection</strong>
+        and <strong>motion tracking</strong> are
+        mutually exclusive.
+    </p>
+</div>
+
+<p>
+    This means that a sensor with
+    <strong>motion tracking</strong> enabled cannot perform real-time
+    tilt or flap detection.
+</p>
+
+<p>
+    However, the current tilt angle continues to be transmitted regularly
+    and can be evaluated later.
+</p>
+        <p>
+    <strong>Communication with the Interface</strong>
+</p>
+
+<p>
+    The configuration of sensor communication and
+    join behavior depends on the respective
+    product variant and is described in the corresponding generic
+    documentation for LoRaWAN®, mioty®, or Cellular
+    
+(NB-IoT and LTE-M).
+</p>
+
+<p>
+    The complete cross-product documentation can be found at:
+    <a href="https://docs.sentinum. de/important-cross-product-documentation-for-sensors"
+       target="_blank"
+       rel="noopener noreferrer">
+        https://docs.sentinum.de/wichtig-produktübergreifende-dokumentation-für-sensoren
+    </a>
+</p>
+
+<h4>
+Maintenance and Cleaning
+</h4>
+
+<p>
+    
+To ensure reliable operation and a long service life of the
+    sensor, we recommend regular cleaning and visual inspection.
+</p>
+
+<ul>
+    <li>
+        
+Clean the housing and any
+        ventilation openings with a dry or slightly
+        damp microfiber cloth.
+        Make sure that no moisture enters the device
+        .
+    </li>
+
+    <li>
+        Perform cleaning regularly, especially in dusty,
+        
+pollen-rich, or industrial environments
+        to ensure the sensor’s long-term functionality
+        .
+    </li>
+
+    <li>
+        Do not use alcohol-based cleaning agents,
+        solvents, or other harsh chemicals, as these
+        can damage the surfaces.
+    </li>
+
+    <li>
+        
+Do not use compressed air or other aggressive
+        cleaning methods, as sensitive sensor components
+        could be damaged.
+    </li>
+
+    <li>
+        
+Hard deposits such as lime, oil, or grease residues can
+        compromise measurement accuracy. Remove such
+        contaminants promptly using a soft cloth and a
+        mild cleaning agent.
+    </li>
+
+    <li>
+        
+Make sure there are no leaves, water,
+        ice, or snow on the sensor, as this can
+        affect sensor performance.
+    
+</li>
+</ul>
+      
+    <h4>
+15. Battery Replacement
+</h4>
+
+<ol>
+    <li>
+        Loosen the four screws on the back of the
+        sensor, marked with orange arrows.
+
+        <ul>
+            <li>
+                Use a
+                <strong>Torx T1 0 screwdriver</strong>.
+            </li>
+
+            <li>
+                Be careful not to damage the gasket when opening the
+                housing.
+            </li>
+        </ul>
+
+        <figure class="figure">
+         <img src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-20-2025-12-12-58-4220-PM.png?width=300&amp;height=285&amp;name=image-png-Jun-20-2025-12-12-58-4220-PM.png">
+
+            <figcaption>
+                Figure 13. Location of the case screws for
+                battery replacement
+            </figcaption>
+        </figure>
+    </li>
+</ol>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+
+    <p style="margin-bottom:0;">
+        After replacing the battery, ensure that the
+        gasket is seated correctly and that the housing is completely
+        sealed again, to maintain the sensor’s protection rating
+        .
+    </p>
+</div>
+                                                                                
+    <ol start="2">
+    <li>
+        Remove the back cover of the sensor housing.
+
+        <p>
+            
+Check that the gasket is seated correctly, and
+            be careful not to damage it when opening the housing
+            .
+        </p>
+
+        <figure class= "figure">
+           <img src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-20-2025-12-14-32-2961-PM.png">
+
+            <figcaption>
+               Figure 14. Opening the housing and checking the gasket
+            </figcaption>
+        </figure>
+    </li>
+
+    <li>
+        Remove the old batteries from the battery holder.
+
+        <figure class="figure">
+               <img src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-20-2025-12-14-32-2961-PM.png">
+
+            <figcaption>
+               Figure 15. Removing the battery cells
+            </figcaption>
+        </figure>
+    </li>
+
+    <li>
+        Insert two new battery cells.
+
+        <p>
+            If uses battery types other than those recommended
+            may compromise performance, product safety, and
+            the specified operating times.
+        </p>
+
+        <p>
+            After inserting the batteries, the sensor
+            starts automatically and confirms this with a short
+            beep.
+        </p>
+        
+<p>
+            As soon as this beep sounds, replace the back cover
+            of the housing.
+        </p>
+
+        <figure class="figure">
+            <img src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-20-2025-12-15-30-9794-PM.png">
+            
+<figcaption>
+              Figure 16. Inserting the new batteries
+            </figcaption>
+        </figure>
+    </li>
+
+    <li>
+        Replace the back cover on the top part of the
+        case.
+
+        <p>
+            Make sure the gasket is seated correctly
+            and that the case can be closed completely and without tension
+            
+.
+        </p>
+
+        <figure class="figure">
+            <img src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-20-2025-12-16-00-9939-PM.png">
+
+            <figcaption>
+             
+Figure 17. Installing the Housing Back Panel
+            </figcaption>
+        </figure>
+    </li>
+
+    <li>
+        Screw the housing back together.
+
+        <p>
+            Tighten the screws in a crisscross pattern to ensure
+            an even and tension-free seal of the
+            
+enclosure.
+        </p>
+
+        <p>
+            Finally, check that the
+            position of the gasket has not shifted.
+        </p>
+
+        <p>
+            Then reinstall the sensor at
+            its intended location and dispose of the old
+            batteries in accordance with applicable
+            environmental regulations.
+        
+</p>
+        <figure class="figure">
+            <img src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-20-2025-12-16-35-8880-PM.png">
+
+            <figcaption>
+              Figure 18. Closing and Securing the Housing
+            
+</figcaption>
+        </figure>
+    </li>
+</ol>
+
+<div class="note-strip note-strip--blue">
+    <strong>Note</strong>
+
+    <p style="margin-bottom:0;">
+        
+After replacing the battery, check that the sensor is 
+        functioning correctly and that the
+        housing gasket is properly seated to ensure the device’s
+        protection rating.
+    </p>
+</div>
+                                                                                
+           <br><br>
+           <h4>Flap detection and tilt detection</h4>
+          
+<p >Flap detection can be performed either via the magnetic switch or via the accelerometer.<br>Tilt detection (tilt function) is performed via the accelerometer.</p>
+           <p><strong>Flap detection via the magnetic switch</strong></p>
+        
+               <figure class="figure">
+              <img src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-20-2025-12-20-31-7094-PM.png?width=245&amp;height=187&amp;name=image-png-Jun-20-2025-12-20-31-7094-PM.png" loading="lazy">
+             <figcaption>
+              Figure 19. Juno Sketch
+            
+</figcaption>
+        </figure><br>
+              <h4>For operation</h4>
+      <p>
+    The following applies during operation: Hall switch 1 can be used at any time to detect a flap opening, and magnetic switch 2 is always used to activate or trigger the BLE. </p>
+ <ol>
+  <li>The magnetic field switch is active. Either one or both sensors can be used.</li>
+    <li>Large neodymium magnets are recommended. These should be placed as close as possible to the sensor. Due to the variable size of the magnets, no standard distance can be recommended. A maximum distance of 1 cm between the magnet and the housing is recommended.</li>
+    <li>For comparison: With a neodymium disc magnet (d = 20 mm, h = 5 mm), reliable results are achieved at distances under 1 cm. </li>
+    <li>The magnetic field switches can be operated in three different modes:
+   <ul>
+   <li>The container is closed when the magnet is in contact.</li>
+  <li>The container is open when the magnet is in contact.</li>
+  
+<li>The sensor detects an opening when the magnet is pulled through twice.</li>
+    </ul>
+       </li>
+     </ol>
+ 
+<h4>Flap-Opening Detection with Accelerometer and Tilt Detection</h4>
+   <p>
+     The Juno sensor is equipped with an integrated 3-axis accelerometer that reliably detects changes in motion and position. A key function is the detection of flap, lid, or housing openings—typical for industrial applications.
+    </p>
+   
+<ol>
+    <li>Position detection in the idle state:
+  <ul>
+          <li>When the flap is closed, the sensor is in a defined, stable position.</li>
+    
+<li>The LIS2DTW12 continuously measures acceleration along the X, Y, and Z axes.</li>
+    <li>The absolute flap position can be uniquely determined via what is known as static acceleration (primarily caused by Earth’s gravity).</li>
+       </ul>
+     </li>
+    <li>Change in tilt or movement:
+  <ul>
+<li>If the flap is opened or moved, the sensor’s orientation in space changes.</li>
+   <li>The sensor detects this change through a significant deviation in the measured acceleration values on at least one axis.</li>
+      <li>This change is interpreted as a trigger event. </li>
+     </ul>
+     </li>
+     <li>Threshold-based detection:
+    <ul>
+    <li>An inclination angle or a motion threshold can be defined in the Juno firmware (e.g., a change of 15°, not in ultra-low-power mode).
+       The sensor can, of course, be operated very energy-efficiently if the angle measurement frequency is set accordingly high, e.g., 5 minutes. The measurement is then negligible in relation to total power consumption.</li>
+        <li>As soon as the measured values exceed this threshold, a flap opening event is registered.</li>
+           </ul>
+       </li>
+    <li>Optional: Interrupt-controlled operation:
+     
+<ul>
+  <li>The sensor supports low-power modes triggered by interrupts.</li>
+                                                                                                                <li>This means that the sensor remains in power-saving mode and only triggers an interrupt to the microcontroller when motion is detected—ideal for extending battery life.</li>
+                                                                                                                <li>Disadvantage: The angle cannot be adjusted and is fixed at 65°.</li>
+                                                                                                            </ul>
+                                                                                                        </li>
+                                                                                                        <li>Event processing and data transmission:
+                                                                                                            <ul>
+                                                                                                                <li>After an opening is detected, the event is logged in the internal memory.</li>
+                                                                                                                <li>Depending configuration, a data packet can be sent immediately via LoRaWAN, BLE, or another protocol.</li>
+                                                                                                            </ul>
+                                                                                                        </li>
+                                                                                                    </ol>
+
+                                                                                                    <p><strong>Advantages of this method</strong></p>
+                                                                                                    <ul>
+                                                                                                        
+<li>No mechanical components required (compared to reed or magnetic switches)</li>
+                                                                                                        <li>Insensitive to magnetic interference</li>
+                                                                                                        
+<li>Easy retrofitting or customization via software</li>
+                                                                                                    </ul>
+                                                                                           
+                                                    
+        <h4>
+Orientations
+</h4>
+
+<figure class="figure">
+    <img src="https://docs.sentinum.de/hs-fs/hubfs/image-png-Jun-20-2025-12-22-46-9653-PM.png?width=688&amp;height=399&amp;name=image-png-Jun-20-2025-12-22-46-9653-PM.png">
+
+    <figcaption>
+        Figure 20. Permissible and Recommended Sensor Orientations
+    </figcaption>
+</figure>
+<h3>
+16. LoRaWAN®-Specific Functions
+</h3>
+
+<p>
+    <strong>LoRaWAN® Join Behavior</strong>
+</p>
+
+<p>
+    Before telemetry data can be transmitted via LoRaWAN®,
+    the device must first establish a connection to the network
+    .
+</p>
+
+<p>
+    To do this, the device sends so-called
+    
+<strong>Join requests</strong> until a valid
+    <strong>Join-Accept</strong> is received from the network.
+</p>
+
+<p>
+    To achieve a balanced compromise between power consumption and
+    connection establishment, the time intervals
+    between Join requests are gradually increased.
+</p>
+
+<p>
+    In addition, the data rate is adjusted. Initially, the
+    device attempts to establish a connection using a high data rate
+    or a small spreading factor (SF).
+    If a connection cannot be established,
+    lower data rates or larger
+    spreading factors are then used.
+</p>
+
+<p>
+    The join behavior follows the guidelines and recommendations of the
+    LoRa Alliance® specification.
+</p>
+
+<p>
+    Sentinum sensors implement these requirements using so-called
+    
+<strong>join bursts</strong>, whose time intervals increase with
+    each subsequent connection attempt.
+</p>
+
+  <p>
+    A join burst consists of a maximum of six join requests with
+    decreasing data rates (DR5 to DR0) or
+    increasing spreading factors (SF7 to SF12).
+</p>
+
+<p>
+    The time intervals between individual Join Requests are
+    increased quadratically to comply with the duty cycle requirements of the
+    LoRa Alliance.
+</p>
+
+<p>
+    
+The following duty cycle limits apply to join requests:
+</p>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Time Period</th>
+                <th>Duty Cycle</th>
+            </tr>
+        
+</thead>
+
+        <tbody>
+            <tr>
+                <td>&lt; 1 hour</td>
+                <td>1 %</td>
+            </tr>
+
+            <tr>
+                <td>&lt; 11 hours</td>
+                <td>0.1 %</td>
+            
+</tr>
+        </tbody>
+    </table>
+</div>
+
+<p>
+    As a result, the same
+    transmission time budget is available in the first phase (< 1 hour) as in the second phase
+    
+(&lt; 11 hours), even though only one-tenth of the time span
+    can be utilized.
+</p>
+
+<p>
+    To make optimal use of this budget, the intervals
+    between the individual join bursts are initially short and then
+    gradually increase.
+</p>
+
+<p>
+    Specifically:
+</p>
+
+<ul >
+    <li>two join bursts are performed in Phase 1,</li>
+    <li>two additional join bursts are performed in Phase 2, </li>
+    <li>Starting in Phase 3, one join burst is performed per day.</li>
+</ul>
+
+<p>
+    The duration of a join burst increases from about
+    10 minutes in Phase 1 to about 100 minutes in Phase 2
+    and up to about 16 hours in Phase 3.
+</p>
+
+
+
+<br><br>
+<div class="logo-block" style="margin-top:32px; text-align:left; ">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/68a77348a6f04ccd2af4f398bbd3eafcb9643866/Helpdesk/logo/mioty_lora_nb-iot.png" alt="Supported radio technologies" style =“max-width:750px; height:auto;”
+    loading="lazy">
+    
+  
+ <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
+    alt="trash bin Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
+</div>
+        
+    </div>
+    <div class="footer-note">
+        <p>© Sentinum GmbH – All rights reserved. </p>
+        <p>All content in this document, including text, tables, and images, is protected by copyright and is the property of Sentinum GmbH.</p>
+        <p>All images are subject to the copyright of Sentinum GmbH, unless otherwise stated.
+
+        </p>
+        <p>Reproduction, distribution, or use—even in part—is not permitted without express written permission.</p>
+        
+<p style="padding-left:14px; font-style:italic;"> Technical specifications are subject to change. All information is provided without warranty.</p>    </div></body></html>
