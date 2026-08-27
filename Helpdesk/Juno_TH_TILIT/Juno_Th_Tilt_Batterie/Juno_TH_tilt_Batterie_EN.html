@@ -317,152 +317,218 @@
     }
 </style>
 
-</head>
 
-<body>
-<div class="pdf-viewer" >
-  
-<iframe
-    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/aeb76eb050024b353c6c3898a53072bbda12363f/Juno_TH_TILIT/Juno_TH_TILT_general_description/Juno_TH_TILT_allgemeine_Beschreibung_DE_1.0.1.pdf"
+
+ <div class="pdf-viewer">
+        <iframe
+            src="https://docs.sentinum.de/hubfs/Juno/Juno%20pdf%20docmentatin/Juno%20DE%20pdf%20documentation/Juno_TILT_Battery_Lifetime_en-US.pdf"
+            
+title=“Hyperion User Manual PDF”
+            loading="lazy">
+        </iframe>
+    </div>
+
+    <div class="pdf-download">
+        
+📄 You can view the PDF above or
+        <a href="https://docs.sentinum.de/hubfs/Juno/Juno%20pdf%20docmentatin/Juno%20DE%20pdf%20documentation/Juno_TILT_Battery_Lifetime_en-US.pdf"
+           target="_blank"
+           
+rel=“noopener noreferrer”>
+            <strong>download it here</strong>
+        </a>.
+    </div>
+
+
+
+
+<h3>
+Battery Life
+</h3>
+
+<h4>
+Assumptions
+</h4>
+
+<div class="table-wrap">
     
-allowfullscreen
-    title="NYX-Schnellstartanleitung (PDF)">
-  </iframe>
-</div>
-
-<div class="pdf-download">
-  📄 Sie können das PDF oben ansehen oder
-  <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/aeb76eb050024b353c6c3898a53072bbda12363f/Juno_TH_TILIT/Juno_TH_TILT_general_description/Juno_TH_TILT_allgemeine_Beschreibung_DE_1.0.1.pdf" target="_blank" rel="noopener">
-   
-<strong> hier herunterladen</strong>
-  </a>.
-</div>
-
-
-<!-- TABLE OF CONTENTS -->
-<div class="main-toc">
-  <strong>Inhaltsverzeichnis</strong>
-  <ol>
-    <li><a href="#history">Versionshistorie</a></li>
-    <li><a href="#description">Allgemeine Beschreibung</a></li>
-    <li><a href="#features">Features</a></li>
-    <li><a href="#applications">Beispielanwendungen</a></li>
-    <li><a href="#versions">Versionen</a></li>
-  </ol>
-</div>
-
-<!-- VERSIONSHISTORIE -->
-<h3 id="history">1. Versionshistorie</h3>
-
 <table>
-  <thead>
-    <tr>
-      <th>Version</th>
-      <th>Datum</th>
-      <th>Änderung</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1.0.0</td>
-      <td>18.02.2025</td>
-      <td>Erstellung</td>
-    </tr>
-    <tr>
-      <td>1.0.1</td>
-      <td>24.04.2026</td>
-      <td>
-        Formatierung<br>
-        Versionshistorie
-      </td>
-    </tr>
-  </tbody>
-</table>
+        <tbody>
+            <tr>
+                <td>Battery</td>
+                <td>2 × LS14500 SAFT (standard)</td>
+            </tr>
 
-<!-- ALLGEMEINE BESCHREIBUNG -->
-<h3 id="description">2. Allgemeine Beschreibung</h3>
+            <tr>
+                <td>Measurement frequency for temperature and relative humidity</td>
+                <td>288 measurements per day (every 5 minutes)</td>
+            
+</tr>
 
-<p>
-  Der Juno IP67 TH ist ein vielseitiger Temperatur und rel. Luftfeuchtigkeitssensor, der mioty®,
-  LoRaWAN® oder cellular Technologien wie z.B. NB‑IoT für eine zuverlässige und energieeffiziente
-  Datenübertragung nutzt. Durch seine robuste Bauweise und das IP67 Rating ist er optimal für den
-  Einsatz in anspruchsvollen Umgebungen geeignet und widersteht Staub, Wasser und hohen Drücken.
+            <tr>
+                <td>Energy-saving opening detection</td>
+                <td>On</td>
+            </tr>
+
+            <tr>
+                <td>Advanced tilt detection</td>
+                <td>Off</td>
+            </tr>
+            
+<tr>
+                <td>Temperature</td>
+                <td>23 °C</td>
+            </tr>
+
+            <tr>
+                <td>Transmission power</td>
+                <td>In accordance with EU directive</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4>
+Battery life
+</h4>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Number of transmissions per day</th>
+                <th>2</th>
+                <th>4</th>
+                
+<th>6</th>
+                <th>12</th>
+                <th>24</th>
+                <th>48</th>
+                <th>96</th>
+                <th>144</th>
+                <th>288</th>
+            </tr>
+        </thead>
+        
+<tbody>
+            <tr>
+                <td>LoRaWAN® SF7</td>
+                <td>&gt;10</td>
+                <td>&gt;10</td>
+                <td>&gt;10</td>
+                <td>&gt;10</td>
+                <td>&gt;10</td>
+                
+<td>&gt;10</td>
+                <td>&gt;10</td>
+                <td>&gt;10</td>
+                <td>&gt;10</td>
+            </tr>
+            
+<tr>
+                <td>LoRaWAN® SF12</td>
+                <td>&gt;10</td>
+                <td>&gt;10</td>
+                <td>&gt;10</td>
+                <td>&gt;10</td>
+                <td>9</td>
+                <td>6</td>
+                
+<td>3.5</td>
+                <td>2</td>
+                <td>1</td>
+            </tr>
+
+            <tr>
+                <td>mioty®</td>
+                <td>&gt;10</td>
+                <td>&gt;10</td>
+                <td>&gt;10</td>
+                
+<td>&gt;10</td>
+                <td>&gt;10</td>
+                <td>8</td>
+                <td>5</td>
+                <td>3.5</td>
+                <td>2</td>
+            </tr>
+
+            <tr>
+                
+<td>Cellular Best Case</td>
+                <td>&gt;10</td>
+                <td>&gt;10</td>
+                <td>&gt;10</td>
+                <td>8</td>
+                <td>5</td>
+                <td>2</td>
+                <td>1.5</td>
+                <td>1</td>
+                
+<td>0.5</td>
+            </tr>
+
+            <tr>
+                <td>Cellular Worst Case</td>
+                <td>&gt;10</td>
+                <td>6</td>
+                <td>3.5</td>
+                <td>2</td>
+                <td>1</td>
+                <td>0.4</td>
+                
+<td>0.2</td>
+                <td>0.1</td>
+                <td>0.05</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+    <div class="note-strip note-strip--blue">
+        <p>
+    
+<strong>Note:</strong><br> The battery life values provided
+    are estimates and may vary depending on environmental factors,
+    network coverage, configuration, temperature, and actual
+    transmission behavior.
+</p></div>
+
+<div class="note-strip note-strip--red">
+    <strong>Disclaimer Regarding Battery Life Calculations</strong>
+
+    <p>
+        The battery life figures specified in this document
+        are based on calculated estimates under defined
+        conditions and were prepared to the best of our knowledge
+        and belief.
+    
 </p>
 
-<!-- PRODUCT IMAGE -->
-<div class="figure">
-  <img
-    src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/64b1f9208cec0e59552a8ac361c09133eff4a2c5/Juno_TILT/Juno_TILT_allgemeine_Beschreibung/Pic/Juno_TILT_allgemeine_BeschreibungPic1.webp"
-    alt="JUNO TH TILT Produktansicht">
+    <p>
+        These are expressly theoretical
+        approximations. The actual battery life may
+        vary significantly from the specified values due to
+        numerous influencing factors, such as
+        usage scenarios, ambient temperature, aging of the
+        battery cells, or individual system settings.
+ 
+        
+    
+</p>
 
-<figcaption>Abbildung 1. Juno TH Tilt Frontansicht</figcaption>
+    <p>
+        The specified battery life does not constitute a warranted
+        characteristic in the legal sense.
+    </p>
+
+    <p style="margin-bottom:0;">
+        Any liability for discrepancies between the
+        calculated and the actually achieved
+        battery life is excluded.
+    </p>
 </div>
-<!-- FEATURES -->
-<h3 id="features">3. Features</h3>
-
-<ul>
-  <li>LoRaWAN®, mioty® oder NB‑IoT Kommunikation</li>
-  <li>IP67, −25 °C bis 85 °C, IK07</li>
-  <li>Temperatur- und rel. Luftfeuchtigkeitssensor mit hoher Genauigkeit</li>
-  <li>Neigungs- und Klappenöffnungsdetektion</li>
-  <li>Fortgeschrittene Neigungsdetektion mit 1° Auflösung und Grenzwerte</li>
-  <li>Magnetschalter</li>
-  <li>Aktivierbar mit Magnet (kein Smartphone nötig) oder über NFC</li>
-  <li>Konfigurierbar über Downlinks oder NFC</li>
-  <li>Einstellbare Grenzwerte</li>
-  <li>Wechselbare AA Zellen (LiSOCl₂ vgl. Saft LS14500)</li>
-  <li>Akustisches Signal</li>
-</ul>
-
-<!-- BEISPIELANWENDUNGEN -->
-<h3 id="applications">4. Beispielanwendungen</h3>
-
-<ul>
-  <li>Temperatur und rel. Luftfeuchteüberwachung in der Industrie</li>
-  <li>Kühlkettenüberwachung</li>
-  <li>Temperaturüberwachung im Gebäude Management oder Smart City Anwendungen</li>
-  <li>Schaltschranküberwachung</li>
-  <li>Schachtdeckelüberwachung</li>
-  <li>Klappenöffnungsdetektion</li>
-</ul>
-
-<!-- VERSIONEN -->
-<h3 id="versions">5. Versionen</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>Artikel Code</th>
-      <th>Features</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>S‑JUNO‑LOEU‑TH</strong></td>
-      <td>JUNO IP67 TH Sensor, Temperatur und rel. Luftfeuchtigkeit mit Neigungserkennung und Öffnungsdetektion LoRaWAN®</td>
-    </tr>
-    <tr>
-      <td><strong>S‑JUNO‑MIOTY‑TH</strong></td>
-      <td>JUNO IP67 TH Sensor, Temperatur und rel. Luftfeuchtigkeit mit Neigungserkennung und Öffnungsdetektion mioty®</td>
-    </tr>
-    <tr>
-      <td><strong>S‑JUNO‑NB‑TH</strong></td>
-      <td>JUNO IP67 TH Sensor, Temperatur und rel. Luftfeuchtigkeit mit Neigungserkennung und Öffnungsdetektion NB‑IoT</td>
-    </tr>
-    <tr>
-      <td><strong>S‑JUNO‑IX‑LOEU‑TH</strong></td>
-      <td>INDUSTRIAL JUNO IP67 TH Sensor, Temperatur und rel. Luftfeuchtigkeit mit Neigungserkennung und Öffnungsdetektion LoRaWAN®</td>
-    </tr>
-    <tr>
-      <td><strong>S‑JUNO‑IX‑MIOTY‑TH</strong></td>
-      <td>INDUSTRIAL JUNO IP67 TH Sensor, Temperatur und rel. Luftfeuchtigkeit mit Neigungserkennung und Öffnungsdetektion mioty®</td>
-    </tr>
-    <tr>
-      <td><strong>S‑JUNO‑IX‑NB‑TH</strong></td>
-      <td>INDUSTRIAL JUNO IP67 TH Sensor, Temperatur und rel. Luftfeuchtigkeit mit Neigungserkennung und Öffnungsdetektion NB‑IoT</td>
-    </tr>
-  </tbody>
-</table>
 
 <br><br>
 <div class="logo-block" style="margin-top:32px; text-align:left;">
@@ -480,16 +546,18 @@ allowfullscreen
         <!-- FOOTER -->
     </div>
     <div class="footer-note">
-        <p>© Sentinum GmbH – Alle Rechte vorbehalten. </p>
-        <p>Alle Inhalte dieses Dokuments, einschließlich Text, Tabellen und Bilder, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
-        <p>Alle Bilder unterliegen dem Urheberrecht der Sentinum GmbH, sofern nicht anders angegeben.
+        <p>© Sentinum GmbH – All rights reserved. </p>
+        
+<p>All content in this document, including text, tables, and images, is protected by copyright and is the property of Sentinum GmbH.</p>
+        <p>All images are subject to the copyright of Sentinum GmbH, unless otherwise stated.
 
         </p>
-        <p>Eine Vervielfältigung, Verbreitung oder Nutzung – auch auszugsweise – ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
-        <p style="padding-left:14px; font-style:italic;"> Technische Daten können sich ändern. Alle Angaben erfolgen ohne Gewähr.</p>
+        
+<p>Reproduction, distribution, or use—even in part—is not permitted without express written permission.</p>
+        <p style="padding-left:14px; font-style:italic;"> Technical specifications are subject to change. All information is provided without warranty.</p>
     </div>
 
 
 
-</body>
-</html>
+  
+</body></html>
