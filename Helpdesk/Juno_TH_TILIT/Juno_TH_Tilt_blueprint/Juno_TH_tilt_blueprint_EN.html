@@ -1,0 +1,469 @@
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+    code,
+    .inline-code {
+        background-color: #f3f4f6;
+        border: 1px solid #d0d7de;
+        border-radius: 4px;
+        padding: 2px 6px;
+        font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 0.9em;
+        color: #111827;
+        display: inline-block;
+    }
+
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+</style>
+
+<div class="pdf-viewer">
+    <iframe
+        src="https://docs.sentinum.de/hubfs/blueprint%20test%202026/Juno_TH_TILT_mioty_blueprint_V2.json"
+        title="Febris CO2 mioty Blueprint JSON">
+    </iframe>
+</div>
+
+<div class="pdf-download">
+    <span class="icon">📄</span>
+    <span>
+         Blueprint as a JSON file
+        <a href="https://docs.sentinum.de/hubfs/blueprint%20test%202026/Juno_TH_TILT_mioty_blueprint_V2.json"
+           target="_blank"
+           rel="noopener">
+            <strong>download here</strong>
+        </a>.
+    </span>
+</div>
+
+
+<!-- ============================= -->
+<!-- Lesbarer Blueprint-Auszug -->
+<!-- ============================= -->
+
+<p>
+  The JSON below defines the mioty blueprint for the
+  <strong>Juno TH&nbsp;TILT</strong> sensor. It describes the structure of the uplink payloads,
+  the scaling of the measured values, and the feature flags required for
+  correct decoding.
+</p>
+
+<pre style="
+  background:#f7f7f7;
+  border:1px solid #ddd;
+  padding:15px;
+  overflow-x:auto;
+  font-family:monospace;
+  font-size:14px;
+  line-height:1.5;
+  border-radius:4px;
+  margin-bottom:40px;
+">{
+  "component": {
+    "bat_voltage": {
+      "func": "$/1000",
+      "littleEndian": false,
+      "size": 16,
+      "type": "uint",
+      "unit": "V"
+    },
+    "humidity": {
+      "littleEndian": false,
+      "size": 8,
+      "type": "uint",
+      "unit": "%"
+    },
+    "internal_temperature": {
+      "func": "$ - 128",
+      "littleEndian": false,
+      "size": 8,
+      "type": "uint",
+      "unit": "°C"
+    },
+    "temperature": {
+      "func": "floor((($/10 - 100)*100)+0.5)/100",
+      "littleEndian": false,
+      "size": 16,
+      "type": "uint",
+      "unit": "°C"
+    },
+    "humidity_alarm": {
+      "littleEndian": false,
+      "size": 8,
+      "type": "uint"
+    },
+    "uplink_counter": {
+      "littleEndian": false,
+      "size": 8,
+      "type": "uint"
+    },
+    "version": {
+      "littleEndian": false,
+      "size": 4,
+      "type": "uint"
+    }
+  },
+  "meta": {
+    "firmwareVersion": "1.0",
+    "hardwareVersion": "1.0",
+    "name": "Juno",
+    "vendor": "Sentinum"
+  },
+  "typeEui": "FCA84A0900000002",
+  "version": "1.0"
+}
+</pre>
+
+<!-- ============================= -->
+<!-- Text-Blueprint Download -->
+<!-- ============================= -->
+
+
+
+<div class="pdf-download">
+    <span class="icon">📄</span>
+    <span>
+        Would you prefer a plain text version?
+        <a href="https://docs.sentinum.de/hubfs/blueprint%20test%202026/Juno_TH_TILT_mioty_blueprint_V2.txt?hsLang=de"
+           target="_blank"
+           rel="noopener">
+            <strong>Download Blueprint as a TXT document</strong>
+        </a>.
+    </span>
+</div>
+
+
+<br><br>
+
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png"  alt="Supported radio technologies"  style="max-width:750px; height:auto;"
+    loading="lazy">
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
+    alt="trash bin Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
+</div>
+     
+<!-- FOOTER -->
+
+</div>
+<div class="footer-note">
+  <p>© Sentinum GmbH – All rights reserved.</p>
+  
+<p>All content in this document, including text, tables, and images, is protected by copyright and is the property of Sentinum GmbH.</p>
+  <p>All images are subject to the copyright of Sentinum GmbH, unless otherwise stated.</p>
+  
+<p>Reproduction, distribution, or use—even in part—is not permitted without express written permission.</p>
+  <p style="padding-left:14px; font-style:italic;">
+    Specifications are subject to change. All information is provided without warranty.
+  
+</p>
+</div>
+</body>
+
+</html>
+
