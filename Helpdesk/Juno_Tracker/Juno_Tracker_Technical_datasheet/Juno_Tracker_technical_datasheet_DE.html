@@ -1,193 +1,345 @@
-<meta charset="UTF-8">
-<title>JUNO TH TRACKER – Technisches Datenblatt</title>
-
 <style>
-/* ============================================================
+    /* ============================================================
    SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
 
-:root{
-  --black:#000000;
-  --text-main:#111827;
-  --text-muted:#6b7280;
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
 
-  --border:#d0d7de;
-  --table-header:#f5f7fa;
 
-  --blue-bg:#f0f8ff;
-  --blue-border:#a0c4ff;
-  --blue-text:#1a3e8c;
 
-  --toc-bg:#f7fbff;
-  --toc-border:#d6e4fa;
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* ---------- Tables ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+  code,
+.inline-code {
+    background-color: #f3f4f6;
+    border: 1px solid #d0d7de;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9em;
+    color: #111827;
+    display: inline-block;
 }
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
 
-*{ box-sizing:border-box; }
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
 
-body{
-  margin:0;
-  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
-  color:var(--text-main);
-  line-height:1.65;
-  background:#ffffff;
-}
-
-.container{ width:100%; }
-
-/* ---------- Headings ---------- */
-
-h1{
-  margin:48px 0 16px;
-  padding-bottom:12px;
-  font-family:"Montserrat",Arial,sans-serif;
-  font-size:42px;
-  font-weight:700;
-  line-height:1.25;
-  color:#000;
-  border-bottom:2px solid var(--border);
-}
-
-h2{
-  margin:14px 0 36px;
-  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
-  font-size:24px;
-  font-weight:500;
-  line-height:1.5;
-  color:var(--text-muted);
-}
-
-h3{
-  margin:24px 0 8px;
-  padding-bottom:6px;
-  font-family:"Montserrat",Arial,sans-serif;
-  font-size:18px;
-  font-weight:600;
-  color:#000;
-  border-bottom:1.5px solid var(--border);
-  scroll-margin-top:100px;
-}
-
-/* ---------- PDF ---------- */
-
-.pdf-viewer{
-  max-width:900px;
-  height:600px;
-  margin:0 auto 20px;
-  border:1px solid #ccc;
-  border-radius:6px;
-}
-
-.pdf-viewer iframe{ width:100%; height:100%; border:none; }
-
-.pdf-download{
-  max-width:900px;
-  margin:0 auto 36px;
-  padding:14px 18px;
-  background:var(--blue-bg);
-  border:1px solid var(--blue-border);
-  border-radius:6px;
-  text-align:center;
-}
-
-.pdf-download a{
-  color:var(--blue-text);
-  font-weight:600;
-}
-
-/* ---------- TOC ---------- */
-
-.main-toc{
-  max-width:900px;
-  margin:0 auto 40px;
-  padding:16px 20px;
-  background:var(--toc-bg);
-  border:1px solid var(--toc-border);
-  border-radius:6px;
-}
-
-.main-toc ul{ list-style:none; padding:0; margin:0; }
-.main-toc li{ margin:.3rem 0; }
-.main-toc a{
-  color:var(--blue-text);
-  font-weight:600;
-  text-decoration:none;
-}
-
-/* ---------- Tables ---------- */
-
-.table-wrap{ margin:8px 0 24px; }
-
-table{
-  width:100%;
-  border-collapse:collapse;
-  font-size:14px;
-  table-layout:fixed;
-}
-
-th,td{
-  border:1px solid var(--border);
-  padding:8px 12px;
-  vertical-align:top;
-}
-
-th{
-  background:var(--table-header);
-  font-weight:700;
-  border-bottom:2px solid var(--black);
-}
-
-table th:nth-child(1),
-table td:nth-child(1){ width:30%; }
-
-table th:nth-child(2),
-table td:nth-child(2){ width:50%; }
-
-table th:nth-child(3),
-table td:nth-child(3){ width:20%; }
-
-/* ---------- Figures ---------- */
-
-.figure{ margin:32px auto; text-align:center; }
-.figure img{ max-width:100%; }
-.figure figcaption{
-  margin-top:8px;
-  font-size:.85rem;
-  color:var(--text-muted);
-  font-style:italic;
-}
-
-/* ---------- CE / WEEE LOGO ---------- */
-.logo-ce{ margin:16px 0; }
-.logo-ce img{ height:38px; width:auto; display:block; }
-
-/* ---------- RADIO TECHNOLOGIES LOGO ---------- */
-.logo-radio-tech{ margin:16px 0; }
-.logo-radio-tech img{ height:46px; width:auto; display:block; }
-
-/* ---------- DOC LOGOS ---------- */
-.doc-logos{
-  margin:24px 0;
-  display:flex;
-  gap:20px;
-  align-items:center;
-}
-.doc-logos img{ height:42px; width:auto; display:block; }
-
-/* ---------- Footer ---------- */
-.footer-note{
-  margin-top:40px;
-  padding-top:16px;
-  border-top:1px solid var(--border);
-  font-size:.82rem;
-  color:var(--text-muted);
-}
-.footer-note p{ margin:0; }
-.footer-note p:last-child{
-  padding-left:14px;
-  font-style:italic;
-}
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
 </style>
 
 
@@ -205,28 +357,28 @@ table td:nth-child(3){ width:20%; }
   📄 Sie können das PDF oben ansehen oder
   <a href="https://raw.githack.com/bellaminemo81172/sentinum_documentation/31cd86302fbee7df3cde30a1457a06a09c9426d4/Juno_Tracker/Juno_Tracker_Technical_datasheet/Juno_Tracker_TH_Technisches_Datenblatt_DE_1.0.1.pdf"
      target="_blank">
-    hier herunterladen
+    <strong>hier herunterladen</strong>
   </a>.
 </div>
 
 <!-- ================= TOC ================= -->
 <nav class="main-toc">
-  <h4>Inhaltsverzeichnis</h4>
-  <ul>
-    <li><a href="#versionshistorie">1. Versionshistorie</a></li>
-    <li><a href="#ueberblick">2. Überblick</a></li>
-    <li><a href="#versionen">3. Versionen</a></li>
-    <li><a href="#allgemein">4. Allgemeine Eigenschaften</a></li>
-    <li><a href="#rf">5. Konnektivität und RF Spezifikation</a></li>
-    <li><a href="#tracking-overview">6. Übersicht Trackingfeatures</a></li>
-    <li><a href="#lokalisierung-lorawan">7. Lokalisierung LoRaWAN Sensoren</a></li>
-    <li><a href="#lokalisierung-cellular">8. Lokalisierung Cellular Sensoren</a></li>
-    <li><a href="#sensor-temp">9. Sensorspezifikation Temperatur</a></li>
-    <li><a href="#sensor-humidity">10. Sensorspezifikation Rel. Luftfeuchtigkeit</a></li>
-    <li><a href="#inclination">11. Sensorspezifikation Neigung</a></li>
-    <li><a href="#accel-temp">12. Sensorspezifikation Temperatur Beschleunigungssensor</a></li>
-    <li><a href="#drawings">13. Technische Zeichnung</a></li>
-  </ul>
+  <strong>Inhaltsverzeichnis</strong>
+  <ol>
+    <li><a href="#versionshistorie"> Versionshistorie</a></li>
+    <li><a href="#ueberblick"> Überblick</a></li>
+    <li><a href="#versionen"> Versionen</a></li>
+    <li><a href="#allgemein"> Allgemeine Eigenschaften</a></li>
+    <li><a href="#rf"> Konnektivität und RF Spezifikation</a></li>
+    <li><a href="#tracking-overview"> Übersicht Trackingfeatures</a></li>
+    <li><a href="#lokalisierung-lorawan"> Lokalisierung LoRaWAN Sensoren</a></li>
+    <li><a href="#lokalisierung-cellular"> Lokalisierung Cellular Sensoren</a></li>
+    <li><a href="#sensor-temp"> Sensorspezifikation Temperatur</a></li>
+    <li><a href="#sensor-humidity"> Sensorspezifikation Rel. Luftfeuchtigkeit</a></li>
+    <li><a href="#inclination"> Sensorspezifikation Neigung</a></li>
+    <li><a href="#accel-temp"> Sensorspezifikation Temperatur Beschleunigungssensor</a></li>
+    <li><a href="#drawings"> Technische Zeichnung</a></li>
+  </ol>
 </nav>
 
 
@@ -278,7 +430,7 @@ table td:nth-child(3){ width:20%; }
     src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/ea9f8aa025058fddc8c8482b6a910a3814b88e37/Juno_TILT/Juno_TILT_allgemeine_Beschreibung/Pic/Juno_TILT_allgemeine_BeschreibungPic1.webp"
     alt="Juno Tracker"
   >
-  <figcaption>Juno Tracker</figcaption>
+  <figcaption>Abbildung 1. Juno Tracker</figcaption>
 </figure>
 
 
@@ -769,7 +921,7 @@ table td:nth-child(3){ width:20%; }
     src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/9a784d6cda6d42fc9d0422bcc6f8495fa084c920/Juno_BSX/Juno_BSX_Technical_datasheet/relative_humidity.png"
     alt="HT_DS_Datasheet_SHT4x_5.pdf"
   >
-  <figcaption>HT_DS_Datasheet_SHT4x_5.pdf</figcaption>
+  <figcaption> Abbildung 2. HT DS Datasheet SHT 4 x 5</figcaption>
 </figure>
 
 <p><em>Genauere Temperatursensoren auf Anfrage erhältlich.</em></p>
@@ -820,7 +972,7 @@ table td:nth-child(3){ width:20%; }
     src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/1500f4bf878457d391662a4b8304b18e340467cc/Juno_BSX/Juno_BSX_Technical_datasheet/td%20pic%203.png"
     alt="Relative humidity sensor performance"
   >
-  <figcaption>HT_DS_Datasheet_SHT4x_5.pdf</figcaption>
+  <figcaption>Abbildung 3. HT DS Datasheet SHT 4 x 5</figcaption>
 </figure>
 
 <h3 id="inclination">11. Sensorspezifikation Neigung</h3>
@@ -879,32 +1031,33 @@ table td:nth-child(3){ width:20%; }
     src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/aedccdd5f1a36c0cc446d3a3078dc665745e256e/Juno_TILT/Juno_ID_TILT_Technical_datasheet/technical_drawing.png"
     alt="Juno Tracker – Technische Zeichnung"
   >
-  <figcaption>Juno Tracker – Technische Zeichnung</figcaption>
+  <figcaption>Abbildung 4. Juno Tracker – Technische Zeichnung</figcaption>
 </figure>
 
-<div class="doc-logos">
+  
+<br><br>
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githack.com/bellaminemo81172/sentinum_documentation/4fb9126505d934cfd26557475a4cc51214814567/logo/mioty_lora_nb-IOT_LTE.png"  alt="Supported radio technologies"  style="max-width:750px; height:auto;"
+    loading="lazy">
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
   <img
-    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/logo/mioty_lora_nb-IOT_LTE.png"
-    alt="mioty / LoRa / NB-IoT / LTE">
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
+    alt="trash bin Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
 </div>
 
-<!-- CE / WEEE LOGO -->
-<div class="logo-ce">
-  <img
-    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/d197dd7edb30a1d569b270ddb0b70e1357da9b14/logo/CE_Trash_seals.png"
-    alt="CE and WEEE compliance marks"
-    style="height:38px;">
-</div>
-
-<!-- DISCLAIMER -->
 <div class="footer-note">
-  <p>© Sentinum GmbH – All rights reserved.</p>
-  <p>All contents of this document, including text, tables and images, are protected by copyright and are the property of Sentinum GmbH.</p>
-  <p>All images are subject to the copyright of Sentinum GmbH unless otherwise stated.</p>
-  <p>Reproduction, distribution or use - even in part - is not permitted without explicit written permission.</p>
-  <p style="padding-left:14px; font-style:italic;">
-    Specifications subject to change. All information provided without warranty.
-  </p>
+  <p>© Sentinum GmbH - Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Texte, Tabellen und Bilder, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Sofern nicht anders angegeben, unterliegen alle Bilder dem Urheberrecht der Sentinum GmbH.</p>
+  <p>Eine Vervielfältigung, Verbreitung oder Nutzung, auch auszugsweise, ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">Technische Änderungen vorbehalten. Alle Angaben erfolgen ohne Gewähr.</p>
 </div>
 
+
+</div>
+</main>
 </body>
