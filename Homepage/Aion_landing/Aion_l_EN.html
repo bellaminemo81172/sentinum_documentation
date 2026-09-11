@@ -7,14 +7,14 @@
 
 <!doctype html><html lang="en"><head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
     <title> The AION Series - IO-Link compatible, mioty® wireless technology, IP69K, retrofit-ready, Industry 4.0, Plug &amp; Play </title>
-    <meta name="description" content="Die Febris-Serie von Sentinum: CO₂-Ampel für Schulen und Büros, TH für Temperatur und Feuchte, SCW als Schimmel- und Schadstoff-Frühwarnsensor. Schlankes Design, LoRaWAN®, mioty® und Mobilfunk." />
+    <meta name="description" content="Die Aion-Serie von Sentinum: CO₂-Ampel für Schulen und Büros, TH für Temperatur und Feuchte, SCW als Schimmel- und Schadstoff-Frühwarnsensor. Schlankes Design, LoRaWAN®, mioty® und Mobilfunk." />
     <meta property="og:title" content="Febris-Serie – Raumklima-Sensoren von Sentinum" />
     <meta property="og:description" content="CO₂, TH und SCW – Sensoren für gesundes Raumklima und Gebäudeschutz." />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="de_DE" />
-    <link rel="canonical" href="https://sentinum.de/febris" />
+   
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -41,9 +41,22 @@
             ]
         }
     </script>
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap");
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+<link
+  rel="preload"
+  as="style"
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
+  onload="this.onload=null;this.rel='stylesheet'">
+
+<noscript>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap">
+</noscript>
+    <style>
+     
         *,
         :after,
         :before {
@@ -976,10 +989,32 @@ text-decoration: none; /* ✅ verhindert Link Styling */
 
 .produkt-card-mini:hover {
     transform: translateY(-6px);
-
     border-color: hsl(var(--primary) / 0.25);
-
     box-shadow: 0 0 40px -12px hsl(var(--primary) / 0.35);
+}
+
+/* Mobile Performance */
+@media (max-width: 768px) {
+
+    .animate-glow-pulse {
+        animation: none !important;
+    }
+
+    .blur-\[100px\],
+    .blur-\[120px\] {
+        filter: none !important;
+    }
+
+    .produkt-badge {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+
+    .produkt-card-mini:hover,
+    .produkt-container:hover {
+        transform: none !important;
+        box-shadow: none !important;
+    }
 }
 
   </style>   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -1005,7 +1040,7 @@ a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-b
 
 
     
-    <link rel="canonical" href="https://sentinum.de/de/eos-landing" />
+    <link rel="canonical" href="https://sentinum.de/de/aion-landing" />
 
 
 <meta property="og:url" content="https://sentinum.de/de/eos-landing" />
@@ -1021,33 +1056,18 @@ a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-b
 
 
 <meta name="generator" content="HubSpot" /></head>
-  </style>
-{{ standard_header_includes }}
-
-
+   
+   {{ standard_header_includes }}
+ 
+</head>
 
 <body>
- {% module "main_nav"
+    {% module "main_nav"
   path="/Homepage V2/Sentinum New Header Nav.module",
   label="Main Navigation"
 %}
-<body>
-  <div id="hs_cos_wrapper_main_nav" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
 
 
-
-
-
-
-
-
-
-  
-
-
-
-
-<div class="sn-header-placeholder" aria-hidden="true"></div></div>
  
     <a href="#top" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-primary text-primary-foreground px-3 py-2 rounded">Skip to content</a>
     <main>
@@ -1141,7 +1161,9 @@ Whether standardized IO-Link sensors or traditional 4–20 mA sensors—AION ena
             IO-Link · mioty®
         </div>
 
-        <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/mioty-Adapter/AION%20V2%20(altes%20Geh%C3%A4use)/Front.png" alt="IoT‑Sensorgerät Febris CO₂">
+        <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/mioty-Adapter/AION%20V2%20(altes%20Geh%C3%A4use)/Front.png" alt="IoT‑Sensorgerät Febris CO₂"
+             width="600" height="600" loading="lazy" 
+decoding="async">
     </div>
 
     <!--<!- - ✅ CONTENT - ->-->
@@ -1245,7 +1267,9 @@ Whether standardized IO-Link sensors or traditional 4–20 mA sensors—AION ena
           4–20 mA · Analog
         </div>
 
-        <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Aion420_Website/Front%20(9).png" alt="Febris Temperatur- und Feuchtesensor">
+        <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Aion420_Website/Front%20(9).png" alt="Febris Temperatur- und Feuchtesensor"
+              width="600" height="600" loading="lazy" 
+decoding="async">
     </div>
 
     <!--<!- - CONTENT - ->-->
@@ -1360,7 +1384,7 @@ var hsVars = hsVars || {}; hsVars['language'] = 'de';
 </script>
 
 <script src="/hs/hsstatic/cos-i18n/static-1.53/bundles/project.js"></script>
-<script src="https://sentinum.de/hubfs/hub_generated/module_assets/1/401336966357/1781784554940/module_Sentinum_New_Header_Nav.min.js"></script>
+
 
 
 <!-- Start of HubSpot Analytics Code -->

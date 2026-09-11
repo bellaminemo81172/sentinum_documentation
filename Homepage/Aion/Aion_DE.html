@@ -2,22 +2,19 @@
   templateType: "page"
   isAvailableForNewContent: true
 -->
-
- 
-
 <!DOCTYPE html>
 <html lang="de">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aion – drahtlose IO-Link Bridge mit mioty® | Sentinum</title>
-    <meta name="description" content="Aion ist die drahtlose IO-Link Bridge von Sentinum mit mioty®. Kompatibel mit allen IO-Link Sensoren, IP69k, retrofit-fähig – ideal für Smart Factory, Predictive Maintenance und Smart City.">
-    <meta property="og:title" content="Aion – drahtlose IO-Link Bridge mit mioty®">
-    <meta property="og:description" content="IO-Link Sensoren ohne Kabel anbinden. Robust, sicher, retrofit-fähig. Made in Germany.">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="de_DE">
-    <link rel="canonical" href="https://sentinum.de/aion-io-link-adapter">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aion – Wireless IO-Link Bridge with mioty® | Sentinum</title>
+    <meta name="description" content="Aion ist die drahtlose IO-Link Bridge von Sentinum mit mioty®. Kompatibel mit allen IO-Link Sensoren, IP69k, retrofit-fähig – ideal für Smart Factory, Predictive Maintenance und Smart City." />
+    <meta property="og:title" content="Aion – drahtlose IO-Link Bridge mit mioty®" />
+    <meta property="og:description" content="IO-Link Sensoren ohne Kabel anbinden. Robust, sicher, retrofit-fähig. Made in Germany." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="de_DE" />
+    <link rel="canonical" href="https://sentinum.de/aion-io-link-adapter" />
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -60,8 +57,22 @@
             ]
         }
     </script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  rel="preload"
+  as="style"
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
+  onload="this.onload=null;this.rel='stylesheet'">
+
+<noscript>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap">
+</noscript>
     <style>
-        @import"https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap";
+     
 
         *,
         :before,
@@ -2241,18 +2252,20 @@
             background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)))
         }
 
-        .container-main {
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 1200px;
-            padding-left: 1.5rem;
-            padding-right: 1.5rem
-        }
+      .container-main {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
 
-        .section-padding {
-            padding-top: 100px;
-            padding-bottom: 100px
-        }
+      /* Section-Abstände */
+.section-padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
 
         .divider-line {
             height: 1px;
@@ -3812,7 +3825,6 @@
         .last\:border-0:last-child {
             border-width: 0
         }
- /* GRID – schmale Cards wie im Febris Design */
 #produkte .produkte-grid {
     display: grid;
     gap: 2rem;
@@ -3831,8 +3843,6 @@
     }
 }
 
-
-/* CARD */
 #produkte .produkt-card {
     background-color: hsl(var(--surface));
     border: 1px solid hsl(var(--border));
@@ -3851,8 +3861,7 @@
     transform: translateY(-4px);
 }
 
-
-/* IMAGE – mit Abstand */
+/* ✅ Bild + Linie */
 #produkte .produkt-card-image {
   width: 100%;
     height: 100%;
@@ -3865,8 +3874,6 @@
     background: hsl(var(--background) / 0.4);
 }
 
-
-/* CONTENT */
 #produkte .produkt-content {
     padding: 1.5rem;
     display: flex;
@@ -3874,9 +3881,11 @@
     flex: 1;
 }
 
-
-/* CATEGORY */
 #produkte .produkt-category {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
     color: hsl(var(--primary));
     font-size: 12px;
     font-weight: 600;
@@ -3884,16 +3893,17 @@
     margin-bottom: 10px;
 }
 
+#produkte .produkt-category svg {
+    width: 14px;
+    height: 14px;
+}
 
-/* TITLE */
 #produkte .produkt-title {
     font-weight: 700;
     font-size: 18px;
     margin-bottom: 10px;
 }
 
-
-/* TEXT */
 #produkte .produkt-text {
     color: hsl(var(--muted-foreground));
     font-size: 14px;
@@ -3901,8 +3911,6 @@
     margin-bottom: 20px;
 }
 
-
-/* BUTTON POSITION */
 #produkte .produkt-button {
     margin-top: auto;
 }
@@ -3920,14 +3928,14 @@
 
 #produkte .produkt-button a:hover {
     opacity: 0.9;
-      }
-    </style>
-    {{ standard_header_includes }}
+}
+
+    </style> 
+   {{ standard_header_includes }}
 </head>
 
 <body>
-  
- {% module "main_nav"
+   {% module "main_nav"
   path="/Homepage V2/Sentinum New Header Nav.module",
   label="Main Navigation"
 %}
@@ -4117,7 +4125,7 @@
  
 
   <img
-    src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/mioty-Adapter/AION%20V2%20(altes%20Geh%C3%A4use)/schr%C3%A4g_links.png"
+    src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webbilder_WEPB/schr%C3%A4g_links%20(1).webp"
     alt="AION mioty® Adapter von Sentinum mit IO-Link-Anbindung zur industriellen Sensor- und Prozessdatenerfassung."
     class="relative z-10 max-w-[460px] w-full h-auto object-contain ml-auto"
   />
@@ -4246,7 +4254,7 @@
             </div>
         </section>
         
-        <!---->
+   
  
 <section class="section-padding bg-surface/40">
   <div class="container-main">
@@ -4353,21 +4361,24 @@
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div class="bg-surface border border-border rounded-lg p-10 text-center transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5">
-                        <div class="w-14 h-14 mx-auto rounded-[14px] bg-accent-dim flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary">
+                        <div class="w-14 h-14 mx-auto rounded-[14px] bg-accent-dim flex items-center justify-center mb-4">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary">
                                 <path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z" />
                             </svg></div>
                         <p class="text-primary font-heading font-semibold text-[14px] mb-2 leading-snug">Smart Factory</p>
                         <p class="text-muted-foreground text-[14px]">Schwingungs-, Temperatur- und Zustands­daten von Maschinen drahtlos erfassen.</p>
                     </div>
                     <div class="bg-surface border border-border rounded-lg p-10 text-center transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5">
-                        <div class="w-14 h-14 mx-auto rounded-[14px] bg-accent-dim flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary">
+                        <div class="w-14 h-14 mx-auto rounded-[14px] bg-accent-dim flex items-center justify-center mb-4">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary">
                                 <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
                             </svg></div>
                         <p class="text-primary font-heading font-semibold text-[14px] mb-2 leading-snug">Predictive Maintenance</p>
                         <p class="text-muted-foreground text-[14px]">Sensordaten aus schwer zugänglichen Bereichen für vorausschauende Wartung.</p>
                     </div>
                     <div class="bg-surface border border-border rounded-lg p-10 text-center transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5">
-                        <div class="w-14 h-14 mx-auto rounded-[14px] bg-accent-dim flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary">
+                        <div class="w-14 h-14 mx-auto rounded-[14px] bg-accent-dim flex items-center justify-center mb-4">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary">
                                 <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
                                 <circle cx="12" cy="12" r="3" />
                             </svg></div>
@@ -4375,7 +4386,8 @@
                         <p class="text-muted-foreground text-[14px]">Anlagen und Produktions­güter standortübergreifend überwachen.</p>
                     </div>
                     <div class="bg-surface border border-border rounded-lg p-10 text-center transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5">
-                        <div class="w-14 h-14 mx-auto rounded-[14px] bg-accent-dim flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary">
+                        <div class="w-14 h-14 mx-auto rounded-[14px] bg-accent-dim flex items-center justify-center mb-4">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary">
                                 <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
                                 <path d="M21 3v5h-5" />
                                 <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
@@ -4385,7 +4397,8 @@
                         <p class="text-muted-foreground text-[14px]">Bestands­anlagen, Brownfield- und Greenfield-Projekte gleichermaßen anbinden.</p>
                     </div>
                     <div class="bg-surface border border-border rounded-lg p-10 text-center transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5">
-                        <div class="w-14 h-14 mx-auto rounded-[14px] bg-accent-dim flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary">
+                        <div class="w-14 h-14 mx-auto rounded-[14px] bg-accent-dim flex items-center justify-center mb-4">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary">
                                 <path d="m12 14 4-4" />
                                 <path d="M3.34 19a10 10 0 1 1 17.32 0" />
                             </svg></div>
@@ -4393,7 +4406,8 @@
                         <p class="text-muted-foreground text-[14px]">Prozessdaten in rauen, weitläufigen oder abgelegenen Industrie­umgebungen.</p>
                     </div>
                     <div class="bg-surface border border-border rounded-lg p-10 text-center transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5">
-                        <div class="w-14 h-14 mx-auto rounded-[14px] bg-accent-dim flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary">
+                        <div class="w-14 h-14 mx-auto rounded-[14px] bg-accent-dim flex items-center justify-center mb-4">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary">
                                 <rect width="16" height="20" x="4" y="2" rx="2" ry="2" />
                                 <path d="M9 22v-4h6v4" />
                             </svg></div>
@@ -4482,7 +4496,8 @@
             <div class="produkt-card">
 
                 <div class="produkt-image">
-                    <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/mioty-Adapter/mioty/black/Front_V2.png">
+                    <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webbilder_WEPB/Front_V2%20(1).webp" alt="aion Industriesensor mit Lorawan-Technologie für energieeffiziente Funkkommunikation" loading="lazy"
+                         >
                 </div>
 
                <div class="produkt-content">
@@ -4537,7 +4552,7 @@
             <div class="produkt-card">
 
                 <div class="produkt-image">
-                    <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/mioty-Adapter/LoRaWAN_only/black/Front_V2.png">
+                    <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Webbilder_WEPB/Front_V2%20(2)%20(1).webp" alt="aion Industriesensor mit mioty-Technologie für energieeffiziente Funkkommunikation" loading="lazy">
                 </div>
 
               <div class="produkt-content">
