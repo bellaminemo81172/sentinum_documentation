@@ -58,8 +58,22 @@
             ]
         }
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  rel="preload"
+  as="style"
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
+  onload="this.onload=null;this.rel='stylesheet'">
+
+<noscript>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap">
+</noscript>
     <style>
-        @import"https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap";
+
 
         *,
         :before,
@@ -3931,7 +3945,45 @@
 .produkt-card-content p {
     flex-grow: 1;
 }
+      .section-badge-icon{
+    width:40px;
+    height:40px;
 
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:#1a1f2b;
+
+    color:#f65a0a;
+
+    flex-shrink:0;
+}
+
+.section-badge-icon svg{
+    width:16px;
+    height:16px;
+}
+@media (max-width:768px){
+
+  .blur-\[100px\],
+  .blur-\[120px\]{
+      filter:none !important;
+  }
+
+}
+      @media (max-width:768px){
+
+  .hover\:-translate-y-1:hover,
+  .hover\:-translate-y-0\.5:hover{
+      transform:none !important;
+  }
+
+}
+      
+      
     </style>
      {{ standard_header_includes }}
 </head>
@@ -3986,10 +4038,12 @@
               bg-surface/60 flex items-center justify-center p-8">
 
     <img
-      src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/GAIA/Renderings/freigestellt/GAIA.png"
+      src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/GAIA/Webbilder/GAIA%20(1).webp"
       alt="GAIA Produkt-Rendering"
       class="max-w-full max-h-full object-contain"
-      loading="lazy"
+     loading="eager"
+fetchpriority="high"
+decoding="async"
     />
 
   </div>
@@ -4142,7 +4196,7 @@
               bg-surface/60 flex items-center justify-center p-8">
 
     <img
-      src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/GAIA/Renderings/freigestellt/GAIA_Soil_Strahlschutz.png"
+      src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/GAIA/Webbilder/GAIA_Soil_Strahlschutz%20(1).webp"
       alt="GAIA Soil Sensor mit Strahlenschutz zur Überwachung von Bodenparametern im Außen- und Feldeinsatz"
       class="max-w-full max-h-full object-contain drop-shadow-lg"
       loading="lazy"
@@ -4361,7 +4415,7 @@
       <div class="produkt-card-mini">
 
         <div class="produkt-card-image">
-          <img src="https://shop.sentinum.de/cdn/shop/files/3816-Front.png?v=1776254379&width=990"
+          <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/GAIA/Webbilder/3816-Front%20(1).webp"
                alt="GAIA Soil LoRaWAN Sensor"
                loading="lazy">
         </div>
@@ -4403,7 +4457,7 @@
       <div class="produkt-card-mini">
 
         <div class="produkt-card-image">
-          <img src="https://shop.sentinum.de/cdn/shop/files/3826-Front.png?v=1776254135&width=990"
+          <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/GAIA/Webbilder/3826-Front%20(1).webp"
                alt="GAIA Soil mioty Sensor"
                loading="lazy">
         </div>
@@ -4445,7 +4499,7 @@
       <div class="produkt-card-mini">
 
         <div class="produkt-card-image">
-          <img src="https://shop.sentinum.de/cdn/shop/files/3849-Front.png?v=1776254603&width=990"
+          <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/GAIA/Webbilder/3849-Front%20(1).webp"
                alt="GAIA Soil NB-IoT Sensor"
                loading="lazy">
         </div>

@@ -9,8 +9,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Helios – IoT Mehrzweck Übertragungseinheit für industrielle Sensoren | Sentinum</title>
-    <meta name="description" content="Helios: drahtlose Mehrzweck-Übertragungseinheit für industrielle Sensoren. LoRaWAN®, mioty®, NB-IoT, LTE-CAT-M1. Druck, Temperatur, Pulszähler, PT100/1000 – vorkonfektioniert oder Generic.">
+
+  <title>
+HELIOS – IoT Sensor für Smart City, Umweltmonitoring und LoRaWAN | Sentinum
+</title>
+   <meta name="description" content="HELIOS von Sentinum: IoT-Wetterstation für Umweltmonitoring, Smart City und Industrie. Misst Wetter- und Umweltdaten in Echtzeit über LoRaWAN®, mioty®, NB-IoT und LTE-M." />
     <meta property="og:title" content="Helios – IoT Mehrzweck Übertragungseinheit (LoRaWAN®, mioty®, NB-IoT)">
     <meta property="og:description" content="Drahtlose Anbindung industrieller Sensoren über LPWAN. IP67, NFC-Konfiguration, Batteriebetrieb. Made in Germany.">
     <meta property="og:type" content="website">
@@ -33,6 +36,10 @@
                         "priceCurrency": "EUR",
                         "url": "https://shop.sentinum.de"
                     }
+                    "manufacturer": {
+                    "@type": "Organization",
+                    "name": "Sentinum GmbH"
+                    },
                 },
                 {
                     "@type": "FAQPage",
@@ -57,8 +64,22 @@
             ]
         }
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  rel="preload"
+  as="style"
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
+  onload="this.onload=null;this.rel='stylesheet'">
+
+<noscript>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap">
+</noscript>
     <style>
-        @import"https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap";
+     
 
         *,
         :before,
@@ -3978,7 +3999,43 @@
     gap: 16px;   /* 🔥 kleiner Abstand zwischen Karten */
 }
 
+      .section-badge-icon{
+    width:40px;
+    height:40px;
 
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:#1a1f2b;
+
+    color:#f65a0a;
+
+    flex-shrink:0;
+}
+
+.section-badge-icon svg{
+    width:16px;
+    height:16px;
+}
+@media (max-width:768px){
+
+  .blur-\[100px\],
+  .blur-\[120px\]{
+      filter:none !important;
+  }
+
+}
+      @media (max-width:768px){
+
+  .hover\:-translate-y-1:hover,
+  .hover\:-translate-y-0\.5:hover{
+      transform:none !important;
+  }
+
+}
     </style>
    {{ standard_header_includes }}
 </head>
@@ -4029,7 +4086,7 @@
                         <div class="absolute w-[320px] h-[300px] rounded-full bg-[radial-gradient(circle,hsl(var(--accent-dim)/0.12),transparent)] animate-glow-pulse"></div>
                         <div class="relative z-10 w-full aspect-square max-w-[460px] rounded-2xl border border-dashed border-border bg-surface/60 flex flex-col items-center justify-center text-center p-8 text-muted-foreground">
                             <img
-  src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/freigestellt/Helios_M12_4_new.png"
+  src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/Webbilder/Helios_M12_4_new%20(1).webp"
   alt="Helios Industrie‑Sensor mit M12‑Anschluss in freigestellter Produktdarstellung zur zuverlässigen Erfassung und Weitergabe von Prozess‑ und Maschinendaten in industriellen Anwendungen und Automatisierungsumgebungen."
   class="max-w-full max-h-auto object-contain" loading="lazy"
 />
@@ -4072,7 +4129,7 @@
       <div class="bg-surface border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5 hover:shadow-[0_0_30px_-10px_hsl(var(--primary)/0.25)]">
         <div class="aspect-[4/3] border-b border-border">
           <img
-            src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/Webbilder/Industrielle%20Messtechnik.png"
+            src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/Webbilder/Industrielle%20Messtechnik%20(1).webp"
             alt="Helios Industrie‑Sensor zur Überwachung von elektrischen Leistungsdaten, Strom, Spannung und Energieverbrauch in industriellen Produktions‑ und Prozessanlagen mit zentraler Datenauswertung"
             class="w-full h-full object-cover"
           />
@@ -4089,7 +4146,7 @@
       <div class="bg-surface border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5 hover:shadow-[0_0_30px_-10px_hsl(var(--primary)/0.25)]">
         <div class="aspect-[4/3] border-b border-border">
           <img
-            src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/Webbilder/Geb%C3%A4ude%20und%20klimatechnik.png"
+            src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/Webbilder/Geb%C3%A4ude%20und%20klimatechnik%20(1).webp"
             alt="Helios Industrie‑Sensor im Einsatz an einer Trafostation zur Zustands‑ und Lastüberwachung in Energie‑ und Versorgungsnetzen mit Fokus auf Stromverteilung und Netzstabilität"
             class="w-full h-full object-cover"
           />
@@ -4106,7 +4163,7 @@
       <div class="bg-surface border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5 hover:shadow-[0_0_30px_-10px_hsl(var(--primary)/0.25)]">
         <div class="aspect-[4/3] border-b border-border">
           <img
-            src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/Webbilder/Energie%20und%20Versorgungsnetze.png"
+            src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/Webbilder/Energie%20und%20Versorgungsnetze%20(1).webp"
             alt="Helios Industrie‑Sensor zur drahtlosen Überwachung von Temperatur, Druck und Betriebszuständen in Gebäude‑ und Klimatechnik wie Lüftungsanlagen, Wärmetauschern und Energiezentralen"
             class="w-full h-full object-cover"
           />
@@ -4123,7 +4180,7 @@
       <div class="bg-surface border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5 hover:shadow-[0_0_30px_-10px_hsl(var(--primary)/0.25)]">
         <div class="aspect-[4/3] border-b border-border">
           <img
-            src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/Webbilder/Smart%20City%20&%20Wasser.png"
+            src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/Webbilder/Smart%20City%20&%20Wasser.webp"
             alt="Helios Industrie‑Sensor zur Überwachung von Wasserständen, Brunnen‑ und Kanalpegeln in urbaner Infrastruktur und Smart‑City‑Anwendungen mit kontinuierlicher Datenerfassung"
             class="w-full h-full object-cover"
           />
@@ -4436,7 +4493,7 @@
       <div class="produkt-card-mini">
 
         <div class="produkt-card-image">
-          <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/Helios_T/LoRa/Front-1.png" loading="lazy">
+          <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/Webbilder/Front-1%20(3).webp" loading="lazy">
         </div>
 
         <div class="produkt-card-content">
@@ -4471,7 +4528,7 @@
       <div class="produkt-card-mini">
 
         <div class="produkt-card-image">
-          <img src = "https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/Helios_T/mioty/Front-1.png" loading="lazy">
+          <img src = "https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/Webbilder/Front-1%20(1)%20(1).webp" loading="lazy">
         </div>
 
         <div class="produkt-card-content">
@@ -4506,7 +4563,7 @@
       <div class="produkt-card-mini">
 
         <div class="produkt-card-image">
-         <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/Helios_T/NB-IoT_LTE-M/Front-1.png" loading="lazy">
+         <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/Webbilder/Front-1%20(2)%20(1).webp" loading="lazy">
         </div>
 
         <div class="produkt-card-content">
@@ -4522,7 +4579,7 @@
     NB‑IoT / LTE‑M
 </div>
 
-          <h3>Helios Kabelfühler Temperatur NB‑IoT / LTE‑M</h3>
+          <h3>Helios Kabelfühler Temperatur x1 NB‑IoT / LTE‑M</h3>
 
           <p>
             NB‑IoT / LTE‑M Variante mit GNSS und Temperaturfühler. Vollständig autark, IP67, 4× AA Batterie.
@@ -4569,7 +4626,7 @@
       <!-- ✅ CARD 1 -->
       <div class="produkt-card-mini">
         <div class="produkt-card-image">
-          <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/Helios_P/LoRa/Front-1.png" loading="lazy">
+          <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/Webbilder/Front-1%20(3)-1.webp" alt="HELIOS Wetterstation für Umwelt- und Wetterdatenerfassung in Smart City und Industrie" loading="lazy">
         </div>
 
         <div class="produkt-card-content">
@@ -4600,7 +4657,7 @@
       <!-- ✅ CARD 2 -->
       <div class="produkt-card-mini">
         <div class="produkt-card-image">
-          <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/Helios_P/mioty/Front-1.png" loading="lazy">
+          <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/Webbilder/Front-1%20(1)%20(1)-1.webp" alt="HELIOS Wettersensor zur Messung von Temperatur, Luftfeuchtigkeit und Umweltdaten" loading="lazy">
         </div>
 
         <div class="produkt-card-content">
@@ -4632,7 +4689,7 @@
       <!-- ✅ CARD 3 -->
       <div class="produkt-card-mini">
         <div class="produkt-card-image">
-          <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/Helios_P/NB-IoT_LTE-M/Front-1.png" loading="lazy">
+          <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/Webbilder/Front-1%20(2)%20(1)-1.webp" alt="HELIOS Wetterstation mit LoRaWAN® für drahtloses Umweltmonitoring" loading="lazy">
         </div>
 
         <div class="produkt-card-content">
@@ -4664,7 +4721,7 @@
 <div class="produkt-card-mini">
 
   <div class="produkt-card-image">
-    <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/Helios_2P/LoRa/black/Front.png" loading="lazy">
+    <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/Webbilder/Front%20(3).webp" alt="HELIOS Umwelt- und Wettersensor mit mioty® Funktechnologie für Smart-City-Anwendungen" loading="lazy">
   </div>
 
   <div class="produkt-card-content">
@@ -4695,7 +4752,7 @@
 <div class="produkt-card-mini">
 
   <div class="produkt-card-image">
-    <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/Helios_2P/mioty/black/Front.png" loading="lazy">
+    <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/Webbilder/Front%20(1)%20(1).webp" alt="HELIOS Wetterstation für Umweltmonitoring mit LoRaWAN®, mioty® und industrieller Sensortechnik" loading="lazy">
   </div>
 
   <div class="produkt-card-content">
@@ -4726,7 +4783,8 @@
 <div class="produkt-card-mini">
 
   <div class="produkt-card-image">
-    <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/Helios_2P/NB-IoT_LTE-M/black/Front.png" loading="lazy">
+    <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Helios/Webbilder/Front%20(2)%20(1).webp" alt="HELIOS Smart-City Wetterstation zur Messung von Temperatur, Luftfeuchtigkeit und Umweltdaten"
+ loading="lazy">
   </div>
 
   <div class="produkt-card-content">
@@ -4791,7 +4849,7 @@
       <div class="produkt-card-mini">
 
         <div class="produkt-card-image">
-          <img src="https://sentinum.de/hs-fs/hubfs/Helios/Helios_M12_1/LoRa/black/Front.png?width=700&name=Front.png">
+          <img src="https://sentinum.de/hs-fs/hubfs/Helios/Helios_M12_1/LoRa/black/Front.png?width=700&name=Front.png" alt="IoT Wetterstation LoRaWAN Wetterstation Sensor Smart City" loading="lazy">
         </div>
 
         <div class="produkt-card-content">
@@ -4826,7 +4884,7 @@
       <div class="produkt-card-mini">
 
         <div class="produkt-card-image">
-          <img src="https://sentinum.de/hs-fs/hubfs/Helios/Helios_M12_1/mioty/black/Front.png?width=700&name=Front.png">
+          <img src="https://sentinum.de/hs-fs/hubfs/Helios/Helios_M12_1/mioty/black/Front.png?width=700&name=Front.png" alt="IoT Wetterstation mioty Wetterstation Sensor Smart City" loading="lazy">
         </div>
 
         <div class="produkt-card-content">
@@ -4860,7 +4918,7 @@
       <div class="produkt-card-mini">
 
         <div class="produkt-card-image">
-          <img src="https://sentinum.de/hs-fs/hubfs/Helios/Helios_M12_1/NB-IoT%20u-%20LTE-M/black/Front.png?width=700&name=Front.png">
+          <img src="https://sentinum.de/hs-fs/hubfs/Helios/Helios_M12_1/NB-IoT%20u-%20LTE-M/black/Front.png?width=700&name=Front.png" alt="IoT Wetterstation lte-m Wetterstation Sensor Smart City" loading="lazy">
         </div>
 
         <div class="produkt-card-content">
