@@ -1619,24 +1619,52 @@ body {
     opacity: 0.92;
     transform: translateY(-1px);
 }
+      /* Mobile Performance Optimierung */
+@media (max-width: 768px) {
+
+  /* alle Glow-Animationen deaktivieren */
+  .animate-glow-pulse {
+    animation: none !important;
+  }
+
+  /* große Blur-Effekte entfernen */
+  .blur-\[100px\],
+  .blur-\[120px\] {
+    filter: none !important;
+  }
+
+  /* Backdrop-Blur entfernen */
+  .backdrop-blur-md,
+  .produkt-badge,
+  .produkt-topline {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Hover-Effekte auf Mobile deaktivieren */
+  .produkt-card-mini:hover,
+  .produkt-card:hover,
+  .produkt-container:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Bild-Zoom deaktivieren */
+  .produkt-card:hover .produkt-image img {
+    transform: none !important;
+  }
+}
     </style>
    {{ standard_header_includes }}
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Product",
-            "name": "Sentinum Füllstandmonitoring",
-            "brand": {
-                "@type": "Brand",
-                "name": "Sentinum"
-            },
-            "category": "Drahtloses Füllstandmonitoring mit EOS-R, EOS420 und Orelia",
-            "description": "Drahtlose Füllstandüberwachung mit 60 GHz Pulsradar (EOS-R) und 4–20 mA Pegelsonden (EOS420) plus Orelia Cloud – für optimierte Logistik, weniger leere Fahrten und automatisierte Dokumentation."
-        }
-    </script>
+ 
+    
 </head>
 
 <body>
+    {% module "main_nav"
+  path="/Homepage V2/Sentinum New Header Nav.module",
+  label="Main Navigation"
+%}
     <header>
         <nav class="container nav" aria-label="Hauptnavigation">
             <a class="brand" href="#top"><img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/sentinum-logo-weiss_orange.png" style="width:140px;height:auto;" a="">
@@ -1689,7 +1717,7 @@ body {
                 <div class="module-grid">
                     <article class="module-card">
                         <div class="module-thumb">
-                            <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Orelia/Screenshot%202026-07-13%20154516.jpg" alt="Orelia Dashboard mit Füllstandverläufen" loading="lazy" />
+                            <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/EOS-Website/Screenshot%202026-07-13%20154516%20(1).webp" alt="Orelia Dashboard mit Füllstandverläufen" loading="lazy" />
                         </div>
                         <span class="pill">Web App</span>
                         <h3>Orelia</h3>
@@ -1698,7 +1726,7 @@ body {
                     </article>
                     <article class="module-card">
                         <div class="module-thumb">
-                            <img src="https://sentinum.de/hubfs/EOS-Website/Front.png" alt="EOS Füllstandsensoren – EOS-R und EOS420" loading="lazy" />
+                            <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/EOS-Website/Front.webp" alt="EOS Füllstandsensoren – EOS-R und EOS420" loading="lazy" />
                         </div>
                         <span class="pill">Hardware</span>
                         <h3>EOS Series</h3>
@@ -1787,7 +1815,7 @@ body {
                     <div class="bg-surface border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/25 hover:-translate-y-0.5 hover:shadow-[0_0_30px_-10px_hsl(var(--primary)/0.25)] flex flex-col">
                     <div class="bg-background/40 border-b border-border flex items-center justify-center">
     <img
-        src="https://shop.sentinum.de/cdn/shop/files/7809-EOS_ohne_G.png?v=1785186832&width=990"
+        src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/EOS-Website/7809-EOS_ohne_G%20(1).webp"
         alt="Febris Indoor CO2-Sensor zur drahtlosen Überwachung der Raumluftqualität mit Messung von CO₂, Temperatur, Luftfeuchte und Luftdruck über LoRaWAN®"
        class="max-w-full h-auto object-contain block"
         loading="lazy"
@@ -1814,7 +1842,7 @@ body {
                        <div class="bg-background/40 border-b border-border flex items-center justify-center">
                        
                         <img
-        src="https://shop.sentinum.de/cdn/shop/files/7625-Dashboard_EOS.png?v=1784552399&width=990"
+        src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/EOS-Website/7625-Dashboard_EOS%20(1).webp"
         alt="Febris Indoor CO2-Sensor mit LED-Ampel zur drahtlosen Überwachung der Raumluftqualität über mioty®, mit Messung von CO₂, Temperatur, Luftfeuchte und Luftdruck"
        class="max-w-full h-auto object-contain block"
         loading="lazy"
