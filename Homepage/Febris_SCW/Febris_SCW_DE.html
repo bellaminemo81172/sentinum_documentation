@@ -52,9 +52,22 @@
             ]
         }
     </script>
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap");
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+<link
+  rel="preload"
+  as="style"
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
+  onload="this.onload=null;this.rel='stylesheet'">
+
+<noscript>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap">
+</noscript>
+    <style>
+     
         *,
         :after,
         :before {
@@ -2249,8 +2262,7 @@
                     <h2 class="font-heading font-bold text-[clamp(28px,4vw,42px)] mb-4">Dokumente &amp; Datenblätter</h2>
                     <p class="text-muted-foreground text-[15px]">Alle wichtigen Unterlagen zum Febris SCW.</p>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-                    <a href="https://docs.sentinum.de/febris-scw-technisches-datenblatt" target="_blank" rel="noopener" class="group bg-surface border border-border rounded-xl p-6 flex flex-col gap-4 hover:border-primary transition-all duration-300">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"><a href="https://docs.sentinum.de/febris-scw-technisches-datenblatt" target="_blank" rel="noopener" class="group bg-surface border border-border rounded-xl p-6 flex flex-col gap-4 hover:border-primary transition-all duration-300">
                         <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
                                 <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
                                 <polyline points="14 2 14 8 20 8" />

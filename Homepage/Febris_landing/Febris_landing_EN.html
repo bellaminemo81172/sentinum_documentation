@@ -41,9 +41,23 @@
                 }
             ]
         }
-    </script>
+      </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  rel="preload"
+  as="style"
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
+  onload="this.onload=null;this.rel='stylesheet'">
+
+<noscript>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap">
+</noscript>
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap");
+ 
 
         *,
         :after,
@@ -983,7 +997,26 @@ text-decoration: none; /* ✅ verhindert Link Styling */
     box-shadow: 0 0 40px -12px hsl(var(--primary) / 0.35);
 }
 
+.section-badge-icon svg{
+    width:16px;
+    height:16px;
+}
+      @media (max-width:768px){
 
+  .blur-\[100px\],
+  .blur-\[120px\]{
+      filter:none !important;
+  }
+
+}
+      @media (max-width:768px){
+
+  .hover\:-translate-y-1:hover,
+  .hover\:-translate-y-0\.5:hover{
+      transform:none !important;
+  }
+
+}
   </style>
     {{ standard_header_includes }}
 </head>
@@ -1052,7 +1085,8 @@ text-decoration: none; /* ✅ verhindert Link Styling */
                         Air Quality · CO₂ Traffic Light
                     </div>
 
-                    <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Febris%205.0.png" alt="Febris CO2 sensor">
+                    <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Febris/Webbilder/Febris%205.0%20(2).webp" loading="lazy"
+                         alt="Febris CO2 sensor">
                 </div>
 
                 <div class="produkt-card-content">
@@ -1110,7 +1144,8 @@ text-decoration: none; /* ✅ verhindert Link Styling */
                         Temperature · Humidity
                     </div>
 
-                    <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Febris_2_Feuchtigkeit.png" alt="Febris TH sensor">
+                    <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Febris/Webbilder/Febris_2_Feuchtigkeit%20(1).webp" loading="lazy" 
+                         alt="Febris TH sensor">
                 </div>
 
                 <div class="produkt-card-content">
@@ -1153,7 +1188,7 @@ text-decoration: none; /* ✅ verhindert Link Styling */
                         Mold · Pollutants
                     </div>
 
-                    <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Febris_SCW.webp" alt="Febris SCW sensor">
+                    <img src="https://25427114.fs1.hubspotusercontent-eu1.net/hubfs/25427114/Febris/Webbilder/Febris_SCW%20(1).webp" alt="Febris SCW sensor" loading="lazy">
                 </div>
 
                 <div class="produkt-card-content">
