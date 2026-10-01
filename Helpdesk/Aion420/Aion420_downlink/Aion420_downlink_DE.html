@@ -1,0 +1,673 @@
+
+<style>
+/* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root{
+  --border:#d0d7de;
+  --table-header:#f5f7fa;
+  --blue-bg:#f7fbff;
+  --blue-border:#d6e4fa;
+  --blue-text:#1a3e8c;
+  --text-main:#111827;
+  --text-muted:#6b7280;
+}
+
+
+
+/* Base */
+body{
+  font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;
+  color:var(--text-main);
+  line-height:1.65;
+}
+
+.container{ width:100%; }
+
+p{ margin:8px 0 12px; }
+
+/* ---------- Headings ---------- */
+
+h1{
+  margin:48px 0 16px;
+  padding-bottom:12px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:42px;
+  font-weight:700;
+  border-bottom:2px solid var(--border);
+}
+
+h2{
+  margin:14px 0 36px;
+  font-size:24px;
+  font-weight:500;
+  color:var(--text-muted);
+}
+
+h3{
+  margin:32px 0 12px;
+  padding-bottom:6px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  border-bottom:1.5px solid var(--border);
+  scroll-margin-top:120px;
+}
+
+
+p{
+  margin:8px 0 12px;
+}
+
+/* NOTE STRIPS */
+.note-strip{
+  padding:14px 16px;
+  margin:18px 0;
+  border-radius:6px;
+  border-left-width:6px;
+  border-left-style:solid;
+}
+.note-strip--red{background:#fdecea;border-left-color:#d32f2f;}
+.note-strip--yellow{background:#fff8e1;border-left-color:#f9a825;}
+.note-strip--green{background:#e8f5e9;border-left-color:#2e7d32;}
+.note-strip ul{margin:0;padding-left:20px;}
+.note-strip li{margin:4px 0;}
+
+
+/* ---------- PDF ---------- */
+
+.pdf-viewer{
+   width:100%;
+  max-width:900px;
+  height:600px;
+  margin:24px auto 12px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  overflow:hidden;
+}
+
+.pdf-viewer iframe{ width:100%; height:100%; border:none; }
+
+.pdf-download{
+ 
+ max-width:900px;
+  margin:8px auto 32px;
+  padding:10px 14px;
+  background:#f8fbff;
+  border:1px solid #b6d4fe;
+  border-radius:6px;
+  text-align:center;
+}
+
+.pdf-download a,
+.pdf-download a:link,
+.pdf-download a:visited,
+.pdf-download a:hover,
+.pdf-download a:active{
+  color:var(--blue-text);
+  font-weight:600;
+  text-decoration:none !important;
+}
+
+/* ---------- TOC ---------- */
+
+.main-toc{
+  max-width:900px;
+  margin:24px auto 40px;
+  padding:20px 24px;
+  background:#f7fbff;
+  border:1px solid #d6e4fa;
+  border-radius:6px;
+}
+
+/* Überschrift */
+.main-toc strong{display:block;margin-bottom:8px;}
+
+
+/* Nummerierung */
+.main-toc ol{
+  margin:0;
+  padding-left:28px;
+  color:#0f3d91;
+  font-weight:700;
+}
+
+/* Abstand identisch zur Referenz */
+.main-toc li{
+  margin:8px 0;
+  line-height:1.45;
+}
+
+/* Links */
+.main-toc a,
+.main-toc a:link,
+.main-toc a:visited,
+.main-toc a:hover,
+.main-toc a:active{
+  color:#1a3e8c !important;
+  font-weight:700 !important;
+  text-decoration:none !important;
+  border:none !important;
+  box-shadow:none !important;
+}
+/* ---------- Tables ---------- */
+
+.table-wrap{ margin:8px 0 24px; }
+
+/* Tables */
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+  table-layout:fixed;
+}
+th,td{
+  border:1px solid var(--border);
+  padding:8px 12px;
+  vertical-align:top;
+}
+th{
+  background:var(--table-header);
+  font-weight:700;
+  border-bottom:2px solid #000;
+}
+/* ---------- Unified table column widths ---------- */
+
+table{
+  table-layout: auto; /* Forces consistent column sizing */
+}
+
+table th:nth-child(1),
+table td:nth-child(1){
+  white-space: normal;
+  word-break: normal;        /* 🔑 verhindert Buchstaben-Zerhacken */
+  overflow-wrap: break-word; /* ✅ bricht nur bei langen technischen Tokens */
+  hyphens: none;
+}
+
+table th:nth-child(2),
+table td:nth-child(2){
+  width:50%;
+}
+
+table th:nth-child(3),
+table td:nth-child(3){
+  width:20%;
+}
+
+/* ---------- Figures ---------- */
+
+.figure{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin:24px auto;
+}
+
+.figure img{
+    display:block;
+    max-width:100%;
+    height:auto;
+}
+
+.figure figcaption{
+    margin-top:6px;
+    font-size:0.875rem;
+    color:var(--text-muted);
+    font-style:italic;
+    text-align:center;
+}
+
+/* ---------- Footer ---------- */
+
+.footer-note{
+  margin-top:60px;
+  padding-top:20px;
+  border-top:2px solid #d0d7de;
+  font-size:.82rem;
+  color:#6b7280;
+}
+
+.footer-note p{
+  margin:0 0 6px 0;
+  line-height:1.4;
+}
+
+.logo-block{
+    margin-top:32px;
+}
+
+.logo-block img{
+    display:block;
+    margin:0;
+}
+
+/* Inline-Code für Berechnungen & Beispiele */
+.inline-code{
+  background-color:#f3f4f6;
+  border:1px solid #d0d7de;
+  border-radius:4px;
+  padding:3px 6px;
+  font-family:SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;
+  font-size:0.9em;
+  color:#111827;
+  display:inline-block;}
+ 
+/* Code-Darstellung */
+code,
+.inline-code{
+  background:#f3f4f6;
+  border:1px solid #d0d7de;
+  border-radius:4px;
+  padding:2px 6px;
+  font-family:SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;
+  font-size:0.9em;
+  color:#111827;
+}
+</style>
+
+<div class="container">
+
+
+<div class="pdf-viewer">
+<iframe src="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/e470086efe9af3308216580cfc0708d81e6031d4/Helpdesk/Aion420/Aion420_downlink/AION_Konfigurationsparameter_DE_final.pdf
+"
+allowfullscreen
+title="Blueprint Sensor Integration PDF">
+</iframe>
+</div>
+
+<div class="pdf-download">
+  📄 Sie können das PDF oben ansehen oder
+  <a href="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/e470086efe9af3308216580cfc0708d81e6031d4/Helpdesk/Aion420/Aion420_downlink/AION_Konfigurationsparameter_DE_final.pdf"
+   target="_blank">
+   <strong>hier herunterladen</strong> 
+  </a>.
+</div>
+
+
+
+<div class="main-toc">
+<strong>Inhaltsverzeichnis</strong>
+<ol>
+<li>Übersicht</li>
+<li>Konfigurationsparameter</li>
+<li>Skalierung von 4-20 mA</li>
+<li>Alarmverhalten</li>
+
+<li>Delta-Verhalten</li>
+<li>Manuelle Messauslösung</li>
+</ol>
+</div>
+
+<h3 id="overview">1. Übersicht</h3>
+
+<p>
+Der AION 4-20 mA Adapter stellt verschiedene Ressourcen zur Konfiguration,
+Parametrierung und Diagnose zur Verfügung. Die Ressourcen sind in Gruppen
+organisiert und können über Downlinks konfiguriert werden.
+</p>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Ressourcengruppe</th>
+<th>Gruppen-ID</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AION Timing</td>
+<td><code>0x00</code></td>
+<td>Messintervall und Keep-Alive-Uplink-Intervall</td>
+</tr>
+<tr>
+<td>AION Konfiguration</td>
+<td><code>0x01</code></td>
+<td>Skalierung, Alarmwerte, Delta-Schwellen und Geräte-ID</td>
+</tr>
+<tr>
+<td>AION Telemetrie</td>
+<td><code>0x02</code></td>
+<td>Schreibgeschützte Messwerte nach einer Messung</td>
+</tr>
+<tr>
+<td>AION Trigger</td>
+<td><code>0x01</code></td>
+<td>Manuelle Messauslösung</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h3 id="timing"> Timing-Parameter (Gruppe 0x00)</h3>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>ID</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Messperiode</td>
+<td><code>0x00</code></td>
+<td>Reguläre Messperiode in Minuten (1 bis 660 Minuten)</td>
+</tr>
+<tr>
+<td>Reguläres Sendeintervall</td>
+<td><code>0x01</code></td>
+<td>Keep-Alive-Uplink-Intervall in Anzahl von Messungen (1 bis 24)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="note-strip note-strip--green">
+<ul>
+<li>Messperiode definiert das reguläre Messintervall.</li>
+<li>Das Sendeintervall bestimmt nach wie vielen Messungen ein Uplink gesendet wird.</li>
+</ul>
+</div>
+
+<h3 id="config">2. Konfigurationsparameter (Gruppe 0x01)</h3>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>ID</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KANAL 1 Oberer Bereich</td>
+<td><code>0x00</code></td>
+<td>Engineering-Wert bei 20 mA (upper1)</td>
+</tr>
+<tr>
+<td>KANAL 2 Oberer Bereich</td>
+<td><code>0x01</code></td>
+<td>Engineering-Wert bei 20 mA (upper2)</td>
+</tr>
+<tr>
+<td>KANAL 1 Alarmschwelle</td>
+<td><code>0x02</code></td>
+<td>Alarmschwelle Kanal 1 (thr1)</td>
+</tr>
+<tr>
+<td>KANAL 2 Alarmschwelle</td>
+<td><code>0x03</code></td>
+<td>Alarmschwelle Kanal 2 (thr2)</td>
+</tr>
+<tr>
+<td>KANAL 1 ALARM-Hysterse</td>
+<td><code>0x04</code></td>
+<td>Alarm-Hysterese Kanal 1 (hyst1)</td>
+</tr>
+<tr>
+<td>KANAL 2 ALARM-Hysterse</td>
+<td><code>0x05</code></td>
+<td>Alarm-Hysterese Kanal 2 (hyst2)</td>
+</tr>
+<tr>
+<td>GERÄTE-/CONFIG-ID</td>
+<td><code>0x06</code></td>
+<td>Benutzerdefinierte Geräte-ID</td>
+</tr>
+<tr>
+<td>KANAL 1 Unterer Bereich</td>
+<td><code>0x07</code></td>
+<td>Engineering-Wert bei 4 mA (lower1)</td>
+</tr>
+<tr>
+<td>KANAL 2 Unterer Bereich</td>
+<td><code>0x08</code></td>
+<td>Engineering-Wert bei 4 mA (lower2)</td>
+</tr>
+<tr>
+<td>KANAL 1 Delta</td>
+<td><code>0x09</code></td>
+<td>Delta-Schwelle Kanal 1 (delta1)</td>
+</tr>
+<tr>
+<td>KANAL 2 Delta</td>
+<td><code>0x0A</code></td>
+<td>Delta-Schwelle Kanal 2 (delta2)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h3 id="buildconfig"> Konfig-Optionen</h3>
+
+<p>
+Die folgenden Compile-Time-Optionen steuern die Aktivierung bestimmter
+Funktionen innerhalb der Firmware.
+</p>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Konfig Symbol</th>
+<th>Typ</th>
+<th>Werkseinstellung</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CONFIG_SENTOS_MODULE_AION</code></td>
+<td>bool</td>
+<td>n</td>
+<td>Aktiviert das Aion-Modul.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="note-strip note-strip--yellow">
+<ul>
+<li><code>CONFIG_SENTOS_MODULE_AION=y</code> aktiviert die AION-spezifischen Funktionen zur Laufzeit.</li>
+<li>Die Werkseinstellung <code>n</code> bedeutet, dass das Modul standardmäßig deaktiviert ist.</li>
+<li>Die Option wird zur Build-Zeit ausgewertet und ist kein Downlink-Parameter.</li>
+</ul>
+</div>
+
+<h3 id="scaling">3. Skalierung von 4-20 mA</h3>
+
+<p>
+Der Sensorstrom wird auf einen Engineering-Wert skaliert.
+</p>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Eingangsstrom</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4 mA</td>
+<td>entspricht lowerN</td>
+</tr>
+<tr>
+<td>20 mA</td>
+<td>entspricht upperN</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p>
+Berechnungsformel:
+</p>
+
+<p>
+<span class="inline-code">
+scaled = lower + ((current_mA - 4.0) / 16.0) * (upper - lower)
+</span>
+</p>
+
+<div class="note-strip note-strip--green">
+<ul>
+<li>lowerN definiert den Messwert bei 4 mA.</li>
+<li>upperN definiert den Messwert bei 20 mA.</li>
+<li>Zwischenwerte werden linear interpoliert.</li>
+</ul>
+</div>
+
+<h3 id="alarm">4. Alarmverhalten</h3>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Einstellung</th>
+<th>Verhalten</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>thrN = 0</td>
+<td>Alarmauswertung deaktiviert</td>
+</tr>
+<tr>
+<td>thrN ≠ 0</td>
+<td>Alarm bei Wert ≥ Schwellenwert</td>
+</tr>
+<tr>
+<td>hystN</td>
+<td>Alarm wird erst gelöscht, wenn Wert &lt; (thrN - hystN)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="note-strip note-strip--yellow">
+<ul>
+<li>Eine Hysterese verhindert häufiges Ein- und Ausschalten des Alarms.</li>
+<li>Der Alarm wird erst zurückgesetzt, wenn der Messwert ausreichend unter die Schwelle fällt.</li>
+</ul>
+</div>
+
+<h3 id="delta">5. Delta-Verhalten</h3>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Einstellung</th>
+<th>Verhalten</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>deltaN = 0</td>
+<td>Delta-basiertes Senden deaktiviert</td>
+</tr>
+<tr>
+<td>deltaN &gt; 0</td>
+<td>Uplink wird ausgelöst sobald sich der Wert um mindestens deltaN geändert hat</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="note-strip note-strip--green">
+<ul>
+<li>Mit Delta-Senden können zusätzliche Uplinks bei relevanten Messwertänderungen erzeugt werden.</li>
+<li>Dadurch werden kritische Änderungen schneller übertragen.</li>
+</ul>
+</div>
+
+<h3 id="trigger">6. Manuelle Messauslösung (Trigger Gruppe 0x01)</h3>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>ID</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Messung auslösen</td>
+<td><code>0x01</code></td>
+<td>Löst eine außerplanmäßige Messung aus</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p>
+Der Trigger erwartet einen 2-Byte Big-Endian Command Value.
+</p>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Wert</th>
+<th>Funktion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x0001</code></td>
+<td>Messung durchführen und Uplink senden</td>
+</tr>
+<tr>
+<td>Beliebiger anderer Wert</td>
+<td>Lokale benutzerausgelöste Messung ohne erzwungenen Uplink</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="note-strip note-strip--red">
+<ul>
+<li>Die Trigger-Funktion dient ausschließlich zur manuellen Messauslösung.</li>
+<li>Für den Trigger muss ein 2-Byte Big-Endian-Wert übertragen werden.</li>
+</ul>
+</div>
+
+
+
+<br><br>
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/bb56d53e70ed652caec150fc12f34ae8d5917c1e/logo/mioty_lora.png"  alt="Supported radio technologies"  style="max-width:750px; height:auto;"
+    loading="lazy">
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img
+    src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png"
+    alt="trash bin Logo"
+    style="max-width:340px; height:auto;"
+    loading="lazy"
+  >
+</div>
+
+
+<div class="footer-note">
+  <p>© Sentinum GmbH - Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Texte, Tabellen und Bilder, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Sofern nicht anders angegeben, unterliegen alle Bilder dem Urheberrecht der Sentinum GmbH.</p>
+  <p>Eine Vervielfältigung, Verbreitung oder Nutzung, auch auszugsweise, ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">Technische Änderungen vorbehalten. Alle Angaben erfolgen ohne Gewähr.</p>
+</div>
