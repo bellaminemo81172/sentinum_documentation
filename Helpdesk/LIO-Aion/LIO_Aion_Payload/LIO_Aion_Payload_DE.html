@@ -1,0 +1,589 @@
+<style>
+    /* ============================================================
+   SENTINUM – TECHNICAL DATA SHEET (GLOBAL STABLE STYLE)
+   ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+    :root {
+        --border: #d0d7de;
+        --table-header: #f5f7fa;
+        --blue-bg: #f7fbff;
+        --blue-border: #d6e4fa;
+        --blue-text: #1a3e8c;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+    }
+
+
+
+    /* Base */
+    body {
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.65;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        margin: 48px 0 16px;
+        padding-bottom: 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        border-bottom: 2px solid var(--border);
+    }
+
+    h2 {
+        margin: 14px 0 36px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    h3 {
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--border);
+        scroll-margin-top: 120px;
+    }
+
+
+    p {
+        margin: 8px 0 12px;
+    }
+
+    /* NOTE STRIPS */
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+    }
+
+    .note-strip--red {
+        background: #fdecea;
+        border-left-color: #d32f2f;
+    }
+
+    .note-strip--yellow {
+        background: #fff8e1;
+        border-left-color: #f9a825;
+    }
+
+    .note-strip--green {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
+
+    .note-strip ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .note-strip li {
+        margin: 4px 0;
+    }
+
+    /* ---------- PDF ---------- */
+
+    .pdf-viewer {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        margin: 24px auto 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .pdf-download {
+        max-width: 900px;
+        margin: 8px auto 32px;
+        padding: 10px 14px;
+        background: #f8fbff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .pdf-download a,
+    .pdf-download a:link,
+    .pdf-download a:visited,
+    .pdf-download a:hover,
+    .pdf-download a:active {
+        color: var(--blue-text);
+        font-weight: 600;
+        text-decoration: none !important;
+    }
+
+    /* ---------- TOC ---------- */
+
+    .main-toc {
+        max-width: 900px;
+        margin: 24px auto 40px;
+        padding: 20px 24px;
+        background: #f7fbff;
+        border: 1px solid #d6e4fa;
+        border-radius: 6px;
+    }
+
+    /* Überschrift */
+    .main-toc strong {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    /* Nummerierung */
+    .main-toc ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #0f3d91;
+        font-weight: 700;
+    }
+
+    /* Abstand identisch zur Referenz */
+    .main-toc li {
+        margin: 8px 0;
+        line-height: 1.45;
+    }
+
+    /* Links */
+    .main-toc a,
+    .main-toc a:link,
+    .main-toc a:visited,
+    .main-toc a:hover,
+    .main-toc a:active {
+        color: #1a3e8c !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+
+    /* ---------- Unified table column widths ---------- */
+
+    .table-wrap {
+        margin: 8px 0 24px;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--table-header);
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+
+    /* ---------- Unified table column widths ---------- */
+
+    table {
+        table-layout: auto;
+        /* Forces consistent column sizing */
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        white-space: normal;
+        word-break: normal;
+        /* 🔑 verhindert Buchstaben-Zerhacken */
+        overflow-wrap: break-word;
+        /* ✅ bricht nur bei langen technischen Tokens */
+        hyphens: none;
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 50%;
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 20%;
+    }
+
+    /* ---------- Figures ---------- */
+
+    .figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px auto;
+    }
+
+    .figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        margin-top: 6px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-note {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 2px solid #d0d7de;
+        font-size: .82rem;
+        color: #6b7280;
+    }
+
+    .footer-note p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    .logo-block {
+        margin-top: 32px;
+    }
+
+    .logo-block img {
+        display: block;
+        margin: 0;
+    }
+
+    code,
+    .inline-code {
+        background-color: #f3f4f6;
+        border: 1px solid #d0d7de;
+        border-radius: 4px;
+        padding: 2px 6px;
+        font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 0.9em;
+        color: #111827;
+        display: inline-block;
+    }
+
+    .note-strip {
+        padding: 14px 16px;
+        margin: 18px 0;
+        border-radius: 6px;
+        border-left-width: 6px;
+        border-left-style: solid;
+        font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .note-strip--blue {
+        background: #f7fbff;
+        border-left-color: #1976d2;
+    }
+
+    .note-strip ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+    }
+</style>
+<div class="container">
+
+
+<div class="pdf-viewer">
+<iframe src="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/b93cca46e07be3bc887010d16154014b0f2bfcf0/Helpdesk/LIO-Aion/LIO_Aion_Payload/AION_LIO_LPWAN_Binary_Payload_EN%201.pdf
+" allowfullscreen="" title="Blueprint Sensor Integration PDF">
+</iframe>
+</div>
+
+<div class="pdf-download">
+  📄 Sie können das PDF oben ansehen oder
+  <a href="https://rawcdn.githack.com/bellaminemo81172/sentinum_documentation/b93cca46e07be3bc887010d16154014b0f2bfcf0/Helpdesk/LIO-Aion/LIO_Aion_Payload/AION_LIO_LPWAN_Binary_Payload_EN%201.pdf" target="_blank">
+   <strong>hier herunterladen</strong> 
+  </a>.
+</div>
+
+
+
+    <!-- TOC -->
+ <nav class="main-toc">
+  <strong>Inhaltsverzeichnis</strong>
+  <ol>
+    <li>Payload Übersicht</li>
+    <li>Payload Aufbau</li>
+    <li>Feldbeschreibung</li>
+    <li>IO-Link Prozessdaten</li>
+    <li>Payload Beispiel</li>
+    <li>Technische Hinweise</li>
+    </ol>
+</nav>
+
+  <h3 id="overview">1. Payload Übersicht</h3>
+
+<table>
+<tr>
+<th>Eigenschaft</th>
+<th>Wert</th>
+</tr>
+
+<tr>
+<td>Payload Typ</td>
+<td>LPWAN Binary Payload</td>
+</tr>
+
+<tr>
+<td>Gesamtgröße</td>
+<td>8 bis 72 Byte</td>
+</tr>
+
+<tr>
+<td>Datenquelle</td>
+<td>IO-Link Prozessdaten</td>
+</tr>
+
+<tr>
+<td>Unterstützte Sensoren</td>
+<td>IO-Link Geräte nach IEC 61131-9</td>
+</tr>
+
+<tr>
+<td>Byte-Reihenfolge</td>
+<td>Big Endian</td>
+</tr>
+
+<tr>
+<td>Variable Felder</td>
+<td>PDIN und PDOUT</td>
+</tr>
+</table>
+
+<h3 id="structure">2. Payload Aufbau</h3>
+
+<table>
+<thead>
+<tr>
+<th>Byte Offset</th>
+<th>Größe</th>
+<th>Feld</th>
+<th>Typ</th>
+<th>Kodierung / Skalierung</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>0</td>
+<td>1</td>
+<td>variant_msb</td>
+<td>uint8</td>
+<td>AION_VARIANT_CODE()</td>
+<td>Modulbasis und Major-Version</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>1</td>
+<td>variant_lsb</td>
+<td>uint8</td>
+<td>AION_VARIANT_CODE()</td>
+<td>Minor-Version und Subtype</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>1</td>
+<td>uplink_counter</td>
+<td>uint8</td>
+<td>Inkrementiert pro Telegramm</td>
+<td>Nachrichtenzähler</td>
+</tr>
+
+<tr>
+<td>3-4</td>
+<td>2</td>
+<td>vendor_id</td>
+<td>uint16</td>
+<td>IO-Link Vendor ID</td>
+<td>Hersteller-ID des Sensors</td>
+</tr>
+
+<tr>
+<td>5-7</td>
+<td>3</td>
+<td>device_id</td>
+<td>uint24</td>
+<td>IO-Link Device ID</td>
+<td>Geräte-ID des Sensors</td>
+</tr>
+
+<tr>
+<td>8-(7+n)</td>
+<td>0...32</td>
+<td>pdin</td>
+<td>Byte Array</td>
+<td>Raw Input Data</td>
+<td>IO-Link Prozessdaten Eingang</td>
+</tr>
+
+<tr>
+<td>(8+n)-(7+n+m)</td>
+<td>0...32</td>
+<td>pdout</td>
+<td>Byte Array</td>
+<td>Raw Output Data</td>
+<td>IO-Link Prozessdaten Ausgang</td>
+</tr>
+
+</tbody>
+</table>
+
+<h3 id="fields">3. Feldbeschreibung</h3>
+
+<div class="note-strip note-strip--blue">
+
+<ul>
+<li><strong>variant_msb / variant_lsb</strong> identifizieren Gerätetyp und Firmwareversion.</li>
+
+<li><strong>uplink_counter</strong> ermöglicht die Nachverfolgung empfangener Telegramme.</li>
+
+<li><strong>vendor_id</strong> identifiziert den IO-Link-Hersteller nach offizieller Vendor-ID.</li>
+
+<li><strong>device_id</strong> identifiziert den angeschlossenen Sensortyp eindeutig.</li>
+
+<li><strong>pdin</strong> enthält die vom Sensor bereitgestellten Prozessdaten.</li>
+
+<li><strong>pdout</strong> enthält optionale Ausgangsdaten des IO-Link-Gerätes.</li>
+
+</ul>
+
+</div>
+
+<h3 id="processdata">4. IO-Link Prozessdaten</h3>
+
+<p>
+Die Felder <strong>PDIN</strong> und <strong>PDOUT</strong> besitzen eine variable Länge.
+Die genaue Interpretation hängt vom verwendeten IO-Link Sensor sowie der zugehörigen IODD-Datei ab.
+</p>
+
+<table>
+<tr>
+<th>Feld</th>
+<th>Max. Größe</th>
+<th>Beschreibung</th>
+</tr>
+
+<tr>
+<td>PDIN</td>
+<td>32 Byte</td>
+<td>Prozessdaten vom Sensor zum AION LIO</td>
+</tr>
+
+<tr>
+<td>PDOUT</td>
+<td>32 Byte</td>
+<td>Prozessdaten vom AION LIO zum Sensor</td>
+</tr>
+
+</table>
+
+<h3 id="example">5. Payload Beispiel</h3>
+
+<table>
+<tr>
+<th>Payload Hex</th>
+</tr>
+
+<tr>
+<td>
+14 01 05 01 F4 00 01 23 00 82 00 3C
+</td>
+</tr>
+</table>
+
+<br>
+
+<table>
+<tr>
+<th>Feld</th>
+<th>Wert</th>
+</tr>
+
+<tr>
+<td>Vendor ID</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>Device ID</td>
+<td>291</td>
+</tr>
+
+<tr>
+<td>PDIN</td>
+<td>00 82 00 3C</td>
+</tr>
+
+</table>
+
+<h3 id="notes">6. Technische Hinweise</h3>
+
+<div class="note-strip note-strip--green">
+
+<ul>
+
+<li>Payloadlänge ist abhängig von der Länge der IO-Link Prozessdaten.</li>
+
+<li>Vendor-ID und Device-ID dienen zur automatischen Sensorerkennung.</li>
+
+<li>
+Die Interpretation der Prozessdaten erfolgt über die zugehörige IODD-Datei des angeschlossenen IO-Link-Geräts. Dadurch können Rohdaten automatisch in verständliche Messwerte, Einheiten, Zustände und Diagnoseinformationen umgewandelt werden.
+</li>
+
+</div>
+
+<br><br>
+<div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/bb56d53e70ed652caec150fc12f34ae8d5917c1e/logo/mioty_lora.png" alt="Supported radio technologies" style="max-width:750px; height:auto;" loading="lazy">
+    
+  <div class="logo-block" style="margin-top:32px; text-align:left;">
+  <img src="https://raw.githubusercontent.com/bellaminemo81172/sentinum_documentation/f28662af152e8d8f95a74732664a0da2ebb56f64/logo/Screenshot%202026-07-21%20084940.png" alt="trash bin Logo" style="max-width:340px; height:auto;" loading="lazy">
+</div>
+
+
+<div class="footer-note">
+  <p>© Sentinum GmbH - Alle Rechte vorbehalten.</p>
+  <p>Alle Inhalte dieses Dokuments, einschließlich Texte, Tabellen und Bilder, sind urheberrechtlich geschützt und Eigentum der Sentinum GmbH.</p>
+  <p>Sofern nicht anders angegeben, unterliegen alle Bilder dem Urheberrecht der Sentinum GmbH.</p>
+  <p>Eine Vervielfältigung, Verbreitung oder Nutzung, auch auszugsweise, ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
+  <p style="padding-left:14px; font-style:italic;">Technische Änderungen vorbehalten. Alle Angaben erfolgen ohne Gewähr.</p>
+</div></div>
